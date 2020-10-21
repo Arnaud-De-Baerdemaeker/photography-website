@@ -33,7 +33,7 @@ const config = {
         ]
       },
       {
-        test: /\.svg$/,
+        test: /\.(jpg|svg)$/,
         use: 'file-loader'
       },
       {
@@ -46,6 +46,10 @@ const config = {
             }
           }
         ]
+      },
+      {
+        test: /\.(eot|ttf|woff|woff2)$/,
+        use: 'file-loader'
       }
     ]
   },
