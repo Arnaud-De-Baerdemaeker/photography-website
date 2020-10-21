@@ -5,12 +5,12 @@ import {hot} from "react-hot-loader/root";
 class Header extends React.Component {
     render() {
         return (
-            <header>
-                <nav>
-                    <ul>
-                        <li>{"Accueil"}</li>
-                        <li>{"Galerie"}</li>
-                        <li>{"À propos"}</li>
+            <header className={"menu"}>
+                <nav className={"menu__navigation"}>
+                    <ul className={"menu__list"}>
+                        <li className={"menu__list-item"}>{"Accueil"}</li>
+                        <li className={"menu__list-item"}>{"Galerie"}</li>
+                        <li className={"menu__list-item"}>{"À propos"}</li>
                     </ul>
                 </nav>
             </header>
