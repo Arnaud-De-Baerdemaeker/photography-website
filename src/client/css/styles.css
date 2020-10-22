@@ -19,23 +19,8 @@
 	Started on July 2020 |
 	By Arnaud De Baerdemaeker
 */
-@media screen {
-  body {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 0;
-    height: 100vh;
-    background-image: url("./../images/index-background.jpg");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: center;
-  }
-}
-
 @media screen and (orientation: portrait) {
-  body .menu {
+  .menu {
     position: fixed;
     bottom: 0;
     height: 12vh;
@@ -43,7 +28,7 @@
 }
 
 @media screen and (orientation: landscape) {
-  body .menu {
+  .menu {
     position: fixed;
     bottom: 0;
     height: 17vh;
@@ -51,7 +36,7 @@
 }
 
 @media screen and (orientation: landscape) and (min-width: 1024px) {
-  body .menu {
+  .menu {
     position: fixed;
     top: 0;
     height: 14vh;
@@ -59,10 +44,10 @@
 }
 
 @media screen {
-  body .menu .menu__navigation {
+  .menu .menu__navigation {
     height: inherit;
   }
-  body .menu .menu__navigation .menu__list {
+  .menu .menu__navigation .menu__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -75,7 +60,7 @@
     margin: 0;
     padding: 0;
   }
-  body .menu .menu__navigation .menu__list .menu__list-item {
+  .menu .menu__navigation .menu__list .menu__list-item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -87,7 +72,7 @@
 }
 
 @media screen and (orientation: portrait) {
-  body .menu .menu__navigation .menu__list .menu__list-item .menu__link {
+  .menu .menu__navigation .menu__list .menu__list-item .menu__link {
     display: block;
     font-family: "JosefinSans-Light", Arial, Helvetica, sans-serif;
     text-decoration: none;
@@ -100,7 +85,7 @@
 }
 
 @media screen and (orientation: landscape) {
-  body .menu .menu__navigation .menu__list .menu__list-item .menu__link {
+  .menu .menu__navigation .menu__list .menu__list-item .menu__link {
     display: block;
     font-family: "JosefinSans-Light", Arial, Helvetica, sans-serif;
     text-decoration: none;
@@ -113,7 +98,7 @@
 }
 
 @media screen and (orientation: landscape) and (min-width: 1024px) {
-  body .menu .menu__navigation .menu__list .menu__list-item .menu__link {
+  .menu .menu__navigation .menu__list .menu__list-item .menu__link {
     display: block;
     font-family: "JosefinSans-Light", Arial, Helvetica, sans-serif;
     text-decoration: none;
@@ -139,6 +124,11 @@
         align-content: center;
     width: 100vw;
     height: 100vh;
+    background-image: url("./../images/index-background.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
   }
 }
 
@@ -181,4 +171,12 @@
     text-shadow: 0 0 7px white;
     margin: 0;
   }
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  height: 100vh;
 }
