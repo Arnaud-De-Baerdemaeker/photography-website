@@ -5,16 +5,16 @@ import {Link} from "react-router-dom";
 class Nav extends React.Component {
     render() {
         return (
-            <nav>
-                <ul>
-                    <li>
-                        <Link to="/">{"ACCUEIL"}</Link>
+            <nav className={"menu__navigation"}>
+                <ul className={"menu__list"}>
+                    <li className={"menu__list-item"}>
+                        <Link to="/" className={"menu__link"}>{"ACCUEIL"}</Link>
                     </li>
-                    <li>
-                        <Link to="/gallery">{"GALERIE"}</Link>
+                    <li className={"menu__list-item"}>
+                        <Link to="/gallery" className={"menu__link"}>{"GALERIE"}</Link>
                     </li>
-                    <li>
-                        <Link to="/about">{"À propos"}</Link>
+                    <li className={"menu__list-item"}>
+                        <Link to="/about" className={"menu__link"}>{"À PROPOS"}</Link>
                     </li>
                 </ul>
             </nav>
