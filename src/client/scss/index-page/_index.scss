@@ -8,9 +8,11 @@
 @media screen {
 	.title // <div>
 	{
-		align-self: center;
-		width: 100%;
-
+		display: grid;
+		align-content: center;
+		width: 100vw;
+		height: 100vh;
+		
 		.title__main-title // <h1>
 		{
 			@media (orientation: portrait) {
