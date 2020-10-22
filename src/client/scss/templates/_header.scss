@@ -45,7 +45,6 @@
 				{
 					display: flex;
 					justify-content: space-evenly;
-					align-items: center;
 					width: 100vw;
 					height: inherit;
 					list-style: none;
@@ -54,10 +53,10 @@
 					
 					.menu__list-item // <li>
 					{
-						display: block;
+						display: flex;
+						align-items: center;
 						height: inherit;
-						align-self: center;
-
+						
 						.menu__link // <a>
 						{
 							@media (orientation: portrait) {
