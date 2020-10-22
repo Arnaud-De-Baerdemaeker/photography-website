@@ -1,25 +1,16 @@
 @font-face {
   font-family: "JosefinSans-Light";
-  src: "./../fonts/Josefin_Sans/JosefinSans-Light.eot" format("eot");
-  src: "./../fonts/Josefin_Sans/JosefinSans-Light.ttf" format("ttf");
-  src: "./../fonts/Josefin_Sans/JosefinSans-Light.woff" format("woff");
-  src: "./../fonts/Josefin_Sans/JosefinSans-Light.woff2" format("woff2");
+  src: url("./../fonts/Josefin_Sans/JosefinSans-Light.eot") format("eot"), url("./../fonts/Josefin_Sans/JosefinSans-Light.ttf") format("ttf"), url("./../fonts/Josefin_Sans/JosefinSans-Light.woff") format("woff"), url("./../fonts/Josefin_Sans/JosefinSans-Light.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Montserrat-Regular";
-  src: "./../fonts/Montserrat/Montserrat-Regular.eot" format("eot");
-  src: "./../fonts/Montserrat/Montserrat-Regular.ttf" format("ttf");
-  src: "./../fonts/Montserrat/Montserrat-Regular.woff" format("woff");
-  src: "./../fonts/Montserrat/Montserrat-Regular.woff2" format("woff2");
+  src: url("./../fonts/Montserrat/Montserrat-Regular.eot") format("eot"), url("./../fonts/Montserrat/Montserrat-Regular.ttf") format("ttf"), url("./../fonts/Montserrat/Montserrat-Regular.woff") format("woff"), url("./../fonts/Montserrat/Montserrat-Regular.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "ZCOOLXiaoWei-Regular";
-  src: "./../fonts/ZCOOL_XiaoWei/ZCOOLXiaoWei-Regular.eot" format("eot");
-  src: "./../fonts/ZCOOL_XiaoWei/ZCOOLXiaoWei-Regular.ttf" format("ttf");
-  src: "./../fonts/ZCOOL_XiaoWei/ZCOOLXiaoWei-Regular.woff" format("woff");
-  src: "./../fonts/ZCOOL_XiaoWei/ZCOOLXiaoWei-Regular.woff2" format("woff2");
+  src: url("./../fonts/ZCOOL_XiaoWei/ZCOOLXiaoWei-Regular.eot") format("eot"), url("./../fonts/ZCOOL_XiaoWei/ZCOOLXiaoWei-Regular.ttf") format("ttf"), url("./../fonts/ZCOOL_XiaoWei/ZCOOLXiaoWei-Regular.woff") format("woff"), url("./../fonts/ZCOOL_XiaoWei/ZCOOLXiaoWei-Regular.woff2") format("woff2");
 }
 
 /*
@@ -78,9 +69,6 @@
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     width: 100vw;
     height: inherit;
     list-style: none;
@@ -88,11 +76,13 @@
     padding: 0;
   }
   body .menu .menu__navigation .menu__list .menu__list-item {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: inherit;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
   }
 }
 
@@ -143,10 +133,12 @@
 */
 @media screen {
   .title {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    width: 100vw;
+    height: 100vh;
   }
 }
 
