@@ -23,3 +23,9 @@
 }
 
 @import "./templates/header", "./index-page/index";
+
+body {
+	display: flex;
+	margin: 0;
+	height: 100vh;
+}
