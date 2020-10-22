@@ -6,49 +6,57 @@
 */
 
 @media screen {
-	.title // <div>
+	.homepage__container // <div>
 	{
-		display: grid;
-		align-content: center;
-		width: 100vw;
-		height: 100vh;
+		background-image: url("./../images/index-background.jpg");
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position-x: center;
 		
-		.title__main-title // <h1>
+		.title // <div>
 		{
-			@media (orientation: portrait) {
-				font-family: "ZCOOLXiaoWei-Regular", Arial, Helvetica, sans-serif;
-				font-size: 10vw;
-				font-weight: 100;
-				color: rgb(255, 255, 255);
-				text-align: center;
-				letter-spacing: 1px;
-				text-shadow: 0 0 7px rgb(255, 255, 255);
-				margin: 0;
+			display: grid;
+			align-content: center;
+			width: 100vw;
+			height: 100vh;
+			
+			.title__main-title // <h1>
+			{
+				@media (orientation: portrait) {
+					font-family: "ZCOOLXiaoWei-Regular", Arial, Helvetica, sans-serif;
+					font-size: 10vw;
+					font-weight: 100;
+					color: rgb(255, 255, 255);
+					text-align: center;
+					letter-spacing: 1px;
+					text-shadow: 0 0 7px rgb(255, 255, 255);
+					margin: 0;
+				}
+				
+				@media (orientation: landscape) {
+					font-family: "ZCOOLXiaoWei-Regular", Arial, Helvetica, sans-serif;
+					font-size: 9vw;
+					font-weight: 100;
+					color: rgb(255, 255, 255);
+					text-align: center;
+					letter-spacing: 1px;
+					word-spacing: 7.5px;
+					text-shadow: 0 0 7px rgb(255, 255, 255);
+					margin: 0;
+				}
+				
+				@media (orientation: landscape) and (min-width: 1024px) {
+					font-family: "ZCOOLXiaoWei-Regular", Arial, Helvetica, sans-serif;
+					font-size: 7vw;
+					font-weight: 100;
+					color: rgb(255, 255, 255);
+					text-align: center;
+					letter-spacing: 10px;
+					word-spacing: 7.5px;
+					text-shadow: 0 0 7px rgb(255, 255, 255);
+					margin: 0;
+				}
 			}
-
-			@media (orientation: landscape) {
-				font-family: "ZCOOLXiaoWei-Regular", Arial, Helvetica, sans-serif;
-				font-size: 9vw;
-				font-weight: 100;
-				color: rgb(255, 255, 255);
-				text-align: center;
-				letter-spacing: 1px;
-				word-spacing: 7.5px;
-				text-shadow: 0 0 7px rgb(255, 255, 255);
-				margin: 0;
-			}
-
-			@media (orientation: landscape) and (min-width: 1024px) {
-				font-family: "ZCOOLXiaoWei-Regular", Arial, Helvetica, sans-serif;
-				font-size: 7vw;
-				font-weight: 100;
-				color: rgb(255, 255, 255);
-				text-align: center;
-				letter-spacing: 10px;
-				word-spacing: 7.5px;
-				text-shadow: 0 0 7px rgb(255, 255, 255);
-				margin: 0;
-			}
-		}
 	}
 }
