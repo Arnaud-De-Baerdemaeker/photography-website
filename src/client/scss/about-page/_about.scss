@@ -1,0 +1,39 @@
+.background //<div>
+{
+    background-color: rgb(240, 240, 240);
+    padding: 5vw;
+
+    .about-me //div>
+    {
+        background-color: rgb(255, 255, 255);
+        padding: 10vh 5vw 5vw 5vw;
+        border-radius: 5vw;
+        box-shadow: 0 0 5vw rgba(0, 0, 0, 0.1);
+
+        .about-me__image-container // <figure>
+        {
+            width: 50vw;
+            margin: 0 auto 10vh auto;
+
+            .about-me__image // <img>
+            {
+                width: 100%;
+            }
+
+            .about-me__image-caption // <figcaption>
+            {
+                font-size: 4vw;
+                font-style: italic;
+                text-align: right;
+            }
+        }
+
+        .about-me__who-i-am // <div>
+        {
+            .about-me__level-1-title // <h1>
+            {
+                margin: 0;
+            }
+        }
+    }
+}
