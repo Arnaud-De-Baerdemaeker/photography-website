@@ -13,6 +13,14 @@
   src: url("./../fonts/ZCOOL_XiaoWei/ZCOOLXiaoWei-Regular.eot") format("eot"), url("./../fonts/ZCOOL_XiaoWei/ZCOOLXiaoWei-Regular.ttf") format("ttf"), url("./../fonts/ZCOOL_XiaoWei/ZCOOLXiaoWei-Regular.woff") format("woff"), url("./../fonts/ZCOOL_XiaoWei/ZCOOLXiaoWei-Regular.woff2") format("woff2");
 }
 
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  height: 100vh;
+}
+
 /*
 	Photography website	|
 	./assets/scss/_header_mobile_portrait.scss - CSS for header part => index page for mobile in portrait |
@@ -117,23 +125,25 @@
 	By Arnaud De Baerdemaeker
 */
 @media screen {
-  .title {
-    display: -ms-grid;
-    display: grid;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    width: 100vw;
-    height: 100vh;
+  .homepage__container {
     background-image: url("./../images/index-background.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;
   }
+  .homepage__container .title {
+    display: -ms-grid;
+    display: grid;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    width: 100vw;
+    height: 100vh;
+  }
 }
 
 @media screen and (orientation: portrait) {
-  .title .title__main-title {
+  .homepage__container .title .title__main-title {
     font-family: "ZCOOLXiaoWei-Regular", Arial, Helvetica, sans-serif;
     font-size: 10vw;
     font-weight: 100;
@@ -146,7 +156,7 @@
 }
 
 @media screen and (orientation: landscape) {
-  .title .title__main-title {
+  .homepage__container .title .title__main-title {
     font-family: "ZCOOLXiaoWei-Regular", Arial, Helvetica, sans-serif;
     font-size: 9vw;
     font-weight: 100;
@@ -160,7 +170,7 @@
 }
 
 @media screen and (orientation: landscape) and (min-width: 1024px) {
-  .title .title__main-title {
+  .homepage__container .title .title__main-title {
     font-family: "ZCOOLXiaoWei-Regular", Arial, Helvetica, sans-serif;
     font-size: 7vw;
     font-weight: 100;
@@ -173,10 +183,34 @@
   }
 }
 
-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.background {
+  background-color: #f0f0f0;
+  padding: 5vw;
+}
+
+.background .about-me {
+  background-color: white;
+  padding: 10vh 5vw 5vw 5vw;
+  border-radius: 5vw;
+  -webkit-box-shadow: 0 0 5vw rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 5vw rgba(0, 0, 0, 0.1);
+}
+
+.background .about-me .about-me__image-container {
+  width: 50vw;
+  margin: 0 auto 10vh auto;
+}
+
+.background .about-me .about-me__image-container .about-me__image {
+  width: 100%;
+}
+
+.background .about-me .about-me__image-container .about-me__image-caption {
+  font-size: 4vw;
+  font-style: italic;
+  text-align: right;
+}
+
+.background .about-me .about-me__who-i-am .about-me__level-1-title {
   margin: 0;
-  height: 100vh;
 }
