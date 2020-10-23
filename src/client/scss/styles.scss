@@ -22,10 +22,10 @@
 	url("./../fonts/ZCOOL_XiaoWei/ZCOOLXiaoWei-Regular.woff2") format("woff2");
 }
 
-@import "./templates/header", "./index-page/index", "./about-page/about";
-
 body {
 	display: flex;
 	margin: 0;
 	height: 100vh;
 }
+
+@import "./templates/header", "./index-page/index", "./about-page/about";
