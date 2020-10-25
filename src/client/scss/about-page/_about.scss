@@ -22,18 +22,47 @@
 
             .about-me__image-caption // <figcaption>
             {
+                font-family: "Quicksand-Regular", sans-serif;
                 font-size: 4vw;
                 font-style: italic;
                 text-align: right;
             }
         }
 
-        .about-me__who-i-am // <div>
+        .about-me__who-i-am, .about-me__why-webdesign, .about-me__why-photography // <div>
         {
-            .about-me__level-1-title // <h1>
-            {
-                margin: 0;
-            }
+            margin: 0 0 7vh 0;
+        }
+
+        .about-me__level-1-title, .about-me__level-2-title // <h1>
+        {
+            margin: 0 0 7vh 0;
+            font-family: "Cormorant_Upright-Medium", sans-serif;
+            font-size: 9vw;
+        }
+
+        .about-me__paragraph // <p>
+        {
+            margin: 0 0 4vh 0;
+            font-family: "Quicksand-Regular", sans-serif;
+        }
+
+        .about-me__last-paragraph // <p>
+        {
+            margin: 0;
+            font-family: "Quicksand-Regular", sans-serif;
+        }
+        
+        .about-me__what-else // <div>
+        {
+            margin: 0 0 12vh 0;
+        }
+
+        .about-me__discover // <h2>
+        {
+            margin: 0;
+            font-family: "Cormorant_Upright-Medium", sans-serif;
+            font-size: 9vw;
         }
     }
 }
