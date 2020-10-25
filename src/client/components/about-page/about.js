@@ -1,6 +1,7 @@
 import React from "react";
 import {hot} from "react-hot-loader/root";
 import Header from "./../header/header";
+import Footer from "./../footer/footer";
 
 import me from "./../../images/moi.png";
 
@@ -39,6 +40,7 @@ class About extends React.Component {
                         <h2 className={"about-me__discover"}>{"Mettez-vous à l'aise et découvrez..."}</h2>
                     </div>
                 </div>
+                <Footer />
             </>
         );
     }
