@@ -1,19 +1,28 @@
-import React from "react";
+import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
 import Header from "./../header/header";
 import Footer from "./../footer/footer";
 
 import me from "./../../images/moi.png";
 
-class About extends React.Component {
+class About extends Component {
     render() {
         return (
             <>
-                <Header />
+                <Header
+                    onHomePage={this.props.onHomePage}
+                    changeState={this.props.changeState}
+                />
                 <div className={"background"}>
                     <div className={"about-me"}>
                         <figure className={"about-me__image-container"}>
-                            <img src={me} alt={"Photo de moi"} title={"Oui, c'est moi !"} loading={"lazy"} className={"about-me__image"} />
+                            <img
+                                src={me}
+                                alt={"Photo de moi"}
+                                title={"Oui, c'est moi !"}
+                                loading={"lazy"}
+                                className={"about-me__image"}
+                            />
                             <figcaption className={"about-me__image-caption"}>{"C'est moi !"}</figcaption>
                         </figure>
                         <div className={"about-me__who-i-am"}>
