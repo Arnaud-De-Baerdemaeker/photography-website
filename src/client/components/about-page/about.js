@@ -9,10 +9,7 @@ class About extends Component {
     render() {
         return (
             <>
-                <Header
-                    onHomePage={this.props.onHomePage}
-                    changeState={this.props.changeState}
-                />
+                <Header />
                 <div className={"background"}>
                     <div className={"about-me"}>
                         <figure className={"about-me__image-container"}>
