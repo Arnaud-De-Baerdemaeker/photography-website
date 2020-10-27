@@ -28,7 +28,7 @@ body {
 	By Arnaud De Baerdemaeker
 */
 @media screen and (orientation: portrait) {
-  .menu {
+  .menu--home-page {
     position: fixed;
     bottom: 0;
     height: 12vh;
@@ -36,7 +36,7 @@ body {
 }
 
 @media screen and (orientation: landscape) {
-  .menu {
+  .menu--home-page {
     position: fixed;
     bottom: 0;
     height: 17vh;
@@ -44,7 +44,7 @@ body {
 }
 
 @media screen and (orientation: landscape) and (min-width: 1024px) {
-  .menu {
+  .menu--home-page {
     position: fixed;
     top: 0;
     height: 14vh;
@@ -52,10 +52,10 @@ body {
 }
 
 @media screen {
-  .menu .menu__navigation {
+  .menu--home-page .menu__navigation--home-page {
     height: inherit;
   }
-  .menu .menu__navigation .menu__list {
+  .menu--home-page .menu__navigation--home-page .menu__list--home-page {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -68,7 +68,7 @@ body {
     margin: 0;
     padding: 0;
   }
-  .menu .menu__navigation .menu__list .menu__list-item {
+  .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -80,7 +80,7 @@ body {
 }
 
 @media screen and (orientation: portrait) {
-  .menu .menu__navigation .menu__list .menu__list-item .menu__link {
+  .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--home-page {
     display: block;
     font-family: "JosefinSans-Light", Arial, Helvetica, sans-serif;
     text-decoration: none;
@@ -93,7 +93,7 @@ body {
 }
 
 @media screen and (orientation: landscape) {
-  .menu .menu__navigation .menu__list .menu__list-item .menu__link {
+  .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--home-page {
     display: block;
     font-family: "JosefinSans-Light", Arial, Helvetica, sans-serif;
     text-decoration: none;
@@ -106,7 +106,7 @@ body {
 }
 
 @media screen and (orientation: landscape) and (min-width: 1024px) {
-  .menu .menu__navigation .menu__list .menu__list-item .menu__link {
+  .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--home-page {
     display: block;
     font-family: "JosefinSans-Light", Arial, Helvetica, sans-serif;
     text-decoration: none;
