@@ -5,32 +5,33 @@ import {NavLink} from "react-router-dom";
 
 class Header extends Component {
     render() {
+        const url = window.location.toString();
+        const path = "http://localhost:8080/";
+
         return (
-            <header className={this.props.onHomePage ? "menu--home-page" : "menu--other-pages"}>
-                <nav className={this.props.onHomePage ? "menu__navigation--home-page" : "menu__navigation--other-pages"}>
-                    <ul className={this.props.onHomePage ? "menu__list--home-page" : "menu__list--other-pages"}>
-                        <li className={this.props.onHomePage ? "menu__list-item--home-page" : "menu__list-item--other-pages"}>
+            <header className={url === path ? "menu--home-page" : "menu--other-pages"}>
+                <nav className={url === path ? "menu__navigation--home-page" : "menu__navigation--other-pages"}>
+                    <ul className={url === path ? "menu__list--home-page" : "menu__list--other-pages"}>
+                        <li className={url === path ? "menu__list-item--home-page" : "menu__list-item--other-pages"}>
                             <NavLink
                                 to="/"
-                                onClick={this.props.changeState}
-                                className={this.props.onHomePage ? "menu__link--home-page" : "menu__link--other-pages"}
-                                activeClassName={"menu__link--disabled"}
+                                exact={true}
+                                activeClassName={"menu__link--active"}
+                                className={url === path ? "menu__link--home-page" : "menu__link--other-pages"}
                             >{"ACCUEIL"}</NavLink>
                         </li>
-                        <li className={this.props.onHomePage ? "menu__list-item--home-page" : "menu__list-item--other-pages"}>
+                        <li className={url === path ? "menu__list-item--home-page" : "menu__list-item--other-pages"}>
                             <NavLink
                                 to="/gallery"
-                                onClick={this.props.changeState}
-                                className={this.props.onHomePage ? "menu__link--home-page" : "menu__link--other-pages"}
-                                activeClassName={"menu__link--disabled"}
+                                activeClassName={"menu__link--active"}
+                                className={url === path ? "menu__link--home-page" : "menu__link--other-pages"}
                             >{"GALERIE"}</NavLink>
                         </li>
-                        <li className={this.props.onHomePage ? "menu__list-item--home-page" : "menu__list-item--other-pages"}>
+                        <li className={url === path ? "menu__list-item--home-page" : "menu__list-item--other-pages"}>
                             <NavLink
                                 to="/about"
-                                onClick={this.props.changeState}
-                                className={this.props.onHomePage ? "menu__link--home-page" : "menu__link--other-pages"}
-                                activeClassName={"menu__link--disabled"}
+                                activeClassName={"menu__link--active"}
+                                className={url === path ? "menu__link--home-page" : "menu__link--other-pages"}
                             >{"À PROPOS"}</NavLink>
                         </li>
                     </ul>
