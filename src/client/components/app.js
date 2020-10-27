@@ -6,32 +6,14 @@ import HomePage from "./home-page/home";
 import About from "./about-page/about";
 
 class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            onHomePage: true
-        };
-        this.changeState = this.changeState.bind(this);
-    }
-
-    changeState() {
-        this.setState({onHomePage: !this.state.onHomePage});
-    }
-
     render() {
         return (
             <BrowserRouter>
                 <Route exact path="/">
-                    <HomePage
-                        onHomePage={this.state.onHomePage}
-                        changeState={this.changeState}
-                    />
+                    <HomePage />
                 </Route>
                 <Route path="/about">
-                    <About
-                        onHomePage={this.state.onHomePage}
-                        changeState={this.changeState}
-                    />
+                    <About />
                 </Route>
             </BrowserRouter>
         );
