@@ -6,7 +6,7 @@
 */
 
 @media screen {
-	.menu // <header>
+	.menu--home-page // <header>
 	{
 		@media (orientation: portrait) {
 			position: fixed;
@@ -26,11 +26,11 @@
 			height: 14vh;
 		}
 		
-		.menu__navigation // <nav>
+		.menu__navigation--home-page // <nav>
 		{
 			height: inherit;
 			
-			.menu__list // <ul>
+			.menu__list--home-page // <ul>
 			{
 				display: flex;
 				justify-content: space-evenly;
@@ -40,13 +40,13 @@
 				margin: 0;
 				padding: 0;
 				
-				.menu__list-item // <li>
+				.menu__list-item--home-page // <li>
 				{
 					display: flex;
 					align-items: center;
 					height: inherit;
 					
-					.menu__link // <a>
+					.menu__link--home-page // <a>
 					{
 						@media (orientation: portrait) {
 							display:block;
