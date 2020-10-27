@@ -28,7 +28,7 @@ body {
 	By Arnaud De Baerdemaeker
 */
 @media screen and (orientation: portrait) {
-  .menu--home-page {
+  .menu--home-page, .menu--other-pages {
     position: fixed;
     bottom: 0;
     height: 12vh;
@@ -36,7 +36,7 @@ body {
 }
 
 @media screen and (orientation: landscape) {
-  .menu--home-page {
+  .menu--home-page, .menu--other-pages {
     position: fixed;
     bottom: 0;
     height: 17vh;
@@ -44,7 +44,7 @@ body {
 }
 
 @media screen and (orientation: landscape) and (min-width: 1024px) {
-  .menu--home-page {
+  .menu--home-page, .menu--other-pages {
     position: fixed;
     top: 0;
     height: 14vh;
@@ -52,10 +52,10 @@ body {
 }
 
 @media screen {
-  .menu--home-page .menu__navigation--home-page {
+  .menu--home-page .menu__navigation--home-page, .menu--home-page .menu__navigation--other-pages, .menu--other-pages .menu__navigation--home-page, .menu--other-pages .menu__navigation--other-pages {
     height: inherit;
   }
-  .menu--home-page .menu__navigation--home-page .menu__list--home-page {
+  .menu--home-page .menu__navigation--home-page .menu__list--home-page, .menu--home-page .menu__navigation--home-page .menu__list--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -68,7 +68,7 @@ body {
     margin: 0;
     padding: 0;
   }
-  .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page {
+  .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page, .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -80,7 +80,7 @@ body {
 }
 
 @media screen and (orientation: portrait) {
-  .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--home-page {
+  .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--home-page, .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--other-pages, .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page, .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--other-pages, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--other-pages, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--other-pages {
     display: block;
     font-family: "JosefinSans-Light", Arial, Helvetica, sans-serif;
     text-decoration: none;
@@ -93,7 +93,7 @@ body {
 }
 
 @media screen and (orientation: landscape) {
-  .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--home-page {
+  .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--home-page, .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--other-pages, .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page, .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--other-pages, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--other-pages, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--other-pages {
     display: block;
     font-family: "JosefinSans-Light", Arial, Helvetica, sans-serif;
     text-decoration: none;
@@ -106,7 +106,7 @@ body {
 }
 
 @media screen and (orientation: landscape) and (min-width: 1024px) {
-  .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--home-page {
+  .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--home-page, .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--other-pages, .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page, .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--other-pages, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--other-pages, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--other-pages {
     display: block;
     font-family: "JosefinSans-Light", Arial, Helvetica, sans-serif;
     text-decoration: none;
@@ -115,6 +115,20 @@ body {
     font-weight: bold;
     letter-spacing: 2px;
     word-spacing: 2px;
+  }
+}
+
+@media screen {
+  .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--active, .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--active, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--active, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--active, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--active, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--active, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--active, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--active, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--active, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--active, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--active, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--active, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--active, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--active, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--active, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--active {
+    text-decoration: underline;
+  }
+  .menu--other-pages {
+    background-color: white;
+    -webkit-box-shadow: 0 0 1vh rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 1vh rgba(0, 0, 0, 0.5);
+  }
+  .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--other-pages {
+    color: black;
   }
 }
 
