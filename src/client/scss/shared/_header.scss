@@ -1,0 +1,113 @@
+/*
+	Photography website	|
+	./assets/scss/_header_mobile_portrait.scss - CSS for header part => index page for mobile in portrait |
+	Started on July 2020 |
+	By Arnaud De Baerdemaeker
+*/
+
+@media screen {
+	.menu--home-page, .menu--other-pages // <header>
+	{
+		@media (orientation: portrait) {
+			position: fixed;
+			bottom: 0;
+			height: 12vh;
+		}
+
+		@media (orientation: landscape) {
+			position: fixed;
+			bottom: 0;
+			height: 17vh;
+		}
+		
+		@media (orientation: landscape) and (min-width: 1024px) {
+			position: fixed;
+			top: 0;
+			height: 14vh;
+		}
+		
+		.menu__navigation--home-page, .menu__navigation--other-pages // <nav>
+		{
+			height: inherit;
+			
+			.menu__list--home-page, .menu__list--other-pages // <ul>
+			{
+				display: flex;
+				justify-content: space-evenly;
+				width: 100vw;
+				height: inherit;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				
+				.menu__list-item--home-page, .menu__list-item--other-pages // <li>
+				{
+					display: flex;
+					align-items: center;
+					height: inherit;
+					
+					.menu__link--home-page, .menu__link--other-pages // <a>
+					{
+						@media (orientation: portrait) {
+							display:block;
+							font-family: "JosefinSans-Light", Arial, Helvetica, sans-serif;
+							text-decoration: none;
+							color: rgb(255, 255, 255);
+							font-size: 4vw;
+							font-weight: bold;
+							letter-spacing: 2px;
+							word-spacing: 2px;
+						}
+
+						@media (orientation: landscape) {
+							display:block;
+							font-family: "JosefinSans-Light", Arial, Helvetica, sans-serif;
+							text-decoration: none;
+							color: rgb(255, 255, 255);
+							font-size: 3vw;
+							font-weight: bold;
+							letter-spacing: 2px;
+							word-spacing: 2px;
+						}
+						
+						@media (orientation: landscape) and (min-width: 1024px) {
+							display:block;
+							font-family: "JosefinSans-Light", Arial, Helvetica, sans-serif;
+							text-decoration: none;
+							color: rgb(255, 255, 255);
+							font-size: 2vw;
+							font-weight: bold;
+							letter-spacing: 2px;
+							word-spacing: 2px;
+						}
+					}
+
+					.menu__link--active // <a>
+					{
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+
+	.menu--other-pages // <header>
+	{
+		background-color: rgb(255, 255, 255);
+		box-shadow: 0 0 1vh rgba(0, 0, 0, 0.5);
+
+		.menu__navigation--other-pages // <nav>
+		{
+			.menu__list--other-pages // <ul>
+			{
+				.menu__list-item--other-pages // <li>
+				{
+					.menu__link--other-pages // <a>
+					{
+						color: rgb(0, 0, 0);
+					}
+				}
+			}
+		}
+	}
+}
