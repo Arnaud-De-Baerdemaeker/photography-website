@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
-import Header from "./../header/header";
+import Header from "./../shared/header";
 
 class HomePage extends Component {
     render() {
