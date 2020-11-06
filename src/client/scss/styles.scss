@@ -19,4 +19,4 @@ body {
 	height: 100vh;
 }
 
-@import "./header/header", "./index-page/index", "./about-page/about";
+@import "./shared/header", "./index-page/index", "./about-page/about", "./shared/footer";
