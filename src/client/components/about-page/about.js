@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
-import Header from "./../header/header";
-import Footer from "./../footer/footer";
+import Header from "./../shared/header";
+import Footer from "./../shared/footer";
 
 import me from "./../../images/moi.png";
 
