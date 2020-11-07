@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
 import Header from "./../shared/header";
-import Name from "./../shared/name";
+import MyName from "./../shared/name";
 import Footer from "./../shared/footer";
 
 import Divider from "./../shared/divider";
@@ -16,7 +16,7 @@ class About extends Component
                 <Header />
                 <div className={"background"}>
                     <Divider />
-                    <Name />
+                    <MyName />
                     <div className={"about-me"}>
                         <section className={"about-me__who-i-am"}>
                             <h1 className={"about-me__level-1-title"}>{"Qui suis-je ?"}</h1>
