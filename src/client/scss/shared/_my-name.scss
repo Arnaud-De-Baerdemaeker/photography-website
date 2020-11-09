@@ -1,5 +1,9 @@
-.my-name // <div>
+.my-name // <h1>
 {
     @include name-top;
     letter-spacing: 0.5px;
+    background-color: rgb(240, 240, 240);
+    margin: 0;
+    font-size: 1em;
+    padding: 5vw;
 }
