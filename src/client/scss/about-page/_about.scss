@@ -1,68 +1,159 @@
-.background //<div>
+.about //<div>
 {
-    background-color: rgb(240, 240, 240);
-    padding: 5vw;
-
     .about-me //div>
     {
-        background-color: rgb(255, 255, 255);
-        padding: 10vh 5vw 5vw 5vw;
-        border-radius: 5vw;
-        box-shadow: 0 0 5vw rgba(0, 0, 0, 0.1);
-
-        .about-me__image-container // <figure>
+        .about-me__who-i-am // <section>
         {
-            width: 50vw;
-            margin: 0 auto 10vh auto;
-
-            .about-me__image // <img>
-            {
-                width: 100%;
+            margin: {
+                top: 0;
+                right: 0;
+                bottom: 7vh;
+                left: 0;
             }
-
-            .about-me__image-caption // <figcaption>
-            {
-                font-family: "Quicksand-Regular", sans-serif;
-                font-size: 4vw;
-                font-style: italic;
-                text-align: right;
+            padding: {
+                top: 0;
+                right: 5vw;
+                bottom: 0;
+                left: 5vw;
             }
         }
 
-        .about-me__who-i-am, .about-me__why-webdesign, .about-me__why-photography // <div>
+        .about-me__why-webdesign // <section>
         {
-            margin: 0 0 7vh 0;
+            // margin: {
+            //     top: 0;
+            //     right: 0;
+            //     bottom: 7vh;
+            //     left: 0;
+            // }
+            padding: {
+                top: 5vw;
+                right: 5vw;
+                bottom: 5vw;
+                left: 5vw;
+            }
+            background-color: rgb(240, 240, 240);
         }
 
-        .about-me__level-1-title, .about-me__level-2-title // <h1>
+        .about-me__why-photography // <section
         {
-            margin: 0 0 7vh 0;
-            font-family: "Cormorant_Upright-Medium", sans-serif;
-            font-size: 9vw;
+            margin: {
+                top: 0;
+                right: 0;
+                bottom: 7vh;
+                left: 0;
+            }
+            padding: {
+                top: 0;
+                right: 5vw;
+                bottom: 0;
+                left: 5vw;
+            }
+        }
+
+        .about-me__level-2-title // <h2>
+        {
+            margin: {
+                top: 0;
+                right: 0;
+                bottom: 7vh;
+                left: 0;
+            }
+            font: {
+                family: "UbuntuMono-Regular";
+                size: 7.5vw;
+            }
+            letter-spacing: -1px;
+            word-spacing: -3px;
+
         }
 
         .about-me__paragraph // <p>
         {
             margin: 0 0 4vh 0;
-            font-family: "Quicksand-Regular", sans-serif;
+            @include regular-text;
         }
 
         .about-me__last-paragraph // <p>
         {
             margin: 0;
-            font-family: "Quicksand-Regular", sans-serif;
+            @include regular-text;
         }
         
-        .about-me__what-else // <div>
+        .about-me__what-else // <section>
         {
-            margin: 0 0 12vh 0;
+            margin: {
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+            padding: {
+                top: 5vw;
+                right: 5vw;
+                bottom: 5vw;
+                left: 5vw;
+            }
+            background-color: rgb(240, 240, 240);
         }
 
         .about-me__discover // <h2>
         {
-            margin: 0;
-            font-family: "Cormorant_Upright-Medium", sans-serif;
-            font-size: 9vw;
+            margin: {
+                top: 0;
+                right: 0;
+                bottom: 10vw;
+                left: 0;
+            }
+            padding: {
+                top: 5vw;
+                right: 5vw;
+                bottom: 5vw;
+                left: 5vw;
+            }
+            font: {
+                family: "UbuntuMono-Regular";
+                size: 7.5vw;
+            }
+            letter-spacing: -1px;
+            word-spacing: -3px;
+        }
+
+        .about-me__my-photo // <div>
+        {
+            background-color: rgb(240, 240, 240);
+            padding: {
+                top: 5vw;
+                right: 5vw;
+                bottom: 5vw;
+                left: 5vw;
+            }
+
+            .about-me__image-container // <figure>
+            {
+                width: 50vw;
+                margin: {
+                    top: 0;
+                    right: auto;
+                    bottom: 0;
+                    left: auto;
+                }
+                
+                .about-me__image // <img>
+                {
+                    width: 100%;
+                }
+
+                .about-me__image-caption // <figcaption>
+                {
+                    font: {
+                        family: "Quicksand-Regular", sans-serif;
+                        size: 4vw;
+                        style: italic;
+                    }
+                    text-align: right;
+                }
+            }
         }
     }
 }
