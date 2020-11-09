@@ -1,0 +1,25 @@
+.divider--top // <div>
+{
+    height: 30px;
+    width: 100%;
+
+    .divider__image--top // <img>
+    {
+        color: rgb(240, 240, 240);
+        width: 100%;
+        transform: rotate(180deg);
+    }
+}
+
+.divider--bottom // <div>
+{
+    height: 30px;
+    width: 100%;
+    margin-bottom: 10vw;
+
+    .divider__image--bottom // <img>
+    {
+        color: rgb(240, 240, 240);
+        width: 100%;
+    }
+}
