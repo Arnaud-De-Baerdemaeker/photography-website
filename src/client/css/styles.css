@@ -1,16 +1,21 @@
 @font-face {
   font-family: "Quicksand-Regular";
-  src: url("./../fonts/Quicksand/Quicksand-Regular.ttf");
+  src: url("./../fonts/Quicksand/Quicksand-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Overpass-Extra-Light";
+  src: url("./../fonts/Overpass/Overpass-ExtraLight.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "ZCOOLXiaoWei-Regular";
-  src: url("./../fonts/ZCOOL_XiaoWei/ZCOOLXiaoWei-Regular.ttf");
+  src: url("./../fonts/ZCOOL_XiaoWei/ZCOOLXiaoWei-Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Cormorant_Upright-Medium";
-  src: url("./../fonts/Cormorant_Upright/CormorantUpright-Medium.ttf");
+  font-family: "UbuntuMono-Regular";
+  src: url("./../fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf") format("truetype");
 }
 
 body {
@@ -18,7 +23,6 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin: 0;
-  height: 100vh;
 }
 
 /*
@@ -132,6 +136,39 @@ body {
   }
 }
 
+.divider--top {
+  height: 30px;
+  width: 100%;
+}
+
+.divider--top .divider__image--top {
+  color: #f0f0f0;
+  width: 100%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.divider--bottom {
+  height: 30px;
+  width: 100%;
+  margin-bottom: 10vw;
+}
+
+.divider--bottom .divider__image--bottom {
+  color: #f0f0f0;
+  width: 100%;
+}
+
+.my-name {
+  font-family: "ZCOOLXiaoWei-Regular";
+  color: #646464;
+  letter-spacing: 0.5px;
+  background-color: #f0f0f0;
+  margin: 0;
+  font-size: 1em;
+  padding: 5vw;
+}
+
 /*
 	Photography website |
 	./assets/scss/_index_mobile_portrait.scss - CSS for core of index page for mobile in portrait |
@@ -197,61 +234,111 @@ body {
   }
 }
 
-.background {
+.about .about-me .about-me__who-i-am {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 7vh;
+  margin-left: 0;
+  padding-top: 0;
+  padding-right: 5vw;
+  padding-bottom: 0;
+  padding-left: 5vw;
+}
+
+.about .about-me .about-me__why-webdesign {
+  padding-top: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 5vw;
+  padding-left: 5vw;
   background-color: #f0f0f0;
-  padding: 5vw;
 }
 
-.background .about-me {
-  background-color: white;
-  padding: 10vh 5vw 5vw 5vw;
-  border-radius: 5vw;
-  -webkit-box-shadow: 0 0 5vw rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 5vw rgba(0, 0, 0, 0.1);
+.about .about-me .about-me__why-photography {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 7vh;
+  margin-left: 0;
+  padding-top: 0;
+  padding-right: 5vw;
+  padding-bottom: 0;
+  padding-left: 5vw;
 }
 
-.background .about-me .about-me__image-container {
+.about .about-me .about-me__level-2-title {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 7vh;
+  margin-left: 0;
+  font-family: "UbuntuMono-Regular";
+  font-size: 7.5vw;
+  letter-spacing: -1px;
+  word-spacing: -3px;
+}
+
+.about .about-me .about-me__paragraph {
+  margin: 0 0 4vh 0;
+  font-family: "Quicksand-Regular", Arial, Helvetica, sans-serif;
+  line-height: 25px;
+  letter-spacing: 0.25px;
+}
+
+.about .about-me .about-me__last-paragraph {
+  margin: 0;
+  font-family: "Quicksand-Regular", Arial, Helvetica, sans-serif;
+  line-height: 25px;
+  letter-spacing: 0.25px;
+}
+
+.about .about-me .about-me__what-else {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 5vw;
+  padding-left: 5vw;
+  background-color: #f0f0f0;
+}
+
+.about .about-me .about-me__discover {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 10vw;
+  margin-left: 0;
+  padding-top: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 5vw;
+  padding-left: 5vw;
+  font-family: "UbuntuMono-Regular";
+  font-size: 7.5vw;
+  letter-spacing: -1px;
+  word-spacing: -3px;
+}
+
+.about .about-me .about-me__my-photo {
+  background-color: #f0f0f0;
+  padding-top: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 5vw;
+  padding-left: 5vw;
+}
+
+.about .about-me .about-me__my-photo .about-me__image-container {
   width: 50vw;
-  margin: 0 auto 10vh auto;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
 }
 
-.background .about-me .about-me__image-container .about-me__image {
+.about .about-me .about-me__my-photo .about-me__image-container .about-me__image {
   width: 100%;
 }
 
-.background .about-me .about-me__image-container .about-me__image-caption {
+.about .about-me .about-me__my-photo .about-me__image-container .about-me__image-caption {
   font-family: "Quicksand-Regular", sans-serif;
   font-size: 4vw;
   font-style: italic;
   text-align: right;
-}
-
-.background .about-me .about-me__who-i-am, .background .about-me .about-me__why-webdesign, .background .about-me .about-me__why-photography {
-  margin: 0 0 7vh 0;
-}
-
-.background .about-me .about-me__level-1-title, .background .about-me .about-me__level-2-title {
-  margin: 0 0 7vh 0;
-  font-family: "Cormorant_Upright-Medium", sans-serif;
-  font-size: 9vw;
-}
-
-.background .about-me .about-me__paragraph {
-  margin: 0 0 4vh 0;
-  font-family: "Quicksand-Regular", sans-serif;
-}
-
-.background .about-me .about-me__last-paragraph {
-  margin: 0;
-  font-family: "Quicksand-Regular", sans-serif;
-}
-
-.background .about-me .about-me__what-else {
-  margin: 0 0 12vh 0;
-}
-
-.background .about-me .about-me__discover {
-  margin: 0;
-  font-family: "Cormorant_Upright-Medium", sans-serif;
-  font-size: 9vw;
 }
