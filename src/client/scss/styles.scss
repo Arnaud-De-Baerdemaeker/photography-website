@@ -1,22 +1,42 @@
-@font-face {
+@font-face
+{
 	font-family: "Quicksand-Regular";
-	src: url("./../fonts/Quicksand/Quicksand-Regular.ttf");
+	src: url("./../fonts/Quicksand/Quicksand-Regular.ttf") format("truetype");
 }
 
-@font-face {
+@font-face
+{
+	font-family: "Overpass-Extra-Light";
+	src: url("./../fonts/Overpass/Overpass-ExtraLight.ttf") format("truetype");
+}
+
+@font-face
+{
 	font-family: "ZCOOLXiaoWei-Regular";
-	src: url("./../fonts/ZCOOL_XiaoWei/ZCOOLXiaoWei-Regular.ttf");
+	src: url("./../fonts/ZCOOL_XiaoWei/ZCOOLXiaoWei-Regular.ttf") format("truetype");
 }
 
-@font-face {
-	font-family: "Cormorant_Upright-Medium";
-	src: url("./../fonts/Cormorant_Upright/CormorantUpright-Medium.ttf");
+@font-face
+{
+	font-family: "UbuntuMono-Regular";
+	src: url("./../fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf") format("truetype");
 }
 
 body {
 	display: flex;
 	margin: 0;
-	height: 100vh;
 }
 
-@import "./shared/header", "./index-page/index", "./about-page/about", "./shared/footer";
+@mixin name-top
+{
+	font-family: "ZCOOLXiaoWei-Regular";
+	color: rgb(100, 100, 100);
+}
+
+@mixin regular-text {
+	font-family: "Quicksand-Regular", Arial, Helvetica, sans-serif;
+	line-height: 25px;
+	letter-spacing: 0.25px;
+}
+
+@import "./shared/header", "./shared/dividers", "./shared/my-name", "./index-page/index", "./about-page/about", "./shared/footer";
