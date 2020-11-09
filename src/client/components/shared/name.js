@@ -6,7 +6,7 @@ class MyName extends Component
     render()
     {
         return (
-            <div className={"my-name"}>{"Arnaud De Baerdemaeker"}</div>
+            <h1 className={"my-name"}>{"Arnaud De Baerdemaeker"}</h1>
         );
     }
 }
