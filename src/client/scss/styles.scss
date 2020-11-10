@@ -6,8 +6,8 @@
 
 @font-face
 {
-	font-family: "Overpass-Extra-Light";
-	src: url("./../fonts/Overpass/Overpass-ExtraLight.ttf") format("truetype");
+	font-family: "Comfortaa-Bold";
+	src: url("./../fonts/Comfortaa/Comfortaa-Bold.ttf") format("truetype");
 }
 
 @font-face
@@ -25,6 +25,12 @@
 body {
 	display: flex;
 	margin: 0;
+	box-sizing: border-box;
+}
+
+@mixin menu-links
+{
+	font-family: "Comfortaa-Bold";
 }
 
 @mixin name-top
