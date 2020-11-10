@@ -4,8 +4,8 @@
 }
 
 @font-face {
-  font-family: "Overpass-Extra-Light";
-  src: url("./../fonts/Overpass/Overpass-ExtraLight.ttf") format("truetype");
+  font-family: "Comfortaa-Bold";
+  src: url("./../fonts/Comfortaa/Comfortaa-Bold.ttf") format("truetype");
 }
 
 @font-face {
@@ -23,6 +23,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /*
@@ -36,22 +38,6 @@ body {
     position: fixed;
     bottom: 0;
     height: 12vh;
-  }
-}
-
-@media screen and (orientation: landscape) {
-  .menu--home-page, .menu--other-pages {
-    position: fixed;
-    bottom: 0;
-    height: 17vh;
-  }
-}
-
-@media screen and (orientation: landscape) and (min-width: 1024px) {
-  .menu--home-page, .menu--other-pages {
-    position: fixed;
-    top: 0;
-    height: 14vh;
   }
 }
 
@@ -70,9 +56,26 @@ body {
     height: inherit;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding-top: 0;
+    padding-right: 0vw;
+    padding-bottom: 0;
+    padding-left: 0vw;
   }
   .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page, .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-item-align: center;
+        align-self: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: calc(12vh / 2);
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--home-page, .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--other-pages, .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page, .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--other-pages, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--other-pages, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--other-pages {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -80,51 +83,19 @@ body {
         -ms-flex-align: center;
             align-items: center;
     height: inherit;
-  }
-}
-
-@media screen and (orientation: portrait) {
-  .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--home-page, .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--other-pages, .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page, .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--other-pages, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--other-pages, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--other-pages {
-    display: block;
-    font-family: "JosefinSans-Light", Arial, Helvetica, sans-serif;
+    font-family: "Comfortaa-Bold";
     text-decoration: none;
     color: white;
     font-size: 4vw;
-    font-weight: bold;
-    letter-spacing: 2px;
-    word-spacing: 2px;
-  }
-}
-
-@media screen and (orientation: landscape) {
-  .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--home-page, .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--other-pages, .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page, .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--other-pages, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--other-pages, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--other-pages {
-    display: block;
-    font-family: "JosefinSans-Light", Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    color: white;
-    font-size: 3vw;
-    font-weight: bold;
-    letter-spacing: 2px;
-    word-spacing: 2px;
-  }
-}
-
-@media screen and (orientation: landscape) and (min-width: 1024px) {
-  .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--home-page, .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--other-pages, .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page, .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--other-pages, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--other-pages, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--other-pages {
-    display: block;
-    font-family: "JosefinSans-Light", Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    color: white;
-    font-size: 2vw;
-    font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     word-spacing: 2px;
   }
 }
 
 @media screen {
   .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--active, .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--active, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--active, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--active, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--active, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--active, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--active, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--active, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--active, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--active, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--active, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--active, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--active, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--active, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--active, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--active {
-    text-decoration: underline;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
   }
   .menu--other-pages {
     background-color: white;
