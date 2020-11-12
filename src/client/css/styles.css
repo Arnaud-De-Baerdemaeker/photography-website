@@ -36,6 +36,7 @@ body {
 @media screen and (orientation: portrait) {
   .menu--home-page, .menu--other-pages {
     position: fixed;
+    z-index: 1;
     bottom: 0;
     height: 12vh;
   }
@@ -89,10 +90,17 @@ body {
     font-size: 4vw;
     letter-spacing: 1.5px;
     word-spacing: 2px;
+    -webkit-transition-property: text-shadow;
+    transition-property: text-shadow;
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
   }
 }
 
 @media screen {
+  .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--home-page:hover, .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page:hover, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page:hover, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page:hover, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--home-page:hover, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page:hover, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page:hover, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page:hover, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--home-page:hover, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page:hover, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page:hover, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page:hover, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--home-page:hover, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page:hover, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page:hover, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page:hover {
+    text-shadow: 0 0 4px white;
+  }
   .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--active, .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--active, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--active, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--active, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--active, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--active, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--active, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--active, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--active, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--active, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--active, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--active, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--active, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--active, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--active, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--active {
     border-bottom-style: solid;
     border-bottom-width: 1px;
