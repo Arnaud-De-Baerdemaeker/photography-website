@@ -11,6 +11,7 @@
 		@media (orientation: portrait)
 		{
 			position: fixed;
+			z-index: 1;
 			bottom: 0;
 			height: 12vh;
 		}
@@ -66,8 +67,8 @@
 							font-size: 4vw;
 							letter-spacing: 1.5px;
 							word-spacing: 2px;
-							// transition-property: text-shadow;
-							// transition-duration: 0.5s;
+							transition-property: text-shadow;
+							transition-duration: 0.5s;
 						}
 
 						// @media (orientation: landscape)
@@ -95,10 +96,10 @@
 						// }
 					}
 
-					// .menu__link--home-page:hover // <a>
-					// {
-					// 	text-shadow: 0 0 4px rgb(255, 255, 255);
-					// }
+					.menu__link--home-page:hover // <a>
+					{
+						text-shadow: 0 0 4px rgb(255, 255, 255);
+					}
 
 					.menu__link--active // <a>
 					{
