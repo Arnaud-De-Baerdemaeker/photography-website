@@ -6,18 +6,35 @@ import HomePage from "./home-page/home";
 import Gallery from "./gallery-page/gallery";
 import About from "./about-page/about";
 
-class App extends Component {
-    render() {
+class App extends Component
+{
+    constructor()
+    {
+        super();
+        this.state =
+        {
+            dividerContainer: ["divider--top", "divider--bottom"],
+            dividerImage: ["divider__image--top", "divider__image--bottom"]
+        }
+    }
+    render()
+    {
         return(
             <BrowserRouter>
                 <Route exact path="/">
                     <HomePage />
                 </Route>
                 <Route path="/gallery">
-                    <Gallery />
+                    <Gallery
+                        dividerContainer={this.state.dividerContainer}
+                        dividerImage={this.state.dividerImage}
+                    />
                 </Route>
                 <Route path="/about">
-                    <About />
+                    <About
+                        dividerContainer={this.state.dividerContainer}
+                        dividerImage={this.state.dividerImage}
+                    />
                 </Route>
             </BrowserRouter>
         );
