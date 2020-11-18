@@ -18,13 +18,12 @@
   src: url("./../fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf") format("truetype");
 }
 
-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+@media screen {
+  body {
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
 }
 
 /*
@@ -47,12 +46,10 @@ body {
     height: inherit;
   }
   .menu--home-page .menu__navigation--home-page .menu__list--home-page, .menu--home-page .menu__navigation--home-page .menu__list--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     width: 100vw;
     height: inherit;
     list-style: none;
@@ -63,14 +60,14 @@ body {
     padding-left: 0vw;
   }
   .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page, .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -ms-flex-item-align: center;
         align-self: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     height: calc(12vh / 2);
   }
 }
@@ -211,6 +208,80 @@ body {
     text-shadow: 0 0 7px white;
     margin: 0;
   }
+}
+
+.gallery .gallery__intro-container {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 7vh;
+  margin-left: 0;
+  padding-top: 0;
+  padding-right: 5vw;
+  padding-bottom: 0;
+  padding-left: 5vw;
+}
+
+.gallery .gallery__intro-container .gallery__title-1 {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 7vh;
+  margin-left: 0;
+  font-family: "UbuntuMono-Regular";
+  font-size: 7.5vw;
+}
+
+.gallery .gallery__intro-container .gallery__intro {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  font-family: "Quicksand-Regular", Arial, Helvetica, sans-serif;
+  line-height: 25px;
+  letter-spacing: 0.25px;
+}
+
+.gallery .gallery__years-container {
+  background-color: #f0f0f0;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 7vh;
+  padding-left: 0;
+}
+
+.gallery .gallery__years-container .gallery__list {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 0;
+  padding-left: 5vw;
+  list-style: none;
+}
+
+.gallery .gallery__years-container .gallery__list .gallery__list-item {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 7vh;
+  margin-left: 0;
+  height: 40vw;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.gallery .gallery__years-container .gallery__list .gallery__list-item .gallery__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.gallery .gallery__years-container .gallery__list .gallery__list-item:last-of-type {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
 }
 
 .about .about-me .about-me__who-i-am {
