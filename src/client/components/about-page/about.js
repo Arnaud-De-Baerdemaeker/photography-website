@@ -3,7 +3,6 @@ import {hot} from "react-hot-loader/root";
 import Header from "./../shared/header";
 import MyName from "./../shared/name";
 import Footer from "./../shared/footer";
-
 import Divider from "./../shared/divider";
 import MyPhoto from "./../../images/moi.png";
 
@@ -11,37 +10,25 @@ class About extends Component
 {
     render()
     {
-        const dividerContainer =
-        [
-            "divider--top",
-            "divider--bottom"
-        ];
-
-        const dividerImage =
-        [
-            "divider__image--top",
-            "divider__image--bottom"
-        ];
-
         return(
             <>
                 <Header />
                 <div className={"about"}>
                     <MyName />
                     <Divider
-                        dividerContainer={dividerContainer[1]}
-                        dividerImage={dividerImage[1]}
+                        dividerContainer={this.props.dividerContainer[1]}
+                        dividerImage={this.props.dividerImage[1]}
                     />
                     <div className={"about-me"}>
                         <section className={"about-me__who-i-am"}>
                             <h2 className={"about-me__level-2-title"}>{"Qui suis-je ?"}</h2>
                             <p className={"about-me__paragraph"}>{"Bonjour ! Je m'appelle Arnaud."}</p>
                             <p className={"about-me__paragraph"}>{"Vivant à Liège, en Belgique, je suis développeur web et accessoirement je pratique la photographie comme loisir."}</p>
-                            <p className={"about-me__last-paragraph"}>{"Au fil de mon apprentissage des technologies de développement web, s'est imposée l'idée de fusionner ces deux domaines que je pratique dans le but, d'un côté, de mettre en application ce que j'ai appris, et de l'autre, de pouvoir exposer les fruits de ce loisir."}</p>
+                            <p className={"about-me__last-paragraph"}>{"Au fil de mon apprentissage des technologies de développement web, s'est imposée l'idée de fusionner ces deux domaines dans le but, d'un côté, de mettre en application ce que j'ai appris, et de l'autre, de pouvoir exposer les fruits de ce loisir."}</p>
                         </section>
                         <Divider
-                            dividerContainer={dividerContainer[0]}
-                            dividerImage={dividerImage[0]}
+                            dividerContainer={this.props.dividerContainer[0]}
+                            dividerImage={this.props.dividerImage[0]}
                         />
                         <section className={"about-me__why-webdesign"}>
                             <h2 className={"about-me__level-2-title"}>{"Pourquoi le développement web ?"}</h2>
@@ -50,8 +37,8 @@ class About extends Component
                             <p className={"about-me__last-paragraph"}>{"Réfléchir aux couleurs à utiliser, à la disposition des différents éléments, à l'expérience utilisateur, sont autant de problématiques que j'apprécie de résoudre soigneusement."}</p>
                         </section>
                         <Divider
-                            dividerContainer={dividerContainer[1]}
-                            dividerImage={dividerImage[1]}
+                            dividerContainer={this.props.dividerContainer[1]}
+                            dividerImage={this.props.dividerImage[1]}
                         />
                         <section className={"about-me__why-photography"}>
                             <h2 className={"about-me__level-2-title"}>{"Pourquoi la photographie ?"}</h2>
@@ -59,21 +46,21 @@ class About extends Component
                             <p className={"about-me__last-paragraph"}>{"La nature sous toutes ses formes et les architectures sont les types de sujets qui m'inspirent le plus."}</p>
                         </section>
                         <Divider
-                            dividerContainer={dividerContainer[0]}
-                            dividerImage={dividerImage[0]}
+                            dividerContainer={this.props.dividerContainer[0]}
+                            dividerImage={this.props.dividerImage[0]}
                         />
                         <section className={"about-me__what-else"}>
                             <h2 className={"about-me__level-2-title"}>{"Et en dehors de ça ?"}</h2>
                             <p className={"about-me__last-paragraph"}>{"Quand je ne code et ne photographie pas, je prend plaisir à faire du vélo, jouer aux jeux vidéo, lire ou tout simplement me balader entre-autres."}</p>
                         </section>
                         <Divider
-                            dividerContainer={dividerContainer[1]}
-                            dividerImage={dividerImage[1]}
+                            dividerContainer={this.props.dividerContainer[1]}
+                            dividerImage={this.props.dividerImage[1]}
                         />
                         <h2 className={"about-me__discover"}>{"Mettez-vous à l'aise et découvrez..."}</h2>
                         <Divider
-                            dividerContainer={dividerContainer[0]}
-                            dividerImage={dividerImage[0]}
+                            dividerContainer={this.props.dividerContainer[0]}
+                            dividerImage={this.props.dividerImage[0]}
                         />
                         <div className={"about-me__my-photo"}>
                             <figure className={"about-me__image-container"}>
