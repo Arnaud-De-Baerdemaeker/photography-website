@@ -1,41 +1,67 @@
 /* eslint-disable class-methods-use-this */
 import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
-import {BrowserRouter, Route} from "react-router-dom";
+import {BrowserRouter, Switch, Route} from "react-router-dom";
 import HomePage from "./home-page/home";
 import Gallery from "./gallery-page/gallery";
 import About from "./about-page/about";
+import PhotosList from "./gallery-page/photos-list/photos-list";
+import {photos2014, photos2015, photos2016, photos2017, photos2018, photos2019, photos2020} from "./../javascript/metadata";
 
 class App extends Component
 {
-    constructor()
+    constructor(props)
     {
-        super();
+        super(props);
         this.state =
         {
             dividerContainer: ["divider--top", "divider--bottom"],
             dividerImage: ["divider__image--top", "divider__image--bottom"]
         }
     }
+
     render()
     {
         return(
             <BrowserRouter>
-                <Route exact path="/">
-                    <HomePage />
-                </Route>
-                <Route path="/gallery">
-                    <Gallery
-                        dividerContainer={this.state.dividerContainer}
-                        dividerImage={this.state.dividerImage}
-                    />
-                </Route>
-                <Route path="/about">
-                    <About
-                        dividerContainer={this.state.dividerContainer}
-                        dividerImage={this.state.dividerImage}
-                    />
-                </Route>
+                <Switch>
+                    <Route path={"/gallery/2014"}>
+                        <PhotosList photos={photos2014} />
+                    </Route>
+                    <Route path={"/gallery/2015"}>
+                        <PhotosList photos={photos2015} />
+                    </Route>
+                    <Route path={"/gallery/2016"}>
+                        <PhotosList photos={photos2016} />
+                    </Route>
+                    <Route path={"/gallery/2017"}>
+                        <PhotosList photos={photos2017} />
+                    </Route>
+                    <Route path={"/gallery/2018"}>
+                        <PhotosList photos={photos2018} />
+                    </Route>
+                    <Route path={"/gallery/2019"}>
+                        <PhotosList photos={photos2019} />
+                    </Route>
+                    <Route path={"/gallery/2020"}>
+                        <PhotosList photos={photos2020} />
+                    </Route>
+                    <Route path="/gallery">
+                        <Gallery
+                            dividerContainer={this.state.dividerContainer}
+                            dividerImage={this.state.dividerImage}
+                        />
+                    </Route>
+                    <Route path="/about">
+                        <About
+                            dividerContainer={this.state.dividerContainer}
+                            dividerImage={this.state.dividerImage}
+                        />
+                    </Route>
+                    <Route exact path="/">
+                        <HomePage />
+                    </Route>
+                </Switch>
             </BrowserRouter>
         );
     }
