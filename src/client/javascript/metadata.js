@@ -20,6 +20,7 @@ const photos2016 =
     {
         url: "https://drive.google.com/uc?id=1p0NZkKgZO5Y2z7NRhZ4Df33ORh3nRd0Q",
         name: "Parc de la Boverie",
+        place: "Liège",
         day: "Vendredi",
         date: "13 mai 2016",
         time: "10:59:59",
@@ -33,6 +34,7 @@ const photos2016 =
     {
         url: "https://drive.google.com/uc?id=1NJbkAWFK2-2o_Dd-LB06-cu3E45J4LSK",
         name: "Herbes glacées",
+        place: "Liège",
         day: "Jeudi",
         date: "29 décembre 2016",
         time: "15:31:22",
@@ -60,6 +62,7 @@ const photos2018 =
     {
         url: "https://drive.google.com/uc?id=1G30dFQ08efzxxnWvOeaeB3t8iouJs-KY",
         name: "Lune",
+        place: "Liège",
         day: "Vendredi",
         date: "28 septembre 2018",
         time: "22:14:34",
