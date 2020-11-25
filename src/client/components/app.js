@@ -15,8 +15,16 @@ class App extends Component
         super(props);
         this.state =
         {
-            dividerContainer: ["divider--top", "divider--bottom"],
-            dividerImage: ["divider__image--top", "divider__image--bottom"]
+            dividerContainer:
+            [
+                "divider--top",
+                "divider--bottom"
+            ],
+            dividerImage:
+            [
+                "divider__image--top",
+                "divider__image--bottom"
+            ]
         }
     }
 
@@ -26,25 +34,53 @@ class App extends Component
             <BrowserRouter>
                 <Switch>
                     <Route path={"/gallery/2014"}>
-                        <PhotosList photos={photos2014} />
+                        <PhotosList
+                            photos={photos2014}
+                            dividerContainer={this.state.dividerContainer}
+                            dividerImage={this.state.dividerImage}
+                        />
                     </Route>
                     <Route path={"/gallery/2015"}>
-                        <PhotosList photos={photos2015} />
+                        <PhotosList
+                            photos={photos2015}
+                            dividerContainer={this.state.dividerContainer}
+                            dividerImage={this.state.dividerImage}
+                        />
                     </Route>
                     <Route path={"/gallery/2016"}>
-                        <PhotosList photos={photos2016} />
+                        <PhotosList
+                            photos={photos2016}
+                            dividerContainer={this.state.dividerContainer}
+                            dividerImage={this.state.dividerImage}
+                        />
                     </Route>
                     <Route path={"/gallery/2017"}>
-                        <PhotosList photos={photos2017} />
+                        <PhotosList
+                            photos={photos2017}
+                            dividerContainer={this.state.dividerContainer}
+                            dividerImage={this.state.dividerImage}
+                        />
                     </Route>
                     <Route path={"/gallery/2018"}>
-                        <PhotosList photos={photos2018} />
+                        <PhotosList
+                            photos={photos2018}
+                            dividerContainer={this.state.dividerContainer}
+                            dividerImage={this.state.dividerImage}
+                        />
                     </Route>
                     <Route path={"/gallery/2019"}>
-                        <PhotosList photos={photos2019} />
+                        <PhotosList
+                            photos={photos2019}
+                            dividerContainer={this.state.dividerContainer}
+                            dividerImage={this.state.dividerImage}
+                        />
                     </Route>
                     <Route path={"/gallery/2020"}>
-                        <PhotosList photos={photos2020} />
+                        <PhotosList
+                            photos={photos2020}
+                            dividerContainer={this.state.dividerContainer}
+                            dividerImage={this.state.dividerImage}
+                        />
                     </Route>
                     <Route path="/gallery">
                         <Gallery
