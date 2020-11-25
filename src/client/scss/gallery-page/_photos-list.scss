@@ -1,0 +1,27 @@
+.photos-list // <div>
+{
+    .photos-list__title-container // <div>
+    {
+        margin: {
+            top: 0;
+            right: 0;
+            bottom: 5vh;
+            left: 0;
+        }
+
+        .photos-list__title-1 // <h1>
+        {
+            margin: {
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+            font: {
+                family: "UbuntuMono-Regular";
+                size: 12vw;
+            }
+            text-align: center;
+        }
+    }
+}
