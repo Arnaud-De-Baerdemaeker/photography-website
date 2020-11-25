@@ -6,27 +6,30 @@ class PhotosCards extends Component
     render()
     {
         return(
-            <div>
-                <div>
-                    <img src={this.props.url} />
+            <>
+                <div className={"photos-cards__image-container"}>
+                    <img
+                        src={this.props.url}
+                        className={"photos-cards__image"}
+                    />
                 </div>
-                <div>
-                    <ul>
-                        <li>
-                            <h1>{this.props.name}</h1>
+                <div className={"photos-cards__metadata"}>
+                    <ul className={"photos-cards__list"}>
+                        <li className={"photos-cards__list-item"}>
+                            <h2 className={"photos-cards__title-2"}>{this.props.name}</h2>
                         </li>
-                        <li>{this.props.day}</li>
-                        <li>{this.props.date}</li>
-                        <li>{this.props.time}</li>
-                        <li>{this.props.aperture}</li>
-                        <li>{this.props.shutter_speed}</li>
-                        <li>{this.props.focal_length}</li>
-                        <li>{this.props.iso}</li>
-                        <li>{this.props.camera}</li>
-                        <li>{this.props.model}</li>
+                        <li className={"photos-cards__list-item"}>{this.props.day}</li>
+                        <li className={"photos-cards__list-item"}>{this.props.date}</li>
+                        <li className={"photos-cards__list-item"}>{this.props.time}</li>
+                        <li className={"photos-cards__list-item"}>{this.props.aperture}</li>
+                        <li className={"photos-cards__list-item"}>{this.props.shutter_speed}</li>
+                        <li className={"photos-cards__list-item"}>{this.props.focal_length}</li>
+                        <li className={"photos-cards__list-item"}>{this.props.iso}</li>
+                        <li className={"photos-cards__list-item"}>{this.props.camera}</li>
+                        <li className={"photos-cards__list-item"}>{this.props.model}</li>
                     </ul>
                 </div>
-            </div>
+            </>
         );
     }
 }
