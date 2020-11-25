@@ -18,6 +18,7 @@ class PhotosCards extends Component
                         <li className={"photos-cards__list-item"}>
                             <h2 className={"photos-cards__title-2"}>{this.props.name}</h2>
                         </li>
+                        <li className={"photos-cards__list-item"}>{this.props.place}</li>
                         <li className={"photos-cards__list-item"}>{this.props.day}</li>
                         <li className={"photos-cards__list-item"}>{this.props.date}</li>
                         <li className={"photos-cards__list-item"}>{this.props.time}</li>
