@@ -8,12 +8,14 @@ class PhotosCards extends Component
         return(
             <>
                 <div className={"photos-cards__card"}>
-                    <div className={"photos-cards__image-container"}>
+                    <figure className={"photos-cards__image-container"}>
                         <img
-                            src={this.props.url}
+                            src={this.props.thumbnail}
+                            alt={"Image non trouvée"}
                             className={"photos-cards__image"}
                         />
-                    </div>
+                        <figcaption>{this.props.author}</figcaption>
+                    </figure>
                     <div className={"photos-cards__metadata"}>
                         <ul className={"photos-cards__list"}>
                             <li className={"photos-cards__list-item"}>
