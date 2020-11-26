@@ -1,9 +1,17 @@
 const fixedData =
 {
     author: "Arnaud De Baerdemaeker",
-    camera: "Sony",
-    model: "DSC-HX300"
+    camera: "Sony DSC-HX300"
 }
+
+const prefixes =
+{
+    aperture: "Ouverture : ",
+    shutter_speed: "Vitesse d'obturation : ",
+    focal_length:  "Distance focale : ",
+    iso: "ISO : "
+}
+
 
 const photos2014 =
 [
@@ -32,13 +40,12 @@ const photos2016 =
         place: "Liège",
         day: "Vendredi",
         date: "13 mai 2016",
-        time: "10:59:59",
-        aperture: "f/2,8",
-        shutter_speed: "1/1600s",
-        focal_length: 4.3,
-        iso: 80,
-        camera: fixedData.camera,
-        model: fixedData.model
+        time: "10:59",
+        aperture: prefixes.aperture + "f/2,8",
+        shutter_speed: prefixes.shutter_speed + "1/1600s",
+        focal_length: prefixes.focal_length + "4,3mm",
+        iso: prefixes.iso + 80,
+        camera: fixedData.camera
     },
     {
         full_image: "https://drive.google.com/uc?id=1NJbkAWFK2-2o_Dd-LB06-cu3E45J4LSK",
@@ -48,13 +55,12 @@ const photos2016 =
         place: "Liège",
         day: "Jeudi",
         date: "29 décembre 2016",
-        time: "15:31:22",
-        aperture: "f/4,0",
-        shutter_speed: "1/100s",
-        focal_length: 15.6,
-        iso: 80,
-        camera: fixedData.camera,
-        model: fixedData.model
+        time: "15:31",
+        aperture: prefixes.aperture + "f/4,0",
+        shutter_speed: prefixes.shutter_speed + "1/100s",
+        focal_length: prefixes.focal_length + "15,6mm",
+        iso: prefixes.iso + 80,
+        camera: fixedData.camera
     }
 ];
 
@@ -71,6 +77,21 @@ const photos2018 =
         title: 2018
     },
     {
+        // full_image,
+        // thumbnail,
+        author: fixedData.author,
+        name: "La lumière dans l'obscurité",
+        place: "Liège",
+        day: "Mercredi",
+        date: "18 juillet 2018",
+        time: "16:27",
+        aperture: prefixes.aperture + "f/5,6",
+        shutter_speed: prefixes.shutter_speed + "1/500s",
+        focal_length: prefixes.focal_length + "74,2mm",
+        iso: prefixes.iso + 80,
+        camera: fixedData.camera
+    },
+    {
         full_image: "https://drive.google.com/uc?id=1G30dFQ08efzxxnWvOeaeB3t8iouJs-KY",
         thumbnail: "https://drive.google.com/uc?id=1Q95Y_Tq9182_pt01Mjuz8DGK5SQAMzkY",
         author: fixedData.author,
@@ -78,13 +99,12 @@ const photos2018 =
         place: "Liège",
         day: "Vendredi",
         date: "28 septembre 2018",
-        time: "22:14:34",
-        aperture: "f/6,3",
-        shutter_speed: "1/80s",
-        focal_length: 215.0,
-        iso: 80,
-        camera: fixedData.camera,
-        model: fixedData.model
+        time: "22:14",
+        aperture: prefixes.aperture + "f/6,3",
+        shutter_speed: prefixes.shutter_speed + "1/80s",
+        focal_length: prefixes.focal_length + "215,0mm",
+        iso: prefixes.iso + 80,
+        camera: fixedData.camera
     }
 ];
 
@@ -92,6 +112,21 @@ const photos2019 =
 [
     {
         title: 2019
+    },
+    {
+        full_image: "https://drive.google.com/uc?id=1jPOLj2O9n7iG5-YGMSRRNC3gj1T-AaZx",
+        thumbnail: "https://drive.google.com/uc?id=1X_cL_IzABX9I_DuEOv33yWR4e04JnYr5",
+        author: fixedData.author,
+        name: "Cœur de tulipe",
+        place: "Liège",
+        day: "Vendredi",
+        date: "29 mars 2019",
+        time: "17h04",
+        aperture: prefixes.aperture + "f/2,8",
+        shutter_speed: prefixes.shutter_speed + "1/100s",
+        focal_length: prefixes.focal_length + "5,5mm",
+        iso: prefixes.iso + 80,
+        camera: fixedData.camera
     }
 ];
 
