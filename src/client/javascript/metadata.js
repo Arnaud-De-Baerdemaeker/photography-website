@@ -18,7 +18,8 @@ const photos2016 =
         title: 2016
     },
     {
-        url: "https://drive.google.com/uc?id=1p0NZkKgZO5Y2z7NRhZ4Df33ORh3nRd0Q",
+        full_image: "https://drive.google.com/uc?id=1p0NZkKgZO5Y2z7NRhZ4Df33ORh3nRd0Q",
+        thumbnail: "https://drive.google.com/uc?id=1E7yZKEU2g1ZtFf2vPLa2Z-H2NG_DWWIJ",
         name: "Parc de la Boverie",
         place: "Liège",
         day: "Vendredi",
@@ -32,7 +33,8 @@ const photos2016 =
         model: "DSC-HX300"
     },
     {
-        url: "https://drive.google.com/uc?id=1NJbkAWFK2-2o_Dd-LB06-cu3E45J4LSK",
+        full_image: "https://drive.google.com/uc?id=1NJbkAWFK2-2o_Dd-LB06-cu3E45J4LSK",
+        thumbnail: "https://drive.google.com/uc?id=1wjgqr5dznFy0ny07fsI5M_R-XEHoMMDV",
         name: "Herbes glacées",
         place: "Liège",
         day: "Jeudi",
@@ -60,7 +62,8 @@ const photos2018 =
         title: 2018
     },
     {
-        url: "https://drive.google.com/uc?id=1G30dFQ08efzxxnWvOeaeB3t8iouJs-KY",
+        full_image: "https://drive.google.com/uc?id=1G30dFQ08efzxxnWvOeaeB3t8iouJs-KY",
+        thumbnail: "https://drive.google.com/uc?id=1Q95Y_Tq9182_pt01Mjuz8DGK5SQAMzkY",
         name: "Lune",
         place: "Liège",
         day: "Vendredi",
