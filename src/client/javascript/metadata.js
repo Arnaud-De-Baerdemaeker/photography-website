@@ -1,3 +1,10 @@
+const fixedData =
+{
+    author: "Arnaud De Baerdemaeker",
+    camera: "Sony",
+    model: "DSC-HX300"
+}
+
 const photos2014 =
 [
     {
@@ -20,6 +27,7 @@ const photos2016 =
     {
         full_image: "https://drive.google.com/uc?id=1p0NZkKgZO5Y2z7NRhZ4Df33ORh3nRd0Q",
         thumbnail: "https://drive.google.com/uc?id=1E7yZKEU2g1ZtFf2vPLa2Z-H2NG_DWWIJ",
+        author: fixedData.author,
         name: "Parc de la Boverie",
         place: "Liège",
         day: "Vendredi",
@@ -29,12 +37,13 @@ const photos2016 =
         shutter_speed: "1/1600s",
         focal_length: 4.3,
         iso: 80,
-        camera: "Sony",
-        model: "DSC-HX300"
+        camera: fixedData.camera,
+        model: fixedData.model
     },
     {
         full_image: "https://drive.google.com/uc?id=1NJbkAWFK2-2o_Dd-LB06-cu3E45J4LSK",
         thumbnail: "https://drive.google.com/uc?id=1wjgqr5dznFy0ny07fsI5M_R-XEHoMMDV",
+        author: fixedData.author,
         name: "Herbes glacées",
         place: "Liège",
         day: "Jeudi",
@@ -44,8 +53,8 @@ const photos2016 =
         shutter_speed: "1/100s",
         focal_length: 15.6,
         iso: 80,
-        camera: "Sony",
-        model: "DSC-HX300"
+        camera: fixedData.camera,
+        model: fixedData.model
     }
 ];
 
@@ -64,6 +73,7 @@ const photos2018 =
     {
         full_image: "https://drive.google.com/uc?id=1G30dFQ08efzxxnWvOeaeB3t8iouJs-KY",
         thumbnail: "https://drive.google.com/uc?id=1Q95Y_Tq9182_pt01Mjuz8DGK5SQAMzkY",
+        author: fixedData.author,
         name: "Lune",
         place: "Liège",
         day: "Vendredi",
@@ -73,8 +83,8 @@ const photos2018 =
         shutter_speed: "1/80s",
         focal_length: 215.0,
         iso: 80,
-        camera: "Sony",
-        model: "DSC-HX300"
+        camera: fixedData.camera,
+        model: fixedData.model
     }
 ];
 
