@@ -77,8 +77,8 @@ const photos2018 =
         title: 2018
     },
     {
-        // full_image,
-        // thumbnail,
+        full_image: "https://drive.google.com/uc?id=1FIBxzjelZSB55OCiljUWIk_HSwI7X1oq",
+        thumbnail: "https://drive.google.com/uc?id=1jaLM31Ghy4CrVexYjpya8qlEGzF7DAph",
         author: fixedData.author,
         name: "La lumière dans l'obscurité",
         place: "Liège",
@@ -125,6 +125,36 @@ const photos2019 =
         aperture: prefixes.aperture + "f/2,8",
         shutter_speed: prefixes.shutter_speed + "1/100s",
         focal_length: prefixes.focal_length + "5,5mm",
+        iso: prefixes.iso + 80,
+        camera: fixedData.camera
+    },
+    {
+        full_image: "https://drive.google.com/uc?id=1GZ2bp6J9ccbtbzhxvkwx0XdD91d1yFwl",
+        thumbnail: "https://drive.google.com/uc?id=1_vIFz1pPgqKu_al48D5OmrSXnYLOp6KP",
+        author: fixedData.author,
+        name: "Monument au 14ème Régiment de Ligne",
+        place: "Liège",
+        day: "Samedi",
+        date: "22 juin 2019",
+        time: "14:07",
+        aperture: prefixes.aperture + "f/8,0",
+        shutter_speed: prefixes.shutter_speed + "1/320s",
+        focal_length: prefixes.focal_length + "4,3mm",
+        iso: prefixes.iso + 80,
+        camera: fixedData.camera
+    },
+    {
+        full_image: "https://drive.google.com/uc?id=16L4UzcLEFB_Xc_5IMes0eQ53IL-VsCfl",
+        thumbnail: "https://drive.google.com/uc?id=1C2QiiMuZNUtPEtIkLHPQu_eZjUSwoRZB",
+        author: fixedData.author,
+        name: "Rivière dans la cour",
+        place: "Liège",
+        day: "Dimanche",
+        date: "21 juillet 2019",
+        time: "14:21",
+        aperture: prefixes.aperture + "f/3,2",
+        shutter_speed: prefixes.shutter_speed + "1/400s",
+        focal_length: prefixes.focal_length + "6,8mm",
         iso: prefixes.iso + 80,
         camera: fixedData.camera
     }
