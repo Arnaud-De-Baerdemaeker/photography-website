@@ -18,32 +18,18 @@
 
 @font-face
 {
-	font-family: "UbuntuMono-Regular";
-	src: url("./../fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf") format("truetype");
+	font-family: "Architects_Daughter";
+	src: url("./../fonts/Architects_Daughter/ArchitectsDaughter-Regular.ttf") format("truetype");
 }
 
-@media screen {
-	body {
+@media screen
+{
+	body
+	{
 		margin: 0;
 		box-sizing: border-box;
+		font-family: "Quicksand-Regular", Arial, Helvetica, sans-serif;
 	}
-}
-
-@mixin menu-links
-{
-	font-family: "Comfortaa-Bold";
-}
-
-@mixin name-top
-{
-	font-family: "ZCOOLXiaoWei-Regular";
-	color: rgb(100, 100, 100);
-}
-
-@mixin regular-text {
-	font-family: "Quicksand-Regular", Arial, Helvetica, sans-serif;
-	line-height: 25px;
-	letter-spacing: 0.25px;
 }
 
 @import "./shared/header", "./shared/dividers", "./shared/my-name", "./index-page/index", "./gallery-page/gallery", "./gallery-page/photos-list", "./gallery-page/photos-cards", "./about-page/about", "./shared/footer";
