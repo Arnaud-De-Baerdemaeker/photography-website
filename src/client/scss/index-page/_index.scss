@@ -8,11 +8,11 @@
 @media screen {
 	.home-page__container // <div>
 	{
-		background-image: url("./../images/index-background.jpg");
+		background-image: url("https://drive.google.com/uc?id=1NJbkAWFK2-2o_Dd-LB06-cu3E45J4LSK");
 		background-attachment: fixed;
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-position-x: center;
+		background-position-x: 70%;
 		
 		.title // <div>
 		{
@@ -20,6 +20,7 @@
 			align-content: center;
 			width: 100vw;
 			height: 100vh;
+			backdrop-filter: brightness(75%);
 			
 			.title__main-title // <h1>
 			{
