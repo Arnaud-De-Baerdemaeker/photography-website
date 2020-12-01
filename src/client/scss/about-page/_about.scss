@@ -71,13 +71,11 @@
         .about-me__paragraph // <p>
         {
             margin: 0 0 4vh 0;
-            @include regular-text;
         }
 
         .about-me__last-paragraph // <p>
         {
             margin: 0;
-            @include regular-text;
         }
         
         .about-me__what-else // <section>
