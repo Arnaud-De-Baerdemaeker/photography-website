@@ -5,6 +5,11 @@
 	By Arnaud De Baerdemaeker
 */
 
+@mixin menu-links
+{
+	font-family: "Comfortaa-Bold";
+}
+
 @media screen {
 	.menu--home-page, .menu--other-pages // <header>
 	{
@@ -67,8 +72,8 @@
 							font-size: 4vw;
 							letter-spacing: 1.5px;
 							word-spacing: 2px;
-							transition-property: text-shadow;
-							transition-duration: 0.5s;
+							// transition-property: text-shadow;
+							// transition-duration: 0.5s;
 						}
 
 						// @media (orientation: landscape)
@@ -96,10 +101,10 @@
 						// }
 					}
 
-					.menu__link--home-page:hover // <a>
-					{
-						text-shadow: 0 0 4px rgb(255, 255, 255);
-					}
+					// .menu__link--home-page:hover // <a>
+					// {
+					// 	text-shadow: 0 0 4px rgb(255, 255, 255);
+					// }
 
 					.menu__link--active // <a>
 					{
