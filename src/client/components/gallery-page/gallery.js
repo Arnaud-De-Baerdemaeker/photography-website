@@ -21,7 +21,8 @@ class Gallery extends Component
                     />
                     <section className={"gallery__intro-container"}>
                         <h2 className={"gallery__title-1"}>{"Bienvenue dans la galerie !"}</h2>
-                        <p className={"gallery__intro"}>{"Dans cette section, vous allez pouvoir découvrir une sélection de mes photos."}<br />{"Choisissez une année pour afficher les photos correspondantes."}</p>
+                        <p className={"gallery__intro"}>{"Dans cette section, vous allez pouvoir découvrir une sélection de mes photos."}</p>
+                        <p className={"gallery__intro"}>{"Choisissez une année pour afficher les photos correspondantes."}</p>
                     </section>
                     <Divider
                         dividerContainer={this.props.dividerContainer[0]}
