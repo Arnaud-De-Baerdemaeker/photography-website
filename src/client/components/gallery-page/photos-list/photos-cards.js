@@ -1,4 +1,4 @@
-import React, {Component, lazy} from "react";
+import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
 
 class PhotosCards extends Component
@@ -12,7 +12,7 @@ class PhotosCards extends Component
                         <img
                             src={this.props.thumbnail}
                             alt={"Image non trouvée"}
-                            loading={lazy}
+                            loading={"lazy"}
                             className={"photos-cards__image"}
                         />
                         <figcaption className={"photos-card__caption"}>{this.props.author}</figcaption>
