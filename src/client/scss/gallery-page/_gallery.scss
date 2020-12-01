@@ -5,14 +5,14 @@
         margin: {
             top: 0;
             right: 0;
-            bottom: 7vh;
+            bottom: 40px;
             left: 0;
         }
         padding: {
             top: 0;
-            right: 5vw;
+            right: 15px;
             bottom: 0;
-            left: 5vw;
+            left: 15px;
         }
         
         .gallery__title-1 // <h2>
@@ -20,16 +20,26 @@
             margin: {
                 top: 0;
                 right: 0;
-                bottom: 7vh;
+                bottom: 40px;
                 left: 0;
             }
             font: {
-                family: "UbuntuMono-Regular";
-                size: 7.5vw;
+                family: "Architects_Daughter";
+                size: 200%;
             }
         }
 
-        .gallery__intro // <p>
+        .gallery__intro:first-of-type // <p>
+        {
+            margin: {
+                top: 0;
+                right: 0;
+                bottom: 20px;
+                left: 0;
+            }
+        }
+
+        .gallery__intro:last-of-type // <p>
         {
             margin: {
                 top: 0;
@@ -37,7 +47,6 @@
                 bottom: 0;
                 left: 0;
             }
-            @include regular-text;
         }
     }
 
@@ -47,7 +56,7 @@
         padding: {
             top: 0;
             right: 0;
-            bottom: 7vh;
+            bottom: 40px;
             left: 0;
         }
 
@@ -60,10 +69,10 @@
                 left: 0;
             }
             padding: {
-                top: 5vw;
-                right: 5vw;
+                top: 15px;
+                right: 15px;
                 bottom: 0;
-                left: 5vw;
+                left: 15px;
             }
             list-style: none;
 
@@ -72,10 +81,10 @@
                 margin: {
                     top: 0;
                     right: 0;
-                    bottom: 7vh;
+                    bottom: 40px;
                     left: 0;
                 }
-                height: 40vw;
+                height: 150px;
                 border-style: solid;
                 border-width: 1px;
 
