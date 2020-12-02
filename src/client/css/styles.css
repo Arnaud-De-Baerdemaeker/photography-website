@@ -14,8 +14,8 @@
 }
 
 @font-face {
-  font-family: "UbuntuMono-Regular";
-  src: url("./../fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf") format("truetype");
+  font-family: "Architects_Daughter";
+  src: url("./../fonts/Architects_Daughter/ArchitectsDaughter-Regular.ttf") format("truetype");
 }
 
 @media screen {
@@ -23,6 +23,7 @@
     margin: 0;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+    font-family: "Quicksand-Regular", Arial, Helvetica, sans-serif;
   }
 }
 
@@ -87,17 +88,10 @@
     font-size: 4vw;
     letter-spacing: 1.5px;
     word-spacing: 2px;
-    -webkit-transition-property: text-shadow;
-    transition-property: text-shadow;
-    -webkit-transition-duration: 0.5s;
-            transition-duration: 0.5s;
   }
 }
 
 @media screen {
-  .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--home-page:hover, .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page:hover, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page:hover, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page:hover, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--home-page:hover, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page:hover, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page:hover, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page:hover, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--home-page:hover, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page:hover, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page:hover, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page:hover, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--home-page:hover, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--home-page:hover, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--home-page:hover, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--home-page:hover {
-    text-shadow: 0 0 4px white;
-  }
   .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--active, .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--active, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--active, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--active, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--active, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--active, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--active, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--active, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page .menu__link--active, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages .menu__link--active, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page .menu__link--active, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages .menu__link--active, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page .menu__link--active, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages .menu__link--active, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page .menu__link--active, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--active {
     border-bottom-style: solid;
     border-bottom-width: 1px;
@@ -153,11 +147,11 @@
 */
 @media screen {
   .home-page__container {
-    background-image: url("./../images/index-background.jpg");
+    background-image: url("https://drive.google.com/uc?id=1NJbkAWFK2-2o_Dd-LB06-cu3E45J4LSK");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: center;
+    background-position-x: 70%;
   }
   .home-page__container .title {
     display: -ms-grid;
@@ -166,6 +160,8 @@
         align-content: center;
     width: 100vw;
     height: 100vh;
+    -webkit-backdrop-filter: brightness(75%);
+            backdrop-filter: brightness(75%);
   }
 }
 
@@ -213,38 +209,42 @@
 .gallery .gallery__intro-container {
   margin-top: 0;
   margin-right: 0;
-  margin-bottom: 7vh;
+  margin-bottom: 40px;
   margin-left: 0;
   padding-top: 0;
-  padding-right: 5vw;
+  padding-right: 15px;
   padding-bottom: 0;
-  padding-left: 5vw;
+  padding-left: 15px;
 }
 
 .gallery .gallery__intro-container .gallery__title-1 {
   margin-top: 0;
   margin-right: 0;
-  margin-bottom: 7vh;
+  margin-bottom: 40px;
   margin-left: 0;
-  font-family: "UbuntuMono-Regular";
-  font-size: 7.5vw;
+  font-family: "Architects_Daughter";
+  font-size: 200%;
 }
 
-.gallery .gallery__intro-container .gallery__intro {
+.gallery .gallery__intro-container .gallery__intro:first-of-type {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 20px;
+  margin-left: 0;
+}
+
+.gallery .gallery__intro-container .gallery__intro:last-of-type {
   margin-top: 0;
   margin-right: 0;
   margin-bottom: 0;
   margin-left: 0;
-  font-family: "Quicksand-Regular", Arial, Helvetica, sans-serif;
-  line-height: 25px;
-  letter-spacing: 0.25px;
 }
 
 .gallery .gallery__years-container {
   background-color: #f0f0f0;
   padding-top: 0;
   padding-right: 0;
-  padding-bottom: 7vh;
+  padding-bottom: 40px;
   padding-left: 0;
 }
 
@@ -253,19 +253,19 @@
   margin-right: 0;
   margin-bottom: 0;
   margin-left: 0;
-  padding-top: 5vw;
-  padding-right: 5vw;
+  padding-top: 15px;
+  padding-right: 15px;
   padding-bottom: 0;
-  padding-left: 5vw;
+  padding-left: 15px;
   list-style: none;
 }
 
 .gallery .gallery__years-container .gallery__list .gallery__list-item {
   margin-top: 0;
   margin-right: 0;
-  margin-bottom: 7vh;
+  margin-bottom: 40px;
   margin-left: 0;
-  height: 40vw;
+  height: 150px;
   border-style: solid;
   border-width: 1px;
 }
@@ -281,6 +281,106 @@
   margin-top: 0;
   margin-right: 0;
   margin-bottom: 0;
+  margin-left: 0;
+}
+
+.photos-list .photos-list__title-container {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 40px;
+  margin-left: 0;
+}
+
+.photos-list .photos-list__title-container .photos-list__title-1 {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  font-family: "Architects_Daughter";
+  font-size: 300%;
+  text-align: center;
+}
+
+.photos-cards__card {
+  margin-top: 0;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  border-radius: 3px;
+  background-color: #f0f0f0;
+  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.photos-cards__card .photos-cards__image-container {
+  width: 100%;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 20px;
+  margin-left: 0;
+  padding-top: 0;
+  padding-right: -15px;
+  padding-bottom: 0;
+  padding-left: -15px;
+}
+
+.photos-cards__card .photos-cards__image-container .photos-cards__image {
+  width: 100%;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.photos-cards__card .photos-cards__image-container .photos-card__caption {
+  font-size: 65%;
+  text-align: right;
+  font-style: italic;
+  padding-top: 0;
+  padding-right: 15px;
+  padding-bottom: 0;
+  padding-left: 0;
+}
+
+.photos-cards__card .photos-cards__metadata {
+  padding-top: 0;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+
+.photos-cards__card .photos-cards__metadata .photos-cards__title-2 {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 20px;
+  margin-left: 0;
+  font-size: 140%;
+}
+
+.photos-cards__card .photos-cards__metadata .photos-cards__list {
+  list-style: none;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  font-size: 90%;
+}
+
+.photos-cards__card .photos-cards__metadata .photos-cards__list .photos-cards__list-item:nth-of-type(2) {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 10px;
+  margin-left: 0;
+}
+
+.photos-cards__card .photos-cards__metadata .photos-cards__list .photos-cards__list-item:nth-of-type(6) {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 10px;
   margin-left: 0;
 }
 
@@ -327,16 +427,10 @@
 
 .about .about-me .about-me__paragraph {
   margin: 0 0 4vh 0;
-  font-family: "Quicksand-Regular", Arial, Helvetica, sans-serif;
-  line-height: 25px;
-  letter-spacing: 0.25px;
 }
 
 .about .about-me .about-me__last-paragraph {
   margin: 0;
-  font-family: "Quicksand-Regular", Arial, Helvetica, sans-serif;
-  line-height: 25px;
-  letter-spacing: 0.25px;
 }
 
 .about .about-me .about-me__what-else {
