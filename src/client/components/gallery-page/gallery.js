@@ -8,6 +8,16 @@ import MyName from "./../shared/name";
 
 class Gallery extends Component
 {
+    componentDidMount()
+    {
+        // The condition checks the value of the scroll
+        if (window.scrollY !== 0)
+        {
+            // If the scroll is different than 0, it sets the view to the top
+            window.scrollTo(0, 0);
+        }
+    }
+
     render()
     {
         return(
