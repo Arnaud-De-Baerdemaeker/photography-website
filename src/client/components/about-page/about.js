@@ -8,6 +8,16 @@ import MyPhoto from "./../../images/moi.png";
 
 class About extends Component
 {
+    componentDidMount()
+    {
+        // The condidtion checks if the scroll value is different from 0
+        if (window.scrollY !== 0)
+        {
+            // If so, it sets the view at the top
+            window.scrollTo(0, 0);
+        }
+    }
+
     render()
     {
         return(
