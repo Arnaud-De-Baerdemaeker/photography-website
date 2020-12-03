@@ -8,6 +8,7 @@ class Header extends Component
     constructor()
     {
         super();
+        
         this.state =
         {
             // Recover and store the current url of the page
