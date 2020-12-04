@@ -9,7 +9,10 @@ class Divider extends Component
     {
         return(
             <div className={this.props.dividerContainer}>
-                <img src={WavesDivider} className={this.props.dividerImage} />
+                <img
+                    src={WavesDivider}
+                    className={this.props.dividerImage}
+                />
             </div>
         )
     }
