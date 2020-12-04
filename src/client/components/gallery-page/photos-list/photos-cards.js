@@ -18,7 +18,7 @@ class PhotosCards extends Component
                         <figcaption className={"photos-card__caption"}>{this.props.author}</figcaption>
                     </figure>
                     <div className={"photos-cards__metadata"}>
-                        <h2 className={"photos-cards__title-2"}>{this.props.name}</h2>
+                        <h3 className={"photos-cards__title-2"}>{this.props.name}</h3>
                         <ul className={"photos-cards__list"}>
                             <li className={"photos-cards__list-item"}>{`${this.props.day} ${this.props.date}, ${this.props.time}`}</li>
                             <li className={"photos-cards__list-item"}>{this.props.place}</li>
