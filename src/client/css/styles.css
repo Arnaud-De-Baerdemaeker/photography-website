@@ -38,7 +38,7 @@
     position: fixed;
     z-index: 1;
     bottom: 0;
-    height: 12vh;
+    height: 50px;
   }
 }
 
@@ -54,11 +54,14 @@
     width: 100vw;
     height: inherit;
     list-style: none;
-    margin: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
     padding-top: 0;
-    padding-right: 0vw;
+    padding-right: 0;
     padding-bottom: 0;
-    padding-left: 0vw;
+    padding-left: 0;
   }
   .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page, .menu--home-page .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page, .menu--home-page .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page, .menu--home-page .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--home-page .menu__list-item--other-pages, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--home-page, .menu--other-pages .menu__navigation--home-page .menu__list--other-pages .menu__list-item--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--home-page .menu__list-item--other-pages, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--home-page, .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages {
     display: -webkit-box;
@@ -69,7 +72,7 @@
             justify-content: center;
     -ms-flex-item-align: center;
         align-self: center;
-    height: calc(12vh / 2);
+    height: 25px;
   }
 }
 
@@ -85,9 +88,8 @@
     font-family: "Comfortaa-Bold";
     text-decoration: none;
     color: white;
-    font-size: 4vw;
-    letter-spacing: 1.5px;
-    word-spacing: 2px;
+    font-size: 0.825rem;
+    letter-spacing: 1px;
   }
 }
 
@@ -98,8 +100,8 @@
   }
   .menu--other-pages {
     background-color: white;
-    -webkit-box-shadow: 0 0 1vh rgba(0, 0, 0, 0.5);
-            box-shadow: 0 0 1vh rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
   .menu--other-pages .menu__navigation--other-pages .menu__list--other-pages .menu__list-item--other-pages .menu__link--other-pages {
     color: black;
@@ -121,7 +123,7 @@
 .divider--bottom {
   height: 30px;
   width: 100%;
-  margin-bottom: 10vw;
+  margin-bottom: 40px;
 }
 
 .divider--bottom .divider__image--bottom {
@@ -135,8 +137,8 @@
   letter-spacing: 0.5px;
   background-color: #f0f0f0;
   margin: 0;
-  font-size: 1em;
-  padding: 5vw;
+  font-size: 1rem;
+  padding: 15px;
 }
 
 /*
@@ -160,8 +162,8 @@
         align-content: center;
     width: 100vw;
     height: 100vh;
-    -webkit-backdrop-filter: brightness(75%);
-            backdrop-filter: brightness(75%);
+    -webkit-backdrop-filter: brightness(60%);
+            backdrop-filter: brightness(60%);
   }
 }
 
@@ -223,7 +225,7 @@
   margin-bottom: 40px;
   margin-left: 0;
   font-family: "Architects_Daughter";
-  font-size: 200%;
+  font-size: 2rem;
 }
 
 .gallery .gallery__intro-container .gallery__intro:first-of-type {
@@ -265,7 +267,7 @@
   margin-right: 0;
   margin-bottom: 40px;
   margin-left: 0;
-  height: 150px;
+  height: 125px;
   border-style: solid;
   border-width: 1px;
 }
@@ -297,7 +299,7 @@
   margin-bottom: 0;
   margin-left: 0;
   font-family: "Architects_Daughter";
-  font-size: 300%;
+  font-size: 2rem;
   text-align: center;
 }
 
@@ -333,7 +335,7 @@
 }
 
 .photos-cards__card .photos-cards__image-container .photos-card__caption {
-  font-size: 65%;
+  font-size: 0.75rem;
   text-align: right;
   font-style: italic;
   padding-top: 0;
@@ -354,7 +356,7 @@
   margin-right: 0;
   margin-bottom: 20px;
   margin-left: 0;
-  font-size: 140%;
+  font-size: 1.25rem;
 }
 
 .photos-cards__card .photos-cards__metadata .photos-cards__list {
@@ -367,7 +369,7 @@
   padding-right: 0;
   padding-bottom: 0;
   padding-left: 0;
-  font-size: 90%;
+  font-size: 0.90rem;
 }
 
 .photos-cards__card .photos-cards__metadata .photos-cards__list .photos-cards__list-item:nth-of-type(2) {
@@ -489,18 +491,18 @@
 
 @media (orientation: portrait) {
   .footer {
-    height: calc(24vh + 12vh);
+    height: 175px;
     background-color: #323232;
-    padding-top: 15vw;
-    padding-right: 5vw;
-    padding-bottom: 5vw;
-    padding-left: 5vw;
+    padding-top: 40px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
   }
 }
 
 @media (orientation: portrait) {
   .footer .footer__left-box {
-    margin-bottom: 10vw;
+    margin-bottom: 30px;
   }
 }
 
@@ -510,9 +512,9 @@
     margin-right: 0;
     margin-bottom: 0;
     margin-left: 0;
-    padding-top: 5vw;
+    padding-top: 15px;
     padding-right: 0;
-    padding-bottom: 5vw;
+    padding-bottom: 15px;
     padding-left: 0;
     list-style-type: none;
     display: -ms-grid;
