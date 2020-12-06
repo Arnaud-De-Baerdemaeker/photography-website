@@ -45,7 +45,11 @@ class Gallery extends Component
                                     to={"/gallery/2014"}
                                     className={"gallery__link"}
                                 >
-                                    {"2014"}
+                                    <img
+                                        src={""}
+                                        classname={"gallery__thumbnail"}
+                                    />
+                                    <span className={"gallery__year"}>{"2014"}</span>
                                 </NavLink>
                             </li>
                             <li className={"gallery__list-item"}>
@@ -53,7 +57,11 @@ class Gallery extends Component
                                     to={"/gallery/2015"}
                                     className={"gallery__link"}
                                 >
-                                    {"2015"}
+                                    <img
+                                        src={""}
+                                        className={"gallery__thumbnail"}
+                                    />
+                                    <span className={"gallery__year"}>{"2015"}</span>
                                 </NavLink>
                             </li>
                             <li className={"gallery__list-item"}>
@@ -61,7 +69,11 @@ class Gallery extends Component
                                     to={"/gallery/2016"}
                                     className={"gallery__link"}
                                 >
-                                    {"2016"}
+                                    <img
+                                        src={"https://drive.google.com/uc?id=1E7yZKEU2g1ZtFf2vPLa2Z-H2NG_DWWIJ"}
+                                        className={"gallery__thumbnail"}
+                                    />
+                                    <span className={"gallery__year"}>{"2016"}</span>
                                 </NavLink>
                             </li>
                             <li className={"gallery__list-item"}>
@@ -69,7 +81,11 @@ class Gallery extends Component
                                     to={"/gallery/2017"}
                                     className={"gallery__link"}
                                 >
-                                    {"2017"}
+                                    <img
+                                        src={""}
+                                        className={"gallery__thumbnail"}
+                                    />
+                                    <span className={"gallery__year"}>{"2017"}</span>
                                 </NavLink>
                             </li>
                             <li className={"gallery__list-item"}>
@@ -77,7 +93,11 @@ class Gallery extends Component
                                     to={"/gallery/2018"}
                                     className={"gallery__link"}
                                 >
-                                    {"2018"}
+                                    <img
+                                        src={""}
+                                        className={"gallery__thumbnail"}
+                                    />
+                                    <span className={"gallery__year"}>{"2018"}</span>
                                 </NavLink>
                             </li>
                             <li className={"gallery__list-item"}>
@@ -85,7 +105,11 @@ class Gallery extends Component
                                     to={"/gallery/2019"}
                                     className={"gallery__link"}
                                 >
-                                    {"2019"}
+                                    <img
+                                        src={""}
+                                        className={"gallery__thumbnail"}
+                                    />
+                                    <span className={"gallery__year"}>{"2019"}</span>
                                 </NavLink>
                             </li>
                             <li className={"gallery__list-item"}>
@@ -93,7 +117,11 @@ class Gallery extends Component
                                     to={"/gallery/2020"}
                                     className={"gallery__link"}
                                 >
-                                    {"2020"}
+                                    <img
+                                        src={""}
+                                        className={"gallery__thumbnail"}
+                                    />
+                                    <span className={"gallery__year"}>{"2020"}</span>
                                 </NavLink>
                             </li>
                         </ul>
