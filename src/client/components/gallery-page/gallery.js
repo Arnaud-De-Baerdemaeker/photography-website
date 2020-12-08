@@ -47,7 +47,7 @@ class Gallery extends Component
                                 >
                                     <img
                                         src={""}
-                                        classname={"gallery__thumbnail"}
+                                        className={"gallery__thumbnail"}
                                     />
                                     <span className={"gallery__year"}>{"2014"}</span>
                                 </NavLink>
@@ -70,7 +70,7 @@ class Gallery extends Component
                                     className={"gallery__link"}
                                 >
                                     <img
-                                        src={"https://drive.google.com/uc?id=1E7yZKEU2g1ZtFf2vPLa2Z-H2NG_DWWIJ"}
+                                        src={""}
                                         className={"gallery__thumbnail"}
                                     />
                                     <span className={"gallery__year"}>{"2016"}</span>
