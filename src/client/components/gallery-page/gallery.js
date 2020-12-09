@@ -46,7 +46,8 @@ class Gallery extends Component
                                     className={"gallery__link"}
                                 >
                                     <img
-                                        src={""}
+                                        src={"https://drive.google.com/uc?id=1FngJTHyYW4L07yL4UGMernAaaqQQsS42"}
+                                        id={"thumbnail-1"}
                                         className={"gallery__thumbnail"}
                                     />
                                     <span className={"gallery__year"}>{"2014"}</span>
@@ -58,7 +59,7 @@ class Gallery extends Component
                                     className={"gallery__link"}
                                 >
                                     <img
-                                        src={""}
+                                        src={"https://drive.google.com/uc?id=1cNj8fqVrLnoDzyUC5fPJ2OGE0WC4nYkA"}
                                         className={"gallery__thumbnail"}
                                     />
                                     <span className={"gallery__year"}>{"2015"}</span>
@@ -70,7 +71,7 @@ class Gallery extends Component
                                     className={"gallery__link"}
                                 >
                                     <img
-                                        src={""}
+                                        src={"https://drive.google.com/uc?id=1E7yZKEU2g1ZtFf2vPLa2Z-H2NG_DWWIJ"}
                                         className={"gallery__thumbnail"}
                                     />
                                     <span className={"gallery__year"}>{"2016"}</span>
@@ -82,7 +83,7 @@ class Gallery extends Component
                                     className={"gallery__link"}
                                 >
                                     <img
-                                        src={""}
+                                        src={"https://drive.google.com/uc?id=1UplsD-lSVjuKkCJ126wjINBWnEPrDb-W"}
                                         className={"gallery__thumbnail"}
                                     />
                                     <span className={"gallery__year"}>{"2017"}</span>
@@ -94,7 +95,7 @@ class Gallery extends Component
                                     className={"gallery__link"}
                                 >
                                     <img
-                                        src={""}
+                                        src={"https://drive.google.com/uc?id=14_2JeZ5CNmIUpqA8XRGPM3oph9uNr_dn"}
                                         className={"gallery__thumbnail"}
                                     />
                                     <span className={"gallery__year"}>{"2018"}</span>
@@ -106,7 +107,7 @@ class Gallery extends Component
                                     className={"gallery__link"}
                                 >
                                     <img
-                                        src={""}
+                                        src={"https://drive.google.com/uc?id=1X_cL_IzABX9I_DuEOv33yWR4e04JnYr5"}
                                         className={"gallery__thumbnail"}
                                     />
                                     <span className={"gallery__year"}>{"2019"}</span>
