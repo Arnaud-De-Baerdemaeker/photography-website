@@ -47,7 +47,6 @@ class Gallery extends Component
                                 >
                                     <img
                                         src={"https://drive.google.com/uc?id=1FngJTHyYW4L07yL4UGMernAaaqQQsS42"}
-                                        id={"thumbnail-1"}
                                         className={"gallery__thumbnail"}
                                     />
                                     <span className={"gallery__year"}>{"2014"}</span>
