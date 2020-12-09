@@ -2,12 +2,12 @@
 {
     margin: {
         top: 0;
-        right: 15px;
-        bottom: 15px;
-        left: 15px;
+        right: 0;
+        bottom: 30px;
+        left: 0;
     }
     border-radius: 3px;
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(255, 255, 255);
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 
     .photos-cards__image-container // <figure>
@@ -115,5 +115,15 @@
                 }
             }
         }
+    }
+}
+
+.photos-cards__card:last-child // <div>
+{
+    margin: {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
     }
 }
