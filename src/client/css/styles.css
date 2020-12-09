@@ -244,10 +244,10 @@
 
 .gallery .gallery__years-container {
   background-color: #f0f0f0;
-  padding-top: 0;
-  padding-right: 0;
-  padding-bottom: 40px;
-  padding-left: 0;
+  padding-top: 30px;
+  padding-right: 15px;
+  padding-bottom: 30px;
+  padding-left: 15px;
 }
 
 .gallery .gallery__years-container .gallery__list {
@@ -255,28 +255,51 @@
   margin-right: 0;
   margin-bottom: 0;
   margin-left: 0;
-  padding-top: 15px;
-  padding-right: 15px;
+  padding-top: 0;
+  padding-right: 0;
   padding-bottom: 0;
-  padding-left: 15px;
+  padding-left: 0;
   list-style: none;
 }
 
 .gallery .gallery__years-container .gallery__list .gallery__list-item {
+  position: relative;
   margin-top: 0;
   margin-right: 0;
   margin-bottom: 40px;
   margin-left: 0;
-  height: 125px;
-  border-style: solid;
-  border-width: 1px;
+  width: 100%;
 }
 
 .gallery .gallery__years-container .gallery__list .gallery__list-item .gallery__link {
   display: block;
+  text-decoration: none;
+  color: white;
+}
+
+.gallery .gallery__years-container .gallery__list .gallery__list-item .gallery__thumbnail {
+  width: 100%;
+  height: inherit;
+  -webkit-filter: brightness(50%) blur(2px);
+          filter: brightness(50%) blur(2px);
+  vertical-align: middle;
+}
+
+.gallery .gallery__years-container .gallery__list .gallery__list-item .gallery__year {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
   height: 100%;
-  text-decoration: none;
+  position: absolute;
+  top: 0;
+  font-size: 3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .gallery .gallery__years-container .gallery__list .gallery__list-item:last-of-type {
@@ -299,17 +322,25 @@
   margin-bottom: 0;
   margin-left: 0;
   font-family: "Architects_Daughter";
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
+}
+
+.photos-list .photos-list__cards {
+  background-color: #f0f0f0;
+  padding-top: 30px;
+  padding-right: 15px;
+  padding-bottom: 30px;
+  padding-left: 15px;
 }
 
 .photos-cards__card {
   margin-top: 0;
-  margin-right: 15px;
-  margin-bottom: 15px;
-  margin-left: 15px;
+  margin-right: 0;
+  margin-bottom: 30px;
+  margin-left: 0;
   border-radius: 3px;
-  background-color: #f0f0f0;
+  background-color: white;
   -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
           box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
@@ -386,29 +417,36 @@
   margin-left: 0;
 }
 
+.photos-cards__card:last-child {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
 .about .about-me .about-me__who-i-am {
   margin-top: 0;
   margin-right: 0;
-  margin-bottom: 7vh;
+  margin-bottom: 40px;
   margin-left: 0;
   padding-top: 0;
-  padding-right: 5vw;
+  padding-right: 15px;
   padding-bottom: 0;
-  padding-left: 5vw;
+  padding-left: 15px;
 }
 
 .about .about-me .about-me__why-webdesign {
-  padding-top: 5vw;
-  padding-right: 5vw;
-  padding-bottom: 5vw;
-  padding-left: 5vw;
+  padding-top: 30px;
+  padding-right: 15px;
+  padding-bottom: 30px;
+  padding-left: 15px;
   background-color: #f0f0f0;
 }
 
 .about .about-me .about-me__why-photography {
   margin-top: 0;
   margin-right: 0;
-  margin-bottom: 7vh;
+  margin-bottom: 40px;
   margin-left: 0;
   padding-top: 0;
   padding-right: 5vw;
@@ -440,34 +478,34 @@
   margin-right: 0;
   margin-bottom: 0;
   margin-left: 0;
-  padding-top: 5vw;
-  padding-right: 5vw;
-  padding-bottom: 5vw;
-  padding-left: 5vw;
+  padding-top: 30px;
+  padding-right: 15px;
+  padding-bottom: 30px;
+  padding-left: 15px;
   background-color: #f0f0f0;
 }
 
 .about .about-me .about-me__discover {
   margin-top: 0;
   margin-right: 0;
-  margin-bottom: 10vw;
+  margin-bottom: 40px;
   margin-left: 0;
-  padding-top: 5vw;
-  padding-right: 5vw;
-  padding-bottom: 5vw;
-  padding-left: 5vw;
+  padding-top: 0;
+  padding-right: 15px;
+  padding-bottom: 0;
+  padding-left: 15px;
   font-family: "UbuntuMono-Regular";
-  font-size: 7.5vw;
+  font-size: 1.5rem;
   letter-spacing: -1px;
   word-spacing: -3px;
 }
 
 .about .about-me .about-me__my-photo {
   background-color: #f0f0f0;
-  padding-top: 5vw;
-  padding-right: 5vw;
-  padding-bottom: 5vw;
-  padding-left: 5vw;
+  padding-top: 30px;
+  padding-right: 15px;
+  padding-bottom: 30px;
+  padding-left: 15px;
 }
 
 .about .about-me .about-me__my-photo .about-me__image-container {
@@ -484,7 +522,7 @@
 
 .about .about-me .about-me__my-photo .about-me__image-container .about-me__image-caption {
   font-family: "Quicksand-Regular", sans-serif;
-  font-size: 4vw;
+  font-size: 0.75rem;
   font-style: italic;
   text-align: right;
 }
