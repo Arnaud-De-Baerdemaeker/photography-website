@@ -19,9 +19,20 @@
             }
             font: {
                 family: "Architects_Daughter";
-                size: 2rem;
+                size: 3rem;
             }
             text-align: center;
+        }
+    }
+
+    .photos-list__cards // <div>
+    {
+        background-color: rgb(240, 240, 240);
+        padding: {
+            top: 30px;
+            right: 15px;
+            bottom: 30px;
+            left: 15px;
         }
     }
 }
