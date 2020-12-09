@@ -54,10 +54,10 @@
     {
         background-color: rgb(240, 240, 240);
         padding: {
-            top: 0;
-            right: 0;
-            bottom: 40px;
-            left: 0;
+            top: 30px;
+            right: 15px;
+            bottom: 30px;
+            left: 15px;
         }
 
         .gallery__list // <ul>
@@ -69,31 +69,54 @@
                 left: 0;
             }
             padding: {
-                top: 15px;
-                right: 15px;
+                top: 0;
+                right: 0;
                 bottom: 0;
-                left: 15px;
+                left: 0;
             }
             list-style: none;
 
             .gallery__list-item // <li>
             {
+                position: relative;
                 margin: {
                     top: 0;
                     right: 0;
                     bottom: 40px;
                     left: 0;
                 }
-                height: 125px;
-                border-style: solid;
-                border-width: 1px;
+                width: 100%;
+                
+                // border-style: solid;
+                // border-width: 1px;
 
                 .gallery__link // <a>
                 {
                     display: block;
+                    // width: inherit;
+                    // height: inherit;
+                    text-decoration: none;
+                    color: rgb(255, 255, 255)
+                }
+
+                .gallery__thumbnail // <img>
+                {
+                    width: 100%;
+                    height: inherit;
+                    filter: brightness(50%) blur(2px);
+                    vertical-align: middle;
+                }
+
+                .gallery__year // <span>
+                {
+                    display: flex;
                     width: 100%;
                     height: 100%;
-                    text-decoration: none;
+                    position: absolute;
+                    top: 0;
+                    font-size: 3rem;
+                    justify-content: center;
+                    align-items: center;
                 }
             }
 
