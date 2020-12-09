@@ -7,14 +7,14 @@
             margin: {
                 top: 0;
                 right: 0;
-                bottom: 7vh;
+                bottom: 40px;
                 left: 0;
             }
             padding: {
                 top: 0;
-                right: 5vw;
+                right: 15px;
                 bottom: 0;
-                left: 5vw;
+                left: 15px;
             }
         }
 
@@ -27,10 +27,10 @@
             //     left: 0;
             // }
             padding: {
-                top: 5vw;
-                right: 5vw;
-                bottom: 5vw;
-                left: 5vw;
+                top: 30px;
+                right: 15px;
+                bottom: 30px;
+                left: 15px;
             }
             background-color: rgb(240, 240, 240);
         }
@@ -40,7 +40,7 @@
             margin: {
                 top: 0;
                 right: 0;
-                bottom: 7vh;
+                bottom: 40px;
                 left: 0;
             }
             padding: {
@@ -87,10 +87,10 @@
                 left: 0;
             }
             padding: {
-                top: 5vw;
-                right: 5vw;
-                bottom: 5vw;
-                left: 5vw;
+                top: 30px;
+                right: 15px;
+                bottom: 30px;
+                left: 15px;
             }
             background-color: rgb(240, 240, 240);
         }
@@ -100,18 +100,18 @@
             margin: {
                 top: 0;
                 right: 0;
-                bottom: 10vw;
+                bottom: 40px;
                 left: 0;
             }
             padding: {
-                top: 5vw;
-                right: 5vw;
-                bottom: 5vw;
-                left: 5vw;
+                top: 0;
+                right: 15px;
+                bottom: 0;
+                left: 15px;
             }
             font: {
                 family: "UbuntuMono-Regular";
-                size: 7.5vw;
+                size: 1.5rem;
             }
             letter-spacing: -1px;
             word-spacing: -3px;
@@ -121,10 +121,10 @@
         {
             background-color: rgb(240, 240, 240);
             padding: {
-                top: 5vw;
-                right: 5vw;
-                bottom: 5vw;
-                left: 5vw;
+                top: 30px;
+                right: 15px;
+                bottom: 30px;
+                left: 15px;
             }
 
             .about-me__image-container // <figure>
@@ -146,7 +146,7 @@
                 {
                     font: {
                         family: "Quicksand-Regular", sans-serif;
-                        size: 4vw;
+                        size: 0.75rem;
                         style: italic;
                     }
                     text-align: right;
