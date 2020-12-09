@@ -68,6 +68,10 @@ class PhotosList extends Component
                     <div className={"photos-list__title-container"}>
                         <h2 className={"photos-list__title-1"}>{this.props.photos[0].title}</h2>
                     </div>
+                    <Divider
+                        dividerContainer={this.props.dividerContainer[0]}
+                        dividerImage={this.props.dividerImage[0]}
+                    />
                     <div className={"photos-list__cards"}>
                         {this.state.card}
                     </div>
