@@ -625,7 +625,7 @@ const photos2019 =
     },
     {
         full_image: fixedData.url + "1PopzrOuF_aWSzfaaI1sOKfKL7jKRVNgN",
-        thumbnail: fixedData.url + "ecgMN6jW7acjt3HUGAZfJ1ca80K4mlS",
+        thumbnail: fixedData.url + "1-ecgMN6jW7acjt3HUGAZfJ1ca80K4mlS",
         author: fixedData.author,
         name: "Repos dans l'herbe",
         place: "Liège, " + fixedData.belgium,
