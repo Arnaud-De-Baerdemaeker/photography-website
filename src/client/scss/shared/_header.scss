@@ -18,7 +18,7 @@
 			position: fixed;
 			z-index: 1;
 			bottom: 0;
-			height: 50px;
+			height: 60px;
 		}
 
 		// @media (orientation: landscape) {
@@ -62,7 +62,7 @@
 					display: flex;
 					justify-content: center;
 					align-self: center;
-					height: 25px;
+					height: 30px;
 					
 					.menu__link--home-page, .menu__link--other-pages // <a>
 					{
@@ -124,7 +124,7 @@
 
 	.menu--other-pages // <header>
 	{
-		background-color: rgb(255, 255, 255);
+		background-color: rgb(50, 50, 50);
 		box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 
 		.menu__navigation--other-pages // <nav>
@@ -135,7 +135,7 @@
 				{
 					.menu__link--other-pages // <a>
 					{
-						color: rgb(0, 0, 0);
+						color: rgb(255, 255, 255);
 					}
 				}
 			}
