@@ -6,34 +6,26 @@ import MyName from "./../../shared/name";
 import Divider from "./../../shared/divider";
 import PhotosCards from "./photos-cards";
 
-class PhotosList extends Component
-{
-    constructor()
-    {
-        super();
-        
-        this.state =
-        {
+class PhotosList extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
             // create an array
-            card: []
-        }
+            card: [],
+        };
     }
 
-    componentDidMount()
-    {
+    componentDidMount() {
         // The condition checks if the value of the scroll is different than 0.
-        if (window.scrollY !== 0)
-        {
+        if (window.scrollY !== 0) {
             // If it is, it restores the view to the top.
             window.scrollTo(0, 0);
         }
     }
 
-    render()
-    {
+    render() {
         // The loop goes on following the number of entries in the metadata.js file
-        for (let i = 1; i < this.props.photos.length; i++)
-        {
+        for (let i = 1; i < this.props.photos.length; i++) {
             // For each loop, an iteration of the <PhotoCards> component is created with, each time, different props. Then, the iteration is pushed in the array.
             this.state.card.push(
                 <PhotosCards
@@ -52,11 +44,11 @@ class PhotosList extends Component
                     iso={this.props.photos[i].iso}
                     camera={this.props.photos[i].camera}
                     model={this.props.photos[i].model}
-                />
+                />,
             );
         }
 
-        return(
+        return (
             <>
                 <Header />
                 <div className={"photos-list"}>
@@ -66,7 +58,9 @@ class PhotosList extends Component
                         dividerImage={this.props.dividerImage[1]}
                     />
                     <div className={"photos-list__title-container"}>
-                        <h2 className={"photos-list__title-1"}>{this.props.photos[0].title}</h2>
+                        <h2 className={"photos-list__title-1"}>
+                            {this.props.photos[0].title}
+                        </h2>
                     </div>
                     <Divider
                         dividerContainer={this.props.dividerContainer[0]}

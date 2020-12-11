@@ -7,16 +7,14 @@ import GitHub from "./../../images/github-icon.png";
 
 class Footer extends Component {
     render() {
-        return(
+        return (
             <footer className={"footer"}>
                 <div className={"footer__left-box"}>
                     <ul className={"footer__links"}>
                         <li className={"footer__email"}>
                             <a
                                 href={"mailto:de.baerdemaeker.arnaud@gmail.com"}
-                                target={"_blank"}
-                                className={"footer__link"}
-                            >
+                                className={"footer__link"}>
                                 <img
                                     src={Mail}
                                     alt={"E-mail"}
@@ -28,10 +26,10 @@ class Footer extends Component {
                         </li>
                         <li className={"footer__linkedin"}>
                             <a
-                                href={"https://www.linkedin.com/in/arnaud-de-baerdemaeker/"}
-                                target={"_target"}
-                                className={"footer__link"}
-                            >
+                                href={
+                                    "https://www.linkedin.com/in/arnaud-de-baerdemaeker/"
+                                }
+                                className={"footer__link"}>
                                 <img
                                     src={LinkedIn}
                                     alt={"LinkedIn"}
@@ -43,10 +41,10 @@ class Footer extends Component {
                         </li>
                         <li className={"footer__github"}>
                             <a
-                                href={"https://github.com/Arnaud-De-Baerdemaeker"}
-                                target={"_blank"}
-                                className={"footer__link"}
-                            >
+                                href={
+                                    "https://github.com/Arnaud-De-Baerdemaeker"
+                                }
+                                className={"footer__link"}>
                                 <img
                                     src={GitHub}
                                     alt={"GitHub"}
@@ -59,7 +57,9 @@ class Footer extends Component {
                     </ul>
                 </div>
                 <div className={"footer__right-box"}>
-                    <p className={"footer__credits"}>{"2020 Réalisé par Arnaud De Baerdemaeker"}</p>
+                    <p className={"footer__credits"}>
+                        {"2020 Réalisé par Arnaud De Baerdemaeker"}
+                    </p>
                 </div>
             </footer>
         );
