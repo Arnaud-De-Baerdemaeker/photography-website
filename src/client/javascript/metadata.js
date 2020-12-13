@@ -1,3 +1,7 @@
+// Photography website
+// Started on July 2020
+// By Arnaud De Baerdemaeker
+
 const fixedData = {
     url: "https://drive.google.com/uc?id=",
     author: "Arnaud De Baerdemaeker",

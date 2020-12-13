@@ -1,3 +1,7 @@
+// Photography website
+// Started on July 2020
+// By Arnaud De Baerdemaeker
+
 import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
 import Header from "../../shared/header";
