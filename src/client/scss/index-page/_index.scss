@@ -1,41 +1,35 @@
-/*
-	Photography website |
-	./assets/scss/_index_mobile_portrait.scss - CSS for core of index page for mobile in portrait |
-	Started on July 2020 |
-	By Arnaud De Baerdemaeker
-*/
+// Photography website
+// Started on July 2020
+// By Arnaud De Baerdemaeker
 
 @media screen {
-	.home-page__container // <div>
-	{
+	.home-page__container { // <div>
 		background-image: url("https://drive.google.com/uc?id=1NJbkAWFK2-2o_Dd-LB06-cu3E45J4LSK");
 		background-attachment: fixed;
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position-x: 70%;
 		
-		.title // <div>
-		{
+		.title { // <div>
 			display: grid;
 			align-content: center;
 			width: 100vw;
 			height: 100vh;
 			backdrop-filter: brightness(60%);
 			
-			.title__main-title // <h1>
-			{
+			.title__main-title { // <h1>
 				@media (orientation: portrait) {
 					font-family: "ZCOOLXiaoWei-Regular", Arial, Helvetica, sans-serif;
-					font-size: 10vw;
+					font-size: 9vw;
 					font-weight: 100;
 					color: rgb(255, 255, 255);
 					text-align: center;
 					letter-spacing: 1px;
-					text-shadow: 0 0 7px rgb(255, 255, 255);
+					text-shadow: 0 0 7.5px rgb(255, 255, 255);
 					margin: 0;
 				}
 				
-				@media (orientation: landscape) {
+				/*@media (orientation: landscape) {
 					font-family: "ZCOOLXiaoWei-Regular", Arial, Helvetica, sans-serif;
 					font-size: 9vw;
 					font-weight: 100;
@@ -46,7 +40,7 @@
 					text-shadow: 0 0 7px rgb(255, 255, 255);
 					margin: 0;
 				}
-				
+
 				@media (orientation: landscape) and (min-width: 1024px) {
 					font-family: "ZCOOLXiaoWei-Regular", Arial, Helvetica, sans-serif;
 					font-size: 7vw;
@@ -57,7 +51,7 @@
 					word-spacing: 7.5px;
 					text-shadow: 0 0 7px rgb(255, 255, 255);
 					margin: 0;
-				}
+				}*/
 			}
 		}
 	}
