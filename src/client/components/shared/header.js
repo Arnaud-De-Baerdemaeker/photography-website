@@ -1,4 +1,7 @@
-/* eslint-disable class-methods-use-this */
+// Photography website
+// Started on July 2020
+// By Arnaud De Baerdemaeker
+
 import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
 import {NavLink} from "react-router-dom";
