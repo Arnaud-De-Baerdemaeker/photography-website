@@ -1,35 +1,44 @@
-@font-face
-{
+// Photography website
+// Started on July 2020
+// By Arnaud De Baerdemaeker
+
+@font-face {
 	font-family: "Quicksand-Regular";
 	src: url("./../fonts/Quicksand/Quicksand-Regular.ttf") format("truetype");
 }
 
-@font-face
-{
+@font-face {
 	font-family: "Comfortaa-Bold";
 	src: url("./../fonts/Comfortaa/Comfortaa-Bold.ttf") format("truetype");
 }
 
-@font-face
-{
+@font-face {
 	font-family: "ZCOOLXiaoWei-Regular";
 	src: url("./../fonts/ZCOOL_XiaoWei/ZCOOLXiaoWei-Regular.ttf") format("truetype");
 }
 
-@font-face
-{
+@font-face {
 	font-family: "Architects_Daughter";
 	src: url("./../fonts/Architects_Daughter/ArchitectsDaughter-Regular.ttf") format("truetype");
 }
 
-@media screen
-{
-	body
-	{
+@media screen {
+	body {
 		margin: 0;
 		box-sizing: border-box;
 		font-family: "Quicksand-Regular", Arial, Helvetica, sans-serif;
 	}
 }
 
-@import "./shared/header", "./shared/dividers", "./shared/my-name", "./index-page/index", "./gallery-page/gallery", "./gallery-page/link", "./gallery-page/photos-list", "./gallery-page/photos-cards", "./about-page/about", "./shared/footer";
+@import
+	"./shared/header",
+	"./shared/dividers",
+	"./shared/my-name",
+	"./index-page/index",
+	"./gallery-page/gallery",
+	"./gallery-page/link",
+	"./gallery-page/photos-list",
+	"./gallery-page/photos-cards",
+	"./about-page/about",
+	"./shared/footer"
+;
