@@ -1,152 +1,129 @@
-.footer // <footer>
-{
-    @media (orientation: portrait)
-    {
-        height: 190px;
-        background-color: rgb(50, 50, 50);
-        padding: {
-            top: 40px;
-            right: 15px;
-            bottom: 15px;
-            left: 15px;
-        }
-    }
+// Photography website
+// Started on July 2020
+// By Arnaud De Baerdemaeker
 
-    .footer__left-box // <div>
-    {
-        @media (orientation: portrait)
-        {
-            margin-bottom: 30px;
-        }
+.footer { // <footer>
+	@media (orientation: portrait) {
+		height: 190px;
+		background-color: rgb(50, 50, 50);
+		padding: {
+			top: 40px;
+			right: 15px;
+			bottom: 15px;
+			left: 15px;
+		}
+	}
 
-        .footer__links // <ul>
-        {
-            @media (orientation: portrait)
-            {
-                margin: {
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;
-                }
-                padding: {
-                    top: 15px;
-                    right: 0;
-                    bottom: 15px;
-                    left: 0;
-                }
-                list-style-type: none;
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                justify-items: center;
-                border-top: {
-                    style: solid;
-                    width: 1px;
-                    color: rgb(255, 255, 255);
-                }
-                border-bottom: {
-                    style: solid;
-                    width: 1px;
-                    color: rgb(255, 255, 255);
-                }
-            }
+	.footer__left-box { // <div>
+		@media (orientation: portrait) {
+			margin-bottom: 30px;
+		}
 
-            .footer__email // <li>
-            {
-                @media (orientation: portrait)
-                {
-                    width: 25px;
-                }
+		.footer__links { // <ul>
+			@media (orientation: portrait) {
+				margin: {
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+				}
+				padding: {
+					top: 15px;
+					right: 0;
+					bottom: 15px;
+					left: 0;
+				}
+				list-style-type: none;
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				justify-items: center;
+				border-top: {
+					style: solid;
+					width: 1px;
+					color: rgb(255, 255, 255);
+				}
+				border-bottom: {
+					style: solid;
+					width: 1px;
+					color: rgb(255, 255, 255);
+				}
+			}
 
-                .footer__link // <a>
-                {
-                    @media (orientation: portrait)
-                    {
-                        display: flex;
-                        align-items: center;
-                    }
-                    
-                    .footer__email-icon // <img>
-                    {
-                        @media (orientation: portrait)
-                        {
-                            width: 100%;
-                        }
-                    }
-                }
-            }
+			.footer__email { // <li>
+				@media (orientation: portrait) {
+					width: 25px;
+				}
 
-            .footer__linkedin // <li>
-            {
-                @media (orientation: portrait)
-                {
-                    width: 25px;
-                }
-                
-                .footer__link // <a>
-                {
-                    @media (orientation: portrait)
-                    {
-                        display: flex;
-                        align-items: center;
-                    }
+				.footer__link { // <a>
+					@media (orientation: portrait) {
+						display: flex;
+						align-items: center;
+					}
 
-                    .footer__linkedin-icon // <img>
-                    {
-                        @media (orientation: portrait)
-                        {
-                            width: 100%;
-                        }
-                    }
-                }
-            }
+					.footer__email-icon { // <img>
+						@media (orientation: portrait) {
+							width: 100%;
+						}
+					}
+				}
+			}
 
-            .footer__github // <li>
-            {
-                @media (orientation: portrait)
-                {
-                    width: 25px;
-                }
+			.footer__linkedin { // <li>
+				@media (orientation: portrait) {
+					width: 25px;
+				}
 
-                .footer__link // <a>
-                {
-                    @media (orientation: portrait)
-                    {
-                        display: flex;
-                        align-content: center;
-                    }
+				.footer__link { // <a>
+					@media (orientation: portrait) {
+						display: flex;
+						align-items: center;
+					}
 
-                    .footer__github-icon // <img>
-                    {
-                        @media (orientation: portrait)
-                        {
-                            width: 100%;
-                        }
-                    }
-                }
-            }
-        }
-    }
+					.footer__linkedin-icon { // <img>
+						@media (orientation: portrait) {
+							width: 100%;
+						}
+					}
+				}
+			}
 
-    .footer__right-box // <div>
-    {
-        .footer__credits // <p>
-        {
-            @media (orientation: portrait)
-            {
-                margin: {
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;
-                }
-                font: {
-                    family: "Quicksand-Regular";
-                    size: 0.8rem;
-                }
-                color: rgb(255, 255, 255);
-                text-align: center;
-            }
-        }
-    }
+			.footer__github { // <li>
+				@media (orientation: portrait) {
+					width: 25px;
+				}
+
+				.footer__link { // <a>
+					@media (orientation: portrait) {
+						display: flex;
+						align-content: center;
+					}
+
+					.footer__github-icon { // <img>
+						@media (orientation: portrait) {
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.footer__right-box { // <div>
+		.footer__credits { // <p>
+			@media (orientation: portrait) {
+				margin: {
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+				}
+				font: {
+					family: "Quicksand-Regular";
+					size: 0.8rem;
+				}
+				color: rgb(255, 255, 255);
+				text-align: center;
+			}
+		}
+	}
 }

@@ -1,25 +1,25 @@
-.divider--top // <div>
-{
-    height: 30px;
-    width: 100%;
+// Photography website
+// Started on July 2020
+// By Arnaud De Baerdemaeker
 
-    .divider__image--top // <img>
-    {
-        color: rgb(240, 240, 240);
-        width: 100%;
-        transform: rotate(180deg);
-    }
+.divider--top { // <div>
+	height: 30px;
+	width: 100%;
+
+	.divider__image--top { // <img>
+		color: rgb(240, 240, 240);
+		width: 100%;
+		transform: rotate(180deg);
+	}
 }
 
-.divider--bottom // <div>
-{
-    height: 30px;
-    width: 100%;
-    margin-bottom: 40px;
+.divider--bottom { // <div>
+	height: 30px;
+	width: 100%;
+	margin-bottom: 40px;
 
-    .divider__image--bottom // <img>
-    {
-        color: rgb(240, 240, 240);
-        width: 100%;
-    }
+	.divider__image--bottom { // <img>
+		color: rgb(240, 240, 240);
+		width: 100%;
+	}
 }
