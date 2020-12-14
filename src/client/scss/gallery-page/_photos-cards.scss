@@ -36,6 +36,7 @@
 				bottom-right-radius: 0;
 				bottom-left-radius: 0;
 			}
+			cursor: pointer;
 		}
 
 		.photos-card__caption { // <figcaption>
@@ -115,4 +116,18 @@
 		bottom: 0;
 		left: 0;
 	}
+}
+
+.photos-cards__modal--open { // <div>
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: grid;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgb(50, 50, 50);
+}
+
+.photos-cards__modal--closed { // <div>
+	display: none;
 }
