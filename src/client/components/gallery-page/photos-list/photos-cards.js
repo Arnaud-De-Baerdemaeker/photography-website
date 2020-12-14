@@ -4,8 +4,22 @@
 
 import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
+import Modal from "./modal";
 
 class PhotosCards extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            modalIsOpen: false,
+        };
+        this.handleOnClick = this.handleOnClick.bind(this);
+    }
+
+    // Function that changes the boolean state each time it is called
+    handleOnClick() {
+        this.setState(state => ({modalIsOpen: !state.modalIsOpen}));
+    }
+
     render() {
         return (
             <>
@@ -15,6 +29,8 @@ class PhotosCards extends Component {
                             src={this.props.thumbnail}
                             alt={"Image non trouvée"}
                             loading={"lazy"}
+                            // On click, it displays the full image in a modal
+                            onClick={this.handleOnClick}
                             className={"photos-cards__image"}
                         />
                         <figcaption className={"photos-card__caption"}>
@@ -49,6 +65,18 @@ class PhotosCards extends Component {
                             </li>
                         </ul>
                     </div>
+                </div>
+                {/* Modal that is active only when the user clicks on the thumbnail */}
+                <div
+                    className={
+                        this.state.modalIsOpen
+                            ? "photos-cards__modal--open"
+                            : "photos-cards__modal--closed"
+                    }>
+                    <Modal
+                        handleOnClick={this.handleOnClick}
+                        full_image={this.props.full_image}
+                    />
                 </div>
             </>
         );
