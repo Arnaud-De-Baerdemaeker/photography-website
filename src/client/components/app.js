@@ -31,77 +31,75 @@ class App extends Component {
 
     render() {
         return (
-            <>
-                <BrowserRouter>
-                    <Switch>
-                        <Route exact path={"/gallery/2014"}>
-                            <PhotosList
-                                photos={photos2014}
-                                dividerContainer={this.state.dividerContainer}
-                                dividerImage={this.state.dividerImage}
-                            />
-                        </Route>
-                        <Route exact path={"/gallery/2015"}>
-                            <PhotosList
-                                photos={photos2015}
-                                dividerContainer={this.state.dividerContainer}
-                                dividerImage={this.state.dividerImage}
-                            />
-                        </Route>
-                        <Route exact path={"/gallery/2016"}>
-                            <PhotosList
-                                photos={photos2016}
-                                dividerContainer={this.state.dividerContainer}
-                                dividerImage={this.state.dividerImage}
-                                location
-                            />
-                        </Route>
-                        <Route exact path={"/gallery/2017"}>
-                            <PhotosList
-                                photos={photos2017}
-                                dividerContainer={this.state.dividerContainer}
-                                dividerImage={this.state.dividerImage}
-                            />
-                        </Route>
-                        <Route exact path={"/gallery/2018"}>
-                            <PhotosList
-                                photos={photos2018}
-                                dividerContainer={this.state.dividerContainer}
-                                dividerImage={this.state.dividerImage}
-                            />
-                        </Route>
-                        <Route exact path={"/gallery/2019"}>
-                            <PhotosList
-                                photos={photos2019}
-                                dividerContainer={this.state.dividerContainer}
-                                dividerImage={this.state.dividerImage}
-                            />
-                        </Route>
-                        <Route exact path={"/gallery/2020"}>
-                            <PhotosList
-                                photos={photos2020}
-                                dividerContainer={this.state.dividerContainer}
-                                dividerImage={this.state.dividerImage}
-                            />
-                        </Route>
-                        <Route exact path={"/gallery"}>
-                            <Gallery
-                                dividerContainer={this.state.dividerContainer}
-                                dividerImage={this.state.dividerImage}
-                            />
-                        </Route>
-                        <Route exact path={"/about"}>
-                            <About
-                                dividerContainer={this.state.dividerContainer}
-                                dividerImage={this.state.dividerImage}
-                            />
-                        </Route>
-                        <Route exact path={"/"}>
-                            <HomePage />
-                        </Route>
-                    </Switch>
-                </BrowserRouter>
-            </>
+            <BrowserRouter>
+                <Switch>
+                    <Route exact path={"/gallery/2014"}>
+                        <PhotosList
+                            photos={photos2014}
+                            dividerContainer={this.state.dividerContainer}
+                            dividerImage={this.state.dividerImage}
+                        />
+                    </Route>
+                    <Route exact path={"/gallery/2015"}>
+                        <PhotosList
+                            photos={photos2015}
+                            dividerContainer={this.state.dividerContainer}
+                            dividerImage={this.state.dividerImage}
+                        />
+                    </Route>
+                    <Route exact path={"/gallery/2016"}>
+                        <PhotosList
+                            photos={photos2016}
+                            dividerContainer={this.state.dividerContainer}
+                            dividerImage={this.state.dividerImage}
+                            location
+                        />
+                    </Route>
+                    <Route exact path={"/gallery/2017"}>
+                        <PhotosList
+                            photos={photos2017}
+                            dividerContainer={this.state.dividerContainer}
+                            dividerImage={this.state.dividerImage}
+                        />
+                    </Route>
+                    <Route exact path={"/gallery/2018"}>
+                        <PhotosList
+                            photos={photos2018}
+                            dividerContainer={this.state.dividerContainer}
+                            dividerImage={this.state.dividerImage}
+                        />
+                    </Route>
+                    <Route exact path={"/gallery/2019"}>
+                        <PhotosList
+                            photos={photos2019}
+                            dividerContainer={this.state.dividerContainer}
+                            dividerImage={this.state.dividerImage}
+                        />
+                    </Route>
+                    <Route exact path={"/gallery/2020"}>
+                        <PhotosList
+                            photos={photos2020}
+                            dividerContainer={this.state.dividerContainer}
+                            dividerImage={this.state.dividerImage}
+                        />
+                    </Route>
+                    <Route exact path={"/gallery"}>
+                        <Gallery
+                            dividerContainer={this.state.dividerContainer}
+                            dividerImage={this.state.dividerImage}
+                        />
+                    </Route>
+                    <Route exact path={"/about"}>
+                        <About
+                            dividerContainer={this.state.dividerContainer}
+                            dividerImage={this.state.dividerImage}
+                        />
+                    </Route>
+                    <Route exact path={"/"}>
+                        <HomePage />
+                    </Route>
+                </Switch>
+            </BrowserRouter>
         );
     }
 }
