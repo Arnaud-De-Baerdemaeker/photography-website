@@ -1,0 +1,49 @@
+// Photography website
+// Started on July 2020
+// By Arnaud De Baerdemaeker
+
+.modal__image-container { // <figure>
+	margin: {
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+	align-self: center;
+
+	.modal__image { // <img>
+		width: 100%;
+	}
+
+	.modal__caption { // <figcaption>
+		font-size: 0.75rem;
+		color: rgb(255, 255, 255);
+		font-style: italic;
+		text-align: right;
+		padding: {
+			top: 0;
+			right: 15px;
+			bottom: 0;
+			left: 0;
+		}
+	}
+}
+
+.modal__close { // <div>
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	bottom: 90px;
+	justify-self: center;
+	margin: {
+		top: 0;
+		right: auto;
+		bottom: 0;
+		left: auto;
+	}
+	cursor: pointer;
+
+	.modal__close-icon { // <img>
+		width: 100%;
+	}
+}
