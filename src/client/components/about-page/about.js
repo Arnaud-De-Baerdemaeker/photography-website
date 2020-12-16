@@ -9,6 +9,7 @@ import MyName from "./../shared/name";
 import Footer from "./../shared/footer";
 import Divider from "./../shared/divider";
 import MyPhoto from "./../../images/moi.png";
+import Image from "./../shared/image";
 
 class About extends Component {
     componentDidMount() {
@@ -118,12 +119,11 @@ class About extends Component {
                         />
                         <div className={"about-me__my-photo"}>
                             <figure className={"about-me__image-container"}>
-                                <img
-                                    src={MyPhoto}
-                                    alt={"Photo de moi"}
+                                <Image
+                                    url={MyPhoto}
+                                    alternate_text={"Photo de moi"}
                                     title={"Oui, c'est moi !"}
-                                    loading={"lazy"}
-                                    className={"about-me__image"}
+                                    class={"about-me__image"}
                                 />
                                 <figcaption
                                     className={"about-me__image-caption"}>
