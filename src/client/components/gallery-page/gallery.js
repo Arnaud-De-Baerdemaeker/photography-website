@@ -52,50 +52,50 @@ class Gallery extends Component {
                         <ul className={"gallery__list"}>
                             <Link
                                 link={"/gallery/2014"}
-                                src={
+                                url={
                                     "https://drive.google.com/uc?id=1FngJTHyYW4L07yL4UGMernAaaqQQsS42"
                                 }
-                                alt={"2014"}
+                                alternate_text={"2014"}
                                 year={"2014"}
                             />
                             <Link
                                 link={"/gallery/2015"}
-                                src={
+                                url={
                                     "https://drive.google.com/uc?id=1cNj8fqVrLnoDzyUC5fPJ2OGE0WC4nYkA"
                                 }
-                                alt={"2015"}
+                                alternate_text={"2015"}
                                 year={"2015"}
                             />
                             <Link
                                 link={"/gallery/2016"}
-                                src={
+                                url={
                                     "https://drive.google.com/uc?id=1E7yZKEU2g1ZtFf2vPLa2Z-H2NG_DWWIJ"
                                 }
-                                alt={"2016"}
+                                alternate_text={"2016"}
                                 year={"2016"}
                             />
                             <Link
                                 link={"/gallery/2017"}
-                                src={
+                                url={
                                     "https://drive.google.com/uc?id=1UplsD-lSVjuKkCJ126wjINBWnEPrDb-W"
                                 }
-                                alt={"2017"}
+                                alternate_text={"2017"}
                                 year={"2017"}
                             />
                             <Link
                                 link={"/gallery/2018"}
-                                src={
+                                url={
                                     "https://drive.google.com/uc?id=14_2JeZ5CNmIUpqA8XRGPM3oph9uNr_dn"
                                 }
-                                alt={"2018"}
+                                alternate_text={"2018"}
                                 year={"2018"}
                             />
                             <Link
                                 link={"/gallery/2019"}
-                                src={
+                                url={
                                     "https://drive.google.com/uc?id=1X_cL_IzABX9I_DuEOv33yWR4e04JnYr5"
                                 }
-                                alt={"2019"}
+                                alternate_text={"2019"}
                                 year={"2019"}
                             />
                         </ul>
