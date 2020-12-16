@@ -4,6 +4,7 @@
 
 import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
+import Image from "./../../shared/image";
 import Modal from "./modal";
 
 class PhotosCards extends Component {
@@ -25,13 +26,11 @@ class PhotosCards extends Component {
             <>
                 <div className={"photos-cards__card"}>
                     <figure className={"photos-cards__image-container"}>
-                        <img
-                            src={this.props.thumbnail}
-                            alt={"Image non trouvée"}
-                            loading={"lazy"}
+                        <Image
+                            url={this.props.thumbnail}
                             // On click, it displays the full image in a modal
                             onClick={this.handleOnClick}
-                            className={"photos-cards__image"}
+                            class={"photos-cards__image"}
                         />
                         <figcaption className={"photos-card__caption"}>
                             {this.props.author}
@@ -74,8 +73,8 @@ class PhotosCards extends Component {
                             : "photos-cards__modal--closed"
                     }>
                     <Modal
-                        handleOnClick={this.handleOnClick}
-                        full_image={this.props.full_image}
+                        url={this.props.full_image}
+                        onClick={this.handleOnClick}
                     />
                 </div>
             </>
