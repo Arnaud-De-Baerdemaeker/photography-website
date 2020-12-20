@@ -9,7 +9,7 @@ class Image extends Component {
                 src={this.props.url}
                 alt={this.props.alternate_text}
                 title={this.props.title}
-                threshold={0}
+                threshold={100}
                 onClick={this.props.onClick}
                 className={this.props.class}
             />
