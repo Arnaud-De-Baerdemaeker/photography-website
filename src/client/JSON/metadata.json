@@ -1,5 +1,5 @@
 {
-    "photos2014": {
+    "album_2014": {
         "title": 2014,
         "photos": [
             {
@@ -7,7 +7,7 @@
                 "thumbnail": "https://drive.google.com/uc?id=1FngJTHyYW4L07yL4UGMernAaaqQQsS42",
                 "author": "Arnaud De Baerdemaeker",
                 "name": "Le Tapis de Fleurs I",
-                "city": "Bruxelles, Belgique",
+                "place": "Bruxelles, Belgique",
                 "day": "Jeudi",
                 "date": 14,
                 "month": "août",
@@ -94,7 +94,7 @@
             }
         ]
     },
-    "photos2015": {
+    "album_2015": {
         "title": 2015,
         "photos": [
             {
@@ -135,7 +135,7 @@
             }
         ]
     },
-    "photos2016": {
+    "album_2016": {
         "title": 2016,
         "photos": [
             {
@@ -356,7 +356,7 @@
             }
         ]
     },
-    "photos2017": {
+    "album_2017": {
         "title": 2017,
         "photos": [
             {
@@ -451,7 +451,7 @@
             }
         ]
     },
-    "photos2018": {
+    "album_2018": {
         "title": 2018,
         "photos": [
             {
@@ -672,7 +672,7 @@
             }
         ]
     },
-    "photos2019": {
+    "album_2019": {
         "title": 2019,
         "photos": [
             {
