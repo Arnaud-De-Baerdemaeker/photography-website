@@ -9,15 +9,7 @@ import HomePage from "./home-page/home";
 import Gallery from "./gallery-page/gallery";
 import About from "./about-page/about";
 import PhotosList from "./gallery-page/photos-list/photos-list";
-import {
-    photos2014,
-    photos2015,
-    photos2016,
-    photos2017,
-    photos2018,
-    photos2019,
-    photos2020,
-} from "../javascript/metadata";
+import data from "./../JSON/metadata.json";
 
 class App extends Component {
     constructor(props) {
@@ -35,21 +27,21 @@ class App extends Component {
                 <Switch>
                     <Route exact path={"/gallery/2014"}>
                         <PhotosList
-                            photos={photos2014}
+                            album={data.album_2014}
                             dividerContainer={this.state.dividerContainer}
                             dividerImage={this.state.dividerImage}
                         />
                     </Route>
                     <Route exact path={"/gallery/2015"}>
                         <PhotosList
-                            photos={photos2015}
+                            album={data.album_2015}
                             dividerContainer={this.state.dividerContainer}
                             dividerImage={this.state.dividerImage}
                         />
                     </Route>
                     <Route exact path={"/gallery/2016"}>
                         <PhotosList
-                            photos={photos2016}
+                            album={data.album_2016}
                             dividerContainer={this.state.dividerContainer}
                             dividerImage={this.state.dividerImage}
                             location
@@ -57,28 +49,21 @@ class App extends Component {
                     </Route>
                     <Route exact path={"/gallery/2017"}>
                         <PhotosList
-                            photos={photos2017}
+                            album={data.album_2017}
                             dividerContainer={this.state.dividerContainer}
                             dividerImage={this.state.dividerImage}
                         />
                     </Route>
                     <Route exact path={"/gallery/2018"}>
                         <PhotosList
-                            photos={photos2018}
+                            album={data.album_2018}
                             dividerContainer={this.state.dividerContainer}
                             dividerImage={this.state.dividerImage}
                         />
                     </Route>
                     <Route exact path={"/gallery/2019"}>
                         <PhotosList
-                            photos={photos2019}
-                            dividerContainer={this.state.dividerContainer}
-                            dividerImage={this.state.dividerImage}
-                        />
-                    </Route>
-                    <Route exact path={"/gallery/2020"}>
-                        <PhotosList
-                            photos={photos2020}
+                            album={data.album_2019}
                             dividerContainer={this.state.dividerContainer}
                             dividerImage={this.state.dividerImage}
                         />
