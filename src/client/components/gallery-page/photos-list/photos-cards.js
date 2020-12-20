@@ -42,22 +42,22 @@ class PhotosCards extends Component {
                         </h3>
                         <ul className={"photos-cards__list"}>
                             <li className={"photos-cards__list-item"}>
-                                {`${this.props.day} ${this.props.date}, ${this.props.time}`}
+                                {`${this.props.day} ${this.props.date} ${this.props.month} ${this.props.year}, ${this.props.hours}:${this.props.minutes}`}
                             </li>
                             <li className={"photos-cards__list-item"}>
                                 {this.props.place}
                             </li>
                             <li className={"photos-cards__list-item"}>
-                                {this.props.aperture}
+                                {`Ouverture : f/${this.props.aperture}`}
                             </li>
                             <li className={"photos-cards__list-item"}>
-                                {this.props.shutter_speed}
+                                {`Vitesse d'obturation : ${this.props.shutter_speed}`}
                             </li>
                             <li className={"photos-cards__list-item"}>
-                                {this.props.focal_length}
+                                {`Distance focale : ${this.props.focal_length} mm`}
                             </li>
                             <li className={"photos-cards__list-item"}>
-                                {this.props.iso}
+                                {`ISO : ${this.props.iso}`}
                             </li>
                             <li className={"photos-cards__list-item"}>
                                 {this.props.camera}
@@ -66,17 +66,12 @@ class PhotosCards extends Component {
                     </div>
                 </div>
                 {/* Modal that is active only when the user clicks on the thumbnail */}
-                <div
-                    className={
-                        this.state.modalIsOpen
-                            ? "photos-cards__modal--open"
-                            : "photos-cards__modal--closed"
-                    }>
+                {this.state.modalIsOpen ? (
                     <Modal
                         url={this.props.full_image}
                         onClick={this.handleOnClick}
                     />
-                </div>
+                ) : null}
             </>
         );
     }
