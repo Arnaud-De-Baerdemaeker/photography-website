@@ -1,0 +1,77 @@
+// Photography website
+// Started on July 2020
+// By Arnaud De Baerdemaeker
+
+@mixin menu-links {
+	font-family: "Comfortaa-Bold", Arial, Helvetica, sans-serif;
+}
+
+@media screen and (orientation: landscape) {
+	.menu--home-page, .menu--other-pages { // <header>
+		position: fixed;
+		z-index: 1;
+		bottom: 0;
+		height: 60px;
+
+		.menu__navigation--home-page, .menu__navigation--other-pages { // <nav>
+			height: inherit;
+
+			.menu__list--home-page, .menu__list--other-pages { // <ul>
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				width: 100vw;
+				height: inherit;
+				list-style-type: none;
+				margin: {
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+				}
+				padding: {
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+				}
+
+				.menu__list-item--home-page, .menu__list-item--other-pages { // <li>
+					display: flex;
+					justify-content: center;
+					align-self: center;
+					height: 30px;
+
+					.menu__link--home-page, .menu__link--other-pages { // <a>
+						display: flex;
+						align-items: center;
+						height: inherit;
+						@include menu-links;
+						text-decoration: none;
+						color: rgb(255, 255, 255);
+						font-size: 0.825rem;
+						letter-spacing: 1px;
+					}
+
+					.menu__link--active { // <a>
+						text-shadow: 0 0 7.5px rgb(255, 255, 255);
+					}
+				}
+			}
+		}
+	}
+
+	.menu--other-pages { // <header>
+		background-color: rgb(50, 50, 50);
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
+		.menu__navigation--other-pages { // <nav>
+			.menu__list--other-pages { // <ul>
+				.menu__list-item--other-pages { // <li>
+					.menu__link--other-pages { // <a>
+						color: rgb(255, 255, 255);
+					}
+				}
+			}
+		}
+	}
+}
