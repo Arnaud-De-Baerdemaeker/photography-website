@@ -1,0 +1,87 @@
+// Photography website
+// Started on July 2020
+// By Arnaud De Baerdemaeker
+
+@media screen {
+	.gallery { // <div>
+		.gallery__intro-container { // <section>
+			margin: {
+				top: 0;
+				right: 0;
+				bottom: 40px;
+				left: 0;
+			}
+			padding: {
+				top: 0;
+				right: 15px;
+				bottom: 0;
+				left: 15px;
+			}
+
+			.gallery__title-1 { // <h2>
+				margin: {
+					top: 0;
+					right: 0;
+					bottom: 40px;
+					left: 0;
+				}
+				font: {
+					family: "Architects_Daughter";
+					size: 1.5rem;
+				}
+			}
+
+			.gallery__intro:first-of-type { // <p>
+				margin: {
+					top: 0;
+					right: 0;
+					bottom: 20px;
+					left: 0;
+				}
+			}
+
+			.gallery__intro:last-of-type { // <p>
+				margin: {
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+				}
+			}
+		}
+
+		.gallery__years-container { // <div>
+			background-color: rgb(240, 240, 240);
+			padding: {
+				top: 30px;
+				right: 15px;
+				bottom: 30px;
+				left: 15px;
+			}
+			@media (orientation: landscape) {
+				padding: {
+					top: 30px;
+					right: 0;
+					bottom: 30px;
+					left: 0;
+				}
+			}
+		}
+
+		.gallery__list { // <ul>
+			margin: {
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+			}
+			padding: {
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+			}
+			list-style: none;
+		}
+	}
+}
