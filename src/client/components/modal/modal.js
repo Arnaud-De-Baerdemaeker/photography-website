@@ -4,7 +4,7 @@
 
 import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
-import Image from "./../../shared/image";
+import Image from "../image/image";
 
 class Modal extends Component {
     render() {

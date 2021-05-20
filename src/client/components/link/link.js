@@ -5,7 +5,7 @@
 import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
 import {NavLink} from "react-router-dom";
-import Image from "./../shared/image";
+import Image from "../image/image";
 
 class Link extends Component {
     render() {

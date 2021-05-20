@@ -4,11 +4,11 @@
 
 import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
-import Header from "../../shared/header";
-import Footer from "../../shared/footer";
-import MyName from "./../../shared/name";
-import Divider from "./../../shared/divider";
-import PhotosCards from "./photos-cards";
+import Header from "../header/header";
+import Footer from "../footer/footer";
+import MyName from "../my-name/my-name";
+import Divider from "../divider/divider";
+import PhotosCards from "../photos-cards/photos-cards";
 
 class PhotosList extends Component {
     constructor(props) {

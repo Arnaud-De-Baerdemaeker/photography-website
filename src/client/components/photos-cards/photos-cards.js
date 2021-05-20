@@ -4,8 +4,8 @@
 
 import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
-import Image from "./../../shared/image";
-import Modal from "./modal";
+import Image from "../image/image";
+import Modal from "../modal/modal";
 
 class PhotosCards extends Component {
     constructor(props) {
