@@ -4,12 +4,12 @@
 
 import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
-import Header from "./../shared/header";
-import MyName from "./../shared/name";
-import Footer from "./../shared/footer";
-import Divider from "./../shared/divider";
+import Header from "../header/header";
+import MyName from "../my-name/my-name";
+import Footer from "../footer/footer";
+import Divider from "../divider/divider";
 import MyPhoto from "./../../images/moi.png";
-import Image from "./../shared/image";
+import Image from "../image/image";
 
 class About extends Component {
     componentDidMount() {

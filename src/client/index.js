@@ -5,7 +5,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/app";
-import "./scss/styles.scss";
+import "./styles.scss";
 
 const mountNode = document.querySelector("#app");
 ReactDOM.render(<App />, mountNode);

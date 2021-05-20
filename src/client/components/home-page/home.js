@@ -4,7 +4,7 @@
 
 import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
-import Header from "./../shared/header";
+import Header from "../header/header";
 
 class HomePage extends Component {
     render() {

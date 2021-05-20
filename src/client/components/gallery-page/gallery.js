@@ -4,11 +4,11 @@
 
 import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
-import Header from "./../shared/header";
-import Footer from "./../shared/footer";
-import Divider from "./../shared/divider";
-import MyName from "./../shared/name";
-import Link from "./link";
+import Header from "../header/header";
+import Footer from "../footer/footer";
+import Divider from "../divider/divider";
+import MyName from "../my-name/my-name";
+import Link from "../link/link";
 
 class Gallery extends Component {
     componentDidMount() {

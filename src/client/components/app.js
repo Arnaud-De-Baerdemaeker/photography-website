@@ -8,7 +8,7 @@ import {BrowserRouter, Switch, Route} from "react-router-dom";
 import HomePage from "./home-page/home";
 import Gallery from "./gallery-page/gallery";
 import About from "./about-page/about";
-import PhotosList from "./gallery-page/photos-list/photos-list";
+import PhotosList from "./photos-list/photos-list";
 import data from "./../JSON/metadata.json";
 
 class App extends Component {
