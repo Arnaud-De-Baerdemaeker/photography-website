@@ -4,16 +4,12 @@
 
 @media screen and (orientation: portrait) {
 	.menu {
-		&--home-page, &--other-pages { // <header>
+		&--home-page, &--other-pages { // <nav>
 			position: fixed;
 			z-index: 1;
 			bottom: 0;
-			height: 7.5rem;
+			height: 9.5rem;
 			background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
-		}
-
-		&__navigation--home-page, &__navigation--other-pages { // <nav>
-			height: inherit;
 		}
 
 		&__list {
