@@ -4,7 +4,7 @@
 
 import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
-import Header from "../header/header";
+import Header from "../navigation/navigation";
 import Footer from "../footer/footer";
 import MyName from "../my-name/my-name";
 import PhotosCards from "../photos-cards/photos-cards";
