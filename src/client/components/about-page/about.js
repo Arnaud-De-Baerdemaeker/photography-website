@@ -7,7 +7,6 @@ import {hot} from "react-hot-loader/root";
 import Header from "../header/header";
 import MyName from "../my-name/my-name";
 import Footer from "../footer/footer";
-import Divider from "../divider/divider";
 import MyPhoto from "./../../images/moi.png";
 import Image from "../image/image";
 
@@ -26,10 +25,6 @@ class About extends Component {
                 <Header />
                 <div className={"about"}>
                     <MyName />
-                    <Divider
-                        dividerContainer={this.props.dividerContainer[1]}
-                        dividerImage={this.props.dividerImage[1]}
-                    />
                     <div className={"about-me"}>
                         <section className={"about-me__who-i-am"}>
                             <h2 className={"about-me__level-2-title"}>
@@ -49,10 +44,6 @@ class About extends Component {
                                 }
                             </p>
                         </section>
-                        <Divider
-                            dividerContainer={this.props.dividerContainer[0]}
-                            dividerImage={this.props.dividerImage[0]}
-                        />
                         <section className={"about-me__why-webdesign"}>
                             <h2 className={"about-me__level-2-title"}>
                                 {"Pourquoi le développement web ?"}
@@ -73,10 +64,6 @@ class About extends Component {
                                 }
                             </p>
                         </section>
-                        <Divider
-                            dividerContainer={this.props.dividerContainer[1]}
-                            dividerImage={this.props.dividerImage[1]}
-                        />
                         <section className={"about-me__why-photography"}>
                             <h2 className={"about-me__level-2-title"}>
                                 {"Pourquoi la photographie ?"}
@@ -92,10 +79,6 @@ class About extends Component {
                                 }
                             </p>
                         </section>
-                        <Divider
-                            dividerContainer={this.props.dividerContainer[0]}
-                            dividerImage={this.props.dividerImage[0]}
-                        />
                         <section className={"about-me__what-else"}>
                             <h2 className={"about-me__level-2-title"}>
                                 {"Et en dehors de ça ?"}
@@ -106,17 +89,9 @@ class About extends Component {
                                 }
                             </p>
                         </section>
-                        <Divider
-                            dividerContainer={this.props.dividerContainer[1]}
-                            dividerImage={this.props.dividerImage[1]}
-                        />
                         <h2 className={"about-me__discover"}>
                             {"Mettez-vous à l'aise et découvrez..."}
                         </h2>
-                        <Divider
-                            dividerContainer={this.props.dividerContainer[0]}
-                            dividerImage={this.props.dividerImage[0]}
-                        />
                         <div className={"about-me__my-photo"}>
                             <figure className={"about-me__image-container"}>
                                 <Image

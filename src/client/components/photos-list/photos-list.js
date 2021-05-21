@@ -7,7 +7,6 @@ import {hot} from "react-hot-loader/root";
 import Header from "../header/header";
 import Footer from "../footer/footer";
 import MyName from "../my-name/my-name";
-import Divider from "../divider/divider";
 import PhotosCards from "../photos-cards/photos-cards";
 
 class PhotosList extends Component {
@@ -58,19 +57,11 @@ class PhotosList extends Component {
                 <Header />
                 <div className={"photos-list"}>
                     <MyName />
-                    <Divider
-                        dividerContainer={this.props.dividerContainer[1]}
-                        dividerImage={this.props.dividerImage[1]}
-                    />
                     <div className={"photos-list__title-container"}>
                         <h2 className={"photos-list__title-1"}>
                             {this.props.album.title}
                         </h2>
                     </div>
-                    <Divider
-                        dividerContainer={this.props.dividerContainer[0]}
-                        dividerImage={this.props.dividerImage[0]}
-                    />
                     <div className={"photos-list__cards"}>
                         {this.state.card}
                     </div>

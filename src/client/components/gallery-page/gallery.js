@@ -6,7 +6,6 @@ import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
 import Header from "../header/header";
 import Footer from "../footer/footer";
-import Divider from "../divider/divider";
 import MyName from "../my-name/my-name";
 import Link from "../link/link";
 
@@ -25,10 +24,6 @@ class Gallery extends Component {
                 <Header />
                 <div className={"gallery"}>
                     <MyName />
-                    <Divider
-                        dividerContainer={this.props.dividerContainer[1]}
-                        dividerImage={this.props.dividerImage[1]}
-                    />
                     <section className={"gallery__intro-container"}>
                         <h2 className={"gallery__title-1"}>
                             {"Bienvenue dans la galerie !"}
@@ -44,10 +39,6 @@ class Gallery extends Component {
                             }
                         </p>
                     </section>
-                    <Divider
-                        dividerContainer={this.props.dividerContainer[0]}
-                        dividerImage={this.props.dividerImage[0]}
-                    />
                     <div className={"gallery__years-container"}>
                         <ul className={"gallery__list"}>
                             <Link
