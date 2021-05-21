@@ -2,22 +2,22 @@
 // Started on July 2020
 // By Arnaud De Baerdemaeker
 
-@mixin menu-links {
-	font-family: "Comfortaa-Bold", Arial, Helvetica, sans-serif;
-}
-
 @media screen and (orientation: portrait) {
-	.menu--home-page, .menu--other-pages { // <header>
-		position: fixed;
-		z-index: 1;
-		bottom: 0;
-		height: 7.5rem;
-		background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+	.menu {
+		&--home-page, &--other-pages { // <header>
+			position: fixed;
+			z-index: 1;
+			bottom: 0;
+			height: 7.5rem;
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+		}
 
-		.menu__navigation--home-page, .menu__navigation--other-pages { // <nav>
+		&__navigation--home-page, &__navigation--other-pages { // <nav>
 			height: inherit;
-			
-			.menu__list--home-page, .menu__list--other-pages { // <ul>
+		}
+
+		&__list {
+			&--home-page, &--other-pages { // <ul>
 				display: flex;
 				justify-content: space-evenly;
 				width: 100vw;
@@ -35,29 +35,31 @@
 					bottom: 0;
 					left: 0;
 				}
-				
-				.menu__list-item--home-page, .menu__list-item--other-pages { // <li>
-					display: flex;
-					justify-content: center;
-					align-self: center;
-					height: 7.5rem;
-					
-					.menu__link--home-page, .menu__link--other-pages { // <a>
-						display: flex;
-						align-items: center;
-						height: inherit;
-						@include menu-links;
-						text-decoration: none;
-						color: rgb(255, 255, 255);
-						font-size: 2.5rem;
-						letter-spacing: 1px;
-						//-webkit-tap-highlight-color: transparent;
-					}
+			}
 
-					.menu__link--active { // <a>
-						text-shadow: 0 0 7.5px rgb(255, 255, 255);
-					}
-				}
+			&-item--home-page, &-item--other-pages { // <li>
+				display: flex;
+				justify-content: center;
+				align-self: center;
+				height: 7.5rem;
+			}
+		}
+
+		&__link {
+			&--home-page, &--other-pages { // <a>
+				display: flex;
+				align-items: center;
+				height: inherit;
+				font-family: "Comfortaa-Bold", Arial, Helvetica, sans-serif;
+				text-decoration: none;
+				color: rgb(255, 255, 255);
+				font-size: 2.5rem;
+				letter-spacing: 1px;
+				-webkit-tap-highlight-color: transparent;
+			}
+
+			&--active { // <a>
+				text-shadow: 0 0 0.5rem rgb(255, 255, 255);
 			}
 		}
 	}
