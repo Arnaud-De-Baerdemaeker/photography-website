@@ -4,10 +4,22 @@
 
 .my-name { // <h1>
 	font-family: "ZCOOLXiaoWei-Regular";
-	color: rgb(100, 100, 100);
-	letter-spacing: 0.5px;
-	background-color: rgb(240, 240, 240);
-	margin: 0;
-	font-size: 5rem;
-	padding: 15px;
+	color: rgb(255, 255, 255);
+	background-color: rgb(52, 78, 65);
+	letter-spacing: 0.25rem;
+	margin: {
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+	font-size: 1.5rem;
+	padding: {
+		top: 0;
+		right: 2rem;
+		bottom: 0;
+		left: 2rem;
+	}
+	height: 4.25rem;
+	line-height: 4.25rem;
 }
