@@ -31,15 +31,17 @@
 	}
 }
 
-@import "components/navigation/navigation--mobile",
-"components/my-name/my-name",
-"components/header/header--mobile",
-"components/home-page/home--mobile",
-"components/gallery-page/gallery--mobile",
-"components/link/link--mobile",
-"components/photos-list/photos-list--mobile",
-"components/photos-cards/photos-cards--mobile",
-"components/modal/modal--mobile",
-"components/about-page/about--mobile",
-"components/footer/footer--mobile"
+@import
+	"components/variables/variables",
+	"components/navigation/navigation--mobile",
+	"components/my-name/my-name",
+	"components/header/header--mobile",
+	"components/home-page/home--mobile",
+	"components/gallery-page/gallery--mobile",
+	"components/link/link--mobile",
+	"components/photos-list/photos-list--mobile",
+	"components/photos-cards/photos-cards--mobile",
+	"components/modal/modal--mobile",
+	"components/about-page/about--mobile",
+	"components/footer/footer--mobile"
 ;
