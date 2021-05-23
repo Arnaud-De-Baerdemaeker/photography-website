@@ -1,0 +1,19 @@
+.header { // <header>
+    background-color: rgb(58, 90, 64);
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__title { // <h2>
+        font-size: 5.5rem;
+        letter-spacing: 1rem;
+        color: rgb(255, 255, 255);
+        margin: {
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}
