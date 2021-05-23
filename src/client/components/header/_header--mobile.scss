@@ -1,5 +1,5 @@
 .header { // <header>
-    background-color: rgb(58, 90, 64);
+    background-color: $darkGreen;
     height: 25rem;
     display: flex;
     justify-content: center;
@@ -8,7 +8,7 @@
     &__title { // <h2>
         font-size: 5.5rem;
         letter-spacing: 1rem;
-        color: rgb(255, 255, 255);
+        color: $white;
         margin: {
             top: 0;
             right: 0;
