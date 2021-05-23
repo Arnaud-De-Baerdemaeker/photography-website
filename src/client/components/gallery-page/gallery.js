@@ -4,12 +4,18 @@
 
 import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
-import Header from "../navigation/navigation";
+import Navigation from "../navigation/navigation";
 import Footer from "../footer/footer";
 import MyName from "../my-name/my-name";
+import Header from "../header/header";
 import Link from "../link/link";
 
 class Gallery extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {headerTitle: "Galerie"};
+    }
+
     componentDidMount() {
         // The condition checks the value of the scroll
         if (window.scrollY !== 0) {
@@ -21,13 +27,14 @@ class Gallery extends Component {
     render() {
         return (
             <>
-                <Header />
+                <Navigation />
                 <div className={"gallery"}>
                     <MyName />
+                    <Header headerTitle={this.state.headerTitle} />
                     <section className={"gallery__intro-container"}>
-                        <h2 className={"gallery__title-1"}>
+                        <h3 className={"gallery__title-1"}>
                             {"Bienvenue dans la galerie !"}
-                        </h2>
+                        </h3>
                         <p className={"gallery__intro"}>
                             {
                                 "Dans cette section, vous allez pouvoir découvrir une sélection de mes photos."
