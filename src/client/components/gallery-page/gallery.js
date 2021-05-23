@@ -8,12 +8,22 @@ import Navigation from "../navigation/navigation";
 import Footer from "../footer/footer";
 import MyName from "../my-name/my-name";
 import Header from "../header/header";
+import Introduction from "../introduction/introduction";
 import Link from "../link/link";
 
 class Gallery extends Component {
     constructor(props) {
         super(props);
-        this.state = {headerTitle: "Galerie"};
+        this.state = {
+            headerTitle: "Galerie",
+            galleryIntroduction: {
+                title: "Bienvenue dans la galerie !",
+                text1:
+                    "Dans cette section, vous allez pouvoir découvrir une sélection de mes photos.",
+                text2:
+                    "Choisissez une année pour afficher les photos correspondantes.",
+            },
+        };
     }
 
     componentDidMount() {
@@ -31,21 +41,9 @@ class Gallery extends Component {
                 <div className={"gallery"}>
                     <MyName />
                     <Header headerTitle={this.state.headerTitle} />
-                    <section className={"gallery__intro-container"}>
-                        <h3 className={"gallery__title-1"}>
-                            {"Bienvenue dans la galerie !"}
-                        </h3>
-                        <p className={"gallery__intro"}>
-                            {
-                                "Dans cette section, vous allez pouvoir découvrir une sélection de mes photos."
-                            }
-                        </p>
-                        <p className={"gallery__intro"}>
-                            {
-                                "Choisissez une année pour afficher les photos correspondantes."
-                            }
-                        </p>
-                    </section>
+                    <Introduction
+                        introduction={this.state.galleryIntroduction}
+                    />
                     <div className={"gallery__years-container"}>
                         <ul className={"gallery__list"}>
                             <Link
