@@ -7,11 +7,26 @@ import {hot} from "react-hot-loader/root";
 
 class Introduction extends Component {
     render() {
+        const introduction = [];
+
+        for (
+            let i = 0;
+            i < this.props.galleryInputs.introduction.phrases.length;
+            i++
+        ) {
+            introduction.push(
+                <p key={i} className={"introduction__paragraph"}>
+                    {this.props.galleryInputs.introduction.phrases[i]}
+                </p>,
+            );
+        }
+
         return (
             <section className={"introduction__container"}>
                 <h3 className={"introduction__title"}>
-                    {this.props.introduction.title}
+                    {this.props.galleryInputs.introduction.title}
                 </h3>
+                {introduction}
             </section>
         );
     }
