@@ -9,7 +9,9 @@ class Header extends Component {
     render() {
         return (
             <header className={"header"}>
-                <h2 className={"header__title"}>{this.props.headerTitle}</h2>
+                <h2 className={"header__title"}>
+                    {this.props.galleryInputs.headerTitle}
+                </h2>
             </header>
         );
     }
