@@ -9,23 +9,10 @@ import Footer from "../footer/footer";
 import MyName from "../my-name/my-name";
 import Header from "../header/header";
 import Introduction from "../introduction/introduction";
+import {galleryInputs} from "../../constants/constants";
 import Link from "../link/link";
 
 class Gallery extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            headerTitle: "Galerie",
-            galleryIntroduction: {
-                title: "Bienvenue dans la galerie !",
-                text1:
-                    "Dans cette section, vous allez pouvoir découvrir une sélection de mes photos.",
-                text2:
-                    "Choisissez une année pour afficher les photos correspondantes.",
-            },
-        };
-    }
-
     componentDidMount() {
         // The condition checks the value of the scroll
         if (window.scrollY !== 0) {
@@ -40,10 +27,8 @@ class Gallery extends Component {
                 <Navigation />
                 <div className={"gallery"}>
                     <MyName />
-                    <Header headerTitle={this.state.headerTitle} />
-                    <Introduction
-                        introduction={this.state.galleryIntroduction}
-                    />
+                    <Header galleryInputs={galleryInputs} />
+                    <Introduction galleryInputs={galleryInputs} />
                     <div className={"gallery__years-container"}>
                         <ul className={"gallery__list"}>
                             <Link
