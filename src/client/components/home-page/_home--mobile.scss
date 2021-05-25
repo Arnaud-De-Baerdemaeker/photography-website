@@ -2,36 +2,42 @@
 // Started on July 2020
 // By Arnaud De Baerdemaeker
 
-@media screen {
-	.home-page__container { // <div>
-		background-image: url("https://drive.google.com/uc?id=1NJbkAWFK2-2o_Dd-LB06-cu3E45J4LSK");
-		background-attachment: fixed;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position-x: 70%;
+.home-page {
+	&__container { // <div>
+		background: {
+			image: url("https://drive.google.com/uc?id=1NJbkAWFK2-2o_Dd-LB06-cu3E45J4LSK");
+			attachment: fixed;
+			repeat: no-repeat;
+			size: cover;
+			position-x: 70%;
+		}
 		width: 100vw;
 		height: 100vh;
+	}
 		
-		.title { // <div>
-			display: grid;
-			align-content: center;
-			width: 100vw;
-			height: 100vh;
-			backdrop-filter: brightness(60%);
-			
-			.title__main-title { // <h1>
-				font-family: "ZCOOLXiaoWei-Regular", Arial, Helvetica, sans-serif;
-				font-size: 9vw;
-				font-weight: 100;
-				color: rgb(255, 255, 255);
-				text-align: center;
-				letter-spacing: 1px;
-				text-shadow: 0 0 7.5px rgb(255, 255, 255);
-				margin: 0;
-				@media (orientation: landscape) {
-					font-size: 8vw;
-				}
-			}
+	&__title-container { // <div>
+		display: grid;
+		align-content: center;
+		width: 100vw;
+		height: 100vh;
+		backdrop-filter: brightness(60%);
+	}
+
+	&__main-title { // <h1>
+		font: {
+			family: $zcoolXiaoWeiRegular;
+			size: 9.5vw;
+			weight: 100;
+		}
+		color: $white;
+		text-align: center;
+		letter-spacing: 0.2vw;
+		text-shadow: 0 0 0.469rem $white;
+		margin: {
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
 		}
 	}
 }
