@@ -8,9 +8,9 @@ import {hot} from "react-hot-loader/root";
 class Header extends Component {
     render() {
         return (
-            <header className={"header"}>
+            <header className={"header__container"}>
                 <h2 className={"header__title"}>
-                    {this.props.galleryInputs.headerTitle}
+                    {this.props.inputs.headerTitle}
                 </h2>
             </header>
         );
