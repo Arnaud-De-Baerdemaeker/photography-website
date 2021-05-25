@@ -3,41 +3,32 @@
 // By Arnaud De Baerdemaeker
 
 @font-face {
-	font-family: "Quicksand-Regular";
+	font-family: "Quicksand--Regular";
 	src: url("fonts/Quicksand/Quicksand-Regular.ttf") format("truetype");
 }
 
 @font-face {
-	font-family: "Comfortaa-Bold";
+	font-family: "Comfortaa--Bold";
 	src: url("fonts/Comfortaa/Comfortaa-Bold.ttf") format("truetype");
 }
 
 @font-face {
-	font-family: "ZCOOLXiaoWei-Regular";
+	font-family: "ZCOOLXiaoWei--Regular";
 	src: url("fonts/ZCOOL_XiaoWei/ZCOOLXiaoWei-Regular.ttf") format("truetype");
 }
 
 @font-face {
-	font-family: "Architects_Daughter";
+	font-family: "Architects_Daughter--Regular";
 	src: url("fonts/Architects_Daughter/ArchitectsDaughter-Regular.ttf") format("truetype");
 }
 
-@media screen {
-	body {
-		font-size: 16px;
-		margin: 0;
-		box-sizing: border-box;
-		font-family: "Quicksand-Regular", Arial, Helvetica, sans-serif;
-	}
-}
-
 @import
-	"components/variables/variables",
+	"components/globals/globals",
+	"components/home-page/home--mobile",
 	"components/navigation/navigation--mobile",
 	"components/my-name/my-name",
 	"components/header/header--mobile",
 	"components/introduction/introduction",
-	"components/home-page/home--mobile",
 	"components/gallery-page/gallery--mobile",
 	"components/link/link--mobile",
 	"components/photos-list/photos-list--mobile",
