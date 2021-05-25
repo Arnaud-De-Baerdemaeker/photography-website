@@ -4,15 +4,15 @@
 
 import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
-import Header from "../navigation/navigation";
+import Navigation from "../navigation/navigation";
 
 class HomePage extends Component {
     render() {
         return (
             <div className={"home-page__container"}>
-                <Header />
-                <div className={"title"}>
-                    <h1 className={"title__main-title"}>
+                <Navigation />
+                <div className={"home-page__title-container"}>
+                    <h1 className={"home-page__main-title"}>
                         {"ARNAUD"}
                         <br />
                         {"DE BAERDEMAEKER"}
