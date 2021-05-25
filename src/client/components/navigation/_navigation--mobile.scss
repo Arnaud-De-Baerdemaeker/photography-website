@@ -2,61 +2,57 @@
 // Started on July 2020
 // By Arnaud De Baerdemaeker
 
-@media screen and (orientation: portrait) {
-	.menu {
-		&--home-page, &--other-pages { // <nav>
-			position: fixed;
-			z-index: 1;
+.menu {
+	&__container { // <nav>
+		position: fixed;
+		z-index: 1;
+		bottom: 0;
+		height: 4rem;
+		background: linear-gradient($blackTransparent 0%, $black 60%);
+	}
+
+	&__list { // <ul>
+		display: flex;
+		justify-content: space-evenly;
+		width: 100vw;
+		height: inherit;
+		list-style-type: none;
+		margin: {
+			top: 0;
+			right: 0;
 			bottom: 0;
-			height: 9.5rem;
-			background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+			left: 0;
 		}
-
-		&__list {
-			&--home-page, &--other-pages { // <ul>
-				display: flex;
-				justify-content: space-evenly;
-				width: 100vw;
-				height: inherit;
-				list-style-type: none;
-				margin: {
-					top: 0;
-					right: 0;
-					bottom: 0;
-					left: 0;
-				}
-				padding: {
-					top: 0;
-					right: 0;
-					bottom: 0;
-					left: 0;
-				}
-			}
-
-			&-item--home-page, &-item--other-pages { // <li>
-				display: flex;
-				justify-content: center;
-				align-self: center;
-				height: 7.5rem;
-			}
+		padding: {
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
 		}
+	}
 
-		&__link {
-			&--home-page, &--other-pages { // <a>
-				display: flex;
-				align-items: center;
-				height: inherit;
-				font-family: "Comfortaa-Bold", Arial, Helvetica, sans-serif;
-				text-decoration: none;
-				color: rgb(255, 255, 255);
-				font-size: 2.5rem;
-				letter-spacing: 1px;
-				-webkit-tap-highlight-color: transparent;
-			}
+	&__list-item { // <li>
+		display: inherit;
+		justify-content: center;
+		align-self: center;
+		height: inherit;
+	}
 
-			&--active { // <a>
-				text-shadow: 0 0 0.5rem rgb(255, 255, 255);
-			}
+	&__link { // <a>
+		display: inherit;
+		align-items: center;
+		height: inherit;
+		font: {
+			family: $comfortaaBold;
+			size: 1rem;
+		}
+		text-decoration: none;
+		color: $white;
+		letter-spacing: 0.063rem;
+		-webkit-tap-highlight-color: transparent;
+
+		&--active { // <a>
+			text-shadow: 0 0 0.5rem $white;
 		}
 	}
 }
