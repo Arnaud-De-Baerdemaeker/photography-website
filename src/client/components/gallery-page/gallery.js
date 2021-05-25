@@ -27,8 +27,8 @@ class Gallery extends Component {
                 <Navigation />
                 <div className={"gallery"}>
                     <MyName />
-                    <Header galleryInputs={galleryInputs} />
-                    <Introduction galleryInputs={galleryInputs} />
+                    <Header inputs={galleryInputs} />
+                    <Introduction inputs={galleryInputs} />
                     <div className={"gallery__years-container"}>
                         <ul className={"gallery__list"}>
                             <Link
