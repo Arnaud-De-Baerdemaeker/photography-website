@@ -19,6 +19,7 @@
     "@fortawesome/react-fontawesome": "^0.1.13",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
+    "react-helmet": "^6.1.0",
     "react-hot-loader": "^4.13.0",
     "react-lazy-load-image-component": "^1.5.1",
     "react-router-dom": "^5.2.0",
