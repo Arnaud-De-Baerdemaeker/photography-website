@@ -2,137 +2,118 @@
 // Started on July 2020
 // By Arnaud De Baerdemaeker
 
-@media screen and (orientation: portrait) {
-	.photos-cards__card { // <div>
+.photos-cards__card { // <div>
+	margin: {
+		top: 0;
+		right: 0;
+		bottom: 30px;
+		left: 0;
+	}
+	border-radius: 3px;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+
+	.photos-cards__image-container { // <figure>
+		width: 100%;
 		margin: {
 			top: 0;
 			right: 0;
-			bottom: 30px;
+			bottom: 20px;
 			left: 0;
 		}
-		border-radius: 3px;
-		background-color: rgb(255, 255, 255);
-		box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-		@media (orientation: landscape) {
-			width: 70%;
-			margin: {
-				top: 0;
-				right: auto;
-				bottom: 30px;
-				left: auto;
-			}
+		padding: {
+			top: 0;
+			right: -15px;
+			bottom: 0;
+			left: -15px;
 		}
 
-		.photos-cards__image-container { // <figure>
+		.photos-cards__image { // <img>
 			width: 100%;
+			border: {
+				top-left-radius: 3px;
+				top-right-radius: 3px;
+				bottom-right-radius: 0;
+				bottom-left-radius: 0;
+			}
+			cursor: pointer;
+		}
+
+		.photos-card__caption { // <figcaption>
+			font-size: 0.75rem;
+			text-align: right;
+			font-style: italic;
+			padding: {
+				top: 0;
+				right: 15px;
+				bottom: 0;
+				left: 0;
+			}
+		}
+	}
+
+	.photos-cards__metadata { // <div>
+		padding: {
+			top: 0;
+			right: 15px;
+			bottom: 15px;
+			left: 15px;
+		}
+
+		.photos-cards__title-2 { // <h3>
 			margin: {
 				top: 0;
 				right: 0;
 				bottom: 20px;
 				left: 0;
 			}
-			padding: {
-				top: 0;
-				right: -15px;
-				bottom: 0;
-				left: -15px;
-			}
-
-			.photos-cards__image { // <img>
-				width: 100%;
-				border: {
-					top-left-radius: 3px;
-					top-right-radius: 3px;
-					bottom-right-radius: 0;
-					bottom-left-radius: 0;
-				}
-				cursor: pointer;
-			}
-
-			.photos-card__caption { // <figcaption>
-				font-size: 0.75rem;
-				text-align: right;
-				font-style: italic;
-				padding: {
-					top: 0;
-					right: 15px;
-					bottom: 0;
-					left: 0;
-				}
+			font: {
+				size: 1.25rem;
 			}
 		}
 
-		.photos-cards__metadata { // <div>
+		.photos-cards__list { // <ul>
+			list-style: none;
+			margin: {
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+			}
 			padding: {
 				top: 0;
-				right: 15px;
-				bottom: 15px;
-				left: 15px;
+				right: 0;
+				bottom: 0;
+				left: 0;
 			}
+			font-size: 0.90rem;
 
-			.photos-cards__title-2 { // <h3>
+			.photos-cards__list-item:nth-of-type(2) { // <li>
 				margin: {
 					top: 0;
 					right: 0;
-					bottom: 20px;
+					bottom: 10px;
 					left: 0;
-				}
-				font: {
-					size: 1.25rem;
 				}
 			}
 
-			.photos-cards__list { // <ul>
-				list-style: none;
+			.photos-cards__list-item:nth-of-type(6) { // <li>
 				margin: {
 					top: 0;
 					right: 0;
-					bottom: 0;
+					bottom: 10px;
 					left: 0;
-				}
-				padding: {
-					top: 0;
-					right: 0;
-					bottom: 0;
-					left: 0;
-				}
-				font-size: 0.90rem;
-
-				.photos-cards__list-item:nth-of-type(2) { // <li>
-					margin: {
-						top: 0;
-						right: 0;
-						bottom: 10px;
-						left: 0;
-					}
-				}
-
-				.photos-cards__list-item:nth-of-type(6) { // <li>
-					margin: {
-						top: 0;
-						right: 0;
-						bottom: 10px;
-						left: 0;
-					}
 				}
 			}
 		}
 	}
+}
 
-	.photos-cards__card:last-child { // <div>
-		margin: {
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-		}
-		@media (orientation: landscape) {
-			margin: {
-				top: 0;
-				right: auto;
-				bottom: 0;
-				left: auto;
-			}
-		}
+.photos-cards__card:last-child { // <div>
+	margin: {
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
 	}
 }

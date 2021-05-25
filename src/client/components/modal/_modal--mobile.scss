@@ -2,76 +2,58 @@
 // Started on July 2020
 // By Arnaud De Baerdemaeker
 
-@media screen {
-	.modal { // <div>
-		position: fixed;
-		top: 0;
-		left: 0;
-		display: grid;
-		width: 100vw;
-		height: 100vh;
-		@media (orientation: landscape) {
-			height: calc(100vh - 60px);
-		}
-		background-color: rgb(50, 50, 50);
+.modal { // <div>
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: grid;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgb(50, 50, 50);
 
-		.modal__image-container { // <figure>
-			margin: {
+	.modal__image-container { // <figure>
+		margin: {
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+		align-self: center;
+
+		.modal__image { // <img>
+			width: 100%;
+		}
+
+		.modal__caption { // <figcaption>
+			font-size: 0.75rem;
+			color: rgb(255, 255, 255);
+			font-style: italic;
+			text-align: right;
+			padding: {
 				top: 0;
-				right: 0;
+				right: 15px;
 				bottom: 0;
 				left: 0;
 			}
-			align-self: center;
-			@media (orientation: landscape) {
-				height: inherit;
-				text-align: center;
-			}
-
-			.modal__image { // <img>
-				width: 100%;
-			}
-
-			.modal__caption { // <figcaption>
-				font-size: 0.75rem;
-				color: rgb(255, 255, 255);
-				font-style: italic;
-				text-align: right;
-				padding: {
-					top: 0;
-					right: 15px;
-					bottom: 0;
-					left: 0;
-				}
-				@media (orientation: landscape) {
-					position: absolute;
-					right: 0;
-					bottom: 5px;
-				}
-			}
 		}
 	}
+}
 
-	.modal__close { // <div>
-		width: 40px;
-		height: 40px;
-		position: absolute;
-		bottom: 90px;
-		justify-self: center;
-		margin: {
-			top: 0;
-			right: auto;
-			bottom: 0;
-			left: auto;
-		}
-		cursor: pointer;
-		@media (orientation: landscape) {
-			top: 15px;
-			right: 15px;
-		}
+.modal__close { // <div>
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	bottom: 90px;
+	justify-self: center;
+	margin: {
+		top: 0;
+		right: auto;
+		bottom: 0;
+		left: auto;
+	}
+	cursor: pointer;
 
-		.modal__close-icon { // <img>
-			width: 100%;
-		}
+	.modal__close-icon { // <img>
+		width: 100%;
 	}
 }

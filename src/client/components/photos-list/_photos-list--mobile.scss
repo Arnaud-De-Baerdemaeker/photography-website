@@ -2,47 +2,37 @@
 // Started on July 2020
 // By Arnaud De Baerdemaeker
 
-@media screen and (orientation: portrait) {
-	.photos-list { // <div>
-		.photos-list__title-container { // <div>
+.photos-list { // <div>
+	.photos-list__title-container { // <div>
+		margin: {
+			top: 0;
+			right: 0;
+			bottom: 40px;
+			left: 0;
+		}
+
+		.photos-list__title-1 { // <h2>
 			margin: {
 				top: 0;
 				right: 0;
-				bottom: 40px;
+				bottom: 0;
 				left: 0;
 			}
-
-			.photos-list__title-1 { // <h2>
-				margin: {
-					top: 0;
-					right: 0;
-					bottom: 0;
-					left: 0;
-				}
-				font: {
-					family: "Architects_Daughter";
-					size: 3rem;
-				}
-				text-align: center;
+			font: {
+				family: "Architects_Daughter";
+				size: 3rem;
 			}
+			text-align: center;
 		}
+	}
 
-		.photos-list__cards { // <div>
-			background-color: rgb(240, 240, 240);
-			padding: {
-				top: 30px;
-				right: 15px;
-				bottom: 30px;
-				left: 15px;
-			}
-			@media (orientation: landscape) {
-				padding: {
-					top: 30px;
-					right: 0;
-					bottom: 30px;
-					left: 0;
-				}
-			}
+	.photos-list__cards { // <div>
+		background-color: rgb(240, 240, 240);
+		padding: {
+			top: 30px;
+			right: 15px;
+			bottom: 30px;
+			left: 15px;
 		}
 	}
 }

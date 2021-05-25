@@ -2,64 +2,46 @@
 // Started on July 2020
 // By Arnaud De Baerdemaeker
 
-@media screen {
-	.gallery__list-item { // <li>
-		position: relative;
-		margin: {
+.gallery__list-item { // <li>
+	position: relative;
+	margin: {
+		top: 0;
+		right: 0;
+		bottom: 40px;
+		left: 0;
+	}
+	width: 100%;
+
+	.gallery__link { // <a>
+		display: block;
+		text-decoration: none;
+		color: rgb(255, 255, 255);
+
+		.gallery__thumbnail { // <img>
+			width: 100%;
+			height: inherit;
+			filter: brightness(50%) blur(4px);
+			vertical-align: middle;
+		}
+
+		.gallery__year { // <span>
+			display: flex;
+			width: 100%;
+			height: 100%;
+			position: absolute;
 			top: 0;
-			right: 0;
-			bottom: 40px;
-			left: 0;
-		}
-		width: 100%;
-		@media (min-width: 800px) {
-			margin: {
-				top: 0;
-				right: 0;
-				bottom: 80px;
-				left: 0;
-			}
-		}
-		@media (orientation: landscape) {
-			margin: {
-				top: 0;
-				right: auto;
-				bottom: 40px;
-				left: auto;
-			}
-		}
-
-		.gallery__link { // <a>
-			display: block;
-			text-decoration: none;
-			color: rgb(255, 255, 255);
-
-			.gallery__thumbnail { // <img>
-				width: 100%;
-				height: inherit;
-				filter: brightness(50%) blur(4px);
-				vertical-align: middle;
-			}
-
-			.gallery__year { // <span>
-				display: flex;
-				width: 100%;
-				height: 100%;
-				position: absolute;
-				top: 0;
-				font-size: 3rem;
-				justify-content: center;
-				align-items: center;
-			}
+			font-size: 3rem;
+			justify-content: center;
+			align-items: center;
 		}
 	}
+}
 
-	.gallery__list-item:last-of-type { // <li>
-		margin: {
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-		}
+.gallery__list-item:last-of-type { // <li>
+	margin: {
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
 	}
 }
