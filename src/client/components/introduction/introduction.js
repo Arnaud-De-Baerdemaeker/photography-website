@@ -11,12 +11,12 @@ class Introduction extends Component {
 
         for (
             let i = 0;
-            i < this.props.galleryInputs.introduction.phrases.length;
+            i < this.props.inputs.introduction.phrases.length;
             i++
         ) {
             introduction.push(
                 <p key={i} className={"introduction__paragraph"}>
-                    {this.props.galleryInputs.introduction.phrases[i]}
+                    {this.props.inputs.introduction.phrases[i]}
                 </p>,
             );
         }
@@ -24,7 +24,7 @@ class Introduction extends Component {
         return (
             <section className={"introduction__container"}>
                 <h3 className={"introduction__title"}>
-                    {this.props.galleryInputs.introduction.title}
+                    {this.props.inputs.introduction.title}
                 </h3>
                 {introduction}
             </section>
