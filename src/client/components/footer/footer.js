@@ -11,10 +11,10 @@ import {faLinkedin, faGithub} from "@fortawesome/free-brands-svg-icons";
 class Footer extends Component {
     render() {
         return (
-            <footer className={"footer"}>
+            <footer className={"footer container"}>
                 <div className={"footer__left-box"}>
                     <ul className={"footer__links"}>
-                        <li className={"footer__email"}>
+                        <li className={"footer__network"}>
                             <a
                                 href={"mailto:de.baerdemaeker.arnaud@gmail.com"}
                                 className={"footer__link"}>
@@ -22,11 +22,11 @@ class Footer extends Component {
                                     icon={faEnvelope}
                                     alt={"E-mail"}
                                     title={"Contactez-moi"}
-                                    className={"footer__email-icon"}
+                                    className={"footer__icon"}
                                 />
                             </a>
                         </li>
-                        <li className={"footer__linkedin"}>
+                        <li className={"footer__network"}>
                             <a
                                 href={
                                     "https://www.linkedin.com/in/arnaud-de-baerdemaeker/"
@@ -36,11 +36,11 @@ class Footer extends Component {
                                     icon={faLinkedin}
                                     alt={"LinkedIn"}
                                     title={"Mon profil LinkedIn"}
-                                    className={"footer__linkedin-icon"}
+                                    className={"footer__icon"}
                                 />
                             </a>
                         </li>
-                        <li className={"footer__github"}>
+                        <li className={"footer__network"}>
                             <a
                                 href={
                                     "https://github.com/Arnaud-De-Baerdemaeker"
@@ -50,7 +50,7 @@ class Footer extends Component {
                                     icon={faGithub}
                                     alt={"GitHub"}
                                     title={"Mon travail sur GitHub"}
-                                    className={"footer__github-icon"}
+                                    className={"footer__icon"}
                                 />
                             </a>
                         </li>
