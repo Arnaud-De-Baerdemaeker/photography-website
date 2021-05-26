@@ -6,16 +6,4 @@
         justify-content: center;
         align-items: center;
     }
-
-    &__title { // <h2>
-        font-size: 2rem;
-        letter-spacing: 0.625rem;
-        color: $white;
-        margin: {
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-        }
-    }
 }
