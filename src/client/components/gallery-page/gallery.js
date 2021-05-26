@@ -29,7 +29,7 @@ class Gallery extends Component {
                     <MyName />
                     <Header inputs={galleryInputs} />
                     <Introduction inputs={galleryInputs} />
-                    <div className={"gallery__years-container"}>
+                    <div className={"gallery__years-container container"}>
                         <ul className={"gallery__list"}>
                             <Link
                                 link={"/gallery/2014"}
