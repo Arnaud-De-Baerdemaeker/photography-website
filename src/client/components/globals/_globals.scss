@@ -1,0 +1,58 @@
+// Fonts
+$quicksandRegular: "Quicksand--Regular", Arial, Helvetica, sans-serif;
+$comfortaaBold: "Comfortaa--Bold", Arial, Helvetica, sans-serif;
+$zcoolXiaoWeiRegular: "ZCOOLXiaoWei--Regular", Arial, Helvetica, sans-serif;
+$architectsDaughter: "Architects_Daughter--Regular", Arial, Helvetica, sans-serif;
+
+// Colors
+$white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
+$blackTransparent: rgba(0, 0, 0, 0);
+$lightGreen: rgb(163, 177, 138);
+$green: rgb(88, 129, 87);
+$darkGreen: rgb(58, 90, 64);
+$darkGreen2: rgb(52, 78, 65);
+
+// Global settings
+body {
+    font-size: 16px;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: $quicksandRegular;
+}
+
+.container {
+    padding: {
+        top: 0;
+        right: 1.25rem;
+        bottom: 0;
+        left: 1.25rem;
+    }
+}
+
+h2 {
+    font-size: 2rem;
+    letter-spacing: 0.625rem;
+    color: $white;
+    margin: {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+h3 {
+    font: {
+        family: $architectsDaughter;
+        size: 1.5rem;
+    }
+    margin: {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    letter-spacing: 0.063rem;
+    text-align: center;
+}
