@@ -1,13 +1,15 @@
-.header__container { // <header>
-    background-color: $darkGreen;
-    height: 25rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.header {
+    &__container { // <header>
+        background-color: $darkGreen;
+        height: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     &__title { // <h2>
-        font-size: 5.5rem;
-        letter-spacing: 1rem;
+        font-size: 2rem;
+        letter-spacing: 0.625rem;
         color: $white;
         margin: {
             top: 0;
