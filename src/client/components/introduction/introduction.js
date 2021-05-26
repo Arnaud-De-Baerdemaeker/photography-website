@@ -22,7 +22,7 @@ class Introduction extends Component {
         }
 
         return (
-            <section className={"introduction__container"}>
+            <section className={"introduction__container container"}>
                 <h3 className={"introduction__title"}>
                     {this.props.inputs.introduction.title}
                 </h3>
