@@ -3,75 +3,85 @@
 // By Arnaud De Baerdemaeker
 
 .footer { // <footer>
-	height: 190px;
-	background-color: rgb(50, 50, 50);
+	height: 14rem;
+	background-color: $darkGreen2;
+	margin: {
+		top: 5rem;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
 	padding: {
-		top: 40px;
-		right: 15px;
-		bottom: 15px;
-		left: 15px;
+		top: 1.25rem;
 	}
 
-	.footer__left-box { // <div>
-		margin-bottom: 30px;
+	&__left-box { // <div>
+		height: 2.75rem;
+	}
 
-		.footer__links { // <ul>
-			margin: {
-				top: 0;
-				right: 0;
-				bottom: 0;
-				left: 0;
-			}
-			padding: {
-				top: 15px;
-				right: 0;
-				bottom: 15px;
-				left: 0;
-			}
-			list-style-type: none;
-			display: grid;
-			grid-template-columns: 1fr 1fr 1fr;
-			justify-items: center;
-			border-top: {
+	&__links { // <ul>
+		margin: {
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+		padding: {
+			top: 1rem;
+			right: 0;
+			bottom: 1rem;
+			left: 0;
+		}
+		border: {
+			top: {
 				style: solid;
-				width: 1px;
-				color: rgb(255, 255, 255);
+				width: 0.063rem;
+				color: $white;
 			}
-			border-bottom: {
+			bottom: {
 				style: solid;
-				width: 1px;
-				color: rgb(255, 255, 255);
+				width: 0.063rem;
+				color: $white;
 			}
+		}
+		list-style-type: none;
+		display: flex;
+		justify-content: space-evenly;
+	}
 
-			.footer__email, .footer__linkedin, .footer__github { // <li>
-				.footer__link { // <a>
-					display: flex;
-					align-items: center;
+	&__network { // <li>
+	}
 
-					.footer__email-icon, .footer__linkedin-icon, .footer__github-icon { // <svg>
-						width: 100%;
-						height: 25px;
-						color: rgb(255, 255, 255);
-					}
-				}
-			}
+	&__link { // <a>
+		display: block;
+	}
+
+	&__icon { // <svg>
+		font-size: 1.5rem;
+		color: $white;
+	}
+
+	&__right-box { // <div>
+		margin: {
+			top: 3rem;
+			right: 0;
+			bottom: 0;
+			left: 0;
 		}
 	}
 
-	.footer__right-box { // <div>
-		.footer__credits { // <p>
-			margin: {
-				top: 0;
-				right: 0;
-				bottom: 0;
-				left: 0;
-			}
-			font: {
-				family: "Quicksand-Regular";
-				size: 0.8rem;
-			}
-			color: rgb(255, 255, 255);
-			text-align: center;
+	&__credits { // <p>
+		margin: {
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
 		}
+		font: {
+			family: $quicksandRegular;
+			size: 0.8rem;
+		}
+		color: rgb(255, 255, 255);
+		text-align: center;
 	}
 }
