@@ -8,8 +8,17 @@ import {NavLink} from "react-router-dom";
 
 class Navigation extends Component {
     render() {
+        const location = window.location.toString();
+        // Change target's value when the website goes online
+        const target = "http://localhost:8080/";
+
         return (
-            <nav className={"menu__container"}>
+            <nav
+                className={
+                    location === target
+                        ? "menu__container--home-page"
+                        : "menu__container--other-pages"
+                }>
                 <ul className={"menu__list"}>
                     <li className={"menu__list-item"}>
                         <NavLink
@@ -19,7 +28,7 @@ class Navigation extends Component {
                             // Class name that is active only when the page is active
                             activeClassName={"menu__link--active"}
                             className={"menu__link"}>
-                            {"ACCUEIL"}
+                            <i className={"material-icons"}>{"home"}</i>
                         </NavLink>
                     </li>
                     <li className={"menu__list-item"}>
@@ -28,7 +37,9 @@ class Navigation extends Component {
                             // Class name that is active only when the page is active
                             activeClassName={"menu__link--active"}
                             className={"menu__link"}>
-                            {"GALERIE"}
+                            <i className={"material-icons"}>
+                                {"photo_library"}
+                            </i>
                         </NavLink>
                     </li>
                     <li className={"menu__list-item"}>
@@ -37,7 +48,7 @@ class Navigation extends Component {
                             // Class name that is active only when the page is active
                             activeClassName={"menu__link--active"}
                             className={"menu__link"}>
-                            {"À PROPOS"}
+                            <i className={"material-icons"}>{"person"}</i>
                         </NavLink>
                     </li>
                 </ul>
