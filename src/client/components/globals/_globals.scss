@@ -32,9 +32,13 @@ body {
 }
 
 .material-icons { // <i>
+    color: $white;
 }
 
 h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 2rem;
     letter-spacing: 0.625rem;
     color: $white;
@@ -44,6 +48,7 @@ h2 {
         bottom: 0;
         left: 0;
     }
+    height: 10rem;
 }
 
 h3 {
