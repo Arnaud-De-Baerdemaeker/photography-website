@@ -6,7 +6,6 @@ import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
 import Navigation from "../navigation/navigation";
 import Footer from "../footer/footer";
-import MyName from "../my-name/my-name";
 import Header from "../header/header";
 import Introduction from "../introduction/introduction";
 import {galleryInputs} from "../../constants/constants";
@@ -24,10 +23,9 @@ class Gallery extends Component {
     render() {
         return (
             <>
+                <Header inputs={galleryInputs} />
                 <Navigation />
-                <div className={"gallery"}>
-                    <MyName />
-                    <Header inputs={galleryInputs} />
+                <main className={"gallery"}>
                     <Introduction inputs={galleryInputs} />
                     <div className={"gallery__years-container container"}>
                         <ul className={"gallery__list"}>
@@ -81,7 +79,7 @@ class Gallery extends Component {
                             />
                         </ul>
                     </div>
-                </div>
+                </main>
                 <Footer />
             </>
         );
