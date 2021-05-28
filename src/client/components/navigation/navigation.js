@@ -10,7 +10,7 @@ class Navigation extends Component {
     render() {
         const location = window.location.toString();
         // Change target's value when the website goes online
-        const target = "http://localhost:8080/";
+        const target = "http://192.168.0.10:8080/";
 
         return (
             <nav
