@@ -14,9 +14,9 @@
 	padding: {
 		top: 1.25rem;
 	}
+	box-shadow: 0 0 0.625rem $blackHalfTransparent;
 
 	&__left-box { // <div>
-		height: 2.75rem;
 	}
 
 	&__links { // <ul>
@@ -50,6 +50,7 @@
 	}
 
 	&__network { // <li>
+		height: 1.5rem;
 	}
 
 	&__link { // <a>
@@ -57,13 +58,13 @@
 	}
 
 	&__icon { // <svg>
-		font-size: 1.5rem;
 		color: $white;
+		font-size: 1.5rem;
 	}
 
 	&__right-box { // <div>
 		margin: {
-			top: 3rem;
+			top: 2.5rem;
 			right: 0;
 			bottom: 0;
 			left: 0;
