@@ -9,9 +9,10 @@ class Header extends Component {
     render() {
         return (
             <header className={"header__container"}>
-                <h2 className={"header__title"}>
-                    {this.props.inputs.headerTitle}
-                </h2>
+                <h1 className={"header__main-title--other-pages"}>
+                    {"Arnaud De Baerdemaeker"}
+                </h1>
+                <h2>{this.props.inputs.headerTitle}</h2>
             </header>
         );
     }
