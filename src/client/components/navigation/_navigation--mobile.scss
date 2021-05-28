@@ -17,7 +17,7 @@
 		&--other-pages {
 			@extend .menu__container;
 			background-color: $darkGreen2;
-			box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+			box-shadow: 0 0 0.625rem $blackHalfTransparent;
 		}
 	}
 
