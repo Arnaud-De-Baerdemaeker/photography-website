@@ -27,4 +27,20 @@
         height: 3rem;
         line-height: 3rem;
     }
+
+    &__title { // <h2>
+        height: 10rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__subtitle { // <h3>
+        font: {
+            family: $quicksandRegular;
+            size: 1.75rem;
+        }
+        color: $white;
+    }
 }
