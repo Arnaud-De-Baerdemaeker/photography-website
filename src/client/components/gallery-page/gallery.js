@@ -7,26 +7,45 @@ import {hot} from "react-hot-loader/root";
 import Navigation from "../navigation/navigation";
 import Footer from "../footer/footer";
 import Header from "../header/header";
-import Introduction from "../introduction/introduction";
-import {galleryInputs} from "../../constants/constants";
+//import Introduction from "../introduction/introduction";
+import {galleryPageInputs} from "../../constants/constants";
 import Link from "../link/link";
 
 class Gallery extends Component {
-    componentDidMount() {
+    render() {
         // The condition checks the value of the scroll
         if (window.scrollY !== 0) {
             // If the scroll is different than 0, it sets the view to the top
             window.scrollTo(0, 0);
         }
-    }
 
-    render() {
+        const introductionSection = [];
+
+        for (let i = 0; i < galleryPageInputs.sections.length; i++) {
+            introductionSection.push(
+                <h3 className={"introduction__title"}>
+                    {galleryPageInputs.sections[i].title}
+                </h3>,
+            );
+            if ("phrases" in galleryPageInputs.sections[i]) {
+                for (const paragraph of galleryPageInputs.sections[i].phrases) {
+                    introductionSection.push(
+                        <p className={"introduction__paragraph"}>
+                            {paragraph}
+                        </p>,
+                    );
+                }
+            }
+        }
+
         return (
             <>
-                <Header inputs={galleryInputs} />
+                <Header headerTitle={galleryPageInputs.headerTitle} />
                 <Navigation />
                 <main className={"gallery"}>
-                    <Introduction inputs={galleryInputs} />
+                    <section className={"container"}>
+                        {introductionSection}
+                    </section>
                     <div className={"gallery__years-container container"}>
                         <ul className={"gallery__list"}>
                             <Link
