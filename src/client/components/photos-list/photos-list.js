@@ -4,20 +4,13 @@
 
 import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
-import Header from "../navigation/navigation";
+import Header from "../header/header";
 import Footer from "../footer/footer";
-import MyName from "../my-name/my-name";
 import PhotosCards from "../photos-cards/photos-cards";
+import {galleryPageInputs} from "../../constants/constants";
+import Navigation from "../navigation/navigation";
 
 class PhotosList extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            // create an array
-            card: [],
-        };
-    }
-
     render() {
         // The condition checks if the value of the scroll is different than 0.
         if (window.scrollY !== 0) {
@@ -25,10 +18,12 @@ class PhotosList extends Component {
             window.scrollTo(0, 0);
         }
 
+        const cards = [];
+
         // The loop goes on following the number of entries in the metadata.json file
         for (let i = 0; i < this.props.album.photos.length; i++) {
             // For each loop, an iteration of the <PhotoCards> component is created with, each time, different props. Then, the iteration is pushed in the array.
-            this.state.card.push(
+            cards.push(
                 <PhotosCards
                     key={i}
                     full_image={this.props.album.photos[i].full_image}
@@ -54,18 +49,12 @@ class PhotosList extends Component {
 
         return (
             <>
-                <Header />
-                <div className={"photos-list"}>
-                    <MyName />
-                    <div className={"photos-list__title-container"}>
-                        <h2 className={"photos-list__title-1"}>
-                            {this.props.album.title}
-                        </h2>
-                    </div>
-                    <div className={"photos-list__cards"}>
-                        {this.state.card}
-                    </div>
-                </div>
+                <Header
+                    headerTitle={galleryPageInputs.headerTitle}
+                    headerSubtitle={this.props.album.title}
+                />
+                <Navigation />
+                <main className={"photos-list container"}>{cards}</main>
                 <Footer />
             </>
         );
