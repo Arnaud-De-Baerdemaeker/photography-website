@@ -2,8 +2,15 @@
 // Started on July 2020
 // By Arnaud De Baerdemaeker
 
-.gallery { // <div>
-	.gallery__years-container { // <div>
+.gallery { // <main>
+	margin: {
+		top: 5rem;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+
+	&__years-container { // <div>
 		margin: {
 			top: 5rem;
 			right: 0;
@@ -12,7 +19,7 @@
 		}
 	}
 
-	.gallery__list { // <ul>
+	&__list { // <ul>
 		margin: {
 			top: 0;
 			right: 0;
