@@ -12,7 +12,7 @@ class Header extends Component {
                 <h1 className={"header__main-title--other-pages"}>
                     {"Arnaud De Baerdemaeker"}
                 </h1>
-                <h2>{this.props.inputs.headerTitle}</h2>
+                <h2>{this.props.headerTitle}</h2>
             </header>
         );
     }
