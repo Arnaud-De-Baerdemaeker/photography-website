@@ -9,7 +9,6 @@ $white: rgb(255, 255, 255);
 $black: rgb(0, 0, 0);
 $blackTransparent: rgba(0, 0, 0, 0);
 $blackHalfTransparent: rgba(0, 0, 0, 0.5);
-$lightGreen: rgb(163, 177, 138);
 $green: rgb(88, 129, 87);
 $darkGreen: rgb(58, 90, 64);
 $darkGreen2: rgb(52, 78, 65);
@@ -24,9 +23,7 @@ body {
 
 .container {
     padding: {
-        top: 0;
         right: 1.25rem;
-        bottom: 0;
         left: 1.25rem;
     }
 }
@@ -36,9 +33,6 @@ body {
 }
 
 h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 2rem;
     letter-spacing: 0.625rem;
     color: $white;
@@ -48,7 +42,6 @@ h2 {
         bottom: 0;
         left: 0;
     }
-    height: 10rem;
 }
 
 h3 {
@@ -63,5 +56,19 @@ h3 {
         left: 0;
     }
     letter-spacing: 0.063rem;
-    text-align: center;
+}
+
+h4 {
+    font: {
+        family: $quicksandRegular;
+        size: 1.75rem;
+    }
+    margin: {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    letter-spacing: 0.063rem;
+    color: $white;
 }
