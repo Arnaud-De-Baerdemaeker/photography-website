@@ -4,7 +4,8 @@
 
 import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
-import Header from "../navigation/navigation";
+import Navigation from "../navigation/navigation";
+import Header from "../header/header";
 import Footer from "../footer/footer";
 //import Introduction from "../introduction/introduction";
 import MyPhoto from "./../../images/moi.png";
@@ -43,19 +44,20 @@ class About extends Component {
         return (
             <>
                 <Header headerTitle={aboutMePageInputs.headerTitle} />
+                <Navigation />
                 <main className={"about"}>
-                    <section className={"introduction__container container"}>
+                    <section className={"container"}>
                         {introductionSection}
                     </section>
-                    <div className={"about-me__my-photo"}>
-                        <figure className={"about-me__image-container"}>
+                    <div className={"about__my-photo container"}>
+                        <figure className={"about__image-container"}>
                             <Image
                                 url={MyPhoto}
                                 alternate_text={"Photo de moi"}
                                 title={"Oui, c'est moi !"}
-                                class={"about-me__image"}
+                                class={"about__image"}
                             />
-                            <figcaption className={"about-me__image-caption"}>
+                            <figcaption className={"about__image-caption"}>
                                 {"C'est moi !"}
                             </figcaption>
                         </figure>
