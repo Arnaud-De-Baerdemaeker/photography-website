@@ -1,6 +1,6 @@
 const galleryPageInputs = {
     headerTitle: "Galerie",
-    section: [
+    sections: [
         {
             title: "Bienvenue dans la galerie !",
             phrases: [
@@ -23,7 +23,7 @@ const aboutMePageInputs = {
             ],
         },
         {
-            title: "Pourquoi le développement web ?",
+            title: "Le développement web",
             phrases: [
                 "J'ai découvert ce domaine un peu par hasard et j'ai été rapidement conquis.",
                 "Aujourd'hui, bien que touche-à-tout, j'affectionne particulièrement le fait de construire des designs, rédiger des lignes de code, admirer leur logique, et les voir prendre vie dans le navigateur.",
@@ -31,7 +31,7 @@ const aboutMePageInputs = {
             ],
         },
         {
-            title: "Pourquoi la photographie ?",
+            title: "La photographie",
             phrases: [
                 "Immortaliser l'instant. Montrer la beauté dans des choses ordinaires. Voilà les choses qui me plaisent dans la photographie.",
                 "La nature sous toutes ses formes et les architectures sont les types de sujets qui m'inspirent le plus.",
@@ -44,7 +44,7 @@ const aboutMePageInputs = {
             ],
         },
         {
-            title: "Mettez-vous à l'aise et découvrez...",
+            title: "Bonne visite !",
         },
     ],
 };
