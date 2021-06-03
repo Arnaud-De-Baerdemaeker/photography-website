@@ -2,118 +2,111 @@
 // Started on July 2020
 // By Arnaud De Baerdemaeker
 
-.photos-cards__card { // <div>
-	margin: {
-		top: 0;
-		right: 0;
-		bottom: 30px;
-		left: 0;
-	}
-	border-radius: 3px;
-	background-color: rgb(255, 255, 255);
-	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-
-	.photos-cards__image-container { // <figure>
-		width: 100%;
+.photos-cards {
+	&__card { // <div>
 		margin: {
 			top: 0;
 			right: 0;
-			bottom: 20px;
+			bottom: 0;
+			left: 0;
+		}
+		border-radius: 0.2rem;
+		box-shadow: 0 0 0.469rem $blackHalfTransparent;
+	}
+
+	&__card:not(:first-child) { // <div>
+		@extend .photos-cards__card;
+		margin: {
+			top: 2rem;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+	}
+
+	&__titles { // <div>
+		padding: {
+			top: 1rem;
+		}
+	}
+
+	&__mainTitle { // <h3>
+		margin: {
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+		color: $darkGreen;
+	}
+
+	&__subtitle { // <h4>
+		color: $black;
+		font: {
+			size: 1rem;
+			weight: normal;
+		}
+	}
+
+	&__image-container { // <figure>
+		width: 100%;
+		margin: {
+			top: 1rem;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+	}
+
+	&__image { // <img>
+		width: 100%;
+	}
+
+	&__caption { // <figcaption>
+		font: {
+			size: 0.75rem;
+			style: italic;
+		}
+		text-align: right;
+		padding: {
+			top: 0;
+			right: 1rem;
+			bottom: 0;
+			left: 1rem;
+		}
+	}
+
+	&__metadata { // <div>
+		margin: {
+			top: 1rem;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+	}
+
+	&__list { // <ul>
+		list-style: none;
+		margin: {
+			top: 0;
+			right: 0;
+			bottom: 0;
 			left: 0;
 		}
 		padding: {
 			top: 0;
-			right: -15px;
+			right: 0;
 			bottom: 0;
-			left: -15px;
-		}
-
-		.photos-cards__image { // <img>
-			width: 100%;
-			border: {
-				top-left-radius: 3px;
-				top-right-radius: 3px;
-				bottom-right-radius: 0;
-				bottom-left-radius: 0;
-			}
-			cursor: pointer;
-		}
-
-		.photos-card__caption { // <figcaption>
-			font-size: 0.75rem;
-			text-align: right;
-			font-style: italic;
-			padding: {
-				top: 0;
-				right: 15px;
-				bottom: 0;
-				left: 0;
-			}
+			left: 0;
 		}
 	}
 
-	.photos-cards__metadata { // <div>
-		padding: {
+	&__list-item:nth-of-type(1), &__list-item:nth-of-type(5) { // <li>
+		margin: {
 			top: 0;
-			right: 15px;
-			bottom: 15px;
-			left: 15px;
+			right: 0;
+			bottom: 1rem;
+			left: 0;
 		}
-
-		.photos-cards__title-2 { // <h3>
-			margin: {
-				top: 0;
-				right: 0;
-				bottom: 20px;
-				left: 0;
-			}
-			font: {
-				size: 1.25rem;
-			}
-		}
-
-		.photos-cards__list { // <ul>
-			list-style: none;
-			margin: {
-				top: 0;
-				right: 0;
-				bottom: 0;
-				left: 0;
-			}
-			padding: {
-				top: 0;
-				right: 0;
-				bottom: 0;
-				left: 0;
-			}
-			font-size: 0.90rem;
-
-			.photos-cards__list-item:nth-of-type(2) { // <li>
-				margin: {
-					top: 0;
-					right: 0;
-					bottom: 10px;
-					left: 0;
-				}
-			}
-
-			.photos-cards__list-item:nth-of-type(6) { // <li>
-				margin: {
-					top: 0;
-					right: 0;
-					bottom: 10px;
-					left: 0;
-				}
-			}
-		}
-	}
-}
-
-.photos-cards__card:last-child { // <div>
-	margin: {
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
 	}
 }
