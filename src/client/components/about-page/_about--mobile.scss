@@ -2,114 +2,43 @@
 // Started on July 2020
 // By Arnaud De Baerdemaeker
 
-.about { //<div>
-	.about-me { //div>
-		.about-me__who-i-am, .about-me__why-photography { // <section>
-			margin: {
-				top: 0;
-				right: 0;
-				bottom: 40px;
-				left: 0;
-			}
-			padding: {
-				top: 0;
-				right: 15px;
-				bottom: 0;
-				left: 15px;
-			}
+.about { // <main>
+	margin: {
+		top: 5rem;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+
+	&__my-photo { // <div>
+		margin: {
+			top: 5rem;
+			right: 0;
+			bottom: 0;
+			left: 0;
 		}
+	}
 
-		.about-me__why-webdesign, .about-me__what-else { // <section>
-			padding: {
-				top: 30px;
-				right: 15px;
-				bottom: 30px;
-				left: 15px;
-			}
-			background-color: rgb(240, 240, 240);
+	&__image-container { // <figure>
+		width: 50%;
+		margin: {
+			top: 0;
+			right: auto;
+			bottom: 0;
+			left: auto;
 		}
+	}
 
-		.about-me__level-2-title { // <h2>
-			margin: {
-				top: 0;
-				right: 0;
-				bottom: 40px;
-				left: 0;
-			}
-			font: {
-				family: "Architects_Daughter";
-				size: 1.5rem;
-			}
+	&__image { // <img>
+		width: 100%;
+	}
+
+	&__image-caption { // <figcaption>
+		font: {
+			family: $quicksandRegular;
+			size: 0.75rem;
+			style: italic;
 		}
-
-		.about-me__paragraph { // <p>
-			margin: {
-				top: 0;
-				right: 0;
-				bottom: 20px;
-				left: 0;
-			}
-		}
-
-		.about-me__last-paragraph { // <p>
-			margin: {
-				top: 0;
-				right: 0;
-				bottom: 0;
-				left: 0;
-			}
-		}
-
-		.about-me__discover { // <h2>
-			margin: {
-				top: 0;
-				right: 0;
-				bottom: 40px;
-				left: 0;
-			}
-			padding: {
-				top: 0;
-				right: 15px;
-				bottom: 0;
-				left: 15px;
-			}
-			font: {
-				family: "Architects_Daughter";
-				size: 1.5rem;
-			}
-		}
-
-		.about-me__my-photo { // <div>
-			background-color: rgb(240, 240, 240);
-			padding: {
-				top: 30px;
-				right: 15px;
-				bottom: 30px;
-				left: 15px;
-			}
-
-			.about-me__image-container { // <figure>
-				width: 40%;
-				margin: {
-					top: 0;
-					right: auto;
-					bottom: 0;
-					left: auto;
-				}
-
-				.about-me__image { // <img>
-					width: 100%;
-				}
-
-				.about-me__image-caption { // <figcaption>
-					font: {
-						family: "Quicksand-Regular", sans-serif;
-						size: 0.75rem;
-						style: italic;
-					}
-					text-align: right;
-				}
-			}
-		}
+		text-align: right;
 	}
 }
