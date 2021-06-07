@@ -26,14 +26,19 @@ class About extends Component {
 
         for (let i = 0; i < aboutMePageInputs.sections.length; i++) {
             introductionSection.push(
-                <h3 className={"introduction__title"}>
+                <h3
+                    key={aboutMePageInputs.sections[i].title}
+                    className={"introduction__title"}>
                     {aboutMePageInputs.sections[i].title}
                 </h3>,
+                <div className={"divider"} />,
             );
             if ("phrases" in aboutMePageInputs.sections[i]) {
                 for (const paragraph of aboutMePageInputs.sections[i].phrases) {
                     introductionSection.push(
-                        <p className={"introduction__paragraph"}>
+                        <p
+                            key={paragraph}
+                            className={"introduction__paragraph"}>
                             {paragraph}
                         </p>,
                     );
@@ -53,7 +58,7 @@ class About extends Component {
                         <figure className={"about__image-container"}>
                             <Image
                                 url={MyPhoto}
-                                alternate_text={"Photo de moi"}
+                                alt={"Photo de moi"}
                                 title={"Oui, c'est moi !"}
                                 class={"about__image"}
                             />
