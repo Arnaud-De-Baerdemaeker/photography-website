@@ -1,4 +1,24 @@
 // Fonts
+@font-face {
+    font-family: "Quicksand--Regular";
+    src: url("fonts/Quicksand/Quicksand-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Comfortaa--Bold";
+    src: url("fonts/Comfortaa/Comfortaa-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "ZCOOLXiaoWei--Regular";
+    src: url("fonts/ZCOOL_XiaoWei/ZCOOLXiaoWei-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Architects_Daughter--Regular";
+    src: url("fonts/Architects_Daughter/ArchitectsDaughter-Regular.ttf") format("truetype");
+}
+
 $quicksandRegular: "Quicksand--Regular", Arial, Helvetica, sans-serif;
 $comfortaaBold: "Comfortaa--Bold", Arial, Helvetica, sans-serif;
 $zcoolXiaoWeiRegular: "ZCOOLXiaoWei--Regular", Arial, Helvetica, sans-serif;
@@ -7,11 +27,18 @@ $architectsDaughter: "Architects_Daughter--Regular", Arial, Helvetica, sans-seri
 // Colors
 $white: rgb(255, 255, 255);
 $black: rgb(0, 0, 0);
+$darkGrey: rgb(50, 50, 50);
 $blackTransparent: rgba(0, 0, 0, 0);
 $blackHalfTransparent: rgba(0, 0, 0, 0.5);
 $green: rgb(88, 129, 87);
 $darkGreen: rgb(58, 90, 64);
 $darkGreen2: rgb(52, 78, 65);
+
+// Breakpoints
+
+
+// Media queries
+
 
 // Global settings
 body {
@@ -72,3 +99,30 @@ h4 {
     letter-spacing: 0.063rem;
     color: $white;
 }
+
+/*
+.divider { // <div>
+    margin: {
+        top: 0.75rem;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    width: 27.5%;
+    border: {
+        top: {
+            style: solid;
+            color: $darkGreen;
+            width: 0.15rem;
+        }
+        bottom: {
+            style: solid;
+            color: $darkGreen;
+            width: 0.15rem;
+        }
+    };
+
+    &:last-of-type { // <div>
+        border: none;
+    }
+}*/
