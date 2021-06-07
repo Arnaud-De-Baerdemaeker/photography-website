@@ -26,8 +26,9 @@ class PhotosList extends Component {
             cards.push(
                 <PhotosCards
                     key={i}
-                    full_image={this.props.album.photos[i].full_image}
-                    thumbnail={this.props.album.photos[i].thumbnail}
+                    sd={this.props.album.photos[i]["576p"]}
+                    hd={this.props.album.photos[i]["1080p"]}
+                    uhd={this.props.album.photos[i]["2160p"]}
                     author={this.props.album.photos[i].author}
                     name={this.props.album.photos[i].name}
                     place={this.props.album.photos[i].place}
