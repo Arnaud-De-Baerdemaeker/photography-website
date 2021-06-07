@@ -8,9 +8,8 @@ class Image extends Component {
         return (
             <LazyLoadImage
                 src={this.props.url}
-                alt={this.props.alternate_text}
+                alt={this.props.alt}
                 title={this.props.title}
-                threshold={100}
                 effect={"blur"}
                 onClick={this.props.onClick}
                 className={this.props.class}
