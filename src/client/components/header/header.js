@@ -11,7 +11,9 @@ class Header extends Component {
 
         if (this.props.headerSubtitle) {
             subtitle.push(
-                <h3 className={"header__subtitle"}>
+                <h3
+                    key={this.props.headerSubtitle}
+                    className={"header__subtitle"}>
                     {this.props.headerSubtitle}
                 </h3>,
             );
