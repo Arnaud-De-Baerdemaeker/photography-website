@@ -5,55 +5,57 @@
 .modal { // <div>
 	position: fixed;
 	top: 0;
+	right: 0;
+	bottom: 0;
 	left: 0;
-	display: grid;
-	width: 100vw;
-	height: 100vh;
-	background-color: rgb(50, 50, 50);
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: $darkGrey;
 
-	.modal__image-container { // <figure>
+	&__image-container { // <figure>
 		margin: {
 			top: 0;
 			right: 0;
 			bottom: 0;
 			left: 0;
 		}
-		align-self: center;
-
-		.modal__image { // <img>
-			width: 100%;
-		}
-
-		.modal__caption { // <figcaption>
-			font-size: 0.75rem;
-			color: rgb(255, 255, 255);
-			font-style: italic;
-			text-align: right;
-			padding: {
-				top: 0;
-				right: 15px;
-				bottom: 0;
-				left: 0;
-			}
-		}
 	}
-}
 
-.modal__close { // <div>
-	width: 40px;
-	height: 40px;
-	position: absolute;
-	bottom: 90px;
-	justify-self: center;
-	margin: {
-		top: 0;
-		right: auto;
-		bottom: 0;
-		left: auto;
-	}
-	cursor: pointer;
-
-	.modal__close-icon { // <img>
+	&__image { // <img>
 		width: 100%;
+	}
+
+	&__caption { // <figcaption>
+		font-size: 0.75rem;
+		color: $white;
+		font-style: italic;
+		text-align: right;
+		padding: {
+			top: 0;
+			right: 1rem;
+			bottom: 0;
+			left: 0;
+		}
+	}
+
+	&__close { // <div>
+		position: absolute;
+		left: calc(50vw - 1.25rem);
+		bottom: 10vh;
+		width: 2.5rem;
+		height: 2.5rem;
+		margin: {
+			top: 0;
+			right: auto;
+			bottom: 0;
+			left: auto;
+		}
+		cursor: pointer;
+
+		.material-icons {
+			font-size: 2.5rem;
+		}
 	}
 }
