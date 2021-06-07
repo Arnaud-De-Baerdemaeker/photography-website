@@ -6,23 +6,14 @@ import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
 import Image from "../image/image";
 import Button from "../button/button.js";
-import Modal from "../modal/modal";
 
 class PhotosCards extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            modalIsOpen: false,
-        };
-        this.handleOnClick = this.handleOnClick.bind(this);
-    }
-
-    // Function that changes the boolean state each time it is called
-    handleOnClick() {
-        this.setState(state => ({modalIsOpen: !state.modalIsOpen}));
-    }
-
     render() {
+        const images = {
+            hd: this.props.hd,
+            uhd: this.props.uhd,
+        };
+
         return (
             <>
                 <div className={"photos-cards__card"}>
@@ -35,10 +26,14 @@ class PhotosCards extends Component {
                         </h4>
                     </div>
                     <figure className={"photos-cards__image-container"}>
-                        <Image
-                            url={this.props.thumbnail}
-                            class={"photos-cards__image"}
-                        />
+                        <picture>
+                            <Image
+                                url={this.props.sd}
+                                alt={this.props.name}
+                                title={this.props.name}
+                                class={"photos-cards__image"}
+                            />
+                        </picture>
                         <figcaption className={"photos-cards__caption"}>
                             {this.props.author}
                         </figcaption>
@@ -65,19 +60,8 @@ class PhotosCards extends Component {
                             </li>
                         </ul>
                     </div>
-                    <Button
-                        // On click, it displays the full image in a modal
-                        onClick={this.handleOnClick}
-                        text={"Voir"}
-                    />
+                    <Button fullImages={images} />
                 </div>
-                {/* Modal that is active only when the user clicks on the thumbnail */}
-                {this.state.modalIsOpen ? (
-                    <Modal
-                        url={this.props.full_image}
-                        onClick={this.handleOnClick}
-                    />
-                ) : null}
             </>
         );
     }
