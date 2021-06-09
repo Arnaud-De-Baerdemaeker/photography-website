@@ -39,5 +39,20 @@
 			bottom: 0;
 			left: 0;
 		}
+		@media #{$mq-500-up} {
+			font: {
+				size: 6.5vw;
+			}
+		}
+		@media #{$mq-700-up} {
+			font: {
+				size: 6vw;
+			}
+		}
+		@media #{$mq-1000-up} {
+			font: {
+				size: 5.5vw;
+			}
+		}
 	}
 }
