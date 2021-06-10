@@ -42,6 +42,7 @@ $bp-w-700: 43.75rem;
 $bp-w-800: 50rem;
 $bp-w-900: 56.25rem;
 $bp-w-1000: 62.5rem;
+$bp-w-1600: 100rem;
 
 // Media queries
 $mq-400-up: "(min-width: #{$bp-w-400})";
@@ -51,6 +52,7 @@ $mq-700-up: "(min-width: #{$bp-w-700})";
 $mq-800-up: "(min-width: #{$bp-w-800})";
 $mq-900-up: "(min-width: #{$bp-w-900})";
 $mq-1000-up: "(min-width: #{$bp-w-1000})";
+$mq-1600-up: "(min-width: #{$bp-w-1600})";
 
 // Global settings
 body {
@@ -69,6 +71,17 @@ body {
 
 .material-icons { // <i>
     color: $white;
+    font-size: 1.5rem;
+    @media #{$mq-800-up} {
+        font: {
+            size: 1.75rem;
+        }
+    }
+    @media #{$mq-1600-up} {
+        font: {
+            size: 2rem;
+        }
+    }
 }
 
 h2 {
