@@ -28,12 +28,19 @@
         line-height: 3rem;
     }
 
-    &__title { // <h2>
+    &__title { // <div>
         height: 10rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        @media #{$mq-600-up} {
+            height: 15rem;
+        }
+        @media #{$mq-1000-up} {
+            align-items: initial;
+            padding-left: 20vw;
+        }
     }
 
     &__subtitle { // <h3>
