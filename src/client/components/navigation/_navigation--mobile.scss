@@ -8,6 +8,12 @@
 		z-index: 1;
 		bottom: 0;
 		height: 3.5rem;
+		@media #{$mq-800-up} {
+			height: 3.75rem;
+		}
+		@media #{$mq-1600-up} {
+			height: 4.5rem;
+		}
 
 		&--home-page {
 			@extend .menu__container;
@@ -52,13 +58,8 @@
 		display: inherit;
 		align-items: center;
 		height: inherit;
-		font: {
-			family: $comfortaaBold;
-			size: 1rem;
-		}
 		text-decoration: none;
 		color: $white;
-		letter-spacing: 0.063rem;
 		-webkit-tap-highlight-color: transparent;
 
 		&--active { // <a>
