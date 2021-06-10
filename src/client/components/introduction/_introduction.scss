@@ -1,4 +1,28 @@
 .introduction {
+    &-container { // <section>
+        padding: {
+            right: 1.25rem;
+            left: 1.25rem;
+        }
+        @media #{$mq-600-up} {
+            padding: unset;
+            max-width: 80vw;
+            margin: {
+                right: auto;
+                left: auto;
+            }
+        }
+        @media #{$mq-700-up} {
+            max-width: 70vw;
+        }
+        @media #{$mq-800-up} {
+            max-width: 60vw;
+        }
+        @media #{$mq-900-up} {
+            max-width: 50vw;
+        }
+    }
+
     &__title { // <h3>
         color: $darkGreen;
     }
