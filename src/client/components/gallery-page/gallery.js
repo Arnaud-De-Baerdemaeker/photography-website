@@ -48,10 +48,10 @@ class Gallery extends Component {
                 <Header headerTitle={galleryPageInputs.headerTitle} />
                 <Navigation />
                 <main className={"gallery"}>
-                    <section className={"container"}>
+                    <section className={"introduction-container"}>
                         {introductionSection}
                     </section>
-                    <div className={"gallery__years-container container"}>
+                    <div className={"gallery__years-container"}>
                         <ul className={"gallery__list"}>
                             <Link
                                 link={"/gallery/2014"}
