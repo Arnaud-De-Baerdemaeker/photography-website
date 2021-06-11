@@ -55,7 +55,7 @@ class PhotosList extends Component {
                     headerSubtitle={this.props.album.title}
                 />
                 <Navigation />
-                <main className={"photos-list container"}>{cards}</main>
+                <main className={"photos-list"}>{cards}</main>
                 <Footer />
             </>
         );
