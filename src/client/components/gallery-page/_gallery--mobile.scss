@@ -3,19 +3,33 @@
 // By Arnaud De Baerdemaeker
 
 .gallery { // <main>
-	margin: {
-		top: 5rem;
-		right: 0;
-		bottom: 0;
-		left: 0;
-	}
+	margin-top: 5rem;
 
 	&__years-container { // <div>
-		margin: {
-			top: 5rem;
-			right: 0;
-			bottom: 0;
-			left: 0;
+		margin-top: 5rem;
+		padding: {
+			right: 1.25rem;
+			left: 1.25rem;
+		}
+		@media #{$mq-600-up} {
+			padding: unset;
+			max-width: 80vw;
+			margin: {
+				right: auto;
+				left: auto;
+			}
+		}
+		@media #{$mq-700-up} {
+			max-width: 70vw;
+		}
+		@media #{$mq-800-up} {
+			max-width: unset;
+			padding: {
+				right: 4rem;
+				left: 4rem;
+			}
+		}
+		@media #{$mq-1200-up} {
 		}
 	}
 
@@ -33,5 +47,13 @@
 			left: 0;
 		}
 		list-style: none;
+		@media #{$mq-800-up} {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 2rem;
+		}
+		@media #{$mq-1200-up} {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
 	}
 }
