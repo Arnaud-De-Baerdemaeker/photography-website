@@ -14,6 +14,9 @@
 			bottom: 0;
 			left: 0;
 		}
+		@media #{$mq-800-up} {
+			margin: unset;
+		}
 	}
 
 	&__link { // <a>
