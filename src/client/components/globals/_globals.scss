@@ -45,6 +45,7 @@ $bp-w-1000: 62.5rem;
 $bp-w-1200: 75rem;
 $bp-w-1500: 93.75rem;
 $bp-w-1600: 100rem;
+$bp-w-1800: 112.5rem;
 
 // Media queries
 $mq-400-up: "(min-width: #{$bp-w-400})";
@@ -57,6 +58,7 @@ $mq-1000-up: "(min-width: #{$bp-w-1000})";
 $mq-1200-up: "(min-width: #{$bp-w-1200})";
 $mq-1500-up: "(min-width: #{$bp-w-1500})";
 $mq-1600-up: "(min-width: #{$bp-w-1600})";
+$mq-1800-up: "(min-width: #{$bp-w-1800})";
 
 // Global settings
 body {
