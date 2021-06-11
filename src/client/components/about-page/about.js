@@ -51,10 +51,10 @@ class About extends Component {
                 <Header headerTitle={aboutMePageInputs.headerTitle} />
                 <Navigation />
                 <main className={"about"}>
-                    <section className={"container"}>
+                    <section className={"introduction-container"}>
                         {introductionSection}
                     </section>
-                    <div className={"about__my-photo container"}>
+                    <div className={"about__my-photo"}>
                         <figure className={"about__image-container"}>
                             <Image
                                 url={MyPhoto}
