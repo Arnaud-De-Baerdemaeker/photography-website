@@ -55,5 +55,8 @@
 		@media #{$mq-1200-up} {
 			grid-template-columns: 1fr 1fr 1fr;
 		}
+		@media #{$mq-1800-up} {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
 	}
 }

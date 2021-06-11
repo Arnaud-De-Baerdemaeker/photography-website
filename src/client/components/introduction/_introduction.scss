@@ -21,6 +21,9 @@
         @media #{$mq-900-up} {
             max-width: 50vw;
         }
+        @media #{$mq-1500-up} {
+            width: 56.25rem;
+        }
     }
 
     &__title { // <h3>
