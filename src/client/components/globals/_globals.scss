@@ -42,6 +42,8 @@ $bp-w-700: 43.75rem;
 $bp-w-800: 50rem;
 $bp-w-900: 56.25rem;
 $bp-w-1000: 62.5rem;
+$bp-w-1200: 75rem;
+$bp-w-1500: 93.75rem;
 $bp-w-1600: 100rem;
 
 // Media queries
@@ -52,6 +54,8 @@ $mq-700-up: "(min-width: #{$bp-w-700})";
 $mq-800-up: "(min-width: #{$bp-w-800})";
 $mq-900-up: "(min-width: #{$bp-w-900})";
 $mq-1000-up: "(min-width: #{$bp-w-1000})";
+$mq-1200-up: "(min-width: #{$bp-w-1200})";
+$mq-1500-up: "(min-width: #{$bp-w-1500})";
 $mq-1600-up: "(min-width: #{$bp-w-1600})";
 
 // Global settings
@@ -60,13 +64,6 @@ body {
     margin: 0;
     box-sizing: border-box;
     font-family: $quicksandRegular;
-}
-
-.container {
-    padding: {
-        right: 1.25rem;
-        left: 1.25rem;
-    }
 }
 
 .material-icons { // <i>
