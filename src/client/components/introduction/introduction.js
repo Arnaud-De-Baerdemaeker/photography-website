@@ -8,7 +8,7 @@ import {hot} from "react-hot-loader/root";
 class Introduction extends Component {
     render() {
         return (
-            <section className={"introduction__container container"}>
+            <section className={"introduction__container"}>
                 <h3 className={"introduction__title"}>{}</h3>
                 <p className={"introduction__paragraph"}>{}</p>
             </section>
