@@ -15,8 +15,29 @@
 		top: 1.25rem;
 	}
 	box-shadow: 0 0 0.625rem $blackHalfTransparent;
+	@media #{$mq-800-up} {
+		height: 14.25rem;
+	}
+	@media #{$mq-1600-up} {
+		height: 15rem;
+	}
 
 	&__left-box { // <div>
+		padding: {
+			right: 1.25rem;
+			left: 1.25rem;
+		}
+		@media #{$mq-800-up} {
+			padding: unset;
+			max-width: 70vw;
+			margin: {
+				right: auto;
+				left: auto;
+			}
+		}
+		@media #{$mq-1500-up} {
+			max-width: 60vw;
+		}
 	}
 
 	&__links { // <ul>
