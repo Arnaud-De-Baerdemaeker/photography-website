@@ -5,10 +5,8 @@
 .photos-cards {
 	&__card { // <div>
 		margin: {
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
+			right: 1.25rem;
+			left: 1.25rem;
 		}
 		border-radius: 0.2rem;
 		box-shadow: 0 0 0.469rem $blackHalfTransparent;
@@ -16,17 +14,14 @@
 
 	&__card:not(:first-child) { // <div>
 		@extend .photos-cards__card;
-		margin: {
-			top: 2rem;
-			right: 0;
-			bottom: 0;
-			left: 0;
-		}
+		margin-top: 2rem;
 	}
 
 	&__titles { // <div>
 		padding: {
 			top: 1rem;
+			right: 1rem;
+			left: 1rem;
 		}
 	}
 
@@ -38,6 +33,7 @@
 			left: 0;
 		}
 		color: $darkGreen;
+		letter-spacing: unset;
 	}
 
 	&__subtitle { // <h4>
@@ -46,6 +42,7 @@
 			size: 1rem;
 			weight: normal;
 		}
+		letter-spacing: unset;
 	}
 
 	&__image-container { // <figure>
@@ -69,19 +66,16 @@
 		}
 		text-align: right;
 		padding: {
-			top: 0;
 			right: 1rem;
-			bottom: 0;
 			left: 1rem;
 		}
 	}
 
 	&__metadata { // <div>
-		margin: {
-			top: 1rem;
-			right: 0;
-			bottom: 0;
-			left: 0;
+		margin-top: 1rem;
+		padding: {
+			right: 1rem;
+			left: 1rem;
 		}
 	}
 
@@ -102,11 +96,6 @@
 	}
 
 	&__list-item:nth-of-type(1), &__list-item:nth-of-type(5) { // <li>
-		margin: {
-			top: 0;
-			right: 0;
-			bottom: 1rem;
-			left: 0;
-		}
+		margin-bottom: 1rem;
 	}
 }
