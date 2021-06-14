@@ -16,7 +16,7 @@ class Navigation extends Component {
             <nav
                 className={
                     location === target
-                        ? "menu__container--home-page"
+                        ? "menu__container--homepage"
                         : "menu__container--other-pages"
                 }>
                 <ul className={"menu__list"}>

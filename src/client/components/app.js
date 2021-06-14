@@ -6,7 +6,7 @@ import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 import {Helmet} from "react-helmet";
-import HomePage from "./home-page/home";
+import HomePage from "./homepage/home";
 import Gallery from "./gallery-page/gallery";
 import About from "./about-page/about";
 import PhotosList from "./photos-list/photos-list";
