@@ -60,6 +60,19 @@ $mq-1500-up: "(min-width: #{$bp-w-1500})";
 $mq-1600-up: "(min-width: #{$bp-w-1600})";
 $mq-1800-up: "(min-width: #{$bp-w-1800})";
 
+// Keyframes
+@keyframes pulse {
+    0% {
+        transform: initial;
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: initial;
+    }
+}
+
 // Global settings
 body {
     font-size: 16px;
@@ -71,11 +84,19 @@ body {
 .material-icons { // <i>
     color: $white;
     font-size: 1.5rem;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
     @media #{$mq-800-up} {
         font-size: 1.75rem;
     }
     @media #{$mq-1600-up} {
         font-size: 2rem;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            animation-name: pulse;
+        }
     }
 }
 
