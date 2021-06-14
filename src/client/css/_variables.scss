@@ -1,0 +1,41 @@
+// Fonts
+$quicksandRegular: "Quicksand--Regular", Arial, Helvetica, sans-serif;
+$comfortaaBold: "Comfortaa--Bold", Arial, Helvetica, sans-serif;
+$zcoolXiaoWeiRegular: "ZCOOLXiaoWei--Regular", Arial, Helvetica, sans-serif;
+$architectsDaughter: "Architects_Daughter--Regular", Arial, Helvetica, sans-serif;
+
+// Colors
+$white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
+$darkGrey: rgb(50, 50, 50);
+$blackTransparent: rgba(0, 0, 0, 0);
+$blackHalfTransparent: rgba(0, 0, 0, 0.5);
+$green: rgb(88, 129, 87);
+$darkGreen: rgb(58, 90, 64);
+$darkGreen2: rgb(52, 78, 65);
+
+// Breakpoints
+$bp-w-400: 25rem;
+$bp-w-500: 31.25rem;
+$bp-w-600: 37.5rem;
+$bp-w-700: 43.75rem;
+$bp-w-800: 50rem;
+$bp-w-900: 56.25rem;
+$bp-w-1000: 62.5rem;
+$bp-w-1200: 75rem;
+$bp-w-1500: 93.75rem;
+$bp-w-1600: 100rem;
+$bp-w-1800: 112.5rem;
+
+// Media queries
+$mq-400-up: "(min-width: #{$bp-w-400})";
+$mq-500-up: "(min-width: #{$bp-w-500})";
+$mq-600-up: "(min-width: #{$bp-w-600})";
+$mq-700-up: "(min-width: #{$bp-w-700})";
+$mq-800-up: "(min-width: #{$bp-w-800})";
+$mq-900-up: "(min-width: #{$bp-w-900})";
+$mq-1000-up: "(min-width: #{$bp-w-1000})";
+$mq-1200-up: "(min-width: #{$bp-w-1200})";
+$mq-1500-up: "(min-width: #{$bp-w-1500})";
+$mq-1600-up: "(min-width: #{$bp-w-1600})";
+$mq-1800-up: "(min-width: #{$bp-w-1800})";

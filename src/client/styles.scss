@@ -4,17 +4,20 @@
 
 @import
 	"~material-design-icons/iconfont/material-icons.css",
-	"components/globals/globals",
-	"components/home-page/home--mobile",
-	"components/navigation/navigation--mobile",
-	"components/header/header--mobile",
+	"css/fonts",
+	"css/variables",
+	"css/keyframes",
+	"css/global-styles",
+	"components/homepage/homepage",
+	"components/navigation/navigation",
+	"components/header/header",
 	"components/introduction/introduction",
-	"components/gallery-page/gallery--mobile",
-	"components/link/link--mobile",
-	"components/photos-list/photos-list--mobile",
-	"components/photos-cards/photos-cards--mobile",
-	"components/modal/modal--mobile",
-	"components/button/button--mobile.scss",
-	"components/about-page/about--mobile",
-	"components/footer/footer--mobile"
+	"components/gallery-page/gallery",
+	"components/link/link",
+	"components/photos-list/photos-list",
+	"components/photos-cards/photos-cards",
+	"components/modal/modal",
+	"components/button/button",
+	"components/about-page/about",
+	"components/footer/footer"
 ;
