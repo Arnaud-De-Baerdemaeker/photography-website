@@ -9,19 +9,11 @@ body {
 .material-icons { // <i>
     color: $white;
     font-size: 1.5rem;
-    animation-iteration-count: infinite;
-    animation-duration: 1s;
     @media #{$mq-800-up} {
         font-size: 1.75rem;
     }
     @media #{$mq-1600-up} {
         font-size: 2rem;
-    }
-
-    @media (hover: hover) and (pointer: fine) {
-        &:hover {
-            animation-name: pulse;
-        }
     }
 }
 
