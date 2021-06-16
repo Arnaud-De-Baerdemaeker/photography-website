@@ -11,7 +11,7 @@ class PhotosCards extends Component {
     render() {
         const images = {
             hd: this.props.hd,
-            uhd: this.props.uhd,
+            //uhd: this.props.uhd,
         };
 
         return (
