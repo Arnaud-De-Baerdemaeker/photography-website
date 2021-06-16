@@ -4,17 +4,12 @@
 
 .photos-cards {
 	&__card { // <div>
-		margin: {
-			right: 1.25rem;
-			left: 1.25rem;
-		}
 		border-radius: 0.2rem;
 		box-shadow: 0 0 0.469rem $blackHalfTransparent;
-	}
-
-	&__card:not(:first-child) { // <div>
-		@extend .photos-cards__card;
-		margin-top: 2rem;
+		width: 18rem;
+		@media #{$mq-390-up} {
+			width: 21.875rem;
+		}
 	}
 
 	&__titles { // <div>
