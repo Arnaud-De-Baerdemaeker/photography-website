@@ -5,17 +5,9 @@
 .gallery {
 	&__list-item { // <li>
 		position: relative;
-	}
-
-	&__list-item:not(:first-child) {
-		margin: {
-			top: 2.5rem;
-			right: 0;
-			bottom: 0;
-			left: 0;
-		}
-		@media #{$mq-800-up} {
-			margin: unset;
+		width: 18rem;
+		@media #{$mq-390-up} {
+			width: 21.875rem;
 		}
 	}
 
