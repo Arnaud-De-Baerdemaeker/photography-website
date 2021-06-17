@@ -54,10 +54,16 @@
 			left: auto;
 		}
 		cursor: pointer;
-		background-color: $black;
+		background-color: $blackHalfTransparent;
 		border-radius: 3.5rem;
 		justify-content: center;
 		align-items: center;
+		transition-property: background-color;
+		transition-duration: 0.5s;
+
+		&:hover {
+			background-color: $black;
+		}
 
 		.material-icons {
 			font-size: 2rem;
