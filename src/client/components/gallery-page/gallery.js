@@ -21,27 +21,18 @@ class Gallery extends Component {
 
         const introductionSection = [];
 
-        for (let i = 0; i < galleryPageInputs.sections.length; i++) {
+        galleryPageInputs.sections.map(input =>
             introductionSection.push(
-                <h3
-                    key={galleryPageInputs.sections[i].title}
-                    className={"introduction__title"}>
-                    {galleryPageInputs.sections[i].title}
+                <h3 key={input.title} className={"introduction__title"}>
+                    {input.title}
                 </h3>,
-                <div className={"divider"} />,
-            );
-            if ("phrases" in galleryPageInputs.sections[i]) {
-                for (const paragraph of galleryPageInputs.sections[i].phrases) {
-                    introductionSection.push(
-                        <p
-                            key={paragraph}
-                            className={"introduction__paragraph"}>
-                            {paragraph}
-                        </p>,
-                    );
-                }
-            }
-        }
+                input.phrases.map(phrase => (
+                    <p key={phrase} className={"introduction__paragraph"}>
+                        {phrase}
+                    </p>
+                )),
+            ),
+        );
 
         return (
             <>
