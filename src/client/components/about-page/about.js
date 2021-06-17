@@ -31,7 +31,7 @@ class About extends Component {
                     className={"introduction__title"}>
                     {aboutMePageInputs.sections[i].title}
                 </h3>,
-                <div className={"divider"} />,
+                //<div className={"divider"} />,
             );
             if ("phrases" in aboutMePageInputs.sections[i]) {
                 for (const paragraph of aboutMePageInputs.sections[i].phrases) {
