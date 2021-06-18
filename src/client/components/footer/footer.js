@@ -18,6 +18,8 @@ class Footer extends Component {
                         <li className={"footer__network"}>
                             <a
                                 href={"mailto:de.baerdemaeker.arnaud@gmail.com"}
+                                target={"_blank"}
+                                rel={"noreferrer noopener"}
                                 className={"footer__link"}>
                                 <i
                                     className={"material-icons"}
@@ -32,6 +34,8 @@ class Footer extends Component {
                                 href={
                                     "https://www.linkedin.com/in/arnaud-de-baerdemaeker/"
                                 }
+                                target={"_blank"}
+                                rel={"noreferrer noopener"}
                                 className={"footer__link"}>
                                 <FontAwesomeIcon
                                     icon={faLinkedin}
@@ -46,6 +50,8 @@ class Footer extends Component {
                                 href={
                                     "https://github.com/Arnaud-De-Baerdemaeker"
                                 }
+                                target={"_blank"}
+                                rel={"noreferrer noopener"}
                                 className={"footer__link"}>
                                 <FontAwesomeIcon
                                     icon={faGithub}
