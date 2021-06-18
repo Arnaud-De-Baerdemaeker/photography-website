@@ -11,13 +11,7 @@ class Modal extends Component {
         return (
             <div className={"modal"}>
                 <figure className={"modal__image-container"}>
-                    <picture>
-                        {/*<source srcset={this.props.url.uhd} media={}>*/}
-                        <Image url={this.props.url.hd} class={"modal__image"} />
-                    </picture>
-                    <figcaption className={"modal__caption"}>
-                        {"Arnaud De Baerdemaeker"}
-                    </figcaption>
+                    <Image url={this.props.url.hd} class={"modal__image"} />
                 </figure>
                 <div className={"modal__close"} onClick={this.props.onClick}>
                     <i className={"material-icons"}>{"close"}</i>
