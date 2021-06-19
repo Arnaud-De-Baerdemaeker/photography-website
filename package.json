@@ -10,13 +10,22 @@
     "clean": "rm dist/bundle.js",
     "build-dev": "webpack --mode development",
     "build-prod": "webpack --mode production",
-    "start": "webpack serve --hot --mode development"
+    "start": "webpack serve --hot --mode development --host 0.0.0.0"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.13",
+    "material-design-icons": "^3.0.1",
+    "node-polyglot": "^2.4.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
+    "react-helmet": "^6.1.0",
     "react-hot-loader": "^4.13.0",
-    "react-router-dom": "^5.2.0"
+    "react-lazy-load-image-component": "^1.5.1",
+    "react-router-dom": "^5.2.0",
+    "scrollreveal": "^4.0.7"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",

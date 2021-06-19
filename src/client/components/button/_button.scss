@@ -1,0 +1,42 @@
+.button {
+    &__container { // <div>
+        margin: {
+            top: 1rem;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        padding: {
+            top: 0;
+            right: 1rem;
+            bottom: 1rem;
+            left: 1rem;
+        }
+        align-self: flex-end;
+    }
+
+    &__item { // <button>
+        display: block;
+        width: 100%;
+        border: none;
+        font: {
+            family: $quicksandRegular;
+            size: 1rem;
+        }
+        padding: {
+            top: 0.5rem;
+            right: 1rem;
+            bottom: 0.5rem;
+            left: 1rem;
+        }
+        border: {
+            radius: 0.2rem;
+        }
+        color: $white;
+        text-transform: uppercase;
+        background-color: $darkGreen;
+        letter-spacing: 0.125rem;
+        box-shadow: 0 0.063rem 0.125rem $blackHalfTransparent;
+        cursor: pointer;
+    }
+}

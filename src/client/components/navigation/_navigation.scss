@@ -1,0 +1,83 @@
+// Photography website
+// Started on July 2020
+// By Arnaud De Baerdemaeker
+
+.menu {
+	&__container { // <nav>
+		position: fixed;
+		z-index: 1;
+		bottom: 0;
+		height: 3.5rem;
+		@media #{$mq-800-up} {
+			height: 3.75rem;
+		}
+		@media #{$mq-1600-up} {
+			height: 4.5rem;
+		}
+
+		&--homepage {
+			@extend .menu__container;
+			background: linear-gradient($blackTransparent 0%, $black 100%);
+		}
+
+		&--other-pages {
+			@extend .menu__container;
+			background-color: $darkGreen2;
+			box-shadow: 0 0 0.625rem $blackHalfTransparent;
+		}
+	}
+
+	&__list { // <ul>
+		display: flex;
+		justify-content: space-evenly;
+		width: 100vw;
+		height: inherit;
+		list-style-type: none;
+		margin: {
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+		padding: {
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+	}
+
+	&__list-item { // <li>
+		display: inherit;
+		justify-content: center;
+		align-self: center;
+		height: inherit;
+	}
+
+	&__link { // <a>
+		display: inherit;
+		align-items: center;
+		height: inherit;
+		text-decoration: none;
+		color: $white;
+		-webkit-tap-highlight-color: transparent;
+		animation-iteration-count: infinite;
+		animation-duration: 1s;
+		font-size: 1rem;
+		@media #{$mq-800-up} {
+			font-size: 1.75rem;
+		}
+		@media #{$mq-1600-up} {
+			font-size: 2rem;
+		}
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				animation-name: pulse;
+			}
+		}
+
+		&--active { // <a>
+			text-shadow: 0 0 0.5rem $white;
+		}
+	}
+}

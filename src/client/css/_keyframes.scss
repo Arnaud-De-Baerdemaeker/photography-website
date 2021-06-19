@@ -1,0 +1,12 @@
+// Keyframes
+@keyframes pulse {
+    0% {
+        transform: initial;
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: initial;
+    }
+}
