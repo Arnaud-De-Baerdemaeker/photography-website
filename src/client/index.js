@@ -1,8 +1,11 @@
+// Photography website
+// Started on July 2020
+// By Arnaud De Baerdemaeker
+
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./components/App";
-import "./css/styles.css";
+import App from "./components/app";
+import "./styles.scss";
 
-
-var mountNode = document.getElementById("app");
-ReactDOM.render(<App name="Jane" />, mountNode);
+const mountNode = document.querySelector("#app");
+ReactDOM.render(<App />, mountNode);
