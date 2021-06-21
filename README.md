@@ -1,7 +1,5 @@
 # Mon premier site
 
----
-
 Bienvenue !
 
 Ce projet est le résultat de mois d'apprentissage du développement web, couplé à ma passion pour la photographie, que je suis fier aujourd'hui de mettre en ligne.
@@ -15,14 +13,13 @@ _**Arnaud De Baerdemaeker**_
 
 ## Caractéristiques
 
----
-
 Le site a été développé en ReactJS et mis en page avec SCSS.
 
 
 ## Versions
 
----
+### 1.0.2
+- Correction d'une URL
 
 ### 1.0.1
 - Correction d'une URL pour l'affichage correct du style de la barre de navigation

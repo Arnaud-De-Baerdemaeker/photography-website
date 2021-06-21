@@ -11,7 +11,7 @@ class Navigation extends Component {
         const location = window.location.toString();
         // Change target's value when the website goes online
         //const targetLocal = "http://192.168.0.10:8080/";
-        const targetOnline = "https://arnaud-de-baerdemaeker.netlify.app";
+        const targetOnline = "https://arnaud-de-baerdemaeker.netlify.app/";
 
         return (
             <nav
