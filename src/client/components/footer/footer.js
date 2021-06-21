@@ -66,11 +66,11 @@ class Footer extends Component {
                 <div className={"footer__right-box"}>
                     <p className={"footer__credits"}>
                         {`${year.getUTCFullYear()} Arnaud De Baerdemaeker`}
-                        <br />
-                        {"Tous droits réservés"}
-                        <br />
-                        {"Version 1.0.1"}
                     </p>
+                    <p className={"footer__credits"}>
+                        {"Tous droits réservés"}
+                    </p>
+                    <p className={"footer__credits"}>{"Version 1.0.1"}</p>
                 </div>
             </footer>
         );
