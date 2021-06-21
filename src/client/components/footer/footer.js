@@ -68,6 +68,8 @@ class Footer extends Component {
                         {`${year.getUTCFullYear()} Arnaud De Baerdemaeker`}
                         <br />
                         {"Tous droits réservés"}
+                        <br />
+                        {"Version 1.0.1"}
                     </p>
                 </div>
             </footer>
