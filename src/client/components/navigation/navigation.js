@@ -10,12 +10,13 @@ class Navigation extends Component {
     render() {
         const location = window.location.toString();
         // Change target's value when the website goes online
-        const target = "http://192.168.0.10:8080/";
+        //const targetLocal = "http://192.168.0.10:8080/";
+        const targetOnline = "https://arnaud-de-baerdemaeker.netlify.app";
 
         return (
             <nav
                 className={
-                    location === target
+                    location === targetOnline
                         ? "menu__container--homepage"
                         : "menu__container--other-pages"
                 }>
