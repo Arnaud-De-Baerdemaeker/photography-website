@@ -24,6 +24,9 @@ Le site a été développé en ReactJS et mis en page avec SCSS.
 
 ---
 
+### 1.0.2
+- Correction d'une URL
+
 ### 1.0.1
 - Correction d'une URL pour l'affichage correct du style de la barre de navigation
 - Amélioration du CSS du footer
