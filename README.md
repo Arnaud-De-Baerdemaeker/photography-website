@@ -1,37 +1,33 @@
-# photography-website
+# Mon premier site
 
-Empty project.
+---
 
-## Building and running on localhost
+Bienvenue !
 
-First install dependencies:
+Ce projet est le résultat de mois d'apprentissage du développement web, couplé à ma passion pour la photographie, que je suis fier aujourd'hui de mettre en ligne.
 
-```sh
-npm install
-```
+Au fil du temps, je continuerai à travailler dessus, aussi bien pour ajouter de nouvelles photos que pour améliorer certaines choses, voire ajouter de nouvelles fonctionnalités.
 
-To run in hot module reloading mode:
+Merci pour votre visite !
 
-```sh
-npm start
-```
+_**Arnaud De Baerdemaeker**_
 
-To create a production build:
 
-```sh
-npm run build-prod
-```
+## Caractéristiques
 
-To create a development build:
+---
 
-```sh
-npm run build-dev
-```
+Le site a été développé en ReactJS et mis en page avec SCSS.
 
-## Running
 
-Open the file `dist/index.html` in your browser
+## Versions
 
-## Credits
+---
 
-Made with [createapp.dev](https://createapp.dev/)
+### 1.0.1
+- Correction d'une URL pour l'affichage correct du style de la barre de navigation
+- Amélioration du CSS du footer
+- Ajout de la version du site dans le footer
+
+### 1.0.0
+- Mise en ligne
