@@ -3,7 +3,10 @@
 // By Arnaud De Baerdemaeker
 
 .gallery { // <main>
-	margin-top: 5rem;
+	padding: {
+		top: 5rem;
+		bottom: 5rem;
+	}
 
 	&__years-container { // <div>
 		margin-top: 5rem;
