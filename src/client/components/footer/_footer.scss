@@ -4,15 +4,7 @@
 
 .footer { // <footer>
 	background-color: $darkGreen2;
-	margin: {
-		top: 5rem;
-		right: 0;
-		bottom: 0;
-		left: 0;
-	}
-	padding: {
-		top: 1.25rem;
-	}
+	padding-top: 1.25rem;
 	box-shadow: 0 0 0.625rem $blackHalfTransparent;
 
 	&__left-box { // <div>
