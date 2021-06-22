@@ -7,6 +7,20 @@ import {hot} from "react-hot-loader/root";
 import {NavLink} from "react-router-dom";
 
 class Navigation extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            lightModeOn: true,
+        };
+        this.handleMode = this.handleMode.bind(this);
+    }
+
+    handleMode() {
+        this.setState(state => ({
+            lightModeOn: !state.lightModeOn,
+        }));
+    }
+
     render() {
         const location = window.location.toString();
         // Change target's value when the website goes online
@@ -53,6 +67,20 @@ class Navigation extends Component {
                         </NavLink>
                     </li>
                 </ul>
+                <button
+                    type={"button"}
+                    onClick={this.handleMode}
+                    className={"menu__toggle-button"}>
+                    {this.state.lightModeOn ? (
+                        <i className={"material-icons toggle-button__icon"}>
+                            {"light_mode"}
+                        </i>
+                    ) : (
+                        <i className={"material-icons toggle-button__icon"}>
+                            {"dark_mode"}
+                        </i>
+                    )}
+                </button>
             </nav>
         );
     }
