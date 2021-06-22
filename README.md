@@ -18,6 +18,9 @@ Le site a été développé en ReactJS et mis en page avec SCSS.
 
 ## Versions
 
+### 1.1.0
+- Ajout d'un mode sombre
+
 ### 1.0.2
 - Correction d'une URL
 
