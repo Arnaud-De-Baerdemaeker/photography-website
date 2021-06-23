@@ -24,6 +24,11 @@
 			@extend .menu__container;
 			background-color: $darkGreen2;
 			box-shadow: 0 0 0.625rem $blackHalfTransparent;
+
+			&--dark-mode {
+				@extend .menu__container--other-pages;
+				background-color: $darkGreen2DarkMode;
+			}
 		}
 	}
 
@@ -108,7 +113,7 @@
 			font-size: 2rem;
 		}
 
-		&.text-in-dark {
+		&.dark-mode {
 			color: $whiteForDark;
 		}
 	}
