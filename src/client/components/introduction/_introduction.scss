@@ -28,24 +28,45 @@
 
     &__title { // <h3>
         color: $darkGreen;
-        /*@media #{$mq-1000-up} {
-            text-align: unset;
-        }*/
-    }
 
-    &__title:not(:first-child) { // <h3>
-        margin: {
-            top: 3rem;
-            right: 0;
-            bottom: 0;
-            left: 0;
+        &:not(:first-child) { // <h3>
+            margin: {
+                top: 3rem;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
         }
-    }
 
-    &__title:last-of-type { // <h3>
-        text-align: center;
-        @media #{$mq-1000-up} {
-            text-align: unset;
+        &--dark-mode {
+            &:not(:first-child) { // <h3>
+                margin: {
+                    top: 3rem;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+        }
+
+        &:last-of-type { // <h3>
+            text-align: center;
+            @media #{$mq-1000-up} {
+                text-align: unset;
+            }
+        }
+
+        &--dark-mode {
+            &:last-of-type { // <h3>
+                text-align: center;
+                @media #{$mq-1000-up} {
+                    text-align: unset;
+                }
+            }
+        }
+
+        &--dark-mode {
+            color: $green2;
         }
     }
 
@@ -55,6 +76,10 @@
             right: 0;
             bottom: 0;
             left: 0;
+        }
+
+        &--dark-mode {
+            color: $whiteForDark;
         }
     }
 }
