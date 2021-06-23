@@ -18,7 +18,9 @@ class Navigation extends Component {
                 className={
                     location === targetOnline
                         ? "menu__container--homepage"
-                        : "menu__container--other-pages"
+                        : this.props.lightModeOn
+                        ? "menu__container--other-pages"
+                        : "menu__container--other-pages--dark-mode"
                 }>
                 <button
                     type={"button"}
@@ -29,7 +31,7 @@ class Navigation extends Component {
                         className={
                             this.props.lightModeOn
                                 ? "material-icons"
-                                : "material-icons text-in-dark"
+                                : "material-icons dark-mode"
                         }>
                         {this.props.lightModeOn ? "light_mode" : "dark_mode"}
                     </i>
@@ -47,7 +49,7 @@ class Navigation extends Component {
                                 className={
                                     this.props.lightModeOn
                                         ? "material-icons"
-                                        : "material-icons text-in-dark"
+                                        : "material-icons dark-mode"
                                 }>
                                 {"home"}
                             </i>
@@ -63,7 +65,7 @@ class Navigation extends Component {
                                 className={
                                     this.props.lightModeOn
                                         ? "material-icons"
-                                        : "material-icons text-in-dark"
+                                        : "material-icons dark-mode"
                                 }>
                                 {"photo_library"}
                             </i>
@@ -79,7 +81,7 @@ class Navigation extends Component {
                                 className={
                                     this.props.lightModeOn
                                         ? "material-icons"
-                                        : "material-icons text-in-dark"
+                                        : "material-icons dark-mode"
                                 }>
                                 {"emoji_people"}
                             </i>
