@@ -34,6 +34,21 @@ class Navigation extends Component {
                         ? "menu__container--homepage"
                         : "menu__container--other-pages"
                 }>
+                <button
+                    type={"button"}
+                    onClick={this.handleMode}
+                    className={"menu__toggle-button"}>
+                    {/* Button to turn on/off the night mode */}
+                    {this.state.lightModeOn ? (
+                        <i className={"material-icons toggle-button__icon"}>
+                            {"light_mode"}
+                        </i>
+                    ) : (
+                        <i className={"material-icons toggle-button__icon"}>
+                            {"dark_mode"}
+                        </i>
+                    )}
+                </button>
                 <ul className={"menu__list"}>
                     <li className={"menu__list-item"}>
                         <NavLink
@@ -67,20 +82,6 @@ class Navigation extends Component {
                         </NavLink>
                     </li>
                 </ul>
-                <button
-                    type={"button"}
-                    onClick={this.handleMode}
-                    className={"menu__toggle-button"}>
-                    {this.state.lightModeOn ? (
-                        <i className={"material-icons toggle-button__icon"}>
-                            {"light_mode"}
-                        </i>
-                    ) : (
-                        <i className={"material-icons toggle-button__icon"}>
-                            {"dark_mode"}
-                        </i>
-                    )}
-                </button>
             </nav>
         );
     }
