@@ -7,20 +7,6 @@ import {hot} from "react-hot-loader/root";
 import {NavLink} from "react-router-dom";
 
 class Navigation extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            lightModeOn: true,
-        };
-        this.handleMode = this.handleMode.bind(this);
-    }
-
-    handleMode() {
-        this.setState(state => ({
-            lightModeOn: !state.lightModeOn,
-        }));
-    }
-
     render() {
         const location = window.location.toString();
         // Change target's value when the website goes online
@@ -36,18 +22,17 @@ class Navigation extends Component {
                 }>
                 <button
                     type={"button"}
-                    onClick={this.handleMode}
+                    onClick={this.props.onHandleMode}
                     className={"menu__toggle-button"}>
-                    {/* Button to turn on/off the night mode */}
-                    {this.state.lightModeOn ? (
-                        <i className={"material-icons toggle-button__icon"}>
-                            {"light_mode"}
-                        </i>
-                    ) : (
-                        <i className={"material-icons toggle-button__icon"}>
-                            {"dark_mode"}
-                        </i>
-                    )}
+                    {/* Button to change the icon depending of the state of the night mode */}
+                    <i
+                        className={
+                            this.props.lightModeOn
+                                ? "material-icons"
+                                : "material-icons text-in-dark"
+                        }>
+                        {this.props.lightModeOn ? "light_mode" : "dark_mode"}
+                    </i>
                 </button>
                 <ul className={"menu__list"}>
                     <li className={"menu__list-item"}>
@@ -58,7 +43,14 @@ class Navigation extends Component {
                             // Class name that is active only when the page is active
                             activeClassName={"menu__link--active"}
                             className={"menu__link"}>
-                            <i className={"material-icons"}>{"home"}</i>
+                            <i
+                                className={
+                                    this.props.lightModeOn
+                                        ? "material-icons"
+                                        : "material-icons text-in-dark"
+                                }>
+                                {"home"}
+                            </i>
                         </NavLink>
                     </li>
                     <li className={"menu__list-item"}>
@@ -67,7 +59,12 @@ class Navigation extends Component {
                             // Class name that is active only when the page is active
                             activeClassName={"menu__link--active"}
                             className={"menu__link"}>
-                            <i className={"material-icons"}>
+                            <i
+                                className={
+                                    this.props.lightModeOn
+                                        ? "material-icons"
+                                        : "material-icons text-in-dark"
+                                }>
                                 {"photo_library"}
                             </i>
                         </NavLink>
@@ -78,7 +75,14 @@ class Navigation extends Component {
                             // Class name that is active only when the page is active
                             activeClassName={"menu__link--active"}
                             className={"menu__link"}>
-                            <i className={"material-icons"}>{"person"}</i>
+                            <i
+                                className={
+                                    this.props.lightModeOn
+                                        ? "material-icons"
+                                        : "material-icons text-in-dark"
+                                }>
+                                {"emoji_people"}
+                            </i>
                         </NavLink>
                     </li>
                 </ul>
