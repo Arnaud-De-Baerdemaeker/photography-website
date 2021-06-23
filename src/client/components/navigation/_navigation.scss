@@ -107,5 +107,11 @@
 		@media #{$mq-1600-up} {
 			font-size: 2rem;
 		}
+
+		&.text-in-dark {
+			color: $whiteForDark;
+		}
 	}
+
+
 }
