@@ -61,6 +61,10 @@
 
 	&__link { // <a>
 		display: block;
+
+		.material-icons {
+			color: $white;
+		}
 	}
 
 	&__icon { // <svg>
