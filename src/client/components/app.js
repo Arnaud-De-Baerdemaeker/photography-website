@@ -13,6 +13,20 @@ import PhotosList from "./photos-list/photos-list";
 import data from "./../JSON/metadata.json";
 
 class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            lightModeOn: true,
+        };
+        this.handleMode = this.handleMode.bind(this);
+    }
+
+    handleMode() {
+        this.setState(state => ({
+            lightModeOn: !state.lightModeOn,
+        }));
+    }
+
     render() {
         return (
             <>
@@ -81,7 +95,10 @@ class App extends Component {
                             <About />
                         </Route>
                         <Route exact path={"/"}>
-                            <HomePage />
+                            <HomePage
+                                lightModeOn={this.state.lightModeOn}
+                                onHandleMode={this.handleMode}
+                            />
                         </Route>
                     </Switch>
                 </BrowserRouter>
