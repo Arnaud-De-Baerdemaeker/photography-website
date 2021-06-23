@@ -20,8 +20,18 @@ class Header extends Component {
         }
 
         return (
-            <header className={"header__container"}>
-                <h1 className={"header__main-title--other-pages"}>
+            <header
+                className={
+                    this.props.lightModeOn
+                        ? "header__container"
+                        : "header__container--dark-mode"
+                }>
+                <h1
+                    className={
+                        this.props.lightModeOn
+                            ? "header__main-title--other-pages"
+                            : "header__main-title--other-pages--dark-mode"
+                    }>
                     {"Arnaud De Baerdemaeker"}
                 </h1>
                 <div className={"header__title"}>
