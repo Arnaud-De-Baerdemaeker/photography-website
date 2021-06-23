@@ -19,7 +19,7 @@ class HomePage extends Component {
                         className={
                             this.props.lightModeOn
                                 ? "home-page__main-title"
-                                : "home-page__main-title--dark"
+                                : "home-page__main-title--dark-mode"
                         }>
                         {"ARNAUD"}
                         <br />
