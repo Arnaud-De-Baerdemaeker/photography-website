@@ -92,7 +92,10 @@ class App extends Component {
                             />
                         </Route>
                         <Route exact path={"/about"}>
-                            <About />
+                            <About
+                                lightModeOn={this.state.lightModeOn}
+                                onHandleMode={this.handleMode}
+                            />
                         </Route>
                         <Route exact path={"/"}>
                             <HomePage
