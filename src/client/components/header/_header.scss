@@ -2,9 +2,13 @@
     &__container { // <header>
         background-color: $darkGreen;
         box-shadow: 0 0 0.625rem $blackHalfTransparent;
+
+        &--dark-mode {
+            background-color: $darkGreenDarkMode;
+        }
     }
 
-    &__main-title--other-pages {
+    &__main-title--other-pages { // <h1>
         font: {
             family: $zcoolXiaoWeiRegular;
             size: 0.8rem;
@@ -26,6 +30,12 @@
         }
         height: 3rem;
         line-height: 3rem;
+
+        &--dark-mode {
+            @extend .header__main-title--other-pages;
+            color: $whiteForDark;
+            background-color: $darkGreen2DarkMode;
+        }
     }
 
     &__title { // <div>
