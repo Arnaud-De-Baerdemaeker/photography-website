@@ -35,7 +35,14 @@ class Header extends Component {
                     {"Arnaud De Baerdemaeker"}
                 </h1>
                 <div className={"header__title"}>
-                    <h2>{this.props.headerTitle}</h2>
+                    <h2
+                        className={
+                            this.props.lightModeOn
+                                ? "level-2-title"
+                                : "level-2-title--dark-mode"
+                        }>
+                        {this.props.headerTitle}
+                    </h2>
                     {subtitle}
                 </div>
             </header>
