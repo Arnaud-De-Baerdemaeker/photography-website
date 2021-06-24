@@ -90,7 +90,7 @@ class About extends Component {
                         </figure>
                     </div>
                 </main>
-                <Footer />
+                <Footer lightModeOn={this.props.lightModeOn} />
             </>
         );
     }
