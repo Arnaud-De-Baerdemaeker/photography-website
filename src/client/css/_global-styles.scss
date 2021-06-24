@@ -6,7 +6,7 @@ body {
     font-family: $quicksandRegular;
 }
 
-h2 {
+.level-2-title {
     font-size: 2rem;
     letter-spacing: 0.625rem;
     color: $white;
@@ -18,6 +18,11 @@ h2 {
     }
     @media #{$mq-600-up} {
         font-size: 2.5rem;
+    }
+
+    &--dark-mode {
+        @extend .level-2-title;
+        color: $whiteForDark;
     }
 }
 
