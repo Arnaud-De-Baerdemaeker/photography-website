@@ -12,9 +12,17 @@ class Footer extends Component {
         const year = new Date();
 
         return (
-            <footer className={"footer container"}>
-                <div className={"footer__left-box"}>
-                    <ul className={"footer__links"}>
+            <footer
+                className={
+                    this.props.lightModeOn ? "footer" : "footer--dark-mode"
+                }>
+                <div className={"footer__social-container"}>
+                    <ul
+                        className={
+                            this.props.lightModeOn
+                                ? "footer__links"
+                                : "footer__links--dark-mode"
+                        }>
                         <li className={"footer__network"}>
                             <a
                                 href={"mailto:de.baerdemaeker.arnaud@gmail.com"}
@@ -22,7 +30,11 @@ class Footer extends Component {
                                 rel={"noreferrer noopener"}
                                 className={"footer__link"}>
                                 <i
-                                    className={"material-icons"}
+                                    className={
+                                        this.props.lightModeOn
+                                            ? "material-icons"
+                                            : "material-icons dark-mode"
+                                    }
                                     alt={"Email"}
                                     title={"Contactez-moi"}>
                                     {"email"}
@@ -41,7 +53,11 @@ class Footer extends Component {
                                     icon={faLinkedin}
                                     alt={"LinkedIn"}
                                     title={"Mon profil LinkedIn"}
-                                    className={"footer__icon"}
+                                    className={
+                                        this.props.lightModeOn
+                                            ? "footer__icon"
+                                            : "footer__icon--dark-mode"
+                                    }
                                 />
                             </a>
                         </li>
@@ -57,13 +73,17 @@ class Footer extends Component {
                                     icon={faGithub}
                                     alt={"GitHub"}
                                     title={"Mon travail sur GitHub"}
-                                    className={"footer__icon"}
+                                    className={
+                                        this.props.lightModeOn
+                                            ? "footer__icon"
+                                            : "footer__icon--dark-mode"
+                                    }
                                 />
                             </a>
                         </li>
                     </ul>
                 </div>
-                <div className={"footer__right-box"}>
+                <div className={"footer__credits-container"}>
                     <p className={"footer__credits"}>
                         {`${year.getUTCFullYear()} Arnaud De Baerdemaeker`}
                     </p>
