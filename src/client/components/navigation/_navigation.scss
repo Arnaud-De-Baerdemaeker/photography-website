@@ -17,17 +17,17 @@
 
 		&--homepage {
 			@extend .menu__container;
-			background: linear-gradient($blackTransparent 0%, $black 100%);
+			background: linear-gradient($black-0 0%, $black 100%);
 		}
 
 		&--other-pages {
 			@extend .menu__container;
-			background-color: $darkGreen2;
-			box-shadow: 0 0 0.625rem $blackHalfTransparent;
+			background-color: $dark-green-2;
+			box-shadow: 0 0 0.625rem $black-50;
 
 			&--dark-mode {
 				@extend .menu__container--other-pages;
-				background-color: $darkGreen2DarkMode;
+				background-color: $grey-45-dark-mode;
 			}
 		}
 	}
@@ -93,6 +93,7 @@
 		background: unset;
 		padding: unset;
 		cursor: pointer;
+		outline: none;
 		@media #{$mq-800-up} {
 			top: calc(3.75rem / 2 - 0.875rem);
 			height: 1.75rem;
@@ -114,7 +115,7 @@
 		}
 
 		&.dark-mode {
-			color: $whiteForDark;
+			color: $white-215-dark-mode;
 		}
 	}
 

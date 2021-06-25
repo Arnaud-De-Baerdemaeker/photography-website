@@ -3,9 +3,9 @@
 // By Arnaud De Baerdemaeker
 
 .footer { // <footer>
-	background-color: $darkGreen2;
+	background-color: $dark-green-2;
 	padding-top: 1.25rem;
-	box-shadow: 0 0 0.625rem $blackHalfTransparent;
+	box-shadow: 0 0 0.625rem $black-50;
 
 	&__social-container { // <div>
 		padding: {
@@ -57,8 +57,8 @@
 		&--dark-mode {
 			@extend .footer__links;
 			border: {
-				top-color: $whiteForDark;
-				bottom-color: $whiteForDark;
+				top-color: $white-215-dark-mode;
+				bottom-color: $white-215-dark-mode;
 			}
 		}
 	}
@@ -74,7 +74,7 @@
 			color: $white;
 
 			&.dark-mode {
-				color: $whiteForDark;
+				color: $white-215-dark-mode;
 			}
 		}
 	}
@@ -85,7 +85,7 @@
 
 		&--dark-mode {
 			@extend .footer__icon;
-			color: $whiteForDark;
+			color: $white-215-dark-mode;
 		}
 	}
 
@@ -121,12 +121,12 @@
 
 		&--dark-mode {
 			@extend .footer__credits;
-			color: $whiteForDark;
+			color: $white-215-dark-mode;
 		}
 	}
 
 	&--dark-mode {
 		@extend .footer;
-		background-color: $darkGreen2DarkMode;
+		background-color: $grey-45-dark-mode;
 	}
 }

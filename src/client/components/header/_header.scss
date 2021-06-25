@@ -1,10 +1,10 @@
 .header {
     &__container { // <header>
-        background-color: $darkGreen;
-        box-shadow: 0 0 0.625rem $blackHalfTransparent;
+        background-color: $dark-green;
+        box-shadow: 0 0 0.625rem $black-50;
 
         &--dark-mode {
-            background-color: $darkGreenDarkMode;
+            background-color: $grey-30-dark-mode;
         }
     }
 
@@ -14,7 +14,7 @@
             size: 0.8rem;
         }
         color: $white;
-        background-color: $darkGreen2;
+        background-color: $dark-green-2;
         letter-spacing: 0.188rem;
         margin: {
             top: 0;
@@ -33,8 +33,8 @@
 
         &--dark-mode {
             @extend .header__main-title--other-pages;
-            color: $whiteForDark;
-            background-color: $darkGreen2DarkMode;
+            color: $white-215-dark-mode;
+            background-color: $grey-45-dark-mode;
         }
     }
 

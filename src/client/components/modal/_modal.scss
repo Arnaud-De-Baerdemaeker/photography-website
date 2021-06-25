@@ -12,7 +12,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: $darkGrey;
+	background-color: $dark-grey;
 
 	&__image-container { // <figure>
 		margin: {
@@ -54,7 +54,7 @@
 			left: auto;
 		}
 		cursor: pointer;
-		background-color: $blackHalfTransparent;
+		background-color: $black-50;
 		border-radius: 3.5rem;
 		justify-content: center;
 		align-items: center;

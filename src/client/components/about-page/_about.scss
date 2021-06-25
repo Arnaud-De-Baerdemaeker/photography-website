@@ -10,7 +10,7 @@
 
 	&--dark-mode {
 		@extend .about;
-		background-color: $darkGreyBackground;
+		background-color: $grey-18-dark-mode;
 	}
 
 	&__my-photo { // <div>
@@ -50,7 +50,7 @@
 
 		&--dark-mode {
 			@extend .about__image-caption;
-			color: $whiteForDark;
+			color: $white-215-dark-mode;
 		}
 	}
 }

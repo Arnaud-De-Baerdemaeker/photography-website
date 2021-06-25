@@ -5,7 +5,7 @@
 .photos-cards {
 	&__card { // <div>
 		border-radius: 0.2rem;
-		box-shadow: 0 0 0.469rem $blackHalfTransparent;
+		box-shadow: 0 0 0.469rem $black-50;
 		width: 18rem;
 		@media #{$mq-390-up} {
 			width: 21.875rem;
@@ -29,7 +29,7 @@
 			bottom: 0;
 			left: 0;
 		}
-		color: $darkGreen;
+		color: $dark-green;
 		letter-spacing: unset;
 	}
 
