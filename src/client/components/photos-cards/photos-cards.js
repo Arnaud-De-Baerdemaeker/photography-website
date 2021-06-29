@@ -15,12 +15,27 @@ class PhotosCards extends Component {
         };
 
         return (
-            <div className={"photos-cards__card"}>
+            <div
+                className={
+                    this.props.lightModeOn
+                        ? "photos-cards__card"
+                        : "photos-cards__card--dark-mode"
+                }>
                 <div className={"photos-cards__titles"}>
-                    <h3 className={"photos-cards__mainTitle"}>
+                    <h3
+                        className={
+                            this.props.lightModeOn
+                                ? "photos-cards__mainTitle"
+                                : "photos-cards__mainTitle--dark-mode"
+                        }>
                         {this.props.name}
                     </h3>
-                    <h4 className={"photos-cards__subtitle"}>
+                    <h4
+                        className={
+                            this.props.lightModeOn
+                                ? "photos-cards__subtitle"
+                                : "photos-cards__subtitle--dark-mode"
+                        }>
                         {this.props.place}
                     </h4>
                 </div>
@@ -59,7 +74,10 @@ class PhotosCards extends Component {
                         </li>
                     </ul>
                 </div>
-                <Button fullImages={images} />
+                <Button
+                    fullImages={images}
+                    lightModeOn={this.props.lightModeOn}
+                />
             </div>
         );
     }

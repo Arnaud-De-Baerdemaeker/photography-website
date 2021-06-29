@@ -13,7 +13,11 @@ class Header extends Component {
             subtitle.push(
                 <h3
                     key={this.props.headerSubtitle}
-                    className={"header__subtitle"}>
+                    className={
+                        this.props.lightModeOn
+                            ? "header__subtitle"
+                            : "header__subtitle--dark-mode"
+                    }>
                     {this.props.headerSubtitle}
                 </h3>,
             );

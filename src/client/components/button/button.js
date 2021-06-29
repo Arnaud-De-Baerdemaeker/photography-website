@@ -25,7 +25,11 @@ class Button extends Component {
                     <button
                         type={"button"}
                         onClick={this.handleOnClick}
-                        className={"button__item"}>
+                        className={
+                            this.props.lightModeOn
+                                ? "button__item"
+                                : "button__item--dark-mode"
+                        }>
                         {"Voir"}
                     </button>
                 </div>
@@ -34,6 +38,7 @@ class Button extends Component {
                     <Modal
                         url={this.props.fullImages}
                         onClick={this.handleOnClick}
+                        lightModeOn={this.props.lightModeOn}
                     />
                 ) : null}
             </>
