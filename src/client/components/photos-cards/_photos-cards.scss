@@ -12,6 +12,12 @@
 		}
 		display: flex;
 		flex-direction: column;
+
+		&--dark-mode {
+			@extend .photos-cards__card;
+			background-color: $grey-45-dark-mode;
+			color: $white-215-dark-mode;
+		}
 	}
 
 	&__titles { // <div>
@@ -31,6 +37,11 @@
 		}
 		color: $dark-green;
 		letter-spacing: unset;
+
+		&--dark-mode {
+			@extend .photos-cards__mainTitle;
+			color: $white-230-dark-mode;
+		}
 	}
 
 	&__subtitle { // <h4>
@@ -40,6 +51,11 @@
 			weight: normal;
 		}
 		letter-spacing: unset;
+
+		&--dark-mode {
+			@extend .photos-cards__subtitle;
+			color: $white-230-dark-mode;
+		}
 	}
 
 	&__image-container { // <figure>

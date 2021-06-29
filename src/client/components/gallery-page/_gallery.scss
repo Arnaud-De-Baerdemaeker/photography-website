@@ -8,6 +8,11 @@
 		bottom: 5rem;
 	}
 
+	&--dark-mode {
+		@extend .gallery;
+		background-color: $grey-18-dark-mode;
+	}
+
 	&__years-container { // <div>
 		margin-top: 5rem;
 		padding: {
