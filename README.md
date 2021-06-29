@@ -20,6 +20,8 @@ Le site a été développé en ReactJS et mis en page avec SCSS.
 
 ### 1.1.0
 - Ajout d'un mode sombre
+- Redesign de la liste des années de la page Galerie
+- Changement de l'icône de la page À Propos
 
 ### 1.0.2
 - Correction d'une URL
