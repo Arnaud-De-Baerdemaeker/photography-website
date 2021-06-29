@@ -12,11 +12,11 @@ import Navigation from "../navigation/navigation";
 
 class PhotosList extends Component {
     render() {
-        // The condition checks if the value of the scroll is different than 0.
+        /*// The condition checks if the value of the scroll is different than 0.
         if (window.scrollY !== 0) {
             // If it is, it restores the view to the top.
             window.scrollTo(0, 0);
-        }
+        }*/
 
         const cards = [];
 
@@ -44,6 +44,7 @@ class PhotosList extends Component {
                     iso={this.props.album.photos[i].iso}
                     camera={this.props.album.photos[i].camera}
                     model={this.props.album.photos[i].model}
+                    lightModeOn={this.props.lightModeOn}
                 />,
             );
         }
@@ -53,10 +54,24 @@ class PhotosList extends Component {
                 <Header
                     headerTitle={galleryPageInputs.headerTitle}
                     headerSubtitle={this.props.album.title}
+                    lightModeOn={this.props.lightModeOn}
                 />
-                <Navigation />
-                <main className={"photos-list"}>{cards}</main>
-                <Footer />
+                <Navigation
+                    lightModeOn={this.props.lightModeOn}
+                    onHandleMode={this.props.onHandleMode}
+                />
+                <main
+                    className={
+                        this.props.lightModeOn
+                            ? "photos-list"
+                            : "photos-list--dark-mode"
+                    }>
+                    {cards}
+                </main>
+                <Footer
+                    lightModeOn={this.props.lightModeOn}
+                    onHandleMode={this.props.onHandleMode}
+                />
             </>
         );
     }
