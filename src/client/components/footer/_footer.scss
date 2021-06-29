@@ -7,6 +7,12 @@
 	padding-top: 1.25rem;
 	box-shadow: 0 0 0.625rem $black-50;
 
+	&--dark-mode {
+		@extend .footer;
+		background-color: $grey-45-dark-mode;
+		color: $white-215-dark-mode;
+	}
+
 	&__social-container { // <div>
 		padding: {
 			right: 1.25rem;
@@ -118,15 +124,5 @@
 		}
 		color: $white;
 		text-align: center;
-
-		&--dark-mode {
-			@extend .footer__credits;
-			color: $white-215-dark-mode;
-		}
-	}
-
-	&--dark-mode {
-		@extend .footer;
-		background-color: $grey-45-dark-mode;
 	}
 }

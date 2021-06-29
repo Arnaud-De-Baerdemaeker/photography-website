@@ -33,7 +33,7 @@
 
         &--dark-mode {
             @extend .header__main-title--other-pages;
-            color: $white-215-dark-mode;
+            color: $white-230-dark-mode;
             background-color: $grey-45-dark-mode;
         }
     }
@@ -62,5 +62,11 @@
             size: 1.75rem;
         }
         color: $white;
+        letter-spacing: 0.313rem;
+
+        &--dark-mode {
+            @extend .header__subtitle;
+            color: $white-230-dark-mode;
+        }
     }
 }

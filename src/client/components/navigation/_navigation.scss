@@ -94,6 +94,7 @@
 		padding: unset;
 		cursor: pointer;
 		-webkit-tap-highlight-color: transparent;
+		outline: none;
 		@media #{$mq-800-up} {
 			top: calc(3.75rem / 2 - 0.875rem);
 			height: 1.75rem;
@@ -115,7 +116,7 @@
 		}
 
 		&.dark-mode {
-			color: $white-215-dark-mode;
+			color: $white-230-dark-mode;
 		}
 	}
 
