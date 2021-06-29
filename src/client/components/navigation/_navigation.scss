@@ -93,7 +93,7 @@
 		background: unset;
 		padding: unset;
 		cursor: pointer;
-		outline: none;
+		-webkit-tap-highlight-color: transparent;
 		@media #{$mq-800-up} {
 			top: calc(3.75rem / 2 - 0.875rem);
 			height: 1.75rem;
