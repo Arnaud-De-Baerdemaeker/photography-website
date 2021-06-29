@@ -89,6 +89,8 @@ class App extends Component {
                                 thumbnail2019={
                                     data[5].album_2019.photos[0]["576p"]
                                 }
+                                lightModeOn={this.state.lightModeOn}
+                                onHandleMode={this.handleMode}
                             />
                         </Route>
                         <Route exact path={"/about"}>
