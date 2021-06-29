@@ -17,13 +17,18 @@
 
 		&--homepage {
 			@extend .menu__container;
-			background: linear-gradient($blackTransparent 0%, $black 100%);
+			background: linear-gradient($black-0 0%, $black 100%);
 		}
 
 		&--other-pages {
 			@extend .menu__container;
-			background-color: $darkGreen2;
-			box-shadow: 0 0 0.625rem $blackHalfTransparent;
+			background-color: $dark-green-2;
+			box-shadow: 0 0 0.625rem $black-50;
+
+			&--dark-mode {
+				@extend .menu__container--other-pages;
+				background-color: $grey-45-dark-mode;
+			}
 		}
 	}
 
@@ -48,16 +53,14 @@
 	}
 
 	&__list-item { // <li>
-		display: inherit;
+		display: inline-flex;
 		justify-content: center;
 		align-self: center;
-		height: inherit;
 	}
 
 	&__link { // <a>
-		display: inherit;
+		display: inline-flex;
 		align-items: center;
-		height: inherit;
 		text-decoration: none;
 		color: $white;
 		-webkit-tap-highlight-color: transparent;
@@ -80,4 +83,42 @@
 			text-shadow: 0 0 0.5rem $white;
 		}
 	}
+
+	&__toggle-button { // <button>
+		position: absolute;
+		top: calc(3.5rem / 2 - 0.75rem);
+		left: 1rem;
+		height: 1.5rem;
+		border: unset;
+		background: unset;
+		padding: unset;
+		cursor: pointer;
+		-webkit-tap-highlight-color: transparent;
+		outline: none;
+		@media #{$mq-800-up} {
+			top: calc(3.75rem / 2 - 0.875rem);
+			height: 1.75rem;
+		}
+		@media #{$mq-1600-up} {
+			top: calc(4.5rem / 2 - 1rem);
+			height: 2rem;
+		}
+	}
+
+	&__link .material-icons, &__toggle-button .material-icons {
+		color: $white;
+		font-size: 1.5rem;
+		@media #{$mq-800-up} {
+			font-size: 1.75rem;
+		}
+		@media #{$mq-1600-up} {
+			font-size: 2rem;
+		}
+
+		&.dark-mode {
+			color: $white-230-dark-mode;
+		}
+	}
+
+
 }

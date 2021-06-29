@@ -33,10 +33,14 @@
             radius: 0.2rem;
         }
         color: $white;
-        text-transform: uppercase;
-        background-color: $darkGreen;
-        letter-spacing: 0.125rem;
-        box-shadow: 0 0.063rem 0.125rem $blackHalfTransparent;
+        background-color: $dark-green;
+        letter-spacing: 0.063rem;
+        box-shadow: 0 0.063rem 0.125rem $black-50;
         cursor: pointer;
+
+        &--dark-mode {
+            @extend .button__item;
+            color: $white-215-dark-mode;
+        }
     }
 }

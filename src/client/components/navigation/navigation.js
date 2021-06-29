@@ -10,16 +10,32 @@ class Navigation extends Component {
     render() {
         const location = window.location.toString();
         // Change target's value when the website goes online
-        //const targetLocal = "http://192.168.0.10:8080/";
+        // const targetLocal = "http://192.168.0.10:8080/";
         const targetOnline = "https://arnaud-de-baerdemaeker.netlify.app/";
 
         return (
             <nav
                 className={
-                    location === targetOnline
+                    location === targetOnline //targetLocal
                         ? "menu__container--homepage"
-                        : "menu__container--other-pages"
+                        : this.props.lightModeOn
+                        ? "menu__container--other-pages"
+                        : "menu__container--other-pages--dark-mode"
                 }>
+                <button
+                    type={"button"}
+                    onClick={this.props.onHandleMode}
+                    className={"menu__toggle-button"}>
+                    {/* Button to change the icon depending of the state of the night mode */}
+                    <i
+                        className={
+                            this.props.lightModeOn
+                                ? "material-icons"
+                                : "material-icons dark-mode"
+                        }>
+                        {this.props.lightModeOn ? "light_mode" : "dark_mode"}
+                    </i>
+                </button>
                 <ul className={"menu__list"}>
                     <li className={"menu__list-item"}>
                         <NavLink
@@ -29,7 +45,14 @@ class Navigation extends Component {
                             // Class name that is active only when the page is active
                             activeClassName={"menu__link--active"}
                             className={"menu__link"}>
-                            <i className={"material-icons"}>{"home"}</i>
+                            <i
+                                className={
+                                    this.props.lightModeOn
+                                        ? "material-icons"
+                                        : "material-icons dark-mode"
+                                }>
+                                {"home"}
+                            </i>
                         </NavLink>
                     </li>
                     <li className={"menu__list-item"}>
@@ -38,7 +61,12 @@ class Navigation extends Component {
                             // Class name that is active only when the page is active
                             activeClassName={"menu__link--active"}
                             className={"menu__link"}>
-                            <i className={"material-icons"}>
+                            <i
+                                className={
+                                    this.props.lightModeOn
+                                        ? "material-icons"
+                                        : "material-icons dark-mode"
+                                }>
                                 {"photo_library"}
                             </i>
                         </NavLink>
@@ -49,7 +77,14 @@ class Navigation extends Component {
                             // Class name that is active only when the page is active
                             activeClassName={"menu__link--active"}
                             className={"menu__link"}>
-                            <i className={"material-icons"}>{"person"}</i>
+                            <i
+                                className={
+                                    this.props.lightModeOn
+                                        ? "material-icons"
+                                        : "material-icons dark-mode"
+                                }>
+                                {"emoji_people"}
+                            </i>
                         </NavLink>
                     </li>
                 </ul>

@@ -13,21 +13,33 @@ import Link from "../link/link";
 
 class Gallery extends Component {
     render() {
-        // The condition checks the value of the scroll
+        /*// The condition checks the value of the scroll
         if (window.scrollY !== 0) {
             // If the scroll is different than 0, it sets the view to the top
             window.scrollTo(0, 0);
-        }
+        }*/
 
         const introductionSection = [];
 
         galleryPageInputs.sections.map(input =>
             introductionSection.push(
-                <h3 key={input.title} className={"introduction__title"}>
+                <h3
+                    key={input.title}
+                    className={
+                        this.props.lightModeOn
+                            ? "introduction__title"
+                            : "introduction__title--dark-mode"
+                    }>
                     {input.title}
                 </h3>,
                 input.phrases.map(phrase => (
-                    <p key={phrase} className={"introduction__paragraph"}>
+                    <p
+                        key={phrase}
+                        className={
+                            this.props.lightModeOn
+                                ? "introduction__paragraph"
+                                : "introduction__paragraph--dark-mode"
+                        }>
                         {phrase}
                     </p>
                 )),
@@ -36,9 +48,20 @@ class Gallery extends Component {
 
         return (
             <>
-                <Header headerTitle={galleryPageInputs.headerTitle} />
-                <Navigation />
-                <main className={"gallery"}>
+                <Header
+                    headerTitle={galleryPageInputs.headerTitle}
+                    lightModeOn={this.props.lightModeOn}
+                />
+                <Navigation
+                    lightModeOn={this.props.lightModeOn}
+                    onHandleMode={this.props.onHandleMode}
+                />
+                <main
+                    className={
+                        this.props.lightModeOn
+                            ? "gallery"
+                            : "gallery--dark-mode"
+                    }>
                     <section className={"introduction-container"}>
                         {introductionSection}
                     </section>
@@ -83,7 +106,7 @@ class Gallery extends Component {
                         </ul>
                     </div>
                 </main>
-                <Footer />
+                <Footer lightModeOn={this.props.lightModeOn} />
             </>
         );
     }

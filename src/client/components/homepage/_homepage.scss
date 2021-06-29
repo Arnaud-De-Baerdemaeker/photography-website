@@ -54,5 +54,10 @@
 				size: 5.5vw;
 			}
 		}
+
+		&--dark-mode {
+			@extend .home-page__main-title;
+			color: $white-230-dark-mode;
+		}
 	}
 }

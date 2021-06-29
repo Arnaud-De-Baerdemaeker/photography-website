@@ -1,16 +1,20 @@
 .header {
     &__container { // <header>
-        background-color: $darkGreen;
-        box-shadow: 0 0 0.625rem $blackHalfTransparent;
+        background-color: $dark-green;
+        box-shadow: 0 0 0.625rem $black-50;
+
+        &--dark-mode {
+            background-color: $grey-30-dark-mode;
+        }
     }
 
-    &__main-title--other-pages {
+    &__main-title--other-pages { // <h1>
         font: {
             family: $zcoolXiaoWeiRegular;
             size: 0.8rem;
         }
         color: $white;
-        background-color: $darkGreen2;
+        background-color: $dark-green-2;
         letter-spacing: 0.188rem;
         margin: {
             top: 0;
@@ -26,6 +30,12 @@
         }
         height: 3rem;
         line-height: 3rem;
+
+        &--dark-mode {
+            @extend .header__main-title--other-pages;
+            color: $white-230-dark-mode;
+            background-color: $grey-45-dark-mode;
+        }
     }
 
     &__title { // <div>
@@ -52,5 +62,11 @@
             size: 1.75rem;
         }
         color: $white;
+        letter-spacing: 0.313rem;
+
+        &--dark-mode {
+            @extend .header__subtitle;
+            color: $white-230-dark-mode;
+        }
     }
 }

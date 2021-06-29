@@ -28,7 +28,11 @@ class About extends Component {
             introductionSection.push(
                 <h3
                     key={aboutMePageInputs.sections[i].title}
-                    className={"introduction__title"}>
+                    className={
+                        this.props.lightModeOn
+                            ? "introduction__title"
+                            : "introduction__title--dark-mode"
+                    }>
                     {aboutMePageInputs.sections[i].title}
                 </h3>,
                 //<div className={"divider"} />,
@@ -38,7 +42,11 @@ class About extends Component {
                     introductionSection.push(
                         <p
                             key={paragraph}
-                            className={"introduction__paragraph"}>
+                            className={
+                                this.props.lightModeOn
+                                    ? "introduction__paragraph"
+                                    : "introduction__paragraph--dark-mode"
+                            }>
                             {paragraph}
                         </p>,
                     );
@@ -48,9 +56,18 @@ class About extends Component {
 
         return (
             <>
-                <Header headerTitle={aboutMePageInputs.headerTitle} />
-                <Navigation />
-                <main className={"about"}>
+                <Header
+                    headerTitle={aboutMePageInputs.headerTitle}
+                    lightModeOn={this.props.lightModeOn}
+                />
+                <Navigation
+                    lightModeOn={this.props.lightModeOn}
+                    onHandleMode={this.props.onHandleMode}
+                />
+                <main
+                    className={
+                        this.props.lightModeOn ? "about" : "about--dark-mode"
+                    }>
                     <section className={"introduction-container"}>
                         {introductionSection}
                     </section>
@@ -59,16 +76,21 @@ class About extends Component {
                             <Image
                                 url={MyPhoto}
                                 alt={"Photo de moi"}
-                                title={"Oui, c'est moi !"}
+                                title={"Bonjour !"}
                                 class={"about__image"}
                             />
-                            <figcaption className={"about__image-caption"}>
+                            <figcaption
+                                className={
+                                    this.props.lightModeOn
+                                        ? "about__image-caption"
+                                        : "about__image-caption--dark-mode"
+                                }>
                                 {"C'est moi !"}
                             </figcaption>
                         </figure>
                     </div>
                 </main>
-                <Footer />
+                <Footer lightModeOn={this.props.lightModeOn} />
             </>
         );
     }

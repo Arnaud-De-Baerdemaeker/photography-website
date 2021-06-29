@@ -10,9 +10,17 @@ class HomePage extends Component {
     render() {
         return (
             <div className={"home-page__container"}>
-                <Navigation />
+                <Navigation
+                    lightModeOn={this.props.lightModeOn}
+                    onHandleMode={this.props.onHandleMode}
+                />
                 <div className={"home-page__title-container"}>
-                    <h1 className={"home-page__main-title"}>
+                    <h1
+                        className={
+                            this.props.lightModeOn
+                                ? "home-page__main-title"
+                                : "home-page__main-title--dark-mode"
+                        }>
                         {"ARNAUD"}
                         <br />
                         {"DE BAERDEMAEKER"}

@@ -5,13 +5,19 @@
 .photos-cards {
 	&__card { // <div>
 		border-radius: 0.2rem;
-		box-shadow: 0 0 0.469rem $blackHalfTransparent;
+		box-shadow: 0 0 0.469rem $black-50;
 		width: 18rem;
 		@media #{$mq-390-up} {
 			width: 21.875rem;
 		}
 		display: flex;
 		flex-direction: column;
+
+		&--dark-mode {
+			@extend .photos-cards__card;
+			background-color: $grey-45-dark-mode;
+			color: $white-215-dark-mode;
+		}
 	}
 
 	&__titles { // <div>
@@ -29,8 +35,13 @@
 			bottom: 0;
 			left: 0;
 		}
-		color: $darkGreen;
+		color: $dark-green;
 		letter-spacing: unset;
+
+		&--dark-mode {
+			@extend .photos-cards__mainTitle;
+			color: $white-230-dark-mode;
+		}
 	}
 
 	&__subtitle { // <h4>
@@ -40,6 +51,11 @@
 			weight: normal;
 		}
 		letter-spacing: unset;
+
+		&--dark-mode {
+			@extend .photos-cards__subtitle;
+			color: $white-230-dark-mode;
+		}
 	}
 
 	&__image-container { // <figure>

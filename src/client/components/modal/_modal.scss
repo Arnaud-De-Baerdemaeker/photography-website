@@ -12,7 +12,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: $darkGrey;
+	background-color: $dark-grey;
+	color: $white;
 
 	&__image-container { // <figure>
 		margin: {
@@ -29,7 +30,7 @@
 
 	&__caption { // <figcaption>
 		font-size: 0.75rem;
-		color: $white;
+		//color: $white;
 		font-style: italic;
 		text-align: right;
 		padding: {
@@ -54,12 +55,13 @@
 			left: auto;
 		}
 		cursor: pointer;
-		background-color: $blackHalfTransparent;
+		background-color: $black-50;
 		border-radius: 3.5rem;
 		justify-content: center;
 		align-items: center;
 		transition-property: background-color;
 		transition-duration: 0.5s;
+		-webkit-tap-highlight-color: transparent;
 
 		&:hover {
 			background-color: $black;
@@ -67,6 +69,10 @@
 
 		.material-icons {
 			font-size: 2rem;
+
+			&.dark-mode {
+				color: $white-215-dark-mode;
+			}
 		}
 	}
 }

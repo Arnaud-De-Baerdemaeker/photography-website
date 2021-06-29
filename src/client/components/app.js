@@ -13,6 +13,20 @@ import PhotosList from "./photos-list/photos-list";
 import data from "./../JSON/metadata.json";
 
 class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            lightModeOn: true,
+        };
+        this.handleMode = this.handleMode.bind(this);
+    }
+
+    handleMode() {
+        this.setState(state => ({
+            lightModeOn: !state.lightModeOn,
+        }));
+    }
+
     render() {
         return (
             <>
@@ -21,27 +35,58 @@ class App extends Component {
                         name={"viewport"}
                         content={"width=device-width, initial-scale=1.0"}
                     />
+                    <link
+                        href={
+                            "https://fonts.googleapis.com/icon?family=Material+Icons"
+                        }
+                        rel={"stylesheet"}
+                    />
                     <title>{"Arnaud De Baerdemaeker"}</title>
                 </Helmet>
                 <BrowserRouter>
                     <Switch>
                         <Route exact path={"/gallery/2014"}>
-                            <PhotosList album={data[0].album_2014} />
+                            <PhotosList
+                                album={data[0].album_2014}
+                                lightModeOn={this.state.lightModeOn}
+                                onHandleMode={this.handleMode}
+                            />
                         </Route>
                         <Route exact path={"/gallery/2015"}>
-                            <PhotosList album={data[1].album_2015} />
+                            <PhotosList
+                                album={data[1].album_2015}
+                                lightModeOn={this.state.lightModeOn}
+                                onHandleMode={this.handleMode}
+                            />
                         </Route>
                         <Route exact path={"/gallery/2016"}>
-                            <PhotosList album={data[2].album_2016} location />
+                            <PhotosList
+                                album={data[2].album_2016}
+                                lightModeOn={this.state.lightModeOn}
+                                onHandleMode={this.handleMode}
+                                location
+                            />
                         </Route>
                         <Route exact path={"/gallery/2017"}>
-                            <PhotosList album={data[3].album_2017} />
+                            <PhotosList
+                                album={data[3].album_2017}
+                                lightModeOn={this.state.lightModeOn}
+                                onHandleMode={this.handleMode}
+                            />
                         </Route>
                         <Route exact path={"/gallery/2018"}>
-                            <PhotosList album={data[4].album_2018} />
+                            <PhotosList
+                                album={data[4].album_2018}
+                                lightModeOn={this.state.lightModeOn}
+                                onHandleMode={this.handleMode}
+                            />
                         </Route>
                         <Route exact path={"/gallery/2019"}>
-                            <PhotosList album={data[5].album_2019} />
+                            <PhotosList
+                                album={data[5].album_2019}
+                                lightModeOn={this.state.lightModeOn}
+                                onHandleMode={this.handleMode}
+                            />
                         </Route>
                         <Route exact path={"/gallery"}>
                             <Gallery
@@ -69,13 +114,21 @@ class App extends Component {
                                 thumbnail2019={
                                     data[5].album_2019.photos[0]["576p"]
                                 }
+                                lightModeOn={this.state.lightModeOn}
+                                onHandleMode={this.handleMode}
                             />
                         </Route>
                         <Route exact path={"/about"}>
-                            <About />
+                            <About
+                                lightModeOn={this.state.lightModeOn}
+                                onHandleMode={this.handleMode}
+                            />
                         </Route>
                         <Route exact path={"/"}>
-                            <HomePage />
+                            <HomePage
+                                lightModeOn={this.state.lightModeOn}
+                                onHandleMode={this.handleMode}
+                            />
                         </Route>
                     </Switch>
                 </BrowserRouter>

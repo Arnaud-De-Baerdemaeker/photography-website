@@ -14,7 +14,14 @@ class Modal extends Component {
                     <Image url={this.props.url.hd} class={"modal__image"} />
                 </figure>
                 <div className={"modal__close"} onClick={this.props.onClick}>
-                    <i className={"material-icons"}>{"close"}</i>
+                    <i
+                        className={
+                            this.props.lightModeOn
+                                ? "material-icons"
+                                : "material-icons dark-mode"
+                        }>
+                        {"close"}
+                    </i>
                 </div>
             </div>
         );

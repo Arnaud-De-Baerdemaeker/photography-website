@@ -3,9 +3,9 @@
 // By Arnaud De Baerdemaeker
 
 .photos-list { // <main>
-	margin: {
+	padding: {
 		top: 5rem;
-		bottom: 0;
+		bottom: 5rem;
 	}
 	display: flex;
 	flex-wrap: wrap;
@@ -14,5 +14,10 @@
 	padding: {
 		right: 1.25rem;
 		left: 1.25rem;
+	}
+
+	&--dark-mode {
+		@extend .photos-list;
+		background-color: $grey-18-dark-mode;
 	}
 }

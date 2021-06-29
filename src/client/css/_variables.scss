@@ -7,12 +7,18 @@ $architectsDaughter: "Architects_Daughter--Regular", Arial, Helvetica, sans-seri
 // Colors
 $white: rgb(255, 255, 255);
 $black: rgb(0, 0, 0);
-$darkGrey: rgb(50, 50, 50);
-$blackTransparent: rgba(0, 0, 0, 0);
-$blackHalfTransparent: rgba(0, 0, 0, 0.5);
+$black-0: rgba(0, 0, 0, 0);
+$black-50: rgba(0, 0, 0, 0.5);
+$dark-grey: rgb(50, 50, 50);
 $green: rgb(88, 129, 87);
-$darkGreen: rgb(58, 90, 64);
-$darkGreen2: rgb(52, 78, 65);
+$dark-green: rgb(58, 90, 64);
+$dark-green-2: rgb(52, 78, 65);
+
+$white-215-dark-mode: rgb(215, 215, 215);
+$white-230-dark-mode: rgb(230, 230, 230);
+$grey-45-dark-mode: rgb(45, 45, 45);
+$grey-30-dark-mode: rgb(30, 30, 30);
+$grey-18-dark-mode: rgb(18, 18, 18);
 
 // Breakpoints
 $bp-w-390: 24.375rem;

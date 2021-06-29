@@ -3,7 +3,15 @@
 // By Arnaud De Baerdemaeker
 
 .about { // <main>
-	margin-top: 5rem;
+	padding: {
+		top: 5rem;
+		bottom: 5rem;
+	}
+
+	&--dark-mode {
+		@extend .about;
+		background-color: $grey-18-dark-mode;
+	}
 
 	&__my-photo { // <div>
 		margin-top: 5rem;
@@ -39,5 +47,10 @@
 			style: italic;
 		}
 		text-align: right;
+
+		&--dark-mode {
+			@extend .about__image-caption;
+			color: $white-215-dark-mode;
+		}
 	}
 }
