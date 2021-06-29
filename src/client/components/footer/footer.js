@@ -90,7 +90,7 @@ class Footer extends Component {
                     <p className={"footer__credits"}>
                         {"Tous droits réservés"}
                     </p>
-                    <p className={"footer__credits"}>{"Version 1.0.1"}</p>
+                    <p className={"footer__credits"}>{"Version 1.1.0"}</p>
                 </div>
             </footer>
         );
