@@ -11,13 +11,15 @@ import {galleryPageInputs} from "../../constants/constants";
 import Navigation from "../navigation/navigation";
 
 class PhotosList extends Component {
-    render() {
-        /*// The condition checks if the value of the scroll is different than 0.
+    componentDidMount() {
+        // The condition checks if the value of the scroll is different than 0
         if (window.scrollY !== 0) {
-            // If it is, it restores the view to the top.
+            // If it is, it restores the view to the top
             window.scrollTo(0, 0);
-        }*/
+        }
+    }
 
+    render() {
         const cards = [];
 
         // The loop goes on following the number of entries in the metadata.json file
