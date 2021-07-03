@@ -19,7 +19,7 @@ Le site a été développé en ReactJS et mis en page avec SCSS.
 ## Versions
 
 ### 1.1.2
-- Correction d'un bug qui empêche le rechargement des pages autres que la page d'accueil
+- Correction d'un bug qui empêche le rechargement des pages en dehors de la page d'accueil
 
 ### 1.1.1
 - Amélioration de la navigation en rétablissant la vue en haut de page en arrivant sur la liste des photos
