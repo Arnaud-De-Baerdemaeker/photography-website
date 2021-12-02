@@ -5,12 +5,17 @@
 import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
 import Navigation from "../navigation/navigation";
+import LightDarkToggle from "../light-dark-toggle/light-dark-toggle";
 
 class HomePage extends Component {
     render() {
         return (
             <div className={"home-page__container"}>
                 <Navigation
+                    lightModeOn={this.props.lightModeOn}
+                    onHandleMode={this.props.onHandleMode}
+                />
+                <LightDarkToggle
                     lightModeOn={this.props.lightModeOn}
                     onHandleMode={this.props.onHandleMode}
                 />
@@ -21,9 +26,16 @@ class HomePage extends Component {
                                 ? "home-page__main-title"
                                 : "home-page__main-title--dark-mode"
                         }>
-                        {"ARNAUD"}
-                        <br />
-                        {"DE BAERDEMAEKER"}
+                        <span className={"home-page__name"}>
+                            {"ARNAUD"}
+                            <br />
+                            {"DE BAERDEMAEKER"}
+                        </span>
+                        <span className={"home-page__subtitle"}>
+                            {"Développeur web"}
+                            <br />
+                            {"Photographie amateure"}
+                        </span>
                     </h1>
                 </div>
             </div>
