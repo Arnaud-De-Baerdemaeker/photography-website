@@ -16,22 +16,20 @@
 	}
 		
 	&__title-container { // <div>
-		display: grid;
-		align-content: center;
+		display: flex;
+		align-items: center;
 		width: 100vw;
 		height: 100vh;
 		backdrop-filter: brightness(60%);
 	}
 
 	&__main-title { // <h1>
-		font: {
-			family: $zcoolXiaoWeiRegular;
-			size: 9.5vw;
-			weight: 100;
-		}
+		display: flex;
+		flex-direction: column;
+		row-gap: 10px;
+		width: inherit;
 		color: $white;
 		text-align: center;
-		letter-spacing: 0.2vw;
 		text-shadow: 0 0 0.469rem $white;
 		margin: {
 			top: 0;
@@ -39,25 +37,63 @@
 			bottom: 0;
 			left: 0;
 		}
-		@media #{$mq-500-up} {
-			font: {
-				size: 6.5vw;
-			}
-		}
-		@media #{$mq-700-up} {
-			font: {
-				size: 6vw;
-			}
-		}
-		@media #{$mq-1000-up} {
-			font: {
-				size: 5.5vw;
-			}
-		}
 
 		&--dark-mode {
 			@extend .home-page__main-title;
 			color: $white-230-dark-mode;
 		}
+	}
+
+	&__name { // <span>
+		display: block;
+		font: {
+			family: "Bebas Neue";
+			size: 35px;
+			weight: 100;
+		}
+		letter-spacing: 1px;
+		line-height: 35px;
+
+		// @media #{$mq-500-up} {
+		// 	font: {
+		// 		size: 6.5vw;
+		// 	}
+		// }
+		// @media #{$mq-700-up} {
+		// 	font: {
+		// 		size: 6vw;
+		// 	}
+		// }
+		// @media #{$mq-1000-up} {
+		// 	font: {
+		// 		size: 5.5vw;
+		// 	}
+		// }
+	}
+
+	&__subtitle { // <span>
+		display: block;
+		font: {
+			family: "Comfortaa";
+			size: 14px;
+			weight: 200;
+		}
+		line-height: 20px;
+
+		// @media #{$mq-500-up} {
+		// 	font: {
+		// 		size: 6.5vw;
+		// 	}
+		// }
+		// @media #{$mq-700-up} {
+		// 	font: {
+		// 		size: 6vw;
+		// 	}
+		// }
+		// @media #{$mq-1000-up} {
+		// 	font: {
+		// 		size: 5.5vw;
+		// 	}
+		// }
 	}
 }
