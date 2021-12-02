@@ -10,40 +10,24 @@ class Navigation extends Component {
     render() {
         const location = window.location.toString();
         // Change target's value when the website goes online
-        // const targetLocal = "http://192.168.0.10:8080/";
-        const targetOnline = "https://arnaud-de-baerdemaeker.netlify.app/";
+        const targetLocal = "http://192.168.0.10:4000/";
+        // const targetOnline = "https://arnaud-de-baerdemaeker.netlify.app/";
 
         return (
             <nav
                 className={
-                    location === targetOnline //targetLocal
+                    location === /*targetOnline*/ targetLocal
                         ? "menu__container--homepage"
                         : this.props.lightModeOn
                         ? "menu__container--other-pages"
                         : "menu__container--other-pages--dark-mode"
                 }>
-                <button
-                    type={"button"}
-                    onClick={this.props.onHandleMode}
-                    className={"menu__toggle-button"}>
-                    {/* Button to change the icon depending of the state of the night mode */}
-                    <i
-                        className={
-                            this.props.lightModeOn
-                                ? "material-icons"
-                                : "material-icons dark-mode"
-                        }>
-                        {this.props.lightModeOn ? "light_mode" : "dark_mode"}
-                    </i>
-                </button>
                 <ul className={"menu__list"}>
                     <li className={"menu__list-item"}>
                         <NavLink
                             to={"/"}
-                            // Allows to exactly match the url set in the "to" attribute
-                            exact={true}
-                            // Class name that is active only when the page is active
-                            activeClassName={"menu__link--active"}
+                            exact={true} // Allows to exactly match the url set in the "to" attribute
+                            activeClassName={"menu__link--active"} // Class name that is active only when the page is active
                             className={"menu__link"}>
                             <i
                                 className={
@@ -58,8 +42,7 @@ class Navigation extends Component {
                     <li className={"menu__list-item"}>
                         <NavLink
                             to={"/gallery"}
-                            // Class name that is active only when the page is active
-                            activeClassName={"menu__link--active"}
+                            activeClassName={"menu__link--active"} // Class name that is active only when the page is active
                             className={"menu__link"}>
                             <i
                                 className={
@@ -74,8 +57,7 @@ class Navigation extends Component {
                     <li className={"menu__list-item"}>
                         <NavLink
                             to={"/about"}
-                            // Class name that is active only when the page is active
-                            activeClassName={"menu__link--active"}
+                            activeClassName={"menu__link--active"} // Class name that is active only when the page is active
                             className={"menu__link"}>
                             <i
                                 className={
