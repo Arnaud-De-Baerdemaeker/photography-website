@@ -9,19 +9,22 @@ import {NavLink} from "react-router-dom";
 class Navigation extends Component {
     render() {
         const location = window.location.toString();
-        // Change target's value when the website goes online
-        const targetLocal = "http://192.168.0.10:4000/";
-        // const targetOnline = "https://arnaud-de-baerdemaeker.netlify.app/";
+        const local = "http://192.168.0.10:4000/";
+        const online = "https://arnaud-de-baerdemaeker.netlify.app/";
+        const lightModeOn = this.props.lightModeOn;
+
+        function setNavBarClassName() {
+            if (location === local || location === online) {
+                return "menu__container--homepage";
+            }
+            if (lightModeOn === true) {
+                return "menu__container--other-pages";
+            }
+            return "menu__container--other-pages dark-mode";
+        }
 
         return (
-            <nav
-                className={
-                    location === /*targetOnline*/ targetLocal
-                        ? "menu__container--homepage"
-                        : this.props.lightModeOn
-                        ? "menu__container--other-pages"
-                        : "menu__container--other-pages--dark-mode"
-                }>
+            <nav className={setNavBarClassName()}>
                 <ul className={"menu__list"}>
                     <li className={"menu__list-item"}>
                         <NavLink
