@@ -1,14 +1,8 @@
-// Fonts
-$quicksandRegular: "Quicksand--Regular", Arial, Helvetica, sans-serif;
-$comfortaaBold: "Comfortaa--Bold", Arial, Helvetica, sans-serif;
-$zcoolXiaoWeiRegular: "ZCOOLXiaoWei--Regular", Arial, Helvetica, sans-serif;
-$architectsDaughter: "Architects_Daughter--Regular", Arial, Helvetica, sans-serif;
-
 // Colors
 $white: rgb(255, 255, 255);
 $black: rgb(0, 0, 0);
-$black-0: rgba(0, 0, 0, 0);
-$black-50: rgba(0, 0, 0, 0.5);
+$transparent: rgba(0, 0, 0, 0);
+$half-transparent: rgba(0, 0, 0, 0.5);
 $dark-grey: rgb(50, 50, 50);
 $green: rgb(88, 129, 87);
 $dark-green: rgb(58, 90, 64);
@@ -20,34 +14,55 @@ $grey-45-dark-mode: rgb(45, 45, 45);
 $grey-30-dark-mode: rgb(30, 30, 30);
 $grey-18-dark-mode: rgb(18, 18, 18);
 
+
+// Orientations
+$portrait: "(orientation: portrait)";
+$landscape: "(orientation: landscape)";
+
+
 // Breakpoints
-$bp-w-390: 24.375rem;
-$bp-w-400: 25rem;
-$bp-w-500: 31.25rem;
-$bp-w-600: 37.5rem;
-$bp-w-700: 43.75rem;
-$bp-w-800: 50rem;
-$bp-w-900: 56.25rem;
-$bp-w-1000: 62.5rem;
-$bp-w-1200: 75rem;
-$bp-w-1300: 81.25rem;
-$bp-w-1400: 87.5rem;
-$bp-w-1500: 93.75rem;
-$bp-w-1600: 100rem;
-$bp-w-1800: 112.5rem;
+$bp-390: 24.375rem;
+$bp-400: 25rem;
+$bp-500: 31.25rem;
+$bp-600: 37.5rem;
+$bp-700: 43.75rem;
+$bp-800: 50rem;
+$bp-900: 56.25rem;
+$bp-1000: 62.5rem;
+$bp-1100: 68.75rem;
+$bp-1200: 75rem;
+$bp-1300: 81.25rem;
+$bp-1400: 87.5rem;
+$bp-1500: 93.75rem;
+$bp-1600: 100rem;
+$bp-1700: 106.25rem;
+$bp-1800: 112.5rem;
+$bp-1900: 120rem;
+
 
 // Media queries
-$mq-390-up: "(min-width: #{$bp-w-390})";
-$mq-400-up: "(min-width: #{$bp-w-400})";
-$mq-500-up: "(min-width: #{$bp-w-500})";
-$mq-600-up: "(min-width: #{$bp-w-600})";
-$mq-700-up: "(min-width: #{$bp-w-700})";
-$mq-800-up: "(min-width: #{$bp-w-800})";
-$mq-900-up: "(min-width: #{$bp-w-900})";
-$mq-1000-up: "(min-width: #{$bp-w-1000})";
-$mq-1200-up: "(min-width: #{$bp-w-1200})";
-$mq-1300-up: "(min-width: #{$bp-w-1300})";
-$mq-1400-up: "(min-width: #{$bp-w-1400})";
-$mq-1500-up: "(min-width: #{$bp-w-1500})";
-$mq-1600-up: "(min-width: #{$bp-w-1600})";
-$mq-1800-up: "(min-width: #{$bp-w-1800})";
+$mq-w390-up: "(min-width: #{$bp-390})";
+$mq-w400-up: "(min-width: #{$bp-400})";
+$mq-w500-up: "(min-width: #{$bp-500})";
+$mq-w600-up: "(min-width: #{$bp-600})";
+$mq-w700-up: "(min-width: #{$bp-700})";
+$mq-w800-up: "(min-width: #{$bp-800})";
+$mq-w900-up: "(min-width: #{$bp-900})";
+$mq-w1000-up: "(min-width: #{$bp-1000})";
+$mq-w1100-up: "(min-width: #{$bp-1100})";
+$mq-w1200-up: "(min-width: #{$bp-1200})";
+$mq-w1300-up: "(min-width: #{$bp-1300})";
+$mq-w1400-up: "(min-width: #{$bp-1400})";
+$mq-w1500-up: "(min-width: #{$bp-1500})";
+$mq-w1600-up: "(min-width: #{$bp-1600})";
+$mq-w1700-up: "(min-width: #{$bp-1700})";
+$mq-w1800-up: "(min-width: #{$bp-1800})";
+$mq-w1900-up: "(min-width: #{$bp-1900})";
+
+$mq-h400-up: "(min-height: #{$bp-400})";
+$mq-h500-up: "(min-height: #{$bp-500})";
+$mq-h600-up: "(min-height: #{$bp-600})";
+$mq-h700-up: "(min-height: #{$bp-700})";
+$mq-h800-up: "(min-height: #{$bp-800})";
+$mq-h900-up: "(min-height: #{$bp-900})";
+$mq-h1000-up: "(min-height: #{$bp-1000})";
