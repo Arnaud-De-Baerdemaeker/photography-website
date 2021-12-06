@@ -14,7 +14,7 @@
 		width: 100vw;
 		height: 100vh;
 	}
-		
+
 	&__title-container { // <div>
 		display: flex;
 		align-items: center;
@@ -26,11 +26,11 @@
 	&__main-title { // <h1>
 		display: flex;
 		flex-direction: column;
-		row-gap: 10px;
+		row-gap: 0.7813rem;
 		width: inherit;
 		color: $white;
 		text-align: center;
-		text-shadow: 0 0 0.469rem $white;
+		text-shadow: 0 0 0.4688rem $white;
 		margin: {
 			top: 0;
 			right: 0;
@@ -47,53 +47,169 @@
 	&__name { // <span>
 		display: block;
 		font: {
-			family: "Bebas Neue";
-			size: 35px;
+			family: "Bebas Neue", Arial, Helvetica, sans-serif;
+			size: 2.1875rem;
 			weight: 100;
 		}
-		letter-spacing: 1px;
-		line-height: 35px;
+		letter-spacing: 0.0625rem;
+		line-height: 2.1875rem;
 
-		// @media #{$mq-500-up} {
-		// 	font: {
-		// 		size: 6.5vw;
-		// 	}
-		// }
-		// @media #{$mq-700-up} {
-		// 	font: {
-		// 		size: 6vw;
-		// 	}
-		// }
-		// @media #{$mq-1000-up} {
-		// 	font: {
-		// 		size: 5.5vw;
-		// 	}
-		// }
+		@media #{$portrait} {
+			@media #{$mq-w400-up} {
+				font-size: 2.5rem;
+				line-height: 2.5rem;
+			}
+
+			@media #{$mq-w500-up} {
+				font-size: 2.8125rem;
+				line-height: 2.8125rem;
+			}
+
+			@media #{$mq-w600-up} {
+				font-size: 3.125rem;
+				line-height: 3.125rem;
+			}
+
+			@media #{$mq-w700-up} {
+				font-size: 3.4375rem;
+				line-height: 3.4375rem;
+			}
+
+			@media #{$mq-w800-up} {
+				font-size: 3.75rem;
+				line-height: 3.75rem;
+			}
+
+			@media #{$mq-w900-up} {
+				font-size: 4.0625rem;
+				line-height: 4.0625rem;
+			}
+
+			@media #{$mq-w1000-up} {
+				font-size: 4.375rem;
+				line-height: 4.375rem;
+			}
+		}
+
+		@media #{$landscape} {
+			@media #{$mq-h400-up} {
+				font-size: 2.8125rem;
+				line-height: 2.8125rem;
+			}
+
+			@media #{$mq-h500-up} {
+				font-size: 3.125rem;
+				line-height: 3.125rem;
+			}
+
+			@media #{$mq-h600-up} {
+				font-size: 3.4375rem;
+				line-height: 3.4375rem;
+			}
+
+			@media #{$mq-h700-up} {
+				font-size: 3.75rem;
+				line-height: 3.75rem;
+			}
+
+			@media #{$mq-h800-up} {
+				font-size: 4.0625rem;
+				line-height: 4.0625rem;
+			}
+
+			@media #{$mq-h900-up} {
+				font-size: 4.375rem;
+				line-height: 4.375rem;
+			}
+
+			@media #{$mq-h1000-up} {
+				font-size: 4.6875rem;
+				line-height: 4.6875rem;
+			}
+		}
 	}
 
 	&__subtitle { // <span>
 		display: block;
 		font: {
-			family: "Comfortaa";
-			size: 14px;
+			family: "Comfortaa", Arial, Helvetica, sans-serif;
+			size: 0.9375rem;
 			weight: 200;
 		}
-		line-height: 20px;
+		line-height: 1.5625rem;
 
-		// @media #{$mq-500-up} {
-		// 	font: {
-		// 		size: 6.5vw;
-		// 	}
-		// }
-		// @media #{$mq-700-up} {
-		// 	font: {
-		// 		size: 6vw;
-		// 	}
-		// }
-		// @media #{$mq-1000-up} {
-		// 	font: {
-		// 		size: 5.5vw;
-		// 	}
-		// }
+		@media #{$portrait} {
+			@media #{$mq-w400-up} {
+				font-size: 1rem;
+				line-height: 1.625rem;
+			}
+
+			@media #{$mq-w500-up} {
+				font-size: 1.0625rem;
+				line-height: 1.6875rem;
+			}
+
+			@media #{$mq-w600-up} {
+				font-size: 1.125rem;
+				line-height: 1.75rem;
+			}
+
+			@media #{$mq-w700-up} {
+				font-size: 1.1875rem;
+				line-height: 1.8125rem;
+			}
+
+			@media #{$mq-w800-up} {
+				font-size: 1.25rem;
+				line-height: 1.875rem;
+			}
+
+			@media #{$mq-w900-up} {
+				font-size: 1.3125rem;
+				line-height: 1.9375rem;
+			}
+
+			@media #{$mq-w1000-up} {
+				font-size: 1.375rem;
+				line-height: 2rem;
+			}
+		}
+
+		@media #{$landscape} {
+			@media #{$mq-h400-up} {
+				font-size: 1.125rem;
+				line-height: 1.75rem;
+			}
+
+			@media #{$mq-h500-up} {
+				font-size: 1.1875rem;
+				line-height: 1.8125rem;
+			}
+
+			@media #{$mq-h600-up} {
+				font-size: 1.25rem;
+				line-height: 1.875rem;
+			}
+
+			@media #{$mq-h700-up} {
+				font-size: 1.3125rem;
+				line-height: 1.9375rem;
+			}
+
+			@media #{$mq-h800-up} {
+				font-size: 1.375rem;
+				line-height: 2rem;
+			}
+
+			@media #{$mq-h900-up} {
+				font-size: 1.4375rem;
+				line-height: 2.0625rem;
+			}
+
+			@media #{$mq-h1000-up} {
+				font-size: 1.5rem;
+				line-height: 2.125rem;
+			}
+		}
 	}
 }
