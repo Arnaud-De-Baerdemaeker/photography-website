@@ -7,10 +7,18 @@ import {hot} from "react-hot-loader/root";
 
 class Introduction extends Component {
     render() {
+        const phrases = [];
+
+        for (const phrase of this.props.introduction.phrases) {
+            phrases.push(<p className={"introduction__paragraph"}>{phrase}</p>);
+        }
+
         return (
             <section className={"introduction__container"}>
-                <h3 className={"introduction__title"}>{}</h3>
-                <p className={"introduction__paragraph"}>{}</p>
+                <h3 className={"introduction__title"}>
+                    {this.props.introduction.title}
+                </h3>
+                {phrases}
             </section>
         );
     }
