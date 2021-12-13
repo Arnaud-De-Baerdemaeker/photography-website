@@ -57,21 +57,6 @@ class Navigation extends Component {
                             </i>
                         </NavLink>
                     </li>
-                    <li className={"menu__list-item"}>
-                        <NavLink
-                            to={"/about"}
-                            activeClassName={"menu__link--active"} // Class name that is active only when the page is active
-                            className={"menu__link"}>
-                            <i
-                                className={
-                                    this.props.lightModeOn
-                                        ? "material-icons"
-                                        : "material-icons dark-mode"
-                                }>
-                                {"emoji_people"}
-                            </i>
-                        </NavLink>
-                    </li>
                 </ul>
             </nav>
         );
