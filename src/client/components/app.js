@@ -6,9 +6,8 @@ import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 import {Helmet} from "react-helmet";
-import HomePage from "./homepage/home";
+import HomePage from "./homepage/homepage";
 import Gallery from "./gallery-page/gallery";
-import About from "./about-page/about";
 import PhotosList from "./photos-list/photos-list";
 import data from "./../JSON/metadata.json";
 
@@ -128,12 +127,6 @@ class App extends Component {
                                 thumbnail2019={
                                     data[5].album_2019.photos[0]["576p"]
                                 }
-                                lightModeOn={this.state.lightModeOn}
-                                onHandleMode={this.handleMode}
-                            />
-                        </Route>
-                        <Route exact path={"/about"}>
-                            <About
                                 lightModeOn={this.state.lightModeOn}
                                 onHandleMode={this.handleMode}
                             />
