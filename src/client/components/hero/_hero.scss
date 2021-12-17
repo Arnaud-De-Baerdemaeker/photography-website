@@ -10,23 +10,30 @@
 		size: cover;
 		position-x: 70%;
 	}
-	width: 100vw;
+	width: 100%;
 	height: 100vh;
 
 	&__back-filter { // <div>
-		display: flex;
-		align-items: center;
-		width: 100vw;
-		height: 100vh;
+		width: inherit;
+		height: inherit;
 		background-color: rgba(0, 0, 0, 0.45);
+		color: $white;
+	}
+	
+	&__gradient { // <div>
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		row-gap: 10px;
+		width: inherit;
+		height: inherit;
+		background: linear-gradient(to top, $secondary-color 2.5%, $transparent 20%);
 	}
 
 	&__main-title { // <h1>
 		display: flex;
-		flex-direction: column;
 		row-gap: 0.7813rem;
-		width: inherit;
-		color: $white;
 		text-align: center;
 		text-shadow: 0 0 0.4688rem $white;
 		margin: {
@@ -35,15 +42,6 @@
 			bottom: 0;
 			left: 0;
 		}
-
-		&--dark-mode {
-			@extend .hero__main-title;
-			color: $white-230-dark-mode;
-		}
-	}
-
-	&__name { // <span>
-		display: block;
 		font: {
 			family: "Bebas Neue", Arial, Helvetica, sans-serif;
 			size: 2.1875rem;
@@ -127,14 +125,15 @@
 		}
 	}
 
-	&__subtitle { // <span>
-		display: block;
+	&__subtitle { // <h2>
 		font: {
-			family: "Comfortaa", Arial, Helvetica, sans-serif;
+			family: "DM Sans", Arial, Helvetica, sans-serif;
 			size: 0.9375rem;
 			weight: 200;
 		}
 		line-height: 1.5625rem;
+		margin: 0;
+		text-align: center;
 
 		@media #{$portrait} {
 			@media #{$mq-w400-up} {
