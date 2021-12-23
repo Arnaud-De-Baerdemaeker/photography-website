@@ -4,51 +4,41 @@
 
 import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
+import {NavLink} from "react-router-dom";
+import Button from "../button/button";
+import {faBars, faTimes} from "@fortawesome/free-solid-svg-icons";
 
 class Header extends Component {
     render() {
-        const subtitle = [];
-
-        if (this.props.headerSubtitle) {
-            subtitle.push(
-                <h3
-                    key={this.props.headerSubtitle}
-                    className={
-                        this.props.lightModeOn
-                            ? "header__subtitle"
-                            : "header__subtitle--dark-mode"
-                    }>
-                    {this.props.headerSubtitle}
-                </h3>,
-            );
-        }
-
         return (
             <header
                 className={
-                    this.props.lightModeOn
-                        ? "header__container"
-                        : "header__container--dark-mode"
+                    this.props.isMenuOpen ? "header" : "header gradient"
                 }>
-                <h1
-                    className={
-                        this.props.lightModeOn
-                            ? "header__main-title--other-pages"
-                            : "header__main-title--other-pages--dark-mode"
-                    }>
-                    {"Arnaud De Baerdemaeker"}
-                </h1>
-                <div className={"header__title"}>
-                    <h2
-                        className={
-                            this.props.lightModeOn
-                                ? "level-2-title"
-                                : "level-2-title--dark-mode"
-                        }>
-                        {this.props.headerTitle}
-                    </h2>
-                    {subtitle}
-                </div>
+                {this.props.fullName ? (
+                    <h1 className={"header__title"}>
+                        <NavLink
+                            to={"/"}
+                            exact={true}
+                            handleClick={this.props.closeMenu}
+                            className={"header__link"}>
+                            {this.props.fullName.firstName}
+                            <br />
+                            {this.props.fullName.lastName}
+                        </NavLink>
+                    </h1>
+                ) : null}
+                {/* Button to open/close the menu */}
+                <Button
+                    function={this.props.toggleMenu}
+                    icon={this.props.isMenuOpen ? faTimes : faBars}
+                    alt={
+                        this.props.isMenuOpen
+                            ? "Fermer le menu"
+                            : "Ouvrir le menu"
+                    }
+                    class={"button__menu"}
+                />
             </header>
         );
     }
