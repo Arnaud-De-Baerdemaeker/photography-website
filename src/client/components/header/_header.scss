@@ -1,72 +1,29 @@
-.header {
-    &__container { // <header>
-        background-color: $dark-green;
-        box-shadow: 0 0 0.625rem $black-50;
+.header { // <header>
+	position: fixed;
+	top: 0;
+	z-index: 2;
+	width: 100%;
+	height: 60px;
 
-        &--dark-mode {
-            background-color: $grey-30-dark-mode;
-        }
-    }
+	&.gradient {
+		background: linear-gradient(to bottom, $secondary-color 0px, $transparent 60px);
+	}
 
-    &__main-title--other-pages { // <h1>
-        font: {
-            family: $zcoolXiaoWeiRegular;
-            size: 0.8rem;
-        }
-        color: $white;
-        background-color: $dark-green-2;
-        letter-spacing: 0.188rem;
-        margin: {
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-        }
-        padding: {
-            top: 0;
-            right: 1.25rem;
-            bottom: 0;
-            left: 1.25rem;
-        }
-        height: 3rem;
-        line-height: 3rem;
+	&__title { // <h1>
+		position: absolute;
+		top: calc(60px / 2 - 46px / 2);
+		font: {
+			family: "Bebas Neue";
+			size: 18px;
+		}
+		color: $white;
+		letter-spacing: 1px;
+		margin: 0;
+		padding-left: 16px;
+	}
 
-        &--dark-mode {
-            @extend .header__main-title--other-pages;
-            color: $white-230-dark-mode;
-            background-color: $grey-45-dark-mode;
-        }
-    }
-
-    &__title { // <div>
-        height: 10rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        @media #{$mq-600-up} {
-            height: 15rem;
-        }
-        @media #{$mq-1000-up} {
-            max-width: 50vw;
-            margin: {
-                right: auto;
-                left: auto;
-            }
-        }
-    }
-
-    &__subtitle { // <h3>
-        font: {
-            family: $quicksandRegular;
-            size: 1.75rem;
-        }
-        color: $white;
-        letter-spacing: 0.313rem;
-
-        &--dark-mode {
-            @extend .header__subtitle;
-            color: $white-230-dark-mode;
-        }
-    }
+	&__link { // <a>
+		color: inherit;
+		text-decoration: none;
+	}
 }
