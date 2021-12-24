@@ -8,11 +8,10 @@ class Image extends Component {
         return (
             <LazyLoadImage
                 src={this.props.url}
-                alt={this.props.alt}
+                alt={this.props.name}
                 title={this.props.title}
                 effect={"blur"}
-                onClick={this.props.onClick}
-                className={this.props.class}
+                className={"photos-cards__image"}
             />
         );
     }
