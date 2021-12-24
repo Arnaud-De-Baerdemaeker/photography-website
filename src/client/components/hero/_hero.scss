@@ -28,10 +28,10 @@
 		row-gap: 10px;
 		width: inherit;
 		height: inherit;
-		background: linear-gradient(to top, $secondary-color 2.5%, $transparent 20%);
+		background: linear-gradient(to top, $secondary-color 5px, $transparent 90px);
 	}
 
-	&__main-title { // <h1>
+	&__title { // <h1>
 		display: flex;
 		row-gap: 0.7813rem;
 		text-align: center;
@@ -134,6 +134,10 @@
 		line-height: 1.5625rem;
 		margin: 0;
 		text-align: center;
+		padding: {
+			right: 16px;
+			left: 16px;
+		}
 
 		@media #{$portrait} {
 			@media #{$mq-w400-up} {

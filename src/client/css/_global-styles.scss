@@ -1,83 +1,85 @@
 // Global settings
 body {
-    font-size: 16px;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: $quicksandRegular;
+	margin: 0;
+	box-sizing: border-box;
+	font: {
+		family: "DM Sans", Arial, Helvetica, sans-serif;
+		size: 16px;
+	}
+	background-color: $secondary-color;
 }
 
-.level-2-title {
-    font-size: 2rem;
-    letter-spacing: 0.313rem;
-    color: $white;
-    margin: {
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-    }
-    @media #{$mq-600-up} {
-        font-size: 3rem;
-    }
-
-    &--dark-mode {
-        @extend .level-2-title;
-        color: $white-230-dark-mode;
-    }
+.hidden {
+	display: none !important;
 }
 
-h3 {
-    font: {
-        family: $architectsDaughter;
-        size: 1.5rem;
-    }
-    margin: {
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-    }
-    letter-spacing: 0.063rem;
-}
+// .level-2-title {
+// 	font-size: 2rem;
+// 	letter-spacing: 0.313rem;
+// 	color: $white;
+// 	margin: {
+// 		top: 0;
+// 		right: 0;
+// 		bottom: 0;
+// 		left: 0;
+// 	}
+// 	@media #{$mq-w600-up} {
+// 		font-size: 3rem;
+// 	}
+// }
 
-h4 {
-    font: {
-        family: $quicksandRegular;
-        size: 1.75rem;
-    }
-    margin: {
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-    }
-    letter-spacing: 0.063rem;
-    color: $white;
-}
+// h3 {
+// 	font: {
+// 		family: "Architects Daughter", Arial, Helvetica, sans-serif;
+// 		size: 1.5rem;
+// 	}
+// 	margin: {
+// 		top: 0;
+// 		right: 0;
+// 		bottom: 0;
+// 		left: 0;
+// 	}
+// 	letter-spacing: 0.063rem;
+// }
+
+// h4 {
+// 	font: {
+// 		family: "Comfortaa", Arial, Helvetica, sans-serif;
+// 		size: 1.75rem;
+// 	}
+// 	margin: {
+// 		top: 0;
+// 		right: 0;
+// 		bottom: 0;
+// 		left: 0;
+// 	}
+// 	letter-spacing: 0.063rem;
+// 	color: $white;
+// }
 
 /*
 .divider { // <div>
-    margin: {
-        top: 0.75rem;
-        right: 0;
-        bottom: 0;
-        left: 0;
-    }
-    width: 27.5%;
-    border: {
-        top: {
-            style: solid;
-            color: $darkGreen;
-            width: 0.15rem;
-        }
-        bottom: {
-            style: solid;
-            color: $darkGreen;
-            width: 0.15rem;
-        }
-    };
+	margin: {
+		top: 0.75rem;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+	width: 27.5%;
+	border: {
+		top: {
+			style: solid;
+			color: $darkGreen;
+			width: 0.15rem;
+		}
+		bottom: {
+			style: solid;
+			color: $darkGreen;
+			width: 0.15rem;
+		}
+	};
 
-    &:last-of-type { // <div>
-        border: none;
-    }
+	&:last-of-type { // <div>
+		border: none;
+	}
 }*/

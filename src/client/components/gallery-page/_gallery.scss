@@ -3,41 +3,30 @@
 // By Arnaud De Baerdemaeker
 
 .gallery { // <main>
-	padding: {
-		top: 5rem;
-		bottom: 5rem;
-	}
+	background: linear-gradient(to top, $tertiary-color 2%, $transparent 25%);
 
-	&--dark-mode {
-		@extend .gallery;
-		background-color: $grey-18-dark-mode;
-	}
-
-	&__years-container { // <div>
-		margin-top: 5rem;
+	&__list-container { // <div>
 		padding: {
-			right: 1.25rem;
-			left: 1.25rem;
+			top: 50px;
+			right: 1rem;
+			bottom: 50px;
+			left: 1rem;
 		}
 	}
 
 	&__list { // <ul>
-		display: flex;
-		flex-wrap: wrap;
-		grid-gap: 1.25rem;
-		justify-content: center;
-		margin: {
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-		}
-		padding: {
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-		}
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		//row-gap: 16px;
+		column-gap: 16px;
+		margin: 0;
+		padding: 0;
 		list-style: none;
+	}
+
+	&__list-item { // <li>
+		&:nth-of-type(even) {
+			margin-top: 16px;
+		}
 	}
 }

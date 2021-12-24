@@ -2,81 +2,49 @@
 // Started on July 2020
 // By Arnaud De Baerdemaeker
 
-.menu {
-	&__container { // <nav>
-		position: fixed;
-		z-index: 1;
-		bottom: 0;
-		height: 3.5rem;
-
-		@media #{$mq-w800-up} {
-			height: 3.75rem;
-		}
-
-		@media #{$mq-w1600-up} {
-			height: 4.5rem;
-		}
-
-		&--homepage {
-			@extend .menu__container;
-			background: linear-gradient($transparent 0%, $black 100%);
-		}
-
-		&--other-pages {
-			@extend .menu__container;
-			background-color: $dark-green-2;
-			box-shadow: 0 0 0.625rem $half-transparent;
-
-			&.dark-mode {
-				@extend .menu__container--other-pages;
-				background-color: $grey-45-dark-mode;
-			}
-		}
-	}
+.menu { // <nav>
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgb(255, 255, 255);
+	background: radial-gradient(circle at 100% 0%, $transparent 5%, $secondary-color 25%);
 
 	&__list { // <ul>
 		display: flex;
-		justify-content: space-evenly;
-		width: 100vw;
-		height: inherit;
+		flex-direction: column;
+		row-gap: 30px;
 		list-style-type: none;
-		margin: {
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-		}
-		padding: {
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-		}
-	}
-
-	&__list-item { // <li>
-		display: inline-flex;
-		justify-content: center;
-		align-self: center;
+		margin: 0;
+		padding: 0;
 	}
 
 	&__link { // <a>
-		display: inline-flex;
-		align-items: center;
 		text-decoration: none;
-		color: $white;
+		color: $default-link;
 		-webkit-tap-highlight-color: transparent;
-		animation-iteration-count: infinite;
-		animation-duration: 1s;
-		font-size: 1rem;
-
-		@media #{$mq-w800-up} {
-			font-size: 1.75rem;
+		animation: {
+			iteration-count: infinite;
+			duration: 1s;
+		}
+		font: {
+			family: "DM Sans";
+			size: 40px;
+			weight: 700;
 		}
 
-		@media #{$mq-w1600-up} {
-			font-size: 2rem;
-		}
+	// 	@media #{$mq-w800-up} {
+	// 		font-size: 28px;
+	// 	}
+
+	// 	@media #{$mq-w1600-up} {
+	// 		font-size: 32px;
+	// 	}
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
@@ -85,24 +53,7 @@
 		}
 
 		&--active { // <a>
-			text-shadow: 0 0 0.5rem $white;
-		}
-	}
-
-	&__link .material-icons {
-		color: $white;
-		font-size: 1.5rem;
-
-		@media #{$mq-w800-up} {
-			font-size: 1.75rem;
-		}
-
-		@media #{$mq-w1600-up} {
-			font-size: 2rem;
-		}
-
-		&.dark-mode {
-			color: $white-230-dark-mode;
+			color: $white;
 		}
 	}
 }

@@ -2,114 +2,18 @@
 // Started on July 2020
 // By Arnaud De Baerdemaeker
 
-.photos-cards {
-	&__card { // <div>
-		border-radius: 0.2rem;
-		box-shadow: 0 0 0.469rem $black-50;
-		width: 18rem;
-		@media #{$mq-390-up} {
-			width: 21.875rem;
-		}
-		display: flex;
-		flex-direction: column;
+.photos-cards { // <div>
+	width: 100%;
+	height: 100px;
 
-		&--dark-mode {
-			@extend .photos-cards__card;
-			background-color: $grey-45-dark-mode;
-			color: $white-215-dark-mode;
-		}
-	}
-
-	&__titles { // <div>
-		padding: {
-			top: 1rem;
-			right: 1rem;
-			left: 1rem;
-		}
-	}
-
-	&__mainTitle { // <h3>
-		margin: {
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-		}
-		color: $dark-green;
-		letter-spacing: unset;
-
-		&--dark-mode {
-			@extend .photos-cards__mainTitle;
-			color: $white-230-dark-mode;
-		}
-	}
-
-	&__subtitle { // <h4>
-		color: $black;
-		font: {
-			size: 1rem;
-			weight: normal;
-		}
-		letter-spacing: unset;
-
-		&--dark-mode {
-			@extend .photos-cards__subtitle;
-			color: $white-230-dark-mode;
-		}
-	}
-
-	&__image-container { // <figure>
-		width: 100%;
-		margin: {
-			top: 1rem;
-			right: 0;
-			bottom: 0;
-			left: 0;
-		}
+	span {
+		height: inherit;
 	}
 
 	&__image { // <img>
 		width: 100%;
-	}
-
-	&__caption { // <figcaption>
-		font: {
-			size: 0.75rem;
-			style: italic;
-		}
-		text-align: right;
-		padding: {
-			right: 1rem;
-			left: 1rem;
-		}
-	}
-
-	&__metadata { // <div>
-		margin-top: 1rem;
-		padding: {
-			right: 1rem;
-			left: 1rem;
-		}
 		height: 100%;
-	}
-
-	&__list { // <ul>
-		list-style: none;
-		margin: {
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-		}
-		padding: {
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-		}
-	}
-
-	&__list-item:nth-of-type(1), &__list-item:nth-of-type(5) { // <li>
-		margin-bottom: 1rem;
+		vertical-align: middle;
+		object-fit: cover;
 	}
 }

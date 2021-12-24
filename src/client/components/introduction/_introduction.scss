@@ -1,85 +1,80 @@
-.introduction {
-    &-container { // <section>
-        padding: {
-            right: 1.25rem;
-            left: 1.25rem;
-        }
-        @media #{$mq-600-up} {
-            padding: unset;
-            max-width: 80vw;
-            margin: {
-                right: auto;
-                left: auto;
-            }
-        }
-        @media #{$mq-700-up} {
-            max-width: 70vw;
-        }
-        @media #{$mq-800-up} {
-            max-width: 60vw;
-        }
-        @media #{$mq-900-up} {
-            max-width: 50vw;
-        }
-        @media #{$mq-1500-up} {
-            width: 56.25rem;
-        }
-    }
+.introduction { // <div>
+	//margin-top: 32px;
+	padding: {
+		top: 50px;
+		right: 1rem;
+		bottom: 50px;
+		left: 1rem;
+	}
+	color: $quaternary-color-2;
 
-    &__title { // <h3>
-        color: $dark-green;
+	//&-container { // <section>
+		//width: 300px;
+		// padding: {
+		//     right: 1.25rem;
+		//     left: 1.25rem;
+		// }
+		// @media #{$mq-w600-up} {
+		//     padding: unset;
+		//     max-width: 80vw;
+		//     margin: {
+		//         right: auto;
+		//         left: auto;
+		//     }
+		// }
+		// @media #{$mq-w700-up} {
+		//     max-width: 70vw;
+		// }
+		// @media #{$mq-w800-up} {
+		//     max-width: 60vw;
+		// }
+		// @media #{$mq-w900-up} {
+		//     max-width: 50vw;
+		// }
+		// @media #{$mq-w1500-up} {
+		//     width: 56.25rem;
+		// }
+	//}
 
-        &:not(:first-child) { // <h3>
-            margin: {
-                top: 3rem;
-                right: 0;
-                bottom: 0;
-                left: 0;
-            }
-        }
+	// &__title { // <h3>
+	//     color: $main-color;
 
-        &--dark-mode {
-            &:not(:first-child) { // <h3>
-                margin: {
-                    top: 3rem;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;
-                }
-            }
-        }
+	//     &:not(:first-child) { // <h3>
+	//         margin: {
+	//             top: 3rem;
+	//             right: 0;
+	//             bottom: 0;
+	//             left: 0;
+	//         }
+	//     }
 
-        &:last-of-type { // <h3>
-            text-align: center;
-            @media #{$mq-1000-up} {
-                text-align: unset;
-            }
-        }
+	//     &:last-of-type { // <h3>
+	//         text-align: center;
+	//         @media #{$mq-w1000-up} {
+	//             text-align: unset;
+	//         }
+	//     }
+	// }
 
-        &--dark-mode {
-            &:last-of-type { // <h3>
-                text-align: center;
-                @media #{$mq-1000-up} {
-                    text-align: unset;
-                }
-            }
-        }
+	&__paragraph { // <p>
+		margin: {
+			top: 32px;
+			bottom: 32px;
+		}
+		font-size: 14px;
+		line-height: 24px;
 
-        &--dark-mode {
-            color: $white-230-dark-mode;
-        }
-    }
+		&:first-of-type { // <p>
+			margin-top: 0;
+			font: {
+				size: initial;
+				weight: 700;
+			}
+			color: $quaternary-color;
+		}
 
-    &__paragraph { // <p>
-        margin: {
-            top: 1rem;
-            right: 0;
-            bottom: 0;
-            left: 0;
-        }
-
-        &--dark-mode {
-            color: $white-215-dark-mode;
-        }
-    }
+		&:last-of-type { // <p>
+			margin-bottom: 0;
+		}
+	}
 }

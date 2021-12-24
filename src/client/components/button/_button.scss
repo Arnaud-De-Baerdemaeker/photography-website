@@ -1,46 +1,49 @@
-.button {
-    &__container { // <div>
-        margin: {
-            top: 1rem;
-            right: 0;
-            bottom: 0;
-            left: 0;
-        }
-        padding: {
-            top: 0;
-            right: 1rem;
-            bottom: 1rem;
-            left: 1rem;
-        }
-        align-self: flex-end;
-    }
+.button { // <button>
+	position: absolute;
+	width: auto;
+	height: 22px;
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+	outline: none;
+	color: $white;
 
-    &__item { // <button>
-        display: block;
-        width: 100%;
-        border: none;
-        font: {
-            family: $quicksandRegular;
-            size: 1rem;
-        }
-        padding: {
-            top: 0.5rem;
-            right: 1rem;
-            bottom: 0.5rem;
-            left: 1rem;
-        }
-        border: {
-            radius: 0.2rem;
-        }
-        color: $white;
-        background-color: $dark-green;
-        letter-spacing: 0.063rem;
-        box-shadow: 0 0.063rem 0.125rem $black-50;
-        cursor: pointer;
+	// @media #{$mq-w800-up} {
+	// 	top: 1.5625rem;
+	// 	width: auto;
+	// 	height: 1.75rem;
+	// }
 
-        &--dark-mode {
-            @extend .button__item;
-            color: $white-215-dark-mode;
-        }
-    }
+	// @media #{$mq-w1600-up} {
+	// 	top: 1.875rem;
+	// 	width: auto;
+	// 	height: 2rem;
+	// }
+
+	&__icon.svg-inline--fa { // <svg>
+		width: inherit;
+		height: inherit;
+	}
+
+	&__menu { // <button>
+		@extend .button;
+		top: calc(60px / 2 - 22px / 2);
+		right: 1rem;
+
+		// @media #{$mq-w800-up} {
+		// 	right: 1.5625rem;
+		// }
+	
+		// @media #{$mq-w1600-up} {
+		// 	right: 1.875rem;
+		// }
+	}
+
+	&__close-modal {
+		@extend .button;
+		bottom: 50px;
+	}
 }
