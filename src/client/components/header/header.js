@@ -4,9 +4,9 @@
 
 import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
+import {faBars, faTimes} from "@fortawesome/free-solid-svg-icons";
 import {NavLink} from "react-router-dom";
 import Button from "../button/button";
-import {faBars, faTimes} from "@fortawesome/free-solid-svg-icons";
 
 class Header extends Component {
 	render() {
