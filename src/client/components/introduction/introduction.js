@@ -6,22 +6,19 @@ import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
 
 class Introduction extends Component {
-    render() {
-        const phrases = [];
+	render() {
+		const phrases = [];
 
-        for (const phrase of this.props.introduction.phrases) {
-            phrases.push(<p className={"introduction__paragraph"}>{phrase}</p>);
-        }
+		for (const phrase of this.props.introduction) {
+			phrases.push(<p className={"introduction__paragraph"}>{phrase}</p>);
+		}
 
-        return (
-            <section className={"introduction__container"}>
-                <h3 className={"introduction__title"}>
-                    {this.props.introduction.title}
-                </h3>
-                {phrases}
-            </section>
-        );
-    }
+		return (
+			<div className={"introduction"}>
+				{phrases}
+			</div>
+		);
+	}
 }
 
 export default hot(Introduction);
