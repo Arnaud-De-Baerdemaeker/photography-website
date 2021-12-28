@@ -4,14 +4,27 @@
 
 .hero { // <div>
 	background: {
-		image: url("https://lh3.googleusercontent.com/M-Cy0zTisnpjaCobpnmSGw_csGA2HHgEu4wqXJPvjTl9GWDN2KLQPJ_AorRD3soNtjQIs6XIESn2F1UjePrTmZ8yw_gMpVNPFQJrYnDf131Lrog2HuzYKk5SJGLOTy_ojY6-KfIh6g=w1920-h1080");
 		attachment: fixed;
 		repeat: no-repeat;
 		size: cover;
-		position-x: 70%;
 	}
 	width: 100%;
 	height: 100vh;
+	clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 30px), 0% 100%);
+
+	&__homepage {
+		background: {
+			image: url("https://lh3.googleusercontent.com/M-Cy0zTisnpjaCobpnmSGw_csGA2HHgEu4wqXJPvjTl9GWDN2KLQPJ_AorRD3soNtjQIs6XIESn2F1UjePrTmZ8yw_gMpVNPFQJrYnDf131Lrog2HuzYKk5SJGLOTy_ojY6-KfIh6g=w1920-h1080");
+			position-x: 70%;
+		}
+	}
+
+	&__gallery {
+		background: {
+			image: url("https://lh3.googleusercontent.com/x-Epo9_cT7fBvPu03CuZ4Pxhsi6zxbtSEtQ4lAftMDGB6tNkEguZBX8lkX_OnGINJS-2j4tipj1ZRiEVyOanbOO3SO_mRA_vIJ3vN4RTasKjPi5vFaeK-AA3Wj14P7c5jGFHHf7T2g=w1920-h1080");
+			position-x: 50%;
+		}
+	}
 
 	&__back-filter { // <div>
 		width: inherit;
@@ -19,7 +32,7 @@
 		background-color: rgba(0, 0, 0, 0.45);
 		color: $white;
 	}
-	
+
 	&__gradient { // <div>
 		display: flex;
 		flex-direction: column;
@@ -28,7 +41,6 @@
 		row-gap: 10px;
 		width: inherit;
 		height: inherit;
-		background: linear-gradient(to top, $secondary-color 5px, $transparent 90px);
 	}
 
 	&__title { // <h1>
