@@ -6,7 +6,7 @@
 	height: 60px;
 
 	&.gradient {
-		background: linear-gradient(to bottom, $secondary-color 0px, $transparent 60px);
+		background: linear-gradient(to bottom, $half-transparent 0px, $transparent 60px);
 	}
 
 	&__title { // <h1>
