@@ -3,8 +3,6 @@
 // By Arnaud De Baerdemaeker
 
 .gallery { // <main>
-	background: linear-gradient(to top, $tertiary-color 2%, $transparent 25%);
-
 	&__list-container { // <div>
 		padding: {
 			top: 50px;
@@ -17,7 +15,6 @@
 	&__list { // <ul>
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		//row-gap: 16px;
 		column-gap: 16px;
 		margin: 0;
 		padding: 0;
