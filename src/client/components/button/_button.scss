@@ -11,17 +11,15 @@
 	outline: none;
 	color: $white;
 
-	// @media #{$mq-w800-up} {
-	// 	top: 1.5625rem;
-	// 	width: auto;
-	// 	height: 1.75rem;
-	// }
+	@media #{$portrait} {
+		@media #{$mq-w700-up} {
+			height: 26px;
+		}
 
-	// @media #{$mq-w1600-up} {
-	// 	top: 1.875rem;
-	// 	width: auto;
-	// 	height: 2rem;
-	// }
+		@media #{$mq-w800-up} {
+			height: 30px;
+		}
+	}
 
 	&__icon.svg-inline--fa { // <svg>
 		width: inherit;
