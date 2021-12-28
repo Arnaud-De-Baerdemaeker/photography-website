@@ -6,16 +6,17 @@
 	background: {
 		attachment: fixed;
 		repeat: no-repeat;
-		size: cover;
+		size: auto;
 	}
-	width: 100%;
-	height: 100vh;
+	width: 100vw;
+	height: 100%;
 	clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 30px), 0% 100%);
 
 	&__homepage {
 		background: {
 			image: url("https://lh3.googleusercontent.com/M-Cy0zTisnpjaCobpnmSGw_csGA2HHgEu4wqXJPvjTl9GWDN2KLQPJ_AorRD3soNtjQIs6XIESn2F1UjePrTmZ8yw_gMpVNPFQJrYnDf131Lrog2HuzYKk5SJGLOTy_ojY6-KfIh6g=w1920-h1080");
-			position-x: 70%;
+			//position-x: 50%;
+			//position-y: 100%;
 		}
 	}
 
@@ -23,6 +24,7 @@
 		background: {
 			image: url("https://lh3.googleusercontent.com/x-Epo9_cT7fBvPu03CuZ4Pxhsi6zxbtSEtQ4lAftMDGB6tNkEguZBX8lkX_OnGINJS-2j4tipj1ZRiEVyOanbOO3SO_mRA_vIJ3vN4RTasKjPi5vFaeK-AA3Wj14P7c5jGFHHf7T2g=w1920-h1080");
 			position-x: 50%;
+			//position-y: 50%;
 		}
 	}
 
