@@ -6,7 +6,7 @@
 		bottom: 50px;
 		left: 1rem;
 	}
-	color: $quaternary-color-2;
+	color: $secondary-color;
 
 	//&-container { // <section>
 		//width: 300px;
@@ -37,7 +37,7 @@
 	//}
 
 	// &__title { // <h3>
-	//     color: $main-color;
+	//     color: $primary-color;
 
 	//     &:not(:first-child) { // <h3>
 	//         margin: {
@@ -70,7 +70,6 @@
 				size: initial;
 				weight: 700;
 			}
-			color: $quaternary-color;
 		}
 
 		&:last-of-type { // <p>
