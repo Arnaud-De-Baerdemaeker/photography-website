@@ -36,8 +36,14 @@ class Hero extends Component {
 			);
 		}
 
+		// function getInnerHeight() {
+		// 	const innerHeight = window.innerHeight;
+
+		// 	return innerHeight;
+		// }
+
 		return (
-			<div className={"hero " + this.props.class}>
+			<div /*data-screen-height={getInnerHeight()}*/ className={"hero " + this.props.class}>
 				<div className={"hero__back-filter"}>
 					<div className={"hero__gradient"}>
 						{title}
