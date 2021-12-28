@@ -3,14 +3,18 @@
 // By Arnaud De Baerdemaeker
 
 .footer { // <footer>
-	background-color: $tertiary-color;
-	height: 50vh;
+	background-color: $secondary-color;
+	clip-path: polygon(0% 30px, 100% 0%, 100% 100%, 0% 100%);
+	display: flex;
+	flex-direction: column;
+	row-gap: 50px;
 
 	&__social-networks { // <div>
-		height: 25vh;
+		//height: 25vh;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		padding-top: 50px;
 
 		// @media #{$mq-w800-up} {
 		// 	padding: unset;
@@ -66,7 +70,9 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;
-		height: 25vh;
+		row-gap: 20px;
+		padding-bottom: 10px;
+		//height: 25vh;
 		// margin: {
 		// 	top: 2rem;
 		// 	right: 0;
