@@ -46,6 +46,7 @@ class HomePage extends Component {
 				<Hero
 					fullName={this.props.fullName}
 					subtitle={subtitle}
+					class={"hero__homepage"}
 				/>
 				<Navigation
 					isMenuOpen={this.props.isMenuOpen}

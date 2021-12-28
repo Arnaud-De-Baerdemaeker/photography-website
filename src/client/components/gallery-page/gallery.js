@@ -52,6 +52,7 @@ class Gallery extends Component {
 				<Hero
 					title={title}
 					subtitle={subtitle}
+					class={"hero__gallery"}
 				/>
 				<Navigation
 					isMenuOpen={this.props.isMenuOpen}
