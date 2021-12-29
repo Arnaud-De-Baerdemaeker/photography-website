@@ -48,6 +48,7 @@ class Gallery extends Component {
 					toggleMenu={this.props.toggleMenu}
 					closeMenu={this.props.closeMenu}
 					fullName={this.props.fullName}
+					class={"header__gallery"}
 				/>
 				<Hero
 					title={title}

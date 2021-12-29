@@ -42,6 +42,7 @@ class HomePage extends Component {
 					isMenuOpen={this.props.isMenuOpen}
 					toggleMenu={this.props.toggleMenu}
 					closeMenu={this.props.closeMenu}
+					class={"header__homepage"}
 				/>
 				<Hero
 					fullName={this.props.fullName}

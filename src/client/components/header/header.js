@@ -11,7 +11,7 @@ import Button from "../button/button";
 class Header extends Component {
 	render() {
 		return (
-			<header className={this.props.isMenuOpen ? "header" : "header gradient"}>
+			<header className={this.props.isMenuOpen ? this.props.class : this.props.class + " gradient"}>
 				{this.props.fullName
 					? <h1 className={"header__title"}>
 						<NavLink
@@ -26,7 +26,6 @@ class Header extends Component {
 					</h1>
 					: null
 				}
-				{/* Button to open/close the menu */}
 				<Button
 					function={this.props.toggleMenu}
 					icon={this.props.isMenuOpen ? faTimes : faBars}
