@@ -4,7 +4,6 @@
 
 import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
-import {faBars, faTimes} from "@fortawesome/free-solid-svg-icons";
 import {NavLink} from "react-router-dom";
 import Button from "../button/button";
 
@@ -28,9 +27,8 @@ class Header extends Component {
 				}
 				<Button
 					function={this.props.toggleMenu}
-					icon={this.props.isMenuOpen ? faTimes : faBars}
 					alt={this.props.isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
-					class={"button__menu"}
+					class={this.props.isMenuOpen ? "button__close" : "button__menu"}
 				/>
 			</header>
 		);
