@@ -14,73 +14,73 @@
 	align-items: center;
 
 	@media #{$portrait} {
-		background: radial-gradient(circle at calc(100% - 35px) calc(80px / 2), $transparent 15px, $secondary-color 100px);
+		background: radial-gradient(circle at calc(100% - 1.25rem - (1.875rem / 2)) calc(5rem / 2), $transparent 0.9375rem, $secondary-color 6.25rem);
 
 		@media #{$mq-w400-up} {
-			background: radial-gradient(circle at calc(100% - 35px) calc(80px / 2), $transparent 15px, $secondary-color 150px);
+			background: radial-gradient(circle at calc(100% - 1.25rem - (1.875rem / 2)) calc(5rem / 2), $transparent 0.9375rem, $secondary-color 9.375rem);
 		}
 
 		@media #{$mq-w500-up} {
-			background: radial-gradient(circle at calc(100% - 35px) calc(80px / 2), $transparent 15px, $secondary-color 200px);
+			background: radial-gradient(circle at calc(100% - 1.25rem - (1.875rem / 2)) calc(5rem / 2), $transparent 0.9375rem, $secondary-color 12.5rem);
 		}
 
 		@media #{$mq-w600-up} {
-			background: radial-gradient(circle at calc(100% - 45px) calc(80px / 2), $transparent 15px, $secondary-color 250px);
+			background: radial-gradient(circle at calc(100% - 1.875rem - (1.875rem / 2)) calc(5rem / 2), $transparent 0.9375rem, $secondary-color 15.625rem);
 		}
 
 		@media #{$mq-w700-up} {
-			background: radial-gradient(circle at calc(100% - 45px) calc(100px / 2), $transparent 15px, $secondary-color 300px);
+			background: radial-gradient(circle at calc(100% - 1.875rem - (1.875rem / 2)) calc(6.25rem / 2), $transparent 0.9375rem, $secondary-color 18.75rem);
 		}
 
 		@media #{$mq-w800-up} {
-			background: radial-gradient(circle at calc(100% - 45px) calc(100px / 2), $transparent 15px, $secondary-color 350px);
+			background: radial-gradient(circle at calc(100% - 1.875rem - (1.875rem / 2)) calc(6.25rem / 2), $transparent 0.9375rem, $secondary-color 21.875rem);
 		}
 
 		@media #{$mq-w900-up} {
-			background: radial-gradient(circle at calc(100% - 55px) calc(100px / 2), $transparent 15px, $secondary-color 400px);
+			background: radial-gradient(circle at calc(100% - 2.5rem - (1.875rem / 2)) calc(6.25rem / 2), $transparent 0.9375rem, $secondary-color 25rem);
 		}
 
 		@media #{$mq-w1000-up} {
-			background: radial-gradient(circle at calc(100% - 55px) calc(100px / 2), $transparent 15px, $secondary-color 450px);
+			background: radial-gradient(circle at calc(100% - 2.5rem - (1.875rem / 2)) calc(6.25rem / 2), $transparent 0.9375rem, $secondary-color 28.125rem);
 		}
 	}
 
 	@media #{$landscape} {
-		background: radial-gradient(circle at calc(100% - 30px - (30px / 2)) calc(70px / 2), $transparent 15px, $secondary-color 100px);
+		background: radial-gradient(circle at calc(100% - 1.875rem - (1.875rem / 2)) calc(4.375rem / 2), $transparent 0.9375rem, $secondary-color 6.25rem);
 
 		@media #{$mq-h400-up} {
-			background: radial-gradient(circle at calc(100% - 30px - (30px / 2)) calc(70px / 2), $transparent 15px, $secondary-color 150px);
+			background: radial-gradient(circle at calc(100% - 1.875rem - (1.875rem / 2)) calc(4.375rem / 2), $transparent 0.9375rem, $secondary-color 9.375rem);
 		}
 
 		@media #{$mq-h500-up} {
-			background: radial-gradient(circle at calc(100% - 30px - (30px / 2)) calc(75px / 2), $transparent 15px, $secondary-color 200px);
+			background: radial-gradient(circle at calc(100% - 1.875rem - (1.875rem / 2)) calc(4.6875rem / 2), $transparent 0.9375rem, $secondary-color 12.5rem);
 		}
 
 		@media #{$mq-h600-up} {
-			background: radial-gradient(circle at calc(100% - 30px - (30px / 2)) calc(80px / 2), $transparent 15px, $secondary-color 250px);
+			background: radial-gradient(circle at calc(100% - 1.875rem - (1.875rem / 2)) calc(5rem / 2), $transparent 0.9375rem, $secondary-color 15.625rem);
 		}
 
 		@media #{$mq-h700-up} {
-			background: radial-gradient(circle at calc(100% - 30px - (30px / 2)) calc(85px / 2), $transparent 15px, $secondary-color 300px);
+			background: radial-gradient(circle at calc(100% - 1.875rem - (1.875rem / 2)) calc(5.3125rem / 2), $transparent 0.9375rem, $secondary-color 18.75rem);
 		}
 
 		@media #{$mq-h800-up} {
-			background: radial-gradient(circle at calc(100% - 40px - (30px / 2)) calc(90px / 2), $transparent 15px, $secondary-color 350px);
+			background: radial-gradient(circle at calc(100% - 2.5rem - (1.875rem / 2)) calc(5.625rem / 2), $transparent 0.9375rem, $secondary-color 21.875rem);
 		}
 
 		@media #{$mq-h900-up} {
-			background: radial-gradient(circle at calc(100% - 40px - (30px / 2)) calc(95px / 2), $transparent 15px, $secondary-color 400px);
+			background: radial-gradient(circle at calc(100% - 2.5rem - (1.875rem / 2)) calc(5.9375rem / 2), $transparent 0.9375rem, $secondary-color 25rem);
 		}
 
 		@media #{$mq-h1000-up} {
-			background: radial-gradient(circle at calc(100% - 50px - (30px / 2)) calc(100px / 2), $transparent 15px, $secondary-color 450px);
+			background: radial-gradient(circle at calc(100% - 3.125rem - (1.875rem / 2)) calc(6.25rem / 2), $transparent 0.9375rem, $secondary-color 28.125rem);
 		}
 	}
 
 	&__list { // <ul>
 		display: flex;
 		flex-direction: column;
-		row-gap: 30px;
+		row-gap: 1.875rem;
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
@@ -96,66 +96,66 @@
 		}
 
 		@media #{$portrait} {
-			font-size: 40px;
+			font-size: 2.5rem;
 
 			@media #{$mq-w400-up} {
-				font-size: 45px;
+				font-size: 2.8125rem;
 			}
 
 			@media #{$mq-w500-up} {
-				font-size: 50px;
+				font-size: 3.125rem;
 			}
 
 			@media #{$mq-w600-up} {
-				font-size: 55px;
+				font-size: 3.4375rem;
 			}
 
 			@media #{$mq-w700-up} {
-				font-size: 60px;
+				font-size: 3.75rem;
 			}
 
 			@media #{$mq-w800-up} {
-				font-size: 65px;
+				font-size: 4.0625rem;
 			}
 
 			@media #{$mq-w900-up} {
-				font-size: 70px;
+				font-size: 4.375rem;
 			}
 
 			@media #{$mq-w1000-up} {
-				font-size: 75px;
+				font-size: 4.6875rem;
 			}
 		}
 
 		@media #{$landscape} {
-			font-size: 40px;
+			font-size: 2.5rem;
 
 			@media #{$mq-h400-up} {
-				font-size: 45px;
+				font-size: 2.8125rem;
 			}
 
 			@media #{$mq-h500-up} {
-				font-size: 50px;
+				font-size: 3.125rem;
 			}
 
 			@media #{$mq-h600-up} {
-				font-size: 55px;
+				font-size: 3.4375rem;
 			}
 
 			@media #{$mq-h700-up} {
-				font-size: 60px;
+				font-size: 3.75rem;
 			}
 
 			@media #{$mq-h800-up} {
-				font-size: 65px;
+				font-size: 4.0625rem;
 			}
 
 			@media #{$mq-h900-up} {
-				font-size: 70px;
+				font-size: 4.375rem;
 			}
 
 			@media #{$mq-h1000-up} {
-				font-size: 75px;
+				font-size: 4.6875rem;
 			}
 		}
 
