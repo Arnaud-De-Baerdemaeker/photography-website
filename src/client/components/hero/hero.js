@@ -2,6 +2,16 @@ import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
 
 class Hero extends Component {
+	componentDidMount() {
+		this.animate = window.setInterval(function() {
+			document.querySelector(".hero__move-down-icon").classList.toggle("hero__move-down-icon--down");
+		}, 750);
+	}
+
+	componentWillUnmount() {
+		clearInterval(this.animate);
+	}
+
 	render() {
 		const title = [];
 		const subtitle = [];
@@ -36,18 +46,16 @@ class Hero extends Component {
 			);
 		}
 
-		// function getInnerHeight() {
-		// 	const innerHeight = window.innerHeight;
-
-		// 	return innerHeight;
-		// }
-
 		return (
-			<div /*data-screen-height={getInnerHeight()}*/ className={"hero " + this.props.class}>
+			<div className={"hero " + this.props.class}>
 				<div className={"hero__back-filter"}>
 					<div className={"hero__gradient"}>
 						{title}
 						{subtitle}
+						<div className={"hero__move-down-icon"}>
+							<div className={"hero__arrow"}></div>
+							<div className={"hero__arrow"}></div>
+						</div>
 					</div>
 				</div>
 			</div>
