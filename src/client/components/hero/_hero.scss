@@ -10,7 +10,6 @@
 	}
 	width: 100%;
 	height: 100%;
-	clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 1.875rem), 0% 100%);
 
 	&__homepage {
 		background: {
@@ -41,6 +40,31 @@
 		row-gap: 0.625rem;
 		width: inherit;
 		height: inherit;
+	}
+
+	&__move-down-icon { // <div>
+		position: absolute;
+		bottom: 30px;
+		width: 25px;
+		height: 30px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		transition: {
+			property: bottom;
+			duration: 0.5s;
+		}
+
+		&--down { // <div>
+			bottom: 20px;
+		}
+	}
+
+	&__arrow { // <div>
+		width: 100%;
+		height: 100%;
+		background-color: $white;
+		clip-path: polygon(0 0, 50% 12px, 100% 0, 100% 3px, 50% 15px, 0 3px);
 	}
 
 	&__title { // <h1>
