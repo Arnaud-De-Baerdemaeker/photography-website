@@ -49,13 +49,11 @@ class Hero extends Component {
 		return (
 			<div className={"hero " + this.props.class}>
 				<div className={"hero__back-filter"}>
-					<div className={"hero__gradient"}>
-						{title}
-						{subtitle}
-						<div className={"hero__move-down-icon"}>
-							<div className={"hero__arrow"}></div>
-							<div className={"hero__arrow"}></div>
-						</div>
+					{title}
+					{subtitle}
+					<div className={"hero__move-down-icon"}>
+						<div className={"hero__arrow"}></div>
+						<div className={"hero__arrow"}></div>
 					</div>
 				</div>
 			</div>
