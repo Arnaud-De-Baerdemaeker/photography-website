@@ -3,48 +3,53 @@
 // By Arnaud De Baerdemaeker
 
 .homepage { // <main>
-// .about { // <main>
-// 	padding: {
-// 		top: 5rem;
-// 		bottom: 5rem;
-// 	}
+	display: flex;
+	flex-direction: column;
+	row-gap: 40px;
+	align-items: center;
 
-// 	&__my-photo { // <div>
-// 		margin-top: 5rem;
-// 	}
+	&__introduction { // <div>
+		max-width: 700px;
+		padding: {
+			top: 100px;
+			right: 1rem;
+			left: 1rem;
+		}
+		color: $secondary-color;
 
-// 	&__image-container { // <figure>
-// 		width: 50%;
-// 		margin: {
-// 			top: 0;
-// 			right: auto;
-// 			bottom: 0;
-// 			left: auto;
-// 		}
+		.introduction {
+			&__paragraph { // <p>
+				margin: {
+					top: 32px;
+					bottom: 32px;
+				}
+				font-size: 14px;
+				line-height: 24px;
 
-// 		@media #{$mq-w600-up} {
-// 			width: 40%;
-// 		}
+				&:first-of-type { // <p>
+					margin-top: 0;
+					font: {
+						size: initial;
+						weight: 700;
+					}
+				}
 
-// 		@media #{$mq-w800-up} {
-// 			width: 30%;
-// 		}
+				&:last-of-type { // <p>
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
 
-// 		@media #{$mq-w1000-up} {
-// 			width: 18.75rem;
-// 		}
-// 	}
+	&__my-photo { // <div>
+		width: 50%;
+		max-width: calc(700px / 2);
+		padding-bottom: 100px;
 
-// 	&__image { // <img>
-// 		width: 100%;
-// 	}
-
-// 	&__image-caption { // <figcaption>
-// 		font: {
-// 			family: "Comfortaa", Arial, Helvetica, sans-serif;
-// 			size: 0.75rem;
-// 			style: italic;
-// 		}
-// 		text-align: right;
-// 	}
+		.my-photo {
+			&__image { // <img>
+				width: 100%;
+			}
+		}
+	}
 }
