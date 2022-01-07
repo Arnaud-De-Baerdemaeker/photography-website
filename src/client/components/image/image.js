@@ -11,7 +11,7 @@ class Image extends Component {
                 alt={this.props.name}
                 title={this.props.title}
                 effect={"blur"}
-                className={"photos-cards__image"}
+                className={this.props.class}
             />
         );
     }
