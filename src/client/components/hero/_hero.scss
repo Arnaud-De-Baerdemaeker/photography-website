@@ -26,13 +26,6 @@
 	}
 
 	&__back-filter { // <div>
-		width: inherit;
-		height: inherit;
-		background-color: $half-transparent;
-		color: $white;
-	}
-
-	&__gradient { // <div>
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -40,6 +33,8 @@
 		row-gap: 0.625rem;
 		width: inherit;
 		height: inherit;
+		background-color: $half-transparent;
+		color: $white;
 	}
 
 	&__move-down-icon { // <div>
