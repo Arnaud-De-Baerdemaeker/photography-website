@@ -5,13 +5,17 @@
 .menu { // <nav>
 	position: fixed;
 	top: 0;
-	left: 0;
+	right: 0;
 	z-index: 3;
-	width: 100%;
-	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: 100%;
+	height: 100%;
+	transition: {
+		property: all;
+		duration: 1s;
+	}
 
 	@media #{$portrait} {
 		background: radial-gradient(circle at calc(100% - 1.25rem - (1.875rem / 2)) calc(5rem / 2), $transparent 0.9375rem, $secondary-color 6.25rem);
@@ -77,6 +81,16 @@
 		}
 	}
 
+	&--closed {
+		@extend .menu;
+		position: absolute;
+		width: 0;
+		transition: {
+			property: all;
+			duration: 1s;
+		}
+	}
+
 	&__list { // <ul>
 		display: flex;
 		flex-direction: column;
@@ -84,6 +98,10 @@
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
+
+		&--closed {
+			display: none;
+		}
 	}
 
 	&__link { // <a>
