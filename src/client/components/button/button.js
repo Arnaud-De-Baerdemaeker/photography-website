@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 class Button extends Component {
 	render() {
@@ -8,12 +7,11 @@ class Button extends Component {
 			<button
 				type={"button"}
 				onClick={this.props.function}
-				className={this.props.class}>
-				<FontAwesomeIcon
-					icon={this.props.icon}
-					alt={this.props.alt}
-					className={"button__icon"}
-				/>
+				alt={this.props.alt}
+				className={"button__menu"}>
+					<div className={this.props.class[0]}></div>
+					<div className={this.props.class[1]}></div>
+					<div className={this.props.class[2]}></div>
 			</button>
 		);
 	}
