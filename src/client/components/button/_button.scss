@@ -1,47 +1,101 @@
 .button { // <button>
-	position: absolute;
-	width: auto;
-	height: 22px;
-	margin: 0;
+	position: relative;
+	width: 30px;
+	height: 20px;
+	margin: {
+		top: 0;
+		bottom: 0;
+		left: 0;
+	}
 	padding: 0;
-	background: none;
-	border: none;
+	background-color: unset;
+	border: unset;
 	cursor: pointer;
 	-webkit-tap-highlight-color: transparent;
 	outline: none;
-	color: $white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 
 	@media #{$portrait} {
-		@media #{$mq-w700-up} {
-			height: 26px;
+		margin-right: 20px;
+
+		@media #{$mq-w600-up} {
+			margin-right: 30px;
 		}
 
-		@media #{$mq-w800-up} {
-			height: 30px;
+		@media #{$mq-w900-up} {
+			margin-right: 40px;
 		}
 	}
 
-	&__icon.svg-inline--fa { // <svg>
-		width: inherit;
-		height: inherit;
+	@media #{$landscape} {
+		margin-right: 30px;
+
+		@media #{$mq-h800-up} {
+			margin-right: 40px;
+		}
+
+		@media #{$mq-h1000-up} {
+			margin-right: 50px;
+		}
 	}
 
 	&__menu { // <button>
 		@extend .button;
-		top: calc(60px / 2 - 22px / 2);
-		right: 1rem;
-
-		// @media #{$mq-w800-up} {
-		// 	right: 1.5625rem;
-		// }
-	
-		// @media #{$mq-w1600-up} {
-		// 	right: 1.875rem;
-		// }
+		transform-box: border-box;
+		transform-origin: center top;
 	}
 
-	&__close-modal {
-		@extend .button;
-		bottom: 50px;
+	&__top-bar { // <div>
+		width: inherit;
+		height: 2px;
+		background-color: $white;
+		transition: {
+			property: all;
+			duration: 0.5s;
+		}
+
+		&--close { // <div>
+			@extend .button__top-bar;
+			transform: translate(0, 9px) rotate(-45deg);
+			transition: {
+				property: all;
+				duration: 0.5s;
+			}
+		}
 	}
+
+	&__middle-bar { // <div>
+		@extend .button__top-bar;
+
+		&--close { // <div>
+			@extend .button__middle-bar;
+			background-color: unset;
+			transition: {
+				property: all;
+				duration: 0.5s;
+			}
+		}
+	}
+
+	&__bottom-bar { // <div>
+		@extend .button__top-bar;
+
+		&--close { // <div>
+			@extend .button__bottom-bar;
+			transform: translate(0, -9px) rotate(45deg);
+			transition: {
+				property: all;
+				duration: 0.5s;
+			}
+		}
+	}
+
+	// &__close-modal {
+	// 	@extend .button;
+	// 	position: absolute;
+	// 	bottom: 50px;
+	// }
 }
