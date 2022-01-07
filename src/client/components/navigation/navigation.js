@@ -20,8 +20,8 @@ class Navigation extends Component {
 		return (
 			<nav
 				onScroll={this.props.closeMenu}
-				className={this.props.isMenuOpen ? "menu" : "menu hidden"}>
-				<ul className={"menu__list"}>
+				className={this.props.isMenuOpen ? "menu" : "menu--closed"}>
+				<ul className={this.props.isMenuOpen ? "menu__list" : "menu__list--closed"}>
 					<li className={"menu__list-item"}>
 						<NavLink
 							to={"/"}
