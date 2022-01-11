@@ -6,8 +6,10 @@ import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 import {Helmet} from "react-helmet";
+
 import HomePage from "./homepage/homepage";
 import Gallery from "./gallery-page/gallery";
+import Error404 from "./error404/error404";
 import photos from "./../JSON/metadata.json";
 
 class App extends Component {
@@ -64,7 +66,10 @@ class App extends Component {
 				</Helmet>
 				<BrowserRouter>
 					<Switch>
-						<Route exact path={"/gallery"}>
+						<Route
+							exact
+							path={"/gallery"}
+						>
 							<Gallery
 								fullName={fullName}
 								isMenuOpen={this.state.isMenuOpen}
@@ -73,13 +78,19 @@ class App extends Component {
 								photos={photos}
 							/>
 						</Route>
-						<Route exact path={"/"}>
+						<Route
+							exact
+							path={"/"}
+						>
 							<HomePage
 								fullName={fullName}
 								isMenuOpen={this.state.isMenuOpen}
 								toggleMenu={this.toggleMenu}
 								closeMenu={this.closeMenu}
 							/>
+						</Route>
+						<Route>
+							<Error404 />
 						</Route>
 					</Switch>
 				</BrowserRouter>
