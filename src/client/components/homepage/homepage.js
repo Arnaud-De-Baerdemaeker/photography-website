@@ -3,13 +3,12 @@
 // By Arnaud De Baerdemaeker
 
 import React, {Component} from "react";
+import {withRouter} from "react-router-dom";
 import {hot} from "react-hot-loader/root";
-import Header from "../header/header";
-import Hero from "../hero/hero";
-import Navigation from "../navigation/navigation";
+
+// import Hero from "../hero/hero";
 import Image from "../image/image";
 import myPhoto from "../../images/moi.png";
-import Footer from "../footer/footer";
 
 class HomePage extends Component {
 	componentDidMount() {
@@ -21,29 +20,9 @@ class HomePage extends Component {
 	}
 
 	render() {
-		const subtitle = {
-			job: "Développeur web",
-			hobby: "Amateur de photographie"
-		};
-
 		return (
 			<>
-				<Header
-					isMenuOpen={this.props.isMenuOpen}
-					toggleMenu={this.props.toggleMenu}
-					closeMenu={this.props.closeMenu}
-					class={"header__homepage"}
-				/>
-				<Hero
-					fullName={this.props.fullName}
-					subtitle={subtitle}
-					class={"hero__homepage"}
-				/>
-				<Navigation
-					isMenuOpen={this.props.isMenuOpen}
-					toggleMenu={this.props.toggleMenu}
-					closeMenu={this.props.closeMenu}
-				/>
+				{this.props.children}
 				<main className={"homepage"}>
 					<div className={"homepage__introduction"}>
 						<p className={"introduction__paragraph"}>{"Bonjour, je m'appelle Arnaud ! Développeur web résidant en Belgique, dans la ville de Liège, et amateur de photographie."}</p>
@@ -61,10 +40,9 @@ class HomePage extends Component {
 						/>
 					</div>
 				</main>
-				<Footer />
 			</>
 		);
 	}
 }
 
-export default hot(HomePage);
+export default hot(withRouter(HomePage));
