@@ -4,7 +4,7 @@
 
 import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
-import {NavLink} from "react-router-dom";
+import {NavLink, withRouter} from "react-router-dom";
 
 class Navigation extends Component {
 	componentDidMount() {
@@ -24,12 +24,10 @@ class Navigation extends Component {
 				<ul className={this.props.isMenuOpen ? "menu__list" : "menu__list--closed"}>
 					<li className={"menu__list-item"}>
 						<NavLink
+							exact
 							to={"/"}
-							// Allows to exactly match the url set in the "to" attribute
-							exact={true}
 							onClick={this.props.toggleMenu}
 							id={"home"}
-							// Class name that is active only when the page is active
 							activeClassName={"menu__link--active"}
 							className={"menu__link"}>
 							{"Accueil"}
@@ -37,10 +35,10 @@ class Navigation extends Component {
 					</li>
 					<li className={"menu__list-item"}>
 						<NavLink
-							to={"/gallery"}
+							exact
+							to={"/galerie"}
 							onClick={this.props.toggleMenu}
 							id={"gallery"}
-							// Class name that is active only when the page is active
 							activeClassName={"menu__link--active"}
 							className={"menu__link"}>
 							{"Galerie"}
@@ -52,4 +50,4 @@ class Navigation extends Component {
 	}
 }
 
-export default hot(Navigation);
+export default hot(withRouter(Navigation));
