@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
+import {withRouter} from "react-router-dom";
 
 class Hero extends Component {
 	componentDidMount() {
@@ -13,44 +14,29 @@ class Hero extends Component {
 	}
 
 	render() {
-		const title = [];
-		const subtitle = [];
-
-		if (this.props.fullName) {
-			title.push(
-				<h1 key={this.props.fullName} className={"hero__title"}>
-					{this.props.fullName.firstName}
-					<br />
-					{this.props.fullName.lastName}
-				</h1>
-			);
-		}
-		else {
-			title.push(
-				<h1 key={this.props.title} className={"hero__title"}>{this.props.title}</h1>
-			);
-		}
-
-		if (typeof this.props.subtitle === "object") {
-			subtitle.push(
-				<h2 key={this.props.subtitle} className={"hero__subtitle"}>
-					{this.props.subtitle.job}
-					<br />
-					{this.props.subtitle.hobby}
-				</h2>
-			);
-		}
-		else {
-			subtitle.push(
-				<h2 key={this.props.subtitle} className={"hero__subtitle"}>{this.props.subtitle}</h2>
-			);
-		}
-
 		return (
 			<div className={"hero " + this.props.class}>
 				<div className={"hero__back-filter"}>
-					{title}
-					{subtitle}
+					<h2 className={"hero__title"}>
+						<div className={"title__part1"}>
+							{this.props.title.job
+								? <>
+									<span className={"title__job-part1"}>{this.props.title.job.part1}</span>
+									<span className={"title__job-part2"}>{this.props.title.job.part2}</span>
+								</>
+								: <span className={"title__page"}>{this.props.title.title}</span>
+							}
+						</div>
+						<div className={"title__part2"}>
+							{this.props.title.hobby
+								? <>
+									<span className={"title__hobby-part1"}>{this.props.title.hobby.part1}</span>
+									<span className={"title__hobby-part2"}>{this.props.title.hobby.part2}</span>
+								</>
+								: <span className={"title__intro"}>{this.props.title.subtitle}</span>
+							}
+						</div>
+					</h2>
 					<div className={"hero__move-down-icon"}>
 						<div className={"hero__arrow"}></div>
 						<div className={"hero__arrow"}></div>
@@ -61,4 +47,4 @@ class Hero extends Component {
 	}
 }
 
-export default hot(Hero);
+export default hot(withRouter(Hero));
