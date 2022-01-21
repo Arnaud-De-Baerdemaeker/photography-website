@@ -7,10 +7,14 @@ import {hot} from "react-hot-loader/root";
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 import {Helmet} from "react-helmet";
 
+import Header from "./header/header";
+import Navigation from "./navigation/navigation";
+import Hero from "./hero/hero";
 import HomePage from "./homepage/homepage";
 import Gallery from "./gallery-page/gallery";
-import Error404 from "./error404/error404";
+//import Error404 from "./error404/error404";
 import photos from "./../JSON/metadata.json";
+import Footer from "./footer/footer";
 
 class App extends Component {
 	constructor(props) {
@@ -37,9 +41,29 @@ class App extends Component {
 	}
 
 	render() {
-		const fullName = {
-			firstName: "Arnaud",
-			lastName: "De Baerdemaeker"
+		// const name = "Arnaud De Baerdemaeker - Développeur Web & Amateur de Photographie";
+
+		// const tabName = {
+		// 	homepage: name,
+		// 	gallery: "Galerie | " + name,
+		// 	error404: "Page introuvable | " + name
+		// };
+
+		const heroElements = {
+			homepageTitle: {
+				job: {
+					part1: "Développeur",
+					part2: "web",
+				},
+				hobby: {
+					part1: "Amateur de",
+					part2: "photographie"
+				}
+			},
+			galleryTitle: {
+				title: "Galerie",
+				subtitle: "Découvrez une sélection de mes captures"
+			}
 		};
 
 		return (
@@ -59,40 +83,62 @@ class App extends Component {
 						crossOrigin
 					/>
 					<link
-						href={"https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap"}
+						href={"https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Sans:wght@400;500;700&display=swap"}
 						rel={"stylesheet"}
 					/>
-					<title>{"Arnaud De Baerdemaeker"}</title>
+					{/* <title>{}</title> */}
 				</Helmet>
 				<BrowserRouter>
+					<Header
+						isMenuOpen={this.state.isMenuOpen}
+						toggleMenu={this.toggleMenu}
+						closeMenu={this.closeMenu}
+					/>
+					<Navigation
+						isMenuOpen={this.state.isMenuOpen}
+						toggleMenu={this.toggleMenu}
+						closeMenu={this.closeMenu}
+					/>
 					<Switch>
 						<Route
 							exact
-							path={"/gallery"}
+							path={"/galerie"}
 						>
 							<Gallery
-								fullName={fullName}
 								isMenuOpen={this.state.isMenuOpen}
 								toggleMenu={this.toggleMenu}
 								closeMenu={this.closeMenu}
 								photos={photos}
-							/>
+							>
+								<Hero
+									title={heroElements.galleryTitle}
+									class={"hero__gallery"}
+								/>
+							</Gallery>
 						</Route>
+						{/* <Route
+							exact
+							path={"/404"}
+						>
+							<Error404 />
+						</Route> */}
 						<Route
 							exact
 							path={"/"}
 						>
 							<HomePage
-								fullName={fullName}
 								isMenuOpen={this.state.isMenuOpen}
 								toggleMenu={this.toggleMenu}
 								closeMenu={this.closeMenu}
-							/>
-						</Route>
-						<Route>
-							<Error404 />
+							>
+								<Hero
+									title={heroElements.homepageTitle}
+									class={"hero__homepage"}
+								/>
+							</HomePage>
 						</Route>
 					</Switch>
+					<Footer />
 				</BrowserRouter>
 			</>
 		);
