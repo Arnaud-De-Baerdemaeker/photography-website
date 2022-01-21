@@ -4,11 +4,8 @@
 
 import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
-import Header from "../header/header";
-import Hero from "../hero/hero";
-import Navigation from "../navigation/navigation";
+
 import PhotosCards from "../photos-cards/photos-cards";
-import Footer from "../footer/footer";
 
 class Gallery extends Component {
 	componentDidMount() {
@@ -20,8 +17,6 @@ class Gallery extends Component {
 	}
 
 	render() {
-		const title = "Galerie";
-		const subtitle = "Découvrez ci-dessous une sélection de mes captures"
 		const photosCards = [];
 
 		// The loop goes for each entry in the metadata.json file
@@ -43,23 +38,7 @@ class Gallery extends Component {
 
 		return (
 			<>
-				<Header
-					isMenuOpen={this.props.isMenuOpen}
-					toggleMenu={this.props.toggleMenu}
-					closeMenu={this.props.closeMenu}
-					fullName={this.props.fullName}
-					class={"header__gallery"}
-				/>
-				<Hero
-					title={title}
-					subtitle={subtitle}
-					class={"hero__gallery"}
-				/>
-				<Navigation
-					isMenuOpen={this.props.isMenuOpen}
-					toggleMenu={this.props.toggleMenu}
-					closeMenu={this.props.closeMenu}
-				/>
+				{this.props.children}
 				<main className={"gallery"}>
 					<div className={"gallery__list-container"}>
 						<ul className={"gallery__list"}>
@@ -67,7 +46,6 @@ class Gallery extends Component {
 						</ul>
 					</div>
 				</main>
-				<Footer />
 			</>
 		);
 	}
