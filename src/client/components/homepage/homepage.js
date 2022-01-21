@@ -6,7 +6,6 @@ import React, {Component} from "react";
 import {withRouter} from "react-router-dom";
 import {hot} from "react-hot-loader/root";
 
-// import Hero from "../hero/hero";
 import Image from "../image/image";
 import myPhoto from "../../images/moi.png";
 
