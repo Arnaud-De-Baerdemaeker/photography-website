@@ -52,11 +52,12 @@ class App extends Component {
 		const heroElements = {
 			homepageTitle: {
 				job: {
-					part1: "Développeur",
+					part1: "Développeur ",
 					part2: "web",
 				},
+				ampersand: "&",
 				hobby: {
-					part1: "Amateur de",
+					part1: "Amateur de ",
 					part2: "photographie"
 				}
 			},
