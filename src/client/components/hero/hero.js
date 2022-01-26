@@ -22,7 +22,7 @@ class Hero extends Component {
 							? <>
 								<span className={"title__job-part1"}>{this.props.title.job.part1}</span>
 								<span className={"title__job-part2"}>{this.props.title.job.part2}</span>
-								<span className={"title__ampersand"}>{"&"}</span>
+								<span className={"title__ampersand"}>{this.props.title.ampersand}</span>
 								<span className={"title__hobby-part1"}>{this.props.title.hobby.part1}</span>
 								<span className={"title__hobby-part2"}>{this.props.title.hobby.part2}</span>
 							</>
