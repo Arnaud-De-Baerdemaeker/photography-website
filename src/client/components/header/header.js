@@ -4,25 +4,18 @@
 
 import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
-import {Link, withRouter} from "react-router-dom";
 
+import Name from "../name/name";
 import Button from "../button/button";
 
 class Header extends Component {
 	render() {
 		return (
 			<header className={"header"}>
-				<h1 className={"header__name"}>
-					<Link
-						to={"/"}
-						onClick={this.props.closeMenu}
-						className={"name__link"}
-					>
-						{"Arnaud"}
-						<br />
-						{"De Baerdemaeker"}
-					</Link>
-				</h1>
+				<Name
+					closeMenu={this.props.closeMenu}
+					class={"header__name"}
+				/>
 				<Button
 					function={this.props.toggleMenu}
 					alt={this.props.isMenuOpen
@@ -47,4 +40,4 @@ class Header extends Component {
 	}
 }
 
-export default hot(withRouter(Header));
+export default hot(Header);
