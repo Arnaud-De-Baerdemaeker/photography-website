@@ -60,7 +60,7 @@
 		clip-path: polygon(0 0, 50% 12px, 100% 0, 100% 3px, 50% 15px, 0 3px);
 	}
 
-	&__title { // <h2>
+	&__title {
 		margin: 0;
 		padding: {
 			right: 20px;
@@ -72,44 +72,52 @@
 			weight: 100;
 		}
 
-		@media #{$portrait} {
-			font-size: 35px;
-			line-height: 40px;
+		&--homepage { // <h2>
+			@extend .hero__title;
 
-			@media #{$mq-w400-up} {
-				font-size: 40px;
-				line-height: 45px;
-			}
+			@media #{$portrait} {
+				font-size: 35px;
+				line-height: 40px;
 
-			@media #{$mq-w500-up} {
-				font-size: 50px;
-				line-height: 55px;
-			}
+				@media #{$mq-w400-up} {
+					font-size: 40px;
+					line-height: 45px;
+				}
 
-			@media #{$mq-w600-up} {
-				font-size: 60px;
-				line-height: 65px;
-			}
+				@media #{$mq-w500-up} {
+					font-size: 50px;
+					line-height: 55px;
+				}
 
-			@media #{$mq-w700-up} {
-				font-size: 65px;
-				line-height: 70px;
-			}
+				@media #{$mq-w600-up} {
+					font-size: 60px;
+					line-height: 65px;
+				}
 
-			@media #{$mq-w800-up} {
-				font-size: 75px;
-				line-height: 80px;
-			}
+				@media #{$mq-w700-up} {
+					font-size: 65px;
+					line-height: 70px;
+				}
 
-			@media #{$mq-w900-up} {
-				font-size: 85px;
-				line-height: 90px;
-			}
+				@media #{$mq-w800-up} {
+					font-size: 75px;
+					line-height: 80px;
+				}
 
-			@media #{$mq-w1000-up} {
-				font-size: 90px;
-				line-height: 95px;
+				@media #{$mq-w900-up} {
+					font-size: 85px;
+					line-height: 90px;
+				}
+
+				@media #{$mq-w1000-up} {
+					font-size: 90px;
+					line-height: 95px;
+				}
 			}
+		}
+
+		&--gallery {
+			@extend .hero__title;
 		}
 
 		// @media #{$landscape} {
@@ -155,20 +163,20 @@
 			display: block;
 
 			&__job {
-				&-part1 {
+				&-part1 { // <span>
 					@extend .title;
 					-webkit-text-fill-color: $transparent;
 					-webkit-text-stroke-color: $white;
 					-webkit-text-stroke-width: 1px;
 				}
 
-				&-part2 {
+				&-part2 { // <span>
 					@extend .title;
 					font-weight: 900;
 				}
 			}
 
-			&__ampersand {
+			&__ampersand { // <span>
 				@extend .title;
 				z-index: 0;
 				display: block;
@@ -209,25 +217,59 @@
 			}
 
 			&__hobby {
-				&-part1 {
+				&-part1 { // <span>
 					@extend .title__job-part1;
 				}
 
-				&-part2 {
+				&-part2 { // <span>
 					@extend .title__job-part2;
 				}
 			}
 
-			&__page {
+			&__page { // <span>
+				display: block;
 				font: {
-					size: 50px;
-					weight: 400;
+					//size: 35px;
+					weight: 900;
+				}
+
+				@media #{$portrait} {
+					font-size: 35px;
+
+					@media #{$mq-w400-up} {
+						font-size: 40px;
+					}
+
+					@media #{$mq-w500-up} {
+						font-size: 50px;
+					}
+
+					@media #{$mq-w600-up} {
+						font-size: 60px;
+					}
+
+					@media #{$mq-w700-up} {
+						font-size: 65px;
+					}
+
+					@media #{$mq-w800-up} {
+						font-size: 75px;
+					}
+
+					@media #{$mq-w900-up} {
+						font-size: 85px;
+					}
+
+					@media #{$mq-w1000-up} {
+						font-size: 90px;
+					}
 				}
 			}
 
-			&__intro {
+			&__intro { // <span>
+				display: block;
 				font: {
-					size: 30px;
+					size: 25px;
 					weight: 100;
 				}
 			}
@@ -241,12 +283,6 @@
 	// 		weight: 200;
 	// 	}
 	// 	line-height: 1.5625rem;
-	// 	margin: 0;
-	// 	text-align: center;
-	// 	padding: {
-	// 		right: 1rem;
-	// 		left: 1rem;
-	// 	}
 
 	// 	@media #{$portrait} {
 	// 		@media #{$mq-w400-up} {
