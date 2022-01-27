@@ -5,6 +5,7 @@
 import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
 
+import Hero from "../hero/hero";
 import PhotosCards from "../photos-cards/photos-cards";
 
 class Gallery extends Component {
@@ -38,7 +39,11 @@ class Gallery extends Component {
 
 		return (
 			<>
-				{this.props.children}
+				<Hero
+					title={this.props.title}
+					containerClass={"hero__gallery"}
+					titleClass={"hero__title--gallery"}
+				/>
 				<main className={"gallery"}>
 					<div className={"gallery__list-container"}>
 						<ul className={"gallery__list"}>

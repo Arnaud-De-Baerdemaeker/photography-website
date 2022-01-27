@@ -3,9 +3,9 @@
 // By Arnaud De Baerdemaeker
 
 import React, {Component} from "react";
-import {withRouter} from "react-router-dom";
 import {hot} from "react-hot-loader/root";
 
+import Hero from "../hero/hero";
 import Image from "../image/image";
 import myPhoto from "../../images/moi.png";
 
@@ -21,7 +21,11 @@ class HomePage extends Component {
 	render() {
 		return (
 			<>
-				{this.props.children}
+				<Hero
+					title={this.props.title}
+					containerClass={"hero__homepage"}
+					titleClass={"hero__title--homepage"}
+				/>
 				<main className={"homepage"}>
 					<div className={"homepage__my-photo"}>
 						<Image
@@ -44,4 +48,4 @@ class HomePage extends Component {
 	}
 }
 
-export default hot(withRouter(HomePage));
+export default hot(HomePage);
