@@ -8,6 +8,8 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import {faInstagram, faLinkedin, faGithub} from "@fortawesome/free-brands-svg-icons";
 
+import Name from "../name/name";
+
 class Footer extends Component {
 	render() {
 		const year = new Date();
@@ -75,10 +77,9 @@ class Footer extends Component {
 					</ul>
 				</div>
 				<div className={"footer__credits-container"}>
+					<Name class={"footer__name"} />
 					<p className={"footer__credits"}>
-						{`${year.getUTCFullYear()} - Arnaud De Baerdemaeker`}
-						<br />
-						{"Tous droits réservés"}
+						{`${year.getUTCFullYear()} - Tous droits réservés`}
 					</p>
 					<p className={"footer__credits"}>{"Version 2.0.0"}</p>
 				</div>
