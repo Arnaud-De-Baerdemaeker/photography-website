@@ -9,7 +9,6 @@ import {Helmet} from "react-helmet";
 
 import Header from "./header/header";
 import Navigation from "./navigation/navigation";
-import Hero from "./hero/hero";
 import HomePage from "./homepage/homepage";
 import Gallery from "./gallery-page/gallery";
 //import Error404 from "./error404/error404";
@@ -110,12 +109,8 @@ class App extends Component {
 								toggleMenu={this.toggleMenu}
 								closeMenu={this.closeMenu}
 								photos={photos}
-							>
-								<Hero
-									title={heroElements.galleryTitle}
-									class={"hero__gallery"}
-								/>
-							</Gallery>
+								title={heroElements.galleryTitle}
+							/>
 						</Route>
 						{/* <Route
 							exact
@@ -131,12 +126,8 @@ class App extends Component {
 								isMenuOpen={this.state.isMenuOpen}
 								toggleMenu={this.toggleMenu}
 								closeMenu={this.closeMenu}
-							>
-								<Hero
-									title={heroElements.homepageTitle}
-									class={"hero__homepage"}
-								/>
-							</HomePage>
+								title={heroElements.homepageTitle}
+							/>
 						</Route>
 					</Switch>
 					<Footer />
