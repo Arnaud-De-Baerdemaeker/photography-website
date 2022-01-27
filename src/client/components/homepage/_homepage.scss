@@ -5,37 +5,32 @@
 .homepage { // <main>
 	display: flex;
 	flex-direction: column;
-	row-gap: 40px;
 	align-items: center;
 
 	&__introduction { // <div>
+		display: flex;
+		flex-direction: column;
+		row-gap: 32px;
 		max-width: 700px;
 		padding: {
-			top: 100px;
+			top: 40px;
 			right: 1rem;
+			bottom: 80px;
 			left: 1rem;
 		}
 		color: $secondary-color;
 
 		.introduction {
 			&__paragraph { // <p>
-				margin: {
-					top: 32px;
-					bottom: 32px;
-				}
-				font-size: 14px;
+				margin: 0;
+				font-size: 16px;
 				line-height: 24px;
 
 				&:first-of-type { // <p>
-					margin-top: 0;
 					font: {
-						size: initial;
+						size: 18px;
 						weight: 700;
 					}
-				}
-
-				&:last-of-type { // <p>
-					margin-bottom: 0;
 				}
 			}
 		}
@@ -44,12 +39,6 @@
 	&__my-photo { // <div>
 		width: 50%;
 		max-width: calc(700px / 2);
-		padding-bottom: 100px;
-
-		.my-photo {
-			&__image { // <img>
-				width: 100%;
-			}
-		}
+		padding-top: 80px;
 	}
 }
