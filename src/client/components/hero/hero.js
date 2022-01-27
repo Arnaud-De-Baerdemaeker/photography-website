@@ -15,9 +15,9 @@ class Hero extends Component {
 
 	render() {
 		return (
-			<div className={"hero " + this.props.class}>
+			<div className={"hero " + this.props.containerClass}>
 				<div className={"hero__back-filter"}>
-					<h2 className={"hero__title"}>
+					<h2 className={this.props.titleClass}>
 						{this.props.location.pathname === "/"
 							? <>
 								<span className={"title__job-part1"}>{this.props.title.job.part1}</span>
