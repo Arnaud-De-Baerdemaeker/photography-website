@@ -16,6 +16,14 @@ body {
 
 #app {
 	height: 100%;
+
+	@media #{$portrait} {
+		max-width: 1080px;
+	}
+
+	@media #{$landscape} {
+		max-width: 1920px;
+	}
 }
 
 .hidden {
