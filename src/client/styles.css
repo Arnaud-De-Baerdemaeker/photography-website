@@ -1,44 +1,30 @@
-@-webkit-keyframes slideIn {
+@-webkit-keyframes pulse {
   0% {
-    -webkit-transform: translate(-100%, 0);
-            transform: translate(-100%, 0);
+    -webkit-transform: initial;
+            transform: initial;
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
   }
   100% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    -webkit-transform: initial;
+            transform: initial;
   }
 }
 
-@keyframes slideIn {
+@keyframes pulse {
   0% {
-    -webkit-transform: translate(-100%, 0);
-            transform: translate(-100%, 0);
+    -webkit-transform: initial;
+            transform: initial;
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
   }
   100% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-}
-
-@-webkit-keyframes slideOut {
-  0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-  100% {
-    -webkit-transform: translate(-100%, 0);
-            transform: translate(-100%, 0);
-  }
-}
-
-@keyframes slideOut {
-  0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-  100% {
-    -webkit-transform: translate(-100%, 0);
-            transform: translate(-100%, 0);
+    -webkit-transform: initial;
+            transform: initial;
   }
 }
 
@@ -56,8 +42,24 @@ body {
   background-color: #dad7cd;
 }
 
-body #app {
-  height: inherit;
+#app {
+  height: 100%;
+}
+
+@media (orientation: portrait) {
+  #app {
+    max-width: 1080px;
+  }
+}
+
+@media (orientation: landscape) {
+  #app {
+    max-width: 1920px;
+  }
+}
+
+.hidden {
+  display: none !important;
 }
 
 .header {
@@ -229,8 +231,6 @@ body #app {
 .menu, .menu--closed {
   position: fixed;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
   z-index: 3;
   display: -webkit-box;
@@ -250,8 +250,8 @@ body #app {
   transition-property: -webkit-transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
 }
 
 @media (orientation: portrait) {
@@ -621,6 +621,17 @@ body #app {
   }
 }
 
+.hero__title--gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 10px;
+}
+
 .hero__title .title, .hero__title--homepage .title, .hero__title--gallery .title, .hero__title .title__job-part1, .hero__title--homepage .title__job-part1, .hero__title--gallery .title__job-part1, .hero__title .title__hobby-part1, .hero__title--homepage .title__hobby-part1, .hero__title--gallery .title__hobby-part1, .hero__title .title__job-part2, .hero__title--homepage .title__job-part2, .hero__title--gallery .title__job-part2, .hero__title .title__hobby-part2, .hero__title--homepage .title__hobby-part2, .hero__title--gallery .title__hobby-part2, .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
   position: relative;
   z-index: 1;
@@ -745,10 +756,63 @@ body #app {
   }
 }
 
+.hero__title .title__separator, .hero__title--homepage .title__separator, .hero__title--gallery .title__separator {
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: white;
+}
+
 .hero__title .title__intro, .hero__title--homepage .title__intro, .hero__title--gallery .title__intro {
   display: block;
-  font-size: 25px;
-  font-weight: 100;
+}
+
+@media (orientation: portrait) {
+  .hero__title .title__intro, .hero__title--homepage .title__intro, .hero__title--gallery .title__intro {
+    font-size: 25px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 25rem) {
+  .hero__title .title__intro, .hero__title--homepage .title__intro, .hero__title--gallery .title__intro {
+    font-size: 30px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 31.25rem) {
+  .hero__title .title__intro, .hero__title--homepage .title__intro, .hero__title--gallery .title__intro {
+    font-size: 40px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 37.5rem) {
+  .hero__title .title__intro, .hero__title--homepage .title__intro, .hero__title--gallery .title__intro {
+    font-size: 50px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 43.75rem) {
+  .hero__title .title__intro, .hero__title--homepage .title__intro, .hero__title--gallery .title__intro {
+    font-size: 55px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 50rem) {
+  .hero__title .title__intro, .hero__title--homepage .title__intro, .hero__title--gallery .title__intro {
+    font-size: 65px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 56.25rem) {
+  .hero__title .title__intro, .hero__title--homepage .title__intro, .hero__title--gallery .title__intro {
+    font-size: 75px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 62.5rem) {
+  .hero__title .title__intro, .hero__title--homepage .title__intro, .hero__title--gallery .title__intro {
+    font-size: 80px;
+  }
 }
 
 .homepage {
@@ -775,9 +839,9 @@ body #app {
   row-gap: 32px;
   max-width: 700px;
   padding-top: 40px;
-  padding-right: 1rem;
+  padding-right: 20px;
   padding-bottom: 80px;
-  padding-left: 1rem;
+  padding-left: 20px;
   color: #19271b;
 }
 
@@ -799,26 +863,54 @@ body #app {
 }
 
 .gallery__list-container {
-  padding-top: 50px;
-  padding-right: 1rem;
-  padding-bottom: 50px;
-  padding-left: 1rem;
+  padding-top: 80px;
+  padding-right: 20px;
+  padding-bottom: 80px;
+  padding-left: 20px;
 }
 
 .gallery__list {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -webkit-column-gap: 16px;
-          column-gap: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.gallery__list-item:nth-of-type(even) {
-  margin-top: 16px;
+.gallery__list-item {
+  max-width: 300px;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+@media (orientation: portrait) {
+  .gallery__list-item {
+    width: 50%;
+    height: 100px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 25rem) {
+  .gallery__list-item {
+    height: 150px;
+  }
+}
+
+@media (pointer: fine), (pointer: none) {
+  .gallery__list-item:hover {
+    -webkit-transform: scale(1.5, 1.5);
+            transform: scale(1.5, 1.5);
+  }
 }
 
 .my-photo__image {
@@ -827,10 +919,11 @@ body #app {
 
 .photos-cards {
   width: 100%;
-  height: 100px;
+  height: 100%;
 }
 
 .photos-cards span {
+  width: inherit;
   height: inherit;
 }
 
@@ -860,10 +953,6 @@ body #app {
           align-items: center;
   background-color: #19271b;
   color: white;
-}
-
-.modal--closed {
-  display: none;
 }
 
 .modal__image-container {
