@@ -6,24 +6,42 @@
 	&__list-container { // <div>
 		padding: {
 			top: 80px;
-			right: 1rem;
+			right: 20px;
 			bottom: 80px;
-			left: 1rem;
+			left: 20px;
 		}
 	}
 
 	&__list { // <ul>
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		column-gap: 16px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
 		margin: 0;
 		padding: 0;
 		list-style: none;
 	}
 
 	&__list-item { // <li>
-		&:nth-of-type(even) {
-			margin-top: 16px;
+		//width: 100%;
+		max-width: 300px;
+		transition: {
+			property: transform;
+			duration: 0.5s;
+		}
+
+		@media #{$portrait} {
+			width: 50%;
+			height: 100px;
+
+			@media #{$mq-w400-up} {
+				height: 150px;
+			}
+		}
+
+		@media (pointer: fine), (pointer: none) {
+			&:hover {
+				transform: scale(1.5, 1.5);
+			}
 		}
 	}
 }
