@@ -32,6 +32,7 @@ class PhotosCards extends Component {
 						url={this.props.sd}
 						name={this.props.name}
 						place={this.props.place}
+						class={"photos-cards__image"}
 					/>
 				</div>
 				<Modal
