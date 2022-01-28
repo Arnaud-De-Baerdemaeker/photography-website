@@ -118,6 +118,9 @@
 
 		&--gallery {
 			@extend .hero__title;
+			display: flex;
+			flex-direction: column;
+			row-gap: 20px;
 		}
 
 		// @media #{$landscape} {
@@ -265,94 +268,39 @@
 
 			&__intro { // <span>
 				display: block;
-				font: {
-					size: 25px;
-					weight: 100;
+
+				@media #{$portrait} {
+					font-size: 25px;
+
+					@media #{$mq-w400-up} {
+						font-size: 30px;
+					}
+
+					@media #{$mq-w500-up} {
+						font-size: 40px;
+					}
+
+					@media #{$mq-w600-up} {
+						font-size: 50px;
+					}
+
+					@media #{$mq-w700-up} {
+						font-size: 55px;
+					}
+
+					@media #{$mq-w800-up} {
+						font-size: 65px;
+					}
+
+					@media #{$mq-w900-up} {
+						font-size: 75px;
+					}
+
+					@media #{$mq-w1000-up} {
+						font-size: 80px;
+					}
 				}
 			}
 		}
 	}
-
-	// &__subtitle { // <h2>
-	// 	font: {
-	// 		family: $dm-sans;
-	// 		size: 0.9375rem;
-	// 		weight: 200;
-	// 	}
-	// 	line-height: 1.5625rem;
-
-	// 	@media #{$portrait} {
-	// 		@media #{$mq-w400-up} {
-	// 			font-size: 17px;
-	// 			line-height: 27px;
-	// 		}
-
-	// 		@media #{$mq-w500-up} {
-	// 			font-size: 1.1875rem;
-	// 			line-height: 1.8125rem;
-	// 		}
-
-	// 		@media #{$mq-w600-up} {
-	// 			font-size: 1.3125rem;
-	// 			line-height: 1.9375rem;
-	// 		}
-
-	// 		@media #{$mq-w700-up} {
-	// 			font-size: 1.4375rem;
-	// 			line-height: 2.0625rem;
-	// 		}
-
-	// 		@media #{$mq-w800-up} {
-	// 			font-size: 1.5625rem;
-	// 			line-height: 2.1875rem;
-	// 		}
-
-	// 		@media #{$mq-w900-up} {
-	// 			font-size: 1.6875rem;
-	// 			line-height: 2.3125rem;
-	// 		}
-
-	// 		@media #{$mq-w1000-up} {
-	// 			font-size: 1.8125rem;
-	// 			line-height: 2.4375rem;
-	// 		}
-	// 	}
-
-	// 	@media #{$landscape} {
-	// 		@media #{$mq-h400-up} {
-	// 			font-size: 1.125rem;
-	// 			line-height: 1.75rem;
-	// 		}
-
-	// 		@media #{$mq-h500-up} {
-	// 			font-size: 1.1875rem;
-	// 			line-height: 1.8125rem;
-	// 		}
-
-	// 		@media #{$mq-h600-up} {
-	// 			font-size: 1.25rem;
-	// 			line-height: 1.875rem;
-	// 		}
-
-	// 		@media #{$mq-h700-up} {
-	// 			font-size: 1.3125rem;
-	// 			line-height: 1.9375rem;
-	// 		}
-
-	// 		@media #{$mq-h800-up} {
-	// 			font-size: 1.375rem;
-	// 			line-height: 2rem;
-	// 		}
-
-	// 		@media #{$mq-h900-up} {
-	// 			font-size: 1.4375rem;
-	// 			line-height: 2.0625rem;
-	// 		}
-
-	// 		@media #{$mq-h1000-up} {
-	// 			font-size: 1.5rem;
-	// 			line-height: 2.125rem;
-	// 		}
-	// 	}
-	// }
 }
