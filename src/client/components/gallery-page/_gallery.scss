@@ -22,19 +22,18 @@
 	}
 
 	&__list-item { // <li>
-		//width: 100%;
-		max-width: 300px;
 		transition: {
 			property: transform;
 			duration: 0.5s;
 		}
 
 		@media #{$portrait} {
-			width: 50%;
-			height: 100px;
+			width: 130px;
+			height: 130px;
 
-			@media #{$mq-w400-up} {
-				height: 150px;
+			@media #{$mq-w500-up} {
+				width: 200px;
+				height: 200px;
 			}
 		}
 
