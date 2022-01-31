@@ -114,6 +114,46 @@
 					line-height: 95px;
 				}
 			}
+
+			@media #{$landscape} {
+				font-size: 30px;
+				line-height: 30px;
+
+				@media #{$mq-h400-up} {
+					font-size: 35px;
+					line-height: 35px;
+				}
+
+				@media #{$mq-h500-up} {
+					font-size: 40px;
+					line-height: 40px;
+				}
+
+				@media #{$mq-h600-up} {
+					font-size: 45px;
+					line-height: 45px;
+				}
+
+				@media #{$mq-h700-up} {
+					font-size: 50px;
+					line-height: 50px;
+				}
+
+				@media #{$mq-h800-up} {
+					font-size: 60px;
+					line-height: 60px;
+				}
+
+				@media #{$mq-h900-up} {
+					font-size: 70px;
+					line-height: 70px;
+				}
+
+				@media #{$mq-w1000-up} {
+					font-size: 80px;
+					line-height: 80px;
+				}
+			}
 		}
 
 		&--gallery {
@@ -122,43 +162,6 @@
 			flex-direction: column;
 			row-gap: 10px;
 		}
-
-		// @media #{$landscape} {
-		// 	@media #{$mq-h400-up} {
-		// 		font-size: 2.8125rem;
-		// 		line-height: 2.8125rem;
-		// 	}
-
-		// 	@media #{$mq-h500-up} {
-		// 		font-size: 3.125rem;
-		// 		line-height: 3.125rem;
-		// 	}
-
-		// 	@media #{$mq-h600-up} {
-		// 		font-size: 3.4375rem;
-		// 		line-height: 3.4375rem;
-		// 	}
-
-		// 	@media #{$mq-h700-up} {
-		// 		font-size: 3.75rem;
-		// 		line-height: 3.75rem;
-		// 	}
-
-		// 	@media #{$mq-h800-up} {
-		// 		font-size: 4.375rem;
-		// 		line-height: 4.375rem;
-		// 	}
-
-		// 	@media #{$mq-h900-up} {
-		// 		font-size: 4.6875rem;
-		// 		line-height: 4.6875rem;
-		// 	}
-
-		// 	@media #{$mq-h1000-up} {
-		// 		font-size: 5rem;
-		// 		line-height: 5rem;
-		// 	}
-		// }
 
 		.title {
 			position: relative;
@@ -215,6 +218,38 @@
 
 					@media #{$mq-w1000-up} {
 						font-size: 285px;
+					}
+				}
+
+				@media #{$landscape} {
+					font-size: 90px;
+
+					@media #{$mq-h400-up} {
+						font-size: 105px;
+					}
+
+					@media #{$mq-h500-up} {
+						font-size: 120px;
+					}
+
+					@media #{$mq-h600-up} {
+						font-size: 135px;
+					}
+
+					@media #{$mq-h700-up} {
+						font-size: 150px;
+					}
+
+					@media #{$mq-h800-up} {
+						font-size: 180px;
+					}
+
+					@media #{$mq-h900-up} {
+						font-size: 210px;
+					}
+
+					@media #{$mq-h1000-up} {
+						font-size: 240px;
 					}
 				}
 			}
