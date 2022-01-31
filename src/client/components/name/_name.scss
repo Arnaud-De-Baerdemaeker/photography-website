@@ -43,7 +43,37 @@
 		}
 	}
 
-	// @media #{$landscape} {}
+	@media #{$landscape} {
+		font-size: 20px;
+
+		@media #{$mq-h400-up} {
+			font-size: 22px;
+		}
+
+		@media #{$mq-h500-up} {
+			font-size: 24px;
+		}
+
+		@media #{$mq-h600-up} {
+			font-size: 26px;
+		}
+
+		@media #{$mq-h700-up} {
+			font-size: 28px;
+		}
+
+		@media #{$mq-h800-up} {
+			font-size: 30px;
+		}
+
+		@media #{$mq-h900-up} {
+			font-size: 32px;
+		}
+
+		@media #{$mq-h1000-up} {
+			font-size: 34px;
+		}
+	}
 
 	.name__link { // <a>
 		color: inherit;
