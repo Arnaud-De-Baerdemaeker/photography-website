@@ -144,6 +144,54 @@ body {
   }
 }
 
+@media (orientation: landscape) {
+  .header__name {
+    font-size: 20px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 25rem) {
+  .header__name {
+    font-size: 22px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 31.25rem) {
+  .header__name {
+    font-size: 24px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 37.5rem) {
+  .header__name {
+    font-size: 26px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 43.75rem) {
+  .header__name {
+    font-size: 28px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 50rem) {
+  .header__name {
+    font-size: 30px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 56.25rem) {
+  .header__name {
+    font-size: 32px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 62.5rem) {
+  .header__name {
+    font-size: 34px;
+  }
+}
+
 .header__name .name__link {
   color: inherit;
   text-decoration: none;
@@ -621,6 +669,62 @@ body {
   }
 }
 
+@media (orientation: landscape) {
+  .hero__title--homepage {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 25rem) {
+  .hero__title--homepage {
+    font-size: 35px;
+    line-height: 35px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 31.25rem) {
+  .hero__title--homepage {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 37.5rem) {
+  .hero__title--homepage {
+    font-size: 45px;
+    line-height: 45px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 43.75rem) {
+  .hero__title--homepage {
+    font-size: 50px;
+    line-height: 50px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 50rem) {
+  .hero__title--homepage {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 56.25rem) {
+  .hero__title--homepage {
+    font-size: 70px;
+    line-height: 70px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 62.5rem) {
+  .hero__title--homepage {
+    font-size: 80px;
+    line-height: 80px;
+  }
+}
+
 .hero__title--gallery {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -700,6 +804,54 @@ body {
 @media (orientation: portrait) and (min-width: 62.5rem) {
   .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
     font-size: 285px;
+  }
+}
+
+@media (orientation: landscape) {
+  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
+    font-size: 90px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 25rem) {
+  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
+    font-size: 105px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 31.25rem) {
+  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
+    font-size: 120px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 37.5rem) {
+  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
+    font-size: 135px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 43.75rem) {
+  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
+    font-size: 150px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 50rem) {
+  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
+    font-size: 180px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 56.25rem) {
+  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
+    font-size: 210px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 62.5rem) {
+  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
+    font-size: 240px;
   }
 }
 
@@ -884,7 +1036,6 @@ body {
 }
 
 .gallery__list-item {
-  max-width: 300px;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
   transition-property: transform;
@@ -895,14 +1046,15 @@ body {
 
 @media (orientation: portrait) {
   .gallery__list-item {
-    width: 50%;
-    height: 100px;
+    width: 130px;
+    height: 130px;
   }
 }
 
-@media (orientation: portrait) and (min-width: 25rem) {
+@media (orientation: portrait) and (min-width: 31.25rem) {
   .gallery__list-item {
-    height: 150px;
+    width: 200px;
+    height: 200px;
   }
 }
 
