@@ -62,10 +62,6 @@
 
 	&__title {
 		margin: 0;
-		padding: {
-			right: 20px;
-			left: 20px;
-		}
 		color: $white;
 		font: {
 			family: $crimson-pro;
@@ -77,47 +73,59 @@
 
 			@media #{$portrait} {
 				font-size: 35px;
-				line-height: 40px;
+				line-height: 35px;
+				padding: {
+					right: 20px;
+					left: 20px;
+				}
 
 				@media #{$mq-w400-up} {
 					font-size: 40px;
-					line-height: 45px;
+					line-height: 40px;
+					padding: {
+						right: 10%;
+						left: 10%;
+					}
 				}
 
 				@media #{$mq-w500-up} {
 					font-size: 50px;
-					line-height: 55px;
+					line-height: 50px;
 				}
 
 				@media #{$mq-w600-up} {
 					font-size: 60px;
-					line-height: 65px;
+					line-height: 60px;
 				}
 
 				@media #{$mq-w700-up} {
 					font-size: 65px;
-					line-height: 70px;
+					line-height: 65px;
 				}
 
 				@media #{$mq-w800-up} {
 					font-size: 75px;
-					line-height: 80px;
+					line-height: 75px;
 				}
 
 				@media #{$mq-w900-up} {
 					font-size: 85px;
-					line-height: 90px;
+					line-height: 85px;
 				}
 
 				@media #{$mq-w1000-up} {
 					font-size: 90px;
-					line-height: 95px;
+					line-height: 90px;
 				}
 			}
 
 			@media #{$landscape} {
 				font-size: 30px;
 				line-height: 30px;
+				padding: {
+					right: 10%;
+					left: 10%;
+				}
 
 				@media #{$mq-h400-up} {
 					font-size: 35px;
@@ -190,34 +198,34 @@
 				padding-left: 20px;
 
 				@media #{$portrait} {
-					font-size: 120px;
+					font-size: 105px;
 
 					@media #{$mq-w400-up} {
-						font-size: 135px;
+						font-size: 120px;
 					}
 
 					@media #{$mq-w500-up} {
-						font-size: 165px;
+						font-size: 150px;
 					}
 
 					@media #{$mq-w600-up} {
-						font-size: 195px;
+						font-size: 180px;
 					}
 
 					@media #{$mq-w700-up} {
-						font-size: 210px;
+						font-size: 195px;
 					}
 
 					@media #{$mq-w800-up} {
-						font-size: 240px;
+						font-size: 225px;
 					}
 
 					@media #{$mq-w900-up} {
-						font-size: 270px;
+						font-size: 255px;
 					}
 
 					@media #{$mq-w1000-up} {
-						font-size: 285px;
+						font-size: 270px;
 					}
 				}
 
