@@ -606,8 +606,6 @@ body {
 
 .hero__title, .hero__title--homepage, .hero__title--gallery {
   margin: 0;
-  padding-right: 20px;
-  padding-left: 20px;
   color: white;
   font-family: "Crimson Pro", Arial, Helvetica, sans-serif;
   font-weight: 100;
@@ -616,56 +614,60 @@ body {
 @media (orientation: portrait) {
   .hero__title--homepage {
     font-size: 35px;
-    line-height: 40px;
+    line-height: 35px;
+    padding-right: 20px;
+    padding-left: 20px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 25rem) {
   .hero__title--homepage {
     font-size: 40px;
-    line-height: 45px;
+    line-height: 40px;
+    padding-right: 10%;
+    padding-left: 10%;
   }
 }
 
 @media (orientation: portrait) and (min-width: 31.25rem) {
   .hero__title--homepage {
     font-size: 50px;
-    line-height: 55px;
+    line-height: 50px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 37.5rem) {
   .hero__title--homepage {
     font-size: 60px;
-    line-height: 65px;
+    line-height: 60px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 43.75rem) {
   .hero__title--homepage {
     font-size: 65px;
-    line-height: 70px;
+    line-height: 65px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 50rem) {
   .hero__title--homepage {
     font-size: 75px;
-    line-height: 80px;
+    line-height: 75px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 56.25rem) {
   .hero__title--homepage {
     font-size: 85px;
-    line-height: 90px;
+    line-height: 85px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 62.5rem) {
   .hero__title--homepage {
     font-size: 90px;
-    line-height: 95px;
+    line-height: 90px;
   }
 }
 
@@ -673,6 +675,8 @@ body {
   .hero__title--homepage {
     font-size: 30px;
     line-height: 30px;
+    padding-right: 10%;
+    padding-left: 10%;
   }
 }
 
@@ -692,36 +696,36 @@ body {
 
 @media (orientation: landscape) and (min-height: 37.5rem) {
   .hero__title--homepage {
-    font-size: 45px;
-    line-height: 45px;
-  }
-}
-
-@media (orientation: landscape) and (min-height: 43.75rem) {
-  .hero__title--homepage {
     font-size: 50px;
     line-height: 50px;
   }
 }
 
-@media (orientation: landscape) and (min-height: 50rem) {
+@media (orientation: landscape) and (min-height: 43.75rem) {
   .hero__title--homepage {
     font-size: 60px;
     line-height: 60px;
   }
 }
 
-@media (orientation: landscape) and (min-height: 56.25rem) {
+@media (orientation: landscape) and (min-height: 50rem) {
   .hero__title--homepage {
-    font-size: 70px;
-    line-height: 70px;
+    font-size: 65px;
+    line-height: 65px;
   }
 }
 
-@media (orientation: landscape) and (min-width: 62.5rem) {
+@media (orientation: landscape) and (min-height: 56.25rem) {
   .hero__title--homepage {
-    font-size: 80px;
-    line-height: 80px;
+    font-size: 75px;
+    line-height: 75px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 62.5rem) {
+  .hero__title--homepage {
+    font-size: 85px;
+    line-height: 85px;
   }
 }
 
@@ -761,49 +765,49 @@ body {
 
 @media (orientation: portrait) {
   .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
-    font-size: 120px;
+    font-size: 105px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 25rem) {
   .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
-    font-size: 135px;
+    font-size: 120px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 31.25rem) {
   .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
-    font-size: 165px;
+    font-size: 150px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 37.5rem) {
   .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
-    font-size: 195px;
+    font-size: 180px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 43.75rem) {
   .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
-    font-size: 210px;
+    font-size: 195px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 50rem) {
   .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
-    font-size: 240px;
+    font-size: 225px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 56.25rem) {
   .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
-    font-size: 270px;
+    font-size: 255px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 62.5rem) {
   .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
-    font-size: 285px;
+    font-size: 270px;
   }
 }
 
@@ -827,31 +831,31 @@ body {
 
 @media (orientation: landscape) and (min-height: 37.5rem) {
   .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
-    font-size: 135px;
+    font-size: 150px;
   }
 }
 
 @media (orientation: landscape) and (min-height: 43.75rem) {
   .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
-    font-size: 150px;
+    font-size: 180px;
   }
 }
 
 @media (orientation: landscape) and (min-height: 50rem) {
   .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
-    font-size: 180px;
+    font-size: 195px;
   }
 }
 
 @media (orientation: landscape) and (min-height: 56.25rem) {
   .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
-    font-size: 210px;
+    font-size: 225px;
   }
 }
 
 @media (orientation: landscape) and (min-height: 62.5rem) {
   .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
-    font-size: 240px;
+    font-size: 255px;
   }
 }
 
@@ -1009,9 +1013,20 @@ body {
 }
 
 .homepage__my-photo {
-  width: 50%;
   max-width: calc(700px / 2);
   padding-top: 80px;
+}
+
+@media (orientation: portrait) {
+  .homepage__my-photo {
+    width: 50%;
+  }
+}
+
+@media (orientation: landscape) {
+  .homepage__my-photo {
+    width: 35%;
+  }
 }
 
 .gallery__list-container {
