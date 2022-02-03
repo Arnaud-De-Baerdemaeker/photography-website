@@ -108,8 +108,8 @@ class App extends Component {
 								isMenuOpen={this.state.isMenuOpen}
 								toggleMenu={this.toggleMenu}
 								closeMenu={this.closeMenu}
-								photos={photos}
 								title={heroElements.galleryTitle}
+								photos={photos}
 							/>
 						</Route>
 						{/* <Route
