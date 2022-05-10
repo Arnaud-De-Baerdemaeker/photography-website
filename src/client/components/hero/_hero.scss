@@ -278,6 +278,10 @@
 
 				@media #{$portrait} {
 					font-size: 35px;
+					padding: {
+						right: 20px;
+						left: 20px;
+					}
 
 					@media #{$mq-w400-up} {
 						font-size: 40px;
@@ -311,9 +315,13 @@
 
 			&__separator { // <span>
 				display: block;
-				width: 50px;
+				width: 100px;
 				height: 2px;
 				background-color: $white;
+				margin: {
+					right: 20px;
+					left: 20px;
+				}
 			}
 
 			&__intro { // <span>
@@ -321,6 +329,10 @@
 
 				@media #{$portrait} {
 					font-size: 25px;
+					padding: {
+						right: 20px;
+						left: 20px;
+					}
 
 					@media #{$mq-w400-up} {
 						font-size: 30px;
