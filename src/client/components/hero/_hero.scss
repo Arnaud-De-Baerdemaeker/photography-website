@@ -56,24 +56,25 @@
 	&__arrow { // <div>
 		width: 100%;
 		height: 100%;
-		background-color: $white;
+		background-color: $color-5;
 		clip-path: polygon(0 0, 50% 12px, 100% 0, 100% 3px, 50% 15px, 0 3px);
 	}
 
 	&__title {
 		margin: 0;
-		color: $white;
+		color: $color-5;
 		font: {
 			family: $crimson-pro;
 			weight: 100;
 		}
+		text-align: center;
 
 		&--homepage { // <h2>
 			@extend .hero__title;
 
 			@media #{$portrait} {
-				font-size: 35px;
-				line-height: 35px;
+				font-size: 40px;
+				line-height: 40px;
 				padding: {
 					right: 20px;
 					left: 20px;
@@ -164,29 +165,34 @@
 			}
 		}
 
-		&--gallery {
+		&--gallery { // h2>
 			@extend .hero__title;
-			display: flex;
-			flex-direction: column;
-			row-gap: 10px;
+			padding: {
+				right: 20px;
+				left: 20px;
+			}
+
+			@media #{$portrait} {
+				
+			}
 		}
 
 		.title {
 			position: relative;
 			z-index: 1;
 			display: block;
+			font-weight: 900;
 
 			&__job {
 				&-part1 { // <span>
 					@extend .title;
 					-webkit-text-fill-color: $transparent;
-					-webkit-text-stroke-color: $white;
+					-webkit-text-stroke-color: $color-5;
 					-webkit-text-stroke-width: 1px;
 				}
 
 				&-part2 { // <span>
 					@extend .title;
-					font-weight: 900;
 				}
 			}
 
@@ -194,8 +200,9 @@
 				@extend .title;
 				z-index: 0;
 				display: block;
-				color: $secondary-color;
+				color: $color-10;
 				padding-left: 20px;
+				font-weight: revert;
 
 				@media #{$portrait} {
 					font-size: 105px;
@@ -273,15 +280,10 @@
 			}
 
 			&__page { // <span>
-				display: block;
-				font-weight: 900;
+				@extend .title;
 
 				@media #{$portrait} {
-					font-size: 35px;
-					padding: {
-						right: 20px;
-						left: 20px;
-					}
+					font-size: 40px;
 
 					@media #{$mq-w400-up} {
 						font-size: 40px;
@@ -313,26 +315,11 @@
 				}
 			}
 
-			&__separator { // <span>
-				display: block;
-				width: 100px;
-				height: 2px;
-				background-color: $white;
-				margin: {
-					right: 20px;
-					left: 20px;
-				}
-			}
-
 			&__intro { // <span>
 				display: block;
 
 				@media #{$portrait} {
 					font-size: 25px;
-					padding: {
-						right: 20px;
-						left: 20px;
-					}
 
 					@media #{$mq-w400-up} {
 						font-size: 30px;
