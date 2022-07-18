@@ -12,8 +12,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: $secondary-color;
-	color: $white;
+	background-color: $color-3;
+	color: $color-5;
 
 	&__image-container { // <figure>
 		margin: {
@@ -30,7 +30,7 @@
 
 	&__caption { // <figcaption>
 		font-size: 0.75rem;
-		//color: $white;
+		//color: $color-5;
 		font-style: italic;
 		text-align: right;
 		padding: {
@@ -64,7 +64,7 @@
 		-webkit-tap-highlight-color: transparent;
 
 		&:hover {
-			background-color: $black;
+			background-color: $color-6;
 		}
 	}
 }

@@ -27,7 +27,7 @@
 	&__top-bar { // <div>
 		width: inherit;
 		height: 2px;
-		background-color: $white;
+		background-color: $color-5;
 		transform: unset;
 		transition: {
 			property: transform background-color;
