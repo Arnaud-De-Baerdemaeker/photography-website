@@ -28,7 +28,6 @@ class Hero extends Component {
 							</>
 							: <>
 								<span className={"title__page"}>{this.props.title.title}</span>
-								<span className={"title__separator"}></span>
 								<span className={"title__intro"}>{this.props.title.subtitle}</span>
 							</>
 						}
