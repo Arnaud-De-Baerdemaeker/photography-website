@@ -39,7 +39,8 @@ body {
           box-sizing: border-box;
   font-family: "DM Sans", Arial, Helvetica, sans-serif;
   font-size: 16px;
-  background-color: #dad7cd;
+  background-color: #101a12;
+  color: white;
 }
 
 #app {
@@ -56,10 +57,6 @@ body {
   #app {
     max-width: 1920px;
   }
-}
-
-.hidden {
-  display: none !important;
 }
 
 .header {
@@ -214,7 +211,7 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-.button, .button__menu {
+.button, .button__menu, .button__modal {
   position: relative;
   margin-top: 0;
   margin-bottom: 0;
@@ -246,6 +243,11 @@ body {
   transform-box: border-box;
   -webkit-transform-origin: center top;
           transform-origin: center top;
+}
+
+.button__modal {
+  position: absolute;
+  bottom: 40px;
 }
 
 .button__top-bar, .button__top-bar--close, .button__middle-bar, .button__middle-bar--close, .button__bottom-bar, .button__bottom-bar--close {
@@ -609,12 +611,13 @@ body {
   color: white;
   font-family: "Crimson Pro", Arial, Helvetica, sans-serif;
   font-weight: 100;
+  text-align: center;
 }
 
 @media (orientation: portrait) {
   .hero__title--homepage {
-    font-size: 35px;
-    line-height: 35px;
+    font-size: 40px;
+    line-height: 40px;
     padding-right: 20px;
     padding-left: 20px;
   }
@@ -730,20 +733,15 @@ body {
 }
 
 .hero__title--gallery {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  row-gap: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
-.hero__title .title, .hero__title--homepage .title, .hero__title--gallery .title, .hero__title .title__job-part1, .hero__title--homepage .title__job-part1, .hero__title--gallery .title__job-part1, .hero__title .title__hobby-part1, .hero__title--homepage .title__hobby-part1, .hero__title--gallery .title__hobby-part1, .hero__title .title__job-part2, .hero__title--homepage .title__job-part2, .hero__title--gallery .title__job-part2, .hero__title .title__hobby-part2, .hero__title--homepage .title__hobby-part2, .hero__title--gallery .title__hobby-part2, .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
+.hero__title .title, .hero__title--homepage .title, .hero__title--gallery .title, .hero__title .title__job-part1, .hero__title--homepage .title__job-part1, .hero__title--gallery .title__job-part1, .hero__title .title__hobby-part1, .hero__title--homepage .title__hobby-part1, .hero__title--gallery .title__hobby-part1, .hero__title .title__job-part2, .hero__title--homepage .title__job-part2, .hero__title--gallery .title__job-part2, .hero__title .title__hobby-part2, .hero__title--homepage .title__hobby-part2, .hero__title--gallery .title__hobby-part2, .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand, .hero__title .title__page, .hero__title--homepage .title__page, .hero__title--gallery .title__page {
   position: relative;
   z-index: 1;
   display: block;
+  font-weight: 900;
 }
 
 .hero__title .title__job-part1, .hero__title--homepage .title__job-part1, .hero__title--gallery .title__job-part1, .hero__title .title__hobby-part1, .hero__title--homepage .title__hobby-part1, .hero__title--gallery .title__hobby-part1 {
@@ -752,15 +750,12 @@ body {
   -webkit-text-stroke-width: 1px;
 }
 
-.hero__title .title__job-part2, .hero__title--homepage .title__job-part2, .hero__title--gallery .title__job-part2, .hero__title .title__hobby-part2, .hero__title--homepage .title__hobby-part2, .hero__title--gallery .title__hobby-part2 {
-  font-weight: 900;
-}
-
 .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
   z-index: 0;
   display: block;
-  color: #19271b;
+  color: #b6ceba;
   padding-left: 20px;
+  font-weight: revert;
 }
 
 @media (orientation: portrait) {
@@ -859,14 +854,9 @@ body {
   }
 }
 
-.hero__title .title__page, .hero__title--homepage .title__page, .hero__title--gallery .title__page {
-  display: block;
-  font-weight: 900;
-}
-
 @media (orientation: portrait) {
   .hero__title .title__page, .hero__title--homepage .title__page, .hero__title--gallery .title__page {
-    font-size: 35px;
+    font-size: 40px;
   }
 }
 
@@ -910,13 +900,6 @@ body {
   .hero__title .title__page, .hero__title--homepage .title__page, .hero__title--gallery .title__page {
     font-size: 90px;
   }
-}
-
-.hero__title .title__separator, .hero__title--homepage .title__separator, .hero__title--gallery .title__separator {
-  display: block;
-  width: 50px;
-  height: 2px;
-  background-color: white;
 }
 
 .hero__title .title__intro, .hero__title--homepage .title__intro, .hero__title--gallery .title__intro {
@@ -982,9 +965,130 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+@media (orientation: portrait) {
+  .homepage {
+    row-gap: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 62.5rem) {
+  .homepage {
+    row-gap: 100px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+}
+
+@media (orientation: landscape) {
+  .homepage {
+    row-gap: 150px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
+
+.homepage__my-photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (orientation: portrait) {
+  .homepage__my-photo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 40px;
+    max-width: 700px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 62.5rem) {
+  .homepage__my-photo {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-column-gap: 40px;
+            column-gap: 40px;
+  }
+}
+
+@media (orientation: landscape) {
+  .homepage__my-photo {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-column-gap: 50px;
+            column-gap: 50px;
+    max-width: 1100px;
+  }
+}
+
+@media (orientation: portrait) {
+  .homepage__my-photo span {
+    width: 150px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 25rem) {
+  .homepage__my-photo span {
+    width: 165px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 62.5rem) {
+  .homepage__my-photo span {
+    width: 35%;
+  }
+}
+
+@media (orientation: landscape) {
+  .homepage__my-photo span {
+    width: 30%;
+  }
 }
 
 .homepage__introduction {
+  font-weight: 700;
+  margin: 0;
+}
+
+@media (orientation: portrait) {
+  .homepage__introduction {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 62.5rem) {
+  .homepage__introduction {
+    width: 65%;
+    font-size: 27px;
+    line-height: 37px;
+  }
+}
+
+@media (orientation: landscape) {
+  .homepage__introduction {
+    width: 70%;
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+.homepage__description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -992,40 +1096,172 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  row-gap: 32px;
-  max-width: 700px;
-  padding-top: 40px;
-  padding-right: 20px;
-  padding-bottom: 80px;
-  padding-left: 20px;
-  color: #19271b;
-}
-
-.homepage__introduction .introduction__paragraph {
-  margin: 0;
-  font-size: 16px;
-  line-height: 24px;
-}
-
-.homepage__introduction .introduction__paragraph:first-of-type {
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.homepage__my-photo {
-  max-width: calc(700px / 2);
-  padding-top: 80px;
 }
 
 @media (orientation: portrait) {
-  .homepage__my-photo {
-    width: 50%;
+  .homepage__description {
+    row-gap: 40px;
+    max-width: 700px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 62.5rem) {
+  .homepage__description {
+    row-gap: 50px;
   }
 }
 
 @media (orientation: landscape) {
-  .homepage__my-photo {
-    width: 35%;
+  .homepage__description {
+    row-gap: 100px;
+    max-width: 1100px;
+  }
+}
+
+.homepage__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (orientation: portrait) {
+  .homepage__section {
+    row-gap: 20px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 62.5rem) {
+  .homepage__section {
+    row-gap: 25px;
+  }
+}
+
+@media (orientation: landscape) {
+  .homepage__section {
+    row-gap: 40px;
+  }
+}
+
+.homepage__title {
+  border-left-style: solid;
+  border-left-width: 5px;
+  border-left-color: #3a5a40;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  margin: 0;
+}
+
+@media (orientation: portrait) {
+  .homepage__title {
+    font-size: 24px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 25rem) {
+  .homepage__title {
+    font-size: 27px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 37.5rem) {
+  .homepage__title {
+    font-size: 30px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 50rem) {
+  .homepage__title {
+    font-size: 35px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 62.5rem) {
+  .homepage__title {
+    font-size: 44px;
+  }
+}
+
+@media (orientation: landscape) {
+  .homepage__title {
+    font-size: 45px;
+    padding-left: 20px;
+  }
+}
+
+.homepage__title:after {
+  content: "\002E";
+  color: #3a5a40;
+}
+
+.homepage__paragraph {
+  margin: 0;
+}
+
+@media (orientation: portrait) {
+  .homepage__paragraph {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 25rem) {
+  .homepage__paragraph {
+    font-size: 17px;
+    line-height: 27px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 31.25rem) {
+  .homepage__paragraph {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 37.5rem) {
+  .homepage__paragraph {
+    font-size: 19px;
+    line-height: 29px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 43.75rem) {
+  .homepage__paragraph {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 50rem) {
+  .homepage__paragraph {
+    font-size: 21px;
+    line-height: 31px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 56.25rem) {
+  .homepage__paragraph {
+    font-size: 22px;
+    line-height: 32px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 62.5rem) {
+  .homepage__paragraph {
+    font-size: 23px;
+    line-height: 33px;
+  }
+}
+
+@media (orientation: landscape) {
+  .homepage__paragraph {
+    font-size: 25px;
+    line-height: 35px;
   }
 }
 
@@ -1080,8 +1316,9 @@ body {
   }
 }
 
-.my-photo__image {
+.image__portrait {
   width: 100%;
+  vertical-align: middle;
 }
 
 .photos-cards {
@@ -1112,6 +1349,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1131,49 +1372,11 @@ body {
 
 .modal__image {
   width: 100%;
+  vertical-align: middle;
 }
 
-.modal__caption {
-  font-size: 0.75rem;
-  font-style: italic;
-  text-align: right;
-  padding-top: 0;
-  padding-right: 1rem;
-  padding-bottom: 0;
-  padding-left: 0;
-}
-
-.modal__closeMenu {
-  position: absolute;
-  left: calc(50vw - 1.75rem);
-  bottom: 10vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 3.5rem;
-  height: 3.5rem;
-  margin-top: 0;
-  margin-right: auto;
-  margin-bottom: 0;
-  margin-left: auto;
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 3.5rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition-property: background-color;
-  transition-property: background-color;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.modal__closeMenu:hover {
-  background-color: black;
+.modal--hidden {
+  display: none;
 }
 
 .footer {
