@@ -11,7 +11,7 @@ import Header from "./header/header";
 import Navigation from "./navigation/navigation";
 import HomePage from "./homepage/homepage";
 import Gallery from "./gallery-page/gallery";
-//import Error404 from "./error404/error404";
+import Error404 from "./error404/error404";
 import photos from "./../JSON/metadata.json";
 import Footer from "./footer/footer";
 
@@ -40,14 +40,6 @@ class App extends Component {
 	}
 
 	render() {
-		// const name = "Arnaud De Baerdemaeker - Développeur Web & Amateur de Photographie";
-
-		// const tabName = {
-		// 	homepage: name,
-		// 	gallery: "Galerie | " + name,
-		// 	error404: "Page introuvable | " + name
-		// };
-
 		const heroElements = {
 			homepageTitle: {
 				job: {
@@ -112,12 +104,6 @@ class App extends Component {
 								photos={photos}
 							/>
 						</Route>
-						{/* <Route
-							exact
-							path={"/404"}
-						>
-							<Error404 />
-						</Route> */}
 						<Route
 							exact
 							path={"/"}
@@ -128,6 +114,12 @@ class App extends Component {
 								closeMenu={this.closeMenu}
 								title={heroElements.homepageTitle}
 							/>
+						</Route>
+						<Route
+							exact
+							path={"*"}
+						>
+							<Error404 />
 						</Route>
 					</Switch>
 					<Footer />
