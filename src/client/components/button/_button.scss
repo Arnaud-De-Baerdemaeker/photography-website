@@ -24,6 +24,12 @@
 		transform-origin: center top;
 	}
 
+	&__modal {
+		@extend .button;
+		position: absolute;
+		bottom: 40px;
+	}
+
 	&__top-bar { // <div>
 		width: inherit;
 		height: 2px;
@@ -57,10 +63,4 @@
 			transform: translate(0, -9px) rotate(45deg);
 		}
 	}
-
-	// &__close-modal {
-	// 	@extend .button;
-	// 	position: absolute;
-	// 	bottom: 50px;
-	// }
 }
