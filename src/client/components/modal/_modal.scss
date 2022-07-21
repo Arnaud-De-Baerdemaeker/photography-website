@@ -10,6 +10,7 @@
 	height: 100%;
 	z-index: 2;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	background-color: $color-3;
@@ -26,45 +27,10 @@
 
 	&__image { // <img>
 		width: 100%;
+		vertical-align: middle;
 	}
 
-	&__caption { // <figcaption>
-		font-size: 0.75rem;
-		//color: $color-5;
-		font-style: italic;
-		text-align: right;
-		padding: {
-			top: 0;
-			right: 1rem;
-			bottom: 0;
-			left: 0;
-		}
-	}
-
-	&__closeMenu { // <div>
-		position: absolute;
-		left: calc(50vw - 1.75rem);
-		bottom: 10vh;
-		display: flex;
-		width: 3.5rem;
-		height: 3.5rem;
-		margin: {
-			top: 0;
-			right: auto;
-			bottom: 0;
-			left: auto;
-		}
-		cursor: pointer;
-		background-color: $half-transparent;
-		border-radius: 3.5rem;
-		justify-content: center;
-		align-items: center;
-		transition-property: background-color;
-		transition-duration: 0.5s;
-		-webkit-tap-highlight-color: transparent;
-
-		&:hover {
-			background-color: $color-6;
-		}
+	&--hidden {
+		display: none;
 	}
 }
