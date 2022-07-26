@@ -115,10 +115,7 @@ class App extends Component {
 								title={heroElements.homepageTitle}
 							/>
 						</Route>
-						<Route
-							exact
-							path={"*"}
-						>
+						<Route path="*">
 							<Error404 />
 						</Route>
 					</Switch>
