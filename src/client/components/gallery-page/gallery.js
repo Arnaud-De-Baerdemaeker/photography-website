@@ -40,7 +40,8 @@ class Gallery extends Component {
 		return (
 			<>
 				<Hero
-					title={this.props.title}
+					title={"Galerie"}
+					subtitle={"Découvrez une sélection de mes captures"}
 					containerClass={"hero__gallery"}
 					titleClass={"hero__title--gallery"}
 				/>
