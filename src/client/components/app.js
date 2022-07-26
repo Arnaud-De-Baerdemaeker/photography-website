@@ -40,24 +40,6 @@ class App extends Component {
 	}
 
 	render() {
-		const heroElements = {
-			homepageTitle: {
-				job: {
-					part1: "Développeur ",
-					part2: "web",
-				},
-				ampersand: "&",
-				hobby: {
-					part1: "Amateur de ",
-					part2: "photographie"
-				}
-			},
-			galleryTitle: {
-				title: "Galerie",
-				subtitle: "Découvrez une sélection de mes captures"
-			}
-		};
-
 		return (
 			<>
 				<Helmet>
@@ -100,7 +82,6 @@ class App extends Component {
 								isMenuOpen={this.state.isMenuOpen}
 								toggleMenu={this.toggleMenu}
 								closeMenu={this.closeMenu}
-								title={heroElements.galleryTitle}
 								photos={photos}
 							/>
 						</Route>
@@ -112,7 +93,6 @@ class App extends Component {
 								isMenuOpen={this.state.isMenuOpen}
 								toggleMenu={this.toggleMenu}
 								closeMenu={this.closeMenu}
-								title={heroElements.homepageTitle}
 							/>
 						</Route>
 						<Route path="*">
