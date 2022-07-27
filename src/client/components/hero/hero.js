@@ -13,8 +13,7 @@ class Hero extends Component {
 		clearInterval(this.animate);
 	}
 
-	filterRoute() {
-		console.log(this.props.location.pathname);
+	filterHeroContent() {
 		switch(this.props.location.pathname) {
 			case "/":
 				return <>
@@ -31,9 +30,24 @@ class Hero extends Component {
 				</>
 			default:
 				return <>
-					<span className={"title__page"}>{this.props.titlePart1}</span>
+					<span className={"title__page"}>{this.props.title}</span>
 					<span className={"title__intro"}>{this.props.subtitle}</span>
 				</>
+		}
+	}
+
+	filterHeroArrow() {
+		switch(this.props.location.pathname) {
+			case "/":
+			case "/galerie":
+				return <>
+					<div className={"hero__move-down-icon"}>
+						<div className={"hero__arrow"}></div>
+						<div className={"hero__arrow"}></div>
+					</div>
+				</>
+			default:
+				return;
 		}
 	}
 
@@ -42,12 +56,9 @@ class Hero extends Component {
 			<div className={"hero " + this.props.containerClass}>
 				<div className={"hero__back-filter"}>
 					<h2 className={this.props.titleClass}>
-						{this.filterRoute()}
+						{this.filterHeroContent()}
 					</h2>
-					<div className={"hero__move-down-icon"}>
-						<div className={"hero__arrow"}></div>
-						<div className={"hero__arrow"}></div>
-					</div>
+					{this.filterHeroArrow()}
 				</div>
 			</div>
 		);
