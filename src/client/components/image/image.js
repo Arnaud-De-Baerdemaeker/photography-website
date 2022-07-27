@@ -13,7 +13,7 @@ class Image extends Component {
             <LazyLoadImage
                 src={this.props.url}
                 alt={this.props.alt} // /!\
-                title={this.props.title ? this.props.title : null}
+                title={this.props.location ? this.props.location : null}
                 effect={"blur"}
                 className={this.props.class}
             />
