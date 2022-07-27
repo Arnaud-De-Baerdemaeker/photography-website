@@ -30,8 +30,7 @@ class PhotosCards extends Component {
 					className={"photos-cards"}>
 					<Image
 						url={this.props.sd}
-						name={this.props.name}
-						place={this.props.place}
+						location={this.props.location}
 						class={"photos-cards__image"}
 					/>
 				</div>
