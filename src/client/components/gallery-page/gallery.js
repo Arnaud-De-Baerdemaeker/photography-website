@@ -25,13 +25,12 @@ class Gallery extends Component {
 			// For each loop, an iteration of the <PhotoCards> component is created with different props. Then, the iteration is pushed in the array.
 			photosCards.push(
 				<li
-					key={photo.name}
+					key={photo.id}
 					className={"gallery__list-item"}>
 					<PhotosCards
 						sd={photo.sd}
 						hd={photo.hd}
-						name={photo.name}
-						place={photo.place}
+						location={photo.location}
 					/>
 				</li>
 			);
