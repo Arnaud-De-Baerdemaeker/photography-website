@@ -11,9 +11,8 @@ class Error404 extends Component {
 	render() {
 		return(
 			<Hero
-				titlePart1={"Oups !"}
-				titlePart2={"C'est un 404"}
-				subtitle={"La page que vous recherchez n'existe pas"}
+				title={"404"}
+				subtitle={"Oups ! La page que vous recherchez n'existe pas"}
 				containerClass={"hero__404"}
 				titleClass={"hero__title--404"}
 			/>
