@@ -41,7 +41,6 @@ class Gallery extends Component {
 				<Hero
 					title={"Galerie"}
 					subtitle={"Découvrez une sélection de mes captures"}
-					containerClass={"hero__gallery"}
 					titleClass={"hero__title--gallery"}
 				/>
 				<main className={"gallery"}>

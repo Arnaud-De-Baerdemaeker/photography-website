@@ -13,7 +13,6 @@ class Error404 extends Component {
 			<Hero
 				title={"404"}
 				subtitle={"Oups ! La page que vous recherchez n'existe pas"}
-				containerClass={"hero__404"}
 				titleClass={"hero__title--404"}
 			/>
 		);

@@ -27,7 +27,6 @@ class HomePage extends Component {
 					ampersand={"&"}
 					hobbyPart1={"Amateur de "}
 					hobbyPart2={"photographie"}
-					containerClass={"hero__homepage"}
 					titleClass={"hero__title--homepage"}
 				/>
 				<main className={"homepage"}>
