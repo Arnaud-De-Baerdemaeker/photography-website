@@ -4,13 +4,33 @@ import {withRouter} from "react-router-dom";
 
 class Hero extends Component {
 	componentDidMount() {
-		this.animate = window.setInterval(function() {
+		this.animateArrow = window.setInterval(function() {
 			document.querySelector(".hero__move-down-icon").classList.toggle("hero__move-down-icon--down");
 		}, 750);
+
+
+		const backgroundClasses = [
+			"hero__background1",
+			"hero__background2",
+			"hero__background3",
+			"hero__background4",
+			"hero__background5"
+		];
+
+		let
+			newIndex = 0,
+			lastIndex
+		;
+
+		this.slideshow = window.setInterval(function() {
+			lastIndex = newIndex;
+			newIndex = Math.floor(Math.random() * 5);
+			document.querySelector(".hero").classList.replace(backgroundClasses[lastIndex], backgroundClasses[newIndex]);
+		}, 7500);
 	}
 
 	componentWillUnmount() {
-		clearInterval(this.animate);
+		clearInterval(this.animateArrow, this.slideshow);
 	}
 
 	filterHeroContent() {
@@ -53,7 +73,7 @@ class Hero extends Component {
 
 	render() {
 		return (
-			<div className={"hero " + this.props.containerClass}>
+			<div className={"hero " + "hero__background1"}>
 				<div className={"hero__back-filter"}>
 					<h2 className={this.props.titleClass}>
 						{this.filterHeroContent()}
