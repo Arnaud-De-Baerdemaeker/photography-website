@@ -22,6 +22,11 @@ class Hero extends Component {
 			lastIndex
 		;
 
+		/*
+			Interval to display the image in order by using an index matching the images in the array.
+			At each iteration, the previous image is replaced with the next one.
+			The condition checks if the end of the array is reached or not, and resets the counters to start over as a loop.
+		*/
 		this.slideshow = window.setInterval(function() {
 			if(newIndex === 4) {
 				lastIndex = 4;
