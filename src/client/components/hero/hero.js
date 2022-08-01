@@ -23,8 +23,15 @@ class Hero extends Component {
 		;
 
 		this.slideshow = window.setInterval(function() {
-			lastIndex = newIndex;
-			newIndex = Math.floor(Math.random() * 5);
+			if(newIndex === 4) {
+				lastIndex = 4;
+				newIndex = -1;
+			}
+			else {
+				lastIndex = newIndex;
+			}
+
+			newIndex++;
 			document.querySelector(".hero").classList.replace(backgroundClasses[lastIndex], backgroundClasses[newIndex]);
 		}, 7500);
 	}
