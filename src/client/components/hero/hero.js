@@ -37,8 +37,8 @@ class Hero extends Component {
 			}
 
 			newIndex++;
-			document.querySelector(".hero").classList.replace(backgroundClasses[lastIndex], backgroundClasses[newIndex]);
-		}, 7500);
+			document.querySelector(".hero__container").classList.replace(backgroundClasses[lastIndex], backgroundClasses[newIndex]);
+		}, 10000);
 	}
 
 	componentWillUnmount() {
@@ -85,13 +85,14 @@ class Hero extends Component {
 
 	render() {
 		return (
-			<div className={"hero " + "hero__background1"}>
-				<div className={"hero__back-filter"}>
-					<h2 className={this.props.titleClass}>
-						{this.filterHeroContent()}
-					</h2>
-					{this.filterHeroArrow()}
+			<div className={"hero"}>
+				<div className={"hero__container " + "hero__background1"}>
+					<div className={"hero__back-filter"}></div>
 				</div>
+				<h2 className={this.props.titleClass}>
+					{this.filterHeroContent()}
+				</h2>
+				{this.filterHeroArrow()}
 			</div>
 		);
 	}
