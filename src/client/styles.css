@@ -1,30 +1,150 @@
-@-webkit-keyframes pulse {
+@-webkit-keyframes fadeInAndOut1 {
   0% {
-    -webkit-transform: initial;
-            transform: initial;
+    opacity: 0;
   }
-  50% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
   }
   100% {
-    -webkit-transform: initial;
-            transform: initial;
+    opacity: 0;
   }
 }
 
-@keyframes pulse {
+@keyframes fadeInAndOut1 {
   0% {
-    -webkit-transform: initial;
-            transform: initial;
+    opacity: 0;
   }
-  50% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
   }
   100% {
-    -webkit-transform: initial;
-            transform: initial;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeInAndOut2 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInAndOut2 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeInAndOut3 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInAndOut3 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeInAndOut4 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInAndOut4 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeInAndOut5 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInAndOut5 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
@@ -539,24 +659,6 @@ body {
 }
 
 .hero {
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-}
-
-.hero__homepage {
-  background-image: url("https://lh3.googleusercontent.com/M-Cy0zTisnpjaCobpnmSGw_csGA2HHgEu4wqXJPvjTl9GWDN2KLQPJ_AorRD3soNtjQIs6XIESn2F1UjePrTmZ8yw_gMpVNPFQJrYnDf131Lrog2HuzYKk5SJGLOTy_ojY6-KfIh6g=w1920-h1080");
-  background-position-x: 50%;
-}
-
-.hero__gallery {
-  background-image: url("https://lh3.googleusercontent.com/x-Epo9_cT7fBvPu03CuZ4Pxhsi6zxbtSEtQ4lAftMDGB6tNkEguZBX8lkX_OnGINJS-2j4tipj1ZRiEVyOanbOO3SO_mRA_vIJ3vN4RTasKjPi5vFaeK-AA3Wj14P7c5jGFHHf7T2g=w1920-h1080");
-  background-position-x: 50%;
-}
-
-.hero__back-filter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -567,6 +669,66 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.hero__container {
+  position: absolute;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: inherit;
+  height: inherit;
+}
+
+.hero__background1 {
+  background-image: url("https://lh3.googleusercontent.com/M-Cy0zTisnpjaCobpnmSGw_csGA2HHgEu4wqXJPvjTl9GWDN2KLQPJ_AorRD3soNtjQIs6XIESn2F1UjePrTmZ8yw_gMpVNPFQJrYnDf131Lrog2HuzYKk5SJGLOTy_ojY6-KfIh6g=w1920-h1080");
+  background-position-x: 50%;
+  -webkit-animation-name: fadeInAndOut1;
+          animation-name: fadeInAndOut1;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+}
+
+.hero__background2 {
+  background-image: url("https://lh3.googleusercontent.com/x-Epo9_cT7fBvPu03CuZ4Pxhsi6zxbtSEtQ4lAftMDGB6tNkEguZBX8lkX_OnGINJS-2j4tipj1ZRiEVyOanbOO3SO_mRA_vIJ3vN4RTasKjPi5vFaeK-AA3Wj14P7c5jGFHHf7T2g=w1920-h1080");
+  background-position-x: 50%;
+  -webkit-animation-name: fadeInAndOut2;
+          animation-name: fadeInAndOut2;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+}
+
+.hero__background3 {
+  background-image: url("https://lh3.googleusercontent.com/VlmRP9R6zjMXzUezjU6fpgAYt37rNritFrDMuhqAfy5RKjyvqCH9bd8tQdB-jx46sc_NWVg01aFu-voQ8dD74wjhSDt0yDl75-E6gf6fd3bw8yj4jSk_kZwMp8hp8WL2_b9UHO7S5A=w1920-h1080");
+  background-position-x: 50%;
+  -webkit-animation-name: fadeInAndOut3;
+          animation-name: fadeInAndOut3;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+}
+
+.hero__background4 {
+  background-image: url("https://lh3.googleusercontent.com/oWtO6I2-HLQ0O-PjWyl6oAQkVaihh_lrFXD3ioqemv-VrzeGjIV2ndFIrK3rOLMdiyGJaK99GXTEifULeifu7xw5E2VuO9rW2Bt6sf0f9CeOONPRSxOct7Y_I9x90mY9hlKdOQtM4A=w1920-h1080");
+  background-position-x: 50%;
+  -webkit-animation-name: fadeInAndOut4;
+          animation-name: fadeInAndOut4;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+}
+
+.hero__background5 {
+  background-image: url("https://lh3.googleusercontent.com/RoO69wbLVhDxxXjpnJmnAcuv-hiiLlPJX-ip90np2tr_YdnP_y4i8CJ4LXdp5yCWv6HWLIf7oVCUhXwt0DgxNabsvjJ17NzTkNGcdChggeNGLF-uIibIslt7ezL3BdTlWhi_qtAxgw=w1920-h1080");
+  background-position-x: 65%;
+  -webkit-animation-name: fadeInAndOut5;
+          animation-name: fadeInAndOut5;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+}
+
+.hero__back-filter {
   width: inherit;
   height: inherit;
   background-color: rgba(0, 0, 0, 0.5);
@@ -606,7 +768,7 @@ body {
           clip-path: polygon(0 0, 50% 12px, 100% 0, 100% 3px, 50% 15px, 0 3px);
 }
 
-.hero__title, .hero__title--homepage, .hero__title--gallery {
+.hero__title, .hero__title--homepage, .hero__title--gallery, .hero__title--404 {
   margin: 0;
   color: white;
   font-family: "Crimson Pro", Arial, Helvetica, sans-serif;
@@ -737,20 +899,20 @@ body {
   padding-left: 20px;
 }
 
-.hero__title .title, .hero__title--homepage .title, .hero__title--gallery .title, .hero__title .title__job-part1, .hero__title--homepage .title__job-part1, .hero__title--gallery .title__job-part1, .hero__title .title__hobby-part1, .hero__title--homepage .title__hobby-part1, .hero__title--gallery .title__hobby-part1, .hero__title .title__job-part2, .hero__title--homepage .title__job-part2, .hero__title--gallery .title__job-part2, .hero__title .title__hobby-part2, .hero__title--homepage .title__hobby-part2, .hero__title--gallery .title__hobby-part2, .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand, .hero__title .title__page, .hero__title--homepage .title__page, .hero__title--gallery .title__page {
+.hero__title .title, .hero__title--homepage .title, .hero__title--gallery .title, .hero__title--404 .title, .hero__title .title__job-part1, .hero__title--homepage .hero__title .title__job-part1, .hero__title .hero__title--homepage .title__job-part1, .hero__title--gallery .hero__title .title__job-part1, .hero__title .hero__title--gallery .title__job-part1, .hero__title--404 .hero__title .title__job-part1, .hero__title .hero__title--404 .title__job-part1, .hero__title .hero__title--homepage .title__job-part1, .hero__title--homepage .hero__title .title__job-part1, .hero__title--homepage .title__job-part1, .hero__title--gallery .hero__title--homepage .title__job-part1, .hero__title--homepage .hero__title--gallery .title__job-part1, .hero__title--404 .hero__title--homepage .title__job-part1, .hero__title--homepage .hero__title--404 .title__job-part1, .hero__title .hero__title--gallery .title__job-part1, .hero__title--gallery .hero__title .title__job-part1, .hero__title--homepage .hero__title--gallery .title__job-part1, .hero__title--gallery .hero__title--homepage .title__job-part1, .hero__title--gallery .title__job-part1, .hero__title--404 .hero__title--gallery .title__job-part1, .hero__title--gallery .hero__title--404 .title__job-part1, .hero__title .hero__title--404 .title__job-part1, .hero__title--404 .hero__title .title__job-part1, .hero__title--homepage .hero__title--404 .title__job-part1, .hero__title--404 .hero__title--homepage .title__job-part1, .hero__title--gallery .hero__title--404 .title__job-part1, .hero__title--404 .hero__title--gallery .title__job-part1, .hero__title--404 .title__job-part1, .hero__title .title__hobby-part1, .hero__title--homepage .hero__title .title__hobby-part1, .hero__title .hero__title--homepage .title__hobby-part1, .hero__title--gallery .hero__title .title__hobby-part1, .hero__title .hero__title--gallery .title__hobby-part1, .hero__title--404 .hero__title .title__hobby-part1, .hero__title .hero__title--404 .title__hobby-part1, .hero__title .hero__title--homepage .title__hobby-part1, .hero__title--homepage .hero__title .title__hobby-part1, .hero__title--homepage .title__hobby-part1, .hero__title--gallery .hero__title--homepage .title__hobby-part1, .hero__title--homepage .hero__title--gallery .title__hobby-part1, .hero__title--404 .hero__title--homepage .title__hobby-part1, .hero__title--homepage .hero__title--404 .title__hobby-part1, .hero__title .hero__title--gallery .title__hobby-part1, .hero__title--gallery .hero__title .title__hobby-part1, .hero__title--homepage .hero__title--gallery .title__hobby-part1, .hero__title--gallery .hero__title--homepage .title__hobby-part1, .hero__title--gallery .title__hobby-part1, .hero__title--404 .hero__title--gallery .title__hobby-part1, .hero__title--gallery .hero__title--404 .title__hobby-part1, .hero__title .hero__title--404 .title__hobby-part1, .hero__title--404 .hero__title .title__hobby-part1, .hero__title--homepage .hero__title--404 .title__hobby-part1, .hero__title--404 .hero__title--homepage .title__hobby-part1, .hero__title--gallery .hero__title--404 .title__hobby-part1, .hero__title--404 .hero__title--gallery .title__hobby-part1, .hero__title--404 .title__hobby-part1, .hero__title .title__job-part2, .hero__title--homepage .hero__title .title__job-part2, .hero__title .hero__title--homepage .title__job-part2, .hero__title--gallery .hero__title .title__job-part2, .hero__title .hero__title--gallery .title__job-part2, .hero__title--404 .hero__title .title__job-part2, .hero__title .hero__title--404 .title__job-part2, .hero__title .hero__title--homepage .title__job-part2, .hero__title--homepage .hero__title .title__job-part2, .hero__title--homepage .title__job-part2, .hero__title--gallery .hero__title--homepage .title__job-part2, .hero__title--homepage .hero__title--gallery .title__job-part2, .hero__title--404 .hero__title--homepage .title__job-part2, .hero__title--homepage .hero__title--404 .title__job-part2, .hero__title .hero__title--gallery .title__job-part2, .hero__title--gallery .hero__title .title__job-part2, .hero__title--homepage .hero__title--gallery .title__job-part2, .hero__title--gallery .hero__title--homepage .title__job-part2, .hero__title--gallery .title__job-part2, .hero__title--404 .hero__title--gallery .title__job-part2, .hero__title--gallery .hero__title--404 .title__job-part2, .hero__title .hero__title--404 .title__job-part2, .hero__title--404 .hero__title .title__job-part2, .hero__title--homepage .hero__title--404 .title__job-part2, .hero__title--404 .hero__title--homepage .title__job-part2, .hero__title--gallery .hero__title--404 .title__job-part2, .hero__title--404 .hero__title--gallery .title__job-part2, .hero__title--404 .title__job-part2, .hero__title .title__hobby-part2, .hero__title--homepage .hero__title .title__hobby-part2, .hero__title .hero__title--homepage .title__hobby-part2, .hero__title--gallery .hero__title .title__hobby-part2, .hero__title .hero__title--gallery .title__hobby-part2, .hero__title--404 .hero__title .title__hobby-part2, .hero__title .hero__title--404 .title__hobby-part2, .hero__title .hero__title--homepage .title__hobby-part2, .hero__title--homepage .hero__title .title__hobby-part2, .hero__title--homepage .title__hobby-part2, .hero__title--gallery .hero__title--homepage .title__hobby-part2, .hero__title--homepage .hero__title--gallery .title__hobby-part2, .hero__title--404 .hero__title--homepage .title__hobby-part2, .hero__title--homepage .hero__title--404 .title__hobby-part2, .hero__title .hero__title--gallery .title__hobby-part2, .hero__title--gallery .hero__title .title__hobby-part2, .hero__title--homepage .hero__title--gallery .title__hobby-part2, .hero__title--gallery .hero__title--homepage .title__hobby-part2, .hero__title--gallery .title__hobby-part2, .hero__title--404 .hero__title--gallery .title__hobby-part2, .hero__title--gallery .hero__title--404 .title__hobby-part2, .hero__title .hero__title--404 .title__hobby-part2, .hero__title--404 .hero__title .title__hobby-part2, .hero__title--homepage .hero__title--404 .title__hobby-part2, .hero__title--404 .hero__title--homepage .title__hobby-part2, .hero__title--gallery .hero__title--404 .title__hobby-part2, .hero__title--404 .hero__title--gallery .title__hobby-part2, .hero__title--404 .title__hobby-part2, .hero__title .title__ampersand, .hero__title--homepage .hero__title .title__ampersand, .hero__title .hero__title--homepage .title__ampersand, .hero__title--gallery .hero__title .title__ampersand, .hero__title .hero__title--gallery .title__ampersand, .hero__title--404 .hero__title .title__ampersand, .hero__title .hero__title--404 .title__ampersand, .hero__title .hero__title--homepage .title__ampersand, .hero__title--homepage .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .hero__title--homepage .title__ampersand, .hero__title--homepage .hero__title--gallery .title__ampersand, .hero__title--404 .hero__title--homepage .title__ampersand, .hero__title--homepage .hero__title--404 .title__ampersand, .hero__title .hero__title--gallery .title__ampersand, .hero__title--gallery .hero__title .title__ampersand, .hero__title--homepage .hero__title--gallery .title__ampersand, .hero__title--gallery .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand, .hero__title--404 .hero__title--gallery .title__ampersand, .hero__title--gallery .hero__title--404 .title__ampersand, .hero__title .hero__title--404 .title__ampersand, .hero__title--404 .hero__title .title__ampersand, .hero__title--homepage .hero__title--404 .title__ampersand, .hero__title--404 .hero__title--homepage .title__ampersand, .hero__title--gallery .hero__title--404 .title__ampersand, .hero__title--404 .hero__title--gallery .title__ampersand, .hero__title--404 .title__ampersand, .hero__title .title__page, .hero__title--homepage .hero__title .title__page, .hero__title .hero__title--homepage .title__page, .hero__title--gallery .hero__title .title__page, .hero__title .hero__title--gallery .title__page, .hero__title--404 .hero__title .title__page, .hero__title .hero__title--404 .title__page, .hero__title .hero__title--homepage .title__page, .hero__title--homepage .hero__title .title__page, .hero__title--homepage .title__page, .hero__title--gallery .hero__title--homepage .title__page, .hero__title--homepage .hero__title--gallery .title__page, .hero__title--404 .hero__title--homepage .title__page, .hero__title--homepage .hero__title--404 .title__page, .hero__title .hero__title--gallery .title__page, .hero__title--gallery .hero__title .title__page, .hero__title--homepage .hero__title--gallery .title__page, .hero__title--gallery .hero__title--homepage .title__page, .hero__title--gallery .title__page, .hero__title--404 .hero__title--gallery .title__page, .hero__title--gallery .hero__title--404 .title__page, .hero__title .hero__title--404 .title__page, .hero__title--404 .hero__title .title__page, .hero__title--homepage .hero__title--404 .title__page, .hero__title--404 .hero__title--homepage .title__page, .hero__title--gallery .hero__title--404 .title__page, .hero__title--404 .hero__title--gallery .title__page, .hero__title--404 .title__page, .hero__title .title__intro, .hero__title--homepage .hero__title .title__intro, .hero__title .hero__title--homepage .title__intro, .hero__title--gallery .hero__title .title__intro, .hero__title .hero__title--gallery .title__intro, .hero__title--404 .hero__title .title__intro, .hero__title .hero__title--404 .title__intro, .hero__title .hero__title--homepage .title__intro, .hero__title--homepage .hero__title .title__intro, .hero__title--homepage .title__intro, .hero__title--gallery .hero__title--homepage .title__intro, .hero__title--homepage .hero__title--gallery .title__intro, .hero__title--404 .hero__title--homepage .title__intro, .hero__title--homepage .hero__title--404 .title__intro, .hero__title .hero__title--gallery .title__intro, .hero__title--gallery .hero__title .title__intro, .hero__title--homepage .hero__title--gallery .title__intro, .hero__title--gallery .hero__title--homepage .title__intro, .hero__title--gallery .title__intro, .hero__title--404 .hero__title--gallery .title__intro, .hero__title--gallery .hero__title--404 .title__intro, .hero__title .hero__title--404 .title__intro, .hero__title--404 .hero__title .title__intro, .hero__title--homepage .hero__title--404 .title__intro, .hero__title--404 .hero__title--homepage .title__intro, .hero__title--gallery .hero__title--404 .title__intro, .hero__title--404 .hero__title--gallery .title__intro, .hero__title--404 .title__intro {
   position: relative;
   z-index: 1;
   display: block;
   font-weight: 900;
 }
 
-.hero__title .title__job-part1, .hero__title--homepage .title__job-part1, .hero__title--gallery .title__job-part1, .hero__title .title__hobby-part1, .hero__title--homepage .title__hobby-part1, .hero__title--gallery .title__hobby-part1 {
+.hero__title .title__job-part1, .hero__title--homepage .title__job-part1, .hero__title--gallery .title__job-part1, .hero__title--404 .title__job-part1, .hero__title .title__hobby-part1, .hero__title--homepage .title__hobby-part1, .hero__title--gallery .title__hobby-part1, .hero__title--404 .title__hobby-part1 {
   -webkit-text-fill-color: rgba(0, 0, 0, 0);
   -webkit-text-stroke-color: white;
   -webkit-text-stroke-width: 1px;
 }
 
-.hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
+.hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand, .hero__title--404 .title__ampersand {
   z-index: 0;
   display: block;
   color: #b6ceba;
@@ -759,197 +921,197 @@ body {
 }
 
 @media (orientation: portrait) {
-  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
+  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand, .hero__title--404 .title__ampersand {
     font-size: 105px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 25rem) {
-  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
+  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand, .hero__title--404 .title__ampersand {
     font-size: 120px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 31.25rem) {
-  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
+  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand, .hero__title--404 .title__ampersand {
     font-size: 150px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 37.5rem) {
-  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
+  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand, .hero__title--404 .title__ampersand {
     font-size: 180px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 43.75rem) {
-  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
+  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand, .hero__title--404 .title__ampersand {
     font-size: 195px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 50rem) {
-  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
+  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand, .hero__title--404 .title__ampersand {
     font-size: 225px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 56.25rem) {
-  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
+  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand, .hero__title--404 .title__ampersand {
     font-size: 255px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 62.5rem) {
-  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
+  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand, .hero__title--404 .title__ampersand {
     font-size: 270px;
   }
 }
 
 @media (orientation: landscape) {
-  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
+  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand, .hero__title--404 .title__ampersand {
     font-size: 90px;
   }
 }
 
 @media (orientation: landscape) and (min-height: 25rem) {
-  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
+  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand, .hero__title--404 .title__ampersand {
     font-size: 105px;
   }
 }
 
 @media (orientation: landscape) and (min-height: 31.25rem) {
-  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
+  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand, .hero__title--404 .title__ampersand {
     font-size: 120px;
   }
 }
 
 @media (orientation: landscape) and (min-height: 37.5rem) {
-  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
+  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand, .hero__title--404 .title__ampersand {
     font-size: 150px;
   }
 }
 
 @media (orientation: landscape) and (min-height: 43.75rem) {
-  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
+  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand, .hero__title--404 .title__ampersand {
     font-size: 180px;
   }
 }
 
 @media (orientation: landscape) and (min-height: 50rem) {
-  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
+  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand, .hero__title--404 .title__ampersand {
     font-size: 195px;
   }
 }
 
 @media (orientation: landscape) and (min-height: 56.25rem) {
-  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
+  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand, .hero__title--404 .title__ampersand {
     font-size: 225px;
   }
 }
 
 @media (orientation: landscape) and (min-height: 62.5rem) {
-  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand {
+  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand, .hero__title--404 .title__ampersand {
     font-size: 255px;
   }
 }
 
 @media (orientation: portrait) {
-  .hero__title .title__page, .hero__title--homepage .title__page, .hero__title--gallery .title__page {
+  .hero__title .title__page, .hero__title--homepage .title__page, .hero__title--gallery .title__page, .hero__title--404 .title__page {
     font-size: 40px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 25rem) {
-  .hero__title .title__page, .hero__title--homepage .title__page, .hero__title--gallery .title__page {
+  .hero__title .title__page, .hero__title--homepage .title__page, .hero__title--gallery .title__page, .hero__title--404 .title__page {
     font-size: 40px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 31.25rem) {
-  .hero__title .title__page, .hero__title--homepage .title__page, .hero__title--gallery .title__page {
+  .hero__title .title__page, .hero__title--homepage .title__page, .hero__title--gallery .title__page, .hero__title--404 .title__page {
     font-size: 50px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 37.5rem) {
-  .hero__title .title__page, .hero__title--homepage .title__page, .hero__title--gallery .title__page {
+  .hero__title .title__page, .hero__title--homepage .title__page, .hero__title--gallery .title__page, .hero__title--404 .title__page {
     font-size: 60px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 43.75rem) {
-  .hero__title .title__page, .hero__title--homepage .title__page, .hero__title--gallery .title__page {
+  .hero__title .title__page, .hero__title--homepage .title__page, .hero__title--gallery .title__page, .hero__title--404 .title__page {
     font-size: 65px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 50rem) {
-  .hero__title .title__page, .hero__title--homepage .title__page, .hero__title--gallery .title__page {
+  .hero__title .title__page, .hero__title--homepage .title__page, .hero__title--gallery .title__page, .hero__title--404 .title__page {
     font-size: 75px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 56.25rem) {
-  .hero__title .title__page, .hero__title--homepage .title__page, .hero__title--gallery .title__page {
+  .hero__title .title__page, .hero__title--homepage .title__page, .hero__title--gallery .title__page, .hero__title--404 .title__page {
     font-size: 85px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 62.5rem) {
-  .hero__title .title__page, .hero__title--homepage .title__page, .hero__title--gallery .title__page {
+  .hero__title .title__page, .hero__title--homepage .title__page, .hero__title--gallery .title__page, .hero__title--404 .title__page {
     font-size: 90px;
   }
 }
 
-.hero__title .title__intro, .hero__title--homepage .title__intro, .hero__title--gallery .title__intro {
-  display: block;
+.hero__title .title__intro, .hero__title--homepage .title__intro, .hero__title--gallery .title__intro, .hero__title--404 .title__intro {
+  font-weight: initial;
 }
 
 @media (orientation: portrait) {
-  .hero__title .title__intro, .hero__title--homepage .title__intro, .hero__title--gallery .title__intro {
+  .hero__title .title__intro, .hero__title--homepage .title__intro, .hero__title--gallery .title__intro, .hero__title--404 .title__intro {
     font-size: 25px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 25rem) {
-  .hero__title .title__intro, .hero__title--homepage .title__intro, .hero__title--gallery .title__intro {
+  .hero__title .title__intro, .hero__title--homepage .title__intro, .hero__title--gallery .title__intro, .hero__title--404 .title__intro {
     font-size: 30px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 31.25rem) {
-  .hero__title .title__intro, .hero__title--homepage .title__intro, .hero__title--gallery .title__intro {
+  .hero__title .title__intro, .hero__title--homepage .title__intro, .hero__title--gallery .title__intro, .hero__title--404 .title__intro {
     font-size: 40px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 37.5rem) {
-  .hero__title .title__intro, .hero__title--homepage .title__intro, .hero__title--gallery .title__intro {
+  .hero__title .title__intro, .hero__title--homepage .title__intro, .hero__title--gallery .title__intro, .hero__title--404 .title__intro {
     font-size: 50px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 43.75rem) {
-  .hero__title .title__intro, .hero__title--homepage .title__intro, .hero__title--gallery .title__intro {
+  .hero__title .title__intro, .hero__title--homepage .title__intro, .hero__title--gallery .title__intro, .hero__title--404 .title__intro {
     font-size: 55px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 50rem) {
-  .hero__title .title__intro, .hero__title--homepage .title__intro, .hero__title--gallery .title__intro {
+  .hero__title .title__intro, .hero__title--homepage .title__intro, .hero__title--gallery .title__intro, .hero__title--404 .title__intro {
     font-size: 65px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 56.25rem) {
-  .hero__title .title__intro, .hero__title--homepage .title__intro, .hero__title--gallery .title__intro {
+  .hero__title .title__intro, .hero__title--homepage .title__intro, .hero__title--gallery .title__intro, .hero__title--404 .title__intro {
     font-size: 75px;
   }
 }
 
 @media (orientation: portrait) and (min-width: 62.5rem) {
-  .hero__title .title__intro, .hero__title--homepage .title__intro, .hero__title--gallery .title__intro {
+  .hero__title .title__intro, .hero__title--homepage .title__intro, .hero__title--gallery .title__intro, .hero__title--404 .title__intro {
     font-size: 80px;
   }
 }
