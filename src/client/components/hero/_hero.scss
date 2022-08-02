@@ -358,7 +358,8 @@
 			}
 
 			&__intro { // <span>
-				display: block;
+				@extend .title;
+				font-weight: initial;
 
 				@media #{$portrait} {
 					font-size: 25px;
