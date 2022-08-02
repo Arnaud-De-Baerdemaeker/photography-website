@@ -9,36 +9,38 @@ class Hero extends Component {
 		}, 750);
 
 
-		const backgroundClasses = [
-			"hero__background1",
-			"hero__background2",
-			"hero__background3",
-			"hero__background4",
-			"hero__background5"
-		];
+		if(this.props.location.pathname === "/" || this.props.location.pathname === "/galerie") {
+			const backgroundClasses = [
+				"hero__background1",
+				"hero__background2",
+				"hero__background3",
+				"hero__background4",
+				"hero__background5"
+			];
 
-		let
-			newIndex = 0,
-			lastIndex
-		;
+			let
+				newIndex = 0,
+				lastIndex
+			;
 
-		/*
-			Interval to display the image in order by using an index matching the images in the array.
-			At each iteration, the previous image is replaced with the next one.
-			The condition checks if the end of the array is reached or not, and resets the counters to start over as a loop.
-		*/
-		this.slideshow = window.setInterval(function() {
-			if(newIndex === 4) {
-				lastIndex = 4;
-				newIndex = -1;
-			}
-			else {
-				lastIndex = newIndex;
-			}
+			/*
+				Interval to display the image in order by using an index matching the images in the array.
+				At each iteration, the previous image is replaced with the next one.
+				The condition checks if the end of the array is reached or not, and resets the counters to start over as a loop.
+			*/
+			this.slideshow = window.setInterval(function() {
+				if(newIndex === 4) {
+					lastIndex = 4;
+					newIndex = -1;
+				}
+				else {
+					lastIndex = newIndex;
+				}
 
-			newIndex++;
-			document.querySelector(".hero__container").classList.replace(backgroundClasses[lastIndex], backgroundClasses[newIndex]);
-		}, 10000);
+				newIndex++;
+				document.querySelector(".hero__container").classList.replace(backgroundClasses[lastIndex], backgroundClasses[newIndex]);
+			}, 10000);
+		}
 	}
 
 	componentWillUnmount() {
@@ -56,10 +58,6 @@ class Hero extends Component {
 					<span className={"title__hobby-part2"}>{this.props.hobbyPart2}</span>
 				</>
 			case "/galerie":
-				return <>
-					<span className={"title__page"}>{this.props.title}</span>
-					<span className={"title__intro"}>{this.props.subtitle}</span>
-				</>
 			default:
 				return <>
 					<span className={"title__page"}>{this.props.title}</span>
