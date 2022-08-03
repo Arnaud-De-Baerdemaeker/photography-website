@@ -148,6 +148,30 @@
   }
 }
 
+@-webkit-keyframes moveDownAndUp {
+  0% {
+    bottom: 30px;
+  }
+  50% {
+    bottom: 20px;
+  }
+  100% {
+    bottom: 30px;
+  }
+}
+
+@keyframes moveDownAndUp {
+  0% {
+    bottom: 30px;
+  }
+  50% {
+    bottom: 20px;
+  }
+  100% {
+    bottom: 30px;
+  }
+}
+
 html {
   height: 100%;
 }
@@ -683,49 +707,48 @@ body {
   height: inherit;
 }
 
-.hero__background1 {
-  background-image: url("https://lh3.googleusercontent.com/M-Cy0zTisnpjaCobpnmSGw_csGA2HHgEu4wqXJPvjTl9GWDN2KLQPJ_AorRD3soNtjQIs6XIESn2F1UjePrTmZ8yw_gMpVNPFQJrYnDf131Lrog2HuzYKk5SJGLOTy_ojY6-KfIh6g=w1920-h1080");
+.hero__background, .hero__background--1, .hero__background--2, .hero__background--3, .hero__background--4, .hero__background--5, .hero__background--404 {
   background-position-x: 50%;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+}
+
+.hero__background--1 {
+  background-image: url("https://lh3.googleusercontent.com/M-Cy0zTisnpjaCobpnmSGw_csGA2HHgEu4wqXJPvjTl9GWDN2KLQPJ_AorRD3soNtjQIs6XIESn2F1UjePrTmZ8yw_gMpVNPFQJrYnDf131Lrog2HuzYKk5SJGLOTy_ojY6-KfIh6g=w1920-h1080");
   -webkit-animation-name: fadeInAndOut1;
           animation-name: fadeInAndOut1;
-  -webkit-animation-duration: 10s;
-          animation-duration: 10s;
 }
 
-.hero__background2 {
+.hero__background--2 {
   background-image: url("https://lh3.googleusercontent.com/x-Epo9_cT7fBvPu03CuZ4Pxhsi6zxbtSEtQ4lAftMDGB6tNkEguZBX8lkX_OnGINJS-2j4tipj1ZRiEVyOanbOO3SO_mRA_vIJ3vN4RTasKjPi5vFaeK-AA3Wj14P7c5jGFHHf7T2g=w1920-h1080");
-  background-position-x: 50%;
   -webkit-animation-name: fadeInAndOut2;
           animation-name: fadeInAndOut2;
-  -webkit-animation-duration: 10s;
-          animation-duration: 10s;
 }
 
-.hero__background3 {
-  background-image: url("https://lh3.googleusercontent.com/VlmRP9R6zjMXzUezjU6fpgAYt37rNritFrDMuhqAfy5RKjyvqCH9bd8tQdB-jx46sc_NWVg01aFu-voQ8dD74wjhSDt0yDl75-E6gf6fd3bw8yj4jSk_kZwMp8hp8WL2_b9UHO7S5A=w1920-h1080");
-  background-position-x: 50%;
+.hero__background--3 {
+  background-image: url("https://lh3.googleusercontent.com/EIR43zKJyT0G4aEqTYR7guf1B9W7LORp3ywN3aoy18yY4mg5iPNggkyTqfK3tS0BpfJk8Sf2oLYrIiWokbZYAY66z5aZMzmtwHdRxFqrdQfII9fXFefHDUgkT1Ti3Hz3COVTTrwHOA=w1920-h1080");
+  background-position-x: 20%;
   -webkit-animation-name: fadeInAndOut3;
           animation-name: fadeInAndOut3;
-  -webkit-animation-duration: 10s;
-          animation-duration: 10s;
 }
 
-.hero__background4 {
+.hero__background--4 {
   background-image: url("https://lh3.googleusercontent.com/oWtO6I2-HLQ0O-PjWyl6oAQkVaihh_lrFXD3ioqemv-VrzeGjIV2ndFIrK3rOLMdiyGJaK99GXTEifULeifu7xw5E2VuO9rW2Bt6sf0f9CeOONPRSxOct7Y_I9x90mY9hlKdOQtM4A=w1920-h1080");
-  background-position-x: 50%;
   -webkit-animation-name: fadeInAndOut4;
           animation-name: fadeInAndOut4;
-  -webkit-animation-duration: 10s;
-          animation-duration: 10s;
 }
 
-.hero__background5 {
+.hero__background--5 {
   background-image: url("https://lh3.googleusercontent.com/RoO69wbLVhDxxXjpnJmnAcuv-hiiLlPJX-ip90np2tr_YdnP_y4i8CJ4LXdp5yCWv6HWLIf7oVCUhXwt0DgxNabsvjJ17NzTkNGcdChggeNGLF-uIibIslt7ezL3BdTlWhi_qtAxgw=w1920-h1080");
   background-position-x: 65%;
   -webkit-animation-name: fadeInAndOut5;
           animation-name: fadeInAndOut5;
-  -webkit-animation-duration: 10s;
-          animation-duration: 10s;
+}
+
+.hero__background--404 {
+  background-image: url("https://lh3.googleusercontent.com/VlmRP9R6zjMXzUezjU6fpgAYt37rNritFrDMuhqAfy5RKjyvqCH9bd8tQdB-jx46sc_NWVg01aFu-voQ8dD74wjhSDt0yDl75-E6gf6fd3bw8yj4jSk_kZwMp8hp8WL2_b9UHO7S5A=w1920-h1080");
+  -webkit-animation-duration: unset;
+          animation-duration: unset;
 }
 
 .hero__back-filter {
@@ -737,7 +760,6 @@ body {
 .hero__move-down-icon {
   position: absolute;
   left: calc(50% - 25px / 2);
-  bottom: 30px;
   width: 25px;
   height: 30px;
   display: -webkit-box;
@@ -750,14 +772,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition-property: bottom;
-  transition-property: bottom;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-}
-
-.hero__move-down-icon--down {
-  bottom: 20px;
+  -webkit-animation-name: moveDownAndUp;
+          animation-name: moveDownAndUp;
+  -webkit-animation-duration: 1.75s;
+          animation-duration: 1.75s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 .hero__arrow {
