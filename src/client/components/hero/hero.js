@@ -4,18 +4,13 @@ import {withRouter} from "react-router-dom";
 
 class Hero extends Component {
 	componentDidMount() {
-		this.animateArrow = window.setInterval(function() {
-			document.querySelector(".hero__move-down-icon").classList.toggle("hero__move-down-icon--down");
-		}, 750);
-
-
 		if(this.props.location.pathname === "/" || this.props.location.pathname === "/galerie") {
 			const backgroundClasses = [
-				"hero__background1",
-				"hero__background2",
-				"hero__background3",
-				"hero__background4",
-				"hero__background5"
+				"hero__background--1",
+				"hero__background--2",
+				"hero__background--3",
+				"hero__background--4",
+				"hero__background--5"
 			];
 
 			let
@@ -44,7 +39,17 @@ class Hero extends Component {
 	}
 
 	componentWillUnmount() {
-		clearInterval(this.animateArrow, this.slideshow);
+		clearInterval(this.slideshow);
+	}
+
+	filterHeroBackground() {
+		switch(this.props.location.pathname) {
+			case "/":
+			case "/galerie":
+				return "hero__background--1";
+			default:
+				return "hero__background--404";
+		}
 	}
 
 	filterHeroContent() {
@@ -56,13 +61,13 @@ class Hero extends Component {
 					<span className={"title__ampersand"}>{this.props.ampersand}</span>
 					<span className={"title__hobby-part1"}>{this.props.hobbyPart1}</span>
 					<span className={"title__hobby-part2"}>{this.props.hobbyPart2}</span>
-				</>
+				</>;
 			case "/galerie":
 			default:
 				return <>
 					<span className={"title__page"}>{this.props.title}</span>
 					<span className={"title__intro"}>{this.props.subtitle}</span>
-				</>
+				</>;
 		}
 	}
 
@@ -84,7 +89,7 @@ class Hero extends Component {
 	render() {
 		return (
 			<div className={"hero"}>
-				<div className={"hero__container " + "hero__background1"}>
+				<div className={"hero__container " + this.filterHeroBackground()}>
 					<div className={"hero__back-filter"}></div>
 				</div>
 				<h2 className={this.props.titleClass}>
