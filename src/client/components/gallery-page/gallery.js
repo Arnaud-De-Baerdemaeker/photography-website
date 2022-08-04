@@ -3,7 +3,6 @@
 // By Arnaud De Baerdemaeker
 
 import React, {Component} from "react";
-import {hot} from "react-hot-loader/root";
 
 import Hero from "../hero/hero";
 import PhotosCards from "../photos-cards/photos-cards";
@@ -26,7 +25,8 @@ class Gallery extends Component {
 			photosCards.push(
 				<li
 					key={photo.id}
-					className={"gallery__list-item"}>
+					className={"gallery__list-item"}
+				>
 					<PhotosCards
 						sd={photo.sd}
 						hd={photo.hd}
@@ -55,4 +55,4 @@ class Gallery extends Component {
 	}
 }
 
-export default hot(Gallery);
+export default Gallery;

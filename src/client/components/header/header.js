@@ -3,7 +3,6 @@
 // By Arnaud De Baerdemaeker
 
 import React, {Component} from "react";
-import {hot} from "react-hot-loader/root";
 
 import Name from "../name/name";
 import Button from "../button/button";
@@ -41,4 +40,4 @@ class Header extends Component {
 	}
 }
 
-export default hot(Header);
+export default Header;

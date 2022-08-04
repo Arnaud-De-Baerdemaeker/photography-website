@@ -3,7 +3,6 @@
 // By Arnaud De Baerdemaeker
 
 import React, {Component} from "react";
-import {hot} from "react-hot-loader/root";
 import {Link} from "react-router-dom";
 
 class Name extends Component {
@@ -24,4 +23,4 @@ class Name extends Component {
     }
 }
 
-export default hot(Name);
+export default Name;

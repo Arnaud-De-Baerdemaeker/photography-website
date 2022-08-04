@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import {hot} from "react-hot-loader/root";
 
 class Button extends Component {
 	render() {
@@ -17,4 +16,4 @@ class Button extends Component {
 	}
 }
 
-export default hot(Button);
+export default Button;

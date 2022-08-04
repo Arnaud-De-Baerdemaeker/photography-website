@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import {hot} from "react-hot-loader/root";
 import {withRouter} from "react-router-dom";
 
 class Hero extends Component {
@@ -101,4 +100,4 @@ class Hero extends Component {
 	}
 }
 
-export default hot(withRouter(Hero));
+export default withRouter(Hero);

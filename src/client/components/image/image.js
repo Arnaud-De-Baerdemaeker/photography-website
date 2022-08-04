@@ -3,7 +3,6 @@
 // By Arnaud De Baerdemaeker
 
 import React, {Component} from "react";
-import {hot} from "react-hot-loader/root";
 
 class Image extends Component {
     render() {
@@ -18,4 +17,4 @@ class Image extends Component {
     }
 }
 
-export default hot(Image);
+export default Image;

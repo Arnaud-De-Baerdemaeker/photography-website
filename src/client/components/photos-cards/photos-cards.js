@@ -3,7 +3,7 @@
 // By Arnaud De Baerdemaeker
 
 import React, {Component} from "react";
-import {hot} from "react-hot-loader/root";
+
 import Image from "../image/image";
 import Modal from "../modal/modal";
 
@@ -44,4 +44,4 @@ class PhotosCards extends Component {
 	}
 }
 
-export default hot(PhotosCards);
+export default PhotosCards;

@@ -3,7 +3,6 @@
 // By Arnaud De Baerdemaeker
 
 import React, {Component} from "react";
-import {hot} from "react-hot-loader/root";
 import {NavLink, withRouter} from "react-router-dom";
 
 class Navigation extends Component {
@@ -50,4 +49,4 @@ class Navigation extends Component {
 	}
 }
 
-export default hot(withRouter(Navigation));
+export default withRouter(Navigation);

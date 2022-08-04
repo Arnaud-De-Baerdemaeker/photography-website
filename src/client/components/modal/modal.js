@@ -3,7 +3,6 @@
 // By Arnaud De Baerdemaeker
 
 import React, {Component} from "react";
-import {hot} from "react-hot-loader/root";
 import Image from "../image/image";
 import Button from "../button/button";
 
@@ -31,4 +30,4 @@ class Modal extends Component {
 	}
 }
 
-export default hot(Modal);
+export default Modal;

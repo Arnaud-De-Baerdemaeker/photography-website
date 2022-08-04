@@ -3,7 +3,6 @@
 // By Arnaud De Baerdemaeker
 
 import React, {Component} from "react";
-import {hot} from "react-hot-loader/root";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import {faInstagram, faLinkedin, faGithub} from "@fortawesome/free-brands-svg-icons";
@@ -88,4 +87,4 @@ class Footer extends Component {
 	}
 }
 
-export default hot(Footer);
+export default Footer;

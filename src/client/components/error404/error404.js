@@ -3,7 +3,6 @@
 // By Arnaud De Baerdemaeker
 
 import React, {Component} from "react";
-import {hot} from "react-hot-loader/root";
 
 import Hero from "../hero/hero";
 
@@ -19,4 +18,4 @@ class Error404 extends Component {
 	}
 }
 
-export default hot(Error404);
+export default Error404;
