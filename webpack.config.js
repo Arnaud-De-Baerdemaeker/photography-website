@@ -2,7 +2,7 @@ const webpack = require("webpack"); // eslint-disable-line no-unused-vars
 const path = require("path");
 
 const config = {
-    entry: ["react-hot-loader/patch", "./src/client/index.js"],
+    entry: ["./src/client/index.js"],
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "bundle.js",
@@ -46,9 +46,6 @@ const config = {
     },
     resolve: {
         extensions: [".js", ".jsx"],
-        alias: {
-            "react-dom": "@hot-loader/react-dom",
-        },
     },
     devServer: {
         contentBase: "./dist",
