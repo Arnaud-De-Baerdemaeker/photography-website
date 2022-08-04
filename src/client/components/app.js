@@ -2,16 +2,16 @@
 // Started on July 2020
 // By Arnaud De Baerdemaeker
 
-import React, {Component} from "react";
-import {hot} from "react-hot-loader/root";
+import React, {Component, lazy, Suspense} from "react";
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 import {Helmet} from "react-helmet";
 
+import Loading from "./loading-screen/loading-screen.js";
 import Header from "./header/header";
 import Navigation from "./navigation/navigation";
-import HomePage from "./homepage/homepage";
-import Gallery from "./gallery-page/gallery";
-import Error404 from "./error404/error404";
+const HomePage = lazy(() => import("./homepage/homepage"));
+const Gallery = lazy(() => import("./gallery-page/gallery"));
+const Error404 = lazy(() => import("./error404/error404"));
 import photos from "./../JSON/metadata.json";
 import Footer from "./footer/footer";
 
@@ -62,48 +62,50 @@ class App extends Component {
 					/>
 					{/* <title>{}</title> */}
 				</Helmet>
-				<BrowserRouter>
-					<Header
-						isMenuOpen={this.state.isMenuOpen}
-						toggleMenu={this.toggleMenu}
-						closeMenu={this.closeMenu}
-					/>
-					<Navigation
-						isMenuOpen={this.state.isMenuOpen}
-						toggleMenu={this.toggleMenu}
-						closeMenu={this.closeMenu}
-					/>
-					<Switch>
-						<Route
-							exact
-							path={"/galerie"}
-						>
-							<Gallery
-								isMenuOpen={this.state.isMenuOpen}
-								toggleMenu={this.toggleMenu}
-								closeMenu={this.closeMenu}
-								photos={photos}
-							/>
-						</Route>
-						<Route
-							exact
-							path={"/"}
-						>
-							<HomePage
-								isMenuOpen={this.state.isMenuOpen}
-								toggleMenu={this.toggleMenu}
-								closeMenu={this.closeMenu}
-							/>
-						</Route>
-						<Route path="*">
-							<Error404 />
-						</Route>
-					</Switch>
-					<Footer />
-				</BrowserRouter>
+				<Suspense fallback={<Loading />}>
+					<BrowserRouter>
+						<Header
+							isMenuOpen={this.state.isMenuOpen}
+							toggleMenu={this.toggleMenu}
+							closeMenu={this.closeMenu}
+						/>
+						<Navigation
+							isMenuOpen={this.state.isMenuOpen}
+							toggleMenu={this.toggleMenu}
+							closeMenu={this.closeMenu}
+						/>
+							<Switch>
+								<Route
+									exact
+									path={"/galerie"}
+								>
+									<Gallery
+										isMenuOpen={this.state.isMenuOpen}
+										toggleMenu={this.toggleMenu}
+										closeMenu={this.closeMenu}
+										photos={photos}
+									/>
+								</Route>
+								<Route
+									exact
+									path={"/"}
+								>
+									<HomePage
+										isMenuOpen={this.state.isMenuOpen}
+										toggleMenu={this.toggleMenu}
+										closeMenu={this.closeMenu}
+									/>
+								</Route>
+								<Route path="*">
+									<Error404 />
+								</Route>
+							</Switch>
+						<Footer />
+					</BrowserRouter>
+				</Suspense>
 			</>
 		);
 	}
 }
 
-export default hot(App);
+export default App;
