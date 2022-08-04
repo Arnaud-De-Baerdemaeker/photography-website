@@ -4,17 +4,14 @@
 
 import React, {Component} from "react";
 import {hot} from "react-hot-loader/root";
-import {LazyLoadImage} from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
 
 class Image extends Component {
     render() {
         return (
-            <LazyLoadImage
+            <img
                 src={this.props.url}
-                alt={this.props.alt} // /!\
+                alt={this.props.alt ? this.props.alt : ""}
                 title={this.props.location ? this.props.location : null}
-                effect={"blur"}
                 className={this.props.class}
             />
         );
