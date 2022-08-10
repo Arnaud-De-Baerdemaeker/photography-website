@@ -26,3 +26,15 @@ body {
 		max-width: 1920px;
 	}
 }
+
+.view {
+	&--hidden {
+		opacity: 0;
+	}
+
+	&--visible {
+		opacity: 1;
+		transition-property: opacity;
+		transition-duration: 2s;
+	}
+}
