@@ -172,6 +172,28 @@
   }
 }
 
+@-webkit-keyframes rotateSystem {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateSystem {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 html {
   height: 100%;
 }
@@ -201,6 +223,93 @@ body {
   #app {
     max-width: 1920px;
   }
+}
+
+.view--hidden {
+  opacity: 0;
+}
+
+.view--visible {
+  opacity: 1;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+}
+
+.loading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.loading__container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 10px;
+  -webkit-animation-name: rotateSystem;
+          animation-name: rotateSystem;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.loading__planet {
+  position: absolute;
+  bottom: 40px;
+  display: block;
+  width: 7px;
+  height: 7px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.loading__star {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25px;
+  height: 25px;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 50px;
+  border-color: white;
+}
+
+.loading__star .star__dot {
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: white;
 }
 
 .header {
