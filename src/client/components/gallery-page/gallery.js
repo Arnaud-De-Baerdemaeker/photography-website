@@ -14,6 +14,12 @@ class Gallery extends Component {
 			// If so, it sets the view at the top
 			window.scrollTo(0, 0);
 		}
+
+		window.addEventListener("scroll", this.applyHideClass);
+	}
+
+	componentWillUnmount() {
+		window.removeEventListener("scroll", this.applyHideClass);
 	}
 
 	render() {
