@@ -21,8 +21,11 @@ class App extends Component {
 		this.state = {
 			isMenuOpen: false
 		};
+
 		this.toggleMenu = this.toggleMenu.bind(this);
 		this.closeMenu = this.closeMenu.bind(this);
+		this.applyHideClass = this.applyHideClass.bind(this);
+		this.revealOnScroll = this.revealOnScroll.bind(this);
 	}
 
 	toggleMenu() {
@@ -37,6 +40,49 @@ class App extends Component {
 				isMenuOpen: false
 			});
 		}
+	}
+
+	applyHideClass() {
+		let elements;
+
+		switch (window.location.pathname) {
+			case "/gallery":
+				elements = document.querySelectorAll(".gallery__list-item");
+
+				elements.forEach(element => {
+					element.classList.add("view--hidden");
+				});
+
+				this.revealOnScroll(elements);
+
+				break;
+			default:
+				elements = document.querySelectorAll(".image__portrait, .homepage__introduction, .homepage__title, .homepage__paragraph");
+
+				elements.forEach(element => {
+					element.classList.add("view--hidden");
+				});
+
+				this.revealOnScroll(elements);
+		}
+		// Recover all the elements that need to be scroll revealed
+
+		// For each element recovered, apply a class to hide them
+	}
+
+	revealOnScroll(elements) {
+		// Recover the current viewport
+		const viewport = window.innerHeight;
+
+		elements.forEach(element => {
+			// For each element, get its size and position coordinates
+			const position = element.getBoundingClientRect();
+
+			// Remove the hidden class when the element enters the viewport minus a definite length
+			if(position.top <= (viewport - 150)) {
+				element.classList.replace("view--hidden", "view--visible");
+			}
+		});
 	}
 
 	render() {
@@ -74,32 +120,36 @@ class App extends Component {
 							toggleMenu={this.toggleMenu}
 							closeMenu={this.closeMenu}
 						/>
-							<Switch>
-								<Route
-									exact
-									path={"/galerie"}
-								>
-									<Gallery
-										isMenuOpen={this.state.isMenuOpen}
-										toggleMenu={this.toggleMenu}
-										closeMenu={this.closeMenu}
-										photos={photos}
-									/>
-								</Route>
-								<Route
-									exact
-									path={"/"}
-								>
-									<HomePage
-										isMenuOpen={this.state.isMenuOpen}
-										toggleMenu={this.toggleMenu}
-										closeMenu={this.closeMenu}
-									/>
-								</Route>
-								<Route path="*">
-									<Error404 />
-								</Route>
-							</Switch>
+						<Switch>
+							<Route
+								exact
+								path={"/galerie"}
+							>
+								<Gallery
+									isMenuOpen={this.state.isMenuOpen}
+									photos={photos}
+									toggleMenu={this.toggleMenu}
+									closeMenu={this.closeMenu}
+									applyHideClass={this.applyHideClass}
+									revealOnScroll={this.revealOnScroll}
+								/>
+							</Route>
+							<Route
+								exact
+								path={"/"}
+							>
+								<HomePage
+									isMenuOpen={this.state.isMenuOpen}
+									toggleMenu={this.toggleMenu}
+									closeMenu={this.closeMenu}
+									applyHideClass={this.applyHideClass}
+									revealOnScroll={this.revealOnScroll}
+								/>
+							</Route>
+							<Route path="*">
+								<Error404 />
+							</Route>
+						</Switch>
 						<Footer />
 					</BrowserRouter>
 				</Suspense>
