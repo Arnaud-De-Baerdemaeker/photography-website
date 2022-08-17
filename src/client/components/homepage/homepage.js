@@ -17,11 +17,11 @@ class HomePage extends Component {
 		}
 
 		// Each time the user scrolls, the function is called
-		window.addEventListener("scroll", this.props.applyHideClass);
+		window.addEventListener("scroll", this.props.getElementsByLocation);
 	}
 
 	componentWillUnmount() {
-		window.addEventListener("scroll", this.props.applyHideClass);
+		window.addEventListener("scroll", this.props.getElementsByLocation);
 	}
 
 	render() {
