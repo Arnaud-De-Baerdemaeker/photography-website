@@ -4,6 +4,8 @@
 
 import React, {Component} from "react";
 
+import photos from "../../json/metadata.json";
+
 import Hero from "../hero/hero";
 import PhotosCards from "../photos-cards/photos-cards";
 
@@ -15,18 +17,18 @@ class Gallery extends Component {
 			window.scrollTo(0, 0);
 		}
 
-		window.addEventListener("scroll", this.applyHideClass);
+		window.addEventListener("scroll", this.props.getElementsByLocation);
 	}
 
 	componentWillUnmount() {
-		window.removeEventListener("scroll", this.applyHideClass);
+		window.removeEventListener("scroll", this.props.getElementsByLocation);
 	}
 
 	render() {
 		const photosCards = [];
 
 		// The loop goes for each entry in the metadata.json file
-		this.props.photos.forEach(photo => {
+		photos.forEach(photo => {
 			// For each loop, an iteration of the <PhotoCards> component is created with different props. Then, the iteration is pushed in the array.
 			photosCards.push(
 				<li
