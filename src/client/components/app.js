@@ -7,12 +7,12 @@ import {BrowserRouter, Switch, Route} from "react-router-dom";
 import {Helmet} from "react-helmet";
 
 import Loading from "./loading-screen/loading-screen.js";
-import Header from "./header/header";
-import Navigation from "./navigation/navigation";
+const Header = lazy(() => import("./header/header"));
+const Navigation = lazy(() => import("./navigation/navigation"));
 const HomePage = lazy(() => import("./homepage/homepage"));
 const Gallery = lazy(() => import("./gallery-page/gallery"));
 const Error404 = lazy(() => import("./error404/error404"));
-import Footer from "./footer/footer";
+const Footer = lazy(() => import("./footer/footer"));
 
 class App extends Component {
 	constructor(props) {
@@ -20,11 +20,13 @@ class App extends Component {
 		this.state = {
 			isMenuOpen: false
 		};
+		this.elements;
 
 		this.toggleMenu = this.toggleMenu.bind(this);
 		this.closeMenu = this.closeMenu.bind(this);
-		this.getElementsByLocation = this.getElementsByLocation.bind(this);
+		this.getElements= this.getElements.bind(this);
 		this.applyHideClass = this.applyHideClass.bind(this);
+		this.transferOnScroll = this.transferOnScroll.bind(this);
 		this.revealOnScroll = this.revealOnScroll.bind(this);
 	}
 
@@ -42,28 +44,29 @@ class App extends Component {
 		}
 	}
 
-	getElementsByLocation() {
-		let elements;
-
+	getElements() {
 		// Recover all the elements that need to be scroll revealed depending of the active route
 		switch (window.location.pathname) {
-			case "/gallery":
-				elements = document.querySelectorAll(".gallery__list-item");
+			case "/galerie":
+				this.elements = document.querySelectorAll(".gallery__list-item");
 				break;
 			default:
-				elements = document.querySelectorAll(".image__portrait, .homepage__introduction, .homepage__title, .homepage__paragraph");
+				this.elements = document.querySelectorAll(".image__portrait, .homepage__introduction, .homepage__title, .homepage__paragraph");
 		}
-
-		this.applyHideClass(elements);
 	}
 
-	applyHideClass(elements) {
-		// For each element recovered, apply a class to hide them
-		elements.forEach(element => {
+	applyHideClass() {
+		this.getElements();
+
+		// Apply a class to initially hide the content
+		this.elements.forEach(element => {
 			element.classList.add("view--hidden");
 		});
+	}
 
-		this.revealOnScroll(elements);
+	transferOnScroll() {
+		this.getElements();
+		this.revealOnScroll(this.elements);
 	}
 
 	revealOnScroll(elements) {
@@ -125,7 +128,8 @@ class App extends Component {
 									isMenuOpen={this.state.isMenuOpen}
 									toggleMenu={this.toggleMenu}
 									closeMenu={this.closeMenu}
-									getElementsByLocation={this.getElementsByLocation}
+									applyHideClass={this.applyHideClass}
+									transferOnScroll={this.transferOnScroll}
 								/>
 							</Route>
 							<Route
@@ -136,7 +140,8 @@ class App extends Component {
 									isMenuOpen={this.state.isMenuOpen}
 									toggleMenu={this.toggleMenu}
 									closeMenu={this.closeMenu}
-									getElementsByLocation={this.getElementsByLocation}
+									applyHideClass={this.applyHideClass}
+									transferOnScroll={this.transferOnScroll}
 								/>
 							</Route>
 							<Route path="*">

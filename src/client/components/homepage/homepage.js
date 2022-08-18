@@ -17,17 +17,14 @@ class HomePage extends Component {
 		}
 
 		// Apply a class to initially hide the content
-		const elements = document.querySelectorAll(".image__portrait, .homepage__introduction, .homepage__title, .homepage__paragraph");
-		elements.forEach(element => {
-			element.classList.add("view--hidden");
-		});
+		this.props.applyHideClass();
 
 		// Each time the user scrolls, the function is called
-		window.addEventListener("scroll", this.props.getElementsByLocation);
+		window.addEventListener("scroll", this.props.transferOnScroll);
 	}
 
 	componentWillUnmount() {
-		window.addEventListener("scroll", this.props.getElementsByLocation);
+		window.addEventListener("scroll", this.props.transferOnScroll);
 	}
 
 	render() {

@@ -18,16 +18,13 @@ class Gallery extends Component {
 		}
 
 		// Apply a class to initially hide the content
-		const elements = document.querySelectorAll(".gallery__list-item");
-		elements.forEach(element => {
-			element.classList.add("view--hidden");
-		});
+		this.props.applyHideClass();
 
-		window.addEventListener("scroll", this.props.getElementsByLocation);
+		window.addEventListener("scroll", this.props.transferOnScroll);
 	}
 
 	componentWillUnmount() {
-		window.removeEventListener("scroll", this.props.getElementsByLocation);
+		window.removeEventListener("scroll", this.props.transferOnScroll);
 	}
 
 	render() {
