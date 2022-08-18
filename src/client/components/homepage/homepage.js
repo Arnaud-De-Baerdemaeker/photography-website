@@ -16,6 +16,12 @@ class HomePage extends Component {
 			window.scrollTo(0, 0);
 		}
 
+		// Apply a class to initially hide the content
+		const elements = document.querySelectorAll(".image__portrait, .homepage__introduction, .homepage__title, .homepage__paragraph");
+		elements.forEach(element => {
+			element.classList.add("view--hidden");
+		});
+
 		// Each time the user scrolls, the function is called
 		window.addEventListener("scroll", this.props.getElementsByLocation);
 	}
