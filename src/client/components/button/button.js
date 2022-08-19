@@ -7,7 +7,8 @@ class Button extends Component {
 				type={"button"}
 				onClick={this.props.function}
 				alt={this.props.alt}
-				className={this.props.containerClass}>
+				className={this.props.containerClass}
+			>
 					<div className={this.props.iconClass[0]}></div>
 					<div className={this.props.iconClass[1]}></div>
 					<div className={this.props.iconClass[2]}></div>
