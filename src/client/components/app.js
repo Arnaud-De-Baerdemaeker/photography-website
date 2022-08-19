@@ -78,7 +78,7 @@ class App extends Component {
 			const position = element.getBoundingClientRect();
 
 			// Remove the hidden class when the element enters the viewport minus a definite length
-			if(position.top <= (viewport - 150)) {
+			if(position.top <= (viewport - 50)) {
 				element.classList.replace("view--hidden", "view--visible");
 			}
 		});
