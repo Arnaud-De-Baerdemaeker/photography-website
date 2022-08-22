@@ -97,15 +97,6 @@
 		opacity: 1;
 		width: 100%;
 		text-align: center;
-		transition: {
-			property: opacity;
-			duration: 1.25s;
-		}
-
-		&--closed {
-			@extend .menu__list;
-			opacity: 0;
-		}
 	}
 
 	&__link { // <a>
