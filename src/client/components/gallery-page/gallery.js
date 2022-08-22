@@ -11,6 +11,8 @@ import PhotosCards from "../photos-cards/photos-cards";
 
 class Gallery extends Component {
 	componentDidMount() {
+		document.title = "Arnaud De Baerdemaeker | Galerie";
+
 		// The condition checks if the scroll value is different from 0
 		if (window.scrollY !== 0) {
 			// If so, it sets the view at the top

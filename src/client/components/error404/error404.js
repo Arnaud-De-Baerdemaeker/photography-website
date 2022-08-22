@@ -7,6 +7,10 @@ import React, {Component} from "react";
 import Hero from "../hero/hero";
 
 class Error404 extends Component {
+	componentDidMount() {
+		document.title = "Arnaud De Baerdemaeker | Page non trouvée";
+	}
+
 	render() {
 		return(
 			<Hero

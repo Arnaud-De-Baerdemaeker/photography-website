@@ -10,6 +10,8 @@ import myPhoto from "../../images/moi.png";
 
 class HomePage extends Component {
 	componentDidMount() {
+		document.title = "Arnaud De Baerdemaeker | Accueil";
+
 		// The condition checks if the scroll value is different from 0
 		if (window.scrollY !== 0) {
 			// If so, it sets the view at the top
