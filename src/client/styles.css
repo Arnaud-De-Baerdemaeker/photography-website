@@ -233,8 +233,8 @@ body {
   opacity: 1;
   -webkit-transition-property: opacity;
   transition-property: opacity;
-  -webkit-transition-duration: 2s;
-          transition-duration: 2s;
+  -webkit-transition-duration: 1.5s;
+          transition-duration: 1.5s;
 }
 
 .loading {
@@ -658,7 +658,7 @@ body {
           transform: translate(100%, 0);
 }
 
-.menu__list, .menu__list--closed {
+.menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -673,14 +673,6 @@ body {
   opacity: 1;
   width: 100%;
   text-align: center;
-  -webkit-transition-property: opacity;
-  transition-property: opacity;
-  -webkit-transition-duration: 1.25s;
-          transition-duration: 1.25s;
-}
-
-.menu__list--closed {
-  opacity: 0;
 }
 
 .menu__link {
@@ -1630,7 +1622,7 @@ body {
      object-fit: cover;
 }
 
-.modal {
+.modal, .modal--hidden {
   position: fixed;
   top: 0;
   left: 0;
@@ -1652,6 +1644,19 @@ body {
           align-items: center;
   background-color: #19271b;
   color: white;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.modal--hidden {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 
 .modal__image-container {
@@ -1664,10 +1669,6 @@ body {
 .modal__image {
   width: 100%;
   vertical-align: middle;
-}
-
-.modal--hidden {
-  display: none;
 }
 
 .footer {
