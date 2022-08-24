@@ -1,4 +1,13 @@
 // Keyframes
+@keyframes reveal {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
 @keyframes fadeInAndOut1 {
 	0% {
 		opacity: 0;
