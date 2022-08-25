@@ -36,7 +36,7 @@ class App extends Component {
 	}
 
 	closeMenu() {
-		if (this.state.isMenuOpen === true) {
+		if(this.state.isMenuOpen === true) {
 			this.setState({
 				isMenuOpen: false
 			});
@@ -45,12 +45,12 @@ class App extends Component {
 
 	getElements() {
 		// Recover all the elements that need to be scroll revealed depending of the active route
-		switch (window.location.pathname) {
+		switch(window.location.pathname) {
 			case "/galerie":
-				this.elements = document.querySelectorAll(".gallery__list-item");
+				this.elements = document.querySelectorAll(".gallery__list-item, .footer__links, .footer__name, .footer__credits");
 				break;
 			default:
-				this.elements = document.querySelectorAll(".image__portrait, .homepage__introduction, .homepage__title, .homepage__paragraph");
+				this.elements = document.querySelectorAll(".image__portrait, .homepage__introduction, .homepage__title, .homepage__paragraph, .footer__links, .footer__name, .footer__credits");
 		}
 	}
 
@@ -77,7 +77,7 @@ class App extends Component {
 			const position = element.getBoundingClientRect();
 
 			// Remove the hidden class when the element enters the viewport minus a definite length
-			if(position.top <= (viewport - 50)) {
+			if(position.top <= (viewport - (position.height / 2))) {
 				element.classList.replace("view--hidden", "view--visible");
 			}
 		});
