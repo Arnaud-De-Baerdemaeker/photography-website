@@ -3,9 +3,10 @@
 // By Arnaud De Baerdemaeker
 
 @import
-	"css/variables",
-	"css/keyframes",
-	"css/global-styles",
+	"scss/variables",
+	"scss/keyframes",
+	"scss/mixins",
+	"scss/global-styles",
 	"components/loading-screen/loading-screen",
 	"components/header/header",
 	"components/name/name",
