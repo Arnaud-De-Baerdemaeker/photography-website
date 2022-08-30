@@ -8,6 +8,7 @@ import photos from "../../json/metadata.json";
 
 import Hero from "../hero/hero";
 import PhotosCards from "../photos-cards/photos-cards";
+import BackToTop from "../back-to-top/back-to-top";
 
 class Gallery extends Component {
 	componentDidMount() {
@@ -63,6 +64,7 @@ class Gallery extends Component {
 						</ul>
 					</div>
 				</main>
+				<BackToTop />
 			</>
 		);
 	}

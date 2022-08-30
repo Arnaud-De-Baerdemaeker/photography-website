@@ -7,6 +7,7 @@ import React, {Component} from "react";
 import Hero from "../hero/hero";
 import Image from "../image/image";
 import myPhoto from "../../images/moi.png";
+import BackToTop from "../back-to-top/back-to-top";
 
 class HomePage extends Component {
 	componentDidMount() {
@@ -63,6 +64,7 @@ class HomePage extends Component {
 						</div>
 					</div>
 				</main>
+				<BackToTop />
 			</>
 		);
 	}
