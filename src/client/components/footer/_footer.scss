@@ -45,6 +45,7 @@
 		align-items: center;
 		width: inherit;
 		height: inherit;
+		-webkit-tap-highlight-color: transparent;
 	}
 
 	&__icon.svg-inline--fa { // <svg>
