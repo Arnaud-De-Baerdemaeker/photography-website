@@ -19,11 +19,7 @@ class Modal extends Component {
 				<Button
 					function={this.props.toggleModal}
 					containerClass={"button__modal"}
-					iconClass={[
-						"button__top-bar--close",
-						"button__middle-bar--close",
-						"button__bottom-bar--close"
-					]}
+					iconClass={"button__bar--close"}
 				/>
 			</div>
 		);
