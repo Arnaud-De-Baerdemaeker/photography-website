@@ -9,9 +9,7 @@ class Button extends Component {
 				alt={this.props.alt}
 				className={this.props.containerClass}
 			>
-					<div className={this.props.iconClass[0]}></div>
-					<div className={this.props.iconClass[1]}></div>
-					<div className={this.props.iconClass[2]}></div>
+				<span className={this.props.iconClass}></span>
 			</button>
 		);
 	}
