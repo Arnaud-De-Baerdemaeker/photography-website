@@ -19,66 +19,66 @@
 	}
 
 	@media #{$portrait} {
-		background: radial-gradient(circle at calc(100% - 1.25rem - (1.875rem / 2)) calc(5rem / 2), $transparent 0.9375rem, $color-3 6.25rem);
+		background: radial-gradient(circle at calc(100% - 1.25rem - (1.875rem / 2)) calc(5rem / 2), transparent 0.9375rem, $color-3 6.25rem);
 
 		@media #{$mq-w400-up} {
-			background: radial-gradient(circle at calc(100% - 1.25rem - (1.875rem / 2)) calc(5rem / 2), $transparent 0.9375rem, $color-3 9.375rem);
+			background: radial-gradient(circle at calc(100% - 1.25rem - (1.875rem / 2)) calc(5rem / 2), transparent 0.9375rem, $color-3 9.375rem);
 		}
 
 		@media #{$mq-w500-up} {
-			background: radial-gradient(circle at calc(100% - 1.25rem - (1.875rem / 2)) calc(5rem / 2), $transparent 0.9375rem, $color-3 12.5rem);
+			background: radial-gradient(circle at calc(100% - 1.25rem - (1.875rem / 2)) calc(5rem / 2), transparent 0.9375rem, $color-3 12.5rem);
 		}
 
 		@media #{$mq-w600-up} {
-			background: radial-gradient(circle at calc(100% - 1.875rem - (1.875rem / 2)) calc(5rem / 2), $transparent 0.9375rem, $color-3 15.625rem);
+			background: radial-gradient(circle at calc(100% - 1.875rem - (1.875rem / 2)) calc(5rem / 2), transparent 0.9375rem, $color-3 15.625rem);
 		}
 
 		@media #{$mq-w700-up} {
-			background: radial-gradient(circle at calc(100% - 1.875rem - (1.875rem / 2)) calc(6.25rem / 2), $transparent 0.9375rem, $color-3 18.75rem);
+			background: radial-gradient(circle at calc(100% - 1.875rem - (1.875rem / 2)) calc(6.25rem / 2), transparent 0.9375rem, $color-3 18.75rem);
 		}
 
 		@media #{$mq-w800-up} {
-			background: radial-gradient(circle at calc(100% - 1.875rem - (1.875rem / 2)) calc(6.25rem / 2), $transparent 0.9375rem, $color-3 21.875rem);
+			background: radial-gradient(circle at calc(100% - 1.875rem - (1.875rem / 2)) calc(6.25rem / 2), transparent 0.9375rem, $color-3 21.875rem);
 		}
 
 		@media #{$mq-w900-up} {
-			background: radial-gradient(circle at calc(100% - 2.5rem - (1.875rem / 2)) calc(6.25rem / 2), $transparent 0.9375rem, $color-3 25rem);
+			background: radial-gradient(circle at calc(100% - 2.5rem - (1.875rem / 2)) calc(6.25rem / 2), transparent 0.9375rem, $color-3 25rem);
 		}
 
 		@media #{$mq-w1000-up} {
-			background: radial-gradient(circle at calc(100% - 2.5rem - (1.875rem / 2)) calc(6.25rem / 2), $transparent 0.9375rem, $color-3 28.125rem);
+			background: radial-gradient(circle at calc(100% - 2.5rem - (1.875rem / 2)) calc(6.25rem / 2), transparent 0.9375rem, $color-3 28.125rem);
 		}
 	}
 
 	@media #{$landscape} {
-		background: radial-gradient(circle at calc(100% - 1.875rem - (1.875rem / 2)) calc(4.375rem / 2), $transparent 0.9375rem, $color-3 6.25rem);
+		background: radial-gradient(circle at calc(100% - 1.875rem - (1.875rem / 2)) calc(4.375rem / 2), transparent 0.9375rem, $color-3 6.25rem);
 
 		@media #{$mq-h400-up} {
-			background: radial-gradient(circle at calc(100% - 1.875rem - (1.875rem / 2)) calc(4.375rem / 2), $transparent 0.9375rem, $color-3 9.375rem);
+			background: radial-gradient(circle at calc(100% - 1.875rem - (1.875rem / 2)) calc(4.375rem / 2), transparent 0.9375rem, $color-3 9.375rem);
 		}
 
 		@media #{$mq-h500-up} {
-			background: radial-gradient(circle at calc(100% - 1.875rem - (1.875rem / 2)) calc(4.6875rem / 2), $transparent 0.9375rem, $color-3 12.5rem);
+			background: radial-gradient(circle at calc(100% - 1.875rem - (1.875rem / 2)) calc(4.6875rem / 2), transparent 0.9375rem, $color-3 12.5rem);
 		}
 
 		@media #{$mq-h600-up} {
-			background: radial-gradient(circle at calc(100% - 1.875rem - (1.875rem / 2)) calc(5rem / 2), $transparent 0.9375rem, $color-3 15.625rem);
+			background: radial-gradient(circle at calc(100% - 1.875rem - (1.875rem / 2)) calc(5rem / 2), transparent 0.9375rem, $color-3 15.625rem);
 		}
 
 		@media #{$mq-h700-up} {
-			background: radial-gradient(circle at calc(100% - 1.875rem - (1.875rem / 2)) calc(5.3125rem / 2), $transparent 0.9375rem, $color-3 18.75rem);
+			background: radial-gradient(circle at calc(100% - 1.875rem - (1.875rem / 2)) calc(5.3125rem / 2), transparent 0.9375rem, $color-3 18.75rem);
 		}
 
 		@media #{$mq-h800-up} {
-			background: radial-gradient(circle at calc(100% - 2.5rem - (1.875rem / 2)) calc(5.625rem / 2), $transparent 0.9375rem, $color-3 21.875rem);
+			background: radial-gradient(circle at calc(100% - 2.5rem - (1.875rem / 2)) calc(5.625rem / 2), transparent 0.9375rem, $color-3 21.875rem);
 		}
 
 		@media #{$mq-h900-up} {
-			background: radial-gradient(circle at calc(100% - 2.5rem - (1.875rem / 2)) calc(5.9375rem / 2), $transparent 0.9375rem, $color-3 25rem);
+			background: radial-gradient(circle at calc(100% - 2.5rem - (1.875rem / 2)) calc(5.9375rem / 2), transparent 0.9375rem, $color-3 25rem);
 		}
 
 		@media #{$mq-h1000-up} {
-			background: radial-gradient(circle at calc(100% - 3.125rem - (1.875rem / 2)) calc(6.25rem / 2), $transparent 0.9375rem, $color-3 28.125rem);
+			background: radial-gradient(circle at calc(100% - 3.125rem - (1.875rem / 2)) calc(6.25rem / 2), transparent 0.9375rem, $color-3 28.125rem);
 		}
 	}
 

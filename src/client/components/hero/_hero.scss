@@ -229,7 +229,7 @@
 			&__job {
 				&-part1 { // <span>
 					@extend .title;
-					-webkit-text-fill-color: $transparent;
+					-webkit-text-fill-color: transparent;
 					-webkit-text-stroke-color: $color-5;
 					-webkit-text-stroke-width: 1px;
 				}
