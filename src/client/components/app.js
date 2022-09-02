@@ -27,6 +27,7 @@ class App extends Component {
 		this.applyHideClass = this.applyHideClass.bind(this);
 		this.transferOnScroll = this.transferOnScroll.bind(this);
 		this.revealOnScroll = this.revealOnScroll.bind(this);
+		this.backToTop = this.backToTop.bind(this);
 	}
 
 	toggleMenu() {
@@ -83,6 +84,10 @@ class App extends Component {
 		});
 	}
 
+	backToTop() {
+		window.scrollTo(0, 0);
+	}
+
 	render() {
 		return (
 			<BrowserRouter>
@@ -108,6 +113,7 @@ class App extends Component {
 								closeMenu={this.closeMenu}
 								applyHideClass={this.applyHideClass}
 								transferOnScroll={this.transferOnScroll}
+								backToTop={this.backToTop}
 							/>
 						</Route>
 						<Route
@@ -120,6 +126,7 @@ class App extends Component {
 								closeMenu={this.closeMenu}
 								applyHideClass={this.applyHideClass}
 								transferOnScroll={this.transferOnScroll}
+								backToTop={this.backToTop}
 							/>
 						</Route>
 						<Route path="*">
