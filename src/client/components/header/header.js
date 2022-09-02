@@ -21,18 +21,10 @@ class Header extends Component {
 						? "Fermer le menu"
 						: "Ouvrir le menu"
 					}
-					containerClass={"button"}
+					containerClass={"button__menu"}
 					iconClass={this.props.isMenuOpen
-						? [
-							"button__top-bar--close",
-							"button__middle-bar--close",
-							"button__bottom-bar--close"
-						]
-						: [
-							"button__top-bar",
-							"button__middle-bar",
-							"button__bottom-bar"
-						]
+						? "button__bar--close"
+						: "button__bar"
 					}
 				/>
 			</header>
