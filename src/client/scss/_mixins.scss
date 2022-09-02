@@ -1,21 +1,25 @@
+// Photography website
+// Started on July 2020
+// By Arnaud De Baerdemaeker
+
 @mixin revealOnLoad {
 	animation-name: reveal;
-	animation-duration: 2s;
-    animation-delay: 1s;
+	animation-duration: 3s;
+    animation-delay: 0.5s;
     animation-fill-mode: both;
 }
 
 @mixin revealOnLoadOneSecondDelay {
     @include revealOnLoad;
-    animation-delay: 2s;
+    animation-delay: 1s;
 }
 
 @mixin revealOnLoadTwoSecondsDelay {
     @include revealOnLoad;
-    animation-delay: 3s;
+    animation-delay: 1.5s;
 }
 
 @mixin revealOnLoadThreeSecondsDelay {
     @include revealOnLoad;
-    animation-delay: 4s;
+    animation-delay: 2s;
 }
