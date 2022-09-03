@@ -26,6 +26,7 @@ class Navigation extends Component {
 							exact
 							to={"/"}
 							onClick={this.props.toggleMenu}
+							data-link={"Accueil"}
 							id={"home"}
 							activeClassName={"menu__link--active"}
 							className={"menu__link"}>
@@ -37,6 +38,7 @@ class Navigation extends Component {
 							exact
 							to={"/galerie"}
 							onClick={this.props.toggleMenu}
+							data-link={"Galerie"}
 							id={"gallery"}
 							activeClassName={"menu__link--active"}
 							className={"menu__link"}>
