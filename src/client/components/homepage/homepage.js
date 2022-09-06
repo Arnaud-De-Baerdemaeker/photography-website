@@ -48,7 +48,7 @@ class HomePage extends Component {
 							alt={"Photo de moi"}
 							class={"image__portrait"}
 						/>
-						<p className={"homepage__introduction"}>{"Bonjour, je m'appelle Arnaud !"}<br />{"Développeur web résidant en Belgique, dans la ville de Liège, et amateur de photographie."}</p>
+						<p className={"homepage__introduction"}>{"Bonjour, je m'appelle Arnaud !"}<br />{"Développeur front-end résidant en Belgique, dans la ville de Liège, et amateur de photographie."}</p>
 					</div>
 					<div className={"homepage__description"}>
 						<div className={"homepage__section"}>
