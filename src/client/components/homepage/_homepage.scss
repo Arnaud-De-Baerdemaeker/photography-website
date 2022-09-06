@@ -6,33 +6,24 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	row-gap: 4.6875rem;
+	margin: {
+		right: auto;
+		left: auto;
+	}
 	padding: {
-		right: 20px;
-		left: 20px;
+		top: 6.25rem;
+		right: 10%;
+		bottom: 6.25rem;
+		left: 10%;
 	}
 
 	@media #{$portrait} {
-		row-gap: 50px;
-		padding: {
-			top: 100px;
-			bottom: 100px;
-		}
-
-		@media #{$mq-w1000-up} {
-			row-gap: 100px;
-			padding: {
-				top: 150px;
-				bottom: 150px;
-			}
-		}
+		max-width: 1080px;
 	}
 
 	@media #{$landscape} {
-		row-gap: 150px;
-		padding: {
-			top: 200px;
-			bottom: 200px;
-		}
+		max-width: 1920px;
 	}
 
 	&__my-photo { // <div>
@@ -41,41 +32,17 @@
 
 		@media #{$portrait} {
 			flex-direction: column;
-			row-gap: 40px;
-			max-width: 700px;
+			row-gap: 2.5rem;
 
-			@media #{$mq-w1000-up} {
+			@media #{$mq-w700-up} {
 				flex-direction: row;
-				column-gap: 40px;
+				column-gap: 2.5rem;
 			}
 		}
 
 		@media #{$landscape} {
-			flex-direction: row;
-			column-gap: 50px;
-			max-width: 1100px;
-		}
-
-		span {
-			@media #{$portrait} {
-				width: 150px;
-
-				@media #{$mq-w400-up} {
-					width: 165px;
-				}
-
-				// @media #{$mq-w600-up} {
-				// 	width: 40%;
-				// }
-
-				@media #{$mq-w1000-up} {
-					width: 35%;
-				}
-			}
-
-			@media #{$landscape} {
-				width: 30%;
-			}
+			justify-content: center;
+			column-gap: 2.5rem;
 		}
 	}
 
@@ -84,107 +51,74 @@
 		margin: 0;
 
 		@media #{$portrait} {
-			font-size: 18px;
-			line-height: 28px;
+			font-size: 1.375rem;
 
-			// @media #{$mq-w500-up} {
-			// 	font-size: 20px;
-			// }
-
-			// @media #{$mq-w600-up} {
-			// 	font-size: 22px;
-			// }
-
-			// @media #{$mq-w700-up} {
-			// 	font-size: 24px;
-			// }
-
-			@media #{$mq-w1000-up} {
-				width: 65%;
-				font-size: 27px;
-				line-height: 37px;
+			@media #{$mq-w900-up} {
+				font-size: 1.6875rem;
 			}
 		}
 
 		@media #{$landscape} {
-			width: 70%;
-			font-size: 30px;
-			line-height: 40px;
+			font-size: 1.25rem;
+			max-width: 60%;
+
+			@media #{$mq-h600-up} {
+				font-size: 1.5625rem;
+			}
+
+			@media #{$mq-h800-up} {
+				font-size: 1.875rem;
+			}
 		}
 	}
 
 	&__description { // <div>
 		display: flex;
 		flex-direction: column;
-
-		@media #{$portrait} {
-			row-gap: 40px;
-			max-width: 700px;
-
-			@media #{$mq-w1000-up} {
-				row-gap: 50px;
-			}
-		}
-
-		@media #{$landscape} {
-			row-gap: 100px;
-			max-width: 1100px;
-		}
+		row-gap: 3.125rem;
 	}
 
 	&__section { // <div>
 		display: flex;
 		flex-direction: column;
-
-		@media #{$portrait} {
-			row-gap: 20px;
-
-			@media #{$mq-w1000-up} {
-				row-gap: 25px;
-			}
-		}
-
-		@media #{$landscape} {
-			row-gap: 40px;
-		}
+		row-gap: 1.5625rem;
 	}
 
 	&__title { // <h3>
 		border-left: {
 			style: solid;
-			width: 5px;
+			width: 0.3125rem;
 			color: $color-2;
 		}
 		padding: {
-			top: 10px;
-			bottom: 10px;
-			left: 20px;
+			top: 0.625rem;
+			bottom: 0.625rem;
+			left: 1.25rem;
 		}
 		margin: 0;
 
 		@media #{$portrait} {
-			font-size: 24px;
+			font-size: 1.375rem;
 
 			@media #{$mq-w400-up} {
-				font-size: 27px;
+				font-size: 1.5rem;
 			}
 
-			@media #{$mq-w600-up} {
-				font-size: 30px;
-			}
-
-			@media #{$mq-w800-up} {
-				font-size: 35px;
-			}
-
-			@media #{$mq-w1000-up} {
-				font-size: 44px;
+			@media #{$mq-w900-up} {
+				font-size: 1.75rem;
 			}
 		}
 
 		@media #{$landscape} {
-			font-size: 45px;
-			padding-left: 20px;
+			font-size: 1.625rem;
+
+			@media #{$mq-h500-up} {
+				font-size: 1.9375rem;
+			}
+
+			@media #{$mq-h700-up} {
+				font-size: 2.25rem;
+			}
 		}
 
 		&:after {
@@ -195,50 +129,12 @@
 
 	&__paragraph { // <p>
 		margin: 0;
+		font-size: 1rem;
+		line-height: 1.75rem;
 
-		@media #{$portrait} {
-			font-size: 16px;
-			line-height: 26px;
-
-			@media #{$mq-w400-up} {
-				font-size: 17px;
-				line-height: 27px;
-			}
-
-			@media #{$mq-w500-up} {
-				font-size: 18px;
-				line-height: 28px;
-			}
-
-			@media #{$mq-w600-up} {
-				font-size: 19px;
-				line-height: 29px;
-			}
-
-			@media #{$mq-w700-up} {
-				font-size: 20px;
-				line-height: 30px;
-			}
-
-			@media #{$mq-w800-up} {
-				font-size: 21px;
-				line-height: 31px;
-			}
-
-			@media #{$mq-w900-up} {
-				font-size: 22px;
-				line-height: 32px;
-			}
-
-			@media #{$mq-w1000-up} {
-				font-size: 23px;
-				line-height: 33px;
-			}
-		}
-
-		@media #{$landscape} {
-			font-size: 25px;
-			line-height: 35px;
+		@media #{$portrait} and #{$mq-w900-up}, #{$landscape} and #{$mq-h500-up} {
+			font-size: 1.125rem;
+			line-height: 1.875rem;
 		}
 	}
 }
