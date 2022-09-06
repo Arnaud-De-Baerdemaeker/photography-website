@@ -58,11 +58,9 @@ class Gallery extends Component {
 					titleClass={"hero__title--gallery"}
 				/>
 				<main className={"gallery"}>
-					<div className={"gallery__list-container"}>
-						<ul className={"gallery__list"}>
-							{photosCards}
-						</ul>
-					</div>
+					<ul className={"gallery__list"}>
+						{photosCards}
+					</ul>
 				</main>
 				<Button
 					function={this.props.backToTop}
