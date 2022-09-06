@@ -3,13 +3,18 @@
 // By Arnaud De Baerdemaeker
 
 .gallery { // <main>
-	&__list-container { // <div>
-		padding: {
-			top: 80px;
-			right: 20px;
-			bottom: 80px;
-			left: 20px;
-		}
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: {
+		right: auto;
+		left: auto;
+	}
+	padding: {
+		top: 6.25rem;
+		right: 10%;
+		bottom: 6.25rem;
+		left: 10%;
 	}
 
 	&__list { // <ul>
@@ -22,24 +27,63 @@
 	}
 
 	&__list-item { // <li>
-		transition: {
-			property: transform;
-			duration: 0.5s;
-		}
-
 		@media #{$portrait} {
-			width: 130px;
-			height: 130px;
+			width: 6.25rem;
+			height: 6.25rem;
+
+			@media #{$mq-w400-up} {
+				width: 9.375rem;
+				height: 9.375rem;
+			}
 
 			@media #{$mq-w500-up} {
-				width: 200px;
-				height: 200px;
+				width: 11.875rem;
+				height: 11.875rem;
+			}
+
+			@media #{$mq-w600-up} {
+				width: 12.5rem;
+				height: 12.5rem;
 			}
 		}
 
-		@media (pointer: fine), (pointer: none) {
-			&:hover {
-				transform: scale(1.5, 1.5);
+		@media #{$landscape} {
+			width: 7.5rem;
+			height: 7.5rem;
+
+			@media #{$mq-h400-up} {
+				width: 9.375rem;
+				height: 9.375rem;
+			}
+
+			@media #{$mq-h500-up} {
+				width: 11.25rem;
+				height: 11.25rem;
+			}
+
+			@media #{$mq-h600-up} {
+				width: 12.5rem;
+				height: 12.5rem;
+			}
+
+			@media #{$mq-h700-up} {
+				width: 14.375rem;
+				height: 14.375rem;
+			}
+
+			@media #{$mq-h800-up} {
+				width: 16.25rem;
+				height: 16.25rem;
+			}
+
+			@media #{$mq-h900-up} {
+				width: 17.5rem;
+				height: 17.5rem;
+			}
+
+			@media #{$mq-h1000-up} {
+				width: 18.75rem;
+				height: 18.75rem;
 			}
 		}
 	}
