@@ -76,8 +76,7 @@ class Hero extends Component {
 			case "/galerie":
 				return <>
 					<div className={"hero__move-down-icon"}>
-						<div className={"hero__arrow"}></div>
-						<div className={"hero__arrow"}></div>
+						<div className={"move-down-icon__arrow"}></div>
 					</div>
 				</>
 			default:
