@@ -76,9 +76,9 @@
 
 	&__move-down-icon { // <div>
 		position: absolute;
-		left: calc(50% - 26px / 2);
-		width: 26px;
-		height: 14px;
+		left: calc(50% - 25px / 2);
+		width: 25px;
+		height: 25px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -88,14 +88,13 @@
 			duration: 1.75s;
 			iteration-count: infinite;
 		}
-		
 
 		.move-down-icon {
 			&__arrow { // <div>
 				@include revealOnLoadTwoSecondsDelay;
 				width: inherit;
 				height: inherit;
-				clip-path: path("M 1 0 L 13 12 L 25 0 L 26 1 L 13 14 L 0 1 Z");
+				clip-path: polygon(50% 65%, 90% 25%, 95% 30%, 50% 75%, 5% 30%, 10% 25%);
 				background-color: $color-5;
 				opacity: 0;
 			}
