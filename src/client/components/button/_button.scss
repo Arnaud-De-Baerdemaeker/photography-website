@@ -52,9 +52,10 @@
 		width: inherit;
 		height: 2px;
 		background-color: $color-5;
-		transition: {
-			property: background-color;
+		animation: {
+			name: middleBarToOpaque;
 			duration: 0.5s;
+			fill-mode: forwards;
 		}
 
 		&::before {
@@ -65,9 +66,10 @@
 			width: inherit;
 			height: inherit;
 			background-color: $color-5;
-			transition: {
-				property: transform;
+			animation: {
+				name: topBarToHamburger;
 				duration: 0.5s;
+				fill-mode: forwards;
 			}
 		}
 
@@ -79,24 +81,38 @@
 			width: inherit;
 			height: inherit;
 			background-color: $color-5;
-			transition: {
-				property: transform;
+			animation: {
+				name: bottomBarToHamburger;
 				duration: 0.5s;
+				fill-mode: forwards;
 			}
 		}
 
 		&--close { // <div>
 			@extend .button__bar;
 			background-color: transparent;
+			animation: {
+				name: middleBarToTransparent;
+				duration: 0.5s;
+				fill-mode: forwards;
+			}
 
 			&::before {
 				background-color: $color-5;
-				transform: translateY(9px) rotate(-45deg);
+				animation: {
+					name: topBarToCross;
+					duration: 0.5s;
+					fill-mode: forwards;
+				}
 			}
 
 			&::after {
 				background-color: $color-5;
-				transform: translateY(-9px) rotate(45deg);
+				animation: {
+					name: bottomBarToCross;
+					duration: 0.5s;
+					fill-mode: forwards;
+				}
 			}
 		}
 
