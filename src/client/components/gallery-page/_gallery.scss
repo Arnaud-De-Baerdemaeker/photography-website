@@ -17,6 +17,14 @@
 		left: 10%;
 	}
 
+	@media #{$portrait} {
+		max-width: 750px;
+	}
+
+	@media #{$landscape} {
+		max-width: 1250px;
+	}
+
 	&__list { // <ul>
 		display: flex;
 		flex-wrap: wrap;

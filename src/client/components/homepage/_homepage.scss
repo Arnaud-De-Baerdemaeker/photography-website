@@ -17,14 +17,7 @@
 		bottom: 6.25rem;
 		left: 10%;
 	}
-
-	@media #{$portrait} {
-		max-width: 1080px;
-	}
-
-	@media #{$landscape} {
-		max-width: 1920px;
-	}
+	max-width: 1000px;
 
 	&__my-photo { // <div>
 		display: flex;
