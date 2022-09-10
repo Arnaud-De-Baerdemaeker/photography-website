@@ -19,30 +19,43 @@
 
 	&__menu { // <button>
 		@extend .button;
+		margin-right: 1.25rem;
+
+		@media #{$portrait} {
+			@media #{$mq-w700-up} {
+				margin-right: 2.5rem;
+			}
+		}
+
+		@media #{$landscape} {
+			@media #{$mq-h600-up} {
+				margin-right: 2.5rem;
+			}
+		}
 	}
 
 	&__modal {
 		@extend .button;
 		position: absolute;
-		bottom: 40px;
+		bottom: 2.5rem;
 	}
 
 	&__backToTop {
 		position: fixed;
 		right: 0;
-		bottom: 40px;
+		bottom: 2.5rem;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 25px;
-		height: 30px;
+		width: 1.5625rem;
+		height: 1.875rem;
 		background-color: $color-2;
 		margin: 0;
 		padding: 0;
 		border: {
 			style: none;
-			bottom-left-radius: 7.5px;
-			top-left-radius: 7.5px;
+			bottom-left-radius: 0.4688rem;
+			top-left-radius: 0.4688rem;
 		}
 		cursor: pointer;
 		-webkit-tap-highlight-color: transparent;
@@ -50,7 +63,7 @@
 
 	&__bar { // <span>
 		width: inherit;
-		height: 2px;
+		height: 0.125rem;
 		background-color: $color-5;
 		animation: {
 			name: middleBarToOpaque;
@@ -118,8 +131,8 @@
 
 		&--arrow-up { // <span>
 			display: block;
-			width: 17px;
-			height: 17px;
+			width: 1.0625rem;
+			height: 1.0625rem;
 			clip-path: polygon(50% 25%, 95% 70%, 90% 75%, 50% 35%, 10% 75%, 5% 70%);
 			background-color: $color-5;
 		}
