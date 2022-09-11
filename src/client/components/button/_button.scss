@@ -34,13 +34,13 @@
 		}
 	}
 
-	&__modal {
+	&__modal { // <button>
 		@extend .button;
 		position: absolute;
 		bottom: 2.5rem;
 	}
 
-	&__backToTop {
+	&__backToTop { // <button>
 		position: fixed;
 		right: 0;
 		bottom: 2.5rem;
@@ -61,7 +61,7 @@
 		-webkit-tap-highlight-color: transparent;
 	}
 
-	&__bar { // <span>
+	&__bar { // <div>
 		width: inherit;
 		height: 0.125rem;
 		background-color: $color-5;
