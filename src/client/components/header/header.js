@@ -17,15 +17,13 @@ class Header extends Component {
 				/>
 				<Button
 					function={this.props.toggleMenu}
-					alt={this.props.isMenuOpen
+					isMenuOpen={this.props.isMenuOpen}
+					alt={
+						this.props.isMenuOpen
 						? "Fermer le menu"
 						: "Ouvrir le menu"
 					}
-					containerClass={"button__menu"}
-					iconClass={this.props.isMenuOpen
-						? "button__bar--close"
-						: "button__bar"
-					}
+					class={"button__menu"}
 				/>
 			</header>
 		);
