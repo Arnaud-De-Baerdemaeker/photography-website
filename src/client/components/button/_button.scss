@@ -5,17 +5,14 @@
 		bottom: 0;
 		left: 0;
 	}
-	width: 35px;
-	height: 20px;
+	width: 36px;
+	height: 36px;
 	padding: 0;
 	background-color: unset;
 	border: unset;
 	cursor: pointer;
 	-webkit-tap-highlight-color: transparent;
 	outline: none;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
 
 	&__menu { // <button>
 		@extend .button;
@@ -59,82 +56,5 @@
 		}
 		cursor: pointer;
 		-webkit-tap-highlight-color: transparent;
-	}
-
-	&__bar { // <div>
-		width: inherit;
-		height: 0.125rem;
-		background-color: $color-5;
-		animation: {
-			name: middleBarToOpaque;
-			duration: 0.5s;
-			fill-mode: forwards;
-		}
-
-		&::before {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: inherit;
-			height: inherit;
-			background-color: $color-5;
-			animation: {
-				name: topBarToHamburger;
-				duration: 0.5s;
-				fill-mode: forwards;
-			}
-		}
-
-		&::after {
-			content: "";
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: inherit;
-			height: inherit;
-			background-color: $color-5;
-			animation: {
-				name: bottomBarToHamburger;
-				duration: 0.5s;
-				fill-mode: forwards;
-			}
-		}
-
-		&--close { // <div>
-			@extend .button__bar;
-			background-color: transparent;
-			animation: {
-				name: middleBarToTransparent;
-				duration: 0.5s;
-				fill-mode: forwards;
-			}
-
-			&::before {
-				background-color: $color-5;
-				animation: {
-					name: topBarToCross;
-					duration: 0.5s;
-					fill-mode: forwards;
-				}
-			}
-
-			&::after {
-				background-color: $color-5;
-				animation: {
-					name: bottomBarToCross;
-					duration: 0.5s;
-					fill-mode: forwards;
-				}
-			}
-		}
-
-		&--arrow-up { // <span>
-			display: block;
-			width: 1.0625rem;
-			height: 1.0625rem;
-			clip-path: polygon(50% 25%, 95% 70%, 90% 75%, 50% 35%, 10% 75%, 5% 70%);
-			background-color: $color-5;
-		}
 	}
 }
