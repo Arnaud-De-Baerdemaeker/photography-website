@@ -1,0 +1,62 @@
+// Photography website
+// Started on July 2020
+// By Arnaud De Baerdemaeker
+
+.iconBox { // <svg>
+	transform-box: fill-box;
+}
+
+.topBar {
+	@extend .iconBox;
+	transform-origin: center center;
+
+	&__hamburger { // <rect>
+		@extend .topBar;
+		animation-name: topBarToHamburger;
+		animation-duration: 0.5s;
+		animation-fill-mode: forwards;
+
+		&--close { // <rect>
+			@extend .topBar;
+			animation-name: topBarToCross;
+			animation-duration: 0.5s;
+			animation-fill-mode: forwards;
+		}
+	}
+}
+
+.middleBar {
+	@extend .iconBox;
+
+	&__hamburger { // <rect>
+		@extend .topBar;
+		animation-name: middleBarToOpaque;
+		animation-duration: 0.5s;
+		animation-fill-mode: forwards;
+
+		&--close { // <rect>
+			@extend .topBar;
+			animation-name: middleBarToTransparent;
+			animation-duration: 0.5s;
+			animation-fill-mode: forwards;
+		}
+	}
+}
+
+.bottomBar {
+	@extend .iconBox;
+
+	&__hamburger { // <rect>
+		@extend .topBar;
+		animation-name: bottomBarToHamburger;
+		animation-duration: 0.5s;
+		animation-fill-mode: forwards;
+
+		&--close { // <rect>
+			@extend .topBar;
+			animation-name: bottomBarToCross;
+			animation-duration: 0.5s;
+			animation-fill-mode: forwards;
+		}
+	}
+}
