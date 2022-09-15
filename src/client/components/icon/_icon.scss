@@ -6,57 +6,105 @@
 	transform-box: fill-box;
 }
 
-.topBar {
+.topFigure {
 	@extend .iconBox;
 	transform-origin: center center;
+	fill: white;
 
-	&__hamburger { // <rect>
-		@extend .topBar;
-		animation-name: topBarToHamburger;
-		animation-duration: 0.5s;
-		animation-fill-mode: forwards;
+	&__hamburger { // <path>
+		@extend .topFigure;
+		animation: {
+			name: topFigureToHamburger;
+			duration: 0.5s;
+			fill-mode: forwards;
+		}
 
 		&--close { // <rect>
-			@extend .topBar;
-			animation-name: topBarToCross;
-			animation-duration: 0.5s;
-			animation-fill-mode: forwards;
+			@extend .topFigure;
+			animation: {
+				name: topFigureToCross;
+				duration: 0.5s;
+				fill-mode: forwards;
+			}
+		}
+	}
+
+	&__chevron { // <path>
+		@extend .topFigure;
+		opacity: 0;
+		animation: {
+			name: topFigureBlinking;
+			duration: 2s;
+			iteration-count: infinite;
+			direction: alternate;
 		}
 	}
 }
 
-.middleBar {
+.middleFigure {
 	@extend .iconBox;
 
 	&__hamburger { // <rect>
-		@extend .topBar;
-		animation-name: middleBarToOpaque;
-		animation-duration: 0.5s;
-		animation-fill-mode: forwards;
+		@extend .topFigure;
+		animation: {
+			name: middleFigureToOpaque;
+			duration: 0.5s;
+			fill-mode: forwards;
+		}
 
 		&--close { // <rect>
-			@extend .topBar;
-			animation-name: middleBarToTransparent;
-			animation-duration: 0.5s;
-			animation-fill-mode: forwards;
+			@extend .topFigure;
+			animation: {
+				name: middleFigureToTransparent;
+				duration: 0.5s;
+				fill-mode: forwards;
+			}
+		}
+	}
+
+	&__chevron { // <path>
+		@extend .topFigure;
+		opacity: 0;
+		animation: {
+			name: middleFigureBlinking;
+			duration: 2s;
+			iteration-count: infinite;
+			direction: alternate;
+			delay: 0.5s;
 		}
 	}
 }
 
-.bottomBar {
+.bottomFigure {
 	@extend .iconBox;
 
 	&__hamburger { // <rect>
-		@extend .topBar;
-		animation-name: bottomBarToHamburger;
-		animation-duration: 0.5s;
-		animation-fill-mode: forwards;
+		@extend .topFigure;
+		animation: {
+			name: bottomFigureToHamburger;
+			duration: 0.5s;
+			fill-mode: forwards;
+		}
 
 		&--close { // <rect>
-			@extend .topBar;
-			animation-name: bottomBarToCross;
-			animation-duration: 0.5s;
-			animation-fill-mode: forwards;
+			@extend .topFigure;
+			animation: {
+				name: bottomFigureToCross;
+				duration: 0.5s;
+				fill-mode: forwards;
+			}
+		}
+	}
+
+	&__chevron { // <path>
+		@extend .topFigure;
+		opacity: 0;
+		animation: {
+			name: bottomFigureBlinking;
+			duration: 2s;
+			iteration-count: infinite;
+			direction: alternate;
+			delay: 1s;
 		}
 	}
 }
