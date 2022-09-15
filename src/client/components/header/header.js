@@ -27,35 +27,23 @@ class Header extends Component {
 					class={"button__menu"}
 				>
 					<Icon
-						topBarY={"8"}
-						topBarWidth={"36"}
-						topBarHeight={"2"}
-						topBarRx={"1"}
-						topBarFill={"white"}
-						topBarClass={
+						topFigureD={"M35 8H1C0.447715 8 0 8.44772 0 9C0 9.55228 0.447716 10 1 10H35C35.5523 10 36 9.55228 36 9C36 8.44772 35.5523 8 35 8Z"}
+						topFigureClass={
 							this.props.isMenuOpen
-							? "topBar__hamburger--close"
-							: "topBar__hamburger"
+							? "topFigure__hamburger--close"
+							: "topFigure__hamburger"
 						}
-						middleBarY={"17"}
-						middleBarWidth={"36"}
-						middleBarHeight={"2"}
-						middleBarRx={"1"}
-						middleBarFill={"white"}
-						middleBarClass={
+						middleFigureD={"M35 17H1C0.447715 17 0 17.4477 0 18C0 18.5523 0.447716 19 1 19H35C35.5523 19 36 18.5523 36 18C36 17.4477 35.5523 17 35 17Z"}
+						middleFigureClass={
 							this.props.isMenuOpen
-							? "middleBar__hamburger--close"
-							: "middleBar__hamburger"
+							? "middleFigure__hamburger--close"
+							: "middleFigure__hamburger"
 						}
-						bottomBarY={"26"}
-						bottomBarWidth={"36"}
-						bottomBarHeight={"2"}
-						bottomBarRx={"1"}
-						bottomBarFill={"white"}
-						bottomBarClass={
+						bottomFigureD={"M35 26H1C0.447715 26 0 26.4477 0 27C0 27.5523 0.447716 28 1 28H35C35.5523 28 36 27.5523 36 27C36 26.4477 35.5523 26 35 26Z"}
+						bottomFigureClass={
 							this.props.isMenuOpen
-							? "bottomBar__hamburger--close"
-							: "bottomBar__hamburger"
+							? "bottomFigure__hamburger--close"
+							: "bottomFigure__hamburger"
 						}
 					/>
 				</Button>
