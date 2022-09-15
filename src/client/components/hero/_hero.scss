@@ -74,31 +74,14 @@
 		background-color: $half-transparent;
 	}
 
-	&__move-down-icon { // <div>
+	&__scrollDown { // <div>
+		@include revealOnLoadTwoSecondsDelay;
 		position: absolute;
-		left: calc(50% - 25px / 2);
-		width: 25px;
-		height: 25px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		animation: {
-			name: moveDownAndUp;
-			duration: 1.75s;
-			iteration-count: infinite;
-		}
-
-		.move-down-icon {
-			&__arrow { // <div>
-				@include revealOnLoadTwoSecondsDelay;
-				width: inherit;
-				height: inherit;
-				clip-path: polygon(50% 65%, 90% 25%, 95% 30%, 50% 75%, 5% 30%, 10% 25%);
-				background-color: $color-5;
-				opacity: 0;
-			}
-		}
+		bottom: 20px;
+		left: calc(50% - 36px / 2);
+		width: 36px;
+		height: 36px;
+		opacity: 0;
 	}
 
 	&__title {
