@@ -15,31 +15,19 @@ class Icon extends Component {
 				xmlns={"http://www.w3.org/2000/svg"}
 			>
 				<g>
-					<rect
-						y={this.props.topBarY}
-						width={this.props.topBarWidth}
-						height={this.props.topBarHeight}
-						rx={this.props.topBarRx}
-						fill={this.props.topBarFill}
-						className={this.props.topBarClass}
+					<path
+						d={this.props.topFigureD}
+						className={this.props.topFigureClass}
 					/>
 
-					<rect
-						y={this.props.middleBarY}
-						width={this.props.middleBarWidth}
-						height={this.props.middleBarHeight}
-						rx={this.props.middleBarRx}
-						fill={this.props.middleBarFill}
-						className={this.props.middleBarClass}
+					<path
+						d={this.props.middleFigureD}
+						className={this.props.middleFigureClass}
 					/>
 
-					<rect
-						y={this.props.bottomBarY}
-						width={this.props.bottomBarWidth}
-						height={this.props.bottomBarHeight}
-						rx={this.props.bottomBarRx}
-						fill={this.props.bottomBarFill}
-						className={this.props.bottomBarClass}
+					<path
+						d={this.props.bottomFigureD}
+						className={this.props.bottomFigureClass}
 					/>
 				</g>
 			</svg>
