@@ -16,30 +16,30 @@ class Icon extends Component {
 			>
 				<g>
 					<rect
+						y={this.props.topBarY}
+						width={this.props.topBarWidth}
+						height={this.props.topBarHeight}
+						rx={this.props.topBarRx}
+						fill={this.props.topBarFill}
 						className={this.props.topBarClass}
-						y={"8"}
-						width={"36"}
-						height={"2"}
-						rx={"1"}
-						fill={"white"}
 					/>
 
 					<rect
+						y={this.props.middleBarY}
+						width={this.props.middleBarWidth}
+						height={this.props.middleBarHeight}
+						rx={this.props.middleBarRx}
+						fill={this.props.middleBarFill}
 						className={this.props.middleBarClass}
-						y={"17"}
-						width={"36"}
-						height={"2"}
-						rx={"1"}
-						fill={"white"}
 					/>
 
 					<rect
+						y={this.props.bottomBarY}
+						width={this.props.bottomBarWidth}
+						height={this.props.bottomBarHeight}
+						rx={this.props.bottomBarRx}
+						fill={this.props.bottomBarFill}
 						className={this.props.bottomBarClass}
-						y={"26"}
-						width={"36"}
-						height={"2"}
-						rx={"1"}
-						fill={"white"}
 					/>
 				</g>
 			</svg>
