@@ -11,7 +11,11 @@ import Icon from "../icon/icon";
 class Header extends Component {
 	render() {
 		return (
-			<header className={"header"}>
+			<header className={
+				this.props.isMenuOpen
+				? "header--noGradient"
+				: "header"
+			}>
 				<Name
 					closeMenu={this.props.closeMenu}
 					class={"header__name"}
