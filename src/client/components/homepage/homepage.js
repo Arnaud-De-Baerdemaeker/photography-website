@@ -7,7 +7,6 @@ import React, {Component} from "react";
 import Hero from "../hero/hero";
 import Image from "../image/image";
 import myPhoto from "../../images/moi.png";
-import Button from "../button/button";
 
 class HomePage extends Component {
 	componentDidMount() {
@@ -64,12 +63,6 @@ class HomePage extends Component {
 						</div>
 					</div>
 				</main>
-				<Button
-					function={this.props.backToTop}
-					alt={"Retour en haut de page"}
-					containerClass={"button__backToTop"}
-					iconClass={"button__bar--arrow-up"}
-				/>
 			</>
 		);
 	}

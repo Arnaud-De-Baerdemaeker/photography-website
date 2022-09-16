@@ -84,10 +84,6 @@ class App extends Component {
 		});
 	}
 
-	backToTop() {
-		window.scrollTo(0, 0);
-	}
-
 	render() {
 		return (
 			<BrowserRouter>
