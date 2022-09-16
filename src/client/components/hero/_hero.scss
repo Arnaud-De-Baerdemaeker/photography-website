@@ -86,7 +86,7 @@
 
 	&__title {
 		margin: 0;
-		color: $color-5;
+		color: white;
 		font: {
 			family: $crimson-pro;
 			weight: 100;
@@ -217,7 +217,7 @@
 				&-part1 { // <span>
 					@extend .title;
 					-webkit-text-fill-color: transparent;
-					-webkit-text-stroke-color: $color-5;
+					-webkit-text-stroke-color: white;
 					-webkit-text-stroke-width: 1px;
 				}
 
@@ -230,7 +230,7 @@
 				@extend .title;
 				z-index: 0;
 				display: block;
-				color: $color-10;
+				color: $color-8;
 				padding-left: 20px;
 				font-weight: revert;
 
