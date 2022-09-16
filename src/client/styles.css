@@ -730,31 +730,6 @@ body {
   bottom: 2.5rem;
 }
 
-.button__backToTop {
-  position: fixed;
-  right: 0;
-  bottom: 2.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 1.5625rem;
-  height: 1.875rem;
-  background-color: #3a5a40;
-  margin: 0;
-  padding: 0;
-  border-style: none;
-  border-bottom-left-radius: 0.4688rem;
-  border-top-left-radius: 0.4688rem;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-}
-
 .iconBox, .topFigure, .topFigure__hamburger, .topFigure__hamburger--close, .topFigure__chevron, .middleFigure__hamburger, .middleFigure__hamburger--close, .middleFigure__chevron, .bottomFigure__hamburger, .bottomFigure__hamburger--close, .bottomFigure__chevron, .middleFigure, .bottomFigure {
   transform-box: fill-box;
 }
@@ -823,8 +798,8 @@ body {
           animation-iteration-count: infinite;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  -webkit-animation-delay: 0.375s;
+          animation-delay: 0.375s;
 }
 
 .bottomFigure__hamburger {
@@ -855,8 +830,8 @@ body {
           animation-iteration-count: infinite;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-delay: 0.625s;
+          animation-delay: 0.625s;
 }
 
 .menu, .menu--closed {
