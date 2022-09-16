@@ -2,6 +2,7 @@
 // Started on July 2020
 // By Arnaud De Baerdemaeker
 
+// Scroll reveal animation
 @keyframes reveal {
 	0% {
 		opacity: 0;
@@ -11,6 +12,7 @@
 	}
 }
 
+// Hero background images carousel
 @keyframes fadeInAndOut1 {
 	0% {
 		opacity: 0;
@@ -101,20 +103,38 @@
 	}
 }
 
-@keyframes moveDownAndUp {
+// Scroll down icon animation
+@keyframes topFigureBlinking {
 	0% {
-		bottom: 30px;
-	}
-
-	50% {
-		bottom: 20px;
+		opacity: 1;
 	}
 
 	100% {
-		bottom: 30px;
+		opacity: 0;
 	}
 }
 
+@keyframes middleFigureBlinking {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes bottomFigureBlinking {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+// Loading screen animation
 @keyframes rotateSystem {
 	0% {
 		transform: rotate(0deg);
@@ -125,39 +145,72 @@
 	}
 }
 
-@keyframes topBarToCross {
+// Menu icon animation
+@keyframes topFigureToCross {
 	0% {
-		transform: translateY(0);
+		transform: translate(0, 0);
 	}
 
 	50% {
-		transform: translateY(9px);
+		transform: translate(0, 9px);
 	}
 
 	100% {
-		transform: translateY(9px) rotate(-45deg);
+		transform: translate(0, 9px) rotate(-45deg);
 	}
 }
 
-@keyframes middleBarToTransparent {
+@keyframes topFigureToHamburger {
 	0% {
-		background-color: $color-5;
+		transform: translate(0, 9px) rotate(-45deg);
 	}
 
 	50% {
-		background-color: $color-5;
+		transform: translate(0, 9px);
+	}
+
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes middleFigureToTransparent {
+	0% {
+		fill: white;
+	}
+
+	50% {
+		fill: white;
 	}
 
 	51% {
-		background-color: transparent;
+		fill: transparent;
 	}
 
 	100% {
-		background-color: transparent;
+		fill: transparent;
 	}
 }
 
-@keyframes bottomBarToCross {
+@keyframes middleFigureToOpaque {
+	0% {
+		fill: transparent;
+	}
+
+	50% {
+		fill: transparent;
+	}
+
+	51% {
+		fill: white;
+	}
+
+	100% {
+		fill: white;
+	}
+}
+
+@keyframes bottomFigureToCross {
 	0% {
 		transform: translateY(0);
 	}
@@ -171,39 +224,7 @@
 	}
 }
 
-@keyframes topBarToHamburger {
-	0% {
-		transform: translateY(9px) rotate(-45deg);
-	}
-
-	50% {
-		transform: translateY(9px);
-	}
-
-	100% {
-		transform: translateY(0);
-	}
-}
-
-@keyframes middleBarToOpaque {
-	0% {
-		background-color: transparent;
-	}
-
-	50% {
-		background-color: transparent;
-	}
-
-	51% {
-		background-color: $color-5;
-	}
-
-	100% {
-		background-color: $color-5;
-	}
-}
-
-@keyframes bottomBarToHamburger {
+@keyframes bottomFigureToHamburger {
 	0% {
 		transform: translateY(-9px) rotate(45deg);
 	}
