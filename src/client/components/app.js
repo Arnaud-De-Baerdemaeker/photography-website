@@ -27,7 +27,6 @@ class App extends Component {
 		this.applyHideClass = this.applyHideClass.bind(this);
 		this.transferOnScroll = this.transferOnScroll.bind(this);
 		this.revealOnScroll = this.revealOnScroll.bind(this);
-		this.backToTop = this.backToTop.bind(this);
 	}
 
 	toggleMenu() {
