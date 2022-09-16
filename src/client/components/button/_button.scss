@@ -36,25 +36,4 @@
 		position: absolute;
 		bottom: 2.5rem;
 	}
-
-	&__backToTop { // <button>
-		position: fixed;
-		right: 0;
-		bottom: 2.5rem;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 1.5625rem;
-		height: 1.875rem;
-		background-color: $color-2;
-		margin: 0;
-		padding: 0;
-		border: {
-			style: none;
-			bottom-left-radius: 0.4688rem;
-			top-left-radius: 0.4688rem;
-		}
-		cursor: pointer;
-		-webkit-tap-highlight-color: transparent;
-	}
 }
