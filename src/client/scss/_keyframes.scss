@@ -135,13 +135,13 @@
 }
 
 // Loading screen animation
-@keyframes rotateSystem {
+@keyframes planetsRevolution {
 	0% {
-		transform: rotate(0deg);
+		offset-distance: 0%;
 	}
 
 	100% {
-		transform: rotate(360deg)
+		offset-distance: -100%;
 	}
 }
 
