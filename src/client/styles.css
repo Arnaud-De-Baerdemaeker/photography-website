@@ -220,25 +220,21 @@
   }
 }
 
-@-webkit-keyframes rotateSystem {
+@-webkit-keyframes planetsRevolution {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    offset-distance: 0%;
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    offset-distance: -100%;
   }
 }
 
-@keyframes rotateSystem {
+@keyframes planetsRevolution {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    offset-distance: 0%;
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    offset-distance: -100%;
   }
 }
 
@@ -454,7 +450,7 @@ body {
           transition-duration: 3s;
 }
 
-.loading {
+.loadingScreen {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -465,68 +461,66 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
+  padding-right: 10%;
+  padding-left: 10%;
 }
 
-.loading__container {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  row-gap: 10px;
-  -webkit-animation-name: rotateSystem;
-          animation-name: rotateSystem;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+.loadingScreen__container {
+  width: 500px;
+  height: 500px;
+  fill: none;
+}
+
+.loadingScreen__starSymbol {
+  stroke: white;
+  stroke-width: 2;
+}
+
+.loadingScreen__starSymbolDot {
+  fill: white;
+}
+
+.loadingScreen__planet1, .loadingScreen__planet2, .loadingScreen__planet3, .loadingScreen__planet4 {
+  fill: white;
+  transform-box: fill-box;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-animation-name: planetsRevolution;
+          animation-name: planetsRevolution;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
+  offset-rotate: 0deg;
+  offset-distance: 0%;
 }
 
-.loading__planet {
-  position: absolute;
-  bottom: 40px;
-  display: block;
-  width: 7px;
-  height: 7px;
-  background-color: white;
-  border-radius: 5px;
+.loadingScreen__planet1 {
+  offset-path: path("M313 250C313 215.206 284.794 187 250 187C215.206 187 187 215.206 187 250C187 284.794 215.206 313 250 313C284.794 313 313 284.794 313 250Z");
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 
-.loading__star {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 25px;
-  height: 25px;
-  border-style: solid;
-  border-width: 3px;
-  border-radius: 50px;
-  border-color: white;
+.loadingScreen__planet2 {
+  offset-path: path("M375 250C375 180.964 319.036 125 250 125C180.964 125 125 180.964 125 250C125 319.036 180.964 375 250 375C319.036 375 375 319.036 375 250Z");
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
 }
 
-.loading__star .star__dot {
-  display: block;
-  width: 5px;
-  height: 5px;
-  border-radius: 5px;
-  background-color: white;
+.loadingScreen__planet3 {
+  offset-path: path("M445 250C445 142.304 357.696 55 250 55C142.304 55 55 142.304 55 250C55 357.696 142.304 445 250 445C357.696 445 445 357.696 445 250Z");
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+}
+
+.loadingScreen__planet4 {
+  offset-path: path("M496 250C496 114.138 385.862 4 250 4C114.138 4 4 114.138 4 250C4 385.862 114.138 496 250 496C385.862 496 496 385.862 496 250Z");
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+}
+
+.loadingScreen__planet1Orbit, .loadingScreen__planet2Orbit, .loadingScreen__planet3Orbit, .loadingScreen__planet4Orbit {
+  stroke: white;
 }
 
 .header, .header--noGradient {
