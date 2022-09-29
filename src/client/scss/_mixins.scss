@@ -3,23 +3,25 @@
 // By Arnaud De Baerdemaeker
 
 @mixin revealOnLoad {
-	animation-name: reveal;
-	animation-duration: 3s;
-    animation-delay: 0.5s;
-    animation-fill-mode: both;
+	animation: {
+		name: reveal;
+		duration: 2s;
+		delay: 0.5s;
+		fill-mode: both;
+	}
 }
 
 @mixin revealOnLoadOneSecondDelay {
-    @include revealOnLoad;
-    animation-delay: 1s;
+	@include revealOnLoad;
+	animation-delay: 1s;
 }
 
 @mixin revealOnLoadTwoSecondsDelay {
-    @include revealOnLoad;
-    animation-delay: 1.5s;
+	@include revealOnLoad;
+	animation-delay: 1.5s;
 }
 
 @mixin revealOnLoadThreeSecondsDelay {
-    @include revealOnLoad;
-    animation-delay: 2s;
+	@include revealOnLoad;
+	animation-delay: 2s;
 }
