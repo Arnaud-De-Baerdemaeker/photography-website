@@ -6,9 +6,12 @@
 @keyframes reveal {
 	0% {
 		opacity: 0;
+		transform: translateY(-20px);
 	}
+
 	100% {
 		opacity: 1;
+		transform: translateY(0);
 	}
 }
 
@@ -104,27 +107,7 @@
 }
 
 // Scroll down icon animation
-@keyframes topFigureBlinking {
-	0% {
-		opacity: 1;
-	}
-
-	100% {
-		opacity: 0;
-	}
-}
-
-@keyframes middleFigureBlinking {
-	0% {
-		opacity: 1;
-	}
-
-	100% {
-		opacity: 0;
-	}
-}
-
-@keyframes bottomFigureBlinking {
+@keyframes iconFigureBlinking {
 	0% {
 		opacity: 1;
 	}
@@ -148,29 +131,29 @@
 // Menu icon animation
 @keyframes topFigureToCross {
 	0% {
-		transform: translate(0, 0);
+		transform: translateY(0);
 	}
 
 	50% {
-		transform: translate(0, 9px);
+		transform: translateY(9px);
 	}
 
 	100% {
-		transform: translate(0, 9px) rotate(-45deg);
+		transform: translateY(9px) rotate(-45deg);
 	}
 }
 
 @keyframes topFigureToHamburger {
 	0% {
-		transform: translate(0, 9px) rotate(-45deg);
+		transform: translateY(9px) rotate(-45deg);
 	}
 
 	50% {
-		transform: translate(0, 9px);
+		transform: translateY(9px);
 	}
 
 	100% {
-		transform: translate(0, 0);
+		transform: translateY(0);
 	}
 }
 
@@ -235,5 +218,15 @@
 
 	100% {
 		transform: translateY(0);
+	}
+}
+
+@keyframes rotation {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
 	}
 }
