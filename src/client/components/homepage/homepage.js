@@ -5,7 +5,7 @@
 import React, {Component} from "react";
 
 import Hero from "../hero/hero";
-import Image from "../image/image";
+import MyPhotoBackground from "../myPhotoBackground/myPhotoBackground";
 import myPhoto from "../../images/moi.png";
 
 class HomePage extends Component {
@@ -41,11 +41,9 @@ class HomePage extends Component {
 					titleClass={"hero__title--homepage"}
 				/>
 				<main className={"homepage"}>
-					<div className={"homepage__my-photo"}>
-						<Image
-							url={myPhoto}
-							alt={"Photo de moi"}
-							class={"image__portrait"}
+					<div className={"homepage__myPhoto"}>
+						<MyPhotoBackground
+							href={myPhoto}
 						/>
 						<p className={"homepage__introduction"}>{"Bonjour, je m'appelle Arnaud !"}<br />{"Développeur front-end résidant en Belgique, dans la ville de Liège, et amateur de photographie."}</p>
 					</div>
