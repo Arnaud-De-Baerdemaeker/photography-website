@@ -1,18 +1,26 @@
 @-webkit-keyframes reveal {
   0% {
     opacity: 0;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
 @keyframes reveal {
   0% {
     opacity: 0;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
@@ -166,135 +174,63 @@
   }
 }
 
-@-webkit-keyframes topFigureBlinking {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes topFigureBlinking {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@-webkit-keyframes middleFigureBlinking {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes middleFigureBlinking {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@-webkit-keyframes bottomFigureBlinking {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes bottomFigureBlinking {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@-webkit-keyframes planetsRevolution {
-  0% {
-    offset-distance: 0%;
-  }
-  100% {
-    offset-distance: -100%;
-  }
-}
-
-@keyframes planetsRevolution {
-  0% {
-    offset-distance: 0%;
-  }
-  100% {
-    offset-distance: -100%;
-  }
-}
-
 @-webkit-keyframes topFigureToCross {
   0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   50% {
-    -webkit-transform: translate(0, 9px);
-            transform: translate(0, 9px);
+    -webkit-transform: translateY(9px);
+            transform: translateY(9px);
   }
   100% {
-    -webkit-transform: translate(0, 9px) rotate(-45deg);
-            transform: translate(0, 9px) rotate(-45deg);
+    -webkit-transform: translateY(9px) rotate(-45deg);
+            transform: translateY(9px) rotate(-45deg);
   }
 }
 
 @keyframes topFigureToCross {
   0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   50% {
-    -webkit-transform: translate(0, 9px);
-            transform: translate(0, 9px);
+    -webkit-transform: translateY(9px);
+            transform: translateY(9px);
   }
   100% {
-    -webkit-transform: translate(0, 9px) rotate(-45deg);
-            transform: translate(0, 9px) rotate(-45deg);
+    -webkit-transform: translateY(9px) rotate(-45deg);
+            transform: translateY(9px) rotate(-45deg);
   }
 }
 
 @-webkit-keyframes topFigureToHamburger {
   0% {
-    -webkit-transform: translate(0, 9px) rotate(-45deg);
-            transform: translate(0, 9px) rotate(-45deg);
+    -webkit-transform: translateY(9px) rotate(-45deg);
+            transform: translateY(9px) rotate(-45deg);
   }
   50% {
-    -webkit-transform: translate(0, 9px);
-            transform: translate(0, 9px);
+    -webkit-transform: translateY(9px);
+            transform: translateY(9px);
   }
   100% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
 @keyframes topFigureToHamburger {
   0% {
-    -webkit-transform: translate(0, 9px) rotate(-45deg);
-            transform: translate(0, 9px) rotate(-45deg);
+    -webkit-transform: translateY(9px) rotate(-45deg);
+            transform: translateY(9px) rotate(-45deg);
   }
   50% {
-    -webkit-transform: translate(0, 9px);
-            transform: translate(0, 9px);
+    -webkit-transform: translateY(9px);
+            transform: translateY(9px);
   }
   100% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
@@ -418,6 +354,46 @@
   }
 }
 
+@-webkit-keyframes blinking {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 html {
   height: 100%;
   font-size: 16px;
@@ -440,14 +416,18 @@ body {
 
 .view--hidden {
   opacity: 0;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
 }
 
 .view--visible {
   opacity: 1;
-  -webkit-transition-property: opacity;
-  transition-property: opacity;
-  -webkit-transition-duration: 3s;
-          transition-duration: 3s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition-property: opacity transform;
+  transition-property: opacity transform;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
 }
 
 .loadingScreen {
@@ -461,73 +441,68 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  padding-right: 10%;
-  padding-left: 10%;
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
 }
 
-.loadingScreen__container {
-  width: 500px;
-  height: 500px;
+.loadingScreen__svg {
+  width: 100%;
+  max-width: 31.25rem;
+  height: 100%;
   fill: none;
 }
 
-.loadingScreen__starSymbol {
-  stroke: white;
-  stroke-width: 2;
-}
-
-.loadingScreen__starSymbolDot {
-  fill: white;
-}
-
-.loadingScreen__planet1, .loadingScreen__planet2, .loadingScreen__planet3, .loadingScreen__planet4 {
-  fill: white;
+.loadingScreen__group1, .loadingScreen__group2, .loadingScreen__group3 {
   transform-box: fill-box;
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
-  -webkit-animation-name: planetsRevolution;
-          animation-name: planetsRevolution;
+  -webkit-animation-name: rotation;
+          animation-name: rotation;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
-  offset-rotate: 0deg;
-  offset-distance: 0%;
 }
 
-.loadingScreen__planet1 {
-  offset-path: path("M313 250C313 215.206 284.794 187 250 187C215.206 187 187 215.206 187 250C187 284.794 215.206 313 250 313C284.794 313 313 284.794 313 250Z");
+.loadingScreen__group1 {
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
 }
 
-.loadingScreen__planet2 {
-  offset-path: path("M375 250C375 180.964 319.036 125 250 125C180.964 125 125 180.964 125 250C125 319.036 180.964 375 250 375C319.036 375 375 319.036 375 250Z");
+.loadingScreen__group2 {
   -webkit-animation-duration: 4s;
           animation-duration: 4s;
+  animation-direction: reverse;
 }
 
-.loadingScreen__planet3 {
-  offset-path: path("M445 250C445 142.304 357.696 55 250 55C142.304 55 55 142.304 55 250C55 357.696 142.304 445 250 445C357.696 445 445 357.696 445 250Z");
+.loadingScreen__group3 {
   -webkit-animation-duration: 6s;
           animation-duration: 6s;
 }
 
-.loadingScreen__planet4 {
-  offset-path: path("M496 250C496 114.138 385.862 4 250 4C114.138 4 4 114.138 4 250C4 385.862 114.138 496 250 496C385.862 496 496 385.862 496 250Z");
-  -webkit-animation-duration: 8s;
-          animation-duration: 8s;
+.loadingScreen__arc1, .loadingScreen__arc2, .loadingScreen__arc3, .loadingScreen__arc4, .loadingScreen__arc5, .loadingScreen__arc6 {
+  fill: white;
 }
 
-.loadingScreen__planet1Orbit, .loadingScreen__planet2Orbit, .loadingScreen__planet3Orbit, .loadingScreen__planet4Orbit {
-  stroke: white;
+.loadingScreen__text {
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  font-size: 1.125rem;
+  fill: white;
+  -webkit-animation-name: blinking;
+          animation-name: blinking;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 
-.header, .header--noGradient {
+.header {
   -webkit-animation-name: reveal;
           animation-name: reveal;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
   -webkit-animation-fill-mode: both;
@@ -545,12 +520,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(transparent));
-  background-image: linear-gradient(180deg, black 0%, transparent 100%);
-}
-
-.header--noGradient {
-  background-image: none;
 }
 
 .header__name {
@@ -758,8 +727,8 @@ body {
 
 .topFigure__chevron {
   opacity: 0;
-  -webkit-animation-name: topFigureBlinking;
-          animation-name: topFigureBlinking;
+  -webkit-animation-name: blinking;
+          animation-name: blinking;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   -webkit-animation-iteration-count: infinite;
@@ -788,8 +757,8 @@ body {
 
 .middleFigure__chevron {
   opacity: 0;
-  -webkit-animation-name: middleFigureBlinking;
-          animation-name: middleFigureBlinking;
+  -webkit-animation-name: blinking;
+          animation-name: blinking;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   -webkit-animation-iteration-count: infinite;
@@ -820,8 +789,8 @@ body {
 
 .bottomFigure__chevron {
   opacity: 0;
-  -webkit-animation-name: bottomFigureBlinking;
-          animation-name: bottomFigureBlinking;
+  -webkit-animation-name: blinking;
+          animation-name: blinking;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   -webkit-animation-iteration-count: infinite;
@@ -1106,7 +1075,7 @@ body {
           animation-duration: unset;
 }
 
-.hero__back-filter {
+.hero__backFilter {
   width: inherit;
   height: inherit;
   background-color: rgba(0, 0, 0, 0.5);
@@ -1115,8 +1084,8 @@ body {
 .hero__scrollDown {
   -webkit-animation-name: reveal;
           animation-name: reveal;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
   -webkit-animation-fill-mode: both;
@@ -1142,8 +1111,8 @@ body {
 .hero__title--homepage {
   -webkit-animation-name: reveal;
           animation-name: reveal;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
   -webkit-animation-fill-mode: both;
@@ -1273,8 +1242,8 @@ body {
 .hero__title--gallery {
   -webkit-animation-name: reveal;
           animation-name: reveal;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
   -webkit-animation-fill-mode: both;
@@ -1285,14 +1254,14 @@ body {
   padding-left: 20px;
 }
 
-.hero__title .title, .hero__title--homepage .title, .hero__title--gallery .title, .hero__title--404 .title, .hero__title .title__job-part1, .hero__title--homepage .hero__title .title__job-part1, .hero__title .hero__title--homepage .title__job-part1, .hero__title--gallery .hero__title .title__job-part1, .hero__title .hero__title--gallery .title__job-part1, .hero__title--404 .hero__title .title__job-part1, .hero__title .hero__title--404 .title__job-part1, .hero__title .hero__title--homepage .title__job-part1, .hero__title--homepage .hero__title .title__job-part1, .hero__title--homepage .title__job-part1, .hero__title--gallery .hero__title--homepage .title__job-part1, .hero__title--homepage .hero__title--gallery .title__job-part1, .hero__title--404 .hero__title--homepage .title__job-part1, .hero__title--homepage .hero__title--404 .title__job-part1, .hero__title .hero__title--gallery .title__job-part1, .hero__title--gallery .hero__title .title__job-part1, .hero__title--homepage .hero__title--gallery .title__job-part1, .hero__title--gallery .hero__title--homepage .title__job-part1, .hero__title--gallery .title__job-part1, .hero__title--404 .hero__title--gallery .title__job-part1, .hero__title--gallery .hero__title--404 .title__job-part1, .hero__title .hero__title--404 .title__job-part1, .hero__title--404 .hero__title .title__job-part1, .hero__title--homepage .hero__title--404 .title__job-part1, .hero__title--404 .hero__title--homepage .title__job-part1, .hero__title--gallery .hero__title--404 .title__job-part1, .hero__title--404 .hero__title--gallery .title__job-part1, .hero__title--404 .title__job-part1, .hero__title .title__hobby-part1, .hero__title--homepage .hero__title .title__hobby-part1, .hero__title .hero__title--homepage .title__hobby-part1, .hero__title--gallery .hero__title .title__hobby-part1, .hero__title .hero__title--gallery .title__hobby-part1, .hero__title--404 .hero__title .title__hobby-part1, .hero__title .hero__title--404 .title__hobby-part1, .hero__title .hero__title--homepage .title__hobby-part1, .hero__title--homepage .hero__title .title__hobby-part1, .hero__title--homepage .title__hobby-part1, .hero__title--gallery .hero__title--homepage .title__hobby-part1, .hero__title--homepage .hero__title--gallery .title__hobby-part1, .hero__title--404 .hero__title--homepage .title__hobby-part1, .hero__title--homepage .hero__title--404 .title__hobby-part1, .hero__title .hero__title--gallery .title__hobby-part1, .hero__title--gallery .hero__title .title__hobby-part1, .hero__title--homepage .hero__title--gallery .title__hobby-part1, .hero__title--gallery .hero__title--homepage .title__hobby-part1, .hero__title--gallery .title__hobby-part1, .hero__title--404 .hero__title--gallery .title__hobby-part1, .hero__title--gallery .hero__title--404 .title__hobby-part1, .hero__title .hero__title--404 .title__hobby-part1, .hero__title--404 .hero__title .title__hobby-part1, .hero__title--homepage .hero__title--404 .title__hobby-part1, .hero__title--404 .hero__title--homepage .title__hobby-part1, .hero__title--gallery .hero__title--404 .title__hobby-part1, .hero__title--404 .hero__title--gallery .title__hobby-part1, .hero__title--404 .title__hobby-part1, .hero__title .title__job-part2, .hero__title--homepage .hero__title .title__job-part2, .hero__title .hero__title--homepage .title__job-part2, .hero__title--gallery .hero__title .title__job-part2, .hero__title .hero__title--gallery .title__job-part2, .hero__title--404 .hero__title .title__job-part2, .hero__title .hero__title--404 .title__job-part2, .hero__title .hero__title--homepage .title__job-part2, .hero__title--homepage .hero__title .title__job-part2, .hero__title--homepage .title__job-part2, .hero__title--gallery .hero__title--homepage .title__job-part2, .hero__title--homepage .hero__title--gallery .title__job-part2, .hero__title--404 .hero__title--homepage .title__job-part2, .hero__title--homepage .hero__title--404 .title__job-part2, .hero__title .hero__title--gallery .title__job-part2, .hero__title--gallery .hero__title .title__job-part2, .hero__title--homepage .hero__title--gallery .title__job-part2, .hero__title--gallery .hero__title--homepage .title__job-part2, .hero__title--gallery .title__job-part2, .hero__title--404 .hero__title--gallery .title__job-part2, .hero__title--gallery .hero__title--404 .title__job-part2, .hero__title .hero__title--404 .title__job-part2, .hero__title--404 .hero__title .title__job-part2, .hero__title--homepage .hero__title--404 .title__job-part2, .hero__title--404 .hero__title--homepage .title__job-part2, .hero__title--gallery .hero__title--404 .title__job-part2, .hero__title--404 .hero__title--gallery .title__job-part2, .hero__title--404 .title__job-part2, .hero__title .title__hobby-part2, .hero__title--homepage .hero__title .title__hobby-part2, .hero__title .hero__title--homepage .title__hobby-part2, .hero__title--gallery .hero__title .title__hobby-part2, .hero__title .hero__title--gallery .title__hobby-part2, .hero__title--404 .hero__title .title__hobby-part2, .hero__title .hero__title--404 .title__hobby-part2, .hero__title .hero__title--homepage .title__hobby-part2, .hero__title--homepage .hero__title .title__hobby-part2, .hero__title--homepage .title__hobby-part2, .hero__title--gallery .hero__title--homepage .title__hobby-part2, .hero__title--homepage .hero__title--gallery .title__hobby-part2, .hero__title--404 .hero__title--homepage .title__hobby-part2, .hero__title--homepage .hero__title--404 .title__hobby-part2, .hero__title .hero__title--gallery .title__hobby-part2, .hero__title--gallery .hero__title .title__hobby-part2, .hero__title--homepage .hero__title--gallery .title__hobby-part2, .hero__title--gallery .hero__title--homepage .title__hobby-part2, .hero__title--gallery .title__hobby-part2, .hero__title--404 .hero__title--gallery .title__hobby-part2, .hero__title--gallery .hero__title--404 .title__hobby-part2, .hero__title .hero__title--404 .title__hobby-part2, .hero__title--404 .hero__title .title__hobby-part2, .hero__title--homepage .hero__title--404 .title__hobby-part2, .hero__title--404 .hero__title--homepage .title__hobby-part2, .hero__title--gallery .hero__title--404 .title__hobby-part2, .hero__title--404 .hero__title--gallery .title__hobby-part2, .hero__title--404 .title__hobby-part2, .hero__title .title__ampersand, .hero__title--homepage .hero__title .title__ampersand, .hero__title .hero__title--homepage .title__ampersand, .hero__title--gallery .hero__title .title__ampersand, .hero__title .hero__title--gallery .title__ampersand, .hero__title--404 .hero__title .title__ampersand, .hero__title .hero__title--404 .title__ampersand, .hero__title .hero__title--homepage .title__ampersand, .hero__title--homepage .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .hero__title--homepage .title__ampersand, .hero__title--homepage .hero__title--gallery .title__ampersand, .hero__title--404 .hero__title--homepage .title__ampersand, .hero__title--homepage .hero__title--404 .title__ampersand, .hero__title .hero__title--gallery .title__ampersand, .hero__title--gallery .hero__title .title__ampersand, .hero__title--homepage .hero__title--gallery .title__ampersand, .hero__title--gallery .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand, .hero__title--404 .hero__title--gallery .title__ampersand, .hero__title--gallery .hero__title--404 .title__ampersand, .hero__title .hero__title--404 .title__ampersand, .hero__title--404 .hero__title .title__ampersand, .hero__title--homepage .hero__title--404 .title__ampersand, .hero__title--404 .hero__title--homepage .title__ampersand, .hero__title--gallery .hero__title--404 .title__ampersand, .hero__title--404 .hero__title--gallery .title__ampersand, .hero__title--404 .title__ampersand, .hero__title .title__page, .hero__title--homepage .hero__title .title__page, .hero__title .hero__title--homepage .title__page, .hero__title--gallery .hero__title .title__page, .hero__title .hero__title--gallery .title__page, .hero__title--404 .hero__title .title__page, .hero__title .hero__title--404 .title__page, .hero__title .hero__title--homepage .title__page, .hero__title--homepage .hero__title .title__page, .hero__title--homepage .title__page, .hero__title--gallery .hero__title--homepage .title__page, .hero__title--homepage .hero__title--gallery .title__page, .hero__title--404 .hero__title--homepage .title__page, .hero__title--homepage .hero__title--404 .title__page, .hero__title .hero__title--gallery .title__page, .hero__title--gallery .hero__title .title__page, .hero__title--homepage .hero__title--gallery .title__page, .hero__title--gallery .hero__title--homepage .title__page, .hero__title--gallery .title__page, .hero__title--404 .hero__title--gallery .title__page, .hero__title--gallery .hero__title--404 .title__page, .hero__title .hero__title--404 .title__page, .hero__title--404 .hero__title .title__page, .hero__title--homepage .hero__title--404 .title__page, .hero__title--404 .hero__title--homepage .title__page, .hero__title--gallery .hero__title--404 .title__page, .hero__title--404 .hero__title--gallery .title__page, .hero__title--404 .title__page, .hero__title .title__intro, .hero__title--homepage .hero__title .title__intro, .hero__title .hero__title--homepage .title__intro, .hero__title--gallery .hero__title .title__intro, .hero__title .hero__title--gallery .title__intro, .hero__title--404 .hero__title .title__intro, .hero__title .hero__title--404 .title__intro, .hero__title .hero__title--homepage .title__intro, .hero__title--homepage .hero__title .title__intro, .hero__title--homepage .title__intro, .hero__title--gallery .hero__title--homepage .title__intro, .hero__title--homepage .hero__title--gallery .title__intro, .hero__title--404 .hero__title--homepage .title__intro, .hero__title--homepage .hero__title--404 .title__intro, .hero__title .hero__title--gallery .title__intro, .hero__title--gallery .hero__title .title__intro, .hero__title--homepage .hero__title--gallery .title__intro, .hero__title--gallery .hero__title--homepage .title__intro, .hero__title--gallery .title__intro, .hero__title--404 .hero__title--gallery .title__intro, .hero__title--gallery .hero__title--404 .title__intro, .hero__title .hero__title--404 .title__intro, .hero__title--404 .hero__title .title__intro, .hero__title--homepage .hero__title--404 .title__intro, .hero__title--404 .hero__title--homepage .title__intro, .hero__title--gallery .hero__title--404 .title__intro, .hero__title--404 .hero__title--gallery .title__intro, .hero__title--404 .title__intro {
+.hero__title .title, .hero__title--homepage .title, .hero__title--gallery .title, .hero__title--404 .title, .hero__title .title__jobPart1, .hero__title--homepage .hero__title .title__jobPart1, .hero__title .hero__title--homepage .title__jobPart1, .hero__title--gallery .hero__title .title__jobPart1, .hero__title .hero__title--gallery .title__jobPart1, .hero__title--404 .hero__title .title__jobPart1, .hero__title .hero__title--404 .title__jobPart1, .hero__title .hero__title--homepage .title__jobPart1, .hero__title--homepage .hero__title .title__jobPart1, .hero__title--homepage .title__jobPart1, .hero__title--gallery .hero__title--homepage .title__jobPart1, .hero__title--homepage .hero__title--gallery .title__jobPart1, .hero__title--404 .hero__title--homepage .title__jobPart1, .hero__title--homepage .hero__title--404 .title__jobPart1, .hero__title .hero__title--gallery .title__jobPart1, .hero__title--gallery .hero__title .title__jobPart1, .hero__title--homepage .hero__title--gallery .title__jobPart1, .hero__title--gallery .hero__title--homepage .title__jobPart1, .hero__title--gallery .title__jobPart1, .hero__title--404 .hero__title--gallery .title__jobPart1, .hero__title--gallery .hero__title--404 .title__jobPart1, .hero__title .hero__title--404 .title__jobPart1, .hero__title--404 .hero__title .title__jobPart1, .hero__title--homepage .hero__title--404 .title__jobPart1, .hero__title--404 .hero__title--homepage .title__jobPart1, .hero__title--gallery .hero__title--404 .title__jobPart1, .hero__title--404 .hero__title--gallery .title__jobPart1, .hero__title--404 .title__jobPart1, .hero__title .title__hobbyPart1, .hero__title--homepage .hero__title .title__hobbyPart1, .hero__title .hero__title--homepage .title__hobbyPart1, .hero__title--gallery .hero__title .title__hobbyPart1, .hero__title .hero__title--gallery .title__hobbyPart1, .hero__title--404 .hero__title .title__hobbyPart1, .hero__title .hero__title--404 .title__hobbyPart1, .hero__title .hero__title--homepage .title__hobbyPart1, .hero__title--homepage .hero__title .title__hobbyPart1, .hero__title--homepage .title__hobbyPart1, .hero__title--gallery .hero__title--homepage .title__hobbyPart1, .hero__title--homepage .hero__title--gallery .title__hobbyPart1, .hero__title--404 .hero__title--homepage .title__hobbyPart1, .hero__title--homepage .hero__title--404 .title__hobbyPart1, .hero__title .hero__title--gallery .title__hobbyPart1, .hero__title--gallery .hero__title .title__hobbyPart1, .hero__title--homepage .hero__title--gallery .title__hobbyPart1, .hero__title--gallery .hero__title--homepage .title__hobbyPart1, .hero__title--gallery .title__hobbyPart1, .hero__title--404 .hero__title--gallery .title__hobbyPart1, .hero__title--gallery .hero__title--404 .title__hobbyPart1, .hero__title .hero__title--404 .title__hobbyPart1, .hero__title--404 .hero__title .title__hobbyPart1, .hero__title--homepage .hero__title--404 .title__hobbyPart1, .hero__title--404 .hero__title--homepage .title__hobbyPart1, .hero__title--gallery .hero__title--404 .title__hobbyPart1, .hero__title--404 .hero__title--gallery .title__hobbyPart1, .hero__title--404 .title__hobbyPart1, .hero__title .title__jobPart2, .hero__title--homepage .hero__title .title__jobPart2, .hero__title .hero__title--homepage .title__jobPart2, .hero__title--gallery .hero__title .title__jobPart2, .hero__title .hero__title--gallery .title__jobPart2, .hero__title--404 .hero__title .title__jobPart2, .hero__title .hero__title--404 .title__jobPart2, .hero__title .hero__title--homepage .title__jobPart2, .hero__title--homepage .hero__title .title__jobPart2, .hero__title--homepage .title__jobPart2, .hero__title--gallery .hero__title--homepage .title__jobPart2, .hero__title--homepage .hero__title--gallery .title__jobPart2, .hero__title--404 .hero__title--homepage .title__jobPart2, .hero__title--homepage .hero__title--404 .title__jobPart2, .hero__title .hero__title--gallery .title__jobPart2, .hero__title--gallery .hero__title .title__jobPart2, .hero__title--homepage .hero__title--gallery .title__jobPart2, .hero__title--gallery .hero__title--homepage .title__jobPart2, .hero__title--gallery .title__jobPart2, .hero__title--404 .hero__title--gallery .title__jobPart2, .hero__title--gallery .hero__title--404 .title__jobPart2, .hero__title .hero__title--404 .title__jobPart2, .hero__title--404 .hero__title .title__jobPart2, .hero__title--homepage .hero__title--404 .title__jobPart2, .hero__title--404 .hero__title--homepage .title__jobPart2, .hero__title--gallery .hero__title--404 .title__jobPart2, .hero__title--404 .hero__title--gallery .title__jobPart2, .hero__title--404 .title__jobPart2, .hero__title .title__hobbyPart2, .hero__title--homepage .hero__title .title__hobbyPart2, .hero__title .hero__title--homepage .title__hobbyPart2, .hero__title--gallery .hero__title .title__hobbyPart2, .hero__title .hero__title--gallery .title__hobbyPart2, .hero__title--404 .hero__title .title__hobbyPart2, .hero__title .hero__title--404 .title__hobbyPart2, .hero__title .hero__title--homepage .title__hobbyPart2, .hero__title--homepage .hero__title .title__hobbyPart2, .hero__title--homepage .title__hobbyPart2, .hero__title--gallery .hero__title--homepage .title__hobbyPart2, .hero__title--homepage .hero__title--gallery .title__hobbyPart2, .hero__title--404 .hero__title--homepage .title__hobbyPart2, .hero__title--homepage .hero__title--404 .title__hobbyPart2, .hero__title .hero__title--gallery .title__hobbyPart2, .hero__title--gallery .hero__title .title__hobbyPart2, .hero__title--homepage .hero__title--gallery .title__hobbyPart2, .hero__title--gallery .hero__title--homepage .title__hobbyPart2, .hero__title--gallery .title__hobbyPart2, .hero__title--404 .hero__title--gallery .title__hobbyPart2, .hero__title--gallery .hero__title--404 .title__hobbyPart2, .hero__title .hero__title--404 .title__hobbyPart2, .hero__title--404 .hero__title .title__hobbyPart2, .hero__title--homepage .hero__title--404 .title__hobbyPart2, .hero__title--404 .hero__title--homepage .title__hobbyPart2, .hero__title--gallery .hero__title--404 .title__hobbyPart2, .hero__title--404 .hero__title--gallery .title__hobbyPart2, .hero__title--404 .title__hobbyPart2, .hero__title .title__ampersand, .hero__title--homepage .hero__title .title__ampersand, .hero__title .hero__title--homepage .title__ampersand, .hero__title--gallery .hero__title .title__ampersand, .hero__title .hero__title--gallery .title__ampersand, .hero__title--404 .hero__title .title__ampersand, .hero__title .hero__title--404 .title__ampersand, .hero__title .hero__title--homepage .title__ampersand, .hero__title--homepage .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .hero__title--homepage .title__ampersand, .hero__title--homepage .hero__title--gallery .title__ampersand, .hero__title--404 .hero__title--homepage .title__ampersand, .hero__title--homepage .hero__title--404 .title__ampersand, .hero__title .hero__title--gallery .title__ampersand, .hero__title--gallery .hero__title .title__ampersand, .hero__title--homepage .hero__title--gallery .title__ampersand, .hero__title--gallery .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand, .hero__title--404 .hero__title--gallery .title__ampersand, .hero__title--gallery .hero__title--404 .title__ampersand, .hero__title .hero__title--404 .title__ampersand, .hero__title--404 .hero__title .title__ampersand, .hero__title--homepage .hero__title--404 .title__ampersand, .hero__title--404 .hero__title--homepage .title__ampersand, .hero__title--gallery .hero__title--404 .title__ampersand, .hero__title--404 .hero__title--gallery .title__ampersand, .hero__title--404 .title__ampersand, .hero__title .title__page, .hero__title--homepage .hero__title .title__page, .hero__title .hero__title--homepage .title__page, .hero__title--gallery .hero__title .title__page, .hero__title .hero__title--gallery .title__page, .hero__title--404 .hero__title .title__page, .hero__title .hero__title--404 .title__page, .hero__title .hero__title--homepage .title__page, .hero__title--homepage .hero__title .title__page, .hero__title--homepage .title__page, .hero__title--gallery .hero__title--homepage .title__page, .hero__title--homepage .hero__title--gallery .title__page, .hero__title--404 .hero__title--homepage .title__page, .hero__title--homepage .hero__title--404 .title__page, .hero__title .hero__title--gallery .title__page, .hero__title--gallery .hero__title .title__page, .hero__title--homepage .hero__title--gallery .title__page, .hero__title--gallery .hero__title--homepage .title__page, .hero__title--gallery .title__page, .hero__title--404 .hero__title--gallery .title__page, .hero__title--gallery .hero__title--404 .title__page, .hero__title .hero__title--404 .title__page, .hero__title--404 .hero__title .title__page, .hero__title--homepage .hero__title--404 .title__page, .hero__title--404 .hero__title--homepage .title__page, .hero__title--gallery .hero__title--404 .title__page, .hero__title--404 .hero__title--gallery .title__page, .hero__title--404 .title__page, .hero__title .title__intro, .hero__title--homepage .hero__title .title__intro, .hero__title .hero__title--homepage .title__intro, .hero__title--gallery .hero__title .title__intro, .hero__title .hero__title--gallery .title__intro, .hero__title--404 .hero__title .title__intro, .hero__title .hero__title--404 .title__intro, .hero__title .hero__title--homepage .title__intro, .hero__title--homepage .hero__title .title__intro, .hero__title--homepage .title__intro, .hero__title--gallery .hero__title--homepage .title__intro, .hero__title--homepage .hero__title--gallery .title__intro, .hero__title--404 .hero__title--homepage .title__intro, .hero__title--homepage .hero__title--404 .title__intro, .hero__title .hero__title--gallery .title__intro, .hero__title--gallery .hero__title .title__intro, .hero__title--homepage .hero__title--gallery .title__intro, .hero__title--gallery .hero__title--homepage .title__intro, .hero__title--gallery .title__intro, .hero__title--404 .hero__title--gallery .title__intro, .hero__title--gallery .hero__title--404 .title__intro, .hero__title .hero__title--404 .title__intro, .hero__title--404 .hero__title .title__intro, .hero__title--homepage .hero__title--404 .title__intro, .hero__title--404 .hero__title--homepage .title__intro, .hero__title--gallery .hero__title--404 .title__intro, .hero__title--404 .hero__title--gallery .title__intro, .hero__title--404 .title__intro {
   position: relative;
   z-index: 1;
   display: block;
   font-weight: 900;
 }
 
-.hero__title .title__job-part1, .hero__title--homepage .title__job-part1, .hero__title--gallery .title__job-part1, .hero__title--404 .title__job-part1, .hero__title .title__hobby-part1, .hero__title--homepage .title__hobby-part1, .hero__title--gallery .title__hobby-part1, .hero__title--404 .title__hobby-part1 {
+.hero__title .title__jobPart1, .hero__title--homepage .title__jobPart1, .hero__title--gallery .title__jobPart1, .hero__title--404 .title__jobPart1, .hero__title .title__hobbyPart1, .hero__title--homepage .title__hobbyPart1, .hero__title--gallery .title__hobbyPart1, .hero__title--404 .title__hobbyPart1 {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-color: white;
   -webkit-text-stroke-width: 1px;
@@ -1517,50 +1486,99 @@ body {
   margin-right: auto;
   margin-left: auto;
   padding-top: 6.25rem;
-  padding-right: 10%;
+  padding-right: 20px;
   padding-bottom: 6.25rem;
-  padding-left: 10%;
-  max-width: 1000px;
+  padding-left: 20px;
 }
 
-.homepage__my-photo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+@media (orientation: landscape) {
+  .homepage {
+    max-width: 1500px;
+  }
 }
 
 @media (orientation: portrait) {
-  .homepage__my-photo {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .homepage__myPhoto {
     row-gap: 2.5rem;
   }
 }
 
 @media (orientation: portrait) and (min-width: 43.75rem) {
-  .homepage__my-photo {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+  .homepage__myPhoto {
     -webkit-column-gap: 2.5rem;
             column-gap: 2.5rem;
   }
 }
 
 @media (orientation: landscape) {
-  .homepage__my-photo {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  .homepage__myPhoto {
     -webkit-column-gap: 2.5rem;
             column-gap: 2.5rem;
   }
+}
+
+.homepage__myPhoto .myPhoto__container {
+  width: 100%;
+  height: 100%;
+}
+
+.homepage__myPhoto .myPhoto__background1, .homepage__myPhoto .myPhoto__background2, .homepage__myPhoto .myPhoto__background3 {
+  transform-box: fill-box;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-animation-name: rotation;
+          animation-name: rotation;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.homepage__myPhoto .myPhoto__background1 {
+  fill: #588157;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+}
+
+.homepage__myPhoto .myPhoto__background2 {
+  fill: #3a5a40;
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+  animation-direction: reverse;
+}
+
+.homepage__myPhoto .myPhoto__background3 {
+  fill: #19271b;
+  -webkit-animation-duration: 25s;
+          animation-duration: 25s;
+}
+
+.homepage__myPhoto .myPhoto__portrait {
+  vertical-align: middle;
+  aspect-ratio: 1 / 1;
+  max-width: 50%;
+  -webkit-transform: translate(calc(50% - 50% / 2), calc(50% - 50% / 2));
+          transform: translate(calc(50% - 50% / 2), calc(50% - 50% / 2));
+}
+
+@media (orientation: portrait) {
+  .homepage__myPhoto .myPhoto__portrait {
+    width: 50%;
+  }
+}
+
+@media (orientation: landscape) {
+  .homepage__myPhoto .myPhoto__portrait {
+    width: 35%;
+  }
+}
+
+.homepage__myPhoto text {
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  font-size: 1.375rem;
+  fill: white;
 }
 
 .homepage__introduction {
@@ -1730,20 +1748,20 @@ body {
   list-style: none;
 }
 
-.gallery__list-item {
+.gallery__listItem {
   aspect-ratio: 1 / 1;
   max-width: 15.625rem;
 }
 
 @media (orientation: portrait) {
-  .gallery__list-item {
+  .gallery__listItem {
     min-width: 6.875rem;
     width: 50%;
   }
 }
 
 @media (orientation: landscape) {
-  .gallery__list-item {
+  .gallery__listItem {
     min-width: 7.5rem;
     width: calc(100% / 3);
   }
@@ -1768,17 +1786,17 @@ body {
   }
 }
 
-.photos-cards {
+.photosCards {
   width: 100%;
   height: 100%;
 }
 
-.photos-cards span {
+.photosCards span {
   width: inherit;
   height: inherit;
 }
 
-.photos-cards__image {
+.photosCards__image {
   width: 100%;
   height: 100%;
   vertical-align: middle;
@@ -1823,7 +1841,7 @@ body {
           transform: translateX(-100%);
 }
 
-.modal__image-container {
+.modal__imageContainer {
   margin-top: 0;
   margin-right: 0;
   margin-bottom: 0;
@@ -1850,7 +1868,7 @@ body {
   row-gap: 50px;
 }
 
-.footer__social-networks {
+.footer__socialNetworks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1909,7 +1927,7 @@ body {
   height: 22px;
 }
 
-.footer__credits-container {
+.footer__creditsContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
