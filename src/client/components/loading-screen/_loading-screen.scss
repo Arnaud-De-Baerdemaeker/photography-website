@@ -4,65 +4,59 @@
 	align-items: center;
 	height: 100%;
 	padding: {
-		right: 10%;
-		left: 10%;
+		right: 1.25rem;
+		left: 1.25rem;
 	}
 
-	&__container { // <svg>
-		width: 500px;
-		height: 500px;
+	&__svg { // <svg>
+		width: 100%;
+		max-width: 31.25rem;
+		height: 100%;
 		fill: none;
 	}
 
-	&__starSymbol { // <path>
-		stroke: white;
-		stroke-width: 2;
-
-		&Dot { // <path>
-			fill: white;
+	&__group1, &__group2, &__group3 { // <g>
+		transform: {
+			box: fill-box;
+			origin: 50% 50%;
+		}
+		animation: {
+			name: rotation;
+			iteration-count: infinite;
+			timing-function: linear;
 		}
 	}
 
-	&__planet {
-		&1, &2, &3, &4 { // <circle>
-			fill: white;
-			transform: {
-				box: fill-box;
-				origin: 50% 50%;
-			}
-			animation: {
-				name: planetsRevolution;
-				iteration-count: infinite;
-				timing-function: linear;
-			}
-			offset: {
-				rotate: 0deg;
-				distance: 0%;
-			}
-		}
+	&__group1 { // <g>
+		animation-duration: 2s;
+	}
 
-		&1 {
-			offset-path: path("M313 250C313 215.206 284.794 187 250 187C215.206 187 187 215.206 187 250C187 284.794 215.206 313 250 313C284.794 313 313 284.794 313 250Z");
-			animation-duration: 2s;
+	&__group2 { // <g>
+		animation: {
+			duration: 4s;
+			direction: reverse;
 		}
+	}
 
-		&2 {
-			offset-path: path("M375 250C375 180.964 319.036 125 250 125C180.964 125 125 180.964 125 250C125 319.036 180.964 375 250 375C319.036 375 375 319.036 375 250Z");
-			animation-duration: 4s;
+	&__group3 { // <g>
+		animation-duration: 6s;
+	}
+
+	&__arc1, &__arc2, &__arc3, &__arc4, &__arc5, &__arc6 { // <path>
+		fill: white;
+	}
+
+	&__text { // <text>
+		font: {
+			family: $dm-sans;
+			size: 1.125rem;
 		}
-
-		&3 {
-			offset-path: path("M445 250C445 142.304 357.696 55 250 55C142.304 55 55 142.304 55 250C55 357.696 142.304 445 250 445C357.696 445 445 357.696 445 250Z");
-			animation-duration: 6s;
-		}
-
-		&4 {
-			offset-path: path("M496 250C496 114.138 385.862 4 250 4C114.138 4 4 114.138 4 250C4 385.862 114.138 496 250 496C385.862 496 496 385.862 496 250Z");
-			animation-duration: 8s;
-		}
-
-		&1Orbit, &2Orbit, &3Orbit, &4Orbit {
-			stroke: white;
+		fill: white;
+		animation: {
+			name: blinking;
+			duration: 1s;
+			iteration-count: infinite;
+			direction: alternate;
 		}
 	}
 }
