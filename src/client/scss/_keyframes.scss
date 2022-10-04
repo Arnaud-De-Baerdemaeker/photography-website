@@ -106,28 +106,6 @@
 	}
 }
 
-// Scroll down icon animation
-@keyframes iconFigureBlinking {
-	0% {
-		opacity: 1;
-	}
-
-	100% {
-		opacity: 0;
-	}
-}
-
-// Loading screen animation
-@keyframes planetsRevolution {
-	0% {
-		offset-distance: 0%;
-	}
-
-	100% {
-		offset-distance: -100%;
-	}
-}
-
 // Menu icon animation
 @keyframes topFigureToCross {
 	0% {
@@ -221,6 +199,18 @@
 	}
 }
 
+// Scroll down arrow and loading screen animation
+@keyframes blinking {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+// SVG around photo rotation
 @keyframes rotation {
 	0% {
 		transform: rotate(0deg);
