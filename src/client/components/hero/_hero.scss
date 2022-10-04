@@ -68,7 +68,7 @@
 		}
 	}
 
-	&__back-filter { // <div>
+	&__backFilter { // <div>
 		width: inherit;
 		height: inherit;
 		background-color: $half-transparent;
@@ -214,14 +214,14 @@
 			font-weight: 900;
 
 			&__job {
-				&-part1 { // <span>
+				&Part1 { // <span>
 					@extend .title;
 					-webkit-text-fill-color: transparent;
 					-webkit-text-stroke-color: white;
 					-webkit-text-stroke-width: 1px;
 				}
 
-				&-part2 { // <span>
+				&Part2 { // <span>
 					@extend .title;
 				}
 			}
@@ -300,12 +300,12 @@
 			}
 
 			&__hobby {
-				&-part1 { // <span>
-					@extend .title__job-part1;
+				&Part1 { // <span>
+					@extend .title__jobPart1;
 				}
 
-				&-part2 { // <span>
-					@extend .title__job-part2;
+				&Part2 { // <span>
+					@extend .title__jobPart2;
 				}
 			}
 

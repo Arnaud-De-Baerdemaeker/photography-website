@@ -9,7 +9,7 @@
 	align-items: center;
 	row-gap: 50px;
 
-	&__social-networks { // <div>
+	&__socialNetworks { // <div>
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -54,7 +54,7 @@
 		height: 22px;
 	}
 
-	&__credits-container { // <div>
+	&__creditsContainer { // <div>
 		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;
