@@ -15,7 +15,7 @@ class Footer extends Component {
 
 		return (
 			<footer className={"footer"}>
-				<div className={"footer__social-networks"}>
+				<div className={"footer__socialNetworks"}>
 					<ul className={"footer__links"}>
 						<li className={"footer__network"}>
 							<a
@@ -75,7 +75,7 @@ class Footer extends Component {
 						</li>
 					</ul>
 				</div>
-				<div className={"footer__credits-container"}>
+				<div className={"footer__creditsContainer"}>
 					<Name class={"footer__name"} />
 					<p className={"footer__credits"}>
 						{`2021 - ${year.getUTCFullYear()} • Tous droits réservés`}

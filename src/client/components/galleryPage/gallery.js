@@ -7,7 +7,7 @@ import React, {Component} from "react";
 import photos from "../../json/metadata.json";
 
 import Hero from "../hero/hero";
-import PhotosCards from "../photos-cards/photos-cards";
+import PhotosCards from "../photosCards/photosCards";
 
 class Gallery extends Component {
 	componentDidMount() {
@@ -38,7 +38,7 @@ class Gallery extends Component {
 			photosCards.push(
 				<li
 					key={photo.id}
-					className={"gallery__list-item"}
+					className={"gallery__listItem"}
 				>
 					<PhotosCards
 						sd={photo.sd}

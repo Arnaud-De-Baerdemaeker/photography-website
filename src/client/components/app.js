@@ -5,11 +5,11 @@
 import React, {Component, lazy, Suspense} from "react";
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 
-import Loading from "./loading-screen/loading-screen.js";
+import Loading from "./loadingScreen/loadingScreen.js";
 import Header from "./header/header";
 import Navigation from "./navigation/navigation";
 const HomePage = lazy(() => import("./homepage/homepage"));
-const Gallery = lazy(() => import("./gallery-page/gallery"));
+const Gallery = lazy(() => import("./galleryPage/gallery"));
 const Error404 = lazy(() => import("./error404/error404"));
 import Footer from "./footer/footer";
 
@@ -47,7 +47,7 @@ class App extends Component {
 		// Recover all the elements that need to be scroll revealed depending of the active route
 		switch(window.location.pathname) {
 			case "/galerie":
-				this.elements = document.querySelectorAll(".gallery__list-item, .footer__links, .footer__name, .footer__credits");
+				this.elements = document.querySelectorAll(".gallery__listItem, .footer__links, .footer__name, .footer__credits");
 				break;
 			default:
 				this.elements = document.querySelectorAll(".image__portrait, .homepage__introduction, .homepage__title, .homepage__paragraph, .footer__links, .footer__name, .footer__credits");

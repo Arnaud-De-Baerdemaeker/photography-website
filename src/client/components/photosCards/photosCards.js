@@ -27,11 +27,11 @@ class PhotosCards extends Component {
 			<>
 				<div
 					onClick={this.toggleModal}
-					className={"photos-cards"}>
+					className={"photosCards"}>
 					<Image
 						url={this.props.sd}
 						location={this.props.location}
-						class={"photos-cards__image"}
+						class={"photosCards__image"}
 					/>
 				</div>
 				<Modal

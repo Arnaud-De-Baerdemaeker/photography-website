@@ -57,11 +57,11 @@ class Hero extends Component {
 		switch(this.props.location.pathname) {
 			case "/":
 				return <>
-					<span className={"title__job-part1"}>{this.props.jobPart1}</span>
-					<span className={"title__job-part2"}>{this.props.jobPart2}</span>
+					<span className={"title__jobPart1"}>{this.props.jobPart1}</span>
+					<span className={"title__jobPart2"}>{this.props.jobPart2}</span>
 					<span className={"title__ampersand"}>{this.props.ampersand}</span>
-					<span className={"title__hobby-part1"}>{this.props.hobbyPart1}</span>
-					<span className={"title__hobby-part2"}>{this.props.hobbyPart2}</span>
+					<span className={"title__hobbyPart1"}>{this.props.hobbyPart1}</span>
+					<span className={"title__hobbyPart2"}>{this.props.hobbyPart2}</span>
 				</>;
 			case "/galerie":
 			default:
@@ -97,7 +97,7 @@ class Hero extends Component {
 		return (
 			<div className={"hero"}>
 				<div className={"hero__container " + this.filterHeroBackground()}>
-					<div className={"hero__back-filter"}></div>
+					<div className={"hero__backFilter"}></div>
 				</div>
 				<h2 className={this.props.titleClass}>
 					{this.filterHeroContent()}

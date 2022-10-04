@@ -21,7 +21,7 @@ class Navigation extends Component {
 				onScroll={this.props.closeMenu}
 				className={this.props.isMenuOpen ? "menu" : "menu--closed"}>
 				<ul className={"menu__list"}>
-					<li className={"menu__list-item"}>
+					<li className={"menu__listItem"}>
 						<NavLink
 							exact
 							to={"/"}
@@ -33,7 +33,7 @@ class Navigation extends Component {
 							{"Accueil"}
 						</NavLink>
 					</li>
-					<li className={"menu__list-item"}>
+					<li className={"menu__listItem"}>
 						<NavLink
 							exact
 							to={"/galerie"}
