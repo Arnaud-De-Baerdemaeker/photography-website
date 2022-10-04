@@ -86,17 +86,17 @@ class App extends Component {
 	render() {
 		return (
 			<BrowserRouter>
-				<Header
-					isMenuOpen={this.state.isMenuOpen}
-					toggleMenu={this.toggleMenu}
-					closeMenu={this.closeMenu}
-				/>
-				<Navigation
-					isMenuOpen={this.state.isMenuOpen}
-					toggleMenu={this.toggleMenu}
-					closeMenu={this.closeMenu}
-				/>
 				<Suspense fallback={<Loading />}>
+					<Header
+						isMenuOpen={this.state.isMenuOpen}
+						toggleMenu={this.toggleMenu}
+						closeMenu={this.closeMenu}
+					/>
+					<Navigation
+						isMenuOpen={this.state.isMenuOpen}
+						toggleMenu={this.toggleMenu}
+						closeMenu={this.closeMenu}
+					/>
 					<Switch>
 						<Route
 							exact
@@ -128,8 +128,8 @@ class App extends Component {
 							<Error404 />
 						</Route>
 					</Switch>
-				</Suspense>
 				<Footer />
+				</Suspense>
 			</BrowserRouter>
 		);
 	}
