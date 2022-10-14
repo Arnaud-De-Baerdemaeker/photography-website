@@ -45,7 +45,7 @@ class HomePage extends Component {
 						<MyPhotoBackground
 							href={myPhoto}
 						/>
-						<p className={"homepage__introduction"}>{"Bonjour, je m'appelle Arnaud !"}<br />{"Développeur front-end résidant en Belgique, dans la ville de Liège, et amateur de photographie."}</p>
+						<p className={"homepage__introduction"}>{"Bonjour, je m'appelle Arnaud !"}<br />{"Développeur front-end résidant à Liège, en Belgique, et amateur de photographie."}</p>
 					</div>
 					<div className={"homepage__description"}>
 						<div className={"homepage__section"}>
