@@ -50,7 +50,7 @@ class App extends Component {
 				this.elements = document.querySelectorAll(".gallery__listItem, .footer__links, .footer__name, .footer__credits");
 				break;
 			default:
-				this.elements = document.querySelectorAll("#myPhoto, .homepage__introduction, .homepage__title, .homepage__paragraph, .footer__links, .footer__name, .footer__credits");
+				this.elements = document.querySelectorAll(".myPhoto, .homepage__introduction, .homepage__title, .homepage__paragraph, .footer__links, .footer__name, .footer__credits");
 		}
 	}
 
