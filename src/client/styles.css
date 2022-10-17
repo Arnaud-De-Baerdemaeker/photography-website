@@ -422,7 +422,20 @@ body {
           animation-direction: alternate;
 }
 
-.header {
+.header, .header__innerContainer, .header__innerContainer--scroll {
+  position: fixed;
+  top: 0;
+  z-index: 4;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(16, 26, 18, 0);
+  -webkit-clip-path: none;
+          clip-path: none;
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.5));
+}
+.header__innerContainer, .header__innerContainer--scroll {
   -webkit-animation-name: reveal;
           animation-name: reveal;
   -webkit-animation-duration: 2s;
@@ -431,13 +444,13 @@ body {
           animation-delay: 0.5s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
-  position: fixed;
-  top: 0;
-  z-index: 4;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-clip-path: ellipse(100% 100% at 50% 0%);
+          clip-path: ellipse(100% 100% at 50% 0%);
+  transition-property: background-color;
+  transition-duration: 1s;
+}
+.header__innerContainer--scroll {
+  background-color: rgb(16, 26, 18);
 }
 
 .header__name {
