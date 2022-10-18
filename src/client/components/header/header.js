@@ -11,7 +11,6 @@ import Icon from "../icon/icon";
 class Header extends Component {
 	componentDidMount() {
 		let headerElement = document.querySelector("#innerHeader");
-		// let innerHeader = document.querySelector("#innerHeader");
 
 		window.addEventListener("scroll", () => {
 			if(window.scrollY > 0) {
