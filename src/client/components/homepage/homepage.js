@@ -4,7 +4,6 @@
 
 import React, {Component} from "react";
 
-import MyPhotoBackground from "../myPhotoBackground/myPhotoBackground";
 import myPhoto from "../../images/moi.png";
 
 import Hero from "../hero/hero";
@@ -80,9 +79,56 @@ class HomePage extends Component {
 				/>
 				<main className={"homepage"}>
 					<div className={"homepage__myPhoto"}>
-						<MyPhotoBackground
-							href={myPhoto}
-						/>
+						<SVG
+							viewBox={"0 0 300 300"}
+							class={"myPhoto"}
+						>
+							<path
+								d={"M258 104C224.4 90.8 201.333 56.1667 194 40.5C167.5 -11.5 90 22.5 79.5 33C69 43.5 43 79.5 57.5 138C72 196.5 13 223.5 32 252C51 280.5 98.5 233 172.5 274.5C246.5 316 240.5 238 255.5 223.5C270.5 209 300 120.5 258 104Z"}
+								className={"myPhoto__background3"}
+							/>
+							<path
+								d={"M229.5 27.5C185.5 55.9 186 74.5 126.5 64C69 20.5 -17.5 126 45.5 136.5C69.2248 140.454 41.5 271.5 92 280.5C142.5 289.5 271.5 271.5 271 241.5C270.5 211.5 246.5 215 243.5 179.5C240.5 144 266 107 277 83C288 59 284.5 -7.99999 229.5 27.5Z"}
+								className={"myPhoto__background2"}
+							/>
+							<g>
+								<path
+									d={"M286.5 127C285.3 122.2 282.722 119.153 278 118.5C273.535 117.882 263 120.5 262 125C261 129.5 270.167 128.667 273 130.5C276.833 133 282.1 139.1 284.5 137.5C287.5 135.5 288 133 286.5 127Z"}
+									className={"myPhoto__background1"}
+								/>
+								<path
+									d={"M54.9725 28.2945C50.9725 24.6945 35.5063 23.3772 31.9725 27.7945C25.9725 35.2945 34.8725 45.1945 42.4725 48.7945C50.0725 52.3945 57.561 47.8232 58.9725 44.2945C60.9725 39.2944 58.9725 31.8945 54.9725 28.2945Z"}
+									className={"myPhoto__background1"}
+								/>
+							</g>
+							<rect
+								x={"75"}
+								y={"75"}
+								width={"150"}
+								height={"150"}
+								fill={"url(#pattern0)"}
+							/>
+
+							<defs>
+								<pattern
+									id={"pattern0"}
+									patternContentUnits={"objectBoundingBox"}
+									width={"1"}
+									height={"1"}
+								>
+									<use
+										xlinkHref={"#image0_64_2"}
+										transform={"scale(0.000952381)"}
+									/>
+								</pattern>
+								<image
+									href={myPhoto}
+									id={"image0_64_2"}
+									width={"1050"}
+									height={"1050"}
+								/>
+							</defs>
+						</SVG>
 						<p className={"homepage__introduction"}>{"Bonjour, je m'appelle Arnaud !"}<br />{"Développeur front-end résidant à Liège, en Belgique, et amateur de photographie."}</p>
 					</div>
 					<div className={"homepage__description"}>
