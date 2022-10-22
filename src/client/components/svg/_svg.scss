@@ -108,3 +108,48 @@
 		}
 	}
 }
+
+.myPhoto { // <svg>
+	width: 100%;
+	height: 100%;
+
+	&__background1 { // <path>
+		fill: $color-1;
+	}
+
+	&__background2 { // <path>
+		fill: $color-2;
+		fill-opacity: 0.5;
+	}
+
+	&__background3 { // <path>
+		fill: $color-3;
+	}
+
+	&__portrait { // <image>
+		vertical-align: middle;
+		aspect-ratio: 1 / 1;
+		max-width: 50%;
+		transform: translate(calc(50% - 50% / 2), calc(50% - 50% / 2));
+
+		@media #{$portrait} {
+			width: 50%;
+			// width: 75%;
+			// max-width: px;
+		}
+
+		@media #{$landscape} {
+			width: 35%;
+		}
+	}
+}
+
+text {
+	font: {
+		family: $dm-sans;
+		size: 1.375rem;
+	}
+	fill: white;
+	// x: 100%;
+	// y: 100%;
+}
