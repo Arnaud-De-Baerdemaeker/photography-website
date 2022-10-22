@@ -6,7 +6,7 @@ import React, {Component} from "react";
 
 import Name from "../name/name";
 import Button from "../button/button";
-import Icon from "../icon/icon";
+import SVG from "../svg/svg";
 
 class Header extends Component {
 	componentDidMount() {
@@ -22,6 +22,10 @@ class Header extends Component {
 		});
 	}
 
+	componentWillUnmount() {
+		window.removeEventListener("scroll", () => {});
+	}
+
 	render() {
 		return (
 			<header
@@ -33,39 +37,51 @@ class Header extends Component {
 					className={"header__innerContainer"}
 				>
 					<Name
+						resizeFactorPortrait={0.11}
 						closeMenu={this.props.closeMenu}
-						class={"header__name"}
+						class={"name--header"}
 					/>
 					<Button
-						function={this.props.toggleMenu}
-						isMenuOpen={this.props.isMenuOpen}
 						alt={
 							this.props.isMenuOpen
 							? "Fermer le menu"
 							: "Ouvrir le menu"
 						}
+						function={this.props.toggleMenu}
 						class={"button__menu"}
 					>
-						<Icon
-							topFigureD={"M35 8H1C0.447715 8 0 8.44772 0 9C0 9.55228 0.447716 10 1 10H35C35.5523 10 36 9.55228 36 9C36 8.44772 35.5523 8 35 8Z"}
-							topFigureClass={
-								this.props.isMenuOpen
-								? "topFigure__hamburger--close"
-								: "topFigure__hamburger"
-							}
-							middleFigureD={"M35 17H1C0.447715 17 0 17.4477 0 18C0 18.5523 0.447716 19 1 19H35C35.5523 19 36 18.5523 36 18C36 17.4477 35.5523 17 35 17Z"}
-							middleFigureClass={
-								this.props.isMenuOpen
-								? "middleFigure__hamburger--close"
-								: "middleFigure__hamburger"
-							}
-							bottomFigureD={"M35 26H1C0.447715 26 0 26.4477 0 27C0 27.5523 0.447716 28 1 28H35C35.5523 28 36 27.5523 36 27C36 26.4477 35.5523 26 35 26Z"}
-							bottomFigureClass={
-								this.props.isMenuOpen
-								? "bottomFigure__hamburger--close"
-								: "bottomFigure__hamburger"
-							}
-						/>
+						<SVG
+							width={"36"}
+							height={"36"}
+							class={""}
+						>
+							<g>
+								<path
+									d={"M35 8H1C0.447715 8 0 8.44772 0 9C0 9.55228 0.447716 10 1 10H35C35.5523 10 36 9.55228 36 9C36 8.44772 35.5523 8 35 8Z"}
+									className={
+										this.props.isMenuOpen
+										? "topFigure__hamburger--close"
+										: "topFigure__hamburger"
+									}
+								/>
+								<path
+									d={"M35 17H1C0.447715 17 0 17.4477 0 18C0 18.5523 0.447716 19 1 19H35C35.5523 19 36 18.5523 36 18C36 17.4477 35.5523 17 35 17Z"}
+									className={
+										this.props.isMenuOpen
+										? "middleFigure__hamburger--close"
+										: "middleFigure__hamburger"
+									}
+								/>
+								<path
+									d={"M35 26H1C0.447715 26 0 26.4477 0 27C0 27.5523 0.447716 28 1 28H35C35.5523 28 36 27.5523 36 27C36 26.4477 35.5523 26 35 26Z"}
+									className={
+										this.props.isMenuOpen
+										? "bottomFigure__hamburger--close"
+										: "bottomFigure__hamburger"
+									}
+								/>
+							</g>
+						</SVG>
 					</Button>
 				</div>
 			</header>
