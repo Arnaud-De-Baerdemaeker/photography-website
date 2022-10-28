@@ -4,15 +4,15 @@
 
 import React, {Component} from "react";
 
-import photos from "../../json/metadata.json";
-
 import Hero from "../hero/hero";
 import SVG from "../svg/svg";
 import PhotosCards from "../photosCards/photosCards";
 
+import photos from "../../json/metadata.json";
+
 class Gallery extends Component {
 	componentDidMount() {
-		document.title = "Arnaud De Baerdemaeker | Galerie";
+		document.title = "Galerie | Arnaud De Baerdemaeker";
 
 		// The condition checks if the scroll value is different from 0
 		if (window.scrollY !== 0) {
@@ -54,10 +54,7 @@ class Gallery extends Component {
 			<>
 				<Hero
 					heroContainerClass={"hero__container hero__background--1"}
-					resizeFactorPortrait={0.15}
-					applyLineHeightPortrait={true}
 					heroTitleClass={"hero__title--gallery"}
-					resizeFontSize={this.props.resizeFontSize}
 					heroTitleContent={
 						<>
 							<span className={"title__page"}>{"Galerie"}</span>
@@ -66,8 +63,7 @@ class Gallery extends Component {
 					}
 					svgContent={
 						<SVG
-							width={"36"}
-							height={"36"}
+							viewBox={"0 0 36 36"}
 							class={"iconBox"}
 							xmlns={"http://www.w3.org/2000/svg"}
 						>
