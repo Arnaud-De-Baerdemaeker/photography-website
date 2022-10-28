@@ -2,15 +2,14 @@
 // Started on July 2020
 // By Arnaud De Baerdemaeker
 
-import React, {Component, lazy, Suspense} from "react";
+import React, {Component} from "react";
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 
-import Loading from "./loadingScreen/loadingScreen.js";
 import Header from "./header/header";
 import Navigation from "./navigation/navigation";
-const HomePage = lazy(() => import("./homepage/homepage"));
-const Gallery = lazy(() => import("./galleryPage/gallery"));
-const Error404 = lazy(() => import("./error404/error404"));
+import HomePage from "./homepage/homepage";
+import Gallery from "./galleryPage/gallery";
+import Error404 from "./error404/error404";
 import Footer from "./footer/footer";
 
 class App extends Component {
@@ -47,10 +46,10 @@ class App extends Component {
 		// Recover all the elements that need to be scroll revealed depending of the active route
 		switch(window.location.pathname) {
 			case "/galerie":
-				this.elements = document.querySelectorAll(".gallery__listItem, .footer__links, .footer__name, .footer__credits");
+				this.elements = document.querySelectorAll(".gallery__listItem, .footer__links, .name--footer, .footer__credits");
 				break;
 			default:
-				this.elements = document.querySelectorAll(".myPhoto, .homepage__introduction, .homepage__title, .homepage__paragraph, .footer__links, .footer__name, .footer__credits");
+				this.elements = document.querySelectorAll(".myPhoto, .homepage__introduction, .homepage__title, .homepage__paragraph, .footer__links, .name--footer, .footer__credits");
 		}
 	}
 
@@ -86,50 +85,46 @@ class App extends Component {
 	render() {
 		return (
 			<BrowserRouter>
-				<Suspense fallback={<Loading />}>
-					<Header
-						isMenuOpen={this.state.isMenuOpen}
-						toggleMenu={this.toggleMenu}
-						closeMenu={this.closeMenu}
-					/>
-					<Navigation
-						isMenuOpen={this.state.isMenuOpen}
-						toggleMenu={this.toggleMenu}
-						closeMenu={this.closeMenu}
-					/>
-					<Switch>
-						<Route
-							exact
-							path={"/galerie"}
-						>
-							<Gallery
-								isMenuOpen={this.state.isMenuOpen}
-								toggleMenu={this.toggleMenu}
-								closeMenu={this.closeMenu}
-								applyHideClass={this.applyHideClass}
-								transferOnScroll={this.transferOnScroll}
-								backToTop={this.backToTop}
-							/>
-						</Route>
-						<Route
-							exact
-							path={"/"}
-						>
-							<HomePage
-								isMenuOpen={this.state.isMenuOpen}
-								toggleMenu={this.toggleMenu}
-								closeMenu={this.closeMenu}
-								applyHideClass={this.applyHideClass}
-								transferOnScroll={this.transferOnScroll}
-								backToTop={this.backToTop}
-							/>
-						</Route>
-						<Route path="*">
-							<Error404 />
-						</Route>
-					</Switch>
+				<Header
+					isMenuOpen={this.state.isMenuOpen}
+					toggleMenu={this.toggleMenu}
+					closeMenu={this.closeMenu}
+				/>
+				<Navigation
+					isMenuOpen={this.state.isMenuOpen}
+					toggleMenu={this.toggleMenu}
+					closeMenu={this.closeMenu}
+				/>
+				<Switch>
+					<Route
+						exact
+						path={"/galerie"}
+					>
+						<Gallery
+							isMenuOpen={this.state.isMenuOpen}
+							toggleMenu={this.toggleMenu}
+							closeMenu={this.closeMenu}
+							applyHideClass={this.applyHideClass}
+							transferOnScroll={this.transferOnScroll}
+						/>
+					</Route>
+					<Route
+						exact
+						path={"/"}
+					>
+						<HomePage
+							isMenuOpen={this.state.isMenuOpen}
+							toggleMenu={this.toggleMenu}
+							closeMenu={this.closeMenu}
+							applyHideClass={this.applyHideClass}
+							transferOnScroll={this.transferOnScroll}
+						/>
+					</Route>
+					<Route path="*">
+						<Error404 />
+					</Route>
+				</Switch>
 				<Footer />
-				</Suspense>
 			</BrowserRouter>
 		);
 	}
