@@ -19,7 +19,8 @@ class Navigation extends Component {
 		return (
 			<nav
 				onScroll={this.props.closeMenu}
-				className={this.props.isMenuOpen ? "menu" : "menu--closed"}>
+				className={this.props.isMenuOpen ? "menu" : "menu--closed"}
+			>
 				<ul className={"menu__list"}>
 					<li className={"menu__listItem"}>
 						<NavLink
@@ -29,7 +30,8 @@ class Navigation extends Component {
 							data-link={"Accueil"}
 							id={"home"}
 							activeClassName={"menu__link--active"}
-							className={"menu__link"}>
+							className={"menu__link"}
+						>
 							{"Accueil"}
 						</NavLink>
 					</li>
@@ -41,7 +43,8 @@ class Navigation extends Component {
 							data-link={"Galerie"}
 							id={"gallery"}
 							activeClassName={"menu__link--active"}
-							className={"menu__link"}>
+							className={"menu__link"}
+						>
 							{"Galerie"}
 						</NavLink>
 					</li>

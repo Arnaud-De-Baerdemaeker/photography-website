@@ -37,9 +37,8 @@ class Header extends Component {
 					className={"header__innerContainer"}
 				>
 					<Name
-						resizeFactorPortrait={0.11}
-						closeMenu={this.props.closeMenu}
 						class={"name--header"}
+						closeMenu={this.props.closeMenu}
 					/>
 					<Button
 						alt={
@@ -51,9 +50,8 @@ class Header extends Component {
 						class={"button__menu"}
 					>
 						<SVG
-							width={"36"}
-							height={"36"}
-							class={""}
+							viewBox={"0 0 36 36"}
+							class={"svg__menu"}
 						>
 							<g>
 								<path

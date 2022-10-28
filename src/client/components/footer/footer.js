@@ -22,7 +22,8 @@ class Footer extends Component {
 								href={"mailto:de.baerdemaeker.arnaud@gmail.com"}
 								target={"_blank"}
 								rel={"noreferrer noopener"}
-								className={"footer__link"}>
+								className={"footer__link"}
+							>
 								<FontAwesomeIcon
 									icon={faEnvelope}
 									alt={"Email"}
@@ -36,7 +37,8 @@ class Footer extends Component {
 								href={"https://www.instagram.com/los.2102/"}
 								target={"_blank"}
 								rel={"noreferrer noopener"}
-								className={"footer__link"}>
+								className={"footer__link"}
+							>
 								<FontAwesomeIcon
 									icon={faInstagram}
 									alt={"Instagram"}
@@ -50,7 +52,8 @@ class Footer extends Component {
 								href={"https://www.linkedin.com/in/arnaud-de-baerdemaeker/"}
 								target={"_blank"}
 								rel={"noreferrer noopener"}
-								className={"footer__link"}>
+								className={"footer__link"}
+							>
 								<FontAwesomeIcon
 									icon={faLinkedin}
 									alt={"LinkedIn"}
@@ -64,7 +67,8 @@ class Footer extends Component {
 								href={"https://github.com/Arnaud-De-Baerdemaeker"}
 								target={"_blank"}
 								rel={"noreferrer noopener"}
-								className={"footer__link"}>
+								className={"footer__link"}
+							>
 								<FontAwesomeIcon
 									icon={faGithub}
 									alt={"GitHub"}
@@ -76,11 +80,13 @@ class Footer extends Component {
 					</ul>
 				</div>
 				<div className={"footer__creditsContainer"}>
-					<Name class={"footer__name"} />
+					<Name class={"name--footer"} />
 					<p className={"footer__credits"}>
 						{`2021 - ${year.getUTCFullYear()} • Tous droits réservés`}
 					</p>
-					<p className={"footer__credits"}>{"Version 2.0.0"}</p>
+					<p className={"footer__credits"}>
+						{"Version 2.0.0"}
+					</p>
 				</div>
 			</footer>
 		);

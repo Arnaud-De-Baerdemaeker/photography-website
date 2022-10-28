@@ -8,7 +8,7 @@ import Hero from "../hero/hero";
 
 class Error404 extends Component {
 	componentDidMount() {
-		document.title = "Arnaud De Baerdemaeker | Page non trouvée";
+		document.title = "Page non trouvée | Arnaud De Baerdemaeker";
 	}
 
 	render() {
