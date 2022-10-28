@@ -13,55 +13,32 @@
 	}
 	padding: {
 		top: 6.25rem;
-		right: 10%;
+		right: 20px;
 		bottom: 6.25rem;
-		left: 10%;
+		left: 20px;
 	}
-	max-width: 1000px;
 
-	&__my-photo { // <div>
+	&__myPhoto { // <div>
 		display: flex;
+		flex-direction: column;
 		align-items: center;
+		row-gap: 2.5rem;
 
-		@media #{$portrait} {
-			flex-direction: column;
-			row-gap: 2.5rem;
-
-			@media #{$mq-w700-up} {
-				flex-direction: row;
-				column-gap: 2.5rem;
-			}
+		@media screen and #{$portrait} {
+			max-width: 700px;
 		}
 
-		@media #{$landscape} {
-			justify-content: center;
-			column-gap: 2.5rem;
+		@media screen and #{$landscape} {
+			max-width: 1000px;
 		}
 	}
 
 	&__introduction { // <p>
-		font-weight: 700;
+		font-family: $economica;
 		margin: 0;
 
-		@media #{$portrait} {
-			font-size: 1.375rem;
-
-			@media #{$mq-w900-up} {
-				font-size: 1.6875rem;
-			}
-		}
-
-		@media #{$landscape} {
-			font-size: 1.25rem;
-			max-width: 60%;
-
-			@media #{$mq-h600-up} {
-				font-size: 1.5625rem;
-			}
-
-			@media #{$mq-h800-up} {
-				font-size: 1.875rem;
-			}
+		@media screen and #{$portrait} {
+			@include fluidContent(font-size, 30px, 40, 30);
 		}
 	}
 
@@ -69,6 +46,14 @@
 		display: flex;
 		flex-direction: column;
 		row-gap: 3.125rem;
+
+		@media screen and #{$portrait} {
+			max-width: 700px;
+		}
+
+		@media screen and #{$landscape} {
+			max-width: 1000px;
+		}
 	}
 
 	&__section { // <div>
@@ -78,6 +63,7 @@
 	}
 
 	&__title { // <h3>
+		font-family: $economica;
 		border-left: {
 			style: solid;
 			width: 0.3125rem;
@@ -90,28 +76,8 @@
 		}
 		margin: 0;
 
-		@media #{$portrait} {
-			font-size: 1.375rem;
-
-			@media #{$mq-w400-up} {
-				font-size: 1.5rem;
-			}
-
-			@media #{$mq-w900-up} {
-				font-size: 1.75rem;
-			}
-		}
-
-		@media #{$landscape} {
-			font-size: 1.625rem;
-
-			@media #{$mq-h500-up} {
-				font-size: 1.9375rem;
-			}
-
-			@media #{$mq-h700-up} {
-				font-size: 2.25rem;
-			}
+		@media screen and #{$portrait} {
+			@include fluidContent(font-size, 28px, 38, 28);
 		}
 
 		&:after {
@@ -122,12 +88,9 @@
 
 	&__paragraph { // <p>
 		margin: 0;
-		font-size: 1rem;
-		line-height: 1.75rem;
 
-		@media #{$portrait} and #{$mq-w900-up}, #{$landscape} and #{$mq-h500-up} {
-			font-size: 1.125rem;
-			line-height: 1.875rem;
+		@media screen and #{$portrait} {
+			@include fluidContent(font-size, 18px, 20, 18);
 		}
 	}
 }
