@@ -11,6 +11,13 @@ import PhotosCards from "../photosCards/photosCards";
 import photos from "../../json/metadata.json";
 
 class Gallery extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			photos: []
+		}
+	}
+
 	componentDidMount() {
 		document.title = "Galerie | Arnaud De Baerdemaeker";
 
@@ -24,6 +31,9 @@ class Gallery extends Component {
 		this.props.applyHideClass();
 
 		window.addEventListener("scroll", this.props.transferOnScroll);
+
+		// Put the data from the json file in a state
+		this.setState({photos: photos});
 	}
 
 	componentWillUnmount() {
@@ -31,25 +41,6 @@ class Gallery extends Component {
 	}
 
 	render() {
-		const photosCards = [];
-
-		// The loop goes for each entry in the metadata.json file
-		photos.forEach(photo => {
-			// For each loop, an iteration of the <PhotoCards> component is created with different props. Then, the iteration is pushed in the array.
-			photosCards.push(
-				<li
-					key={photo.id}
-					className={"gallery__listItem"}
-				>
-					<PhotosCards
-						sd={photo.sd}
-						hd={photo.hd}
-						location={photo.location}
-					/>
-				</li>
-			);
-		});
-
 		return (
 			<>
 				<Hero
@@ -86,7 +77,18 @@ class Gallery extends Component {
 				/>
 				<main className={"gallery"}>
 					<ul className={"gallery__list"}>
-						{photosCards}
+						{this.state.photos.map(photo => 
+							<li
+								key={photo.id}
+								className={"gallery__listItem"}
+							>
+								<PhotosCards
+									sd={photo.sd}
+									hd={photo.hd}
+									location={photo.location}
+								/>
+							</li>
+						)}
 					</ul>
 				</main>
 			</>
