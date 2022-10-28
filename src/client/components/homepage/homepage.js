@@ -4,14 +4,14 @@
 
 import React, {Component} from "react";
 
-import myPhoto from "../../images/moi.png";
-
 import Hero from "../hero/hero";
 import SVG from "../svg/svg";
 
+import myPhoto from "../../images/moi.png";
+
 class HomePage extends Component {
 	componentDidMount() {
-		document.title = "Arnaud De Baerdemaeker | Accueil";
+		document.title = "Accueil | Arnaud De Baerdemaeker";
 
 		// The condition checks if the scroll value is different from 0
 		if (window.scrollY !== 0) {
@@ -35,30 +35,21 @@ class HomePage extends Component {
 			<>
 				<Hero
 					heroContainerClass={"hero__container hero__background--1"}
-					resizeFactorPortrait={0.15}
-					applyLineHeightPortrait={true}
 					heroTitleClass={"hero__title--homepage"}
-					resizeFontSize={this.props.resizeFontSize}
 					heroTitleContent={
 						<>
 							<span className={"title__jobPart1"}>{"Développeur "}</span>
 							<span className={"title__jobPart2"}>{"web"}</span>
-							<span
-								data-resize-factor-portrait={1}
-								className={"title__ampersand"}
-							>
-								{"&"}
-							</span>
+							<span className={"title__ampersand"}>{"&"}</span>
 							<span className={"title__hobbyPart1"}>{"Amateur de "}</span>
 							<span className={"title__hobbyPart2"}>{"photographie"}</span>
 						</>
 					}
 					svgContent={
 						<SVG
-							width={"36"}
-							height={"36"}
-							class={"iconBox"}
+							viewBox={"0 0 36 36"}
 							xmlns={"http://www.w3.org/2000/svg"}
+							class={"svg__scrollDown"}
 						>
 							<g>
 								<path
@@ -129,7 +120,11 @@ class HomePage extends Component {
 								/>
 							</defs>
 						</SVG>
-						<p className={"homepage__introduction"}>{"Bonjour, je m'appelle Arnaud !"}<br />{"Développeur front-end résidant à Liège, en Belgique, et amateur de photographie."}</p>
+						<p className={"homepage__introduction"}>
+							{"Bonjour, je m'appelle Arnaud !"}
+							<br />
+							{"Développeur front-end résidant à Liège, en Belgique, et amateur de photographie."}
+						</p>
 					</div>
 					<div className={"homepage__description"}>
 						<div className={"homepage__section"}>

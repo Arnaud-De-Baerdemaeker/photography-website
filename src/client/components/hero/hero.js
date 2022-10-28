@@ -1,3 +1,7 @@
+// Photography website
+// Started on July 2020
+// By Arnaud De Baerdemaeker
+
 import React, {Component} from "react";
 import {withRouter} from "react-router-dom";
 
@@ -35,21 +39,10 @@ class Hero extends Component {
 				document.querySelector(".hero__container").classList.replace(backgroundClasses[lastIndex], backgroundClasses[newIndex]);
 			}, 10000);
 		}
-
-		let elements;
-		elements = document.querySelectorAll(".hero__title--homepage, .title__ampersand");
-
-		this.props.resizeFontSize(elements);
-
-		window.addEventListener("resize", () => {
-			elements = document.querySelectorAll(".hero__title--homepage, .title__ampersand");
-			this.props.resizeFontSize(elements);
-		});
 	}
 
 	componentWillUnmount() {
 		clearInterval(this.slideshow);
-		window.removeEventListener("resize", () => {});
 	}
 
 	render() {
@@ -58,15 +51,13 @@ class Hero extends Component {
 				<div className={this.props.heroContainerClass}>
 					<div className={"hero__backFilter"}></div>
 				</div>
-				<h2
-					data-resize-factor-portrait={this.props.resizeFactorPortrait}
-					data-apply-line-height-portrait={this.props.applyLineHeightPortrait}
-					className={this.props.heroTitleClass}
-				>
+				<h2 className={this.props.heroTitleClass}>
 					{this.props.heroTitleContent}
 				</h2>
 				<div className={"hero__scrollDown"}>
-					{this.props.svgContent}
+					<div className="hero__scrollDownContainer">
+						{this.props.svgContent}
+					</div>
 				</div>
 			</div>
 		);
