@@ -34,7 +34,7 @@ class HomePage extends Component {
 		return (
 			<>
 				<Hero
-					heroContainerClass={"hero__container hero__background--1"}
+					heroContainerClass={" hero__background--1"}
 					heroTitleClass={"hero__title--homepage"}
 					heroTitleContent={
 						<>
