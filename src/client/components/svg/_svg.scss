@@ -2,17 +2,52 @@
 // Started on July 2020
 // By Arnaud De Baerdemaeker
 
-.iconBox { // <svg>
+.svg {
+	width: 100%;
+	height: 100%;
 	transform-box: fill-box;
+
+	&__menu { // <svg>
+		@extend .svg;
+	}
+
+	&__scrollDown { // <svg>
+		@extend .svg;
+	}
+
+	&__background { // <svg>
+		@extend .svg;
+
+		.background {
+			&1 { // <path>
+				fill: $color-1;
+			}
+		
+			&2 { // <path>
+				fill: $color-2;
+				fill-opacity: 0.5;
+			}
+		
+			&3 { // <path>
+				fill: $color-3;
+			}
+		}
+	}
+
+	&__close { // <svg>
+		@extend .svg
+	}
 }
 
-.topFigure {
-	@extend .iconBox;
-	transform-origin: center center;
+.icon {
+	width: 100%;
+	height: 100%;
 	fill: white;
+	transform-box: fill-box;
+	transform-origin: center center;
 
-	&__hamburger { // <path>
-		@extend .topFigure;
+	&__hamburgerTop {
+		@extend .icon;
 		animation: {
 			name: topFigureToHamburger;
 			duration: 0.5s;
@@ -20,7 +55,7 @@
 		}
 
 		&--close { // <rect>
-			@extend .topFigure;
+			@extend .icon__hamburgerTop;
 			animation: {
 				name: topFigureToCross;
 				duration: 0.5s;
@@ -29,23 +64,8 @@
 		}
 	}
 
-	&__chevron { // <path>
-		@extend .topFigure;
-		opacity: 0;
-		animation: {
-			name: blinking;
-			duration: 2s;
-			iteration-count: infinite;
-			direction: alternate;
-		}
-	}
-}
-
-.middleFigure {
-	@extend .iconBox;
-
-	&__hamburger { // <rect>
-		@extend .topFigure;
+	&__hamburgerMiddle {
+		@extend .icon;
 		animation: {
 			name: middleFigureToOpaque;
 			duration: 0.5s;
@@ -53,7 +73,7 @@
 		}
 
 		&--close { // <rect>
-			@extend .topFigure;
+			@extend .icon__hamburgerMiddle;
 			animation: {
 				name: middleFigureToTransparent;
 				duration: 0.5s;
@@ -62,8 +82,37 @@
 		}
 	}
 
-	&__chevron { // <path>
-		@extend .topFigure;
+	&__hamburgerBottom { // <rect>
+		@extend .icon;
+		animation: {
+			name: bottomFigureToHamburger;
+			duration: 0.5s;
+			fill-mode: forwards;
+		}
+
+		&--close { // <rect>
+			@extend .icon__hamburgerBottom;
+			animation: {
+				name: bottomFigureToCross;
+				duration: 0.5s;
+				fill-mode: forwards;
+			}
+		}
+	}
+
+	&__chevronTop { // <path>
+		@extend .icon;
+		opacity: 0;
+		animation: {
+			name: blinking;
+			duration: 2s;
+			iteration-count: infinite;
+			direction: alternate;
+		}
+	}
+
+	&__chevronMiddle { // <path>
+		@extend .icon;
 		opacity: 0;
 		animation: {
 			name: blinking;
@@ -73,31 +122,9 @@
 			delay: 0.375s;
 		}
 	}
-}
 
-.bottomFigure {
-	@extend .iconBox;
-
-	&__hamburger { // <rect>
-		@extend .topFigure;
-		animation: {
-			name: bottomFigureToHamburger;
-			duration: 0.5s;
-			fill-mode: forwards;
-		}
-
-		&--close { // <rect>
-			@extend .topFigure;
-			animation: {
-				name: bottomFigureToCross;
-				duration: 0.5s;
-				fill-mode: forwards;
-			}
-		}
-	}
-
-	&__chevron { // <path>
-		@extend .topFigure;
+	&__chevronBottom { // <path>
+		@extend .icon;
 		opacity: 0;
 		animation: {
 			name: blinking;
@@ -107,49 +134,8 @@
 			delay: 0.625s;
 		}
 	}
-}
 
-.myPhoto { // <svg>
-	width: 100%;
-	height: 100%;
-
-	&__background1 { // <path>
-		fill: $color-1;
+	&__close {
+		fill: white;
 	}
-
-	&__background2 { // <path>
-		fill: $color-2;
-		fill-opacity: 0.5;
-	}
-
-	&__background3 { // <path>
-		fill: $color-3;
-	}
-
-	&__portrait { // <image>
-		vertical-align: middle;
-		aspect-ratio: 1 / 1;
-		max-width: 50%;
-		transform: translate(calc(50% - 50% / 2), calc(50% - 50% / 2));
-
-		@media #{$portrait} {
-			width: 50%;
-			// width: 75%;
-			// max-width: px;
-		}
-
-		@media #{$landscape} {
-			width: 35%;
-		}
-	}
-}
-
-text {
-	font: {
-		family: $dm-sans;
-		size: 1.375rem;
-	}
-	fill: white;
-	// x: 100%;
-	// y: 100%;
 }
