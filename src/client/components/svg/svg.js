@@ -8,12 +8,10 @@ class SVG extends Component {
 	render() {
 		return(
 			<svg
-				width={this.props.width}
-				height={this.props.height}
 				viewBox={this.props.viewBox}
-				className={this.props.class}
 				xmlns={"http://www.w3.org/2000/svg"}
 				xmlnsXlink={"http://www.w3.org/1999/xlink"}
+				className={this.props.class}
 			>
 				{this.props.children}
 			</svg>
