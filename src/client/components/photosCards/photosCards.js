@@ -27,7 +27,8 @@ class PhotosCards extends Component {
 			<>
 				<div
 					onClick={this.toggleModal}
-					className={"photosCards"}>
+					className={"photosCards"}
+				>
 					<Image
 						url={this.props.sd}
 						location={this.props.location}

@@ -33,7 +33,9 @@ class Gallery extends Component {
 		window.addEventListener("scroll", this.props.transferOnScroll);
 
 		// Put the data from the json file in a state
-		this.setState({photos: photos});
+		this.setState({
+			photos: photos
+		});
 	}
 
 	componentWillUnmount() {
@@ -49,7 +51,11 @@ class Gallery extends Component {
 					heroTitleContent={
 						<>
 							<span className={"title__page"}>{"Galerie"}</span>
-							<span className={"title__intro"}>{"Découvrez une sélection de mes captures"}</span>
+							<span className={"title__intro"}>
+								{"Découvrez une sélection"}
+								<br/>
+								{"de mes captures"}
+							</span>
 						</>
 					}
 					svgContent={
@@ -77,7 +83,7 @@ class Gallery extends Component {
 				/>
 				<main className={"gallery"}>
 					<ul className={"gallery__list"}>
-						{this.state.photos.map(photo => 
+						{this.state.photos.map(photo =>
 							<li
 								key={photo.id}
 								className={"gallery__listItem"}
