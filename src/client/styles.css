@@ -451,19 +451,32 @@ body {
 }
 .button__modal {
   position: absolute;
-  bottom: 2.5rem;
+  bottom: 40px;
 }
 
-.svg, .svg__scrollDown, .bottomFigure, .middleFigure, .topFigure, .bottomFigure__chevron, .bottomFigure__hamburger--close, .bottomFigure__hamburger, .middleFigure__chevron, .middleFigure__hamburger--close, .middleFigure__hamburger, .topFigure__chevron, .topFigure__hamburger--close, .topFigure__hamburger, .svg__menu {
+.svg, .svg__close, .svg__background, .svg__scrollDown, .svg__menu {
   width: 100%;
   height: 100%;
   transform-box: fill-box;
 }
-.topFigure, .bottomFigure__chevron, .bottomFigure__hamburger--close, .bottomFigure__hamburger, .middleFigure__chevron, .middleFigure__hamburger--close, .middleFigure__hamburger, .topFigure__chevron, .topFigure__hamburger--close, .topFigure__hamburger {
-  transform-origin: center center;
-  fill: white;
+.svg__background .background1 {
+  fill: rgb(88, 129, 87);
 }
-.topFigure__hamburger {
+.svg__background .background2 {
+  fill: rgb(58, 90, 64);
+  fill-opacity: 0.5;
+}
+.svg__background .background3 {
+  fill: rgb(25, 39, 27);
+}
+.icon, .icon__chevronBottom, .icon__chevronMiddle, .icon__chevronTop, .icon__hamburgerBottom, .icon__hamburgerBottom--close, .icon__hamburgerMiddle, .icon__hamburgerMiddle--close, .icon__hamburgerTop, .icon__hamburgerTop--close {
+  width: 100%;
+  height: 100%;
+  fill: white;
+  transform-box: fill-box;
+  transform-origin: center center;
+}
+.icon__hamburgerTop, .icon__hamburgerTop--close {
   -webkit-animation-name: topFigureToHamburger;
           animation-name: topFigureToHamburger;
   -webkit-animation-duration: 0.5s;
@@ -471,7 +484,7 @@ body {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-.topFigure__hamburger--close {
+.icon__hamburgerTop--close {
   -webkit-animation-name: topFigureToCross;
           animation-name: topFigureToCross;
   -webkit-animation-duration: 0.5s;
@@ -479,7 +492,39 @@ body {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-.topFigure__chevron {
+.icon__hamburgerMiddle, .icon__hamburgerMiddle--close {
+  -webkit-animation-name: middleFigureToOpaque;
+          animation-name: middleFigureToOpaque;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.icon__hamburgerMiddle--close {
+  -webkit-animation-name: middleFigureToTransparent;
+          animation-name: middleFigureToTransparent;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.icon__hamburgerBottom, .icon__hamburgerBottom--close {
+  -webkit-animation-name: bottomFigureToHamburger;
+          animation-name: bottomFigureToHamburger;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.icon__hamburgerBottom--close {
+  -webkit-animation-name: bottomFigureToCross;
+          animation-name: bottomFigureToCross;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.icon__chevronTop {
   opacity: 0;
   -webkit-animation-name: blinking;
           animation-name: blinking;
@@ -490,24 +535,7 @@ body {
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
 }
-
-.middleFigure__hamburger {
-  -webkit-animation-name: middleFigureToOpaque;
-          animation-name: middleFigureToOpaque;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-.middleFigure__hamburger--close {
-  -webkit-animation-name: middleFigureToTransparent;
-          animation-name: middleFigureToTransparent;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-.middleFigure__chevron {
+.icon__chevronMiddle {
   opacity: 0;
   -webkit-animation-name: blinking;
           animation-name: blinking;
@@ -520,24 +548,7 @@ body {
   -webkit-animation-delay: 0.375s;
           animation-delay: 0.375s;
 }
-
-.bottomFigure__hamburger {
-  -webkit-animation-name: bottomFigureToHamburger;
-          animation-name: bottomFigureToHamburger;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-.bottomFigure__hamburger--close {
-  -webkit-animation-name: bottomFigureToCross;
-          animation-name: bottomFigureToCross;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-.bottomFigure__chevron {
+.icon__chevronBottom {
   opacity: 0;
   -webkit-animation-name: blinking;
           animation-name: blinking;
@@ -550,41 +561,7 @@ body {
   -webkit-animation-delay: 0.625s;
           animation-delay: 0.625s;
 }
-
-.myPhoto {
-  width: 100%;
-  height: 100%;
-}
-.myPhoto__background1 {
-  fill: rgb(88, 129, 87);
-}
-.myPhoto__background2 {
-  fill: rgb(58, 90, 64);
-  fill-opacity: 0.5;
-}
-.myPhoto__background3 {
-  fill: rgb(25, 39, 27);
-}
-.myPhoto__portrait {
-  vertical-align: middle;
-  aspect-ratio: 1/1;
-  max-width: 50%;
-  transform: translate(25%, 25%);
-}
-@media (orientation: portrait) {
-  .myPhoto__portrait {
-    width: 50%;
-  }
-}
-@media (orientation: landscape) {
-  .myPhoto__portrait {
-    width: 35%;
-  }
-}
-
-text {
-  font-family: "DM Sans", Arial, Helvetica, sans-serif;
-  font-size: 1.375rem;
+.icon__close {
   fill: white;
 }
 
@@ -732,47 +709,31 @@ text {
   height: calc(30px + (40 - 30) * ((100vw - 300px) / (1080 - 300)));
 }
 .hero__title, .hero__title--404, .hero__title--gallery, .hero__title--homepage {
+  -webkit-animation-name: reveal;
+          animation-name: reveal;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
   margin: 0;
   color: white;
   font-family: "Crimson Pro", Arial, Helvetica, sans-serif;
   font-weight: 200;
   text-align: center;
-}
-.hero__title--homepage {
-  -webkit-animation-name: reveal;
-          animation-name: reveal;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
   width: 100%;
-  font-size: calc(40px + (90 - 40) * ((100vw - 300px) / (1080 - 300)));
-  line-height: calc(40px + (90 - 40) * ((100vw - 300px) / (1080 - 300)));
 }
 @media screen and (orientation: portrait) {
-  .hero__title--homepage {
+  .hero__title, .hero__title--404, .hero__title--gallery, .hero__title--homepage {
     max-width: 600px;
   }
 }
-.hero__title--gallery {
-  -webkit-animation-name: reveal;
-          animation-name: reveal;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  width: 100%;
-}
-.hero__title--404 {
-  width: 100%;
+.hero__title--homepage {
+  font-size: calc(40px + (90 - 40) * ((100vw - 300px) / (1080 - 300)));
+  line-height: calc(40px + (90 - 40) * ((100vw - 300px) / (1080 - 300)));
 }
 .hero__title .title, .hero__title .title__intro, .hero__title .title__page, .hero__title .title__ampersand, .hero__title .title__jobPart2, .hero__title .title__hobbyPart2, .hero__title .title__jobPart1, .hero__title .title__hobbyPart1, .hero__title--homepage .title, .hero__title--homepage .title__intro, .hero__title--homepage .title__page, .hero__title--homepage .title__ampersand, .hero__title--homepage .title__jobPart2, .hero__title--homepage .title__hobbyPart2, .hero__title--homepage .title__jobPart1, .hero__title--homepage .title__hobbyPart1, .hero__title--gallery .title, .hero__title--gallery .title__intro, .hero__title--gallery .title__page, .hero__title--gallery .title__ampersand, .hero__title--gallery .title__jobPart2, .hero__title--gallery .title__hobbyPart2, .hero__title--gallery .title__jobPart1, .hero__title--gallery .title__hobbyPart1, .hero__title--404 .title, .hero__title--404 .title__intro, .hero__title--404 .title__page, .hero__title--404 .title__ampersand, .hero__title--404 .title__jobPart2, .hero__title--404 .title__hobbyPart2, .hero__title--404 .title__jobPart1, .hero__title--404 .title__hobbyPart1 {
   position: relative;
@@ -791,6 +752,9 @@ text {
   color: rgb(182, 206, 186);
   font-size: calc(300px + (670 - 300) * ((100vw - 300px) / (1080 - 300)));
   font-weight: revert;
+}
+.hero__title .title__page, .hero__title--homepage .title__page, .hero__title--gallery .title__page, .hero__title--404 .title__page {
+  font-size: calc(40px + (90 - 40) * ((100vw - 300px) / (1080 - 300)));
 }
 .hero__title .title__intro, .hero__title--homepage .title__intro, .hero__title--gallery .title__intro, .hero__title--404 .title__intro {
   font-weight: initial;
@@ -912,17 +876,17 @@ text {
 }
 .gallery__listItem {
   aspect-ratio: 1/1;
-  max-width: 15.625rem;
+  max-width: 250px;
 }
 @media (orientation: portrait) {
   .gallery__listItem {
-    min-width: 6.875rem;
+    min-width: 110px;
     width: 50%;
   }
 }
 @media (orientation: landscape) {
   .gallery__listItem {
-    min-width: 7.5rem;
+    min-width: 120px;
     width: 33.3333333333%;
   }
 }
@@ -947,6 +911,14 @@ text {
 .photosCards {
   width: 100%;
   height: 100%;
+  filter: grayscale(100%);
+  transition-property: filter;
+  transition-duration: 0.5s;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.photosCards:hover {
+  filter: grayscale(0%);
 }
 .photosCards span {
   width: inherit;
