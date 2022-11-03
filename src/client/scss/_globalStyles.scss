@@ -31,7 +31,9 @@ body {
 	&--visible {
 		opacity: 1;
 		transform: translateY(0);
-		transition-property: opacity transform;
-		transition-duration: 2s;
+		transition: {
+			property: opacity transform;
+			duration: 2s;
+		}
 	}
 }
