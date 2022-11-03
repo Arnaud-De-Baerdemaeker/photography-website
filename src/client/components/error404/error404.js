@@ -3,6 +3,7 @@
 // By Arnaud De Baerdemaeker
 
 import React, {Component} from "react";
+import {NavLink, withRouter} from "react-router-dom";
 
 import Hero from "../hero/hero";
 
@@ -16,14 +17,20 @@ class Error404 extends Component {
 			<Hero
 				heroTitleClass={"hero__title--404"}
 				heroTitleContent={
-					<>
-						<span className={"title__page"}>{"404"}</span>
-						<span className={"title__intro"}>{"Oups ! La page que vous recherchez n'existe pas"}</span>
-					</>
+					<span className={"title__page"}>{"La page recherchée n'existe pas"}</span>
+				}
+				heroBackToHomepage={
+					<NavLink
+						exact
+						to={"/"}
+						className={"link__backToHomepage"}
+					>
+						{"Revenir à l'accueil"}
+					</NavLink>
 				}
 			/>
 		);
 	}
 }
 
-export default Error404;
+export default withRouter(Error404);
