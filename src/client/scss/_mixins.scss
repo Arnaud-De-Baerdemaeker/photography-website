@@ -2,13 +2,8 @@
 // Started on July 2020
 // By Arnaud De Baerdemaeker
 
-@mixin fluidContent($property, $min-font-size-px, $max-font-size, $min-font-size) {
-	@if #{$portrait} {
-		#{$property}: calc(#{$min-font-size-px} + (#{$max-font-size} - #{$min-font-size}) * ((100vw - 300px) / (1080 - 300)));
-	}
-	@else if #{$landscape} {
-		#{$property}: calc(#{$min-font-size-px} + (#{$max-font-size} - #{$min-font-size}) * ((100vw - 500px) / (1920 - 500)));
-	}
+@mixin fluidContent($property, $min-size-px, $max-size, $min-size, $max-viewport-vw-vh, $min-viewport-px, $max-viewport, $min-viewport) {
+	#{$property}: calc(#{$min-size-px} + (#{$max-size} - #{$min-size}) * ((#{$max-viewport-vw-vh} - #{$min-viewport-px}) / (#{$max-viewport} - #{$min-viewport})));
 }
 
 @mixin revealOnLoad {
