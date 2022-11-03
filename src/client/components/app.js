@@ -104,7 +104,10 @@ class App extends Component {
 						<Error404 />
 					</Route>
 				</Switch>
-				<Footer />
+				<Footer
+					applyHideClass={this.applyHideClass}
+					revealOnScroll={this.revealOnScroll}
+				/>
 			</BrowserRouter>
 		);
 	}
