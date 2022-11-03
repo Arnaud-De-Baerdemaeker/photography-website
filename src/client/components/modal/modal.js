@@ -11,7 +11,11 @@ import SVG from "../svg/svg";
 class Modal extends Component {
 	render() {
 		return (
-			<div className={this.props.isModalOpen ? "modal" : "modal--hidden"}>
+			<div className={
+				this.props.isModalOpen
+				? "modal"
+				: "modal--hidden"
+			}>
 				<div className={"modal__imageContainer"}>
 					<Image
 						url={this.props.hd}
