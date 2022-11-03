@@ -9,8 +9,9 @@ class Image extends Component {
         return (
             <img
                 src={this.props.url}
-                alt={this.props.alt ? this.props.alt : ""}
+                alt={this.props.alt ? this.props.alt : null}
                 title={this.props.location ? this.props.location : null}
+                data-hd={this.props.hd}
                 className={this.props.class}
             />
         );
