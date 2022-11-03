@@ -22,9 +22,7 @@ class App extends Component {
 
 		this.toggleMenu = this.toggleMenu.bind(this);
 		this.closeMenu = this.closeMenu.bind(this);
-		this.getElements= this.getElements.bind(this);
 		this.applyHideClass = this.applyHideClass.bind(this);
-		this.transferOnScroll = this.transferOnScroll.bind(this);
 		this.revealOnScroll = this.revealOnScroll.bind(this);
 	}
 
@@ -42,29 +40,11 @@ class App extends Component {
 		}
 	}
 
-	getElements() {
-		// Recover all the elements that need to be scroll revealed depending of the active route
-		switch(window.location.pathname) {
-			case "/galerie":
-				this.elements = document.querySelectorAll(".gallery__listItem, .footer__links, .name--footer, .footer__credits");
-				break;
-			default:
-				this.elements = document.querySelectorAll(".myPhoto, .homepage__introduction, .homepage__title, .homepage__paragraph, .footer__links, .name--footer, .footer__credits");
-		}
-	}
-
-	applyHideClass() {
-		this.getElements();
-
-		// Apply a class to initially hide the content
-		this.elements.forEach(element => {
+	applyHideClass(elements) {
+		// Apply a class to initially hide the elements
+		elements.forEach(element => {
 			element.classList.add("view--hidden");
 		});
-	}
-
-	transferOnScroll() {
-		this.getElements();
-		this.revealOnScroll(this.elements);
 	}
 
 	revealOnScroll(elements) {
@@ -105,7 +85,7 @@ class App extends Component {
 							toggleMenu={this.toggleMenu}
 							closeMenu={this.closeMenu}
 							applyHideClass={this.applyHideClass}
-							transferOnScroll={this.transferOnScroll}
+							revealOnScroll={this.revealOnScroll}
 						/>
 					</Route>
 					<Route
@@ -117,7 +97,7 @@ class App extends Component {
 							toggleMenu={this.toggleMenu}
 							closeMenu={this.closeMenu}
 							applyHideClass={this.applyHideClass}
-							transferOnScroll={this.transferOnScroll}
+							revealOnScroll={this.revealOnScroll}
 						/>
 					</Route>
 					<Route path="*">
