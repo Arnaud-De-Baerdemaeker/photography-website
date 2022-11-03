@@ -58,11 +58,8 @@ class Hero extends Component {
 				<h2 className={this.props.heroTitleClass}>
 					{this.props.heroTitleContent}
 				</h2>
-				<div className={"hero__scrollDown"}>
-					<div className="hero__scrollDownContainer">
-						{this.props.svgContent}
-					</div>
-				</div>
+				{this.props.heroBackToHomepage ? this.props.heroBackToHomepage : null}
+				{this.props.scrollDownSVG ? this.props.scrollDownSVG : null}
 			</div>
 		);
 	}
