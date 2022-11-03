@@ -418,13 +418,17 @@ body {
   }
 }
 .name--footer {
-  font-size: calc(22px + (32 - 22) * ((100vw - 300px) / (1080 - 300)));
   font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
   color: white;
   letter-spacing: 0.125rem;
   word-spacing: 0.3125rem;
   margin: 0;
   text-align: center;
+}
+@media screen and (orientation: portrait) {
+  .name--footer {
+    font-size: calc(22px + (32 - 22) * ((100vw - 300px) / (1080 - 300)));
+  }
 }
 .name__link {
   color: inherit;
@@ -437,14 +441,18 @@ body {
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 0;
-  width: calc(36px + (48 - 36) * ((100vw - 300px) / (1080 - 300)));
-  height: calc(36px + (48 - 36) * ((100vw - 300px) / (1080 - 300)));
   padding: 0;
   background-color: unset;
   border: unset;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   outline: none;
+}
+@media screen and (orientation: portrait) {
+  .button, .button__modal, .button__menu {
+    width: calc(36px + (48 - 36) * ((100vw - 300px) / (1080 - 300)));
+    height: calc(36px + (48 - 36) * ((100vw - 300px) / (1080 - 300)));
+  }
 }
 .button__menu {
   margin-right: 20px;
@@ -603,7 +611,12 @@ body {
   -webkit-tap-highlight-color: transparent;
   font-family: "DM Sans", Arial, Helvetica, sans-serif;
   font-weight: 700;
-  font-size: calc(40px + (100 - 40) * ((100vw - 300px) / (1080 - 300)));
+  letter-spacing: 2px;
+}
+@media screen and (orientation: portrait) {
+  .menu__link {
+    font-size: calc(40px + (100 - 40) * ((100vw - 300px) / (1080 - 300)));
+  }
 }
 @media screen and (hover: hover) {
   .menu__link:before {
@@ -704,9 +717,11 @@ body {
   width: 100%;
   opacity: 0;
 }
-.hero__scrollDownContainer {
-  width: calc(30px + (40 - 30) * ((100vw - 300px) / (1080 - 300)));
-  height: calc(30px + (40 - 30) * ((100vw - 300px) / (1080 - 300)));
+@media screen and (orientation: portrait) {
+  .hero__scrollDownContainer {
+    width: calc(30px + (40 - 30) * ((100vw - 300px) / (1080 - 300)));
+    height: calc(30px + (40 - 30) * ((100vw - 300px) / (1080 - 300)));
+  }
 }
 .hero__title, .hero__title--404, .hero__title--gallery, .hero__title--homepage {
   -webkit-animation-name: reveal;
@@ -731,11 +746,13 @@ body {
     max-width: 600px;
   }
 }
-.hero__title--homepage {
-  font-size: calc(40px + (90 - 40) * ((100vw - 300px) / (1080 - 300)));
-  line-height: calc(40px + (90 - 40) * ((100vw - 300px) / (1080 - 300)));
+@media screen and (orientation: portrait) {
+  .hero__title--homepage {
+    font-size: calc(40px + (90 - 40) * ((100vw - 300px) / (1080 - 300)));
+    line-height: calc(40px + (90 - 40) * ((100vw - 300px) / (1080 - 300)));
+  }
 }
-.hero__title .title, .hero__title .title__intro, .hero__title .title__page, .hero__title .title__ampersand, .hero__title .title__jobPart2, .hero__title .title__hobbyPart2, .hero__title .title__jobPart1, .hero__title .title__hobbyPart1, .hero__title--homepage .title, .hero__title--homepage .title__intro, .hero__title--homepage .title__page, .hero__title--homepage .title__ampersand, .hero__title--homepage .title__jobPart2, .hero__title--homepage .title__hobbyPart2, .hero__title--homepage .title__jobPart1, .hero__title--homepage .title__hobbyPart1, .hero__title--gallery .title, .hero__title--gallery .title__intro, .hero__title--gallery .title__page, .hero__title--gallery .title__ampersand, .hero__title--gallery .title__jobPart2, .hero__title--gallery .title__hobbyPart2, .hero__title--gallery .title__jobPart1, .hero__title--gallery .title__hobbyPart1, .hero__title--404 .title, .hero__title--404 .title__intro, .hero__title--404 .title__page, .hero__title--404 .title__ampersand, .hero__title--404 .title__jobPart2, .hero__title--404 .title__hobbyPart2, .hero__title--404 .title__jobPart1, .hero__title--404 .title__hobbyPart1 {
+.hero__title .title, .hero__title .title__page, .hero__title .title__ampersand, .hero__title .title__jobPart2, .hero__title .title__hobbyPart2, .hero__title .title__jobPart1, .hero__title .title__hobbyPart1, .hero__title--homepage .title, .hero__title--homepage .title__page, .hero__title--homepage .title__ampersand, .hero__title--homepage .title__jobPart2, .hero__title--homepage .title__hobbyPart2, .hero__title--homepage .title__jobPart1, .hero__title--homepage .title__hobbyPart1, .hero__title--gallery .title, .hero__title--gallery .title__page, .hero__title--gallery .title__ampersand, .hero__title--gallery .title__jobPart2, .hero__title--gallery .title__hobbyPart2, .hero__title--gallery .title__jobPart1, .hero__title--gallery .title__hobbyPart1, .hero__title--404 .title, .hero__title--404 .title__page, .hero__title--404 .title__ampersand, .hero__title--404 .title__jobPart2, .hero__title--404 .title__hobbyPart2, .hero__title--404 .title__jobPart1, .hero__title--404 .title__hobbyPart1 {
   position: relative;
   z-index: 1;
   display: block;
@@ -750,14 +767,51 @@ body {
   z-index: 0;
   display: block;
   color: rgb(182, 206, 186);
-  font-size: calc(300px + (670 - 300) * ((100vw - 300px) / (1080 - 300)));
   font-weight: revert;
 }
-.hero__title .title__page, .hero__title--homepage .title__page, .hero__title--gallery .title__page, .hero__title--404 .title__page {
-  font-size: calc(40px + (90 - 40) * ((100vw - 300px) / (1080 - 300)));
+@media screen and (orientation: portrait) {
+  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand, .hero__title--404 .title__ampersand {
+    font-size: calc(300px + (670 - 300) * ((100vw - 300px) / (1080 - 300)));
+  }
 }
-.hero__title .title__intro, .hero__title--homepage .title__intro, .hero__title--gallery .title__intro, .hero__title--404 .title__intro {
-  font-weight: initial;
+@media screen and (orientation: portrait) {
+  .hero__title .title__page, .hero__title--homepage .title__page, .hero__title--gallery .title__page, .hero__title--404 .title__page {
+    font-size: calc(40px + (90 - 40) * ((100vw - 300px) / (1080 - 300)));
+  }
+}
+.hero .link__backToHomepage {
+  position: absolute;
+  bottom: 40px;
+  z-index: 0;
+  color: white;
+  text-decoration: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: transparent;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: transparent;
+  padding-top: 7.5px;
+  padding-right: 7.5px;
+  padding-bottom: 7.5px;
+  padding-left: 7.5px;
+  transition-property: border-top-color border-bottom-color;
+  transition-duration: 1s;
+}
+@media screen and (orientation: portrait) {
+  .hero .link__backToHomepage {
+    font-size: calc(14px + (24 - 14) * ((100vw - 300px) / (1080 - 300)));
+  }
+}
+.hero .link__backToHomepage:hover {
+  border-top-color: white;
+  border-bottom-color: white;
 }
 
 .homepage {
@@ -987,13 +1041,17 @@ body {
   justify-content: space-evenly;
 }
 .footer__network {
-  width: calc(40px + (47 - 40) * ((100vw - 300px) / (1080 - 300)));
-  height: calc(40px + (47 - 40) * ((100vw - 300px) / (1080 - 300)));
   text-align: center;
   border-style: solid;
   border-width: 1px;
   border-color: white;
   border-radius: 38px;
+}
+@media screen and (orientation: portrait) {
+  .footer__network {
+    width: calc(40px + (47 - 40) * ((100vw - 300px) / (1080 - 300)));
+    height: calc(40px + (47 - 40) * ((100vw - 300px) / (1080 - 300)));
+  }
 }
 .footer__link {
   display: flex;
@@ -1005,8 +1063,12 @@ body {
 }
 .footer__icon.svg-inline--fa {
   color: white;
-  width: calc(25px + (32 - 25) * ((100vw - 300px) / (1080 - 300)));
-  height: calc(25px + (32 - 25) * ((100vw - 300px) / (1080 - 300)));
+}
+@media screen and (orientation: portrait) {
+  .footer__icon.svg-inline--fa {
+    width: calc(25px + (32 - 25) * ((100vw - 300px) / (1080 - 300)));
+    height: calc(25px + (32 - 25) * ((100vw - 300px) / (1080 - 300)));
+  }
 }
 .footer__creditsContainer {
   display: flex;
@@ -1020,10 +1082,16 @@ body {
 .footer__credits {
   width: inherit;
   margin: 0;
-  font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1080 - 300)));
   color: rgb(180, 180, 180);
   text-align: center;
 }
-.footer__credits:last-of-type {
-  font-size: calc(12px + (14 - 12) * ((100vw - 300px) / (1080 - 300)));
+@media screen and (orientation: portrait) {
+  .footer__credits {
+    font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: portrait) {
+  .footer__credits:last-of-type {
+    font-size: calc(12px + (14 - 12) * ((100vw - 300px) / (1080 - 300)));
+  }
 }
