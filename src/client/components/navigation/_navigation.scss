@@ -48,7 +48,10 @@
 			weight: 700;
 		}
 		letter-spacing: 2px;
-		@include fluidContent(font-size, 40px, 100, 40);
+
+		@media screen and #{$portrait} {
+			@include fluidContent(font-size, 40px, 100, 40, 100vw, 300px, 1080, 300);
+		}
 
 		@media screen and (hover: hover) {
 			&:before {

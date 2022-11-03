@@ -19,18 +19,21 @@
 		}
 
 		@media screen and #{$portrait} {
-			@include fluidContent(font-size, 24px, 40, 24);
+			@include fluidContent(font-size, 24px, 40, 24, 100vw, 300px, 1080, 300);
 		}
 	}
 
 	&--footer { // <h1>
-		@include fluidContent(font-size, 22px, 32, 22);
 		font-family: $bebas-neue;
 		color: white;
 		letter-spacing: 0.125rem;
 		word-spacing: 0.3125rem;
 		margin: 0;
 		text-align: center;
+
+		@media screen and #{$portrait} {
+			@include fluidContent(font-size, 22px, 32, 22, 100vw, 300px, 1080, 300);
+		}
 	}
 
 	&__link { // <a>
