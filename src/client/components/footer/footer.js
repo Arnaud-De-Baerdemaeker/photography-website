@@ -98,7 +98,11 @@ class Footer extends Component {
 					</ul>
 				</div>
 				<div className={"footer__creditsContainer"}>
-					<Name class={"name--footer"} />
+					<Name class={"name--footer"}>
+						{"Arnaud"}
+						<br />
+						{"De Baerdemaeker"}
+					</Name>
 					<p className={"footer__credits"}>
 						{`2021 - ${year.getUTCFullYear()} • Tous droits réservés`}
 					</p>

@@ -3,6 +3,7 @@
 // By Arnaud De Baerdemaeker
 
 import React, {Component} from "react";
+import {Link} from "react-router-dom";
 
 import Name from "../name/name";
 import Button from "../button/button";
@@ -39,7 +40,17 @@ class Header extends Component {
 					<Name
 						class={"name--header"}
 						closeMenu={this.props.closeMenu}
-					/>
+					>
+						<Link
+							to={"/"}
+							onClick={this.props.closeMenu}
+							className={"name__link"}
+						>
+							{"Arnaud"}
+							<br />
+							{"De Baerdemaeker"}
+						</Link>
+					</Name>
 					<Button
 						alt={
 							this.props.isMenuOpen
