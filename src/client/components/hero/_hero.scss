@@ -91,16 +91,19 @@
 		text-align: center;
 		width: 100%;
 
-		@media screen and #{$portrait} {
-			max-width: 600px;
-		}
-
 		&--homepage { // <h2>
 			@extend .hero__title;
 
-			@media screen and #{$portrait} {
-				@include fluidContent(font-size, 40px, 90, 40, 100vw, 300px, 1080, 300);
-				@include fluidContent(line-height, 40px, 90, 40, 100vw, 300px, 1080, 300);
+			@media screen {
+				@media #{$portrait} {
+					@include fluidContent(font-size, 40px, 90, 40, 100vw, 300px, 1080, 300);
+					@include fluidContent(line-height, 40px, 90, 40, 100vw, 300px, 1080, 300);
+
+					@media #{$mq-w1080-up} {
+						font-size: 90px;
+						line-height: 90px;
+					}
+				}
 			}
 		}
 
@@ -138,8 +141,14 @@
 				color: $color-8;
 				font-weight: revert;
 
-				@media screen and #{$portrait} {
-					@include fluidContent(font-size, 300px, 670, 300, 100vw, 300px, 1080, 300);
+				@media screen {
+					@media #{$portrait} {
+						@include fluidContent(font-size, 300px, 670, 300, 100vw, 300px, 1080, 300);
+
+						@media #{$mq-w1080-up} {
+							font-size: 670px;
+						}
+					}
 				}
 			}
 
@@ -156,8 +165,14 @@
 			&__page { // <span>
 				@extend .title;
 
-				@media screen and #{$portrait} {
-					@include fluidContent(font-size, 40px, 90, 40, 100vw, 300px, 1080, 300);
+				@media screen {
+					@media #{$portrait} {
+						@include fluidContent(font-size, 40px, 90, 40, 100vw, 300px, 1080, 300);
+
+						@media #{$mq-w1080-up} {
+							font-size: 90px;
+						}
+					}
 				}
 			}
 		}
@@ -178,6 +193,11 @@
 		@media screen and #{$portrait} {
 			@include fluidContent(width, 30px, 40, 30, 100vw, 300px, 1080, 300);
 			@include fluidContent(height, 30px, 40, 30, 100vw, 300px, 1080, 300);
+
+			@media screen and #{$mq-w1080-up} {
+				width: 40px;
+				height: 40px;
+			}
 		}
 	}
 
@@ -216,6 +236,10 @@
 
 		@media screen and #{$portrait} {
 			@include fluidContent(font-size, 14px, 24, 14, 100vw, 300px, 1080, 300);
+
+			@media screen and #{$mq-w1080-up} {
+				font-size: 24px;
+			}
 		}
 
 		&:hover {

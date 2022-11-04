@@ -17,12 +17,14 @@
 		left: 10%;
 	}
 
-	@media #{$portrait} {
-		max-width: 750px;
-	}
+	@media screen {
+		@media #{$portrait} {
+			max-width: 750px;
+		}
 
-	@media #{$landscape} {
-		max-width: 1250px;
+		@media #{$landscape} {
+			max-width: 1250px;
+		}
 	}
 
 	&__list { // <ul>
@@ -36,16 +38,18 @@
 
 	&__listItem { // <li>
 		aspect-ratio: 1 / 1;
-		max-width: 15.625rem;
-		
-		@media #{$portrait} {
-			min-width: 6.875rem;
-			width: 50%;
-		}
+		max-width: 250px;
 
-		@media #{$landscape} {
-			min-width: 7.5rem;
-			width: calc(100% / 3);
+		@media screen {
+			@media #{$portrait} {
+				min-width: 110px;
+				width: 50%;
+			}
+
+			@media #{$landscape} {
+				min-width: 120px;
+				width: calc(100% / 3);
+			}
 		}
 	}
 }

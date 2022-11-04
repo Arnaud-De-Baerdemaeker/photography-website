@@ -24,12 +24,14 @@
 		align-items: center;
 		row-gap: 2.5rem;
 
-		@media screen and #{$portrait} {
-			max-width: 700px;
-		}
+		@media screen {
+			@media #{$portrait} {
+				max-width: 700px;
+			}
 
-		@media screen and #{$landscape} {
-			max-width: 1000px;
+			@media #{$landscape} {
+				max-width: 1000px;
+			}
 		}
 	}
 
@@ -37,8 +39,14 @@
 		font-family: $economica;
 		margin: 0;
 
-		@media screen and #{$portrait} {
-			@include fluidContent(font-size, 30px, 40, 30, 100vw, 300px, 1080, 300);
+		@media screen {
+			@media #{$portrait} {
+				@include fluidContent(font-size, 30px, 40, 30, 100vw, 300px, 1080, 300);
+
+				@media #{$mq-w1080-up} {
+					font-size: 40px;
+				}
+			}
 		}
 	}
 
@@ -47,12 +55,14 @@
 		flex-direction: column;
 		row-gap: 3.125rem;
 
-		@media screen and #{$portrait} {
-			max-width: 700px;
-		}
+		@media screen {
+			@media #{$portrait} {
+				max-width: 700px;
+			}
 
-		@media screen and #{$landscape} {
-			max-width: 1000px;
+			@media #{$landscape} {
+				max-width: 1000px;
+			}
 		}
 	}
 
@@ -76,8 +86,14 @@
 		}
 		margin: 0;
 
-		@media screen and #{$portrait} {
-			@include fluidContent(font-size, 28px, 38, 28, 100vw, 300px, 1080, 300);
+		@media screen {
+			@media #{$portrait} {
+				@include fluidContent(font-size, 28px, 38, 28, 100vw, 300px, 1080, 300);
+
+				@media #{$mq-w1080-up} {
+					font-size: 38px;
+				}
+			}
 		}
 
 		&:after {
@@ -89,8 +105,14 @@
 	&__paragraph { // <p>
 		margin: 0;
 
-		@media screen and #{$portrait} {
-			@include fluidContent(font-size, 18px, 20, 18, 100vw, 300px, 1080, 300);
+		@media screen {
+			@media #{$portrait} {
+				@include fluidContent(font-size, 18px, 20, 18, 100vw, 300px, 1080, 300);
+
+				@media #{$mq-w1080-up} {
+					font-size: 20px;
+				}
+			}
 		}
 	}
 }

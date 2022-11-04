@@ -12,9 +12,16 @@
 	-webkit-tap-highlight-color: transparent;
 	outline: none;
 
-	@media screen and #{$portrait} {
-		@include fluidContent(width, 36px, 48, 36, 100vw, 300px, 1080, 300);
-		@include fluidContent(height, 36px, 48, 36, 100vw, 300px, 1080, 300);
+	@media screen {
+		@media #{$portrait} {
+			@include fluidContent(width, 36px, 48, 36, 100vw, 300px, 1080, 300);
+			@include fluidContent(height, 36px, 48, 36, 100vw, 300px, 1080, 300);
+
+			@media #{$mq-w1080-up} {
+				width: 48px;
+				height: 48px;
+			}
+		}
 	}
 
 	&__menu { // <button>

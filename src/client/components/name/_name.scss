@@ -18,8 +18,14 @@
 			left: 20px;
 		}
 
-		@media screen and #{$portrait} {
-			@include fluidContent(font-size, 24px, 40, 24, 100vw, 300px, 1080, 300);
+		@media screen {
+			@media #{$portrait} {
+				@include fluidContent(font-size, 24px, 40, 24, 100vw, 300px, 1080, 300);
+
+				@media #{$mq-w1080-up} {
+					font-size: 40px;
+				}
+			}
 		}
 	}
 
@@ -31,8 +37,14 @@
 		margin: 0;
 		text-align: center;
 
-		@media screen and #{$portrait} {
-			@include fluidContent(font-size, 22px, 32, 22, 100vw, 300px, 1080, 300);
+		@media screen {
+			@media #{$portrait} {
+				@include fluidContent(font-size, 22px, 32, 22, 100vw, 300px, 1080, 300);
+
+				@media #{$mq-w1080-up} {
+					font-size: 32px;
+				}
+			}
 		}
 	}
 
