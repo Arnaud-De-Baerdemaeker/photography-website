@@ -28,14 +28,17 @@
 	}
 
 	&__network { // <li>
-		@include fluidContent(width, 40px, 47, 40);
-		@include fluidContent(height, 40px, 47, 40);
 		text-align: center;
 		border: {
 			style: solid;
 			width: 1px;
 			color: white;
 			radius: 38px;
+		}
+
+		@media screen and #{$portrait} {
+			@include fluidContent(width, 40px, 47, 40, 100vw, 300px, 1080, 300);
+			@include fluidContent(height, 40px, 47, 40, 100vw, 300px, 1080, 300);
 		}
 	}
 
@@ -50,8 +53,11 @@
 
 	&__icon.svg-inline--fa { // <svg>
 		color: white;
-		@include fluidContent(width, 25px, 32, 25);
-		@include fluidContent(height, 25px, 32, 25);
+
+		@media screen and #{$portrait} {
+			@include fluidContent(width, 25px, 32, 25, 100vw, 300px, 1080, 300);
+			@include fluidContent(height, 25px, 32, 25, 100vw, 300px, 1080, 300);
+		}
 	}
 
 	&__creditsContainer { // <div>
@@ -67,12 +73,17 @@
 	&__credits { // <p>
 		width: inherit;
 		margin: 0;
-		@include fluidContent(font-size, 14px, 16, 14);
 		color: $color-7;
 		text-align: center;
 
+		@media screen and #{$portrait} {
+			@include fluidContent(font-size, 14px, 16, 14, 100vw, 300px, 1080, 300);
+		}
+
 		&:last-of-type {
-			@include fluidContent(font-size, 12px, 14, 12);
+			@media screen and #{$portrait} {
+				@include fluidContent(font-size, 12px, 14, 12, 100vw, 300px, 1080, 300);
+			}
 		}
 	}
 }

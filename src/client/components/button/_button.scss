@@ -5,14 +5,17 @@
 		bottom: 0;
 		left: 0;
 	}
-	@include fluidContent(width, 36px, 48, 36);
-	@include fluidContent(height, 36px, 48, 36);
 	padding: 0;
 	background-color: unset;
 	border: unset;
 	cursor: pointer;
 	-webkit-tap-highlight-color: transparent;
 	outline: none;
+
+	@media screen and #{$portrait} {
+		@include fluidContent(width, 36px, 48, 36, 100vw, 300px, 1080, 300);
+		@include fluidContent(height, 36px, 48, 36, 100vw, 300px, 1080, 300);
+	}
 
 	&__menu { // <button>
 		@extend .button;
@@ -22,6 +25,6 @@
 	&__modal { // <button>
 		@extend .button;
 		position: absolute;
-		bottom: 2.5rem;
+		bottom: 40px;
 	}
 }
