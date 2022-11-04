@@ -25,8 +25,10 @@
 
 	&__background {
 		background-position-x: 50%;
-		animation-duration: 10s;
-		animation-timing-function: linear;
+		animation: {
+			duration: 10s;
+			timing-function: linear;
+		}
 
 		&--1 { // <div>
 			@extend .hero__background;
@@ -77,22 +79,9 @@
 		background-color: $half-transparent;
 	}
 
-	&__scrollDown { // <div>
-		@include revealOnLoadTwoSecondsDelay;
-		position: absolute;
-		bottom: 20px;
-		display: flex;
-		justify-content: center;
-		width: 100%;
-		opacity: 0;
-	}
-
-	&__scrollDownContainer { // <div>
-		@include fluidContent(width, 30px, 40, 30);
-		@include fluidContent(height, 30px, 40, 30);
-	}
-
 	&__title {
+		@include revealOnLoad;
+		animation-delay: 1s;
 		margin: 0;
 		color: white;
 		font: {
@@ -100,28 +89,27 @@
 			weight: 200;
 		}
 		text-align: center;
+		width: 100%;
+
+		@media screen and #{$portrait} {
+			max-width: 600px;
+		}
 
 		&--homepage { // <h2>
-			@include revealOnLoadOneSecondDelay;
 			@extend .hero__title;
-			width: 100%;
-			@include fluidContent(font-size, 40px, 90, 40);
-			@include fluidContent(line-height, 40px, 90, 40);
 
 			@media screen and #{$portrait} {
-				max-width: 600px;
+				@include fluidContent(font-size, 40px, 90, 40, 100vw, 300px, 1080, 300);
+				@include fluidContent(line-height, 40px, 90, 40, 100vw, 300px, 1080, 300);
 			}
 		}
 
 		&--gallery { // h2>
-			@include revealOnLoadOneSecondDelay;
 			@extend .hero__title;
-			width: 100%;
 		}
 
 		&--404 { // h2
 			@extend .hero__title;
-			width: 100%;
 		}
 
 		.title {
@@ -148,8 +136,11 @@
 				z-index: 0;
 				display: block;
 				color: $color-8;
-				@include fluidContent(font-size, 300px, 670, 300);
 				font-weight: revert;
+
+				@media screen and #{$portrait} {
+					@include fluidContent(font-size, 300px, 670, 300, 100vw, 300px, 1080, 300);
+				}
 			}
 
 			&__hobby {
@@ -164,11 +155,73 @@
 
 			&__page { // <span>
 				@extend .title;
-			}
 
-			&__intro { // <span>
-				@extend .title;
-				font-weight: initial;
+				@media screen and #{$portrait} {
+					@include fluidContent(font-size, 40px, 90, 40, 100vw, 300px, 1080, 300);
+				}
+			}
+		}
+	}
+
+	&__scrollDown { // <div>
+		@include revealOnLoad;
+		animation-delay: 1.5s;
+		position: absolute;
+		bottom: 20px;
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		opacity: 0;
+	}
+
+	&__scrollDownContainer { // <div>
+		@media screen and #{$portrait} {
+			@include fluidContent(width, 30px, 40, 30, 100vw, 300px, 1080, 300);
+			@include fluidContent(height, 30px, 40, 30, 100vw, 300px, 1080, 300);
+		}
+	}
+
+	.link__backToHomepage { // <a>
+		@include revealOnLoad;
+		animation-delay: 1.5s;
+		position: absolute;
+		bottom: 40px;
+		z-index: 0;
+		color: white;
+		text-decoration: none;
+		width: fit-content;
+		height: fit-content;
+		border: {
+			top: {
+				style: solid;
+				width: 1px;
+				color: transparent;
+			}
+			bottom: {
+				style: solid;
+				width: 1px;
+				color: transparent;
+			}
+		}
+		padding: {
+			top: 7.5px;
+			right: 7.5px;
+			bottom: 7.5px;
+			left: 7.5px;
+		}
+		transition: {
+			property: border-top-color border-bottom-color;
+			duration: 1s;
+		}
+
+		@media screen and #{$portrait} {
+			@include fluidContent(font-size, 14px, 24, 14, 100vw, 300px, 1080, 300);
+		}
+
+		&:hover {
+			border: {
+				top-color: white;
+				bottom-color: white;
 			}
 		}
 	}
