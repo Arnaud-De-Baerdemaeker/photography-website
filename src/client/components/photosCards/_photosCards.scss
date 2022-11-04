@@ -5,22 +5,45 @@
 .photosCards { // <div>
 	width: 100%;
 	height: 100%;
-	filter: grayscale(100%);
 	transition: {
 		property: filter;
 		duration: 0.5s;
 	}
 	cursor: pointer;
 	-webkit-tap-highlight-color: transparent;
+	filter: grayscale(100%);
 
-	&:hover {
-		filter: grayscale(0%);
+	@media screen {
+		@media (hover: none) {
+			filter: grayscale(0%);
+		}
+
+		@media (hover: hover) {
+			&:hover {
+				filter: grayscale(0%);
+			}
+		}
 	}
 
-	span {
+	&__overlay { // <div>
+		position: absolute;
+		display: flex;
+		align-items: center;
 		width: inherit;
 		height: inherit;
+		transform: translateX(-100%);
+		background-image: linear-gradient(90deg, black 0%, transparent 75%);
+		transition: {
+			property: transform;
+			duration: 1s;
+		}
 	}
+
+	// &__location { // <span>
+	// 	// display: block;
+	// 	// width: inherit;
+	// 	// height: inherit;
+	// }
 
 	&__image { // <img>
 		width: 100%;
