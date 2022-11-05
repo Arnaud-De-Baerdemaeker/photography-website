@@ -1032,13 +1032,32 @@ body {
 .photosCards__overlay {
   position: absolute;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   width: inherit;
   height: inherit;
-  transform: translateX(-100%);
+  pointer-events: none;
+  opacity: 0;
   background-image: linear-gradient(90deg, black 0%, transparent 75%);
-  transition-property: transform;
+  transition-property: opacity;
   transition-duration: 1s;
+}
+.photosCards__city, .photosCards__country {
+  margin-left: 20px;
+  text-transform: uppercase;
+}
+@media screen and (orientation: portrait) {
+  .photosCards__city, .photosCards__country {
+    font-size: calc(18px + (22 - 18) * ((100vw - 300px) / (1080 - 300)));
+  }
+}
+.photosCards__country {
+  text-transform: none;
+}
+@media screen and (orientation: portrait) {
+  .photosCards__country {
+    font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1080 - 300)));
+  }
 }
 .photosCards__image {
   width: 100%;
