@@ -113,7 +113,7 @@ class Gallery extends Component {
 								<PhotosCards
 									sd={photo.sd}
 									hd={photo.hd}
-									// location={photo.location}
+									location={photo.location}
 									isModalOpen={this.state.isModalOpen}
 									toggleModal={this.toggleModal}
 									handleClick={this.handleClick}

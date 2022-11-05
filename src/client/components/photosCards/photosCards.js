@@ -18,16 +18,21 @@ class PhotosCards extends Component {
 	}
 
 	showOverlay() {
-		this.overlayRef.current.style.transform = "translateX(0)";
+		this.overlayRef.current.style.opacity = 1;
 	}
 
 	hideOverlay() {
-		this.overlayRef.current.style.transform = "translateX(-100%)";
+		this.overlayRef.current.style.opacity = 0;
 	}
 
 	componentDidMount() {
-		this.photosCardsRef.current.addEventListener("mouseover", this.showOverlay);
-		this.photosCardsRef.current.addEventListener("mouseout", this.hideOverlay);
+		if("ontouchstart" in window) {
+			null;
+		}
+		else {
+			this.photosCardsRef.current.addEventListener("mouseover", this.showOverlay);
+			this.photosCardsRef.current.addEventListener("mouseout", this.hideOverlay);
+		}
 	}
 
 	componentWillUnmount() {
@@ -37,23 +42,24 @@ class PhotosCards extends Component {
 
 	render() {
 		return (
-			<>
+			<div
+				ref={this.photosCardsRef}
+				onClick={this.props.handleClick}
+				className={"photosCards"}
+			>
 				<div
-					ref={this.photosCardsRef}
-					onClick={this.props.handleClick}
-					className={"photosCards"}
+					ref={this.overlayRef}
+					className={"photosCards__overlay"}
 				>
-					<div
-						ref={this.overlayRef}
-						className={"photosCards__overlay"}
-					></div>
-					<Image
-						url={this.props.sd}
-						hd={this.props.hd}
-						class={"photosCards__image"}
-					/>
+					<span className={"photosCards__city"}>{this.props.location.city}</span>
+					<span className={"photosCards__country"}>{this.props.location.country}</span>
 				</div>
-			</>
+				<Image
+					url={this.props.sd}
+					hd={this.props.hd}
+					class={"photosCards__image"}
+				/>
+			</div>
 		);
 	}
 }
