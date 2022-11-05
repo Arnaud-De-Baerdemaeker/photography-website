@@ -28,22 +28,40 @@
 	&__overlay { // <div>
 		position: absolute;
 		display: flex;
-		align-items: center;
+		flex-direction: column;
+		justify-content: center;
 		width: inherit;
 		height: inherit;
-		transform: translateX(-100%);
+		pointer-events: none;
+		opacity: 0;
 		background-image: linear-gradient(90deg, black 0%, transparent 75%);
 		transition: {
-			property: transform;
+			property: opacity;
 			duration: 1s;
 		}
 	}
 
-	// &__location { // <span>
-	// 	// display: block;
-	// 	// width: inherit;
-	// 	// height: inherit;
-	// }
+	&__city { // <span>
+		margin-left: 20px;
+		text-transform: uppercase;
+
+		@media screen {
+			@media #{$portrait} {
+				@include fluidContent(font-size, 18px, 22, 18, 100vw, 300px, 1080, 300);
+			}
+		}
+	}
+
+	&__country { // <span>
+		@extend .photosCards__city;
+		text-transform: none;
+
+		@media screen {
+			@media #{$portrait} {
+				@include fluidContent(font-size, 14px, 18, 14, 100vw, 300px, 1080, 300);
+			}
+		}
+	}
 
 	&__image { // <img>
 		width: 100%;
