@@ -18,6 +18,16 @@
 	&__background { // <svg>
 		@extend .svg;
 
+		@media screen {
+			@media #{$portrait} {
+				max-width: 500px;
+			}
+
+			@media #{$landscape} {
+				max-width: 600px
+			}
+		}
+
 		.background {
 			&1 { // <path>
 				fill: $color-1;
