@@ -47,6 +47,14 @@
 					font-size: 40px;
 				}
 			}
+
+			@media #{$landscape} {
+				@include fluidContent(font-size, 28px, 50, 28, 100vh, 300px, 1080, 300);
+
+				@media #{$mq-h1080-up} {
+					font-size: 50px;
+				}
+			}
 		}
 	}
 
@@ -94,6 +102,14 @@
 					font-size: 38px;
 				}
 			}
+
+			@media #{$landscape} {
+				@include fluidContent(font-size, 28px, 40, 28, 100vh, 300px, 1080, 300);
+
+				@media #{$mq-h1080-up} {
+					font-size: 40px;
+				}
+			}
 		}
 
 		&:after {
@@ -108,9 +124,21 @@
 		@media screen {
 			@media #{$portrait} {
 				@include fluidContent(font-size, 18px, 20, 18, 100vw, 300px, 1080, 300);
+				@include fluidContent(line-height, 28px, 32, 28, 100vh, 300px, 1080, 300);
 
 				@media #{$mq-w1080-up} {
 					font-size: 20px;
+					line-height: 32px;
+				}
+			}
+
+			@media #{$landscape} {
+				@include fluidContent(font-size, 18px, 22, 18, 100vh, 300px, 1080, 300);
+				@include fluidContent(line-height, 28px, 32, 28, 100vh, 300px, 1080, 300);
+
+				@media #{$mq-h1080-up} {
+					font-size: 22px;
+					line-height: 32px;
 				}
 			}
 		}

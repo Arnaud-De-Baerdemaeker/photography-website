@@ -21,9 +21,21 @@
 		@media screen {
 			@media #{$portrait} {
 				@include fluidContent(font-size, 24px, 40, 24, 100vw, 300px, 1080, 300);
+				@include fluidContent(margin-left, 20px, 40, 20, 100vw, 300px, 1080, 300);
 
 				@media #{$mq-w1080-up} {
 					font-size: 40px;
+					margin-left: 40px;
+				}
+			}
+
+			@media #{$landscape} {
+				@include fluidContent(font-size, 20px, 40, 20, 100vh, 300px, 1080, 300);
+				@include fluidContent(margin-left, 20px, 40, 20, 100vh, 300px, 1080, 300);
+
+				@media #{$mq-h1080-up} {
+					font-size: 40px;
+					margin-left: 40px;
 				}
 			}
 		}
@@ -43,6 +55,14 @@
 
 				@media #{$mq-w1080-up} {
 					font-size: 32px;
+				}
+			}
+
+			@media #{$landscape} {
+				@include fluidContent(font-size, 26px, 30, 26, 100vh, 300px, 1080, 300);
+
+				@media #{$mq-h1080-up} {
+					font-size: 30px;
 				}
 			}
 		}

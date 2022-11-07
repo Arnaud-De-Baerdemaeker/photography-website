@@ -105,11 +105,43 @@
 						line-height: 90px;
 					}
 				}
+
+				@media #{$landscape} {
+					@include fluidContent(font-size, 32px, 100, 32, 100vh, 300px, 1080, 300);
+					@include fluidContent(line-height, 32px, 100, 32, 100vh, 300px, 1080, 300);
+
+					@media #{$mq-h1080-up} {
+						font-size: 100px;
+						line-height: 100px;
+					}
+				}
 			}
 		}
 
 		&--gallery { // h2>
 			@extend .hero__title;
+
+			@media screen {
+				@media #{$portrait} {
+					@include fluidContent(font-size, 40px, 90, 40, 100vw, 300px, 1080, 300);
+					@include fluidContent(letter-spacing, 5px, 15, 5, 100vw, 300px, 1080, 300);
+
+					@media #{$mq-w1080-up} {
+						font-size: 90px;
+						letter-spacing: 15px;
+					}
+				}
+
+				@media #{$landscape} {
+					@include fluidContent(font-size, 32px, 100, 32, 100vh, 300px, 1080, 300);
+					@include fluidContent(letter-spacing, 5px, 15, 5, 100vh, 300px, 1080, 300);
+
+					@media #{$mq-h1080-up} {
+						font-size: 100px;
+						letter-spacing: 15px;
+					}
+				}
+			}
 		}
 
 		&--404 { // h2
@@ -159,20 +191,6 @@
 					@extend .title__jobPart2;
 				}
 			}
-
-			&__page { // <span>
-				@extend .title;
-
-				@media screen {
-					@media #{$portrait} {
-						@include fluidContent(font-size, 40px, 90, 40, 100vw, 300px, 1080, 300);
-
-						@media #{$mq-w1080-up} {
-							font-size: 90px;
-						}
-					}
-				}
-			}
 		}
 	}
 
@@ -188,13 +206,25 @@
 	}
 
 	&__scrollDownContainer { // <div>
-		@media screen and #{$portrait} {
-			@include fluidContent(width, 30px, 40, 30, 100vw, 300px, 1080, 300);
-			@include fluidContent(height, 30px, 40, 30, 100vw, 300px, 1080, 300);
+		@media screen {
+			@media #{$portrait} {
+				@include fluidContent(width, 30px, 40, 30, 100vw, 300px, 1080, 300);
+				@include fluidContent(height, 30px, 40, 30, 100vw, 300px, 1080, 300);
 
-			@media screen and #{$mq-w1080-up} {
-				width: 40px;
-				height: 40px;
+				@media #{$mq-w1080-up} {
+					width: 40px;
+					height: 40px;
+				}
+			}
+
+			@media #{$landscape} {
+				@include fluidContent(width, 28px, 42, 28, 100vh, 300px, 1080, 300);
+				@include fluidContent(height, 28px, 42, 28, 100vh, 300px, 1080, 300);
+
+				@media #{$mq-h1080-up} {
+					width: 42px;
+					height: 42px;
+				}
 			}
 		}
 	}
@@ -232,11 +262,13 @@
 			duration: 1s;
 		}
 
-		@media screen and #{$portrait} {
-			@include fluidContent(font-size, 14px, 24, 14, 100vw, 300px, 1080, 300);
+		@media screen {
+			@media #{$portrait} {
+				@include fluidContent(font-size, 14px, 24, 14, 100vw, 300px, 1080, 300);
 
-			@media screen and #{$mq-w1080-up} {
-				font-size: 24px;
+				@media #{$mq-w1080-up} {
+					font-size: 24px;
+				}
 			}
 		}
 

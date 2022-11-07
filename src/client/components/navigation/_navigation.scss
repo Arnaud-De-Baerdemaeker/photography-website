@@ -58,6 +58,14 @@
 				}
 			}
 
+			@media #{$landscape} {
+				@include fluidContent(font-size, 30px, 80, 30, 100vh, 300px, 1080, 300);
+
+				@media #{$mq-h1080-up} {
+					font-size: 80px;
+				}
+			}
+
 			@media (hover: hover) {
 				&:before {
 					content: attr(data-link);
