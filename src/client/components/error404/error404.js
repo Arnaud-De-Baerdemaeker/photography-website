@@ -16,9 +16,7 @@ class Error404 extends Component {
 		return(
 			<Hero
 				heroTitleClass={"hero__title--404"}
-				heroTitleContent={
-					<span className={"title__page"}>{"La page recherchée n'existe pas"}</span>
-				}
+				heroTitleContent={"La page recherchée n'existe pas"}
 				heroBackToHomepage={
 					<NavLink
 						exact

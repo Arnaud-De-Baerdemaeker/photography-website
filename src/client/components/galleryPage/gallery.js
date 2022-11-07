@@ -74,9 +74,7 @@ class Gallery extends Component {
 				<Hero
 					heroContainerClass={" hero__background--1"}
 					heroTitleClass={"hero__title--gallery"}
-					heroTitleContent={
-						<span className={"title__page"}>{"Galerie"}</span>
-					}
+					heroTitleContent={"Galerie"}
 					scrollDownSVG={
 						<div className={"hero__scrollDown"}>
 							<div className="hero__scrollDownContainer">
