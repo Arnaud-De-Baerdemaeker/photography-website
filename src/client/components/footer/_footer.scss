@@ -46,6 +46,16 @@
 					height: 47px;
 				}
 			}
+
+			@media #{$landscape} {
+				@include fluidContent(width, 44px, 50, 44, 100vh, 300px, 1080, 300);
+				@include fluidContent(height, 44px, 50, 44, 100vh, 300px, 1080, 300);
+
+				@media #{$mq-h1080-up} {
+					width: 50px;
+					height: 50px;
+				}
+			}
 		}
 	}
 
@@ -63,12 +73,22 @@
 
 		@media screen {
 			@media #{$portrait} {
-				@include fluidContent(width, 25px, 32, 25, 100vw, 300px, 1080, 300);
-				@include fluidContent(height, 25px, 32, 25, 100vw, 300px, 1080, 300);
+				@include fluidContent(width, 24px, 28, 25, 100vw, 300px, 1080, 300);
+				@include fluidContent(height, 24px, 28, 25, 100vw, 300px, 1080, 300);
 
 				@media #{$mq-w1080-up} {
-					width: 32px;
-					height: 32px;
+					width: 28px;
+					height: 28px;
+				}
+			}
+
+			@media #{$landscape} {
+				@include fluidContent(width, 26px, 28, 24, 100vh, 300px, 1080, 300);
+				@include fluidContent(height, 26px, 28, 24, 100vh, 300px, 1080, 300);
+
+				@media #{$mq-h1080-up} {
+					width: 28px;
+					height: 28px;
 				}
 			}
 		}
@@ -98,6 +118,14 @@
 					font-size: 16px;
 				}
 			}
+
+			@media #{$landscape} {
+				@include fluidContent(font-size, 14px, 16, 14, 100vh, 300px, 1080, 300);
+
+				@media #{$mq-h1080-up} {
+					font-size: 16px;
+				}
+			}
 		}
 
 		&:last-of-type {
@@ -108,6 +136,10 @@
 					@media #{$mq-w1080-up} {
 						font-size: 14px;
 					}
+				}
+
+				@media #{$landscape} {
+					@include fluidContent(font-size, 12px, 14, 12, 100vh, 300px, 1080, 300);
 				}
 			}
 		}
