@@ -179,6 +179,14 @@
 							font-size: 670px;
 						}
 					}
+
+					@media #{$landscape} {
+						@include fluidContent(font-size, 240px, 750, 240, 100vh, 300px, 1080, 300);
+
+						@media #{$mq-h1080-up} {
+							font-size: 750px;
+						}
+					}
 				}
 			}
 
