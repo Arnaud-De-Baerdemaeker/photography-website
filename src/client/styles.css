@@ -368,20 +368,7 @@ body {
   transition-duration: 2s;
 }
 
-.header, .header__innerContainer, .header__innerContainer--scroll {
-  position: fixed;
-  top: 0;
-  z-index: 4;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgba(25, 39, 27, 0);
-  -webkit-clip-path: none;
-          clip-path: none;
-  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.5));
-}
-.header__innerContainer, .header__innerContainer--scroll {
+.header {
   -webkit-animation-name: reveal;
           animation-name: reveal;
   -webkit-animation-duration: 2s;
@@ -390,12 +377,21 @@ body {
           animation-delay: 0.5s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
+  position: fixed;
+  top: 0;
+  z-index: 4;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(25, 39, 27, 0);
   -webkit-clip-path: ellipse(100% 100% at 50% 0%);
           clip-path: ellipse(100% 100% at 50% 0%);
-  transition-property: background-color;
+  transition-property: background-color filter;
   transition-duration: 1s;
 }
-.header__innerContainer--scroll {
+
+.scroll {
   background-color: rgb(25, 39, 27);
 }
 
@@ -884,6 +880,16 @@ body {
     font-size: 670px;
   }
 }
+@media screen and (orientation: landscape) {
+  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand, .hero__title--404 .title__ampersand {
+    font-size: calc(240px + (750 - 240) * ((100vh - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: landscape) and (min-height: 67.5rem) {
+  .hero__title .title__ampersand, .hero__title--homepage .title__ampersand, .hero__title--gallery .title__ampersand, .hero__title--404 .title__ampersand {
+    font-size: 750px;
+  }
+}
 .hero__scrollDown {
   -webkit-animation-name: reveal;
           animation-name: reveal;
@@ -1127,10 +1133,27 @@ body {
   padding: 0;
   list-style: none;
 }
-.gallery__listItem {
-  aspect-ratio: 2.75/1;
+@media screen and (orientation: portrait) {
+  .gallery__listItem {
+    aspect-ratio: 2.75/1;
+  }
 }
 @media screen and (orientation: portrait) and (min-width: 37.5rem) {
+  .gallery__listItem {
+    width: 50%;
+  }
+}
+@media screen and (orientation: landscape) {
+  .gallery__listItem {
+    aspect-ratio: 5/1;
+  }
+}
+@media screen and (orientation: landscape) and (min-height: 25rem) {
+  .gallery__listItem {
+    aspect-ratio: 3/1;
+  }
+}
+@media screen and (orientation: landscape) and (min-width: 37.5rem) {
   .gallery__listItem {
     width: 50%;
   }
@@ -1186,12 +1209,30 @@ body {
   transition-duration: 1s;
 }
 .photosCards__city, .photosCards__country {
-  margin-left: 20px;
   text-transform: uppercase;
 }
 @media screen and (orientation: portrait) {
   .photosCards__city, .photosCards__country {
     font-size: calc(18px + (22 - 18) * ((100vw - 300px) / (1080 - 300)));
+    margin-left: calc(20px + (40 - 20) * ((100vw - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 67.5rem) {
+  .photosCards__city, .photosCards__country {
+    font-size: 22px;
+    margin-left: 40px;
+  }
+}
+@media screen and (orientation: landscape) {
+  .photosCards__city, .photosCards__country {
+    font-size: calc(16px + (28 - 16) * ((100vh - 300px) / (1080 - 300)));
+    margin-left: calc(30px + (50 - 30) * ((100vh - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: landscape) and (min-height: 67.5rem) {
+  .photosCards__city, .photosCards__country {
+    font-size: 28px;
+    margin-left: 50px;
   }
 }
 .photosCards__country {
@@ -1202,12 +1243,31 @@ body {
     font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1080 - 300)));
   }
 }
+@media screen and (orientation: portrait) and (min-width: 67.5rem) {
+  .photosCards__country {
+    font-size: 18px;
+  }
+}
+@media screen and (orientation: landscape) {
+  .photosCards__country {
+    font-size: calc(14px + (18 - 14) * ((100vh - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: landscape) and (min-height: 67.5rem) {
+  .photosCards__country {
+    font-size: 18px;
+  }
+}
 .photosCards__image {
   width: 100%;
   height: 100%;
   vertical-align: middle;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.hover {
+  opacity: 1;
 }
 
 .modal, .modal--hidden {
