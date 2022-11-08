@@ -12,9 +12,7 @@
 	}
 	padding: {
 		top: 6.25rem;
-		// right: 20px;
 		bottom: 6.25rem;
-		// left: 20px;
 	}
 
 	@media screen {
@@ -37,18 +35,26 @@
 	}
 
 	&__listItem { // <li>
-		aspect-ratio: 2.75 / 1;
-
 		@media screen {
 			@media #{$portrait} {
+				aspect-ratio: 2.75 / 1;
+
 				@media #{$mq-w600-up} {
 					width: 50%;
 				}
 			}
 
-			// @media #{$landscape} {
-				
-			// }
+			@media #{$landscape} {
+				aspect-ratio: 5 / 1;
+
+				@media #{$mq-h400-up} {
+					aspect-ratio: 3 / 1;
+				}
+
+				@media #{$mq-w600-up} {
+					width: 50%;
+				}
+			}
 		}
 	}
 }
