@@ -1,4 +1,9 @@
+// Photography website
+// Started on July 2020
+// By Arnaud De Baerdemaeker
+
 .header { // <header>
+	@include revealOnLoad;
 	position: fixed;
 	top: 0;
 	z-index: 4;
@@ -7,21 +12,13 @@
 	justify-content: space-between;
 	align-items: center;
 	background-color: rgba(25, 39, 27, 0);
-	clip-path: none;
-	filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.5));
-
-	&__innerContainer { // <div>
-		@extend .header;
-		@include revealOnLoad;
-		clip-path: ellipse(100% 100% at 50% 0%);
-		transition: {
-			property: background-color;
-			duration: 1s;
-		}
-
-		&--scroll { // <header>
-			@extend .header__innerContainer;
-			background-color: rgba(25, 39, 27, 1);
-		}
+	clip-path: ellipse(100% 100% at 50% 0%);
+	transition: {
+		property: background-color filter;
+		duration: 1s;
 	}
+}
+
+.scroll {
+	background-color: rgba(25, 39, 27, 1);
 }
