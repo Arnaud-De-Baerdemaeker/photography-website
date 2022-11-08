@@ -18,11 +18,11 @@ class PhotosCards extends Component {
 	}
 
 	showOverlay() {
-		this.overlayRef.current.style.opacity = 1;
+		this.overlayRef.current.classList.add("hover");
 	}
 
 	hideOverlay() {
-		this.overlayRef.current.style.opacity = 0;
+		this.overlayRef.current.classList.remove("hover");
 	}
 
 	componentDidMount() {
