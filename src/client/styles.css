@@ -368,6 +368,10 @@ body {
   transition-duration: 2s;
 }
 
+.scrollBlocked {
+  overflow-y: hidden;
+}
+
 .header {
   -webkit-animation-name: reveal;
           animation-name: reveal;
