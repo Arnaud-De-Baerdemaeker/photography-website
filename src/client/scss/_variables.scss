@@ -4,15 +4,13 @@
 
 // Colors
 $half-transparent: rgba(0, 0, 0, 0.5);
-$twenty-transparent: rgba(0, 0, 0, 0.8);
 $color-1: rgb(88, 129, 87);
 $color-2: rgb(58, 90, 64);
 $color-3: rgb(25, 39, 27);
 $color-4: rgb(16, 26, 18);
 $color-5: rgb(150, 150, 150);
-$color-6: rgb(50, 50, 50);
-$color-7: rgb(180, 180, 180);
-$color-8: rgb(182, 206, 186);
+$color-6: rgb(180, 180, 180);
+$color-7: rgb(182, 206, 186);
 
 
 // Fonts
@@ -28,53 +26,14 @@ $landscape: "(orientation: landscape)";
 
 
 // Breakpoints
-$bp-300: 18.75rem;
 $bp-400: 25rem;
-$bp-500: 31.25rem;
 $bp-600: 37.5rem;
-$bp-700: 43.75rem;
-$bp-800: 50rem;
-$bp-900: 56.25rem;
-$bp-1000: 62.5rem;
 $bp-1080: 67.5rem;
-$bp-1100: 68.75rem;
-$bp-1200: 75rem;
-$bp-1300: 81.25rem;
-$bp-1400: 87.5rem;
-$bp-1500: 93.75rem;
-$bp-1600: 100rem;
-$bp-1700: 106.25rem;
-$bp-1800: 112.5rem;
-$bp-1900: 120rem;
-$bp-1920: 120rem;
 
 
 // Media queries
-$mq-w300-up: "(min-width: #{$bp-300})";
-$mq-w400-up: "(min-width: #{$bp-400})";
-$mq-w500-up: "(min-width: #{$bp-500})";
 $mq-w600-up: "(min-width: #{$bp-600})";
-$mq-w700-up: "(min-width: #{$bp-700})";
-$mq-w800-up: "(min-width: #{$bp-800})";
-$mq-w900-up: "(min-width: #{$bp-900})";
-$mq-w1000-up: "(min-width: #{$bp-1000})";
 $mq-w1080-up: "(min-width: #{$bp-1080})";
-$mq-w1100-up: "(min-width: #{$bp-1100})";
-$mq-w1200-up: "(min-width: #{$bp-1200})";
-$mq-w1300-up: "(min-width: #{$bp-1300})";
-$mq-w1400-up: "(min-width: #{$bp-1400})";
-$mq-w1500-up: "(min-width: #{$bp-1500})";
-$mq-w1600-up: "(min-width: #{$bp-1600})";
-$mq-w1700-up: "(min-width: #{$bp-1700})";
-$mq-w1800-up: "(min-width: #{$bp-1800})";
-$mq-w1900-up: "(min-width: #{$bp-1900})";
-$mq-w1920-up: "(min-width: #{$bp-1920})";
 
 $mq-h400-up: "(min-height: #{$bp-400})";
-$mq-h500-up: "(min-height: #{$bp-500})";
-$mq-h600-up: "(min-height: #{$bp-600})";
-$mq-h700-up: "(min-height: #{$bp-700})";
-$mq-h800-up: "(min-height: #{$bp-800})";
-$mq-h900-up: "(min-height: #{$bp-900})";
-$mq-h1000-up: "(min-height: #{$bp-1000})";
 $mq-h1080-up: "(min-height: #{$bp-1080})";
