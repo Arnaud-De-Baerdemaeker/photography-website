@@ -12,7 +12,7 @@ import Gallery from "./galleryPage/gallery";
 import Error404 from "./error404/error404";
 import Footer from "./footer/footer";
 
-import photos from "../json/metadata.json";
+import photos from "./metadata.json";
 
 class App extends Component {
 	constructor(props) {
