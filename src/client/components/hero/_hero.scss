@@ -97,8 +97,8 @@
 
 			@media screen {
 				@media #{$portrait} {
-					@include fluidContent(font-size, 40px, 90, 40, 100vw, 300px, 1080, 300);
-					@include fluidContent(line-height, 40px, 90, 40, 100vw, 300px, 1080, 300);
+					@include fluidContent(font-size, 40px, 90, 40, 100vw);
+					@include fluidContent(line-height, 40px, 90, 40, 100vw);
 
 					@media #{$mq-w1080-up} {
 						font-size: 90px;
@@ -107,8 +107,8 @@
 				}
 
 				@media #{$landscape} {
-					@include fluidContent(font-size, 32px, 100, 32, 100vh, 300px, 1080, 300);
-					@include fluidContent(line-height, 32px, 100, 32, 100vh, 300px, 1080, 300);
+					@include fluidContent(font-size, 32px, 100, 32, 100vh);
+					@include fluidContent(line-height, 32px, 100, 32, 100vh);
 
 					@media #{$mq-h1080-up} {
 						font-size: 100px;
@@ -123,8 +123,8 @@
 
 			@media screen {
 				@media #{$portrait} {
-					@include fluidContent(font-size, 40px, 90, 40, 100vw, 300px, 1080, 300);
-					@include fluidContent(letter-spacing, 5px, 15, 5, 100vw, 300px, 1080, 300);
+					@include fluidContent(font-size, 40px, 90, 40, 100vw);
+					@include fluidContent(letter-spacing, 5px, 15, 5, 100vw);
 
 					@media #{$mq-w1080-up} {
 						font-size: 90px;
@@ -133,8 +133,8 @@
 				}
 
 				@media #{$landscape} {
-					@include fluidContent(font-size, 32px, 100, 32, 100vh, 300px, 1080, 300);
-					@include fluidContent(letter-spacing, 5px, 15, 5, 100vh, 300px, 1080, 300);
+					@include fluidContent(font-size, 32px, 100, 32, 100vh);
+					@include fluidContent(letter-spacing, 5px, 15, 5, 100vh);
 
 					@media #{$mq-h1080-up} {
 						font-size: 100px;
@@ -168,12 +168,12 @@
 				@extend .title;
 				z-index: 0;
 				display: block;
-				color: $color-8;
+				color: $color-7;
 				font-weight: 300;
 
 				@media screen {
 					@media #{$portrait} {
-						@include fluidContent(font-size, 300px, 670, 300, 100vw, 300px, 1080, 300);
+						@include fluidContent(font-size, 300px, 670, 300, 100vw);
 
 						@media #{$mq-w1080-up} {
 							font-size: 670px;
@@ -181,7 +181,7 @@
 					}
 
 					@media #{$landscape} {
-						@include fluidContent(font-size, 240px, 750, 240, 100vh, 300px, 1080, 300);
+						@include fluidContent(font-size, 240px, 750, 240, 100vh);
 
 						@media #{$mq-h1080-up} {
 							font-size: 750px;
@@ -216,8 +216,8 @@
 	&__scrollDownContainer { // <div>
 		@media screen {
 			@media #{$portrait} {
-				@include fluidContent(width, 30px, 40, 30, 100vw, 300px, 1080, 300);
-				@include fluidContent(height, 30px, 40, 30, 100vw, 300px, 1080, 300);
+				@include fluidContent(width, 30px, 40, 30, 100vw);
+				@include fluidContent(height, 30px, 40, 30, 100vw);
 
 				@media #{$mq-w1080-up} {
 					width: 40px;
@@ -226,8 +226,8 @@
 			}
 
 			@media #{$landscape} {
-				@include fluidContent(width, 28px, 42, 28, 100vh, 300px, 1080, 300);
-				@include fluidContent(height, 28px, 42, 28, 100vh, 300px, 1080, 300);
+				@include fluidContent(width, 28px, 42, 28, 100vh);
+				@include fluidContent(height, 28px, 42, 28, 100vh);
 
 				@media #{$mq-h1080-up} {
 					width: 42px;
@@ -272,7 +272,7 @@
 
 		@media screen {
 			@media #{$portrait} {
-				@include fluidContent(font-size, 14px, 24, 14, 100vw, 300px, 1080, 300);
+				@include fluidContent(font-size, 14px, 24, 14, 100vw);
 
 				@media #{$mq-w1080-up} {
 					font-size: 24px;

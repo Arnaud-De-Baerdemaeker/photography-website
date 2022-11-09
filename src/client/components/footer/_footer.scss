@@ -38,8 +38,8 @@
 
 		@media screen {
 			@media #{$portrait} {
-				@include fluidContent(width, 40px, 47, 40, 100vw, 300px, 1080, 300);
-				@include fluidContent(height, 40px, 47, 40, 100vw, 300px, 1080, 300);
+				@include fluidContent(width, 40px, 47, 40, 100vw);
+				@include fluidContent(height, 40px, 47, 40, 100vw);
 
 				@media #{$mq-w1080-up} {
 					width: 47px;
@@ -48,8 +48,8 @@
 			}
 
 			@media #{$landscape} {
-				@include fluidContent(width, 44px, 50, 44, 100vh, 300px, 1080, 300);
-				@include fluidContent(height, 44px, 50, 44, 100vh, 300px, 1080, 300);
+				@include fluidContent(width, 44px, 50, 44, 100vh);
+				@include fluidContent(height, 44px, 50, 44, 100vh);
 
 				@media #{$mq-h1080-up} {
 					width: 50px;
@@ -73,8 +73,8 @@
 
 		@media screen {
 			@media #{$portrait} {
-				@include fluidContent(width, 24px, 28, 25, 100vw, 300px, 1080, 300);
-				@include fluidContent(height, 24px, 28, 25, 100vw, 300px, 1080, 300);
+				@include fluidContent(width, 24px, 28, 25, 100vw);
+				@include fluidContent(height, 24px, 28, 25, 100vw);
 
 				@media #{$mq-w1080-up} {
 					width: 28px;
@@ -83,8 +83,8 @@
 			}
 
 			@media #{$landscape} {
-				@include fluidContent(width, 26px, 28, 24, 100vh, 300px, 1080, 300);
-				@include fluidContent(height, 26px, 28, 24, 100vh, 300px, 1080, 300);
+				@include fluidContent(width, 26px, 28, 24, 100vh);
+				@include fluidContent(height, 26px, 28, 24, 100vh);
 
 				@media #{$mq-h1080-up} {
 					width: 28px;
@@ -107,12 +107,12 @@
 	&__credits { // <p>
 		width: inherit;
 		margin: 0;
-		color: $color-7;
+		color: $color-6;
 		text-align: center;
 
 		@media screen {
 			@media #{$portrait} {
-				@include fluidContent(font-size, 14px, 16, 14, 100vw, 300px, 1080, 300);
+				@include fluidContent(font-size, 14px, 16, 14, 100vw);
 
 				@media #{$mq-w1080-up} {
 					font-size: 16px;
@@ -120,7 +120,7 @@
 			}
 
 			@media #{$landscape} {
-				@include fluidContent(font-size, 14px, 16, 14, 100vh, 300px, 1080, 300);
+				@include fluidContent(font-size, 14px, 16, 14, 100vh);
 
 				@media #{$mq-h1080-up} {
 					font-size: 16px;
@@ -131,7 +131,7 @@
 		&:last-of-type {
 			@media screen {
 				@media #{$portrait} {
-					@include fluidContent(font-size, 12px, 14, 12, 100vw, 300px, 1080, 300);
+					@include fluidContent(font-size, 12px, 14, 12, 100vw);
 
 					@media #{$mq-w1080-up} {
 						font-size: 14px;
@@ -139,7 +139,7 @@
 				}
 
 				@media #{$landscape} {
-					@include fluidContent(font-size, 12px, 14, 12, 100vh, 300px, 1080, 300);
+					@include fluidContent(font-size, 12px, 14, 12, 100vh);
 				}
 			}
 		}
