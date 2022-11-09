@@ -2,7 +2,7 @@
 // Started on July 2020
 // By Arnaud De Baerdemaeker
 
-import React, {Component, createRef} from "react";
+import React, {Component} from "react";
 import {Link} from "react-router-dom";
 
 import Name from "../name/name";
@@ -10,19 +10,13 @@ import Button from "../button/button";
 import SVG from "../svg/svg";
 
 class Header extends Component {
-	constructor(props) {
-		super(props);
-
-		this.header = createRef();
-	}
-
 	componentDidMount() {
 		window.addEventListener("scroll", () => {
 			if(window.scrollY > 0) {
-				this.header.current.classList.add("scroll");
+				this.props.headerRef.current.classList.add("scroll");
 			}
 			else if (window.screenY < 1) {
-				this.header.current.classList.remove("scroll");
+				this.props.headerRef.current.classList.remove("scroll");
 			}
 		});
 	}
@@ -34,7 +28,7 @@ class Header extends Component {
 	render() {
 		return (
 			<header
-				ref={this.header}
+				ref={this.props.headerRef}
 				className={"header"}
 			>
 				<Name class={"name--header"}>
