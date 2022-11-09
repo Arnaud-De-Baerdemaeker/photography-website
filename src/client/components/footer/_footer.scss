@@ -3,126 +3,145 @@
 // By Arnaud De Baerdemaeker
 
 .footer { // <footer>
-	background-color: $dark-green-2;
-	padding-top: 1.25rem;
-	box-shadow: 0 0 0.625rem $black-50;
+	background-color: $color-3;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 50px;
 
-	&--dark-mode {
-		@extend .footer;
-		background-color: $grey-45-dark-mode;
-		color: $white-215-dark-mode;
-	}
-
-	&__social-container { // <div>
-		padding: {
-			right: 1.25rem;
-			left: 1.25rem;
-		}
-		@media #{$mq-800-up} {
-			padding: unset;
-			max-width: 70vw;
-			margin: {
-				right: auto;
-				left: auto;
-			}
-		}
-		@media #{$mq-1500-up} {
-			max-width: 60vw;
-		}
+	&__socialNetworks { // <div>
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-top: 50px;
+		width: 100%;
+		max-width: 700px;
 	}
 
 	&__links { // <ul>
-		margin: {
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-		}
-		padding: {
-			top: 1rem;
-			right: 0;
-			bottom: 1rem;
-			left: 0;
-		}
-		border: {
-			top: {
-				style: solid;
-				width: 0.063rem;
-				color: $white;
-			}
-			bottom: {
-				style: solid;
-				width: 0.063rem;
-				color: $white;
-			}
-		}
+		width: 100%;
+		margin: 0;
+		padding: 0;
 		list-style-type: none;
 		display: flex;
 		justify-content: space-evenly;
-
-		&--dark-mode {
-			@extend .footer__links;
-			border: {
-				top-color: $white-215-dark-mode;
-				bottom-color: $white-215-dark-mode;
-			}
-		}
 	}
 
 	&__network { // <li>
-		height: 1.5rem;
-	}
+		text-align: center;
+		border: {
+			style: solid;
+			width: 1px;
+			color: white;
+			radius: 38px;
+		}
 
-	&__link { // <a>
-		display: block;
+		@media screen {
+			@media #{$portrait} {
+				@include fluidContent(width, 40px, 47, 40, 100vw);
+				@include fluidContent(height, 40px, 47, 40, 100vw);
 
-		.material-icons {
-			color: $white;
+				@media #{$mq-w1080-up} {
+					width: 47px;
+					height: 47px;
+				}
+			}
 
-			&.dark-mode {
-				color: $white-215-dark-mode;
+			@media #{$landscape} {
+				@include fluidContent(width, 44px, 50, 44, 100vh);
+				@include fluidContent(height, 44px, 50, 44, 100vh);
+
+				@media #{$mq-h1080-up} {
+					width: 50px;
+					height: 50px;
+				}
 			}
 		}
 	}
 
-	&__icon { // <svg>
-		color: $white;
-		font-size: 1.5rem;
+	&__link { // <a>
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: inherit;
+		height: inherit;
+		-webkit-tap-highlight-color: transparent;
+	}
 
-		&--dark-mode {
-			@extend .footer__icon;
-			color: $white-215-dark-mode;
+	&__icon.svg-inline--fa { // <svg>
+		color: white;
+
+		@media screen {
+			@media #{$portrait} {
+				@include fluidContent(width, 24px, 28, 25, 100vw);
+				@include fluidContent(height, 24px, 28, 25, 100vw);
+
+				@media #{$mq-w1080-up} {
+					width: 28px;
+					height: 28px;
+				}
+			}
+
+			@media #{$landscape} {
+				@include fluidContent(width, 26px, 28, 24, 100vh);
+				@include fluidContent(height, 26px, 28, 24, 100vh);
+
+				@media #{$mq-h1080-up} {
+					width: 28px;
+					height: 28px;
+				}
+			}
 		}
 	}
 
-	&__credits-container { // <div>
-		margin: {
-			top: 2rem;
-			right: 0;
-			bottom: 0;
-			left: 0;
-		}
-		padding-bottom: 4.75rem;
-		@media #{$mq-800-up} {
-			padding-bottom: 5rem;
-		}
-		@media #{$mq-1600-up} {
-			padding-bottom: 5.75rem;
-		}
+	&__creditsContainer { // <div>
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		max-width: 300px;
+		row-gap: 20px;
+		padding-bottom: 20px;
 	}
 
 	&__credits { // <p>
-		margin: {
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-		}
-		font: {
-			family: $quicksandRegular;
-			size: 0.8rem;
-		}
-		color: $white;
+		width: inherit;
+		margin: 0;
+		color: $color-6;
 		text-align: center;
+
+		@media screen {
+			@media #{$portrait} {
+				@include fluidContent(font-size, 14px, 16, 14, 100vw);
+
+				@media #{$mq-w1080-up} {
+					font-size: 16px;
+				}
+			}
+
+			@media #{$landscape} {
+				@include fluidContent(font-size, 14px, 16, 14, 100vh);
+
+				@media #{$mq-h1080-up} {
+					font-size: 16px;
+				}
+			}
+		}
+
+		&:last-of-type {
+			@media screen {
+				@media #{$portrait} {
+					@include fluidContent(font-size, 12px, 14, 12, 100vw);
+
+					@media #{$mq-w1080-up} {
+						font-size: 14px;
+					}
+				}
+
+				@media #{$landscape} {
+					@include fluidContent(font-size, 12px, 14, 12, 100vh);
+				}
+			}
+		}
 	}
 }

@@ -3,20 +3,20 @@
 // By Arnaud De Baerdemaeker
 
 @import
-	"css/fonts",
-	"css/variables",
-	"css/keyframes",
-	"css/global-styles",
-	"components/homepage/homepage",
-	"components/navigation/navigation",
+	"scss/variables",
+	"scss/keyframes",
+	"scss/mixins",
+	"scss/globalStyles",
 	"components/header/header",
-	"components/introduction/introduction",
-	"components/gallery-page/gallery",
-	"components/link/link",
-	"components/photos-list/photos-list",
-	"components/photos-cards/photos-cards",
-	"components/modal/modal",
+	"components/name/name",
 	"components/button/button",
-	"components/about-page/about",
+	"components/svg/svg",
+	"components/navigation/navigation",
+	"components/hero/hero",
+	"components/homepage/homepage",
+	"components/galleryPage/gallery",
+	"components/image/image",
+	"components/photosCards/photosCards",
+	"components/modal/modal",
 	"components/footer/footer"
 ;

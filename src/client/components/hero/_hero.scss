@@ -1,0 +1,290 @@
+// Photography website
+// Started on July 2020
+// By Arnaud De Baerdemaeker
+
+.hero { // <div>
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+
+	&__container {
+		position: absolute;
+		background: {
+			attachment: fixed;
+			repeat: no-repeat;
+			size: cover;
+		}
+		width: inherit;
+		height: inherit;
+	}
+
+	&__background {
+		background-position-x: 50%;
+		animation: {
+			duration: 10s;
+			timing-function: linear;
+		}
+
+		&--1 { // <div>
+			@extend .hero__background;
+			background-image: url("https://lh3.googleusercontent.com/M-Cy0zTisnpjaCobpnmSGw_csGA2HHgEu4wqXJPvjTl9GWDN2KLQPJ_AorRD3soNtjQIs6XIESn2F1UjePrTmZ8yw_gMpVNPFQJrYnDf131Lrog2HuzYKk5SJGLOTy_ojY6-KfIh6g=w1920-h1080");
+			animation-name: fadeInAndOut1;
+		}
+
+		&--2 { // <div>
+			@extend .hero__background;
+			background-image: url("https://lh3.googleusercontent.com/x-Epo9_cT7fBvPu03CuZ4Pxhsi6zxbtSEtQ4lAftMDGB6tNkEguZBX8lkX_OnGINJS-2j4tipj1ZRiEVyOanbOO3SO_mRA_vIJ3vN4RTasKjPi5vFaeK-AA3Wj14P7c5jGFHHf7T2g=w1920-h1080");
+			animation-name: fadeInAndOut2;
+		}
+
+		&--3 { // <div>
+			@extend .hero__background;
+			background: {
+				image: url("https://lh3.googleusercontent.com/EIR43zKJyT0G4aEqTYR7guf1B9W7LORp3ywN3aoy18yY4mg5iPNggkyTqfK3tS0BpfJk8Sf2oLYrIiWokbZYAY66z5aZMzmtwHdRxFqrdQfII9fXFefHDUgkT1Ti3Hz3COVTTrwHOA=w1920-h1080");
+				position-x: 20%;
+			}
+			animation-name: fadeInAndOut3;
+		}
+
+		&--4 { // <div>
+			@extend .hero__background;
+			background-image: url("https://lh3.googleusercontent.com/oWtO6I2-HLQ0O-PjWyl6oAQkVaihh_lrFXD3ioqemv-VrzeGjIV2ndFIrK3rOLMdiyGJaK99GXTEifULeifu7xw5E2VuO9rW2Bt6sf0f9CeOONPRSxOct7Y_I9x90mY9hlKdOQtM4A=w1920-h1080");
+			animation-name: fadeInAndOut4;
+		}
+
+		&--5 { // <div>
+			@extend .hero__background;
+			background: {
+				image: url("https://lh3.googleusercontent.com/RoO69wbLVhDxxXjpnJmnAcuv-hiiLlPJX-ip90np2tr_YdnP_y4i8CJ4LXdp5yCWv6HWLIf7oVCUhXwt0DgxNabsvjJ17NzTkNGcdChggeNGLF-uIibIslt7ezL3BdTlWhi_qtAxgw=w1920-h1080");
+				position-x: 65%;
+			}
+			animation-name: fadeInAndOut5;
+		}
+
+		&--404 { // <div>
+			@extend .hero__background;
+			background-image: url("https://lh3.googleusercontent.com/VlmRP9R6zjMXzUezjU6fpgAYt37rNritFrDMuhqAfy5RKjyvqCH9bd8tQdB-jx46sc_NWVg01aFu-voQ8dD74wjhSDt0yDl75-E6gf6fd3bw8yj4jSk_kZwMp8hp8WL2_b9UHO7S5A=w1920-h1080");
+			animation-duration: unset;
+		}
+	}
+
+	&__backFilter { // <div>
+		width: inherit;
+		height: inherit;
+		background-color: $half-transparent;
+	}
+
+	&__title {
+		@include revealOnLoad;
+		animation-delay: 1s;
+		margin: 0;
+		color: white;
+		font: {
+			family: $jost;
+			weight: 600;
+		}
+		text-align: center;
+		width: 100%;
+		letter-spacing: 2px;
+
+		&--homepage { // <h2>
+			@extend .hero__title;
+
+			@media screen {
+				@media #{$portrait} {
+					@include fluidContent(font-size, 40px, 90, 40, 100vw);
+					@include fluidContent(line-height, 40px, 90, 40, 100vw);
+
+					@media #{$mq-w1080-up} {
+						font-size: 90px;
+						line-height: 90px;
+					}
+				}
+
+				@media #{$landscape} {
+					@include fluidContent(font-size, 32px, 100, 32, 100vh);
+					@include fluidContent(line-height, 32px, 100, 32, 100vh);
+
+					@media #{$mq-h1080-up} {
+						font-size: 100px;
+						line-height: 100px;
+					}
+				}
+			}
+		}
+
+		&--gallery { // h2>
+			@extend .hero__title;
+
+			@media screen {
+				@media #{$portrait} {
+					@include fluidContent(font-size, 40px, 90, 40, 100vw);
+					@include fluidContent(letter-spacing, 5px, 15, 5, 100vw);
+
+					@media #{$mq-w1080-up} {
+						font-size: 90px;
+						letter-spacing: 15px;
+					}
+				}
+
+				@media #{$landscape} {
+					@include fluidContent(font-size, 32px, 100, 32, 100vh);
+					@include fluidContent(letter-spacing, 5px, 15, 5, 100vh);
+
+					@media #{$mq-h1080-up} {
+						font-size: 100px;
+						letter-spacing: 15px;
+					}
+				}
+			}
+		}
+
+		&--404 { // h2
+			@extend .hero__title;
+		}
+
+		.title {
+			position: relative;
+			z-index: 1;
+			display: block;
+
+			&__job {
+				&Part1 { // <span>
+					@extend .title;
+					font-weight: 200;
+				}
+
+				&Part2 { // <span>
+					@extend .title;
+				}
+			}
+
+			&__ampersand { // <span>
+				@extend .title;
+				z-index: 0;
+				display: block;
+				color: $color-7;
+				font-weight: 300;
+
+				@media screen {
+					@media #{$portrait} {
+						@include fluidContent(font-size, 300px, 670, 300, 100vw);
+
+						@media #{$mq-w1080-up} {
+							font-size: 670px;
+						}
+					}
+
+					@media #{$landscape} {
+						@include fluidContent(font-size, 240px, 750, 240, 100vh);
+
+						@media #{$mq-h1080-up} {
+							font-size: 750px;
+						}
+					}
+				}
+			}
+
+			&__hobby {
+				&Part1 { // <span>
+					@extend .title__jobPart1;
+				}
+
+				&Part2 { // <span>
+					@extend .title__jobPart2;
+				}
+			}
+		}
+	}
+
+	&__scrollDown { // <div>
+		@include revealOnLoad;
+		animation-delay: 1.5s;
+		position: absolute;
+		bottom: 20px;
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		opacity: 0;
+	}
+
+	&__scrollDownContainer { // <div>
+		@media screen {
+			@media #{$portrait} {
+				@include fluidContent(width, 30px, 40, 30, 100vw);
+				@include fluidContent(height, 30px, 40, 30, 100vw);
+
+				@media #{$mq-w1080-up} {
+					width: 40px;
+					height: 40px;
+				}
+			}
+
+			@media #{$landscape} {
+				@include fluidContent(width, 28px, 42, 28, 100vh);
+				@include fluidContent(height, 28px, 42, 28, 100vh);
+
+				@media #{$mq-h1080-up} {
+					width: 42px;
+					height: 42px;
+				}
+			}
+		}
+	}
+
+	.link__backToHomepage { // <a>
+		@include revealOnLoad;
+		animation-delay: 1.5s;
+		position: absolute;
+		bottom: 40px;
+		z-index: 0;
+		color: white;
+		text-decoration: none;
+		width: fit-content;
+		height: fit-content;
+		border: {
+			top: {
+				style: solid;
+				width: 1px;
+				color: transparent;
+			}
+			bottom: {
+				style: solid;
+				width: 1px;
+				color: transparent;
+			}
+		}
+		padding: {
+			top: 7.5px;
+			right: 7.5px;
+			bottom: 7.5px;
+			left: 7.5px;
+		}
+		transition: {
+			property: border-top-color border-bottom-color;
+			duration: 1s;
+		}
+
+		@media screen {
+			@media #{$portrait} {
+				@include fluidContent(font-size, 14px, 24, 14, 100vw);
+
+				@media #{$mq-w1080-up} {
+					font-size: 24px;
+				}
+			}
+		}
+
+		&:hover {
+			border: {
+				top-color: white;
+				bottom-color: white;
+			}
+		}
+	}
+}
