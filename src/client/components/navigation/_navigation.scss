@@ -51,7 +51,7 @@
 
 		@media screen {
 			@media #{$portrait} {
-				@include fluidContent(font-size, 40px, 100, 40, 100vw, 300px, 1080, 300);
+				@include fluidContent(font-size, 40px, 100, 40, 100vw);
 
 				@media #{$mq-w1080-up} {
 					font-size: 100px;
@@ -59,7 +59,7 @@
 			}
 
 			@media #{$landscape} {
-				@include fluidContent(font-size, 30px, 80, 30, 100vh, 300px, 1080, 300);
+				@include fluidContent(font-size, 30px, 80, 30, 100vh);
 
 				@media #{$mq-h1080-up} {
 					font-size: 80px;

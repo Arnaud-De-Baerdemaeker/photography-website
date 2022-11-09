@@ -14,8 +14,8 @@
 
 	@media screen {
 		@media #{$portrait} {
-			@include fluidContent(width, 36px, 48, 36, 100vw, 300px, 1080, 300);
-			@include fluidContent(height, 36px, 48, 36, 100vw, 300px, 1080, 300);
+			@include fluidContent(width, 36px, 48, 36, 100vw);
+			@include fluidContent(height, 36px, 48, 36, 100vw);
 
 			@media #{$mq-w1080-up} {
 				width: 48px;
@@ -24,8 +24,8 @@
 		}
 
 		@media #{$landscape} {
-			@include fluidContent(width, 36px, 48, 36, 100vh, 300px, 1080, 300);
-			@include fluidContent(height, 36px, 48, 36, 100vh, 300px, 1080, 300);
+			@include fluidContent(width, 36px, 48, 36, 100vh);
+			@include fluidContent(height, 36px, 48, 36, 100vh);
 
 			@media #{$mq-h1080-up} {
 				width: 48px;
@@ -39,7 +39,7 @@
 
 		@media screen {
 			@media #{$portrait} {
-				@include fluidContent(margin-right, 20px, 40, 20, 100vw, 300px, 1080, 300);
+				@include fluidContent(margin-right, 20px, 40, 20, 100vw);
 
 				@media #{$mq-w1080-up} {
 					margin-right: 40px;
@@ -47,7 +47,7 @@
 			}
 
 			@media #{$landscape} {
-				@include fluidContent(margin-right, 20px, 40, 20, 100vh, 300px, 1080, 300);
+				@include fluidContent(margin-right, 20px, 40, 20, 100vh);
 
 				@media #{$mq-h1080-up} {
 					margin-right: 40px;
