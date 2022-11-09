@@ -19,6 +19,7 @@ class Gallery extends Component {
 			isModalOpen: false
 		}
 
+		this.body = document.querySelector("body");
 		this.hdPictureFromClick;
 
 		this.toggleModal = this.toggleModal.bind(this);
@@ -27,9 +28,18 @@ class Gallery extends Component {
 	}
 
 	toggleModal() {
-		this.setState(state => ({
-			isModalOpen: !state.isModalOpen
+		this.setState(({isModalOpen}) => ({
+			isModalOpen: !isModalOpen
 		}));
+
+		if(this.state.isModalOpen === false) {
+			this.body.classList.add("scrollBlocked");
+			this.props.headerRef.current.classList.remove("scroll");
+		}
+		else {
+			this.body.classList.remove("scrollBlocked");
+			this.props.headerRef.current.classList.add("scroll");
+		}
 	}
 
 	handleClick(click) {
@@ -66,6 +76,9 @@ class Gallery extends Component {
 
 	componentWillUnmount() {
 		window.removeEventListener("scroll", () => {});
+
+		this.body.classList.remove("scrollBlocked");
+		this.props.headerRef.current.classList.add("scroll");
 	}
 
 	render() {
