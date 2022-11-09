@@ -2,7 +2,7 @@
 // Started on July 2020
 // By Arnaud De Baerdemaeker
 
-import React, {Component} from "react";
+import React, {Component, createRef} from "react";
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 
 import Header from "./header/header";
@@ -18,7 +18,10 @@ class App extends Component {
 		this.state = {
 			isMenuOpen: false
 		};
+
 		this.elements;
+
+		this.headerRef = createRef();
 
 		this.toggleMenu = this.toggleMenu.bind(this);
 		this.closeMenu = this.closeMenu.bind(this);
@@ -67,6 +70,7 @@ class App extends Component {
 			<BrowserRouter>
 				<Header
 					isMenuOpen={this.state.isMenuOpen}
+					headerRef={this.headerRef}
 					toggleMenu={this.toggleMenu}
 					closeMenu={this.closeMenu}
 				/>
@@ -82,6 +86,7 @@ class App extends Component {
 					>
 						<Gallery
 							isMenuOpen={this.state.isMenuOpen}
+							headerRef={this.headerRef}
 							toggleMenu={this.toggleMenu}
 							closeMenu={this.closeMenu}
 							applyHideClass={this.applyHideClass}
