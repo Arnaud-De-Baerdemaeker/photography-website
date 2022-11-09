@@ -18,6 +18,14 @@ Le site a été développé en ReactJS et mis en page avec SCSS.
 
 ## Versions
 
+### 2.0.0
+- Refonte totale de l'apparence du site
+- Fusion de la page d'accueil et de la page A propos
+- Ajout du menu dans un volet
+- Ajout de quelques nouvelles photos
+- Structure de la page Galerie plus simplifiée
+- Ajout de diverses animations
+
 ### 1.1.2
 - Correction d'un bug qui empêche le rechargement des pages en dehors de la page d'accueil
 
