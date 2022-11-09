@@ -1,0 +1,16 @@
+// Photography website
+// Started on July 2020
+// By Arnaud De Baerdemaeker
+
+@mixin fluidContent($property, $min-size-px, $max-size, $min-size, $max-viewport-vw-vh) {
+	#{$property}: calc(#{$min-size-px} + (#{$max-size} - #{$min-size}) * ((#{$max-viewport-vw-vh} - 300px) / (1080 - 300)));
+}
+
+@mixin revealOnLoad {
+	animation: {
+		name: reveal;
+		duration: 2s;
+		delay: 0.5s;
+		fill-mode: both;
+	}
+}

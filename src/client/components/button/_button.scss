@@ -1,46 +1,64 @@
-.button {
-    &__container { // <div>
-        margin: {
-            top: 1rem;
-            right: 0;
-            bottom: 0;
-            left: 0;
-        }
-        padding: {
-            top: 0;
-            right: 1rem;
-            bottom: 1rem;
-            left: 1rem;
-        }
-        align-self: flex-end;
-    }
+.button { // <button>
+	position: relative;
+	margin: {
+		top: 0;
+		bottom: 0;
+		left: 0;
+	}
+	padding: 0;
+	background-color: unset;
+	border: unset;
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+	outline: none;
 
-    &__item { // <button>
-        display: block;
-        width: 100%;
-        border: none;
-        font: {
-            family: $quicksandRegular;
-            size: 1rem;
-        }
-        padding: {
-            top: 0.5rem;
-            right: 1rem;
-            bottom: 0.5rem;
-            left: 1rem;
-        }
-        border: {
-            radius: 0.2rem;
-        }
-        color: $white;
-        background-color: $dark-green;
-        letter-spacing: 0.063rem;
-        box-shadow: 0 0.063rem 0.125rem $black-50;
-        cursor: pointer;
+	@media screen {
+		@media #{$portrait} {
+			@include fluidContent(width, 36px, 48, 36, 100vw);
+			@include fluidContent(height, 36px, 48, 36, 100vw);
 
-        &--dark-mode {
-            @extend .button__item;
-            color: $white-215-dark-mode;
-        }
-    }
+			@media #{$mq-w1080-up} {
+				width: 48px;
+				height: 48px;
+			}
+		}
+
+		@media #{$landscape} {
+			@include fluidContent(width, 36px, 48, 36, 100vh);
+			@include fluidContent(height, 36px, 48, 36, 100vh);
+
+			@media #{$mq-h1080-up} {
+				width: 48px;
+				height: 48px;
+			}
+		}
+	}
+
+	&__menu { // <button>
+		@extend .button;
+
+		@media screen {
+			@media #{$portrait} {
+				@include fluidContent(margin-right, 20px, 40, 20, 100vw);
+
+				@media #{$mq-w1080-up} {
+					margin-right: 40px;
+				}
+			}
+
+			@media #{$landscape} {
+				@include fluidContent(margin-right, 20px, 40, 20, 100vh);
+
+				@media #{$mq-h1080-up} {
+					margin-right: 40px;
+				}
+			}
+		}
+	}
+
+	&__modal { // <button>
+		@extend .button;
+		position: absolute;
+		bottom: 40px;
+	}
 }

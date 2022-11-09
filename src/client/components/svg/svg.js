@@ -4,19 +4,19 @@
 
 import React, {Component} from "react";
 
-class Button extends Component {
+class SVG extends Component {
 	render() {
-		return (
-			<button
-				type={"button"}
-				onClick={this.props.function}
-				alt={this.props.alt}
+		return(
+			<svg
+				viewBox={this.props.viewBox}
+				xmlns={"http://www.w3.org/2000/svg"}
+				xmlnsXlink={"http://www.w3.org/1999/xlink"}
 				className={this.props.class}
 			>
 				{this.props.children}
-			</button>
+			</svg>
 		);
 	}
 }
 
-export default Button;
+export default SVG;

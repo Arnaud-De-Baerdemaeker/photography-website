@@ -2,62 +2,145 @@
 // Started on July 2020
 // By Arnaud De Baerdemaeker
 
-.home-page {
-	&__container { // <div>
-		background: {
-			image: url("https://lh3.googleusercontent.com/M-Cy0zTisnpjaCobpnmSGw_csGA2HHgEu4wqXJPvjTl9GWDN2KLQPJ_AorRD3soNtjQIs6XIESn2F1UjePrTmZ8yw_gMpVNPFQJrYnDf131Lrog2HuzYKk5SJGLOTy_ojY6-KfIh6g=w1920-h1080");
-			attachment: fixed;
-			repeat: no-repeat;
-			size: cover;
-			position-x: 70%;
-		}
-		width: 100vw;
-		height: 100vh;
+.homepage { // <main>
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 4.6875rem;
+	margin: {
+		right: auto;
+		left: auto;
 	}
-		
-	&__title-container { // <div>
-		display: grid;
-		align-content: center;
-		width: 100vw;
-		height: 100vh;
-		backdrop-filter: brightness(60%);
+	padding: {
+		top: 6.25rem;
+		right: 20px;
+		bottom: 6.25rem;
+		left: 20px;
 	}
 
-	&__main-title { // <h1>
-		font: {
-			family: $zcoolXiaoWeiRegular;
-			size: 9.5vw;
-			weight: 100;
-		}
-		color: $white;
-		text-align: center;
-		letter-spacing: 0.2vw;
-		text-shadow: 0 0 0.469rem $white;
-		margin: {
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-		}
-		@media #{$mq-500-up} {
-			font: {
-				size: 6.5vw;
+	&__myPhoto { // <div>
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 2.5rem;
+
+		@media screen {
+			@media #{$portrait} {
+				max-width: 700px;
+			}
+
+			@media #{$landscape} {
+				max-width: 1000px;
 			}
 		}
-		@media #{$mq-700-up} {
-			font: {
-				size: 6vw;
+	}
+
+	&__introduction { // <p>
+		font-family: $economica;
+		margin: 0;
+
+		@media screen {
+			@media #{$portrait} {
+				@include fluidContent(font-size, 30px, 40, 30, 100vw);
+
+				@media #{$mq-w1080-up} {
+					font-size: 40px;
+				}
+			}
+
+			@media #{$landscape} {
+				@include fluidContent(font-size, 28px, 50, 28, 100vh);
+
+				@media #{$mq-h1080-up} {
+					font-size: 50px;
+				}
 			}
 		}
-		@media #{$mq-1000-up} {
-			font: {
-				size: 5.5vw;
+	}
+
+	&__description { // <div>
+		display: flex;
+		flex-direction: column;
+		row-gap: 3.125rem;
+
+		@media screen {
+			@media #{$portrait} {
+				max-width: 700px;
+			}
+
+			@media #{$landscape} {
+				max-width: 1000px;
+			}
+		}
+	}
+
+	&__section { // <div>
+		display: flex;
+		flex-direction: column;
+		row-gap: 1.5625rem;
+	}
+
+	&__title { // <h3>
+		font-family: $economica;
+		border-left: {
+			style: solid;
+			width: 0.3125rem;
+			color: $color-2;
+		}
+		padding: {
+			top: 0.625rem;
+			bottom: 0.625rem;
+			left: 1.25rem;
+		}
+		margin: 0;
+
+		@media screen {
+			@media #{$portrait} {
+				@include fluidContent(font-size, 28px, 38, 28, 100vw);
+
+				@media #{$mq-w1080-up} {
+					font-size: 38px;
+				}
+			}
+
+			@media #{$landscape} {
+				@include fluidContent(font-size, 28px, 40, 28, 100vh);
+
+				@media #{$mq-h1080-up} {
+					font-size: 40px;
+				}
 			}
 		}
 
-		&--dark-mode {
-			@extend .home-page__main-title;
-			color: $white-230-dark-mode;
+		&:after {
+			content: "\002E";
+			color: $color-2;
+		}
+	}
+
+	&__paragraph { // <p>
+		margin: 0;
+
+		@media screen {
+			@media #{$portrait} {
+				@include fluidContent(font-size, 18px, 20, 18, 100vw);
+				@include fluidContent(line-height, 28px, 32, 28, 100vh);
+
+				@media #{$mq-w1080-up} {
+					font-size: 20px;
+					line-height: 32px;
+				}
+			}
+
+			@media #{$landscape} {
+				@include fluidContent(font-size, 18px, 22, 18, 100vh);
+				@include fluidContent(line-height, 28px, 32, 28, 100vh);
+
+				@media #{$mq-h1080-up} {
+					font-size: 22px;
+					line-height: 32px;
+				}
+			}
 		}
 	}
 }

@@ -1,72 +1,24 @@
-.header {
-    &__container { // <header>
-        background-color: $dark-green;
-        box-shadow: 0 0 0.625rem $black-50;
+// Photography website
+// Started on July 2020
+// By Arnaud De Baerdemaeker
 
-        &--dark-mode {
-            background-color: $grey-30-dark-mode;
-        }
-    }
+.header { // <header>
+	@include revealOnLoad;
+	position: fixed;
+	top: 0;
+	z-index: 4;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: rgba(25, 39, 27, 0);
+	clip-path: ellipse(100% 100% at 50% 0%);
+	transition: {
+		property: background-color filter;
+		duration: 1s;
+	}
+}
 
-    &__main-title--other-pages { // <h1>
-        font: {
-            family: $zcoolXiaoWeiRegular;
-            size: 0.8rem;
-        }
-        color: $white;
-        background-color: $dark-green-2;
-        letter-spacing: 0.188rem;
-        margin: {
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-        }
-        padding: {
-            top: 0;
-            right: 1.25rem;
-            bottom: 0;
-            left: 1.25rem;
-        }
-        height: 3rem;
-        line-height: 3rem;
-
-        &--dark-mode {
-            @extend .header__main-title--other-pages;
-            color: $white-230-dark-mode;
-            background-color: $grey-45-dark-mode;
-        }
-    }
-
-    &__title { // <div>
-        height: 10rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        @media #{$mq-600-up} {
-            height: 15rem;
-        }
-        @media #{$mq-1000-up} {
-            max-width: 50vw;
-            margin: {
-                right: auto;
-                left: auto;
-            }
-        }
-    }
-
-    &__subtitle { // <h3>
-        font: {
-            family: $quicksandRegular;
-            size: 1.75rem;
-        }
-        color: $white;
-        letter-spacing: 0.313rem;
-
-        &--dark-mode {
-            @extend .header__subtitle;
-            color: $white-230-dark-mode;
-        }
-    }
+.scroll {
+	background-color: rgba(25, 39, 27, 1);
 }
