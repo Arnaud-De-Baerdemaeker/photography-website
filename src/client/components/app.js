@@ -12,6 +12,8 @@ import Gallery from "./galleryPage/gallery";
 import Error404 from "./error404/error404";
 import Footer from "./footer/footer";
 
+import photos from "../json/metadata.json";
+
 class App extends Component {
 	constructor(props) {
 		super(props);
@@ -87,6 +89,7 @@ class App extends Component {
 						<Gallery
 							isMenuOpen={this.state.isMenuOpen}
 							headerRef={this.headerRef}
+							photos={photos}
 							toggleMenu={this.toggleMenu}
 							closeMenu={this.closeMenu}
 							applyHideClass={this.applyHideClass}
