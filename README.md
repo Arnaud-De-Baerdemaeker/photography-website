@@ -18,6 +18,9 @@ Le site a été développé en ReactJS et mis en page avec SCSS.
 
 ## Versions
 
+### 2.0.2
+- Correction du comportement de l'arrière-plan de l'en-tête
+
 ### 2.0.1
 - Correction de la déclaration d'un chemin
 
