@@ -18,6 +18,9 @@ Le site a été développé en ReactJS et mis en page avec SCSS.
 
 ## Versions
 
+### 2.0.1
+- Correction de la déclaration d'un chemin
+
 ### 2.0.0
 - Refonte totale de l'apparence du site
 - Fusion de la page d'accueil et de la page A propos

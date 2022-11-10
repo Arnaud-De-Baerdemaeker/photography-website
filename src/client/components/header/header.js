@@ -15,7 +15,7 @@ class Header extends Component {
 			if(window.scrollY > 0) {
 				this.props.headerRef.current.classList.add("scroll");
 			}
-			else if (window.screenY < 1) {
+			else if(window.screenY < 1) {
 				this.props.headerRef.current.classList.remove("scroll");
 			}
 		});
