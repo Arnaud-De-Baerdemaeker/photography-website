@@ -30,6 +30,11 @@ class HomePage extends Component {
 			const refetchedElements = fetchedElements;
 			this.props.revealOnScroll(refetchedElements);
 		});
+
+		// Remove the scroll style when the user returns to the homepage without having scrolled before
+		if(window.scrollY === 0) {
+			this.props.headerRef.current.classList.remove("scroll");
+		}
 	}
 
 	componentWillUnmount() {
