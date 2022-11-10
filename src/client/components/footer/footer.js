@@ -104,10 +104,10 @@ class Footer extends Component {
 						{"De Baerdemaeker"}
 					</Name>
 					<p className={"footer__credits"}>
-						{`2021 - ${year.getUTCFullYear()} • Tous droits réservés`}
+						{`${year.getUTCFullYear()} • Tous droits réservés`}
 					</p>
 					<p className={"footer__credits"}>
-						{"Version 2.0.0"}
+						{"Version 2.0.2"}
 					</p>
 				</div>
 			</footer>
