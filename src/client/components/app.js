@@ -102,6 +102,7 @@ class App extends Component {
 					>
 						<HomePage
 							isMenuOpen={this.state.isMenuOpen}
+							headerRef={this.headerRef}
 							toggleMenu={this.toggleMenu}
 							closeMenu={this.closeMenu}
 							applyHideClass={this.applyHideClass}
