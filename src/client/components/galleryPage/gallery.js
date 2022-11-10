@@ -9,13 +9,11 @@ import SVG from "../svg/svg";
 import PhotosCards from "../photosCards/photosCards";
 import Modal from "../modal/modal";
 
-import photos from "../../json/metadata.json";
-
 class Gallery extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			photos: photos,
+			photos: this.props.photos,
 			isModalOpen: false
 		}
 
