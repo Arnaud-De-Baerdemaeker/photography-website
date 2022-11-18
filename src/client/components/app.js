@@ -12,23 +12,33 @@ import Gallery from "./galleryPage/gallery";
 import Error404 from "./error404/error404";
 import Footer from "./footer/footer";
 
-import photos from "./metadata.json";
-
 class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			isMenuOpen: false
 		};
-
 		this.elements;
 
 		this.headerRef = createRef();
 
+		this.setTabTitle = this.setTabTitle.bind(this);
+		this.backToTop = this.backToTop.bind(this);
 		this.toggleMenu = this.toggleMenu.bind(this);
 		this.closeMenu = this.closeMenu.bind(this);
+		this.setScrollReveal = this.setScrollReveal.bind(this);
 		this.applyHideClass = this.applyHideClass.bind(this);
 		this.revealOnScroll = this.revealOnScroll.bind(this);
+	}
+
+	setTabTitle(title) {
+		document.title = title;
+	}
+
+	backToTop() {
+		if (window.scrollY !== 0) {
+			window.scrollTo(0, 0);
+		}
 	}
 
 	toggleMenu() {
@@ -43,6 +53,20 @@ class App extends Component {
 				isMenuOpen: false
 			});
 		}
+	}
+
+	setScrollReveal(elements) {
+		// Get the elements to hide
+		const fetchedElements = elements;
+
+		// Apply a class to initially hide the elements
+		this.applyHideClass(fetchedElements);
+
+		// Each time the user scrolls, the list of elements is refreshed and sent to a function
+		window.addEventListener("scroll", () => {
+			const refetchedElements = fetchedElements;
+			this.revealOnScroll(refetchedElements);
+		});
 	}
 
 	applyHideClass(elements) {
@@ -89,9 +113,11 @@ class App extends Component {
 						<Gallery
 							isMenuOpen={this.state.isMenuOpen}
 							headerRef={this.headerRef}
-							photos={photos}
+							setTabTitle={this.setTabTitle}
+							backToTop={this.backToTop}
 							toggleMenu={this.toggleMenu}
 							closeMenu={this.closeMenu}
+							setScrollReveal={this.setScrollReveal}
 							applyHideClass={this.applyHideClass}
 							revealOnScroll={this.revealOnScroll}
 						/>
@@ -103,14 +129,17 @@ class App extends Component {
 						<HomePage
 							isMenuOpen={this.state.isMenuOpen}
 							headerRef={this.headerRef}
+							setTabTitle={this.setTabTitle}
+							backToTop={this.backToTop}
 							toggleMenu={this.toggleMenu}
 							closeMenu={this.closeMenu}
+							setScrollReveal={this.setScrollReveal}
 							applyHideClass={this.applyHideClass}
 							revealOnScroll={this.revealOnScroll}
 						/>
 					</Route>
 					<Route path="*">
-						<Error404 />
+						<Error404 setTabTitle={this.setTabTitle} />
 					</Route>
 				</Switch>
 				<Footer
