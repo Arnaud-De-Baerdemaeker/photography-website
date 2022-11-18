@@ -20,6 +20,7 @@ class Error404 extends Component {
 	render() {
 		return(
 			<Hero
+				heroContainerClass={" hero__background--404"}
 				heroTitleClass={"hero__title--404"}
 				heroTitleContent={"La page recherchée n'existe pas"}
 				heroBackToHomepage={
