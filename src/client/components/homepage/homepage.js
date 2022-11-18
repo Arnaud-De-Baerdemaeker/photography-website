@@ -10,31 +10,25 @@ import SVG from "../svg/svg";
 import myPhoto from "../../images/moi.png";
 
 class HomePage extends Component {
-	componentDidMount() {
-		document.title = "Accueil | Arnaud De Baerdemaeker";
+	constructor(props) {
+		super(props);
+		this.tabTitle = "Accueil | Arnaud De Baerdemaeker";
 
-		// The condition checks if the scroll value is different from 0
-		if (window.scrollY !== 0) {
-			// If so, it sets the view at the top
-			window.scrollTo(0, 0);
-		}
+		this.removeHeaderScrollStyle = this.removeHeaderScrollStyle.bind(this);
+	}
 
-		// Get the elements to hide
-		const fetchedElements = document.querySelectorAll(".svg__background, .homepage__introduction, .homepage__title, .homepage__paragraph");
-
-		// Apply a class to initially hide the elements
-		this.props.applyHideClass(fetchedElements);
-
-		// Each time the user scrolls, the list of elements is refreshed and sent to a function
-		window.addEventListener("scroll", () => {
-			const refetchedElements = fetchedElements;
-			this.props.revealOnScroll(refetchedElements);
-		});
-
-		// Remove the scroll style when the user returns to the homepage without having scrolled before
+	removeHeaderScrollStyle() {
 		if(window.scrollY === 0) {
 			this.props.headerRef.current.classList.remove("scroll");
 		}
+	}
+
+	componentDidMount() {
+		this.props.setTabTitle(this.tabTitle);
+		this.props.backToTop();
+		const fetchedElements = document.querySelectorAll(".svg__background, .homepage__introduction, .homepage__title, .homepage__paragraph");
+		this.props.setScrollReveal(fetchedElements);
+		this.removeHeaderScrollStyle();
 	}
 
 	componentWillUnmount() {

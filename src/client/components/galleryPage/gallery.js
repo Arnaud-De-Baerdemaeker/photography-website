@@ -17,14 +17,15 @@ class Gallery extends Component {
 			photos: "",
 			isModalOpen: false,
 		}
-
 		this.body = document.querySelector("body");
+		this.tabTitle = "Galerie | Arnaud De Baerdemaeker";
 		this.hdPictureFromClick;
 
 		this.getPhotos = this.getPhotos.bind(this);
 		this.toggleModal = this.toggleModal.bind(this);
 		this.handleClick = this.handleClick.bind(this);
 		this.getDataFromTarget = this.getDataFromTarget.bind(this);
+		this.removeScrollLock = this.removeScrollLock.bind(this);
 	}
 
 	async getPhotos() {
@@ -79,39 +80,22 @@ class Gallery extends Component {
 		this.hdPictureFromClick = click.target.dataset.hd;
 	}
 
+	removeScrollLock() {
+		this.body.classList.remove("scrollBlocked");
+		this.props.headerRef.current.classList.add("scroll");
+	}
+
 	componentDidMount() {
-		document.title = "Galerie | Arnaud De Baerdemaeker";
-
-		/*
-			Return a the top when the component mounts if it wasn't already
-		*/
-		if (window.scrollY !== 0) {
-			window.scrollTo(0, 0);
-		}
-
-		this.getPhotos();
-
-		/*
-			Get elements to apply the scroll reveal function
-		*/
-		// Get the elements to hide
+		this.props.setTabTitle(this.tabTitle);
+		this.props.backToTop();
 		const fetchedElements = document.querySelectorAll(".gallery__listItem");
-
-		// Apply a class to initially hide the elements
-		this.props.applyHideClass(fetchedElements);
-
-		// Each time the user scrolls, the list of elements is refreshed and sent to a function
-		window.addEventListener("scroll", () => {
-			const refetchedElements = fetchedElements;
-			this.props.revealOnScroll(refetchedElements);
-		});
+		this.props.setScrollReveal(fetchedElements);
+		this.getPhotos();
 	}
 
 	componentWillUnmount() {
 		window.removeEventListener("scroll", () => {});
-
-		this.body.classList.remove("scrollBlocked");
-		this.props.headerRef.current.classList.add("scroll");
+		this.removeScrollLock();
 	}
 
 	render() {
