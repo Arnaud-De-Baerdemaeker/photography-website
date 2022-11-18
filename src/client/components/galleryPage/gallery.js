@@ -3,6 +3,7 @@
 // By Arnaud De Baerdemaeker
 
 import React, {Component} from "react";
+import axios from "axios";
 
 import Hero from "../hero/hero";
 import SVG from "../svg/svg";
@@ -13,16 +14,44 @@ class Gallery extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			photos: this.props.photos,
-			isModalOpen: false
+			photos: "",
+			isModalOpen: false,
 		}
 
 		this.body = document.querySelector("body");
 		this.hdPictureFromClick;
 
+		this.getPhotos = this.getPhotos.bind(this);
 		this.toggleModal = this.toggleModal.bind(this);
 		this.handleClick = this.handleClick.bind(this);
 		this.getDataFromTarget = this.getDataFromTarget.bind(this);
+	}
+
+	async getPhotos() {
+		const request = await axios({
+			method: "GET",
+			url: "https://www.flickr.com/services/rest/?method=flickr.photosets.getPhotos",
+			headers: {
+				"Content-Type": "application/json"
+			},
+			params: {
+				api_key: process.env.API_KEY,
+				photoset_id: process.env.PHOTOSET,
+				format: "json",
+				nojsoncallback: 1,
+				extras: "url_o, url_c"
+			}
+		})
+		.then(result => {
+			return result;
+		})
+		.catch(error => {
+			return error;
+		});
+
+		this.setState({
+			photos: request.data
+		});
 	}
 
 	toggleModal() {
@@ -53,12 +82,18 @@ class Gallery extends Component {
 	componentDidMount() {
 		document.title = "Galerie | Arnaud De Baerdemaeker";
 
-		// The condition checks if the scroll value is different from 0
+		/*
+			Return a the top when the component mounts if it wasn't already
+		*/
 		if (window.scrollY !== 0) {
-			// If so, it sets the view at the top
 			window.scrollTo(0, 0);
 		}
 
+		this.getPhotos();
+
+		/*
+			Get elements to apply the scroll reveal function
+		*/
 		// Get the elements to hide
 		const fetchedElements = document.querySelectorAll(".gallery__listItem");
 
@@ -114,15 +149,14 @@ class Gallery extends Component {
 				/>
 				<main className={"gallery"}>
 					<ul className={"gallery__list"}>
-						{this.state.photos.map(photo =>
+						{this.state.photos && this.state.photos.photoset.photo.map(data =>
 							<li
-								key={photo.id}
+								key={data.id}
 								className={"gallery__listItem"}
 							>
 								<PhotosCards
-									sd={photo.sd}
-									hd={photo.hd}
-									location={photo.location}
+									sd={data.url_c}
+									hd={data.url_o}
 									isModalOpen={this.state.isModalOpen}
 									toggleModal={this.toggleModal}
 									handleClick={this.handleClick}
