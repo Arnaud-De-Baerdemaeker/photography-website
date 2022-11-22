@@ -15,7 +15,7 @@ class Gallery extends Component {
 		super(props);
 		this.state = {
 			photos: "",
-			isModalOpen: false,
+			isModalOpen: false
 		}
 		this.body = document.querySelector("body");
 		this.tabTitle = "Galerie | Arnaud De Baerdemaeker";
@@ -26,6 +26,7 @@ class Gallery extends Component {
 		this.handleClick = this.handleClick.bind(this);
 		this.getDataFromTarget = this.getDataFromTarget.bind(this);
 		this.removeScrollLock = this.removeScrollLock.bind(this);
+		this.getElementsForScrollReveal = this.getElementsForScrollReveal.bind(this);
 	}
 
 	async getPhotos() {
@@ -51,8 +52,11 @@ class Gallery extends Component {
 		});
 
 		this.setState({
-			photos: request.data
+			photos: request.data,
+			isFetchOver: true
 		});
+
+		this.getElementsForScrollReveal();
 	}
 
 	toggleModal() {
@@ -85,11 +89,14 @@ class Gallery extends Component {
 		this.props.headerRef.current.classList.add("scroll");
 	}
 
+	getElementsForScrollReveal() {
+		const fetchedElements = document.querySelectorAll(".gallery__listItem");
+		this.props.setScrollReveal(fetchedElements);
+	}
+
 	componentDidMount() {
 		this.props.setTabTitle(this.tabTitle);
 		this.props.backToTop();
-		const fetchedElements = document.querySelectorAll(".gallery__listItem");
-		this.props.setScrollReveal(fetchedElements);
 		this.getPhotos();
 	}
 
