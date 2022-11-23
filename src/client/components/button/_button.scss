@@ -60,5 +60,7 @@
 		@extend .button;
 		position: absolute;
 		bottom: 40px;
+		background-color: $color-2;
+		border-radius: 50%;
 	}
 }
