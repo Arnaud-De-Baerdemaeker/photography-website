@@ -529,6 +529,8 @@ body {
 .button__modal {
   position: absolute;
   bottom: 40px;
+  background-color: rgb(58, 90, 64);
+  border-radius: 50%;
 }
 
 .svg, .svg__close, .svg__background, .svg__scrollDown, .svg__menu {
@@ -673,12 +675,31 @@ body {
 .menu__list {
   display: flex;
   flex-direction: column;
-  row-gap: 1.875rem;
   list-style-type: none;
   margin: 0;
   padding: 0;
   opacity: 1;
   text-align: center;
+}
+@media screen and (orientation: portrait) {
+  .menu__list {
+    row-gap: calc(50px + (200 - 50) * ((100vw - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 67.5rem) {
+  .menu__list {
+    row-gap: 200px;
+  }
+}
+@media screen and (orientation: landscape) {
+  .menu__list {
+    row-gap: calc(35px + (150 - 35) * ((100vh - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: landscape) and (min-height: 67.5rem) {
+  .menu__list {
+    row-gap: 150px;
+  }
 }
 .menu__link {
   display: flex;
@@ -872,6 +893,7 @@ body {
   z-index: 0;
   display: block;
   color: rgb(182, 206, 186);
+  opacity: 0.5;
   font-weight: 300;
 }
 @media screen and (orientation: portrait) {
@@ -1136,6 +1158,29 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
+  row-gap: 5px;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+@media screen and (orientation: portrait) {
+  .gallery__list {
+    width: calc(250px + (800 - 250) * ((100vw - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 67.5rem) {
+  .gallery__list {
+    width: 800px;
+  }
+}
+@media screen and (orientation: landscape) {
+  .gallery__list {
+    width: calc(400px + (1400 - 400) * ((100vh - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: landscape) and (min-height: 67.5rem) {
+  .gallery__list {
+    width: 1400px;
+  }
 }
 @media screen and (orientation: portrait) {
   .gallery__listItem {
@@ -1144,22 +1189,18 @@ body {
 }
 @media screen and (orientation: portrait) and (min-width: 37.5rem) {
   .gallery__listItem {
-    width: 50%;
+    width: calc(50% - 5px);
   }
 }
 @media screen and (orientation: landscape) {
   .gallery__listItem {
+    width: calc(50% - 5px);
     aspect-ratio: 5/1;
   }
 }
 @media screen and (orientation: landscape) and (min-height: 25rem) {
   .gallery__listItem {
     aspect-ratio: 3/1;
-  }
-}
-@media screen and (orientation: landscape) and (min-width: 37.5rem) {
-  .gallery__listItem {
-    width: 50%;
   }
 }
 
@@ -1197,69 +1238,6 @@ body {
 @media screen and (hover: hover) {
   .photosCards:hover {
     filter: grayscale(0%);
-  }
-}
-.photosCards__overlay {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: inherit;
-  height: inherit;
-  pointer-events: none;
-  opacity: 0;
-  background-image: linear-gradient(90deg, black 0%, transparent 75%);
-  transition-property: opacity;
-  transition-duration: 1s;
-}
-.photosCards__city, .photosCards__country {
-  text-transform: uppercase;
-}
-@media screen and (orientation: portrait) {
-  .photosCards__city, .photosCards__country {
-    font-size: calc(18px + (22 - 18) * ((100vw - 300px) / (1080 - 300)));
-    margin-left: calc(20px + (40 - 20) * ((100vw - 300px) / (1080 - 300)));
-  }
-}
-@media screen and (orientation: portrait) and (min-width: 67.5rem) {
-  .photosCards__city, .photosCards__country {
-    font-size: 22px;
-    margin-left: 40px;
-  }
-}
-@media screen and (orientation: landscape) {
-  .photosCards__city, .photosCards__country {
-    font-size: calc(16px + (28 - 16) * ((100vh - 300px) / (1080 - 300)));
-    margin-left: calc(30px + (50 - 30) * ((100vh - 300px) / (1080 - 300)));
-  }
-}
-@media screen and (orientation: landscape) and (min-height: 67.5rem) {
-  .photosCards__city, .photosCards__country {
-    font-size: 28px;
-    margin-left: 50px;
-  }
-}
-.photosCards__country {
-  text-transform: none;
-}
-@media screen and (orientation: portrait) {
-  .photosCards__country {
-    font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1080 - 300)));
-  }
-}
-@media screen and (orientation: portrait) and (min-width: 67.5rem) {
-  .photosCards__country {
-    font-size: 18px;
-  }
-}
-@media screen and (orientation: landscape) {
-  .photosCards__country {
-    font-size: calc(14px + (18 - 14) * ((100vh - 300px) / (1080 - 300)));
-  }
-}
-@media screen and (orientation: landscape) and (min-height: 67.5rem) {
-  .photosCards__country {
-    font-size: 18px;
   }
 }
 .photosCards__image {
