@@ -25,70 +25,70 @@
 		}
 	}
 
-	&__overlay { // <div>
-		position: absolute;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		width: inherit;
-		height: inherit;
-		pointer-events: none;
-		opacity: 0;
-		background-image: linear-gradient(90deg, black 0%, transparent 75%);
-		transition: {
-			property: opacity;
-			duration: 1s;
-		}
-	}
+	// &__overlay { // <div>
+	// 	position: absolute;
+	// 	display: flex;
+	// 	flex-direction: column;
+	// 	justify-content: center;
+	// 	width: inherit;
+	// 	height: inherit;
+	// 	pointer-events: none;
+	// 	opacity: 0;
+	// 	background-image: linear-gradient(90deg, black 0%, transparent 75%);
+	// 	transition: {
+	// 		property: opacity;
+	// 		duration: 1s;
+	// 	}
+	// }
 
-	&__city { // <span>
-		text-transform: uppercase;
+	// &__city { // <span>
+	// 	text-transform: uppercase;
 
-		@media screen {
-			@media #{$portrait} {
-				@include fluidContent(font-size, 18px, 22, 18, 100vw);
-				@include fluidContent(margin-left, 20px, 40, 20, 100vw);
+	// 	@media screen {
+	// 		@media #{$portrait} {
+	// 			@include fluidContent(font-size, 18px, 22, 18, 100vw);
+	// 			@include fluidContent(margin-left, 20px, 40, 20, 100vw);
 
-				@media #{$mq-w1080-up} {
-					font-size: 22px;
-					margin-left: 40px;
-				}
-			}
+	// 			@media #{$mq-w1080-up} {
+	// 				font-size: 22px;
+	// 				margin-left: 40px;
+	// 			}
+	// 		}
 
-			@media #{$landscape} {
-				@include fluidContent(font-size, 16px, 28, 16, 100vh);
-				@include fluidContent(margin-left, 30px, 50, 30, 100vh);
+	// 		@media #{$landscape} {
+	// 			@include fluidContent(font-size, 16px, 28, 16, 100vh);
+	// 			@include fluidContent(margin-left, 30px, 50, 30, 100vh);
 
-				@media #{$mq-h1080-up} {
-					font-size: 28px;
-					margin-left: 50px;
-				}
-			}
-		}
-	}
+	// 			@media #{$mq-h1080-up} {
+	// 				font-size: 28px;
+	// 				margin-left: 50px;
+	// 			}
+	// 		}
+	// 	}
+	// }
 
-	&__country { // <span>
-		@extend .photosCards__city;
-		text-transform: none;
+	// &__country { // <span>
+	// 	@extend .photosCards__city;
+	// 	text-transform: none;
 
-		@media screen {
-			@media #{$portrait} {
-				@include fluidContent(font-size, 14px, 18, 14, 100vw);
+	// 	@media screen {
+	// 		@media #{$portrait} {
+	// 			@include fluidContent(font-size, 14px, 18, 14, 100vw);
 
-				@media #{$mq-w1080-up} {
-					font-size: 18px;
-				}
-			}
+	// 			@media #{$mq-w1080-up} {
+	// 				font-size: 18px;
+	// 			}
+	// 		}
 
-			@media #{$landscape} {
-				@include fluidContent(font-size, 14px, 18, 14, 100vh);
+	// 		@media #{$landscape} {
+	// 			@include fluidContent(font-size, 14px, 18, 14, 100vh);
 
-				@media #{$mq-h1080-up} {
-					font-size: 18px;
-				}
-			}
-		}
-	}
+	// 			@media #{$mq-h1080-up} {
+	// 				font-size: 18px;
+	// 			}
+	// 		}
+	// 	}
+	// }
 
 	&__image { // <img>
 		width: 100%;
