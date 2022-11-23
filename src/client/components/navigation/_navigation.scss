@@ -43,10 +43,10 @@
 			}
 
 			@media #{$landscape} {
-				@include fluidContent(row-gap, 35px, 200, 35, 100vh);
+				@include fluidContent(row-gap, 35px, 150, 35, 100vh);
 
 				@media #{$mq-h1080-up} {
-					row-gap: 200px;
+					row-gap: 150px;
 				}
 			}
 		}
