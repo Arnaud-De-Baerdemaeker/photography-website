@@ -163,6 +163,7 @@ class HomePage extends Component {
 					</div>
 				</main>
 				<Footer
+					setScrollReveal={this.props.setScrollReveal}
 					applyHideClass={this.props.applyHideClass}
 					revealOnScroll={this.props.revealOnScroll}
 				/>
