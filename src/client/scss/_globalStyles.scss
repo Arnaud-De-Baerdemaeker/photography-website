@@ -40,3 +40,13 @@ body {
 .scrollBlocked {
 	overflow-y: hidden;
 }
+
+body::-webkit-scrollbar {
+	width: 12px;
+	background-color: $color-3;
+
+	&-thumb {
+		background-color: $color-1;
+		border-radius: 6px;
+	}
+}
