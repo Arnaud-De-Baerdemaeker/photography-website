@@ -59,6 +59,7 @@
 	&__modal { // <button>
 		@extend .button;
 		position: absolute;
+		right: 40px;
 		bottom: 40px;
 		background-color: $color-2;
 		border-radius: 50%;
