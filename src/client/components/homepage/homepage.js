@@ -4,8 +4,11 @@
 
 import React, {Component} from "react";
 
+import Header from "../header/header";
+import Navigation from "../navigation/navigation";
 import Hero from "../hero/hero";
 import SVG from "../svg/svg";
+import Footer from "../footer/footer";
 
 import myPhoto from "../../images/moi.png";
 
@@ -38,6 +41,17 @@ class HomePage extends Component {
 	render() {
 		return (
 			<>
+				<Header
+					isMenuOpen={this.props.isMenuOpen}
+					headerRef={this.props.headerRef}
+					toggleMenu={this.props.toggleMenu}
+					closeMenu={this.props.closeMenu}
+				/>
+				<Navigation
+					isMenuOpen={this.props.isMenuOpen}
+					toggleMenu={this.props.toggleMenu}
+					closeMenu={this.props.closeMenu}
+				/>
 				<Hero
 					heroContainerClass={" hero__background--1"}
 					heroTitleClass={"hero__title--homepage"}
@@ -148,6 +162,10 @@ class HomePage extends Component {
 						</div>
 					</div>
 				</main>
+				<Footer
+					applyHideClass={this.props.applyHideClass}
+					revealOnScroll={this.props.revealOnScroll}
+				/>
 			</>
 		);
 	}

@@ -5,10 +5,13 @@
 import React, {Component} from "react";
 import axios from "axios";
 
+import Header from "../header/header";
+import Navigation from "../navigation/navigation";
 import Hero from "../hero/hero";
 import SVG from "../svg/svg";
 import PhotosCards from "../photosCards/photosCards";
 import Modal from "../modal/modal";
+import Footer from "../footer/footer";
 
 class Gallery extends Component {
 	constructor(props) {
@@ -64,7 +67,7 @@ class Gallery extends Component {
 			isModalOpen: !isModalOpen
 		}));
 
-		if(this.state.isModalOpen === false) {
+		if(this.props.isModalOpen === false) {
 			this.body.classList.add("scrollBlocked");
 			this.props.headerRef.current.classList.remove("scroll");
 		}
@@ -108,6 +111,17 @@ class Gallery extends Component {
 	render() {
 		return (
 			<>
+				<Header
+					isMenuOpen={this.props.isMenuOpen}
+					headerRef={this.props.headerRef}
+					toggleMenu={this.props.toggleMenu}
+					closeMenu={this.props.closeMenu}
+				/>
+				<Navigation
+					isMenuOpen={this.props.isMenuOpen}
+					toggleMenu={this.props.toggleMenu}
+					closeMenu={this.props.closeMenu}
+				/>
 				<Hero
 					heroContainerClass={" hero__background--1"}
 					heroTitleClass={"hero__title--gallery"}
@@ -161,6 +175,10 @@ class Gallery extends Component {
 						toggleModal={this.toggleModal}
 					/>
 				</main>
+				<Footer
+					applyHideClass={this.props.applyHideClass}
+					revealOnScroll={this.props.revealOnScroll}
+				/>
 			</>
 		);
 	}
