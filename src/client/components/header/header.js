@@ -10,19 +10,27 @@ import Button from "../button/button";
 import SVG from "../svg/svg";
 
 class Header extends Component {
+	constructor(props) {
+		super(props);
+
+		this.handleHeaderBackground = this.handleHeaderBackground.bind(this);
+	}
+
+	handleHeaderBackground() {
+		if(window.scrollY > 0) {
+			this.props.headerRef.current.classList.add("scroll");
+		}
+		else if(window.screenY < 1) {
+			this.props.headerRef.current.classList.remove("scroll");
+		}
+	}
+
 	componentDidMount() {
-		window.addEventListener("scroll", () => {
-			if(window.scrollY > 0) {
-				this.props.headerRef.current.classList.add("scroll");
-			}
-			else if(window.screenY < 1) {
-				this.props.headerRef.current.classList.remove("scroll");
-			}
-		});
+		window.addEventListener("scroll", this.handleHeaderBackground());
 	}
 
 	componentWillUnmount() {
-		window.removeEventListener("scroll", () => {});
+		window.removeEventListener("scroll", this.handleHeaderBackground());
 	}
 
 	render() {
