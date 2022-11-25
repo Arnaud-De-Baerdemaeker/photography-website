@@ -42,8 +42,6 @@ body {
 }
 
 body::-webkit-scrollbar {
-	background-color: $color-3;
-
 	@media screen {
 		@media #{$portrait} {
 			@include fluidContent(width, 5px, 12, 5, 100vw);
