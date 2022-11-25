@@ -2,15 +2,12 @@
 // Started on July 2020
 // By Arnaud De Baerdemaeker
 
-import React, {Component, createRef} from "react";
+import React, {Component, createRef, lazy, Suspense} from "react";
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 
-import Header from "./header/header";
-import Navigation from "./navigation/navigation";
-import HomePage from "./homepage/homepage";
-import Gallery from "./galleryPage/gallery";
-import Error404 from "./error404/error404";
-import Footer from "./footer/footer";
+const HomePage = lazy(() => import("./homepage/homepage"));
+const Gallery = lazy(() => import("./galleryPage/gallery"));
+const Error404 = lazy(() => import("./error404/error404"));
 
 class App extends Component {
 	constructor(props) {
@@ -94,58 +91,53 @@ class App extends Component {
 	render() {
 		return (
 			<BrowserRouter>
-				<Header
-					isMenuOpen={this.state.isMenuOpen}
-					headerRef={this.headerRef}
-					toggleMenu={this.toggleMenu}
-					closeMenu={this.closeMenu}
-				/>
-				<Navigation
-					isMenuOpen={this.state.isMenuOpen}
-					toggleMenu={this.toggleMenu}
-					closeMenu={this.closeMenu}
-				/>
-				<Switch>
-					<Route
-						exact
-						path={"/galerie"}
-					>
-						<Gallery
-							isMenuOpen={this.state.isMenuOpen}
-							headerRef={this.headerRef}
-							setTabTitle={this.setTabTitle}
-							backToTop={this.backToTop}
-							toggleMenu={this.toggleMenu}
-							closeMenu={this.closeMenu}
-							setScrollReveal={this.setScrollReveal}
-							applyHideClass={this.applyHideClass}
-							revealOnScroll={this.revealOnScroll}
-						/>
-					</Route>
-					<Route
-						exact
-						path={"/"}
-					>
-						<HomePage
-							isMenuOpen={this.state.isMenuOpen}
-							headerRef={this.headerRef}
-							setTabTitle={this.setTabTitle}
-							backToTop={this.backToTop}
-							toggleMenu={this.toggleMenu}
-							closeMenu={this.closeMenu}
-							setScrollReveal={this.setScrollReveal}
-							applyHideClass={this.applyHideClass}
-							revealOnScroll={this.revealOnScroll}
-						/>
-					</Route>
-					<Route path="*">
-						<Error404 setTabTitle={this.setTabTitle} />
-					</Route>
-				</Switch>
-				<Footer
-					applyHideClass={this.applyHideClass}
-					revealOnScroll={this.revealOnScroll}
-				/>
+				<Suspense fallback={<div>Loading</div>}>
+					<Switch>
+						<Route
+							exact
+							path={"/galerie"}
+						>
+							<Gallery
+								isMenuOpen={this.state.isMenuOpen}
+								headerRef={this.headerRef}
+								setTabTitle={this.setTabTitle}
+								backToTop={this.backToTop}
+								toggleMenu={this.toggleMenu}
+								closeMenu={this.closeMenu}
+								setScrollReveal={this.setScrollReveal}
+								applyHideClass={this.applyHideClass}
+								revealOnScroll={this.revealOnScroll}
+							/>
+						</Route>
+						<Route
+							exact
+							path={"/"}
+						>
+							<HomePage
+								isMenuOpen={this.state.isMenuOpen}
+								headerRef={this.headerRef}
+								setTabTitle={this.setTabTitle}
+								backToTop={this.backToTop}
+								toggleMenu={this.toggleMenu}
+								closeMenu={this.closeMenu}
+								setScrollReveal={this.setScrollReveal}
+								applyHideClass={this.applyHideClass}
+								revealOnScroll={this.revealOnScroll}
+							/>
+						</Route>
+						<Route path="*">
+							<Error404
+								isMenuOpen={this.state.isMenuOpen}
+								headerRef={this.headerRef}
+								toggleMenu={this.toggleMenu}
+								closeMenu={this.closeMenu}
+								applyHideClass={this.applyHideClass}
+								revealOnScroll={this.revealOnScroll}
+								setTabTitle={this.setTabTitle}
+							/>
+						</Route>
+					</Switch>
+				</Suspense>
 			</BrowserRouter>
 		);
 	}
