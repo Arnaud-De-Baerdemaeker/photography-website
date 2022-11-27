@@ -56,7 +56,7 @@
 
 			@media #{$landscape} {
 				width: calc(50% - 5px);
-				aspect-ratio: 5 / 1;
+				aspect-ratio: 5 / 2;
 
 				@media #{$mq-h400-up} {
 					aspect-ratio: 3 / 1;
