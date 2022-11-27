@@ -372,6 +372,50 @@ body {
   overflow-y: hidden;
 }
 
+@media screen and (orientation: portrait) {
+  body::-webkit-scrollbar {
+    width: calc(5px + (12 - 5) * ((100vw - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 67.5rem) {
+  body::-webkit-scrollbar {
+    width: 12px;
+  }
+}
+@media screen and (orientation: landscape) {
+  body::-webkit-scrollbar {
+    width: calc(8px + (14 - 8) * ((100vh - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: landscape) and (min-height: 67.5rem) {
+  body::-webkit-scrollbar {
+    width: 14px;
+  }
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(88, 129, 87);
+}
+@media screen and (orientation: portrait) {
+  body::-webkit-scrollbar-thumb {
+    border-radius: calc(2.5px + (6 - 2.5) * ((100vw - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 67.5rem) {
+  body::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+  }
+}
+@media screen and (orientation: landscape) {
+  body::-webkit-scrollbar-thumb {
+    border-radius: calc(4px + (7 - 4) * ((100vh - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: landscape) and (min-height: 67.5rem) {
+  body::-webkit-scrollbar-thumb {
+    border-radius: 7px;
+  }
+}
+
 .header {
   -webkit-animation-name: reveal;
           animation-name: reveal;
@@ -528,6 +572,7 @@ body {
 }
 .button__modal {
   position: absolute;
+  right: 40px;
   bottom: 40px;
   background-color: rgb(58, 90, 64);
   border-radius: 50%;
@@ -881,6 +926,26 @@ body {
     letter-spacing: 15px;
   }
 }
+@media screen and (orientation: portrait) {
+  .hero__title--404 {
+    font-size: calc(35px + (90 - 35) * ((100vw - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 67.5rem) {
+  .hero__title--404 {
+    font-size: 90px;
+  }
+}
+@media screen and (orientation: landscape) {
+  .hero__title--404 {
+    font-size: calc(27px + (90 - 27) * ((100vh - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: landscape) and (min-height: 67.5rem) {
+  .hero__title--404 {
+    font-size: 90px;
+  }
+}
 .hero__title .title, .hero__title .title__ampersand, .hero__title .title__jobPart2, .hero__title .title__hobbyPart2, .hero__title .title__jobPart1, .hero__title .title__hobbyPart1, .hero__title--homepage .title, .hero__title--homepage .title__ampersand, .hero__title--homepage .title__jobPart2, .hero__title--homepage .title__hobbyPart2, .hero__title--homepage .title__jobPart1, .hero__title--homepage .title__hobbyPart1, .hero__title--gallery .title, .hero__title--gallery .title__ampersand, .hero__title--gallery .title__jobPart2, .hero__title--gallery .title__hobbyPart2, .hero__title--gallery .title__jobPart1, .hero__title--gallery .title__hobbyPart1, .hero__title--404 .title, .hero__title--404 .title__ampersand, .hero__title--404 .title__jobPart2, .hero__title--404 .title__hobbyPart2, .hero__title--404 .title__jobPart1, .hero__title--404 .title__hobbyPart1 {
   position: relative;
   z-index: 1;
@@ -995,12 +1060,22 @@ body {
 }
 @media screen and (orientation: portrait) {
   .hero .link__backToHomepage {
-    font-size: calc(14px + (24 - 14) * ((100vw - 300px) / (1080 - 300)));
+    font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1080 - 300)));
   }
 }
 @media screen and (orientation: portrait) and (min-width: 67.5rem) {
   .hero .link__backToHomepage {
     font-size: 24px;
+  }
+}
+@media screen and (orientation: landscape) {
+  .hero .link__backToHomepage {
+    font-size: calc(16px + (22 - 16) * ((100vh - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: landscape) and (min-height: 67.5rem) {
+  .hero .link__backToHomepage {
+    font-size: 22px;
   }
 }
 .hero .link__backToHomepage:hover {
@@ -1255,16 +1330,12 @@ body {
 .modal, .modal--hidden {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   z-index: 2;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
   background-color: rgb(25, 39, 27);
-  color: white;
   transform: translateX(0);
   transition-property: transform;
   transition-duration: 0.8s;
@@ -1273,6 +1344,10 @@ body {
   transform: translateX(-100%);
 }
 .modal__imageContainer {
+  display: inherit;
+  align-items: center;
+  width: inherit;
+  height: inherit;
   margin-top: 0;
   margin-right: 0;
   margin-bottom: 0;
@@ -1281,6 +1356,11 @@ body {
 .modal__image {
   width: 100%;
   vertical-align: middle;
+}
+@media screen and (orientation: landscape) {
+  .modal__image {
+    height: 100%;
+  }
 }
 
 .footer {
