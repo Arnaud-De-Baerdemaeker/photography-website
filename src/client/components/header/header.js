@@ -26,11 +26,11 @@ class Header extends Component {
 	}
 
 	componentDidMount() {
-		window.addEventListener("scroll", this.handleHeaderBackground());
+		window.addEventListener("scroll", this.handleHeaderBackground);
 	}
 
 	componentWillUnmount() {
-		window.removeEventListener("scroll", this.handleHeaderBackground());
+		window.removeEventListener("scroll", this.handleHeaderBackground);
 	}
 
 	render() {
