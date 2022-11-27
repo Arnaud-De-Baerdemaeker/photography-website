@@ -68,8 +68,14 @@
 
 		&--404 { // <div>
 			@extend .hero__background;
-			background-image: url("https://live.staticflickr.com/65535/52506996562_f95be15062_o.jpg");
-			animation-duration: unset;
+			background: {
+				image: url("https://live.staticflickr.com/65535/52506996562_f95be15062_o.jpg");
+				position-x: 20%;
+			}
+			animation: {
+				name: fadeIn;
+				duration: 2s;
+			}
 		}
 	}
 
