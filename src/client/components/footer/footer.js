@@ -104,7 +104,7 @@ class Footer extends Component {
 						{`${year.getUTCFullYear()} • Tous droits réservés`}
 					</p>
 					<p className={"footer__credits"}>
-						{"Version 2.0.2"}
+						{"Version 2.1.0"}
 					</p>
 				</div>
 			</footer>
