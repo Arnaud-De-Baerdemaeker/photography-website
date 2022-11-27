@@ -178,6 +178,22 @@
     transform: scale(1.1);
   }
 }
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @-webkit-keyframes topFigureToCross {
   0% {
     transform: translateY(0);
@@ -851,8 +867,11 @@ body::-webkit-scrollbar-thumb {
 }
 .hero__background--404 {
   background-image: url("https://live.staticflickr.com/65535/52506996562_f95be15062_o.jpg");
-  -webkit-animation-duration: unset;
-          animation-duration: unset;
+  background-position-x: 20%;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 .hero__backFilter {
   width: inherit;
@@ -1270,7 +1289,7 @@ body::-webkit-scrollbar-thumb {
 @media screen and (orientation: landscape) {
   .gallery__listItem {
     width: calc(50% - 5px);
-    aspect-ratio: 5/1;
+    aspect-ratio: 5/2;
   }
 }
 @media screen and (orientation: landscape) and (min-height: 25rem) {
