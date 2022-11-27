@@ -45,7 +45,7 @@ class Gallery extends Component {
 				photoset_id: process.env.PHOTOSET,
 				format: "json",
 				nojsoncallback: 1,
-				extras: "url_o, url_c"
+				extras: "url_o, url_c, tags"
 			}
 		})
 		.then(result => {
@@ -87,6 +87,13 @@ class Gallery extends Component {
 	getDataFromTarget(click) {
 		click.preventDefault();
 		this.hdPictureFromClick = click.target.dataset.hd;
+	}
+
+	handleTags() {
+		const splittedTags = this.props.tags.split(" ");
+		this.photosLocation = {};
+		this.photosLocation["city"] = splittedTags[0];
+		this.photosLocation["country"] = splittedTags[1];
 	}
 
 	removeScrollLock() {
@@ -164,10 +171,11 @@ class Gallery extends Component {
 							<li
 								key={data.id}
 								className={"gallery__listItem"}
-								>
+							>
 								<PhotosCards
 									sd={data.url_c}
 									hd={data.url_o}
+									tags={data.tags}
 									isModalOpen={this.state.isModalOpen}
 									toggleModal={this.toggleModal}
 									handleClick={this.handleClick}
