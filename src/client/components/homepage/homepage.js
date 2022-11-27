@@ -16,22 +16,19 @@ class HomePage extends Component {
 	constructor(props) {
 		super(props);
 		this.tabTitle = "Accueil | Arnaud De Baerdemaeker";
-
-		this.removeHeaderScrollStyle = this.removeHeaderScrollStyle.bind(this);
-	}
-
-	removeHeaderScrollStyle() {
-		if(window.scrollY === 0) {
-			this.props.headerRef.current.classList.remove("scroll");
-		}
 	}
 
 	componentDidMount() {
 		this.props.setTabTitle(this.tabTitle);
 		this.props.backToTop();
 		const fetchedElements = document.querySelectorAll(".svg__background, .homepage__introduction, .homepage__title, .homepage__paragraph");
-		this.props.setScrollReveal(fetchedElements);
-		this.removeHeaderScrollStyle();
+		// Apply a class to initially hide the elements
+		this.props.applyHideClass(fetchedElements);
+		// Each time the user scrolls, the list of elements is refreshed and sent to a function
+		window.addEventListener("scroll", () => {
+			const refetchedElements = fetchedElements;
+			this.props.revealOnScroll(refetchedElements);
+		});
 	}
 
 	componentWillUnmount() {
@@ -163,7 +160,6 @@ class HomePage extends Component {
 					</div>
 				</main>
 				<Footer
-					setScrollReveal={this.props.setScrollReveal}
 					applyHideClass={this.props.applyHideClass}
 					revealOnScroll={this.props.revealOnScroll}
 				/>

@@ -22,6 +22,7 @@ class Gallery extends Component {
 		}
 		this.body = document.querySelector("body");
 		this.tabTitle = "Galerie | Arnaud De Baerdemaeker";
+		this.domElements;
 		this.hdPictureFromClick;
 
 		this.getPhotos = this.getPhotos.bind(this);
@@ -29,7 +30,7 @@ class Gallery extends Component {
 		this.handleClick = this.handleClick.bind(this);
 		this.getDataFromTarget = this.getDataFromTarget.bind(this);
 		this.removeScrollLock = this.removeScrollLock.bind(this);
-		this.getElementsForScrollReveal = this.getElementsForScrollReveal.bind(this);
+		this.hideElements = this.hideElements.bind(this);
 	}
 
 	async getPhotos() {
@@ -55,11 +56,12 @@ class Gallery extends Component {
 		});
 
 		this.setState({
-			photos: request.data,
-			isFetchOver: true
+			photos: request.data
 		});
 
-		this.getElementsForScrollReveal();
+		this.domElements = document.querySelectorAll(".gallery__listItem");
+		// Apply a class to initially hide the elements
+		this.hideElements(this.domElements);
 	}
 
 	toggleModal() {
@@ -67,7 +69,7 @@ class Gallery extends Component {
 			isModalOpen: !isModalOpen
 		}));
 
-		if(this.props.isModalOpen === false) {
+		if(!this.state.isModalOpen) {
 			this.body.classList.add("scrollBlocked");
 			this.props.headerRef.current.classList.remove("scroll");
 		}
@@ -92,15 +94,19 @@ class Gallery extends Component {
 		this.props.headerRef.current.classList.add("scroll");
 	}
 
-	getElementsForScrollReveal() {
-		const fetchedElements = document.querySelectorAll(".gallery__listItem");
-		this.props.setScrollReveal(fetchedElements);
+	hideElements(elements) {
+		this.props.applyHideClass(elements);
 	}
 
 	componentDidMount() {
 		this.props.setTabTitle(this.tabTitle);
 		this.props.backToTop();
 		this.getPhotos();
+		// Each time the user scrolls, the list of elements is refreshed and sent to a function
+		window.addEventListener("scroll", () => {
+			const refetchedElements = this.domElements;
+			this.props.revealOnScroll(refetchedElements);
+		});
 	}
 
 	componentWillUnmount() {
@@ -158,7 +164,7 @@ class Gallery extends Component {
 							<li
 								key={data.id}
 								className={"gallery__listItem"}
-							>
+								>
 								<PhotosCards
 									sd={data.url_c}
 									hd={data.url_o}

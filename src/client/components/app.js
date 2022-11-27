@@ -23,7 +23,6 @@ class App extends Component {
 		this.backToTop = this.backToTop.bind(this);
 		this.toggleMenu = this.toggleMenu.bind(this);
 		this.closeMenu = this.closeMenu.bind(this);
-		this.setScrollReveal = this.setScrollReveal.bind(this);
 		this.applyHideClass = this.applyHideClass.bind(this);
 		this.revealOnScroll = this.revealOnScroll.bind(this);
 	}
@@ -52,22 +51,7 @@ class App extends Component {
 		}
 	}
 
-	setScrollReveal(elements) {
-		// Get the elements to hide
-		const fetchedElements = elements;
-
-		// Apply a class to initially hide the elements
-		this.applyHideClass(fetchedElements);
-
-		// Each time the user scrolls, the list of elements is refreshed and sent to a function
-		window.addEventListener("scroll", () => {
-			const refetchedElements = fetchedElements;
-			this.revealOnScroll(refetchedElements);
-		});
-	}
-
 	applyHideClass(elements) {
-		// Apply a class to initially hide the elements
 		elements.forEach(element => {
 			element.classList.add("view--hidden");
 		});
@@ -104,7 +88,6 @@ class App extends Component {
 								backToTop={this.backToTop}
 								toggleMenu={this.toggleMenu}
 								closeMenu={this.closeMenu}
-								setScrollReveal={this.setScrollReveal}
 								applyHideClass={this.applyHideClass}
 								revealOnScroll={this.revealOnScroll}
 							/>
@@ -120,7 +103,6 @@ class App extends Component {
 								backToTop={this.backToTop}
 								toggleMenu={this.toggleMenu}
 								closeMenu={this.closeMenu}
-								setScrollReveal={this.setScrollReveal}
 								applyHideClass={this.applyHideClass}
 								revealOnScroll={this.revealOnScroll}
 							/>
@@ -129,11 +111,11 @@ class App extends Component {
 							<Error404
 								isMenuOpen={this.state.isMenuOpen}
 								headerRef={this.headerRef}
+								setTabTitle={this.setTabTitle}
 								toggleMenu={this.toggleMenu}
 								closeMenu={this.closeMenu}
 								applyHideClass={this.applyHideClass}
 								revealOnScroll={this.revealOnScroll}
-								setTabTitle={this.setTabTitle}
 							/>
 						</Route>
 					</Switch>
