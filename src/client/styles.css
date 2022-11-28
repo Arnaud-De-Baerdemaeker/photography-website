@@ -240,10 +240,10 @@
 }
 @-webkit-keyframes middleFigureToTransparent {
   0% {
-    fill: white;
+    fill: rgb(249, 246, 238);
   }
   50% {
-    fill: white;
+    fill: rgb(249, 246, 238);
   }
   51% {
     fill: transparent;
@@ -254,10 +254,10 @@
 }
 @keyframes middleFigureToTransparent {
   0% {
-    fill: white;
+    fill: rgb(249, 246, 238);
   }
   50% {
-    fill: white;
+    fill: rgb(249, 246, 238);
   }
   51% {
     fill: transparent;
@@ -274,10 +274,10 @@
     fill: transparent;
   }
   51% {
-    fill: white;
+    fill: rgb(249, 246, 238);
   }
   100% {
-    fill: white;
+    fill: rgb(249, 246, 238);
   }
 }
 @keyframes middleFigureToOpaque {
@@ -288,10 +288,10 @@
     fill: transparent;
   }
   51% {
-    fill: white;
+    fill: rgb(249, 246, 238);
   }
   100% {
-    fill: white;
+    fill: rgb(249, 246, 238);
   }
 }
 @-webkit-keyframes bottomFigureToCross {
@@ -366,7 +366,7 @@ body {
   box-sizing: border-box;
   font-family: "DM Sans", Arial, Helvetica, sans-serif;
   background-color: rgb(16, 26, 18);
-  color: white;
+  color: rgb(249, 246, 238);
 }
 
 #app {
@@ -464,7 +464,7 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   height: 100%;
   font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
-  color: white;
+  color: rgb(249, 246, 238);
   letter-spacing: 0.125rem;
   word-spacing: 0.3125rem;
   margin-top: 10px;
@@ -498,7 +498,7 @@ body::-webkit-scrollbar-thumb {
 }
 .name--footer {
   font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
-  color: white;
+  color: rgb(249, 246, 238);
   letter-spacing: 0.125rem;
   word-spacing: 0.3125rem;
   margin: 0;
@@ -622,7 +622,7 @@ body::-webkit-scrollbar-thumb {
 .icon, .icon__chevronBottom, .icon__chevronMiddle, .icon__chevronTop, .icon__hamburgerBottom, .icon__hamburgerBottom--close, .icon__hamburgerMiddle, .icon__hamburgerMiddle--close, .icon__hamburgerTop, .icon__hamburgerTop--close {
   width: 100%;
   height: 100%;
-  fill: white;
+  fill: rgb(249, 246, 238);
   transform-box: fill-box;
   transform-origin: center center;
 }
@@ -712,7 +712,7 @@ body::-webkit-scrollbar-thumb {
           animation-delay: 0.625s;
 }
 .icon__close {
-  fill: white;
+  fill: rgb(249, 246, 238);
 }
 
 .menu, .menu--closed {
@@ -810,7 +810,7 @@ body::-webkit-scrollbar-thumb {
   }
 }
 .menu__link--active {
-  color: white;
+  color: rgb(249, 246, 238);
 }
 
 .hero {
@@ -890,7 +890,7 @@ body::-webkit-scrollbar-thumb {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
   margin: 0;
-  color: white;
+  color: rgb(249, 246, 238);
   font-family: "Jost", Arial, Helvetica, sans-serif;
   font-weight: 600;
   text-align: center;
@@ -1056,7 +1056,7 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   bottom: 40px;
   z-index: 0;
-  color: white;
+  color: rgb(249, 246, 238);
   text-decoration: none;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -1098,8 +1098,8 @@ body::-webkit-scrollbar-thumb {
   }
 }
 .hero .link__backToHomepage:hover {
-  border-top-color: white;
-  border-bottom-color: white;
+  border-top-color: rgb(249, 246, 238);
+  border-bottom-color: rgb(249, 246, 238);
 }
 
 .homepage {
@@ -1334,12 +1334,132 @@ body::-webkit-scrollbar-thumb {
     filter: grayscale(0%);
   }
 }
+.photosCards__overlay {
+  position: absolute;
+  display: flex;
+  align-items: end;
+  width: inherit;
+  height: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+}
+.photosCards__container {
+  background-color: rgb(25, 39, 27);
+  box-shadow: -3px 3px 0 0 rgb(88, 129, 87);
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+@media screen and (orientation: portrait) {
+  .photosCards__container {
+    margin-bottom: calc(5px + (10 - 5) * ((100vw - 300px) / (1080 - 300)));
+    margin-left: calc(5px + (10 - 5) * ((100vw - 300px) / (1080 - 300)));
+    padding-right: calc(5px + (10 - 5) * ((100vw - 300px) / (1080 - 300)));
+    padding-left: calc(5px + (10 - 5) * ((100vw - 300px) / (1080 - 300)));
+    border-radius: calc(3px + (5 - 3) * ((100vw - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 67.5rem) {
+  .photosCards__container {
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+  }
+}
+@media screen and (orientation: landscape) {
+  .photosCards__container {
+    margin-bottom: calc(5px + (20 - 5) * ((100vh - 300px) / (1080 - 300)));
+    margin-left: calc(5px + (20 - 5) * ((100vh - 300px) / (1080 - 300)));
+    padding-right: calc(5px + (10 - 5) * ((100vh - 300px) / (1080 - 300)));
+    padding-left: calc(5px + (10 - 5) * ((100vh - 300px) / (1080 - 300)));
+    border-radius: calc(3px + (5 - 3) * ((100vh - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: landscape) and (min-height: 67.5rem) {
+  .photosCards__container {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+  }
+}
+.photosCards__city, .photosCards__country {
+  text-transform: uppercase;
+}
+@media screen and (orientation: portrait) {
+  .photosCards__city, .photosCards__country {
+    font-size: calc(16px + (22 - 16) * ((100vw - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 67.5rem) {
+  .photosCards__city, .photosCards__country {
+    font-size: 22px;
+  }
+}
+@media screen and (orientation: landscape) {
+  .photosCards__city, .photosCards__country {
+    font-size: calc(16px + (28 - 16) * ((100vh - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: landscape) and (min-height: 67.5rem) {
+  .photosCards__city, .photosCards__country {
+    font-size: 28px;
+  }
+}
+.photosCards__country {
+  text-transform: capitalize;
+  color: rgb(180, 180, 180);
+}
+@media screen and (orientation: portrait) {
+  .photosCards__country {
+    font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 67.5rem) {
+  .photosCards__country {
+    font-size: 18px;
+  }
+}
+@media screen and (orientation: landscape) {
+  .photosCards__country {
+    font-size: calc(14px + (18 - 14) * ((100vh - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: landscape) and (min-height: 67.5rem) {
+  .photosCards__country {
+    font-size: 18px;
+  }
+}
 .photosCards__image {
   width: 100%;
   height: 100%;
   vertical-align: middle;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media screen and (orientation: portrait) {
+  .photosCards__image {
+    border-radius: calc(5px + (10 - 5) * ((100vw - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 67.5rem) {
+  .photosCards__image {
+    border-radius: 10px;
+  }
+}
+@media screen and (orientation: landscape) {
+  .photosCards__image {
+    border-radius: calc(5px + (10 - 5) * ((100vh - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: landscape) and (min-height: 67.5rem) {
+  .photosCards__image {
+    border-radius: 10px;
+  }
 }
 
 .hover {
@@ -1409,7 +1529,7 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
   border-style: solid;
   border-width: 1px;
-  border-color: white;
+  border-color: rgb(249, 246, 238);
   border-radius: 38px;
 }
 @media screen and (orientation: portrait) {
@@ -1445,7 +1565,7 @@ body::-webkit-scrollbar-thumb {
   -webkit-tap-highlight-color: transparent;
 }
 .footer__icon.svg-inline--fa {
-  color: white;
+  color: rgb(249, 246, 238);
 }
 @media screen and (orientation: portrait) {
   .footer__icon.svg-inline--fa {

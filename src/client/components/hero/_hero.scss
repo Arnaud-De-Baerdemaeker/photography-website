@@ -89,7 +89,7 @@
 		@include revealOnLoad;
 		animation-delay: 1s;
 		margin: 0;
-		color: white;
+		color: $color-8;
 		font: {
 			family: $jost;
 			weight: 600;
@@ -268,7 +268,7 @@
 		position: absolute;
 		bottom: 40px;
 		z-index: 0;
-		color: white;
+		color: $color-8;
 		text-decoration: none;
 		width: fit-content;
 		height: fit-content;
@@ -315,8 +315,8 @@
 
 		&:hover {
 			border: {
-				top-color: white;
-				bottom-color: white;
+				top-color: $color-8;
+				bottom-color: $color-8;
 			}
 		}
 	}

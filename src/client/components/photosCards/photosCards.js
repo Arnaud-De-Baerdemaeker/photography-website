@@ -9,36 +9,55 @@ import Image from "../image/image";
 class PhotosCards extends Component {
 	constructor(props) {
 		super(props);
+		this.state = {
+			tags: null
+		}
+		this.city;
+		this.country;
+		this.photosLocation;
 
 		this.photosCardsRef = createRef();
-		// this.overlayRef = createRef();
+		this.overlayRef = createRef();
 
-		// this.showOverlay = this.showOverlay.bind(this);
-		// this.hideOverlay = this.hideOverlay.bind(this);
+		this.showOverlay = this.showOverlay.bind(this);
+		this.hideOverlay = this.hideOverlay.bind(this);
+		this.handleTags = this.handleTags.bind(this);
 	}
 
-	// showOverlay() {
-	// 	this.overlayRef.current.classList.add("hover");
-	// }
+	showOverlay() {
+		this.overlayRef.current.classList.add("hover");
+	}
 
-	// hideOverlay() {
-	// 	this.overlayRef.current.classList.remove("hover");
-	// }
+	hideOverlay() {
+		this.overlayRef.current.classList.remove("hover");
+	}
 
-	// componentDidMount() {
-	// 	if("ontouchstart" in window) {
-	// 		null;
-	// 	}
-	// 	else {
-	// 		this.photosCardsRef.current.addEventListener("mouseover", this.showOverlay);
-	// 		this.photosCardsRef.current.addEventListener("mouseout", this.hideOverlay);
-	// 	}
-	// }
+	handleTags() {
+		const splittedTags = this.props.tags.split(" ");
+		this.photosLocation = {};
+		this.photosLocation["city"] = splittedTags[0];
+		this.photosLocation["country"] = splittedTags[1];
+		this.setState({
+			tags: this.photosLocation
+		});
+	}
 
-	// componentWillUnmount() {
-	// 	this.photosCardsRef.current.removeEventListener("mouseover", this.showOverlay);
-	// 	this.photosCardsRef.current.removeEventListener("mouseout", this.hideOverlay);
-	// }
+	componentDidMount() {
+		if("ontouchstart" in window) {
+			null;
+		}
+		else {
+			this.photosCardsRef.current.addEventListener("mouseover", this.showOverlay);
+			this.photosCardsRef.current.addEventListener("mouseout", this.hideOverlay);
+		}
+
+		this.handleTags();
+	}
+
+	componentWillUnmount() {
+		this.photosCardsRef.current.removeEventListener("mouseover", this.showOverlay);
+		this.photosCardsRef.current.removeEventListener("mouseout", this.hideOverlay);
+	}
 
 	render() {
 		return (
@@ -47,13 +66,16 @@ class PhotosCards extends Component {
 				onClick={this.props.handleClick}
 				className={"photosCards"}
 			>
-				{/* <div
+				<div
 					ref={this.overlayRef}
 					className={"photosCards__overlay"}
 				>
-					<span className={"photosCards__city"}>{this.props.location.city}</span>
-					<span className={"photosCards__country"}>{this.props.location.country}</span>
-				</div> */}
+					<div className={"photosCards__container"}>
+						<span className={"photosCards__city"}>{this.photosLocation && this.photosLocation.city}</span>
+						{" "}
+						<span className={"photosCards__country"}>{this.photosLocation && this.photosLocation.country}</span>
+					</div>
+				</div>
 				<Image
 					url={this.props.sd}
 					hd={this.props.hd}
