@@ -47,13 +47,13 @@ class PhotosCards extends Component {
 				onClick={this.props.handleClick}
 				className={"photosCards"}
 			>
-				<div
+				{/* <div
 					ref={this.overlayRef}
 					className={"photosCards__overlay"}
 				>
 					<span className={"photosCards__city"}>{this.props.location.city}</span>
 					<span className={"photosCards__country"}>{this.props.location.country}</span>
-				</div>
+				</div> */}
 				<Image
 					url={this.props.sd}
 					hd={this.props.hd}

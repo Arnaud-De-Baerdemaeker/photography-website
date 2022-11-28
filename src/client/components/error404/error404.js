@@ -8,13 +8,19 @@ import {NavLink, withRouter} from "react-router-dom";
 import Hero from "../hero/hero";
 
 class Error404 extends Component {
+	constructor(props) {
+		super(props);
+		this.tabTitle = "Page non trouvée | Arnaud De Baerdemaeker";
+	}
+
 	componentDidMount() {
-		document.title = "Page non trouvée | Arnaud De Baerdemaeker";
+		this.props.setTabTitle(this.tabTitle);
 	}
 
 	render() {
 		return(
 			<Hero
+				heroContainerClass={" hero__background--404"}
 				heroTitleClass={"hero__title--404"}
 				heroTitleContent={"La page recherchée n'existe pas"}
 				heroBackToHomepage={
