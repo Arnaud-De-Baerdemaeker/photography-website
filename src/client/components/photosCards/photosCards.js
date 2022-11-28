@@ -11,34 +11,34 @@ class PhotosCards extends Component {
 		super(props);
 
 		this.photosCardsRef = createRef();
-		this.overlayRef = createRef();
+		// this.overlayRef = createRef();
 
-		this.showOverlay = this.showOverlay.bind(this);
-		this.hideOverlay = this.hideOverlay.bind(this);
+		// this.showOverlay = this.showOverlay.bind(this);
+		// this.hideOverlay = this.hideOverlay.bind(this);
 	}
 
-	showOverlay() {
-		this.overlayRef.current.classList.add("hover");
-	}
+	// showOverlay() {
+	// 	this.overlayRef.current.classList.add("hover");
+	// }
 
-	hideOverlay() {
-		this.overlayRef.current.classList.remove("hover");
-	}
+	// hideOverlay() {
+	// 	this.overlayRef.current.classList.remove("hover");
+	// }
 
-	componentDidMount() {
-		if("ontouchstart" in window) {
-			null;
-		}
-		else {
-			this.photosCardsRef.current.addEventListener("mouseover", this.showOverlay);
-			this.photosCardsRef.current.addEventListener("mouseout", this.hideOverlay);
-		}
-	}
+	// componentDidMount() {
+	// 	if("ontouchstart" in window) {
+	// 		null;
+	// 	}
+	// 	else {
+	// 		this.photosCardsRef.current.addEventListener("mouseover", this.showOverlay);
+	// 		this.photosCardsRef.current.addEventListener("mouseout", this.hideOverlay);
+	// 	}
+	// }
 
-	componentWillUnmount() {
-		this.photosCardsRef.current.removeEventListener("mouseover", this.showOverlay);
-		this.photosCardsRef.current.removeEventListener("mouseout", this.hideOverlay);
-	}
+	// componentWillUnmount() {
+	// 	this.photosCardsRef.current.removeEventListener("mouseover", this.showOverlay);
+	// 	this.photosCardsRef.current.removeEventListener("mouseout", this.hideOverlay);
+	// }
 
 	render() {
 		return (

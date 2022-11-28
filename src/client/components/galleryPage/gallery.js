@@ -5,20 +5,24 @@
 import React, {Component} from "react";
 import axios from "axios";
 
+import Header from "../header/header";
+import Navigation from "../navigation/navigation";
 import Hero from "../hero/hero";
 import SVG from "../svg/svg";
 import PhotosCards from "../photosCards/photosCards";
 import Modal from "../modal/modal";
+import Footer from "../footer/footer";
 
 class Gallery extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			photos: "",
-			isModalOpen: false,
+			isModalOpen: false
 		}
 		this.body = document.querySelector("body");
 		this.tabTitle = "Galerie | Arnaud De Baerdemaeker";
+		this.domElements;
 		this.hdPictureFromClick;
 
 		this.getPhotos = this.getPhotos.bind(this);
@@ -26,6 +30,7 @@ class Gallery extends Component {
 		this.handleClick = this.handleClick.bind(this);
 		this.getDataFromTarget = this.getDataFromTarget.bind(this);
 		this.removeScrollLock = this.removeScrollLock.bind(this);
+		this.hideElements = this.hideElements.bind(this);
 	}
 
 	async getPhotos() {
@@ -53,6 +58,10 @@ class Gallery extends Component {
 		this.setState({
 			photos: request.data
 		});
+
+		this.domElements = document.querySelectorAll(".gallery__listItem");
+		// Apply a class to initially hide the elements
+		this.hideElements(this.domElements);
 	}
 
 	toggleModal() {
@@ -60,7 +69,7 @@ class Gallery extends Component {
 			isModalOpen: !isModalOpen
 		}));
 
-		if(this.state.isModalOpen === false) {
+		if(!this.state.isModalOpen) {
 			this.body.classList.add("scrollBlocked");
 			this.props.headerRef.current.classList.remove("scroll");
 		}
@@ -85,12 +94,19 @@ class Gallery extends Component {
 		this.props.headerRef.current.classList.add("scroll");
 	}
 
+	hideElements(elements) {
+		this.props.applyHideClass(elements);
+	}
+
 	componentDidMount() {
 		this.props.setTabTitle(this.tabTitle);
 		this.props.backToTop();
-		const fetchedElements = document.querySelectorAll(".gallery__listItem");
-		this.props.setScrollReveal(fetchedElements);
 		this.getPhotos();
+		// Each time the user scrolls, the list of elements is refreshed and sent to a function
+		window.addEventListener("scroll", () => {
+			const refetchedElements = this.domElements;
+			this.props.revealOnScroll(refetchedElements);
+		});
 	}
 
 	componentWillUnmount() {
@@ -101,6 +117,17 @@ class Gallery extends Component {
 	render() {
 		return (
 			<>
+				<Header
+					isMenuOpen={this.props.isMenuOpen}
+					headerRef={this.props.headerRef}
+					toggleMenu={this.props.toggleMenu}
+					closeMenu={this.props.closeMenu}
+				/>
+				<Navigation
+					isMenuOpen={this.props.isMenuOpen}
+					toggleMenu={this.props.toggleMenu}
+					closeMenu={this.props.closeMenu}
+				/>
 				<Hero
 					heroContainerClass={" hero__background--1"}
 					heroTitleClass={"hero__title--gallery"}
@@ -137,7 +164,7 @@ class Gallery extends Component {
 							<li
 								key={data.id}
 								className={"gallery__listItem"}
-							>
+								>
 								<PhotosCards
 									sd={data.url_c}
 									hd={data.url_o}
@@ -154,6 +181,11 @@ class Gallery extends Component {
 						toggleModal={this.toggleModal}
 					/>
 				</main>
+				<Footer
+					setScrollReveal={this.props.setScrollReveal}
+					applyHideClass={this.props.applyHideClass}
+					revealOnScroll={this.props.revealOnScroll}
+				/>
 			</>
 		);
 	}

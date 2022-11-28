@@ -68,8 +68,14 @@
 
 		&--404 { // <div>
 			@extend .hero__background;
-			background-image: url("https://live.staticflickr.com/65535/52506996562_f95be15062_o.jpg");
-			animation-duration: unset;
+			background: {
+				image: url("https://live.staticflickr.com/65535/52506996562_f95be15062_o.jpg");
+				position-x: 20%;
+			}
+			animation: {
+				name: fadeIn;
+				duration: 2s;
+			}
 		}
 	}
 
@@ -146,6 +152,24 @@
 
 		&--404 { // h2
 			@extend .hero__title;
+
+			@media screen {
+				@media #{$portrait} {
+					@include fluidContent(font-size, 35px, 90, 35, 100vw);
+
+					@media #{$mq-w1080-up} {
+						font-size: 90px;
+					}
+				}
+
+				@media #{$landscape} {
+					@include fluidContent(font-size, 27px, 90, 27, 100vh);
+
+					@media #{$mq-h1080-up} {
+						font-size: 90px;
+					}
+				}
+			}
 		}
 
 		.title {
@@ -169,6 +193,7 @@
 				z-index: 0;
 				display: block;
 				color: $color-7;
+				opacity: 0.5;
 				font-weight: 300;
 
 				@media screen {
@@ -272,10 +297,18 @@
 
 		@media screen {
 			@media #{$portrait} {
-				@include fluidContent(font-size, 14px, 24, 14, 100vw);
+				@include fluidContent(font-size, 16px, 24, 16, 100vw);
 
 				@media #{$mq-w1080-up} {
 					font-size: 24px;
+				}
+			}
+
+			@media #{$landscape} {
+				@include fluidContent(font-size, 16px, 22, 16, 100vh);
+
+				@media #{$mq-h1080-up} {
+					font-size: 22px;
 				}
 			}
 		}

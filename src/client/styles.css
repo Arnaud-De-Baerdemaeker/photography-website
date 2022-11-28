@@ -178,6 +178,22 @@
     transform: scale(1.1);
   }
 }
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @-webkit-keyframes topFigureToCross {
   0% {
     transform: translateY(0);
@@ -372,6 +388,50 @@ body {
   overflow-y: hidden;
 }
 
+@media screen and (orientation: portrait) {
+  body::-webkit-scrollbar {
+    width: calc(5px + (12 - 5) * ((100vw - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 67.5rem) {
+  body::-webkit-scrollbar {
+    width: 12px;
+  }
+}
+@media screen and (orientation: landscape) {
+  body::-webkit-scrollbar {
+    width: calc(8px + (14 - 8) * ((100vh - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: landscape) and (min-height: 67.5rem) {
+  body::-webkit-scrollbar {
+    width: 14px;
+  }
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(88, 129, 87);
+}
+@media screen and (orientation: portrait) {
+  body::-webkit-scrollbar-thumb {
+    border-radius: calc(2.5px + (6 - 2.5) * ((100vw - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 67.5rem) {
+  body::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+  }
+}
+@media screen and (orientation: landscape) {
+  body::-webkit-scrollbar-thumb {
+    border-radius: calc(4px + (7 - 4) * ((100vh - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: landscape) and (min-height: 67.5rem) {
+  body::-webkit-scrollbar-thumb {
+    border-radius: 7px;
+  }
+}
+
 .header {
   -webkit-animation-name: reveal;
           animation-name: reveal;
@@ -528,7 +588,10 @@ body {
 }
 .button__modal {
   position: absolute;
+  right: 40px;
   bottom: 40px;
+  background-color: rgb(58, 90, 64);
+  border-radius: 50%;
 }
 
 .svg, .svg__close, .svg__background, .svg__scrollDown, .svg__menu {
@@ -673,12 +736,31 @@ body {
 .menu__list {
   display: flex;
   flex-direction: column;
-  row-gap: 1.875rem;
   list-style-type: none;
   margin: 0;
   padding: 0;
   opacity: 1;
   text-align: center;
+}
+@media screen and (orientation: portrait) {
+  .menu__list {
+    row-gap: calc(50px + (200 - 50) * ((100vw - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 67.5rem) {
+  .menu__list {
+    row-gap: 200px;
+  }
+}
+@media screen and (orientation: landscape) {
+  .menu__list {
+    row-gap: calc(35px + (150 - 35) * ((100vh - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: landscape) and (min-height: 67.5rem) {
+  .menu__list {
+    row-gap: 150px;
+  }
 }
 .menu__link {
   display: flex;
@@ -785,8 +867,11 @@ body {
 }
 .hero__background--404 {
   background-image: url("https://live.staticflickr.com/65535/52506996562_f95be15062_o.jpg");
-  -webkit-animation-duration: unset;
-          animation-duration: unset;
+  background-position-x: 20%;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 .hero__backFilter {
   width: inherit;
@@ -860,6 +945,26 @@ body {
     letter-spacing: 15px;
   }
 }
+@media screen and (orientation: portrait) {
+  .hero__title--404 {
+    font-size: calc(35px + (90 - 35) * ((100vw - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 67.5rem) {
+  .hero__title--404 {
+    font-size: 90px;
+  }
+}
+@media screen and (orientation: landscape) {
+  .hero__title--404 {
+    font-size: calc(27px + (90 - 27) * ((100vh - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: landscape) and (min-height: 67.5rem) {
+  .hero__title--404 {
+    font-size: 90px;
+  }
+}
 .hero__title .title, .hero__title .title__ampersand, .hero__title .title__jobPart2, .hero__title .title__hobbyPart2, .hero__title .title__jobPart1, .hero__title .title__hobbyPart1, .hero__title--homepage .title, .hero__title--homepage .title__ampersand, .hero__title--homepage .title__jobPart2, .hero__title--homepage .title__hobbyPart2, .hero__title--homepage .title__jobPart1, .hero__title--homepage .title__hobbyPart1, .hero__title--gallery .title, .hero__title--gallery .title__ampersand, .hero__title--gallery .title__jobPart2, .hero__title--gallery .title__hobbyPart2, .hero__title--gallery .title__jobPart1, .hero__title--gallery .title__hobbyPart1, .hero__title--404 .title, .hero__title--404 .title__ampersand, .hero__title--404 .title__jobPart2, .hero__title--404 .title__hobbyPart2, .hero__title--404 .title__jobPart1, .hero__title--404 .title__hobbyPart1 {
   position: relative;
   z-index: 1;
@@ -872,6 +977,7 @@ body {
   z-index: 0;
   display: block;
   color: rgb(182, 206, 186);
+  opacity: 0.5;
   font-weight: 300;
 }
 @media screen and (orientation: portrait) {
@@ -973,12 +1079,22 @@ body {
 }
 @media screen and (orientation: portrait) {
   .hero .link__backToHomepage {
-    font-size: calc(14px + (24 - 14) * ((100vw - 300px) / (1080 - 300)));
+    font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1080 - 300)));
   }
 }
 @media screen and (orientation: portrait) and (min-width: 67.5rem) {
   .hero .link__backToHomepage {
     font-size: 24px;
+  }
+}
+@media screen and (orientation: landscape) {
+  .hero .link__backToHomepage {
+    font-size: calc(16px + (22 - 16) * ((100vh - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: landscape) and (min-height: 67.5rem) {
+  .hero .link__backToHomepage {
+    font-size: 22px;
   }
 }
 .hero .link__backToHomepage:hover {
@@ -1136,6 +1252,29 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
+  row-gap: 5px;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+@media screen and (orientation: portrait) {
+  .gallery__list {
+    width: calc(250px + (800 - 250) * ((100vw - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 67.5rem) {
+  .gallery__list {
+    width: 800px;
+  }
+}
+@media screen and (orientation: landscape) {
+  .gallery__list {
+    width: calc(400px + (1400 - 400) * ((100vh - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: landscape) and (min-height: 67.5rem) {
+  .gallery__list {
+    width: 1400px;
+  }
 }
 @media screen and (orientation: portrait) {
   .gallery__listItem {
@@ -1144,22 +1283,18 @@ body {
 }
 @media screen and (orientation: portrait) and (min-width: 37.5rem) {
   .gallery__listItem {
-    width: 50%;
+    width: calc(50% - 5px);
   }
 }
 @media screen and (orientation: landscape) {
   .gallery__listItem {
-    aspect-ratio: 5/1;
+    width: calc(50% - 5px);
+    aspect-ratio: 5/2;
   }
 }
 @media screen and (orientation: landscape) and (min-height: 25rem) {
   .gallery__listItem {
     aspect-ratio: 3/1;
-  }
-}
-@media screen and (orientation: landscape) and (min-width: 37.5rem) {
-  .gallery__listItem {
-    width: 50%;
   }
 }
 
@@ -1199,69 +1334,6 @@ body {
     filter: grayscale(0%);
   }
 }
-.photosCards__overlay {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: inherit;
-  height: inherit;
-  pointer-events: none;
-  opacity: 0;
-  background-image: linear-gradient(90deg, black 0%, transparent 75%);
-  transition-property: opacity;
-  transition-duration: 1s;
-}
-.photosCards__city, .photosCards__country {
-  text-transform: uppercase;
-}
-@media screen and (orientation: portrait) {
-  .photosCards__city, .photosCards__country {
-    font-size: calc(18px + (22 - 18) * ((100vw - 300px) / (1080 - 300)));
-    margin-left: calc(20px + (40 - 20) * ((100vw - 300px) / (1080 - 300)));
-  }
-}
-@media screen and (orientation: portrait) and (min-width: 67.5rem) {
-  .photosCards__city, .photosCards__country {
-    font-size: 22px;
-    margin-left: 40px;
-  }
-}
-@media screen and (orientation: landscape) {
-  .photosCards__city, .photosCards__country {
-    font-size: calc(16px + (28 - 16) * ((100vh - 300px) / (1080 - 300)));
-    margin-left: calc(30px + (50 - 30) * ((100vh - 300px) / (1080 - 300)));
-  }
-}
-@media screen and (orientation: landscape) and (min-height: 67.5rem) {
-  .photosCards__city, .photosCards__country {
-    font-size: 28px;
-    margin-left: 50px;
-  }
-}
-.photosCards__country {
-  text-transform: none;
-}
-@media screen and (orientation: portrait) {
-  .photosCards__country {
-    font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1080 - 300)));
-  }
-}
-@media screen and (orientation: portrait) and (min-width: 67.5rem) {
-  .photosCards__country {
-    font-size: 18px;
-  }
-}
-@media screen and (orientation: landscape) {
-  .photosCards__country {
-    font-size: calc(14px + (18 - 14) * ((100vh - 300px) / (1080 - 300)));
-  }
-}
-@media screen and (orientation: landscape) and (min-height: 67.5rem) {
-  .photosCards__country {
-    font-size: 18px;
-  }
-}
 .photosCards__image {
   width: 100%;
   height: 100%;
@@ -1277,16 +1349,12 @@ body {
 .modal, .modal--hidden {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   z-index: 2;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
   background-color: rgb(25, 39, 27);
-  color: white;
   transform: translateX(0);
   transition-property: transform;
   transition-duration: 0.8s;
@@ -1295,6 +1363,10 @@ body {
   transform: translateX(-100%);
 }
 .modal__imageContainer {
+  display: inherit;
+  align-items: center;
+  width: inherit;
+  height: inherit;
   margin-top: 0;
   margin-right: 0;
   margin-bottom: 0;
@@ -1303,6 +1375,11 @@ body {
 .modal__image {
   width: 100%;
   vertical-align: middle;
+}
+@media screen and (orientation: landscape) {
+  .modal__image {
+    height: 100%;
+  }
 }
 
 .footer {
