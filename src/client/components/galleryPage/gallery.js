@@ -34,7 +34,7 @@ class Gallery extends Component {
 	}
 
 	async getPhotos() {
-		const request = await axios({
+		await axios({
 			method: "GET",
 			url: "https://www.flickr.com/services/rest/?method=flickr.photosets.getPhotos",
 			headers: {
@@ -49,14 +49,12 @@ class Gallery extends Component {
 			}
 		})
 		.then(result => {
-			return result;
+			this.setState({
+				photos: result.data
+			});
 		})
 		.catch(error => {
 			return error;
-		});
-
-		this.setState({
-			photos: request.data
 		});
 
 		this.domElements = document.querySelectorAll(".gallery__listItem");
