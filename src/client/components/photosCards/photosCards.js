@@ -9,12 +9,19 @@ import Image from "../image/image";
 class PhotosCards extends Component {
 	constructor(props) {
 		super(props);
+		this.state = {
+			tags: null
+		}
+		this.city;
+		this.country;
+		this.photosLocation;
 
 		this.photosCardsRef = createRef();
 		this.overlayRef = createRef();
 
 		this.showOverlay = this.showOverlay.bind(this);
 		this.hideOverlay = this.hideOverlay.bind(this);
+		this.handleTags = this.handleTags.bind(this);
 	}
 
 	showOverlay() {
@@ -25,6 +32,16 @@ class PhotosCards extends Component {
 		this.overlayRef.current.classList.remove("hover");
 	}
 
+	handleTags() {
+		const splittedTags = this.props.tags.split(" ");
+		this.photosLocation = {};
+		this.photosLocation["city"] = splittedTags[0];
+		this.photosLocation["country"] = splittedTags[1];
+		this.setState({
+			tags: this.photosLocation
+		});
+	}
+
 	componentDidMount() {
 		if("ontouchstart" in window) {
 			null;
@@ -33,6 +50,8 @@ class PhotosCards extends Component {
 			this.photosCardsRef.current.addEventListener("mouseover", this.showOverlay);
 			this.photosCardsRef.current.addEventListener("mouseout", this.hideOverlay);
 		}
+
+		this.handleTags();
 	}
 
 	componentWillUnmount() {
@@ -51,8 +70,11 @@ class PhotosCards extends Component {
 					ref={this.overlayRef}
 					className={"photosCards__overlay"}
 				>
-					<span className={"photosCards__city"}>{this.props.location.city}</span>
-					<span className={"photosCards__country"}>{this.props.location.country}</span>
+					<div className={"photosCards__container"}>
+						<span className={"photosCards__city"}>{this.photosLocation && this.photosLocation.city}</span>
+						{" "}
+						<span className={"photosCards__country"}>{this.photosLocation && this.photosLocation.country}</span>
+					</div>
 				</div>
 				<Image
 					url={this.props.sd}

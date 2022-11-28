@@ -1,5 +1,6 @@
-const webpack = require("webpack"); // eslint-disable-line no-unused-vars
+const webpack = require("webpack");
 const path = require("path");
+const dotenv = require("dotenv").config({path: "./.env"}); // eslint-disable-line no-unused-vars
 
 const config = {
     entry: ["./src/client/index.js"],
@@ -47,6 +48,11 @@ const config = {
     resolve: {
         extensions: [".js", ".jsx"],
     },
+    plugins: [
+        new webpack.DefinePlugin({
+            "process.env": JSON.stringify(process.env),
+        }),
+    ],
     devServer: {
         contentBase: "./dist",
         port: 4000,

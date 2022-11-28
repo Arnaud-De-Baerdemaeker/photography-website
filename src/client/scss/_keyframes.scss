@@ -116,6 +116,16 @@
 	}
 }
 
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
 // Menu icon animation
 @keyframes topFigureToCross {
 	0% {
@@ -147,11 +157,11 @@
 
 @keyframes middleFigureToTransparent {
 	0% {
-		fill: white;
+		fill: $color-8;
 	}
 
 	50% {
-		fill: white;
+		fill: $color-8;
 	}
 
 	51% {
@@ -173,11 +183,11 @@
 	}
 
 	51% {
-		fill: white;
+		fill: $color-8;
 	}
 
 	100% {
-		fill: white;
+		fill: $color-8;
 	}
 }
 

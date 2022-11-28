@@ -11,12 +11,9 @@ import Name from "../name/name";
 
 class Footer extends Component {
 	componentDidMount() {
-		// Get the elements to hide
 		const fetchedElements = document.querySelectorAll(".footer__links, .name--footer, .footer__credits");
-
 		// Apply a class to initially hide the elements
 		this.props.applyHideClass(fetchedElements);
-
 		// Each time the user scrolls, the list of elements is refreshed and sent to a function
 		window.addEventListener("scroll", () => {
 			const refetchedElements = fetchedElements;
@@ -107,7 +104,7 @@ class Footer extends Component {
 						{`${year.getUTCFullYear()} • Tous droits réservés`}
 					</p>
 					<p className={"footer__credits"}>
-						{"Version 2.0.2"}
+						{"Version 2.1.0"}
 					</p>
 				</div>
 			</footer>
