@@ -70,9 +70,11 @@ class PhotosCards extends Component {
 					ref={this.overlayRef}
 					className={"photosCards__overlay"}
 				>
-					{console.log(this.photosLocation)}
-					<span className={"photosCards__city"}>{this.photosLocation ? this.photosLocation.city : null}</span>
-					<span className={"photosCards__country"}>{this.photosLocation ? this.photosLocation.country : null}</span>
+					<div className={"photosCards__container"}>
+						<span className={"photosCards__city"}>{this.photosLocation && this.photosLocation.city}</span>
+						{" "}
+						<span className={"photosCards__country"}>{this.photosLocation && this.photosLocation.country}</span>
+					</div>
 				</div>
 				<Image
 					url={this.props.sd}
