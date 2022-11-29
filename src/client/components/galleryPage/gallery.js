@@ -34,29 +34,27 @@ class Gallery extends Component {
 	}
 
 	async getPhotos() {
-		const request = await axios({
+		await axios({
 			method: "GET",
 			url: "https://www.flickr.com/services/rest/?method=flickr.photosets.getPhotos",
 			headers: {
 				"Content-Type": "application/json"
 			},
 			params: {
-				api_key: process.env.API_KEY,
-				photoset_id: process.env.PHOTOSET,
+				api_key: process.env.REACT_APP_API_KEY,
+				photoset_id: process.env.REACT_APP_PHOTOSET,
 				format: "json",
 				nojsoncallback: 1,
 				extras: "url_o, url_c, tags"
 			}
 		})
 		.then(result => {
-			return result;
+			this.setState({
+				photos: result.data
+			});
 		})
 		.catch(error => {
 			return error;
-		});
-
-		this.setState({
-			photos: request.data
 		});
 
 		this.domElements = document.querySelectorAll(".gallery__listItem");
