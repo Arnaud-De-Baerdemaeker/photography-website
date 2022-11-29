@@ -41,8 +41,8 @@ class Gallery extends Component {
 				"Content-Type": "application/json"
 			},
 			params: {
-				api_key: process.env.API_KEY,
-				photoset_id: process.env.PHOTOSET,
+				api_key: process.env.REACT_APP_API_KEY,
+				photoset_id: process.env.REACT_APP_PHOTOSET,
 				format: "json",
 				nojsoncallback: 1,
 				extras: "url_o, url_c, tags"
