@@ -27,12 +27,29 @@
 	&__list { // <ul>
 		display: flex;
 		flex-direction: column;
-		row-gap: 1.875rem;
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
 		opacity: 1;
 		text-align: center;
+		
+		@media screen {
+			@media #{$portrait} {
+				@include fluidContent(row-gap, 50px, 200, 50, 100vw);
+
+				@media #{$mq-w1080-up} {
+					row-gap: 200px;
+				}
+			}
+
+			@media #{$landscape} {
+				@include fluidContent(row-gap, 35px, 150, 35, 100vh);
+
+				@media #{$mq-h1080-up} {
+					row-gap: 150px;
+				}
+			}
+		}
 	}
 
 	&__link { // <a>
@@ -89,7 +106,7 @@
 		}
 
 		&--active { // <a>
-			color: white;
+			color: $color-8;
 		}
 	}
 }

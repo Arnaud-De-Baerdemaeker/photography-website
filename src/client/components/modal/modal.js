@@ -27,7 +27,7 @@ class Modal extends Component {
 					class={"button__modal"}
 				>
 					<SVG
-						viewBox="0 0 36 36"
+						viewBox="-7 -7 50 50"
 						class={"svg__close"}
 					>
 						<path

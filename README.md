@@ -18,6 +18,10 @@ Le site a été développé en ReactJS et mis en page avec SCSS.
 
 ## Versions
 
+### 2.1.0
+- Use the Flickr API to fetch the photos and data
+- Improve the design
+
 ### 2.0.2
 - Correction du comportement de l'arrière-plan de l'en-tête
 

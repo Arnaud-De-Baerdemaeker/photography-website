@@ -5,14 +5,9 @@
 import React, {Component, createRef} from "react";
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 
-import Header from "./header/header";
-import Navigation from "./navigation/navigation";
 import HomePage from "./homepage/homepage";
 import Gallery from "./galleryPage/gallery";
 import Error404 from "./error404/error404";
-import Footer from "./footer/footer";
-
-import photos from "./metadata.json";
 
 class App extends Component {
 	constructor(props) {
@@ -20,15 +15,26 @@ class App extends Component {
 		this.state = {
 			isMenuOpen: false
 		};
-
 		this.elements;
 
 		this.headerRef = createRef();
 
+		this.setTabTitle = this.setTabTitle.bind(this);
+		this.backToTop = this.backToTop.bind(this);
 		this.toggleMenu = this.toggleMenu.bind(this);
 		this.closeMenu = this.closeMenu.bind(this);
 		this.applyHideClass = this.applyHideClass.bind(this);
 		this.revealOnScroll = this.revealOnScroll.bind(this);
+	}
+
+	setTabTitle(title) {
+		document.title = title;
+	}
+
+	backToTop() {
+		if (window.scrollY !== 0) {
+			window.scrollTo(0, 0);
+		}
 	}
 
 	toggleMenu() {
@@ -46,7 +52,6 @@ class App extends Component {
 	}
 
 	applyHideClass(elements) {
-		// Apply a class to initially hide the elements
 		elements.forEach(element => {
 			element.classList.add("view--hidden");
 		});
@@ -70,17 +75,6 @@ class App extends Component {
 	render() {
 		return (
 			<BrowserRouter>
-				<Header
-					isMenuOpen={this.state.isMenuOpen}
-					headerRef={this.headerRef}
-					toggleMenu={this.toggleMenu}
-					closeMenu={this.closeMenu}
-				/>
-				<Navigation
-					isMenuOpen={this.state.isMenuOpen}
-					toggleMenu={this.toggleMenu}
-					closeMenu={this.closeMenu}
-				/>
 				<Switch>
 					<Route
 						exact
@@ -89,7 +83,8 @@ class App extends Component {
 						<Gallery
 							isMenuOpen={this.state.isMenuOpen}
 							headerRef={this.headerRef}
-							photos={photos}
+							setTabTitle={this.setTabTitle}
+							backToTop={this.backToTop}
 							toggleMenu={this.toggleMenu}
 							closeMenu={this.closeMenu}
 							applyHideClass={this.applyHideClass}
@@ -103,6 +98,8 @@ class App extends Component {
 						<HomePage
 							isMenuOpen={this.state.isMenuOpen}
 							headerRef={this.headerRef}
+							setTabTitle={this.setTabTitle}
+							backToTop={this.backToTop}
 							toggleMenu={this.toggleMenu}
 							closeMenu={this.closeMenu}
 							applyHideClass={this.applyHideClass}
@@ -110,13 +107,17 @@ class App extends Component {
 						/>
 					</Route>
 					<Route path="*">
-						<Error404 />
+						<Error404
+							isMenuOpen={this.state.isMenuOpen}
+							headerRef={this.headerRef}
+							setTabTitle={this.setTabTitle}
+							toggleMenu={this.toggleMenu}
+							closeMenu={this.closeMenu}
+							applyHideClass={this.applyHideClass}
+							revealOnScroll={this.revealOnScroll}
+						/>
 					</Route>
 				</Switch>
-				<Footer
-					applyHideClass={this.applyHideClass}
-					revealOnScroll={this.revealOnScroll}
-				/>
 			</BrowserRouter>
 		);
 	}

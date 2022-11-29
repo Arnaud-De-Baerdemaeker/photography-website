@@ -3,26 +3,63 @@
 // By Arnaud De Baerdemaeker
 
 import React, {Component} from "react";
+import axios from "axios";
 
+import Header from "../header/header";
+import Navigation from "../navigation/navigation";
 import Hero from "../hero/hero";
 import SVG from "../svg/svg";
 import PhotosCards from "../photosCards/photosCards";
 import Modal from "../modal/modal";
+import Footer from "../footer/footer";
 
 class Gallery extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			photos: this.props.photos,
+			photos: "",
 			isModalOpen: false
 		}
-
 		this.body = document.querySelector("body");
+		this.tabTitle = "Galerie | Arnaud De Baerdemaeker";
+		this.domElements;
 		this.hdPictureFromClick;
 
+		this.getPhotos = this.getPhotos.bind(this);
 		this.toggleModal = this.toggleModal.bind(this);
 		this.handleClick = this.handleClick.bind(this);
 		this.getDataFromTarget = this.getDataFromTarget.bind(this);
+		this.removeScrollLock = this.removeScrollLock.bind(this);
+		this.hideElements = this.hideElements.bind(this);
+	}
+
+	async getPhotos() {
+		await axios({
+			method: "GET",
+			url: "https://www.flickr.com/services/rest/?method=flickr.photosets.getPhotos",
+			headers: {
+				"Content-Type": "application/json"
+			},
+			params: {
+				api_key: process.env.REACT_APP_API_KEY,
+				photoset_id: process.env.REACT_APP_PHOTOSET,
+				format: "json",
+				nojsoncallback: 1,
+				extras: "url_o, url_c, tags"
+			}
+		})
+		.then(result => {
+			this.setState({
+				photos: result.data
+			});
+		})
+		.catch(error => {
+			return error;
+		});
+
+		this.domElements = document.querySelectorAll(".gallery__listItem");
+		// Apply a class to initially hide the elements
+		this.hideElements(this.domElements);
 	}
 
 	toggleModal() {
@@ -30,7 +67,7 @@ class Gallery extends Component {
 			isModalOpen: !isModalOpen
 		}));
 
-		if(this.state.isModalOpen === false) {
+		if(!this.state.isModalOpen) {
 			this.body.classList.add("scrollBlocked");
 			this.props.headerRef.current.classList.remove("scroll");
 		}
@@ -50,38 +87,52 @@ class Gallery extends Component {
 		this.hdPictureFromClick = click.target.dataset.hd;
 	}
 
+	handleTags() {
+		const splittedTags = this.props.tags.split(" ");
+		this.photosLocation = {};
+		this.photosLocation["city"] = splittedTags[0];
+		this.photosLocation["country"] = splittedTags[1];
+	}
+
+	removeScrollLock() {
+		this.body.classList.remove("scrollBlocked");
+		this.props.headerRef.current.classList.add("scroll");
+	}
+
+	hideElements(elements) {
+		this.props.applyHideClass(elements);
+	}
+
 	componentDidMount() {
-		document.title = "Galerie | Arnaud De Baerdemaeker";
-
-		// The condition checks if the scroll value is different from 0
-		if (window.scrollY !== 0) {
-			// If so, it sets the view at the top
-			window.scrollTo(0, 0);
-		}
-
-		// Get the elements to hide
-		const fetchedElements = document.querySelectorAll(".gallery__listItem");
-
-		// Apply a class to initially hide the elements
-		this.props.applyHideClass(fetchedElements);
-
+		this.props.setTabTitle(this.tabTitle);
+		this.props.backToTop();
+		this.getPhotos();
 		// Each time the user scrolls, the list of elements is refreshed and sent to a function
 		window.addEventListener("scroll", () => {
-			const refetchedElements = fetchedElements;
+			const refetchedElements = this.domElements;
 			this.props.revealOnScroll(refetchedElements);
 		});
 	}
 
 	componentWillUnmount() {
 		window.removeEventListener("scroll", () => {});
-
-		this.body.classList.remove("scrollBlocked");
-		this.props.headerRef.current.classList.add("scroll");
+		this.removeScrollLock();
 	}
 
 	render() {
 		return (
 			<>
+				<Header
+					isMenuOpen={this.props.isMenuOpen}
+					headerRef={this.props.headerRef}
+					toggleMenu={this.props.toggleMenu}
+					closeMenu={this.props.closeMenu}
+				/>
+				<Navigation
+					isMenuOpen={this.props.isMenuOpen}
+					toggleMenu={this.props.toggleMenu}
+					closeMenu={this.props.closeMenu}
+				/>
 				<Hero
 					heroContainerClass={" hero__background--1"}
 					heroTitleClass={"hero__title--gallery"}
@@ -114,15 +165,15 @@ class Gallery extends Component {
 				/>
 				<main className={"gallery"}>
 					<ul className={"gallery__list"}>
-						{this.state.photos.map(photo =>
+						{this.state.photos && this.state.photos.photoset.photo.map(data =>
 							<li
-								key={photo.id}
+								key={data.id}
 								className={"gallery__listItem"}
 							>
 								<PhotosCards
-									sd={photo.sd}
-									hd={photo.hd}
-									location={photo.location}
+									sd={data.url_c}
+									hd={data.url_o}
+									tags={data.tags}
 									isModalOpen={this.state.isModalOpen}
 									toggleModal={this.toggleModal}
 									handleClick={this.handleClick}
@@ -136,6 +187,11 @@ class Gallery extends Component {
 						toggleModal={this.toggleModal}
 					/>
 				</main>
+				<Footer
+					setScrollReveal={this.props.setScrollReveal}
+					applyHideClass={this.props.applyHideClass}
+					revealOnScroll={this.props.revealOnScroll}
+				/>
 			</>
 		);
 	}

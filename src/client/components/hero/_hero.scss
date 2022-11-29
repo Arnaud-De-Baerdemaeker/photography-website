@@ -32,20 +32,20 @@
 
 		&--1 { // <div>
 			@extend .hero__background;
-			background-image: url("https://lh3.googleusercontent.com/M-Cy0zTisnpjaCobpnmSGw_csGA2HHgEu4wqXJPvjTl9GWDN2KLQPJ_AorRD3soNtjQIs6XIESn2F1UjePrTmZ8yw_gMpVNPFQJrYnDf131Lrog2HuzYKk5SJGLOTy_ojY6-KfIh6g=w1920-h1080");
+			background-image: url("https://live.staticflickr.com/65535/52507757779_cfd3ca9931_o.jpg");
 			animation-name: fadeInAndOut1;
 		}
 
 		&--2 { // <div>
 			@extend .hero__background;
-			background-image: url("https://lh3.googleusercontent.com/x-Epo9_cT7fBvPu03CuZ4Pxhsi6zxbtSEtQ4lAftMDGB6tNkEguZBX8lkX_OnGINJS-2j4tipj1ZRiEVyOanbOO3SO_mRA_vIJ3vN4RTasKjPi5vFaeK-AA3Wj14P7c5jGFHHf7T2g=w1920-h1080");
+			background-image: url("https://live.staticflickr.com/65535/52507487906_e610e9fc6d_o.jpg");
 			animation-name: fadeInAndOut2;
 		}
 
 		&--3 { // <div>
 			@extend .hero__background;
 			background: {
-				image: url("https://lh3.googleusercontent.com/EIR43zKJyT0G4aEqTYR7guf1B9W7LORp3ywN3aoy18yY4mg5iPNggkyTqfK3tS0BpfJk8Sf2oLYrIiWokbZYAY66z5aZMzmtwHdRxFqrdQfII9fXFefHDUgkT1Ti3Hz3COVTTrwHOA=w1920-h1080");
+				image: url("https://live.staticflickr.com/65535/52508039833_f775737595_o.jpg");
 				position-x: 20%;
 			}
 			animation-name: fadeInAndOut3;
@@ -53,23 +53,29 @@
 
 		&--4 { // <div>
 			@extend .hero__background;
-			background-image: url("https://lh3.googleusercontent.com/oWtO6I2-HLQ0O-PjWyl6oAQkVaihh_lrFXD3ioqemv-VrzeGjIV2ndFIrK3rOLMdiyGJaK99GXTEifULeifu7xw5E2VuO9rW2Bt6sf0f9CeOONPRSxOct7Y_I9x90mY9hlKdOQtM4A=w1920-h1080");
+			background-image: url("https://live.staticflickr.com/65535/52507486406_1b80fd307b_o.jpg");
 			animation-name: fadeInAndOut4;
 		}
 
 		&--5 { // <div>
 			@extend .hero__background;
 			background: {
-				image: url("https://lh3.googleusercontent.com/RoO69wbLVhDxxXjpnJmnAcuv-hiiLlPJX-ip90np2tr_YdnP_y4i8CJ4LXdp5yCWv6HWLIf7oVCUhXwt0DgxNabsvjJ17NzTkNGcdChggeNGLF-uIibIslt7ezL3BdTlWhi_qtAxgw=w1920-h1080");
-				position-x: 65%;
+				image: url("https://live.staticflickr.com/65535/52507002027_e9c653d29c_o.jpg");
+				position-x: 70%;
 			}
 			animation-name: fadeInAndOut5;
 		}
 
 		&--404 { // <div>
 			@extend .hero__background;
-			background-image: url("https://lh3.googleusercontent.com/VlmRP9R6zjMXzUezjU6fpgAYt37rNritFrDMuhqAfy5RKjyvqCH9bd8tQdB-jx46sc_NWVg01aFu-voQ8dD74wjhSDt0yDl75-E6gf6fd3bw8yj4jSk_kZwMp8hp8WL2_b9UHO7S5A=w1920-h1080");
-			animation-duration: unset;
+			background: {
+				image: url("https://live.staticflickr.com/65535/52506996562_f95be15062_o.jpg");
+				position-x: 20%;
+			}
+			animation: {
+				name: fadeIn;
+				duration: 2s;
+			}
 		}
 	}
 
@@ -83,7 +89,7 @@
 		@include revealOnLoad;
 		animation-delay: 1s;
 		margin: 0;
-		color: white;
+		color: $color-8;
 		font: {
 			family: $jost;
 			weight: 600;
@@ -146,6 +152,24 @@
 
 		&--404 { // h2
 			@extend .hero__title;
+
+			@media screen {
+				@media #{$portrait} {
+					@include fluidContent(font-size, 35px, 90, 35, 100vw);
+
+					@media #{$mq-w1080-up} {
+						font-size: 90px;
+					}
+				}
+
+				@media #{$landscape} {
+					@include fluidContent(font-size, 27px, 90, 27, 100vh);
+
+					@media #{$mq-h1080-up} {
+						font-size: 90px;
+					}
+				}
+			}
 		}
 
 		.title {
@@ -169,6 +193,7 @@
 				z-index: 0;
 				display: block;
 				color: $color-7;
+				opacity: 0.5;
 				font-weight: 300;
 
 				@media screen {
@@ -243,7 +268,7 @@
 		position: absolute;
 		bottom: 40px;
 		z-index: 0;
-		color: white;
+		color: $color-8;
 		text-decoration: none;
 		width: fit-content;
 		height: fit-content;
@@ -272,18 +297,26 @@
 
 		@media screen {
 			@media #{$portrait} {
-				@include fluidContent(font-size, 14px, 24, 14, 100vw);
+				@include fluidContent(font-size, 16px, 24, 16, 100vw);
 
 				@media #{$mq-w1080-up} {
 					font-size: 24px;
+				}
+			}
+
+			@media #{$landscape} {
+				@include fluidContent(font-size, 16px, 22, 16, 100vh);
+
+				@media #{$mq-h1080-up} {
+					font-size: 22px;
 				}
 			}
 		}
 
 		&:hover {
 			border: {
-				top-color: white;
-				bottom-color: white;
+				top-color: $color-8;
+				bottom-color: $color-8;
 			}
 		}
 	}
