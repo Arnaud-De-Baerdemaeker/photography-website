@@ -124,7 +124,7 @@
 			}
 		}
 
-		&--gallery { // h2>
+		&--gallery { // <h2>
 			@extend .hero__title;
 
 			@media screen {
@@ -148,6 +148,10 @@
 					}
 				}
 			}
+		}
+
+		&--portfolio { // <h2>
+			@extend .hero__title--gallery;
 		}
 
 		&--404 { // h2
