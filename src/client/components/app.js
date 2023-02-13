@@ -96,7 +96,16 @@ class App extends Component {
 						exact
 						path={"/portfolio"}
 					>
-						<Portfolio />
+						<Portfolio
+							isMenuOpen={this.state.isMenuOpen}
+							headerRef={this.headerRef}
+							setTabTitle={this.setTabTitle}
+							backToTop={this.backToTop}
+							toggleMenu={this.toggleMenu}
+							closeMenu={this.closeMenu}
+							applyHideClass={this.applyHideClass}
+							revealOnScroll={this.revealOnScroll}
+						/>
 					</Route>
 					<Route
 						exact
