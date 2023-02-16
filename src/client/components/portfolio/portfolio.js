@@ -8,46 +8,78 @@ import Header from "../header/header";
 import Navigation from "../navigation/navigation";
 import Hero from "../hero/hero";
 import SVG from "../svg/svg";
+import Project from "../project/project";
+
+import myWebsite from "../../images/myWebsite.png";
+import smartmobiles from "../../images/smartmobiles.png";
+import pomodoroTimer from "../../images/pomodoroTimer.png";
+import solarSystem from "../../images/solarSystem.png";
 
 class Portfolio extends Component {
-    constructor(props) {
-        super(props);
-        this.tabTitle = "Portfolio | Arnaud De Baerdemaeker";
-    }
+	constructor(props) {
+		super(props);
+		this.tabTitle = "Portfolio | Arnaud De Baerdemaeker";
+		this.projects = [
+			{
+				title: "Mon site",
+				image: myWebsite,
+				alt: "",
+				link: null
+			},
+			{
+				title: "Smartmobiles",
+				image: smartmobiles,
+				alt: "",
+				link: "https://smartmobiles.netlify.app/"
+			},
+			{
+				title: "Pomodoro Timer",
+				image: pomodoroTimer,
+				alt: "",
+				link: "https://arnaud-pomodoro-timer.netlify.app/"
+			},
+			{
+				title: "Le système solaire",
+				image: solarSystem,
+				alt: "",
+				link: "https://systemesolaire.netlify.app/index.html"
+			}
+		];
+	}
 
-    componentDidMount() {
-        this.props.setTabTitle(this.tabTitle);
-        this.props.backToTop();
-        // const fetchedElements = document.querySelectorAll("");
-        // Apply a class to initially hide the elements
-        // this.props.applyHideClass(fetchedElements);
-        // Each time the user scrolls, the list of elements is refreshed and sent to a function
-        // window.addEventListener("scroll", () => {
-            // const refetchedElements = fetchedElements;
-            // this.props.revealOnScroll(refetchedElements);
-        // });
-    }
+	componentDidMount() {
+		this.props.setTabTitle(this.tabTitle);
+		this.props.backToTop();
+		// const fetchedElements = document.querySelectorAll("");
+		// Apply a class to initially hide the elements
+		// this.props.applyHideClass(fetchedElements);
+		// Each time the user scrolls, the list of elements is refreshed and sent to a function
+		// window.addEventListener("scroll", () => {
+			// const refetchedElements = fetchedElements;
+			// this.props.revealOnScroll(refetchedElements);
+		// });
+	}
 
-    componentWillUnmount() {
-        // window.removeEventListener("scroll", () => {});
-    }
+	componentWillUnmount() {
+		// window.removeEventListener("scroll", () => {});
+	}
 
-    render() {
-        return(
-            <>
-                <Header
-                    isMenuOpen={this.props.isMenuOpen}
-                    headerRef={this.props.headerRef}
-                    toggleMenu={this.props.toggleMenu}
-                    closeMenu={this.props.closeMenu}
-                />
-                <Navigation
-                    isMenuOpen={this.props.isMenuOpen}
-                    toggleMenu={this.props.toggleMenu}
-                    closeMenu={this.props.closeMenu}
-                />
-                <Hero
-                    heroContainerClass={" hero__background--1"}
+	render() {
+		return(
+			<>
+				<Header
+					isMenuOpen={this.props.isMenuOpen}
+					headerRef={this.props.headerRef}
+					toggleMenu={this.props.toggleMenu}
+					closeMenu={this.props.closeMenu}
+				/>
+				<Navigation
+					isMenuOpen={this.props.isMenuOpen}
+					toggleMenu={this.props.toggleMenu}
+					closeMenu={this.props.closeMenu}
+				/>
+				<Hero
+					heroContainerClass={" hero__background--1"}
 					heroTitleClass={"hero__title--portfolio"}
 					heroTitleContent={"Portfolio"}
 					scrollDownSVG={
@@ -75,10 +107,21 @@ class Portfolio extends Component {
 							</div>
 						</div>
 					}
-                />
-            </>
-        );
-    }
+				/>
+				<main className={"portfolio"}>
+					{this.projects.map(project =>
+						<Project
+							key={project.title}
+							projectTitle={project.title}
+							projectImageUrl={project.image}
+							projectImageAlt={project.alt}
+							projectLink={project.link && project.link}
+						/>
+					)}
+				</main>
+			</>
+		);
+	}
 }
 
 export default Portfolio;
