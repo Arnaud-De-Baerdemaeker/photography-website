@@ -1264,40 +1264,106 @@ body::-webkit-scrollbar-thumb {
 
 .portfolio {
   display: flex;
-  flex-wrap: wrap;
-  row-gap: 60px;
+  justify-content: center;
   padding-top: 6.25rem;
-  padding-right: 20px;
   padding-bottom: 6.25rem;
-  padding-left: 20px;
+}
+.portfolio__list {
+  display: inherit;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 80px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (orientation: portrait) {
+  .portfolio__list {
+    width: calc(250px + (800 - 250) * ((100vw - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 67.5rem) {
+  .portfolio__list {
+    width: 800px;
+  }
 }
 
-.project .work {
+.project {
   display: flex;
   flex-direction: column;
   row-gap: 5px;
+}
+@media screen and (orientation: portrait) and (min-width: 43.75rem) {
+  .project {
+    width: calc(50% - 15px);
+  }
+}
+.project__imageContainer {
+  position: relative;
+}
+.project__link {
+  position: relative;
   text-decoration: none;
   color: rgb(249, 246, 238);
 }
-.project .work__image {
+.project__image {
   width: 100%;
   border-radius: 10px;
+  vertical-align: bottom;
 }
-.project .work__title {
+.project__rollover, .project__rollover--hidden, .project__rollover--visible {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  transition-property: opacity;
+  transition-duration: 0.4s;
+  pointer-events: none;
+}
+.project__rollover--visible {
+  opacity: 1;
+}
+.project__rollover--hidden {
+  opacity: 0;
+}
+.project__visit {
+  color: rgb(16, 26, 18);
+  background-color: rgb(249, 246, 238);
+  padding-top: 5px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  border-radius: 4px;
+}
+.project__title {
   margin: 0;
   border-left-style: solid;
   border-left-width: 5px;
   border-left-color: rgb(88, 129, 87);
-  padding-left: 20px;
+  padding-left: 10px;
   font-family: "Economica", Arial, Helvetica, sans-serif;
-  font-size: 33px;
+  font-size: 28px;
   text-transform: uppercase;
-  word-spacing: 4px;
-  letter-spacing: 1px;
 }
-.project .work__title:after {
+.project__title:after {
   content: ".";
   color: rgb(88, 129, 87);
+}
+@media screen and (orientation: portrait) {
+  .project__title {
+    font-size: calc(28px + (35 - 28) * ((100vw - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 67.5rem) {
+  .project__title {
+    font-size: 35px;
+  }
 }
 
 .footer {
