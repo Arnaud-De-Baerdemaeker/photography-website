@@ -49,7 +49,6 @@ class Error404 extends Component {
 					}
 				/>
 				<Footer
-					setScrollReveal={this.props.setScrollReveal}
 					applyHideClass={this.props.applyHideClass}
 					revealOnScroll={this.props.revealOnScroll}
 				/>

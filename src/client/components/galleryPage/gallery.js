@@ -188,7 +188,6 @@ class Gallery extends Component {
 					/>
 				</main>
 				<Footer
-					setScrollReveal={this.props.setScrollReveal}
 					applyHideClass={this.props.applyHideClass}
 					revealOnScroll={this.props.revealOnScroll}
 				/>
