@@ -2,26 +2,69 @@
 // Started on July 2020
 // By Arnaud De Baerdemaeker
 
-import React, {Component} from "react";
+import React, {Component, createRef} from "react";
 
 class Project extends Component {
+	constructor(props) {
+		super(props);
+		this.imageRef = createRef();
+		this.rolloverRef = createRef();
+
+		this.hoveringIn = this.hoveringIn.bind(this);
+		this.hoveringOut = this.hoveringOut.bind(this);
+	}
+
+	hoveringIn() {
+		this.rolloverRef.current.classList.replace("project__rollover--hidden", "project__rollover--visible");
+	}
+
+	hoveringOut() {
+		this.rolloverRef.current.classList.replace("project__rollover--visible", "project__rollover--hidden");
+	}
+
+	componentDidMount() {
+		if("ontouchstart" in window) {
+			null;
+		}
+		else {
+			if(this.props.projectLink != null) {
+				this.imageRef.current.addEventListener("mouseover", this.hoveringIn);
+				this.imageRef.current.addEventListener("mouseout", this.hoveringOut);
+			}
+		}
+	}
+
+	componentWillUnmount() {
+		this.imageRef.current.removeEventListener("mouseover", this.hoveringIn);
+		this.imageRef.current.removeEventListener("mouseout", this.hoveringOut);
+	}
+
 	render() {
 		return(
-			<section className={"project"}>
-				<a
-					href={this.props.projectLink}
-					target={"_blank"}
-					rel={"noreferrer noopener"}
-					className={"work"}
-				>
-					<img
-						src={this.props.projectImageUrl}
-						alt={this.props.projectImageAlt}
-						className={"work__image"}
-					/>
-					<h2 className={"work__title"}>{this.props.projectTitle}</h2>
-				</a>
-			</section>
+			<li className={"project"}>
+				<div className={"project__imageContainer"}>
+					<a
+						href={this.props.projectLink}
+						target={"_blank"}
+						rel={"noreferrer noopener"}
+						ref={this.imageRef}
+						className={"project__link"}
+					>
+						<img
+							src={this.props.projectImageUrl}
+							alt={this.props.projectImageAlt}
+							className={"project__image"}
+						/>
+					</a>
+					<div
+						ref={this.rolloverRef}
+						className={"project__rollover--hidden"}
+					>
+						<div className={"project__visit"}>{"Visiter"}</div>
+					</div>
+				</div>
+				<h2 className={"project__title"}>{this.props.projectTitle}</h2>
+			</li>
 		);
 	}
 }
