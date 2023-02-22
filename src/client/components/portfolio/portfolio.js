@@ -9,6 +9,7 @@ import Navigation from "../navigation/navigation";
 import Hero from "../hero/hero";
 import SVG from "../svg/svg";
 import Project from "../project/project";
+import Footer from "../footer/footer";
 
 import myWebsite from "../../images/myWebsite.png";
 import smartmobiles from "../../images/smartmobiles.png";
@@ -23,25 +24,25 @@ class Portfolio extends Component {
 			{
 				title: "Mon site",
 				image: myWebsite,
-				alt: "",
+				alt: "Aperçu de mon site web personnel",
 				link: null
 			},
 			{
 				title: "Smartmobiles",
 				image: smartmobiles,
-				alt: "",
+				alt: "Aperçu de mon site web sur le référencement des appareils mobiles et leurs spécifications",
 				link: "https://smartmobiles.netlify.app/"
 			},
 			{
 				title: "Pomodoro Timer",
 				image: pomodoroTimer,
-				alt: "",
+				alt: "Aperçu de mon site web sur un minuteur pomodoro",
 				link: "https://arnaud-pomodoro-timer.netlify.app/"
 			},
 			{
-				title: "Le système solaire",
+				title: "Le Système solaire",
 				image: solarSystem,
-				alt: "",
+				alt: "Aperçu de mon site web sur le Système solaire",
 				link: "https://systemesolaire.netlify.app/index.html"
 			}
 		];
@@ -50,18 +51,18 @@ class Portfolio extends Component {
 	componentDidMount() {
 		this.props.setTabTitle(this.tabTitle);
 		this.props.backToTop();
-		// const fetchedElements = document.querySelectorAll("");
+		const fetchedElements = document.querySelectorAll(".project");
 		// Apply a class to initially hide the elements
-		// this.props.applyHideClass(fetchedElements);
+		this.props.applyHideClass(fetchedElements);
 		// Each time the user scrolls, the list of elements is refreshed and sent to a function
-		// window.addEventListener("scroll", () => {
-			// const refetchedElements = fetchedElements;
-			// this.props.revealOnScroll(refetchedElements);
-		// });
+		window.addEventListener("scroll", () => {
+			const refetchedElements = fetchedElements;
+			this.props.revealOnScroll(refetchedElements);
+		});
 	}
 
 	componentWillUnmount() {
-		// window.removeEventListener("scroll", () => {});
+		window.removeEventListener("scroll", () => {});
 	}
 
 	render() {
@@ -109,16 +110,22 @@ class Portfolio extends Component {
 					}
 				/>
 				<main className={"portfolio"}>
-					{this.projects.map(project =>
-						<Project
-							key={project.title}
-							projectTitle={project.title}
-							projectImageUrl={project.image}
-							projectImageAlt={project.alt}
-							projectLink={project.link && project.link}
-						/>
-					)}
+					<ul className={"portfolio__list"}>
+						{this.projects.map(project =>
+							<Project
+								key={project.title}
+								projectTitle={project.title}
+								projectImageUrl={project.image}
+								projectImageAlt={project.alt}
+								projectLink={project.link && project.link}
+							/>
+						)}
+					</ul>
 				</main>
+				<Footer
+					applyHideClass={this.props.applyHideClass}
+					revealOnScroll={this.props.revealOnScroll}
+				/>
 			</>
 		);
 	}
