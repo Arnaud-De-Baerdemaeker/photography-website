@@ -1289,6 +1289,16 @@ body::-webkit-scrollbar-thumb {
     width: 800px;
   }
 }
+@media screen and (orientation: landscape) {
+  .portfolio__list {
+    width: calc(400px + (1400 - 400) * ((100vh - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: landscape) and (min-height: 67.5rem) {
+  .portfolio__list {
+    width: 1400px;
+  }
+}
 
 .project {
   display: flex;
@@ -1296,6 +1306,11 @@ body::-webkit-scrollbar-thumb {
   row-gap: 5px;
 }
 @media screen and (orientation: portrait) and (min-width: 43.75rem) {
+  .project {
+    width: calc(50% - 15px);
+  }
+}
+@media screen and (orientation: landscape) {
   .project {
     width: calc(50% - 15px);
   }
@@ -1363,6 +1378,16 @@ body::-webkit-scrollbar-thumb {
 @media screen and (orientation: portrait) and (min-width: 67.5rem) {
   .project__title {
     font-size: 35px;
+  }
+}
+@media screen and (orientation: landscape) {
+  .project__title {
+    font-size: calc(27px + (45 - 27) * ((100vh - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: landscape) and (min-height: 67.5rem) {
+  .project__title {
+    font-size: 45px;
   }
 }
 
