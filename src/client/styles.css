@@ -530,22 +530,22 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (orientation: portrait) {
   .menu__list {
-    row-gap: calc(50px + (200 - 50) * ((100vw - 300px) / (1080 - 300)));
+    row-gap: calc(30px + (150 - 30) * ((100vw - 300px) / (1080 - 300)));
   }
 }
 @media screen and (orientation: portrait) and (min-width: 67.5rem) {
   .menu__list {
-    row-gap: 200px;
+    row-gap: 150px;
   }
 }
 @media screen and (orientation: landscape) {
   .menu__list {
-    row-gap: calc(35px + (150 - 35) * ((100vh - 300px) / (1080 - 300)));
+    row-gap: calc(15px + (100 - 15) * ((100vh - 300px) / (1080 - 300)));
   }
 }
 @media screen and (orientation: landscape) and (min-height: 67.5rem) {
   .menu__list {
-    row-gap: 150px;
+    row-gap: 100px;
   }
 }
 .menu__link {
