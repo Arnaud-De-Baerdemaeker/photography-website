@@ -18,12 +18,13 @@ class Gallery extends Component {
 		super(props);
 		this.state = {
 			photos: "",
+			hdPicture: null,
 			isModalOpen: false
 		}
 		this.body = document.querySelector("body");
 		this.tabTitle = "Galerie | Arnaud De Baerdemaeker";
 		this.domElements;
-		this.hdPictureFromClick;
+		this.timeout;
 
 		this.getPhotos = this.getPhotos.bind(this);
 		this.toggleModal = this.toggleModal.bind(this);
@@ -74,17 +75,24 @@ class Gallery extends Component {
 		else {
 			this.body.classList.remove("scrollBlocked");
 			this.props.headerRef.current.classList.add("scroll");
+			this.timeout = setTimeout(() => {
+				this.setState({
+					hdPicture: null
+				});
+			}, 800);
 		}
 	}
 
 	handleClick(click) {
-		this.toggleModal();
 		this.getDataFromTarget(click);
+		this.toggleModal();
 	}
 
 	getDataFromTarget(click) {
 		click.preventDefault();
-		this.hdPictureFromClick = click.target.dataset.hd;
+		this.setState({
+			hdPicture: click.target.dataset.hd
+		});
 	}
 
 	handleTags() {
@@ -117,6 +125,7 @@ class Gallery extends Component {
 	componentWillUnmount() {
 		window.removeEventListener("scroll", () => {});
 		this.removeScrollLock();
+		clearTimeout(this.timeout);
 	}
 
 	render() {
@@ -175,14 +184,13 @@ class Gallery extends Component {
 									hd={data.url_o}
 									tags={data.tags}
 									isModalOpen={this.state.isModalOpen}
-									toggleModal={this.toggleModal}
 									handleClick={this.handleClick}
 								/>
 							</li>
 						)}
 					</ul>
 					<Modal
-						hd={this.hdPictureFromClick}
+						hd={this.state.hdPicture}
 						isModalOpen={this.state.isModalOpen}
 						toggleModal={this.toggleModal}
 					/>
