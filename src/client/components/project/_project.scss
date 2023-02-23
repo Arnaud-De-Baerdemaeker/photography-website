@@ -99,7 +99,7 @@
 			}
 
 			@media #{$landscape} {
-				@include fluidContent(font-size, 20px, 45, 20, 100vw);
+				@include fluidContent(font-size, 27px, 45, 27, 100vh);
 
 				@media #{$mq-h1080-up} {
 					font-size: 45px;
