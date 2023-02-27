@@ -53,7 +53,7 @@ class Hero extends Component {
 		const viewport = window.innerHeight;
 		const heroPosition = this.heroBackFilter.current.getBoundingClientRect().bottom;
 
-		if(heroPosition <= viewport - 150) {
+		if(heroPosition < viewport / 2) {
 			this.heroBackFilter.current.classList.add("hideHeroBackground");
 		}
 		else {
