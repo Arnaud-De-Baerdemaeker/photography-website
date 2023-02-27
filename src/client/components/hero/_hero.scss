@@ -82,7 +82,15 @@
 	&__backFilter { // <div>
 		width: inherit;
 		height: inherit;
-		background-color: $half-transparent;
+		backdrop-filter: brightness(50%);
+		background: {
+			image: linear-gradient(to top, $color-4 1%, rgba(16, 26, 18, 0.5) 12.5%, rgba(16, 26, 18, 0) 25%);
+			color:rgba(16, 26, 18, 0);
+		}
+		transition: {
+			property: background-color;
+			duration: 0.5s;
+		}
 	}
 
 	&__title {
@@ -323,5 +331,9 @@
 				bottom-color: $color-8;
 			}
 		}
+	}
+
+	.hideHeroBackground {
+		background-color: rgba(16, 26, 18, 1);
 	}
 }
