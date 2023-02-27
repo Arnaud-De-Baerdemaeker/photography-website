@@ -27,10 +27,8 @@ class Project extends Component {
 			null;
 		}
 		else {
-			if(this.props.projectLink != null) {
-				this.imageRef.current.addEventListener("mouseover", this.hoveringIn);
-				this.imageRef.current.addEventListener("mouseout", this.hoveringOut);
-			}
+			this.imageRef.current.addEventListener("mouseover", this.hoveringIn);
+			this.imageRef.current.addEventListener("mouseout", this.hoveringOut);
 		}
 	}
 
@@ -42,28 +40,25 @@ class Project extends Component {
 	render() {
 		return(
 			<li className={"project"}>
-				<div className={"project__imageContainer"}>
-					<a
-						href={this.props.projectLink}
-						target={"_blank"}
-						rel={"noreferrer noopener"}
-						ref={this.imageRef}
-						className={"project__link"}
-					>
-						<img
-							src={this.props.projectImageUrl}
-							alt={this.props.projectImageAlt}
-							className={"project__image"}
-						/>
-					</a>
-					<div
-						ref={this.rolloverRef}
-						className={"project__rollover--hidden"}
-					>
-						<div className={"project__visit"}>{"Visiter"}</div>
-					</div>
+				<a
+					href={this.props.projectLink && this.props.projectLink}
+					target={"_blank"}
+					rel={"noreferrer noopener"}
+					ref={this.imageRef}
+					className={"project__link"}
+				>
+					<img
+						src={this.props.projectImageUrl}
+						alt={this.props.projectImageAlt}
+						className={"project__image"}
+					/>
+				</a>
+				<div
+					ref={this.rolloverRef}
+					className={"project__rollover--hidden"}
+				>
+					<h2 className={"project__title"}>{this.props.projectTitle}</h2>
 				</div>
-				<h2 className={"project__title"}>{this.props.projectTitle}</h2>
 			</li>
 		);
 	}
