@@ -653,7 +653,12 @@ body::-webkit-scrollbar-thumb {
 .hero__backFilter {
   width: inherit;
   height: inherit;
-  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: brightness(50%);
+          backdrop-filter: brightness(50%);
+  background-image: linear-gradient(to top, rgb(16, 26, 18) 1%, rgba(16, 26, 18, 0.5) 12.5%, rgba(16, 26, 18, 0) 25%);
+  background-color: rgba(16, 26, 18, 0);
+  transition-property: background-color;
+  transition-duration: 0.5s;
 }
 .hero__title, .hero__title--404, .hero__title--gallery, .hero__title--portfolio, .hero__title--homepage {
   animation-name: reveal;
@@ -860,6 +865,9 @@ body::-webkit-scrollbar-thumb {
 .hero .link__backToHomepage:hover {
   border-top-color: rgb(249, 246, 238);
   border-bottom-color: rgb(249, 246, 238);
+}
+.hero .hideHeroBackground {
+  background-color: rgb(16, 26, 18);
 }
 
 .homepage {
@@ -1272,31 +1280,18 @@ body::-webkit-scrollbar-thumb {
   display: inherit;
   justify-content: center;
   flex-wrap: wrap;
-  row-gap: 80px;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 @media screen and (orientation: portrait) {
   .portfolio__list {
-    width: calc(250px + (800 - 250) * ((100vw - 300px) / (1080 - 300)));
-  }
-}
-@media screen and (orientation: portrait) and (min-width: 67.5rem) {
-  .portfolio__list {
-    width: 800px;
+    max-width: 1080px;
   }
 }
 @media screen and (orientation: landscape) {
   .portfolio__list {
-    width: calc(400px + (1400 - 400) * ((100vh - 300px) / (1080 - 300)));
-  }
-}
-@media screen and (orientation: landscape) and (min-height: 67.5rem) {
-  .portfolio__list {
-    width: 1400px;
+    max-width: 1920px;
   }
 }
 
@@ -1307,36 +1302,47 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (orientation: portrait) and (min-width: 43.75rem) {
   .project {
-    width: calc(50% - 15px);
+    width: 50%;
   }
 }
-@media screen and (orientation: landscape) {
+@media screen and (orientation: landscape) and (min-height: 67.5rem) {
   .project {
-    width: calc(50% - 15px);
+    width: 33.3333333333%;
   }
-}
-.project__imageContainer {
-  position: relative;
 }
 .project__link {
   position: relative;
   text-decoration: none;
   color: rgb(249, 246, 238);
+  overflow: hidden;
 }
 .project__image {
   width: 100%;
-  border-radius: 10px;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
   vertical-align: bottom;
+}
+@media screen and (hover: hover) {
+  .project__image {
+    filter: grayscale(100%);
+    transition-property: transform;
+    transition-duration: 0.4s;
+  }
+  .project__image:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+  }
 }
 .project__rollover, .project__rollover--hidden, .project__rollover--visible {
   position: absolute;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   width: 100%;
-  height: 100%;
-  top: 0;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  height: 50%;
+  bottom: 0;
+  background-image: linear-gradient(to top, rgb(16, 26, 18) 0%, rgba(16, 26, 18, 0.75) 40%, rgba(16, 26, 18, 0) 100%);
   transition-property: opacity;
   transition-duration: 0.4s;
   pointer-events: none;
@@ -1347,17 +1353,11 @@ body::-webkit-scrollbar-thumb {
 .project__rollover--hidden {
   opacity: 0;
 }
-.project__visit {
-  color: rgb(16, 26, 18);
-  background-color: rgb(249, 246, 238);
-  padding-top: 5px;
-  padding-right: 10px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-  border-radius: 4px;
-}
 .project__title {
-  margin: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 30px;
+  margin-left: 0;
   border-left-style: solid;
   border-left-width: 5px;
   border-left-color: rgb(88, 129, 87);
