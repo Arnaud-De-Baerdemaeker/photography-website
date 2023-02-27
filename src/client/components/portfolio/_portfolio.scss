@@ -11,27 +11,17 @@
 		display: inherit;
 		justify-content: center;
 		flex-wrap: wrap;
-		row-gap: 80px;
-		column-gap: 30px;
 		list-style: none;
 		margin: 0;
 		padding: 0;
 
 		@media screen {
 			@media #{$portrait} {
-				@include fluidContent(width, 250px, 800, 250, 100vw);
-
-				@media #{$mq-w1080-up} {
-					width: 800px;
-				}
+				max-width: 1080px;
 			}
 
 			@media #{$landscape} {
-				@include fluidContent(width, 400px, 1400, 400, 100vh);
-
-				@media #{$mq-h1080-up} {
-					width: 1400px;
-				}
+				max-width: 1920px;
 			}
 		}
 	}
