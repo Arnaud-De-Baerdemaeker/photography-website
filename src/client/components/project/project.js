@@ -24,7 +24,7 @@ class Project extends Component {
 
 	componentDidMount() {
 		if("ontouchstart" in window) {
-			null;
+			this.rolloverRef.current.classList.replace("project__rollover--hidden", "project__rollover--visible");
 		}
 		else {
 			this.imageRef.current.addEventListener("mouseover", this.hoveringIn);
