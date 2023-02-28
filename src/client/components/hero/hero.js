@@ -32,7 +32,7 @@ class Hero extends Component {
 			At each iteration, the previous image is replaced with the next one.
 			The condition checks if the end of the array is reached or not, and resets the counters to start over as a loop.
 		*/
-		if(this.props.location.pathname === "/" || this.props.location.pathname === "/galerie") {
+		if(this.props.location.pathname === "/" || this.props.location.pathname === "/galerie" || this.props.location.pathname === "/portfolio") {
 			if(this.index === 4) {
 				this.lastIndex = 4;
 				this.index = -1;
