@@ -6,15 +6,13 @@
 
 	@media screen {
 		@media #{$portrait} {
-			@media #{$mq-w700-up} {
+			@media #{$mq-w600-up} {
 				width: 50%;
 			}
 		}
 
 		@media #{$landscape} {
-			@media #{$mq-h1080-up} {
-				width: calc(100% / 3);
-			}
+			width: calc(100% / 3);
 		}
 	}
 
@@ -104,10 +102,10 @@
 
 		@media screen {
 			@media #{$portrait} {
-				@include fluidContent(font-size, 28px, 35, 28, 100vw);
+				@include fluidContent(font-size, 28px, 50, 28, 100vw);
 
 				@media #{$mq-w1080-up} {
-					font-size: 35px;
+					font-size: 50px;
 				}
 			}
 
