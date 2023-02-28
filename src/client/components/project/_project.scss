@@ -21,6 +21,7 @@
 		text-decoration: none;
 		color: $color-8;
 		overflow: hidden;
+		-webkit-tap-highlight-color: transparent;
 	}
 
 	&__image {
