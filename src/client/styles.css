@@ -1,3 +1,5 @@
+/* KEYFRAMES */
+/* Scroll reveal animation */
 @keyframes reveal {
   0% {
     opacity: 0;
@@ -8,6 +10,7 @@
     transform: translateY(0);
   }
 }
+/* Hero background images carousel */
 @keyframes fadeInAndOut1 {
   0% {
     opacity: 0;
@@ -96,6 +99,7 @@
     opacity: 1;
   }
 }
+/* Menu icon animation */
 @keyframes topFigureToCross {
   0% {
     transform: translateY(0);
@@ -168,6 +172,7 @@
     transform: translateY(0);
   }
 }
+/* Scroll down arrow and loading screen animation */
 @keyframes blinking {
   0% {
     opacity: 1;
@@ -176,6 +181,7 @@
     opacity: 0;
   }
 }
+/* GLOBAL STYLES */
 html {
   height: 100%;
   font-size: 16px;
@@ -209,6 +215,7 @@ body {
   overflow-y: hidden;
 }
 
+/* HEADER */
 .header {
   animation-name: reveal;
   animation-duration: 2s;
@@ -232,6 +239,7 @@ body {
   background-color: rgb(25, 39, 27);
 }
 
+/* NAME */
 .name--header {
   display: inherit;
   align-items: center;
@@ -303,6 +311,7 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+/* BUTTON */
 .button, .button__modal, .button__menu {
   position: relative;
   margin-top: 0;
@@ -367,6 +376,7 @@ body {
   border-radius: 50%;
 }
 
+/* SVG */
 .svg, .svg__close, .svg__background, .svg__scrollDown, .svg__menu {
   width: 100%;
   height: 100%;
@@ -456,6 +466,7 @@ body {
   fill: rgb(249, 246, 238);
 }
 
+/* MENU */
 .menu, .menu--closed {
   position: fixed;
   top: 0;
@@ -554,6 +565,7 @@ body {
   color: rgb(249, 246, 238);
 }
 
+/* HERO */
 .hero {
   display: flex;
   flex-direction: column;
@@ -610,7 +622,7 @@ body {
   height: inherit;
   -webkit-backdrop-filter: brightness(50%);
           backdrop-filter: brightness(50%);
-  background-image: linear-gradient(to top, rgb(16, 26, 18) 5%, rgba(16, 26, 18, 0.3) 15%, rgba(16, 26, 18, 0) 20%);
+  background-image: linear-gradient(to top, rgb(16, 26, 18) 4%, rgba(16, 26, 18, 0.3) 20%);
   background-color: rgba(16, 26, 18, 0);
   transition-property: background-color;
   transition-duration: 0.5s;
@@ -825,6 +837,7 @@ body {
   background-color: rgb(16, 26, 18);
 }
 
+/* HOMEPAGE */
 .homepage {
   display: flex;
   flex-direction: column;
@@ -959,6 +972,7 @@ body {
   }
 }
 
+/* GALLERY */
 .gallery {
   display: flex;
   flex-direction: column;
@@ -1017,6 +1031,7 @@ body {
   }
 }
 
+/* CARD */
 .card, .card--project, .card--photo {
   position: relative;
   overflow: hidden;
@@ -1102,6 +1117,7 @@ body {
   }
 }
 
+/* CARDOVERLAY */
 .overlay, .overlay--hidden, .overlay--visible {
   position: absolute;
   display: flex;
@@ -1244,6 +1260,7 @@ body {
   }
 }
 
+/* MODAL */
 .modal, .modal--hidden {
   position: fixed;
   top: 0;
@@ -1280,6 +1297,7 @@ body {
   }
 }
 
+/* PORTFOLIO */
 .portfolio {
   display: flex;
   justify-content: center;
@@ -1318,8 +1336,11 @@ body {
   }
 }
 
+/* FOOTER */
 .footer {
   background-color: rgb(25, 39, 27);
+  background-image: linear-gradient(to bottom, rgb(16, 26, 18) 4%, rgba(16, 26, 18, 0.3) 20%);
+  background-color: rgba(16, 26, 18, 0);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1329,7 +1350,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 50px;
+  padding-top: 100px;
   width: 100%;
   max-width: 700px;
 }
