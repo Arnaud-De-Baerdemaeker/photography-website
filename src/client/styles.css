@@ -179,7 +179,6 @@
 html {
   height: 100%;
   font-size: 16px;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -1127,7 +1126,7 @@ body {
   margin-top: 0;
   padding-top: 1px;
   padding-bottom: 1px;
-  letter-spacing: 1px;
+  font-weight: 400;
 }
 @media screen and (orientation: portrait) {
   .overlay__title--photo {
