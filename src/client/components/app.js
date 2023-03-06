@@ -7,6 +7,7 @@ import {BrowserRouter, Switch, Route} from "react-router-dom";
 
 import HomePage from "./homepage/homepage";
 import Gallery from "./galleryPage/gallery";
+import Portfolio from "./portfolio/portfolio";
 import Error404 from "./error404/error404";
 
 class App extends Component {
@@ -81,6 +82,21 @@ class App extends Component {
 						path={"/galerie"}
 					>
 						<Gallery
+							isMenuOpen={this.state.isMenuOpen}
+							headerRef={this.headerRef}
+							setTabTitle={this.setTabTitle}
+							backToTop={this.backToTop}
+							toggleMenu={this.toggleMenu}
+							closeMenu={this.closeMenu}
+							applyHideClass={this.applyHideClass}
+							revealOnScroll={this.revealOnScroll}
+						/>
+					</Route>
+					<Route
+						exact
+						path={"/portfolio"}
+					>
+						<Portfolio
 							isMenuOpen={this.state.isMenuOpen}
 							headerRef={this.headerRef}
 							setTabTitle={this.setTabTitle}

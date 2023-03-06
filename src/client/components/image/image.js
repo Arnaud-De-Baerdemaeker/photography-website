@@ -5,20 +5,16 @@
 import React, {Component} from "react";
 
 class Image extends Component {
-    render() {
-        return (
-            <img
-                src={this.props.url}
-                alt={
-                    this.props.alt
-                    ? this.props.alt
-                    : null
-                }
-                data-hd={this.props.hd}
-                className={this.props.class}
-            />
-        );
-    }
+	render() {
+		return (
+			<img
+				src={this.props.url}
+				alt={this.props.alt && this.props.alt}
+				data-hd={this.props.hd && this.props.hd}
+				className={this.props.class}
+			/>
+		);
+	}
 }
 
 export default Image;
