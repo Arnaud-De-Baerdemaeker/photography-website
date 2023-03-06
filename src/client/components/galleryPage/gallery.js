@@ -9,7 +9,7 @@ import Header from "../header/header";
 import Navigation from "../navigation/navigation";
 import Hero from "../hero/hero";
 import SVG from "../svg/svg";
-import PhotosCards from "../photosCards/photosCards";
+import Card from "../card/card";
 import Modal from "../modal/modal";
 import Footer from "../footer/footer";
 
@@ -17,7 +17,7 @@ class Gallery extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			photos: "",
+			photos: null,
 			hdPicture: null,
 			isModalOpen: false
 		}
@@ -25,6 +25,9 @@ class Gallery extends Component {
 		this.tabTitle = "Galerie | Arnaud De Baerdemaeker";
 		this.domElements;
 		this.timeout;
+		this.city;
+		this.country;
+		this.photosLocation;
 
 		this.getPhotos = this.getPhotos.bind(this);
 		this.toggleModal = this.toggleModal.bind(this);
@@ -51,7 +54,7 @@ class Gallery extends Component {
 		})
 		.then(result => {
 			this.setState({
-				photos: result.data
+				photos: result.data.photoset.photo
 			});
 		})
 		.catch(error => {
@@ -93,13 +96,6 @@ class Gallery extends Component {
 		this.setState({
 			hdPicture: click.target.dataset.hd
 		});
-	}
-
-	handleTags() {
-		const splittedTags = this.props.tags.split(" ");
-		this.photosLocation = {};
-		this.photosLocation["city"] = splittedTags[0];
-		this.photosLocation["country"] = splittedTags[1];
 	}
 
 	removeScrollLock() {
@@ -174,19 +170,27 @@ class Gallery extends Component {
 				/>
 				<main className={"gallery"}>
 					<ul className={"gallery__list"}>
-						{this.state.photos && this.state.photos.photoset.photo.map(data =>
-							<li
+						{this.state.photos && this.state.photos.map(data =>
+							<Card
 								key={data.id}
-								className={"gallery__listItem"}
-							>
-								<PhotosCards
-									sd={data.url_c}
-									hd={data.url_o}
-									tags={data.tags}
-									isModalOpen={this.state.isModalOpen}
-									handleClick={this.handleClick}
-								/>
-							</li>
+								cardClick={this.handleClick}
+								cardContent={
+									<img
+										src={data.url_c}
+										data-hd={data.url_o}
+										className={"card__image"}
+									/>
+								}
+								cardClass={"card--photo"}
+								cardOverlayContent={
+									<>
+										<span className={"overlay__city"}>{data.tags.split(" ")[0]}</span>
+										{" "}
+										<span className={"overlay__country"}>{data.tags.split(" ")[1]}</span>
+									</>
+								}
+								cardOverlayTitleClass={"overlay__title--photo"}
+							/>
 						)}
 					</ul>
 					<Modal
