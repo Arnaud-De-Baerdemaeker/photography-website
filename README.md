@@ -8,52 +8,67 @@ Au fil du temps, je continuerai à travailler dessus, aussi bien pour ajouter de
 
 Merci pour votre visite !
 
-_**Arnaud De Baerdemaeker**_
-
+***Arnaud De Baerdemaeker***
 
 ## Caractéristiques
 
 Le site a été développé en ReactJS et mis en page avec SCSS.
-
+L'API de Flickr permet de récupérer les photos stockées sur leurs serveurs et de les afficher.
 
 ## Versions
 
+### 2.2.0
+
+* Ajout d'une page portfolio
+* Modifications visuelles
+* Améliorations au niveau du code
+
 ### 2.1.0
-- Use the Flickr API to fetch the photos and data
-- Improve the design
+
+* Utilisation de l'API de Flickr pour récupérer les photos et leurs données
+* Amélioration du design
 
 ### 2.0.2
-- Correction du comportement de l'arrière-plan de l'en-tête
+
+* Correction du comportement de l'arrière-plan de l'en-tête
 
 ### 2.0.1
-- Correction de la déclaration d'un chemin
+
+* Correction de la déclaration d'un chemin
 
 ### 2.0.0
-- Refonte totale de l'apparence du site
-- Fusion de la page d'accueil et de la page A propos
-- Ajout du menu dans un volet
-- Ajout de quelques nouvelles photos
-- Structure de la page Galerie plus simplifiée
-- Ajout de diverses animations
+
+* Refonte totale de l'apparence du site
+* Fusion de la page d'accueil et de la page A propos
+* Ajout du menu dans un volet
+* Ajout de quelques nouvelles photos
+* Structure de la page Galerie plus simplifiée
+* Ajout de diverses animations
 
 ### 1.1.2
-- Correction d'un bug qui empêche le rechargement des pages en dehors de la page d'accueil
+
+* Correction d'un bug qui empêche le rechargement des pages en dehors de la page d'accueil
 
 ### 1.1.1
-- Amélioration de la navigation en rétablissant la vue en haut de page en arrivant sur la liste des photos
+
+* Amélioration de la navigation en rétablissant la vue en haut de page en arrivant sur la liste des photos
 
 ### 1.1.0
-- Ajout d'un mode sombre
-- Redesign de la liste des années de la page Galerie
-- Changement de l'icône de la page À Propos
+
+* Ajout d'un mode sombre
+* Redesign de la liste des années de la page Galerie
+* Changement de l'icône de la page À Propos
 
 ### 1.0.2
-- Correction d'une URL
+
+* Correction d'une URL
 
 ### 1.0.1
-- Correction d'une URL pour l'affichage correct du style de la barre de navigation
-- Amélioration du CSS du footer
-- Ajout de la version du site dans le footer
+
+* Correction d'une URL pour l'affichage correct du style de la barre de navigation
+* Amélioration du CSS du footer
+* Ajout de la version du site dans le footer
 
 ### 1.0.0
-- Mise en ligne
+
+* Mise en ligne
