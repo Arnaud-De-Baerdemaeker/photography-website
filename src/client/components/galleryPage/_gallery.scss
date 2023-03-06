@@ -1,7 +1,4 @@
-// Photography website
-// Started on July 2020
-// By Arnaud De Baerdemaeker
-
+// GALLERY
 .gallery { // <main>
 	display: flex;
 	flex-direction: column;
@@ -39,27 +36,6 @@
 
 				@media #{$mq-h1080-up} {
 					width: 1400px;
-				}
-			}
-		}
-	}
-
-	&__listItem { // <li>
-		@media screen {
-			@media #{$portrait} {
-				aspect-ratio: 2.75 / 1;
-
-				@media #{$mq-w600-up} {
-					width: calc(50% - 5px);
-				}
-			}
-
-			@media #{$landscape} {
-				width: calc(50% - 5px);
-				aspect-ratio: 5 / 2;
-
-				@media #{$mq-h400-up} {
-					aspect-ratio: 3 / 1;
 				}
 			}
 		}
