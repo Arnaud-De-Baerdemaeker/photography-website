@@ -51,7 +51,7 @@ class Portfolio extends Component {
 	componentDidMount() {
 		this.props.setTabTitle(this.tabTitle);
 		this.props.backToTop();
-		const fetchedElements = document.querySelectorAll(".project");
+		const fetchedElements = document.querySelectorAll(".card--project");
 		// Apply a class to initially hide the elements
 		this.props.applyHideClass(fetchedElements);
 		// Each time the user scrolls, the list of elements is refreshed and sent to a function

@@ -61,7 +61,7 @@ class Gallery extends Component {
 			return error;
 		});
 
-		this.domElements = document.querySelectorAll(".gallery__listItem");
+		this.domElements = document.querySelectorAll(".card--photo");
 		// Apply a class to initially hide the elements
 		this.hideElements(this.domElements);
 	}
