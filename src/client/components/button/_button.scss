@@ -1,4 +1,5 @@
-.button { // <button>
+/* BUTTON */
+.button {
 	position: relative;
 	margin: {
 		top: 0;
@@ -34,7 +35,7 @@
 		}
 	}
 
-	&__menu { // <button>
+	&__menu {
 		@extend .button;
 
 		@media screen {
@@ -56,7 +57,7 @@
 		}
 	}
 
-	&__modal { // <button>
+	&__modal {
 		@extend .button;
 		position: absolute;
 		right: 40px;

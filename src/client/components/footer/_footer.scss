@@ -1,8 +1,5 @@
-// Photography website
-// Started on July 2020
-// By Arnaud De Baerdemaeker
-
-.footer { // <footer>
+/* FOOTER */
+.footer {
 	background-color: $color-3;
 	background: {
 		image: linear-gradient(
@@ -17,7 +14,7 @@
 	align-items: center;
 	row-gap: 50px;
 
-	&__socialNetworks { // <div>
+	&__socialNetworks {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -26,7 +23,7 @@
 		max-width: 700px;
 	}
 
-	&__links { // <ul>
+	&__links {
 		width: 100%;
 		margin: 0;
 		padding: 0;
@@ -35,7 +32,7 @@
 		justify-content: space-evenly;
 	}
 
-	&__network { // <li>
+	&__network {
 		text-align: center;
 		border: {
 			style: solid;
@@ -67,7 +64,7 @@
 		}
 	}
 
-	&__link { // <a>
+	&__link {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -76,7 +73,7 @@
 		-webkit-tap-highlight-color: transparent;
 	}
 
-	&__icon.svg-inline--fa { // <svg>
+	&__icon.svg-inline--fa {
 		color: $color-8;
 
 		@media screen {
@@ -102,7 +99,7 @@
 		}
 	}
 
-	&__creditsContainer { // <div>
+	&__creditsContainer {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;
@@ -112,7 +109,7 @@
 		padding-bottom: 20px;
 	}
 
-	&__credits { // <p>
+	&__credits {
 		width: inherit;
 		margin: 0;
 		color: $color-6;

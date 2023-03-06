@@ -1,5 +1,5 @@
-// PORTFOLIO
-.portfolio { // <main>
+/* PORTFOLIO */
+.portfolio {
 	display: flex;
 	justify-content: center;
 	padding: {
@@ -7,7 +7,7 @@
 		bottom: 6.25rem;
 	}
 
-	&__list { // <ul>
+	&__list {
 		display: inherit;
 		justify-content: center;
 		flex-wrap: wrap;

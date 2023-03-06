@@ -1,9 +1,6 @@
-// Photography website
-// Started on July 2020
-// By Arnaud De Baerdemaeker
-
+/* NAME */
 .name {
-	&--header {  // <h1>
+	&--header {
 		display: inherit;
 		align-items: center;
 		height: 100%;
@@ -41,7 +38,7 @@
 		}
 	}
 
-	&--footer { // <h1>
+	&--footer {
 		font-family: $bebas-neue;
 		color: $color-8;
 		letter-spacing: 0.125rem;
@@ -68,7 +65,7 @@
 		}
 	}
 
-	&__link { // <a>
+	&__link {
 		color: inherit;
 		text-decoration: none;
 		-webkit-tap-highlight-color: transparent;

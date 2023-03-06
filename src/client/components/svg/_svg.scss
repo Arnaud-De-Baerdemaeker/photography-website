@@ -1,21 +1,18 @@
-// Photography website
-// Started on July 2020
-// By Arnaud De Baerdemaeker
-
+/* SVG */
 .svg {
 	width: 100%;
 	height: 100%;
 	transform-box: fill-box;
 
-	&__menu { // <svg>
+	&__menu {
 		@extend .svg;
 	}
 
-	&__scrollDown { // <svg>
+	&__scrollDown {
 		@extend .svg;
 	}
 
-	&__background { // <svg>
+	&__background {
 		@extend .svg;
 
 		@media screen {
@@ -29,22 +26,22 @@
 		}
 
 		.background {
-			&1 { // <path>
+			&1 {
 				fill: $color-1;
 			}
 		
-			&2 { // <path>
+			&2 {
 				fill: $color-2;
 				fill-opacity: 0.5;
 			}
 		
-			&3 { // <path>
+			&3 {
 				fill: $color-3;
 			}
 		}
 	}
 
-	&__close { // <svg>
+	&__close {
 		@extend .svg;
 	}
 }
@@ -64,7 +61,7 @@
 			fill-mode: forwards;
 		}
 
-		&--close { // <rect>
+		&--close {
 			@extend .icon__hamburgerTop;
 			animation: {
 				name: topFigureToCross;
@@ -82,7 +79,7 @@
 			fill-mode: forwards;
 		}
 
-		&--close { // <rect>
+		&--close {
 			@extend .icon__hamburgerMiddle;
 			animation: {
 				name: middleFigureToTransparent;
@@ -92,7 +89,7 @@
 		}
 	}
 
-	&__hamburgerBottom { // <rect>
+	&__hamburgerBottom {
 		@extend .icon;
 		animation: {
 			name: bottomFigureToHamburger;
@@ -100,7 +97,7 @@
 			fill-mode: forwards;
 		}
 
-		&--close { // <rect>
+		&--close {
 			@extend .icon__hamburgerBottom;
 			animation: {
 				name: bottomFigureToCross;
@@ -110,7 +107,7 @@
 		}
 	}
 
-	&__chevronTop { // <path>
+	&__chevronTop {
 		@extend .icon;
 		opacity: 0;
 		animation: {
@@ -121,7 +118,7 @@
 		}
 	}
 
-	&__chevronMiddle { // <path>
+	&__chevronMiddle {
 		@extend .icon;
 		opacity: 0;
 		animation: {
@@ -133,7 +130,7 @@
 		}
 	}
 
-	&__chevronBottom { // <path>
+	&__chevronBottom {
 		@extend .icon;
 		opacity: 0;
 		animation: {

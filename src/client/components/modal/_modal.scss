@@ -1,8 +1,5 @@
-// Photography website
-// Started on July 2020
-// By Arnaud De Baerdemaeker
-
-.modal { // <div>
+/* MODAL */
+.modal {
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -20,7 +17,7 @@
 		transform: translateX(-100%);
 	}
 
-	&__imageContainer { // <figure>
+	&__imageContainer {
 		display: inherit;
 		align-items: center;
 		width: inherit;
@@ -33,7 +30,7 @@
 		}
 	}
 
-	&__image { // <img>
+	&__image {
 		width: 100%;
 		vertical-align: middle;
 

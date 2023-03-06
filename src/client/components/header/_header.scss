@@ -1,8 +1,5 @@
-// Photography website
-// Started on July 2020
-// By Arnaud De Baerdemaeker
-
-.header { // <header>
+/* HEADER */
+.header {
 	@include revealOnLoad;
 	position: fixed;
 	top: 0;

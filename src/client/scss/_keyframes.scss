@@ -1,8 +1,6 @@
-// Photography website
-// Started on July 2020
-// By Arnaud De Baerdemaeker
+/* KEYFRAMES */
 
-// Scroll reveal animation
+/* Scroll reveal animation */
 @keyframes reveal {
 	0% {
 		opacity: 0;
@@ -15,7 +13,7 @@
 	}
 }
 
-// Hero background images carousel
+/* Hero background images carousel */
 @keyframes fadeInAndOut1 {
 	0% {
 		opacity: 0;
@@ -126,7 +124,7 @@
 	}
 }
 
-// Menu icon animation
+/* Menu icon animation */
 @keyframes topFigureToCross {
 	0% {
 		transform: translateY(0);
@@ -219,7 +217,7 @@
 	}
 }
 
-// Scroll down arrow and loading screen animation
+/* Scroll down arrow and loading screen animation */
 @keyframes blinking {
 	0% {
 		opacity: 1;

@@ -1,8 +1,5 @@
-// Photography website
-// Started on July 2020
-// By Arnaud De Baerdemaeker
-
-.hero { // <div>
+/* HERO */
+.hero {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -30,19 +27,19 @@
 			timing-function: linear;
 		}
 
-		&--1 { // <div>
+		&--1 {
 			@extend .hero__background;
 			background-image: url("https://live.staticflickr.com/65535/52507757779_cfd3ca9931_o.jpg");
 			animation-name: fadeInAndOut1;
 		}
 
-		&--2 { // <div>
+		&--2 {
 			@extend .hero__background;
 			background-image: url("https://live.staticflickr.com/65535/52507487906_e610e9fc6d_o.jpg");
 			animation-name: fadeInAndOut2;
 		}
 
-		&--3 { // <div>
+		&--3 {
 			@extend .hero__background;
 			background: {
 				image: url("https://live.staticflickr.com/65535/52508039833_f775737595_o.jpg");
@@ -51,13 +48,13 @@
 			animation-name: fadeInAndOut3;
 		}
 
-		&--4 { // <div>
+		&--4 {
 			@extend .hero__background;
 			background-image: url("https://live.staticflickr.com/65535/52507486406_1b80fd307b_o.jpg");
 			animation-name: fadeInAndOut4;
 		}
 
-		&--5 { // <div>
+		&--5 {
 			@extend .hero__background;
 			background: {
 				image: url("https://live.staticflickr.com/65535/52507002027_e9c653d29c_o.jpg");
@@ -66,7 +63,7 @@
 			animation-name: fadeInAndOut5;
 		}
 
-		&--404 { // <div>
+		&--404 {
 			@extend .hero__background;
 			background: {
 				image: url("https://live.staticflickr.com/65535/52506996562_f95be15062_o.jpg");
@@ -79,7 +76,7 @@
 		}
 	}
 
-	&__backFilter { // <div>
+	&__backFilter {
 		width: inherit;
 		height: inherit;
 		backdrop-filter: brightness(50%);
@@ -110,7 +107,7 @@
 		width: 100%;
 		letter-spacing: 2px;
 
-		&--homepage { // <h2>
+		&--homepage {
 			@extend .hero__title;
 
 			@media screen {
@@ -136,7 +133,7 @@
 			}
 		}
 
-		&--gallery { // <h2>
+		&--gallery {
 			@extend .hero__title;
 
 			@media screen {
@@ -162,11 +159,11 @@
 			}
 		}
 
-		&--portfolio { // <h2>
+		&--portfolio {
 			@extend .hero__title--gallery;
 		}
 
-		&--404 { // h2
+		&--404 {
 			@extend .hero__title;
 
 			@media screen {
@@ -194,17 +191,17 @@
 			display: block;
 
 			&__job {
-				&Part1 { // <span>
+				&Part1 {
 					@extend .title;
 					font-weight: 200;
 				}
 
-				&Part2 { // <span>
+				&Part2 {
 					@extend .title;
 				}
 			}
 
-			&__ampersand { // <span>
+			&__ampersand {
 				@extend .title;
 				z-index: 0;
 				display: block;
@@ -232,18 +229,18 @@
 			}
 
 			&__hobby {
-				&Part1 { // <span>
+				&Part1 {
 					@extend .title__jobPart1;
 				}
 
-				&Part2 { // <span>
+				&Part2 {
 					@extend .title__jobPart2;
 				}
 			}
 		}
 	}
 
-	&__scrollDown { // <div>
+	&__scrollDown {
 		@include revealOnLoad;
 		animation-delay: 1.5s;
 		position: absolute;
@@ -254,7 +251,7 @@
 		opacity: 0;
 	}
 
-	&__scrollDownContainer { // <div>
+	&__scrollDownContainer {
 		@media screen {
 			@media #{$portrait} {
 				@include fluidContent(width, 30px, 40, 30, 100vw);
@@ -278,7 +275,7 @@
 		}
 	}
 
-	.link__backToHomepage { // <a>
+	.link__backToHomepage {
 		@include revealOnLoad;
 		animation-delay: 1.5s;
 		position: absolute;
