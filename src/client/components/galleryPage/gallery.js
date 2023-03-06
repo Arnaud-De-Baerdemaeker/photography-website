@@ -9,7 +9,7 @@ import Header from "../header/header";
 import Navigation from "../navigation/navigation";
 import Hero from "../hero/hero";
 import SVG from "../svg/svg";
-import PhotosCards from "../photosCards/photosCards";
+import Card from "../card/card";
 import Modal from "../modal/modal";
 import Footer from "../footer/footer";
 
@@ -17,13 +17,17 @@ class Gallery extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			photos: "",
+			photos: null,
+			hdPicture: null,
 			isModalOpen: false
 		}
 		this.body = document.querySelector("body");
 		this.tabTitle = "Galerie | Arnaud De Baerdemaeker";
 		this.domElements;
-		this.hdPictureFromClick;
+		this.timeout;
+		this.city;
+		this.country;
+		this.photosLocation;
 
 		this.getPhotos = this.getPhotos.bind(this);
 		this.toggleModal = this.toggleModal.bind(this);
@@ -50,14 +54,14 @@ class Gallery extends Component {
 		})
 		.then(result => {
 			this.setState({
-				photos: result.data
+				photos: result.data.photoset.photo
 			});
 		})
 		.catch(error => {
 			return error;
 		});
 
-		this.domElements = document.querySelectorAll(".gallery__listItem");
+		this.domElements = document.querySelectorAll(".card--photo");
 		// Apply a class to initially hide the elements
 		this.hideElements(this.domElements);
 	}
@@ -74,24 +78,24 @@ class Gallery extends Component {
 		else {
 			this.body.classList.remove("scrollBlocked");
 			this.props.headerRef.current.classList.add("scroll");
+			this.timeout = setTimeout(() => {
+				this.setState({
+					hdPicture: null
+				});
+			}, 800);
 		}
 	}
 
 	handleClick(click) {
-		this.toggleModal();
 		this.getDataFromTarget(click);
+		this.toggleModal();
 	}
 
 	getDataFromTarget(click) {
 		click.preventDefault();
-		this.hdPictureFromClick = click.target.dataset.hd;
-	}
-
-	handleTags() {
-		const splittedTags = this.props.tags.split(" ");
-		this.photosLocation = {};
-		this.photosLocation["city"] = splittedTags[0];
-		this.photosLocation["country"] = splittedTags[1];
+		this.setState({
+			hdPicture: click.target.dataset.hd
+		});
 	}
 
 	removeScrollLock() {
@@ -117,6 +121,7 @@ class Gallery extends Component {
 	componentWillUnmount() {
 		window.removeEventListener("scroll", () => {});
 		this.removeScrollLock();
+		clearTimeout(this.timeout);
 	}
 
 	render() {
@@ -165,30 +170,36 @@ class Gallery extends Component {
 				/>
 				<main className={"gallery"}>
 					<ul className={"gallery__list"}>
-						{this.state.photos && this.state.photos.photoset.photo.map(data =>
-							<li
+						{this.state.photos && this.state.photos.map(data =>
+							<Card
 								key={data.id}
-								className={"gallery__listItem"}
-							>
-								<PhotosCards
-									sd={data.url_c}
-									hd={data.url_o}
-									tags={data.tags}
-									isModalOpen={this.state.isModalOpen}
-									toggleModal={this.toggleModal}
-									handleClick={this.handleClick}
-								/>
-							</li>
+								cardClick={this.handleClick}
+								cardContent={
+									<img
+										src={data.url_c}
+										data-hd={data.url_o}
+										className={"card__image"}
+									/>
+								}
+								cardClass={"card--photo"}
+								cardOverlayContent={
+									<>
+										<span className={"overlay__city"}>{data.tags.split(" ")[0]}</span>
+										{" "}
+										<span className={"overlay__country"}>{data.tags.split(" ")[1]}</span>
+									</>
+								}
+								cardOverlayTitleClass={"overlay__title--photo"}
+							/>
 						)}
 					</ul>
 					<Modal
-						hd={this.hdPictureFromClick}
+						hd={this.state.hdPicture}
 						isModalOpen={this.state.isModalOpen}
 						toggleModal={this.toggleModal}
 					/>
 				</main>
 				<Footer
-					setScrollReveal={this.props.setScrollReveal}
 					applyHideClass={this.props.applyHideClass}
 					revealOnScroll={this.props.revealOnScroll}
 				/>

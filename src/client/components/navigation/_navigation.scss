@@ -35,18 +35,18 @@
 		
 		@media screen {
 			@media #{$portrait} {
-				@include fluidContent(row-gap, 50px, 200, 50, 100vw);
+				@include fluidContent(row-gap, 30px, 150, 30, 100vw);
 
 				@media #{$mq-w1080-up} {
-					row-gap: 200px;
+					row-gap: 150px;
 				}
 			}
 
 			@media #{$landscape} {
-				@include fluidContent(row-gap, 35px, 150, 35, 100vh);
+				@include fluidContent(row-gap, 15px, 100, 15, 100vh);
 
 				@media #{$mq-h1080-up} {
-					row-gap: 150px;
+					row-gap: 100px;
 				}
 			}
 		}

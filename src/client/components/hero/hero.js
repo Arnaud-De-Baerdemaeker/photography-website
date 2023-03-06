@@ -20,8 +20,10 @@ class Hero extends Component {
 		this.slideshow;
 
 		this.heroContainerRef = createRef();
+		this.heroBackFilter = createRef();
 
 		this.scrollImages = this.scrollImages.bind(this);
+		this.handleHeroVisibility = this.handleHeroVisibility.bind(this);
 	}
 
 	scrollImages() {
@@ -30,7 +32,7 @@ class Hero extends Component {
 			At each iteration, the previous image is replaced with the next one.
 			The condition checks if the end of the array is reached or not, and resets the counters to start over as a loop.
 		*/
-		if(this.props.location.pathname === "/" || this.props.location.pathname === "/galerie") {
+		if(this.props.location.pathname === "/" || this.props.location.pathname === "/galerie" || this.props.location.pathname === "/portfolio") {
 			if(this.index === 4) {
 				this.lastIndex = 4;
 				this.index = -1;
@@ -47,12 +49,26 @@ class Hero extends Component {
 		}
 	}
 
+	handleHeroVisibility() {
+		const viewport = window.innerHeight;
+		const heroPosition = this.heroBackFilter.current.getBoundingClientRect().bottom;
+
+		if(heroPosition < viewport / 2) {
+			this.heroBackFilter.current.classList.add("hideHeroBackground");
+		}
+		else {
+			this.heroBackFilter.current.classList.remove("hideHeroBackground");
+		}
+	}
+
 	componentDidMount() {
 		this.slideshow = window.setInterval(() => this.scrollImages(), 10000);
+		window.addEventListener("scroll", this.handleHeroVisibility);
 	}
 
 	componentWillUnmount() {
 		clearInterval(this.slideshow);
+		window.removeEventListener("scroll", this.handleHeroVisibility);
 	}
 
 	render() {
@@ -66,7 +82,10 @@ class Hero extends Component {
 						: ""
 					)}
 				>
-					<div className={"hero__backFilter"}></div>
+					<div
+						ref={this.heroBackFilter}
+						className={"hero__backFilter"}
+					></div>
 				</div>
 				<h2 className={this.props.heroTitleClass}>
 					{this.props.heroTitleContent}

@@ -29,11 +29,13 @@ $landscape: "(orientation: landscape)";
 // Breakpoints
 $bp-400: 25rem;
 $bp-600: 37.5rem;
+$bp-700: 43.75rem;
 $bp-1080: 67.5rem;
 
 
 // Media queries
 $mq-w600-up: "(min-width: #{$bp-600})";
+$mq-w700-up: "(min-width: #{$bp-700})";
 $mq-w1080-up: "(min-width: #{$bp-1080})";
 
 $mq-h400-up: "(min-height: #{$bp-400})";
