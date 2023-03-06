@@ -8,7 +8,7 @@ import Header from "../header/header";
 import Navigation from "../navigation/navigation";
 import Hero from "../hero/hero";
 import SVG from "../svg/svg";
-import Project from "../project/project";
+import Card from "../card/card";
 import Footer from "../footer/footer";
 
 import myWebsite from "../../images/myWebsite.png";
@@ -112,12 +112,26 @@ class Portfolio extends Component {
 				<main className={"portfolio"}>
 					<ul className={"portfolio__list"}>
 						{this.projects.map(project =>
-							<Project
+							<Card
 								key={project.title}
-								projectTitle={project.title}
-								projectImageUrl={project.image}
-								projectImageAlt={project.alt}
-								projectLink={project.link && project.link}
+								cardContent={
+									<a
+										href={project.link && project.link}
+										target={"_blank"}
+										rel={"noreferrer noopener"}
+										ref={this.imageRef}
+										className={"card__link"}
+									>
+										<img
+											src={project.image}
+											alt={project.alt}
+											className={"card__image"}
+										/>
+									</a>
+								}
+								cardClass={"card--project"}
+								cardOverlayContent={project.title}
+								cardOverlayTitleClass={"overlay__title--project"}
 							/>
 						)}
 					</ul>
