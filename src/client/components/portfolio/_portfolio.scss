@@ -11,11 +11,11 @@
 		display: inherit;
 		justify-content: center;
 		flex-wrap: wrap;
-		row-gap: 80px;
-		column-gap: 30px;
 		list-style: none;
 		margin: 0;
 		padding: 0;
+		row-gap: 5px;
+		column-gap: 5px;
 
 		@media screen {
 			@media #{$portrait} {
@@ -25,7 +25,7 @@
 					width: 800px;
 				}
 			}
-
+	
 			@media #{$landscape} {
 				@include fluidContent(width, 400px, 1400, 400, 100vh);
 

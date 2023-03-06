@@ -179,7 +179,6 @@
 html {
   height: 100%;
   font-size: 16px;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -208,50 +207,6 @@ body {
 
 .scrollBlocked {
   overflow-y: hidden;
-}
-
-@media screen and (orientation: portrait) {
-  body::-webkit-scrollbar {
-    width: calc(5px + (12 - 5) * ((100vw - 300px) / (1080 - 300)));
-  }
-}
-@media screen and (orientation: portrait) and (min-width: 67.5rem) {
-  body::-webkit-scrollbar {
-    width: 12px;
-  }
-}
-@media screen and (orientation: landscape) {
-  body::-webkit-scrollbar {
-    width: calc(8px + (14 - 8) * ((100vh - 300px) / (1080 - 300)));
-  }
-}
-@media screen and (orientation: landscape) and (min-height: 67.5rem) {
-  body::-webkit-scrollbar {
-    width: 14px;
-  }
-}
-body::-webkit-scrollbar-thumb {
-  background-color: rgb(88, 129, 87);
-}
-@media screen and (orientation: portrait) {
-  body::-webkit-scrollbar-thumb {
-    border-radius: calc(2.5px + (6 - 2.5) * ((100vw - 300px) / (1080 - 300)));
-  }
-}
-@media screen and (orientation: portrait) and (min-width: 67.5rem) {
-  body::-webkit-scrollbar-thumb {
-    border-radius: 6px;
-  }
-}
-@media screen and (orientation: landscape) {
-  body::-webkit-scrollbar-thumb {
-    border-radius: calc(4px + (7 - 4) * ((100vh - 300px) / (1080 - 300)));
-  }
-}
-@media screen and (orientation: landscape) and (min-height: 67.5rem) {
-  body::-webkit-scrollbar-thumb {
-    border-radius: 7px;
-  }
 }
 
 .header {
@@ -653,7 +608,12 @@ body::-webkit-scrollbar-thumb {
 .hero__backFilter {
   width: inherit;
   height: inherit;
-  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: brightness(50%);
+          backdrop-filter: brightness(50%);
+  background-image: linear-gradient(to top, rgb(16, 26, 18) 5%, rgba(16, 26, 18, 0.3) 15%, rgba(16, 26, 18, 0) 20%);
+  background-color: rgba(16, 26, 18, 0);
+  transition-property: background-color;
+  transition-duration: 0.5s;
 }
 .hero__title, .hero__title--404, .hero__title--gallery, .hero__title--portfolio, .hero__title--homepage {
   animation-name: reveal;
@@ -861,6 +821,9 @@ body::-webkit-scrollbar-thumb {
   border-top-color: rgb(249, 246, 238);
   border-bottom-color: rgb(249, 246, 238);
 }
+.hero .hideHeroBackground {
+  background-color: rgb(16, 26, 18);
+}
 
 .homepage {
   display: flex;
@@ -1036,27 +999,6 @@ body::-webkit-scrollbar-thumb {
     width: 1400px;
   }
 }
-@media screen and (orientation: portrait) {
-  .gallery__listItem {
-    aspect-ratio: 2.75/1;
-  }
-}
-@media screen and (orientation: portrait) and (min-width: 37.5rem) {
-  .gallery__listItem {
-    width: calc(50% - 5px);
-  }
-}
-@media screen and (orientation: landscape) {
-  .gallery__listItem {
-    width: calc(50% - 5px);
-    aspect-ratio: 5/2;
-  }
-}
-@media screen and (orientation: landscape) and (min-height: 25rem) {
-  .gallery__listItem {
-    aspect-ratio: 3/1;
-  }
-}
 
 .image__portrait {
   vertical-align: middle;
@@ -1075,155 +1017,231 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-.photosCards {
-  width: 100%;
-  height: 100%;
-  transition-property: filter;
-  transition-duration: 0.5s;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  filter: grayscale(100%);
+.card, .card--project, .card--photo {
+  position: relative;
+  overflow: hidden;
 }
-@media screen and (hover: none) {
-  .photosCards {
-    filter: grayscale(0%);
+@media screen and (orientation: portrait) {
+  .card, .card--project, .card--photo {
+    border-radius: calc(5px + (10 - 5) * ((100vw - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 37.5rem) {
+  .card, .card--project, .card--photo {
+    width: calc(50% - 5px);
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 67.5rem) {
+  .card, .card--project, .card--photo {
+    border-radius: 10px;
+  }
+}
+@media screen and (orientation: landscape) {
+  .card, .card--project, .card--photo {
+    border-radius: calc(5px + (10 - 5) * ((100vh - 300px) / (1080 - 300)));
+    width: calc(50% - 5px);
+  }
+}
+@media screen and (orientation: landscape) and (min-height: 67.5rem) {
+  .card, .card--project, .card--photo {
+    border-radius: 10px;
   }
 }
 @media screen and (hover: hover) {
-  .photosCards:hover {
-    filter: grayscale(0%);
+  .card--photo {
+    cursor: pointer;
   }
-}
-.photosCards__overlay {
-  position: absolute;
-  display: flex;
-  align-items: end;
-  width: inherit;
-  height: inherit;
-  pointer-events: none;
-  opacity: 0;
-  transition-property: opacity;
-  transition-duration: 0.5s;
-}
-.photosCards__container {
-  background-color: rgb(25, 39, 27);
-  box-shadow: -3px 3px 0 0 rgb(88, 129, 87);
-  padding-top: 1px;
-  padding-bottom: 1px;
 }
 @media screen and (orientation: portrait) {
-  .photosCards__container {
-    margin-bottom: calc(5px + (10 - 5) * ((100vw - 300px) / (1080 - 300)));
-    margin-left: calc(5px + (10 - 5) * ((100vw - 300px) / (1080 - 300)));
-    padding-right: calc(5px + (10 - 5) * ((100vw - 300px) / (1080 - 300)));
-    padding-left: calc(5px + (10 - 5) * ((100vw - 300px) / (1080 - 300)));
-    border-radius: calc(3px + (5 - 3) * ((100vw - 300px) / (1080 - 300)));
-  }
-}
-@media screen and (orientation: portrait) and (min-width: 67.5rem) {
-  .photosCards__container {
-    margin-bottom: 10px;
-    margin-left: 10px;
-    padding-right: 10px;
-    padding-left: 10px;
-    border-radius: 5px;
+  .card--photo {
+    aspect-ratio: 2.5/1;
   }
 }
 @media screen and (orientation: landscape) {
-  .photosCards__container {
-    margin-bottom: calc(5px + (20 - 5) * ((100vh - 300px) / (1080 - 300)));
-    margin-left: calc(5px + (20 - 5) * ((100vh - 300px) / (1080 - 300)));
-    padding-right: calc(5px + (10 - 5) * ((100vh - 300px) / (1080 - 300)));
-    padding-left: calc(5px + (10 - 5) * ((100vh - 300px) / (1080 - 300)));
-    border-radius: calc(3px + (5 - 3) * ((100vh - 300px) / (1080 - 300)));
+  .card--photo {
+    aspect-ratio: 2/1;
   }
 }
-@media screen and (orientation: landscape) and (min-height: 67.5rem) {
-  .photosCards__container {
-    margin-bottom: 20px;
-    margin-left: 20px;
-    padding-right: 10px;
-    padding-left: 10px;
-    border-radius: 5px;
+@media screen and (orientation: landscape) and (min-height: 25rem) {
+  .card--photo {
+    aspect-ratio: 3/1;
   }
 }
-.photosCards__city, .photosCards__country {
-  text-transform: uppercase;
-}
-@media screen and (orientation: portrait) {
-  .photosCards__city, .photosCards__country {
-    font-size: calc(16px + (22 - 16) * ((100vw - 300px) / (1080 - 300)));
+@media screen {
+  .card--project {
+    aspect-ratio: 4/2;
   }
 }
-@media screen and (orientation: portrait) and (min-width: 67.5rem) {
-  .photosCards__city, .photosCards__country {
-    font-size: 22px;
+@media screen and (orientation: landscape) and (min-height: 25rem) {
+  .card--project {
+    aspect-ratio: 2/1;
   }
 }
-@media screen and (orientation: landscape) {
-  .photosCards__city, .photosCards__country {
-    font-size: calc(16px + (28 - 16) * ((100vh - 300px) / (1080 - 300)));
-  }
+.card__link {
+  position: relative;
+  text-decoration: none;
+  color: rgb(249, 246, 238);
+  -webkit-tap-highlight-color: transparent;
 }
-@media screen and (orientation: landscape) and (min-height: 67.5rem) {
-  .photosCards__city, .photosCards__country {
-    font-size: 28px;
-  }
-}
-.photosCards__country {
-  text-transform: capitalize;
-  color: rgb(180, 180, 180);
-}
-@media screen and (orientation: portrait) {
-  .photosCards__country {
-    font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1080 - 300)));
-  }
-}
-@media screen and (orientation: portrait) and (min-width: 67.5rem) {
-  .photosCards__country {
-    font-size: 18px;
-  }
-}
-@media screen and (orientation: landscape) {
-  .photosCards__country {
-    font-size: calc(14px + (18 - 14) * ((100vh - 300px) / (1080 - 300)));
-  }
-}
-@media screen and (orientation: landscape) and (min-height: 67.5rem) {
-  .photosCards__country {
-    font-size: 18px;
-  }
-}
-.photosCards__image {
+.card__image {
   width: 100%;
   height: 100%;
   vertical-align: middle;
   -o-object-fit: cover;
      object-fit: cover;
 }
-@media screen and (orientation: portrait) {
-  .photosCards__image {
-    border-radius: calc(5px + (10 - 5) * ((100vw - 300px) / (1080 - 300)));
+@media screen and (hover: hover) {
+  .card__image {
+    filter: grayscale(100%);
+    transition-property: transform filter;
+    transition-duration: 0.4s;
   }
-}
-@media screen and (orientation: portrait) and (min-width: 67.5rem) {
-  .photosCards__image {
-    border-radius: 10px;
-  }
-}
-@media screen and (orientation: landscape) {
-  .photosCards__image {
-    border-radius: calc(5px + (10 - 5) * ((100vh - 300px) / (1080 - 300)));
-  }
-}
-@media screen and (orientation: landscape) and (min-height: 67.5rem) {
-  .photosCards__image {
-    border-radius: 10px;
+  .card__image:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
   }
 }
 
-.hover {
+.overlay, .overlay--hidden, .overlay--visible {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  transition-property: opacity;
+  transition-duration: 0.4s;
+  pointer-events: none;
+}
+.overlay--visible {
   opacity: 1;
+}
+.overlay--hidden {
+  opacity: 0;
+}
+.overlay__title, .overlay__title--project, .overlay__title--photo {
+  background-color: rgb(25, 39, 27);
+  box-shadow: -3px 3px 0 0 rgb(88, 129, 87);
+  margin-top: 0;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  font-weight: 400;
+}
+@media screen and (orientation: portrait) {
+  .overlay__title--photo {
+    margin-bottom: calc(5px + (10 - 5) * ((100vw - 300px) / (1080 - 300)));
+    padding-right: calc(5px + (10 - 5) * ((100vw - 300px) / (1080 - 300)));
+    padding-left: calc(5px + (10 - 5) * ((100vw - 300px) / (1080 - 300)));
+    border-radius: calc(3px + (5 - 3) * ((100vw - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 67.5rem) {
+  .overlay__title--photo {
+    margin-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+  }
+}
+@media screen and (orientation: landscape) {
+  .overlay__title--photo {
+    margin-bottom: calc(5px + (20 - 5) * ((100vh - 300px) / (1080 - 300)));
+    padding-right: calc(5px + (10 - 5) * ((100vh - 300px) / (1080 - 300)));
+    padding-left: calc(5px + (10 - 5) * ((100vh - 300px) / (1080 - 300)));
+    border-radius: calc(3px + (5 - 3) * ((100vh - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: landscape) and (min-height: 67.5rem) {
+  .overlay__title--photo {
+    margin-bottom: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+  }
+}
+@media screen and (orientation: portrait) {
+  .overlay__title--project {
+    font-size: calc(20px + (28 - 20) * ((100vw - 300px) / (1080 - 300)));
+    margin-bottom: calc(10px + (15 - 10) * ((100vw - 300px) / (1080 - 300)));
+    border-radius: calc(3px + (5 - 3) * ((100vw - 300px) / (1080 - 300)));
+    padding-right: calc(5px + (10 - 5) * ((100vw - 300px) / (1080 - 300)));
+    padding-left: calc(5px + (10 - 5) * ((100vw - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 67.5rem) {
+  .overlay__title--project {
+    font-size: 28px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+@media screen and (orientation: landscape) {
+  .overlay__title--project {
+    font-size: calc(18px + (30 - 18) * ((100vh - 300px) / (1080 - 300)));
+    margin-bottom: calc(10px + (30 - 10) * ((100vh - 300px) / (1080 - 300)));
+    padding-right: calc(5px + (10 - 5) * ((100vh - 300px) / (1080 - 300)));
+    padding-left: calc(5px + (10 - 5) * ((100vh - 300px) / (1080 - 300)));
+    border-radius: calc(3px + (5 - 3) * ((100vh - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: landscape) and (min-height: 67.5rem) {
+  .overlay__title--project {
+    font-size: 30px;
+    margin-bottom: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+  }
+}
+.overlay__city, .overlay__country {
+  text-transform: uppercase;
+}
+@media screen and (orientation: portrait) {
+  .overlay__city, .overlay__country {
+    font-size: calc(18px + (24 - 18) * ((100vw - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 67.5rem) {
+  .overlay__city, .overlay__country {
+    font-size: 24px;
+  }
+}
+@media screen and (orientation: landscape) {
+  .overlay__city, .overlay__country {
+    font-size: calc(16px + (28 - 16) * ((100vh - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: landscape) and (min-height: 67.5rem) {
+  .overlay__city, .overlay__country {
+    font-size: 28px;
+  }
+}
+.overlay__country {
+  text-transform: capitalize;
+  color: rgb(180, 180, 180);
+}
+@media screen and (orientation: portrait) {
+  .overlay__country {
+    font-size: calc(16px + (20 - 16) * ((100vw - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 67.5rem) {
+  .overlay__country {
+    font-size: 20px;
+  }
+}
+@media screen and (orientation: landscape) {
+  .overlay__country {
+    font-size: calc(14px + (20 - 14) * ((100vh - 300px) / (1080 - 300)));
+  }
+}
+@media screen and (orientation: landscape) and (min-height: 67.5rem) {
+  .overlay__country {
+    font-size: 20px;
+  }
 }
 
 .modal, .modal--hidden {
@@ -1272,12 +1290,12 @@ body::-webkit-scrollbar-thumb {
   display: inherit;
   justify-content: center;
   flex-wrap: wrap;
-  row-gap: 80px;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
   list-style: none;
   margin: 0;
   padding: 0;
+  row-gap: 5px;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
 }
 @media screen and (orientation: portrait) {
   .portfolio__list {
@@ -1297,97 +1315,6 @@ body::-webkit-scrollbar-thumb {
 @media screen and (orientation: landscape) and (min-height: 67.5rem) {
   .portfolio__list {
     width: 1400px;
-  }
-}
-
-.project {
-  display: flex;
-  flex-direction: column;
-  row-gap: 5px;
-}
-@media screen and (orientation: portrait) and (min-width: 43.75rem) {
-  .project {
-    width: calc(50% - 15px);
-  }
-}
-@media screen and (orientation: landscape) {
-  .project {
-    width: calc(50% - 15px);
-  }
-}
-.project__imageContainer {
-  position: relative;
-}
-.project__link {
-  position: relative;
-  text-decoration: none;
-  color: rgb(249, 246, 238);
-}
-.project__image {
-  width: 100%;
-  border-radius: 10px;
-  vertical-align: bottom;
-}
-.project__rollover, .project__rollover--hidden, .project__rollover--visible {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-  transition-property: opacity;
-  transition-duration: 0.4s;
-  pointer-events: none;
-}
-.project__rollover--visible {
-  opacity: 1;
-}
-.project__rollover--hidden {
-  opacity: 0;
-}
-.project__visit {
-  color: rgb(16, 26, 18);
-  background-color: rgb(249, 246, 238);
-  padding-top: 5px;
-  padding-right: 10px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-  border-radius: 4px;
-}
-.project__title {
-  margin: 0;
-  border-left-style: solid;
-  border-left-width: 5px;
-  border-left-color: rgb(88, 129, 87);
-  padding-left: 10px;
-  font-family: "Economica", Arial, Helvetica, sans-serif;
-  font-size: 28px;
-  text-transform: uppercase;
-}
-.project__title:after {
-  content: ".";
-  color: rgb(88, 129, 87);
-}
-@media screen and (orientation: portrait) {
-  .project__title {
-    font-size: calc(28px + (35 - 28) * ((100vw - 300px) / (1080 - 300)));
-  }
-}
-@media screen and (orientation: portrait) and (min-width: 67.5rem) {
-  .project__title {
-    font-size: 35px;
-  }
-}
-@media screen and (orientation: landscape) {
-  .project__title {
-    font-size: calc(27px + (45 - 27) * ((100vh - 300px) / (1080 - 300)));
-  }
-}
-@media screen and (orientation: landscape) and (min-height: 67.5rem) {
-  .project__title {
-    font-size: 45px;
   }
 }
 
