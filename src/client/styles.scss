@@ -4,8 +4,8 @@
 
 @import
 	"scss/variables",
-	"scss/keyframes",
 	"scss/mixins",
+	"scss/keyframes",
 	"scss/globalStyles",
 	"components/header/header",
 	"components/name/name",
@@ -15,8 +15,9 @@
 	"components/hero/hero",
 	"components/homepage/homepage",
 	"components/galleryPage/gallery",
-	"components/image/image",
-	"components/photosCards/photosCards",
+	"components/card/card",
+	"components/cardOverlay/cardOverlay",
 	"components/modal/modal",
+	"components/portfolio/portfolio",
 	"components/footer/footer"
 ;

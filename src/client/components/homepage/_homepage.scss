@@ -1,8 +1,5 @@
-// Photography website
-// Started on July 2020
-// By Arnaud De Baerdemaeker
-
-.homepage { // <main>
+/* HOMEPAGE */
+.homepage {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -13,12 +10,12 @@
 	}
 	padding: {
 		top: 6.25rem;
-		right: 20px;
+		right: 1.25rem;
 		bottom: 6.25rem;
-		left: 20px;
+		left: 1.25rem;
 	}
 
-	&__myPhoto { // <div>
+	&__myPhoto {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -26,66 +23,66 @@
 
 		@media screen {
 			@media #{$portrait} {
-				max-width: 700px;
+				max-width: 43.75rem;
 			}
 
 			@media #{$landscape} {
-				max-width: 1000px;
+				max-width: 62.5rem;
 			}
 		}
 	}
 
-	&__introduction { // <p>
+	&__introduction {
 		font-family: $economica;
 		margin: 0;
 
 		@media screen {
 			@media #{$portrait} {
-				@include fluidContent(font-size, 30px, 40, 30, 100vw);
+				@include fluidContent(font-size, 1.875rem, 2.5, 1.875, 100vw);
 
 				@media #{$mq-w1080-up} {
-					font-size: 40px;
+					font-size: 2.5rem;
 				}
 			}
 
 			@media #{$landscape} {
-				@include fluidContent(font-size, 28px, 50, 28, 100vh);
+				@include fluidContent(font-size, 1.75rem, 3.125, 1.75, 100vh);
 
 				@media #{$mq-h1080-up} {
-					font-size: 50px;
+					font-size: 3.125rem;
 				}
 			}
 		}
 	}
 
-	&__description { // <div>
+	&__description {
 		display: flex;
 		flex-direction: column;
 		row-gap: 3.125rem;
 
 		@media screen {
 			@media #{$portrait} {
-				max-width: 700px;
+				max-width: 43.75rem;
 			}
 
 			@media #{$landscape} {
-				max-width: 1000px;
+				max-width: 62.5rem;
 			}
 		}
 	}
 
-	&__section { // <div>
+	&__section {
 		display: flex;
 		flex-direction: column;
 		row-gap: 1.5625rem;
 	}
 
-	&__title { // <h3>
+	&__title {
 		font-family: $economica;
 		border-left: {
 			style: solid;
 			width: 0.3125rem;
-			color: $color-2;
+			color: $color-1;
 		}
 		padding: {
 			top: 0.625rem;
@@ -96,49 +93,49 @@
 
 		@media screen {
 			@media #{$portrait} {
-				@include fluidContent(font-size, 28px, 38, 28, 100vw);
+				@include fluidContent(font-size, 1.75rem, 2.375, 1.75, 100vw);
 
 				@media #{$mq-w1080-up} {
-					font-size: 38px;
+					font-size: 2.375rem;
 				}
 			}
 
 			@media #{$landscape} {
-				@include fluidContent(font-size, 28px, 40, 28, 100vh);
+				@include fluidContent(font-size, 1.75rem, 2.5, 1.75, 100vh);
 
 				@media #{$mq-h1080-up} {
-					font-size: 40px;
+					font-size: 2.5rem;
 				}
 			}
 		}
 
 		&:after {
 			content: "\002E";
-			color: $color-2;
+			color: $color-1;
 		}
 	}
 
-	&__paragraph { // <p>
+	&__paragraph {
 		margin: 0;
 
 		@media screen {
 			@media #{$portrait} {
-				@include fluidContent(font-size, 18px, 20, 18, 100vw);
-				@include fluidContent(line-height, 28px, 32, 28, 100vh);
+				@include fluidContent(font-size, 1.125rem, 1.25, 1.125, 100vw);
+				@include fluidContent(line-height, 1.75rem, 2, 1.75, 100vh);
 
 				@media #{$mq-w1080-up} {
-					font-size: 20px;
-					line-height: 32px;
+					font-size: 1.25rem;
+					line-height: 2rem;
 				}
 			}
 
 			@media #{$landscape} {
-				@include fluidContent(font-size, 18px, 22, 18, 100vh);
-				@include fluidContent(line-height, 28px, 32, 28, 100vh);
+				@include fluidContent(font-size, 1.125rem, 1.375, 1.125, 100vh);
+				@include fluidContent(line-height, 1.75rem, 2, 1.75, 100vh);
 
 				@media #{$mq-h1080-up} {
-					font-size: 22px;
-					line-height: 32px;
+					font-size: 1.375rem;
+					line-height: 2rem;
 				}
 			}
 		}

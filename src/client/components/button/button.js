@@ -9,7 +9,7 @@ class Button extends Component {
 		return (
 			<button
 				type={"button"}
-				onClick={this.props.function}
+				onClick={this.props.function && this.props.function}
 				alt={this.props.alt}
 				className={this.props.class}
 			>

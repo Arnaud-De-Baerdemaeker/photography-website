@@ -4,7 +4,6 @@
 
 import React, {Component} from "react";
 
-import Image from "../image/image";
 import Button from "../button/button";
 import SVG from "../svg/svg";
 
@@ -17,9 +16,9 @@ class Modal extends Component {
 				: "modal--hidden"
 			}>
 				<div className={"modal__imageContainer"}>
-					<Image
-						url={this.props.hd}
-						class={"modal__image"}
+					<img
+						src={this.props.hd}
+						className={"modal__image"}
 					/>
 				</div>
 				<Button

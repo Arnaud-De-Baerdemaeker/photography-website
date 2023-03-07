@@ -1,11 +1,7 @@
-// Photography website
-// Started on July 2020
-// By Arnaud De Baerdemaeker
-
+/* GLOBAL STYLES */
 html {
 	height: 100%;
 	font-size: 16px;
-	scroll-behavior: smooth;
 }
 
 body {
@@ -39,46 +35,4 @@ body {
 
 .scrollBlocked {
 	overflow-y: hidden;
-}
-
-body::-webkit-scrollbar {
-	@media screen {
-		@media #{$portrait} {
-			@include fluidContent(width, 5px, 12, 5, 100vw);
-
-			@media #{$mq-w1080-up} {
-				width: 12px;
-			}
-		}
-
-		@media #{$landscape} {
-			@include fluidContent(width, 8px, 14, 8, 100vh);
-
-			@media #{$mq-h1080-up} {
-				width: 14px;
-			}
-		}
-	}
-
-	&-thumb {
-		background-color: $color-1;
-
-		@media screen {
-			@media #{$portrait} {
-				@include fluidContent(border-radius, 2.5px, 6, 2.5, 100vw);
-
-				@media #{$mq-w1080-up} {
-					border-radius: 6px;
-				}
-			}
-
-			@media #{$landscape} {
-				@include fluidContent(border-radius, 4px, 7, 4, 100vh);
-
-				@media #{$mq-h1080-up} {
-					border-radius: 7px;
-				}
-			}
-		}
-	}
 }

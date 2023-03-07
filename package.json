@@ -1,11 +1,19 @@
 {
-  "name": "photography-website",
-  "version": "1.0.0",
-  "description": "",
+  "name": "my-website",
+  "version": "2.2.0",
+  "description": "My personal website where I introduce myself, display a selection of the photographies I take as a hobby and my portfolio",
   "private": "true",
-  "keywords": [],
+  "keywords": [
+    "website",
+    "photography",
+    "portfolio"
+  ],
   "author": "Arnaud De Baerdemaeker",
   "license": "ISC",
+  "engines": {
+    "node": "12.18.0",
+    "npm": "6.14.5"
+  },
   "scripts": {
     "clean": "rm dist/bundle.js",
     "build-dev": "webpack --mode development",

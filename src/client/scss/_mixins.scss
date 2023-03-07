@@ -1,9 +1,6 @@
-// Photography website
-// Started on July 2020
-// By Arnaud De Baerdemaeker
-
-@mixin fluidContent($property, $min-size-px, $max-size, $min-size, $max-viewport-vw-vh) {
-	#{$property}: calc(#{$min-size-px} + (#{$max-size} - #{$min-size}) * ((#{$max-viewport-vw-vh} - 300px) / (1080 - 300)));
+// MIXINS
+@mixin fluidContent($property, $min-size-rem, $max-size, $min-size, $max-viewport-vw-vh) {
+	#{$property}: calc(#{$min-size-rem} + (#{$max-size} - #{$min-size}) * ((#{$max-viewport-vw-vh} - 18.75rem) / (67.5 - 18.75)));
 }
 
 @mixin revealOnLoad {
