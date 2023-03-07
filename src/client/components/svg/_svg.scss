@@ -17,11 +17,11 @@
 
 		@media screen {
 			@media #{$portrait} {
-				max-width: 500px;
+				max-width: 31.25rem;
 			}
 
 			@media #{$landscape} {
-				max-width: 600px
+				max-width: 37.5rem;
 			}
 		}
 

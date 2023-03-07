@@ -12,15 +12,15 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	row-gap: 50px;
+	row-gap: 3.125rem;
 
 	&__socialNetworks {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding-top: 100px;
+		padding-top: 6.25rem;
 		width: 100%;
-		max-width: 700px;
+		max-width: 43.75rem;
 	}
 
 	&__links {
@@ -36,29 +36,29 @@
 		text-align: center;
 		border: {
 			style: solid;
-			width: 1px;
+			width: 0.0625rem;
 			color: $color-8;
-			radius: 38px;
+			radius: 2.375rem;
 		}
 
 		@media screen {
 			@media #{$portrait} {
-				@include fluidContent(width, 40px, 47, 40, 100vw);
-				@include fluidContent(height, 40px, 47, 40, 100vw);
+				@include fluidContent(width, 2.5rem, 2.9375, 2.5, 100vw);
+				@include fluidContent(height, 2.5rem, 2.9375, 2.5, 100vw);
 
 				@media #{$mq-w1080-up} {
-					width: 47px;
-					height: 47px;
+					width: 2.9375rem;
+					height: 2.9375rem;
 				}
 			}
 
 			@media #{$landscape} {
-				@include fluidContent(width, 44px, 50, 44, 100vh);
-				@include fluidContent(height, 44px, 50, 44, 100vh);
+				@include fluidContent(width, 2.75rem, 3.125, 2.75, 100vh);
+				@include fluidContent(height, 2.75rem, 3.125, 2.75, 100vh);
 
 				@media #{$mq-h1080-up} {
-					width: 50px;
-					height: 50px;
+					width: 3.125rem;
+					height: 3.125rem;
 				}
 			}
 		}
@@ -78,22 +78,22 @@
 
 		@media screen {
 			@media #{$portrait} {
-				@include fluidContent(width, 24px, 28, 25, 100vw);
-				@include fluidContent(height, 24px, 28, 25, 100vw);
+				@include fluidContent(width, 1.5rem, 1.75, 1.5625, 100vw);
+				@include fluidContent(height, 1.5rem, 1.75, 1.5625, 100vw);
 
 				@media #{$mq-w1080-up} {
-					width: 28px;
-					height: 28px;
+					width: 1.75rem;
+					height: 1.75rem;
 				}
 			}
 
 			@media #{$landscape} {
-				@include fluidContent(width, 26px, 28, 24, 100vh);
-				@include fluidContent(height, 26px, 28, 24, 100vh);
+				@include fluidContent(width, 1.625rem, 1.75, 1.5, 100vh);
+				@include fluidContent(height, 1.625rem, 1.75, 1.5, 100vh);
 
 				@media #{$mq-h1080-up} {
-					width: 28px;
-					height: 28px;
+					width: 1.75rem;
+					height: 1.75rem;
 				}
 			}
 		}
@@ -104,9 +104,9 @@
 		flex-direction: column;
 		justify-content: space-evenly;
 		align-items: center;
-		max-width: 300px;
-		row-gap: 20px;
-		padding-bottom: 20px;
+		max-width: 18.75rem;
+		row-gap: 1.25rem;
+		padding-bottom: 1.25rem;
 	}
 
 	&__credits {
@@ -117,18 +117,18 @@
 
 		@media screen {
 			@media #{$portrait} {
-				@include fluidContent(font-size, 14px, 16, 14, 100vw);
+				@include fluidContent(font-size, 0.875rem, 1, 0.875, 100vw);
 
 				@media #{$mq-w1080-up} {
-					font-size: 16px;
+					font-size: 1rem;
 				}
 			}
 
 			@media #{$landscape} {
-				@include fluidContent(font-size, 14px, 16, 14, 100vh);
+				@include fluidContent(font-size, 0.875rem, 1, 0.875, 100vh);
 
 				@media #{$mq-h1080-up} {
-					font-size: 16px;
+					font-size: 1rem;
 				}
 			}
 		}
@@ -136,15 +136,15 @@
 		&:last-of-type {
 			@media screen {
 				@media #{$portrait} {
-					@include fluidContent(font-size, 12px, 14, 12, 100vw);
+					@include fluidContent(font-size, 0.75rem, 0.875, 0.75, 100vw);
 
 					@media #{$mq-w1080-up} {
-						font-size: 14px;
+						font-size: 0.875rem;
 					}
 				}
 
 				@media #{$landscape} {
-					@include fluidContent(font-size, 12px, 14, 12, 100vh);
+					@include fluidContent(font-size, 0.75rem, 0.875, 0.75, 100vh);
 				}
 			}
 		}

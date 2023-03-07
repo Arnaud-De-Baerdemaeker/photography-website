@@ -5,23 +5,23 @@
 
 	@media screen {
 		@media #{$portrait} {
-			@include fluidContent(border-radius, 5px, 10, 5, 100vw);
+			@include fluidContent(border-radius, 0.3125rem, 0.625, 0.3125, 100vw);
 
 			@media #{$mq-w600-up} {
-				width: calc(50% - 5px);
+				width: calc(50% - 0.3125rem);
 			}
 
 			@media #{$mq-w1080-up} {
-				border-radius: 10px;
+				border-radius: 0.625rem;
 			}
 		}
 
 		@media #{$landscape} {
-			@include fluidContent(border-radius, 5px, 10, 5, 100vh);
-			width: calc(50% - 5px);
+			@include fluidContent(border-radius, 0.3125rem, 0.625, 0.3125, 100vh);
+			width: calc(50% - 0.3125rem);
 
 			@media #{$mq-h1080-up} {
-				border-radius: 10px;
+				border-radius: 0.625rem;
 			}
 		}
 	}
@@ -30,7 +30,7 @@
 		@extend .card;
 
 		@media screen {
-			@media (hover: hover) {
+			@media #{$hover} {
 				cursor: pointer;
 			}
 
@@ -76,7 +76,7 @@
 		object-fit: cover;
 
 		@media screen {
-			@media (hover: hover) {
+			@media #{$hover} {
 				filter: grayscale(100%);
 				transition: {
 					property: transform filter;

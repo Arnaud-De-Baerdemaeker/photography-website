@@ -32,18 +32,18 @@
 
 		@media screen {
 			@media #{$portrait} {
-				@include fluidContent(row-gap, 30px, 150, 30, 100vw);
+				@include fluidContent(row-gap, 1.875rem, 9.375, 1.875, 100vw);
 
 				@media #{$mq-w1080-up} {
-					row-gap: 150px;
+					row-gap: 9.375rem;
 				}
 			}
 
 			@media #{$landscape} {
-				@include fluidContent(row-gap, 15px, 100, 15, 100vh);
+				@include fluidContent(row-gap, 0.9375rem, 6.25, 0.9375, 100vh);
 
 				@media #{$mq-h1080-up} {
-					row-gap: 100px;
+					row-gap: 6.25rem;
 				}
 			}
 		}
@@ -61,26 +61,26 @@
 			family: $dm-sans;
 			weight: 700;
 		}
-		letter-spacing: 2px;
+		letter-spacing: 0.125rem;
 
 		@media screen {
 			@media #{$portrait} {
-				@include fluidContent(font-size, 40px, 100, 40, 100vw);
+				@include fluidContent(font-size, 2.5rem, 6.25, 2.5, 100vw);
 
 				@media #{$mq-w1080-up} {
-					font-size: 100px;
+					font-size: 6.25rem;
 				}
 			}
 
 			@media #{$landscape} {
-				@include fluidContent(font-size, 30px, 80, 30, 100vh);
+				@include fluidContent(font-size, 1.875rem, 5, 1.875, 100vh);
 
 				@media #{$mq-h1080-up} {
-					font-size: 80px;
+					font-size: 5rem;
 				}
 			}
 
-			@media (hover: hover) {
+			@media #{$hover} {
 				&:before {
 					content: attr(data-link);
 					display: block;
