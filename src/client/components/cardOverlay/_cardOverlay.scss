@@ -1,4 +1,4 @@
-// CARDOVERLAY
+/* CARDOVERLAY */
 .overlay {
 	position: absolute;
 	display: flex;
@@ -25,12 +25,8 @@
 
 	&__title {
 		background-color: $color-3;
-		box-shadow: -3px 3px 0 0 $color-1;
+		box-shadow: -0.1875rem 0.1875rem 0 0 $color-1;
 		margin-top: 0;
-		padding: {
-			top: 1px;
-			bottom: 1px;
-		}
 		font-weight: 400;
 
 		&--photo {
@@ -38,34 +34,34 @@
 
 			@media screen {
 				@media #{$portrait} {
-					@include fluidContent(margin-bottom, 5px, 10, 5, 100vw);
-					@include fluidContent(padding-right, 5px, 10, 5, 100vw);
-					@include fluidContent(padding-left, 5px, 10, 5, 100vw);
-					@include fluidContent(border-radius, 3px, 5, 3, 100vw);
+					@include fluidContent(margin-bottom, 0.3125rem, 0.625, 0.3125, 100vw);
+					@include fluidContent(padding-right, 0.3125rem, 0.625, 0.3125, 100vw);
+					@include fluidContent(padding-left, 0.3125rem, 0.625, 0.3125, 100vw);
+					@include fluidContent(border-radius, 0.1875rem, 0.3125, 0.1875, 100vw);
 
 					@media #{$mq-w1080-up} {
-						margin-bottom: 10px;
+						margin-bottom: 0.625rem;
 						padding: {
-							right: 10px;
-							left: 10px;
+							right: 0.625rem;
+							left: 0.625rem;
 						}
-						border-radius: 5px;
+						border-radius: 0.3125rem;
 					}
 				}
 
 				@media #{$landscape} {
-					@include fluidContent(margin-bottom, 5px, 20, 5, 100vh);
-					@include fluidContent(padding-right, 5px, 10, 5, 100vh);
-					@include fluidContent(padding-left, 5px, 10, 5, 100vh);
-					@include fluidContent(border-radius, 3px, 5, 3, 100vh);
+					@include fluidContent(margin-bottom, 0.3125rem, 1.25, 0.3125, 100vh);
+					@include fluidContent(padding-right, 0.3125rem, 0.625, 0.3125, 100vh);
+					@include fluidContent(padding-left, 0.3125rem, 0.625, 0.3125, 100vh);
+					@include fluidContent(border-radius, 0.1875rem, 0.3125, 0.1875, 100vh);
 
 					@media #{$mq-h1080-up} {
-						margin-bottom: 20px;
+						margin-bottom: 1.25rem;
 						padding: {
-							right: 10px;
-							left: 10px;
+							right: 0.625rem;
+							left: 0.625rem;
 						}
-						border-radius: 5px;
+						border-radius: 0.3125rem;
 					}
 				}
 			}
@@ -76,38 +72,38 @@
 
 			@media screen {
 				@media #{$portrait} {
-					@include fluidContent(font-size, 20px, 28, 20, 100vw);
-					@include fluidContent(margin-bottom, 10px, 15, 10, 100vw);
-					@include fluidContent(border-radius, 3px, 5, 3, 100vw);
-					@include fluidContent(padding-right, 5px, 10, 5, 100vw);
-					@include fluidContent(padding-left, 5px, 10, 5, 100vw);
+					@include fluidContent(font-size, 1.25rem, 1.75, 1.25, 100vw);
+					@include fluidContent(margin-bottom, 0.625rem, 0.9375, 0.625, 100vw);
+					@include fluidContent(border-radius, 0.1875rem, 0.3125, 0.1875, 100vw);
+					@include fluidContent(padding-right, 0.3125rem, 0.625, 0.3125, 100vw);
+					@include fluidContent(padding-left, 0.3125rem, 0.625, 0.3125, 100vw);
 
 					@media #{$mq-w1080-up} {
-						font-size: 28px;
-						margin-bottom: 15px;
-						border-radius: 5px;
+						font-size: 1.75rem;
+						margin-bottom: 0.9375rem;
+						border-radius: 0.3125rem;
 						padding: {
-							right: 10px;
-							left: 10px;
+							right: 0.625rem;
+							left: 0.625rem;
 						}
 					}
 				}
 
 				@media #{$landscape} {
-					@include fluidContent(font-size, 18px, 30, 18, 100vh);
-					@include fluidContent(margin-bottom, 10px, 30, 10, 100vh);
-					@include fluidContent(padding-right, 5px, 10, 5, 100vh);
-					@include fluidContent(padding-left, 5px, 10, 5, 100vh);
-					@include fluidContent(border-radius, 3px, 5, 3, 100vh);
+					@include fluidContent(font-size, 1.125rem, 1.875, 1.125, 100vh);
+					@include fluidContent(margin-bottom, 0.625rem, 1.875, 0.625, 100vh);
+					@include fluidContent(padding-right, 0.3125rem, 0.625, 0.3125, 100vh);
+					@include fluidContent(padding-left, 0.3125rem, 0.625, 0.3125, 100vh);
+					@include fluidContent(border-radius, 0.1875rem, 0.3125, 0.1875, 100vh);
 
 					@media #{$mq-h1080-up} {
-						font-size: 30px;
-						margin-bottom: 30px;
+						font-size: 1.875rem;
+						margin-bottom: 1.875rem;
 						padding: {
-							right: 10px;
-							left: 10px;
+							right: 0.625rem;
+							left: 0.625rem;
 						}
-						border-radius: 5px;
+						border-radius: 0.3125rem;
 					}
 				}
 			}
@@ -119,18 +115,18 @@
 
 		@media screen {
 			@media #{$portrait} {
-				@include fluidContent(font-size, 18px, 24, 18, 100vw);
+				@include fluidContent(font-size, 1.125rem, 1.5, 1.125, 100vw);
 
 				@media #{$mq-w1080-up} {
-					font-size: 24px;
+					font-size: 1.5rem;
 				}
 			}
 
 			@media #{$landscape} {
-				@include fluidContent(font-size, 16px, 28, 16, 100vh);
+				@include fluidContent(font-size, 1rem, 1.75, 1, 100vh);
 
 				@media #{$mq-h1080-up} {
-					font-size: 28px;
+					font-size: 1.75rem;
 				}
 			}
 		}
@@ -143,18 +139,18 @@
 
 		@media screen {
 			@media #{$portrait} {
-				@include fluidContent(font-size, 16px, 20, 16, 100vw);
+				@include fluidContent(font-size, 1rem, 1.25, 1, 100vw);
 
 				@media #{$mq-w1080-up} {
-					font-size: 20px;
+					font-size: 1.25rem;
 				}
 			}
 
 			@media #{$landscape} {
-				@include fluidContent(font-size, 14px, 20, 14, 100vh);
+				@include fluidContent(font-size, 0.875rem, 1.25, 0.875, 100vh);
 
 				@media #{$mq-h1080-up} {
-					font-size: 20px;
+					font-size: 1.25rem;
 				}
 			}
 		}

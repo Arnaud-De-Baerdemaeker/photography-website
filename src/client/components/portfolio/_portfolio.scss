@@ -1,5 +1,5 @@
-// PORTFOLIO
-.portfolio { // <main>
+/* PORTFOLIO */
+.portfolio {
 	display: flex;
 	justify-content: center;
 	padding: {
@@ -7,30 +7,30 @@
 		bottom: 6.25rem;
 	}
 
-	&__list { // <ul>
+	&__list {
 		display: inherit;
 		justify-content: center;
 		flex-wrap: wrap;
 		list-style: none;
 		margin: 0;
 		padding: 0;
-		row-gap: 5px;
-		column-gap: 5px;
+		row-gap: 0.3125rem;
+		column-gap: 0.3125rem;
 
 		@media screen {
 			@media #{$portrait} {
-				@include fluidContent(width, 250px, 800, 250, 100vw);
+				@include fluidContent(width, 15.625rem, 50, 15.625, 100vw);
 
 				@media #{$mq-w1080-up} {
-					width: 800px;
+					width: 50rem;
 				}
 			}
 	
 			@media #{$landscape} {
-				@include fluidContent(width, 400px, 1400, 400, 100vh);
+				@include fluidContent(width, 25rem, 87.5, 25, 100vh);
 
 				@media #{$mq-h1080-up} {
-					width: 1400px;
+					width: 87.5rem;
 				}
 			}
 		}
