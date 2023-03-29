@@ -23,11 +23,9 @@ class Gallery extends Component {
 		}
 		this.body = document.querySelector("body");
 		this.tabTitle = "Galerie | Arnaud De Baerdemaeker";
-		this.domElements;
+		this.photos;
+		this.tags;
 		this.timeout;
-		this.city;
-		this.country;
-		this.photosLocation;
 
 		this.getPhotos = this.getPhotos.bind(this);
 		this.toggleModal = this.toggleModal.bind(this);
@@ -49,21 +47,81 @@ class Gallery extends Component {
 				photoset_id: process.env.REACT_APP_PHOTOSET,
 				format: "json",
 				nojsoncallback: 1,
-				extras: "url_o, url_c, tags"
+				extras: "url_o, url_c",
 			}
 		})
-		.then(result => {
-			this.setState({
-				photos: result.data.photoset.photo
+		.then(results => {
+			this.photos = results.data.photoset.photo;
+
+			const promises = this.photos.map(async photo => {
+				return await axios({
+					method: "GET",
+					url: "https://www.flickr.com/services/rest/?method=flickr.tags.getListPhoto",
+					header: {
+						"Content-Type": "application/json"
+					},
+					params: {
+						api_key: process.env.REACT_APP_API_KEY,
+						photo_id: photo.id,
+						format: "json",
+						nojsoncallback: 1,
+					}
+				});
+			});
+
+			Promise.all(promises)
+			.then(results => {
+				this.tags = results;
+			})
+			.catch(error => {
+				console.log(error);
+			})
+			.finally(() => {
+				let finalResult = [];
+
+				this.photos.map(photo => {
+					this.tags.find(tags => {
+						if(tags.data.photo.id === photo.id) {
+							finalResult.push({
+								photo: {
+									id: photo.id,
+									url_c: photo.url_c,
+									url_o: photo.url_o
+								},
+								tags: {
+									subject: tags.data.photo.tags.tag.length === 3 ? tags.data.photo.tags.tag[0].raw : null,
+									city: tags.data.photo.tags.tag.length === 3 ? tags.data.photo.tags.tag[1].raw : tags.data.photo.tags.tag[0].raw,
+									country: tags.data.photo.tags.tag.length === 3 ? tags.data.photo.tags.tag[2].raw : tags.data.photo.tags.tag[1].raw
+								}
+							});
+						}
+					})
+				});
+
+				this.setState({
+					photos: finalResult
+				});
+
+				const photos = [];
+				this.state.photos.map(photo => {
+					photos.push({
+						id: photo.photo.id,
+						url_c: photo.photo.url_c,
+						url_o: photo.photo.url_o,
+						tags: {
+							subject: photo.tags.subject,
+							city: photo.tags.city,
+							country: photo.tags.country
+						}
+					});
+				});
+
+				sessionStorage.setItem("photos", JSON.stringify(photos));
 			});
 		})
 		.catch(error => {
-			return error;
+			console.error(error);
 		});
-
-		this.domElements = document.querySelectorAll(".card--photo");
-		// Apply a class to initially hide the elements
-		this.hideElements(this.domElements);
 	}
 
 	toggleModal() {
@@ -109,11 +167,22 @@ class Gallery extends Component {
 
 	componentDidMount() {
 		this.props.setTabTitle(this.tabTitle);
+
 		this.props.backToTop();
-		this.getPhotos();
+
+		// Check if the photos' data is stored in the session storage and load it instaed of making a new API call if so
+		if(sessionStorage.getItem("photos")) {
+			this.setState({
+				photos: JSON.parse(sessionStorage.getItem("photos"))
+			});
+		}
+		else {
+			this.getPhotos();
+		}
+
 		// Each time the user scrolls, the list of elements is refreshed and sent to a function
 		window.addEventListener("scroll", () => {
-			const refetchedElements = this.domElements;
+			const refetchedElements = document.querySelectorAll(".card--photo");
 			this.props.revealOnScroll(refetchedElements);
 		});
 	}
@@ -170,23 +239,38 @@ class Gallery extends Component {
 				/>
 				<main className={"gallery"}>
 					<ul className={"gallery__list"}>
-						{this.state.photos && this.state.photos.map(data =>
+						{this.state.photos && this.state.photos.map(photo =>
 							<Card
-								key={data.id}
+								key={
+									sessionStorage.getItem("photos")
+									? photo.id
+									: photo.photo.id
+								}
 								cardClick={this.handleClick}
 								cardContent={
 									<img
-										src={data.url_c}
-										data-hd={data.url_o}
+										src={
+											sessionStorage.getItem("photos")
+											? photo.url_c
+											: photo.photo.url_c
+										}
+										data-hd={
+											sessionStorage.getItem("photos")
+											? photo.url_o
+											: photo.photo.url_o
+										}
+										loading={"lazy"}
 										className={"card__image"}
 									/>
 								}
-								cardClass={"card--photo"}
+								cardClass={"card--photo view--hidden"}
 								cardOverlayContent={
 									<>
-										<span className={"overlay__city"}>{data.tags.split(" ")[0]}</span>
+										<span className={"overlay__subject"}>{photo.tags.subject}</span>
 										{" "}
-										<span className={"overlay__country"}>{data.tags.split(" ")[1]}</span>
+										<span className={"overlay__city"}>{photo.tags.city}</span>
+										{" "}
+										<span className={"overlay__country"}>{photo.tags.country}</span>
 									</>
 								}
 								cardOverlayTitleClass={"overlay__title--photo"}
