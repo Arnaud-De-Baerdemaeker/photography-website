@@ -110,7 +110,7 @@
 		}
 	}
 
-	&__city {
+	&__subject {
 		text-transform: uppercase;
 
 		@media screen {
@@ -132,9 +132,7 @@
 		}
 	}
 
-	&__country {
-		@extend .overlay__city;
-		text-transform: capitalize;
+	&__city {
 		color: $color-6;
 
 		@media screen {
@@ -154,5 +152,9 @@
 				}
 			}
 		}
+	}
+
+	&__country {
+		@extend .overlay__city;
 	}
 }
