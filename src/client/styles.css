@@ -1141,54 +1141,52 @@ body {
     border-radius: 0.3125rem;
   }
 }
-.overlay__city, .overlay__country {
+.overlay__subject {
   text-transform: uppercase;
 }
 @media screen and (orientation: portrait) {
-  .overlay__city, .overlay__country {
-    font-size: calc(1.125rem + (1.5 - 1.125) * ((100vw - 18.75rem) / (67.5 - 18.75)));
+  .overlay__subject {
+    font-size: calc(1rem + (1.5 - 1) * ((100vw - 18.75rem) / (67.5 - 18.75)));
   }
 }
 @media screen and (orientation: portrait) and (min-width: 67.5rem) {
-  .overlay__city, .overlay__country {
-    font-size: 1.5rem;
+  .overlay__subject {
+    font-size: 24px;
   }
 }
 @media screen and (orientation: landscape) {
-  .overlay__city, .overlay__country {
-    font-size: calc(1rem + (1.75 - 1) * ((100vh - 18.75rem) / (67.5 - 18.75)));
+  .overlay__subject {
+    font-size: calc(0.8125rem + (1.75 - 0.8125) * ((100vh - 18.75rem) / (67.5 - 18.75)));
   }
 }
 @media screen and (orientation: landscape) and (min-height: 67.5rem) {
-  .overlay__city, .overlay__country {
+  .overlay__subject {
     font-size: 1.75rem;
   }
 }
-.overlay__country {
-  text-transform: capitalize;
+.overlay__city, .overlay__country {
   color: rgb(180, 180, 180);
 }
 @media screen and (orientation: portrait) {
-  .overlay__country {
-    font-size: calc(1rem + (1.25 - 1) * ((100vw - 18.75rem) / (67.5 - 18.75)));
+  .overlay__city, .overlay__country {
+    font-size: calc(0.875rem + (1.25 - 0.875) * ((100vw - 18.75rem) / (67.5 - 18.75)));
   }
 }
 @media screen and (orientation: portrait) and (min-width: 67.5rem) {
-  .overlay__country {
+  .overlay__city, .overlay__country {
     font-size: 1.25rem;
   }
 }
 @media screen and (orientation: landscape) {
-  .overlay__country {
-    font-size: calc(0.875rem + (1.25 - 0.875) * ((100vh - 18.75rem) / (67.5 - 18.75)));
+  .overlay__city, .overlay__country {
+    font-size: calc(0.625rem + (1.25 - 0.625) * ((100vh - 18.75rem) / (67.5 - 18.75)));
   }
 }
 @media screen and (orientation: landscape) and (min-height: 67.5rem) {
-  .overlay__country {
+  .overlay__city, .overlay__country {
     font-size: 1.25rem;
   }
 }
-
 /* MODAL */
 .modal, .modal--hidden {
   position: fixed;
