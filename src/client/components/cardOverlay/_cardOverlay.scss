@@ -115,10 +115,10 @@
 
 		@media screen {
 			@media #{$portrait} {
-				@include fluidContent(font-size, 1.125rem, 1.5, 1.125, 100vw);
+				@include fluidContent(font-size, 1rem, 1.5, 1, 100vw);
 
 				@media #{$mq-w1080-up} {
-					font-size: 1.5rem;
+					font-size: 24px;
 				}
 			}
 
@@ -137,7 +137,7 @@
 
 		@media screen {
 			@media #{$portrait} {
-				@include fluidContent(font-size, 1rem, 1.25, 1, 100vw);
+				@include fluidContent(font-size, 0.875rem, 1.25, 0.875, 100vw);
 
 				@media #{$mq-w1080-up} {
 					font-size: 1.25rem;
