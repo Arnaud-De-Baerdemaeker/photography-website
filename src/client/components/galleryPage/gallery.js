@@ -72,11 +72,7 @@ class Gallery extends Component {
 			Promise.all(promises)
 			.then(results => {
 				this.tags = results;
-			})
-			.catch(error => {
-				console.log(error);
-			})
-			.finally(() => {
+
 				let finalResult = [];
 
 				this.photos.map(photo => {
@@ -117,6 +113,9 @@ class Gallery extends Component {
 				});
 
 				sessionStorage.setItem("photos", JSON.stringify(photos));
+			})
+			.catch(error => {
+				console.log(error);
 			});
 		})
 		.catch(error => {
