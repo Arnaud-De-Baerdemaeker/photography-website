@@ -9,6 +9,7 @@ import Header from "../header/header";
 import Navigation from "../navigation/navigation";
 import Hero from "../hero/hero";
 import SVG from "../svg/svg";
+import APIError from "../APIError/APIError";
 import Card from "../card/card";
 import Modal from "../modal/modal";
 import Footer from "../footer/footer";
@@ -18,6 +19,7 @@ class Gallery extends Component {
 		super(props);
 		this.state = {
 			photos: null,
+			hasAPICallFailed: false,
 			hdPicture: null,
 			isModalOpen: false
 		}
@@ -114,12 +116,16 @@ class Gallery extends Component {
 
 				sessionStorage.setItem("photos", JSON.stringify(photos));
 			})
-			.catch(error => {
-				console.log(error);
+			.catch(() => {
+				this.setState({
+					hasAPICallFailed: true
+				});
 			});
 		})
-		.catch(error => {
-			console.error(error);
+		.catch(() => {
+			this.setState({
+				hasAPICallFailed: true
+			});
 		});
 	}
 
@@ -237,45 +243,48 @@ class Gallery extends Component {
 					}
 				/>
 				<main className={"gallery"}>
-					<ul className={"gallery__list"}>
-						{this.state.photos && this.state.photos.map(photo =>
-							<Card
-								key={
-									sessionStorage.getItem("photos")
-									? photo.id
-									: photo.photo.id
-								}
-								cardClick={this.handleClick}
-								cardContent={
-									<img
-										src={
-											sessionStorage.getItem("photos")
-											? photo.url_c
-											: photo.photo.url_c
-										}
-										data-hd={
-											sessionStorage.getItem("photos")
-											? photo.url_o
-											: photo.photo.url_o
-										}
-										loading={"lazy"}
-										className={"card__image"}
-									/>
-								}
-								cardClass={"card--photo view--hidden"}
-								cardOverlayContent={
-									<>
-										<span className={"overlay__subject"}>{photo.tags.subject}</span>
-										{" "}
-										<span className={"overlay__city"}>{photo.tags.city}</span>
-										{" "}
-										<span className={"overlay__country"}>{photo.tags.country}</span>
-									</>
-								}
-								cardOverlayTitleClass={"overlay__title--photo"}
-							/>
-						)}
-					</ul>
+					{this.state.photos
+						? <ul className={"gallery__list"}>
+							{this.state.photos.map(photo =>
+								<Card
+									key={
+										sessionStorage.getItem("photos")
+										? photo.id
+										: photo.photo.id
+									}
+									cardClick={this.handleClick}
+									cardContent={
+										<img
+											src={
+												sessionStorage.getItem("photos")
+												? photo.url_c
+												: photo.photo.url_c
+											}
+											data-hd={
+												sessionStorage.getItem("photos")
+												? photo.url_o
+												: photo.photo.url_o
+											}
+											loading={"lazy"}
+											className={"card__image"}
+										/>
+									}
+									cardClass={"card--photo view--hidden"}
+									cardOverlayContent={
+										<>
+											<span className={"overlay__subject"}>{photo.tags.subject}</span>
+											{" "}
+											<span className={"overlay__city"}>{photo.tags.city}</span>
+											{" "}
+											<span className={"overlay__country"}>{photo.tags.country}</span>
+										</>
+									}
+									cardOverlayTitleClass={"overlay__title--photo"}
+								/>
+							)}
+						</ul>
+						: this.state.hasAPICallFailed && <APIError />
+					}
 					<Modal
 						hd={this.state.hdPicture}
 						isModalOpen={this.state.isModalOpen}
