@@ -9,7 +9,7 @@ import Header from "../header/header";
 import Navigation from "../navigation/navigation";
 import Hero from "../hero/hero";
 import SVG from "../svg/svg";
-import APIError from "../APIError/APIError";
+import FetchError from "../fetchError/fetchError";
 import Card from "../card/card";
 import Modal from "../modal/modal";
 import Footer from "../footer/footer";
@@ -19,7 +19,7 @@ class Gallery extends Component {
 		super(props);
 		this.state = {
 			photos: null,
-			hasAPICallFailed: false,
+			hasFetchFailed: false,
 			hdPicture: null,
 			isModalOpen: false
 		}
@@ -34,7 +34,6 @@ class Gallery extends Component {
 		this.handleClick = this.handleClick.bind(this);
 		this.getDataFromTarget = this.getDataFromTarget.bind(this);
 		this.removeScrollLock = this.removeScrollLock.bind(this);
-		this.hideElements = this.hideElements.bind(this);
 	}
 
 	async getPhotos() {
@@ -118,13 +117,13 @@ class Gallery extends Component {
 			})
 			.catch(() => {
 				this.setState({
-					hasAPICallFailed: true
+					hasFetchFailed: true
 				});
 			});
 		})
 		.catch(() => {
 			this.setState({
-				hasAPICallFailed: true
+				hasFetchFailed: true
 			});
 		});
 	}
@@ -166,10 +165,6 @@ class Gallery extends Component {
 		this.props.headerRef.current.classList.add("scroll");
 	}
 
-	hideElements(elements) {
-		this.props.applyHideClass(elements);
-	}
-
 	componentDidMount() {
 		this.props.setTabTitle(this.tabTitle);
 
@@ -184,12 +179,21 @@ class Gallery extends Component {
 		else {
 			this.getPhotos();
 		}
+	}
 
-		// Each time the user scrolls, the list of elements is refreshed and sent to a function
-		window.addEventListener("scroll", () => {
-			const refetchedElements = document.querySelectorAll(".card--photo");
-			this.props.revealOnScroll(refetchedElements);
-		});
+	componentDidUpdate(prevState) {
+		if(this.state.photos !== prevState.photos) {
+			const elementsToHide = document.querySelectorAll(".card--photo, .fetchError");
+
+			// Apply a class to initially hide the elements
+			this.props.applyHideClass(elementsToHide);
+
+			// Each time the user scrolls, the list of elements is refreshed and sent to a function
+			window.addEventListener("scroll", () => {
+				const elementsToReveal = elementsToHide;
+				this.props.revealOnScroll(elementsToReveal);
+			});
+		}
 	}
 
 	componentWillUnmount() {
@@ -244,52 +248,54 @@ class Gallery extends Component {
 				/>
 				<main className={"gallery"}>
 					{this.state.photos
-						? <ul className={"gallery__list"}>
-							{this.state.photos.map(photo =>
-								<Card
-									key={
-										sessionStorage.getItem("photos")
-										? photo.id
-										: photo.photo.id
-									}
-									cardClick={this.handleClick}
-									cardContent={
-										<img
-											src={
-												sessionStorage.getItem("photos")
-												? photo.url_c
-												: photo.photo.url_c
-											}
-											data-hd={
-												sessionStorage.getItem("photos")
-												? photo.url_o
-												: photo.photo.url_o
-											}
-											loading={"lazy"}
-											className={"card__image"}
-										/>
-									}
-									cardClass={"card--photo view--hidden"}
-									cardOverlayContent={
-										<>
-											<span className={"overlay__subject"}>{photo.tags.subject}</span>
-											{" "}
-											<span className={"overlay__city"}>{photo.tags.city}</span>
-											{" "}
-											<span className={"overlay__country"}>{photo.tags.country}</span>
-										</>
-									}
-									cardOverlayTitleClass={"overlay__title--photo"}
-								/>
-							)}
-						</ul>
-						: this.state.hasAPICallFailed && <APIError />
+						? <>
+							<ul className={"gallery__list"}>
+								{this.state.photos.map(photo =>
+									<Card
+										key={
+											sessionStorage.getItem("photos")
+											? photo.id
+											: photo.photo.id
+										}
+										cardClick={this.handleClick}
+										cardContent={
+											<img
+												src={
+													sessionStorage.getItem("photos")
+													? photo.url_c
+													: photo.photo.url_c
+												}
+												data-hd={
+													sessionStorage.getItem("photos")
+													? photo.url_o
+													: photo.photo.url_o
+												}
+												loading={"lazy"}
+												className={"card__image"}
+											/>
+										}
+										cardClass={"card--photo view--hidden"}
+										cardOverlayContent={
+											<>
+												<span className={"overlay__subject"}>{photo.tags.subject}</span>
+												{" "}
+												<span className={"overlay__city"}>{photo.tags.city}</span>
+												{" "}
+												<span className={"overlay__country"}>{photo.tags.country}</span>
+											</>
+										}
+										cardOverlayTitleClass={"overlay__title--photo"}
+									/>
+								)}
+							</ul>
+							<Modal
+								hd={this.state.hdPicture}
+								isModalOpen={this.state.isModalOpen}
+								toggleModal={this.toggleModal}
+							/>
+						</>
+						: this.state.hasFetchFailed && <FetchError />
 					}
-					<Modal
-						hd={this.state.hdPicture}
-						isModalOpen={this.state.isModalOpen}
-						toggleModal={this.toggleModal}
-					/>
 				</main>
 				<Footer
 					applyHideClass={this.props.applyHideClass}
