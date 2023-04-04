@@ -1,0 +1,21 @@
+/* FETCHERROR */
+.fetchError {
+    display: flex;
+    column-gap: 40px;
+    margin: 0;
+    padding: 30px;
+    background-color: rgb(58, 90, 64);
+    border-radius: 30px;
+
+    &__errorIcon {
+        width: 100px;
+        height: 100px;
+    }
+
+    &__message {
+        display: inherit;
+        align-items: center;
+        margin: 0;
+        font-size: 22px;
+    }
+}
