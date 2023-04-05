@@ -4,12 +4,12 @@
 
 import React, {Component} from "react";
 
-import Header from "../header/header";
-import Navigation from "../navigation/navigation";
-import Hero from "../hero/hero";
-import SVG from "../svg/svg";
-import Card from "../card/card";
-import Footer from "../footer/footer";
+import Header from "../../components/header/header";
+import Navigation from "../../components/navigation/navigation";
+import Hero from "../../components/hero/hero";
+import SVG from "../../components/svg/svg";
+import Card from "../../components/card/card";
+import Footer from "../../components/footer/footer";
 
 import myWebsite from "../../images/myWebsite.png";
 import smartmobiles from "../../images/smartmobiles.png";

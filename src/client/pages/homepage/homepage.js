@@ -4,11 +4,11 @@
 
 import React, {Component} from "react";
 
-import Header from "../header/header";
-import Navigation from "../navigation/navigation";
-import Hero from "../hero/hero";
-import SVG from "../svg/svg";
-import Footer from "../footer/footer";
+import Header from "../../components/header/header";
+import Navigation from "../../components/navigation/navigation";
+import Hero from "../../components/hero/hero";
+import SVG from "../../components/svg/svg";
+import Footer from "../../components/footer/footer";
 
 import myPhoto from "../../images/moi.png";
 

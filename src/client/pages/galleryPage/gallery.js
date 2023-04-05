@@ -5,14 +5,14 @@
 import React, {Component} from "react";
 import axios from "axios";
 
-import Header from "../header/header";
-import Navigation from "../navigation/navigation";
-import Hero from "../hero/hero";
-import SVG from "../svg/svg";
-import FetchError from "../fetchError/fetchError";
-import Card from "../card/card";
-import Modal from "../modal/modal";
-import Footer from "../footer/footer";
+import Header from "../../components/header/header";
+import Navigation from "../../components/navigation/navigation";
+import Hero from "../../components/hero/hero";
+import SVG from "../../components/svg/svg";
+import FetchError from "../../components/fetchError/fetchError";
+import Card from "../../components/card/card";
+import Modal from "../../components/modal/modal";
+import Footer from "../../components/footer/footer";
 
 class Gallery extends Component {
 	constructor(props) {
