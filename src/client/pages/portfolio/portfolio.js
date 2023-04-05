@@ -4,12 +4,12 @@
 
 import React, {Component} from "react";
 
-import Header from "../header/header";
-import Navigation from "../navigation/navigation";
-import Hero from "../hero/hero";
-import SVG from "../svg/svg";
-import Card from "../card/card";
-import Footer from "../footer/footer";
+import Header from "../../components/header/header";
+import Navigation from "../../components/navigation/navigation";
+import Hero from "../../components/hero/hero";
+import SVG from "../../components/svg/svg";
+import Card from "../../components/card/card";
+import Footer from "../../components/footer/footer";
 
 import myWebsite from "../../images/myWebsite.png";
 import smartmobiles from "../../images/smartmobiles.png";
@@ -50,14 +50,18 @@ class Portfolio extends Component {
 
 	componentDidMount() {
 		this.props.setTabTitle(this.tabTitle);
+
 		this.props.backToTop();
-		const fetchedElements = document.querySelectorAll(".card--project");
+
+		const elementsToHide = document.querySelectorAll(".card--project");
+
 		// Apply a class to initially hide the elements
-		this.props.applyHideClass(fetchedElements);
+		this.props.applyHideClass(elementsToHide);
+
 		// Each time the user scrolls, the list of elements is refreshed and sent to a function
 		window.addEventListener("scroll", () => {
-			const refetchedElements = fetchedElements;
-			this.props.revealOnScroll(refetchedElements);
+			const elementsToReveal = elementsToHide;
+			this.props.revealOnScroll(elementsToReveal);
 		});
 	}
 

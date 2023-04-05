@@ -110,20 +110,20 @@
 		}
 	}
 
-	&__city {
+	&__subject {
 		text-transform: uppercase;
 
 		@media screen {
 			@media #{$portrait} {
-				@include fluidContent(font-size, 1.125rem, 1.5, 1.125, 100vw);
+				@include fluidContent(font-size, 1rem, 1.5, 1, 100vw);
 
 				@media #{$mq-w1080-up} {
-					font-size: 1.5rem;
+					font-size: 24px;
 				}
 			}
 
 			@media #{$landscape} {
-				@include fluidContent(font-size, 1rem, 1.75, 1, 100vh);
+				@include fluidContent(font-size, 0.8125rem, 1.75, 0.8125, 100vh);
 
 				@media #{$mq-h1080-up} {
 					font-size: 1.75rem;
@@ -132,14 +132,12 @@
 		}
 	}
 
-	&__country {
-		@extend .overlay__city;
-		text-transform: capitalize;
+	&__city {
 		color: $color-6;
 
 		@media screen {
 			@media #{$portrait} {
-				@include fluidContent(font-size, 1rem, 1.25, 1, 100vw);
+				@include fluidContent(font-size, 0.875rem, 1.25, 0.875, 100vw);
 
 				@media #{$mq-w1080-up} {
 					font-size: 1.25rem;
@@ -147,12 +145,16 @@
 			}
 
 			@media #{$landscape} {
-				@include fluidContent(font-size, 0.875rem, 1.25, 0.875, 100vh);
+				@include fluidContent(font-size, 0.625rem, 1.25, 0.625, 100vh);
 
 				@media #{$mq-h1080-up} {
 					font-size: 1.25rem;
 				}
 			}
 		}
+	}
+
+	&__country {
+		@extend .overlay__city;
 	}
 }

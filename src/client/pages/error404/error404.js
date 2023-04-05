@@ -5,10 +5,10 @@
 import React, {Component} from "react";
 import {NavLink, withRouter} from "react-router-dom";
 
-import Header from "../header/header";
-import Navigation from "../navigation/navigation";
-import Hero from "../hero/hero";
-import Footer from "../footer/footer";
+import Header from "../../components/header/header";
+import Navigation from "../../components/navigation/navigation";
+import Hero from "../../components/hero/hero";
+import Footer from "../../components/footer/footer";
 
 class Error404 extends Component {
 	constructor(props) {

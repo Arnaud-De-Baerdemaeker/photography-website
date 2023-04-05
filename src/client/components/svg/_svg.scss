@@ -44,6 +44,10 @@
 	&__close {
 		@extend .svg;
 	}
+
+	&__error {
+		@extend .svg;
+	}
 }
 
 .icon {
@@ -143,6 +147,10 @@
 	}
 
 	&__close {
-		fill: $color-8;
+		@extend .icon;
+	}
+
+	&__error {
+		@extend .icon;
 	}
 }
