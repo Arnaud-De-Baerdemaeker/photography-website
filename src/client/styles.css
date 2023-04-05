@@ -377,7 +377,7 @@ body {
 }
 
 /* SVG */
-.svg, .svg__close, .svg__background, .svg__scrollDown, .svg__menu {
+.svg, .svg__error, .svg__close, .svg__background, .svg__scrollDown, .svg__menu {
   width: 100%;
   height: 100%;
   transform-box: fill-box;
@@ -402,7 +402,7 @@ body {
 .svg__background .background3 {
   fill: rgb(25, 39, 27);
 }
-.icon, .icon__chevronBottom, .icon__chevronMiddle, .icon__chevronTop, .icon__hamburgerBottom, .icon__hamburgerBottom--close, .icon__hamburgerMiddle, .icon__hamburgerMiddle--close, .icon__hamburgerTop, .icon__hamburgerTop--close {
+.icon, .icon__error, .icon__close, .icon__chevronBottom, .icon__chevronMiddle, .icon__chevronTop, .icon__hamburgerBottom, .icon__hamburgerBottom--close, .icon__hamburgerMiddle, .icon__hamburgerMiddle--close, .icon__hamburgerTop, .icon__hamburgerTop--close {
   width: 100%;
   height: 100%;
   fill: rgb(249, 246, 238);
@@ -462,10 +462,6 @@ body {
   animation-direction: alternate;
   animation-delay: 0.625s;
 }
-.icon__close {
-  fill: rgb(249, 246, 238);
-}
-
 /* MENU */
 .menu, .menu--closed {
   position: fixed;
@@ -928,7 +924,9 @@ body {
   margin-right: auto;
   margin-left: auto;
   padding-top: 6.25rem;
+  padding-right: 1.25rem;
   padding-bottom: 6.25rem;
+  padding-left: 1.25rem;
 }
 .gallery__list {
   display: flex;
@@ -1048,6 +1046,67 @@ body {
   }
 }
 
+/* FETCHERROR */
+.fetchError {
+  display: flex;
+  align-items: center;
+  padding-top: 1.875rem;
+  padding-right: 1.25rem;
+  padding-bottom: 1.875rem;
+  padding-left: 1.25rem;
+  background-color: rgb(58, 90, 64);
+  border-radius: 1.875rem;
+}
+@media screen and (orientation: portrait) {
+  .fetchError {
+    flex-direction: column;
+    row-gap: 1.875rem;
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 43.75rem) {
+  .fetchError {
+    flex-direction: row;
+    -moz-column-gap: 1.875rem;
+         column-gap: 1.875rem;
+    row-gap: unset;
+  }
+}
+@media screen and (orientation: landscape) {
+  .fetchError {
+    -moz-column-gap: 1.875rem;
+         column-gap: 1.875rem;
+  }
+}
+.fetchError__errorIcon {
+  width: 6.25rem;
+  height: 6.25rem;
+}
+.fetchError__message {
+  display: inherit;
+  align-items: center;
+  margin: 0;
+}
+@media screen and (orientation: portrait) {
+  .fetchError__message {
+    font-size: calc(1rem + (1.25 - 1) * ((100vw - 18.75rem) / (67.5 - 18.75)));
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 67.5rem) {
+  .fetchError__message {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (orientation: landscape) {
+  .fetchError__message {
+    font-size: calc(1rem + (1.5 - 1) * ((100vh - 18.75rem) / (67.5 - 18.75)));
+  }
+}
+@media screen and (orientation: landscape) and (min-height: 67.5rem) {
+  .fetchError__message {
+    font-size: 1.5rem;
+  }
+}
+
 /* CARDOVERLAY */
 .overlay, .overlay--hidden, .overlay--visible {
   position: absolute;
@@ -1141,54 +1200,52 @@ body {
     border-radius: 0.3125rem;
   }
 }
-.overlay__city, .overlay__country {
+.overlay__subject {
   text-transform: uppercase;
 }
 @media screen and (orientation: portrait) {
-  .overlay__city, .overlay__country {
-    font-size: calc(1.125rem + (1.5 - 1.125) * ((100vw - 18.75rem) / (67.5 - 18.75)));
+  .overlay__subject {
+    font-size: calc(1rem + (1.5 - 1) * ((100vw - 18.75rem) / (67.5 - 18.75)));
   }
 }
 @media screen and (orientation: portrait) and (min-width: 67.5rem) {
-  .overlay__city, .overlay__country {
-    font-size: 1.5rem;
+  .overlay__subject {
+    font-size: 24px;
   }
 }
 @media screen and (orientation: landscape) {
-  .overlay__city, .overlay__country {
-    font-size: calc(1rem + (1.75 - 1) * ((100vh - 18.75rem) / (67.5 - 18.75)));
+  .overlay__subject {
+    font-size: calc(0.8125rem + (1.75 - 0.8125) * ((100vh - 18.75rem) / (67.5 - 18.75)));
   }
 }
 @media screen and (orientation: landscape) and (min-height: 67.5rem) {
-  .overlay__city, .overlay__country {
+  .overlay__subject {
     font-size: 1.75rem;
   }
 }
-.overlay__country {
-  text-transform: capitalize;
+.overlay__city, .overlay__country {
   color: rgb(180, 180, 180);
 }
 @media screen and (orientation: portrait) {
-  .overlay__country {
-    font-size: calc(1rem + (1.25 - 1) * ((100vw - 18.75rem) / (67.5 - 18.75)));
+  .overlay__city, .overlay__country {
+    font-size: calc(0.875rem + (1.25 - 0.875) * ((100vw - 18.75rem) / (67.5 - 18.75)));
   }
 }
 @media screen and (orientation: portrait) and (min-width: 67.5rem) {
-  .overlay__country {
+  .overlay__city, .overlay__country {
     font-size: 1.25rem;
   }
 }
 @media screen and (orientation: landscape) {
-  .overlay__country {
-    font-size: calc(0.875rem + (1.25 - 0.875) * ((100vh - 18.75rem) / (67.5 - 18.75)));
+  .overlay__city, .overlay__country {
+    font-size: calc(0.625rem + (1.25 - 0.625) * ((100vh - 18.75rem) / (67.5 - 18.75)));
   }
 }
 @media screen and (orientation: landscape) and (min-height: 67.5rem) {
-  .overlay__country {
+  .overlay__city, .overlay__country {
     font-size: 1.25rem;
   }
 }
-
 /* MODAL */
 .modal, .modal--hidden {
   position: fixed;
@@ -1359,7 +1416,6 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  max-width: 18.75rem;
   row-gap: 1.25rem;
   padding-bottom: 1.25rem;
 }
