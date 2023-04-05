@@ -5,10 +5,10 @@
 import React, {Component, createRef} from "react";
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 
-import HomePage from "./homepage/homepage";
-import Gallery from "./galleryPage/gallery";
-import Portfolio from "./portfolio/portfolio";
-import Error404 from "./error404/error404";
+import HomePage from "./pages/homepage/homepage";
+import Gallery from "./pages/galleryPage/gallery";
+import Portfolio from "./pages/portfolio/portfolio";
+import Error404 from "./pages/error404/error404";
 
 class App extends Component {
 	constructor(props) {
