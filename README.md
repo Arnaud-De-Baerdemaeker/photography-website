@@ -13,9 +13,16 @@ Merci pour votre visite !
 ## Caractéristiques
 
 Le site a été développé en ReactJS et mis en page avec SCSS.
-L'API de Flickr permet de récupérer les photos stockées sur leurs serveurs et de les afficher.
+L'API de Flickr permet de récupérer les photos et leurs tags stockés sur leurs serveurs et de les afficher.
 
 ## Versions
+
+### 2.3.0
+
+* Mise en place d'un deuxième appel à l'API pour récupérer les tags dans leur forme brute.
+* Affichage d'un message d'erreur en cas d'échec de l'appel à l'API.
+* Affichage d'un message informant l'utilisateur que le site utilise l'API de Flickr.
+* Utilisation de session storage afin d'éviter de répéter les appels API s'il ont déjà été fait une première fois. Les données stockées dans le navigateur de l'utilisateur sont purgées dès la fermeture de l'onglet.
 
 ### 2.2.0
 
